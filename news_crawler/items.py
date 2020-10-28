@@ -10,13 +10,12 @@ import scrapy
 
 class NewsCrawlerItem(scrapy.Item):
     """ Model for the scraped items"""
-    url = scrapy.Field()
-    visited = scrapy.Field()
-    published = scrapy.Field()
-    last_modified = scrapy.Field()
-    keywords = scrapy.Field()
+    provenance = scrapy.Field()
     author = scrapy.Field()
-    title = scrapy.Field()
-    description = scrapy.Field()
-    subheadlines = scrapy.Field()
-    body = scrapy.Field()
+    creation_date = scrapy.Field()
+    last_modified = scrapy.Field()
+    scraped_date = scrapy.Field() 
+    content = scrapy.Field() # title, description, body
+    keywords = scrapy.Field()
+    recommendations = scrapy.Field()
+    
