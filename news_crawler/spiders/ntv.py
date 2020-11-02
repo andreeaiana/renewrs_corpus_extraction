@@ -105,7 +105,7 @@ class NtvSpider(BaseSpider):
         # No article-related recommendations
         item['recommendations'] = list()
 
-        #Save article in htmk format
+        # Save article in htmk format
         save_as_html(response, 'ntv.de')
 
-        return item
+        yield item

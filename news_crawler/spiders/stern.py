@@ -120,8 +120,7 @@ class SternSpider(BaseSpider):
         else:
             item['recommendations'] = list()
 
-        #Save article in htmk format
+        # Save article in htmk format
         save_as_html(response, 'stern.de')
 
-        return item
-
+        yield item
