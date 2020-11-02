@@ -89,7 +89,7 @@ class NtvSpider(BaseSpider):
            for i in range(len(headlines)-1):
                body[headlines[i]] = [node.xpath('string()').get() for node in response.xpath('//div/p[preceding-sibling::h2[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h2[contains(text(), "' + processed_headlines[i+1] +'")]]')]
            
-           # Extract the paragraohs belonging to the last headline
+           # Extract the paragraphs belonging to the last headline
            body[headlines[-1]] = [node.xpath('string()').get() for node in response.xpath('//div/p[preceding-sibling::h2[contains(text(), "' + processed_headlines[-1] + '")] and not(descendant::em) and not(contains(@class, "article__source"))]')]
 
         else:

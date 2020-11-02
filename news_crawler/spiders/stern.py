@@ -90,7 +90,7 @@ class SternSpider(BaseSpider):
            for i in range(len(headlines)-1):
                body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text-element u-richtext u-typo u-typo--article-text article__text-element text-element--context-article" and preceding-sibling::h2[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h2[contains(text(), "' + processed_headlines[i+1] +'")] and not(descendant::strong)]')]
            
-           # Extract the paragraohs belonging to the last headline
+           # Extract the paragraphs belonging to the last headline
            body[headlines[-1]] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text-element u-richtext u-typo u-typo--article-text article__text-element text-element--context-article" and preceding-sibling::h2[contains(text(), "' + processed_headlines[-1] + '")] and not(descendant::strong)]')]
 
         else:

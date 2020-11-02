@@ -13,7 +13,8 @@ BOT_NAME = 'news_crawler'
 
 SPIDER_MODULES = ['news_crawler.spiders']
 NEWSPIDER_MODULE = 'news_crawler.spiders'
-CLOSESPIDER_ITEMCOUNT = 200
+CLOSESPIDER_ITEMCOUNT = 200 
+CLOSESPIDER_TIMEOUT = 3600*24*3 # Run spider until item count or timeout (3 days) reached
 
 # Project-specific variables
 START_DATE = "01.01.2019"
