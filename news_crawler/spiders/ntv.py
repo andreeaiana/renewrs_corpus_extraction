@@ -18,11 +18,26 @@ class NtvSpider(BaseSpider):
     rotate_user_agent = True
     allowed_domains = ['www.n-tv.de']
     start_urls = ['https://www.n-tv.de/']
-    
+
+    # Excude pages without relevant articles
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'\w.*\/.*\-article\d+\.html')
+                    allow=(r'\w.*\/.*\-article\d+\.html'),
+                    deny=(r'www\.n-tv\.de\/mediathek\/videos\/\w.*',
+                        r'www\.n-tv\.de\/mediathek\/livestream\/\w.*',
+                        r'www\.n-tv\.de\/mediathek\/tvprogramm\/',
+                        r'www\.n-tv\.de\/mediathek\/magazine\/',
+                        r'www\.n-tv\.de\/mediathek\/moderatoren\/',
+                        r'www\.n-tv\.de\/mediathek\/teletext\/',
+                        r'www\.tvnow\.de\/',
+                        r'www\.n-tv\.de\/wetter\/',
+                        r'www\.n-tv\.de\/boersenkurse\/',
+                        r'www\.n-tv\.de\/wirtschaft\/der_boersen_tag\/',
+                        r'www\.n-tv\.de\/sport\/der_sport_tag\/',
+                        r'www\.n-tv\.de\/der_tag\/',
+                        r'sportdaten\.n-tv\.de\/'
+                        )
                     ),
                 callback='parse_item',
                 follow=True

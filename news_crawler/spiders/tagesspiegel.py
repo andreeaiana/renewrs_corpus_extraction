@@ -20,7 +20,7 @@ class TagesspiegelSpider(BaseSpider):
     allowed_domains = ['www.tagesspiegel.de']
     start_urls = ['https://www.tagesspiegel.de/']
     
-    # Exclude paid articles 
+    # Exclude paid articles and pages without relevant articles
     rules = (
             Rule(
                 LinkExtractor(
@@ -30,6 +30,13 @@ class TagesspiegelSpider(BaseSpider):
                         r'tagesspiegel\.de\/\w+\-\w+\/\d+\.html$',
                         r'tagesspiegel\.de\/dpa\/\d+\.html$',
                         r'tagesspiegel\.de\/mediacenter\/fotostrecken\/\w.*\/\d+\.html$',
+                        r'vergleich\.tagesspiegel\.de\/',
+                        r'verbraucher\.tagesspiegel\.de\/\w.*',
+                        r'interaktiv\.tagesspiegel\.de\/',
+                        r'gutscheine\.tagesspiegel\.de\/',
+                        r'leserreisen\.tagesspiegel\.de\/',
+                        r'jobs\.tagesspiegel\.de\/',
+                        r'proptech\.tagesspiegel\.de\/'
                         )
                     ),
                 callback='parse_item',
@@ -42,6 +49,8 @@ class TagesspiegelSpider(BaseSpider):
         
         # Filter by date
         creation_date = response.xpath('//div/time[@itemprop="datePublished"]/@datetime').get()
+        if not creation_date:
+            return
         creation_date = datetime.fromisoformat(creation_date.split('+')[0])
         if not self.filter_by_date(creation_date):
             return

@@ -20,12 +20,24 @@ class TagesschauSpider(BaseSpider):
     allowed_domains = ['www.tagesschau.de']
     start_urls = ['https://www.tagesschau.de/']
     
-    # Exclude multimedia articles 
+    # Exclude pages without relevant articles 
     rules = (
             Rule(
                 LinkExtractor(
                     allow=(r'www\.tagesschau\.de\/\w+\/\w.*\.html$'),
-                    deny=(r'www\.tagesschau\.de\/multimedia\/\w.*\.html$')
+                    deny=(r'www\.tagesschau\.de\/multimedia\/\w.*\.html$',
+                        r'wetter\.tagesschau\.de\/',
+                        r'meta\.tagesschau\.de\/',
+                        r'www\.tagesschau\.de\/mehr\/\w.*',
+                        r'www\.tagesschau\.de\/hilfe\/\w.*',
+                        r'www\.tagesschau\.de\/impressum\/',
+                        r'www\.tagesschau\.de\/kontakt_und_hilfe\/\w.*',
+                        r'www\.tagesschau\.de\/sitemap\/',
+                        r'www\.tagesschau\.de\/app\/',
+                        r'www\.tagesschau\.de\/atlas\/',
+                        r'www\.tagesschau\.de\/allemeldungen\/',
+                        r'intern\.tagesschau\.de\/'
+                        )
                     ),
                 callback='parse_item',
                 follow=True

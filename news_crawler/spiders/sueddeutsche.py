@@ -19,13 +19,26 @@ class SueddeutscheSpider(BaseSpider):
     allowed_domains = ['www.sueddeutsche.de']
     start_urls = ['https://www.sueddeutsche.de/']
  
-    # Exclude paid articles
+    # Exclude paid articles and pages without relevant articles
     rules = (
             Rule(
                 LinkExtractor(
                     allow=(r'(\/\w+)*.*\.\d+$'),
                     deny=(r'(\/\w+)*\/.*\?reduced=true', 
-                        r'.*\/autoren\/.*'
+                        r'.*\/autoren\/.*',
+                        r'szshop\.sueddeutsche\.de\/',
+                        r'stellenmarkt\.sueddeutsche\.de\/',
+                        r'immobilienmarkt\.sueddeutsche\.de\/',
+                        r'anzeigen-buchen\.sueddeutsche\.de\/\w.*',
+                        r'schule-und-zeitung\.sueddeutsche\.de\/',
+                        r'wetter\.sueddeutsche\.de\/',
+                        r'datenschutz\.sueddeutsche\.de\/',
+                        r'epaper\.sueddeutsche\.de\/Stadtausgabe'
+                        r'liveticker\.sueddeutsche\.de\/\w.*',
+                        r'www\.sueddeutsche\.de\/thema\/Spiele',
+                        r'www\.sueddeutsche\.de\/app\/spiele\/\w.*',
+                        r'www\.sueddeutsche\.de\/service\/\w.*',
+                        r'www\.sueddeutsche\.de\/autoren'
                         )
                     ),
                 callback='parse',

@@ -18,13 +18,15 @@ class SternSpider(BaseSpider):
     rotate_user_agent = True
     allowed_domains = ['www.stern.de']
     start_urls = ['https://www.stern.de/']
-    
+
+    # Exclude paid and English articles, and pages without relevant articles
     rules = (
             Rule(
                 LinkExtractor(
                     allow=(r'stern\.de\/\w.*\.html$'),
                     deny=(r'stern\.de\/p\/plus\/\w.*\.html$',
-                        r'stern\.de\/\w.*\/english-version-\w.*\.html$'
+                        r'stern\.de\/\w.*\/english-version-\w.*\.html$',
+                        r'www\.stern\.de\/gutscheine\/'
                         )
                     ),
                 callback='parse_item',

@@ -19,14 +19,24 @@ class FazSpider(BaseSpider):
     allowed_domains = ['www.faz.net']
     start_urls = ['https://www.faz.net/']
     
-    # Exclude English articles 
+    # Exclude English articles and pages without relevant articles (i.e. sports) 
     rules = (
             Rule(
                 LinkExtractor(
                     allow=(r'www\.faz\.net\/\w+\/\w.*\.html$'),
                     deny=(r'www\.faz\.net\/english\/\w.*\.html$',
                         r'www\.faz\.net\/asv\/\w.*\.html$',
-                        r'www\.faz\.net\/\w.*\/routenplaner\/\w+\-\d+\.html$'
+                        r'www\.faz\.net\/\w.*\/routenplaner\/\w+\-\d+\.html$',
+                        r'www\.faz\.net\/\w+\/finanzen\/boersen-maerkte\/',
+                        r'boersenlexikon\.faz\.net\/\w.*',
+                        r'boersenspiel\.faz\.net\/\w.*',
+                        r'tv\.faz\.net\/programmvorschau\.',
+                        r'www\.faz\.net\/faz-net-services\/sport-live-ticker\/\w.*',
+                        r'www\.faz\.net\/aktuell\/sport\/sport-in-zahlen\/\w.*',
+                        r'wetter\.faz\.net\/',
+                        r'www\.faz\.net\/faz-live',
+                        r'stellenmarkt\.faz\.net\/',
+                        r'www\.faz\.net\/podcasts\/\w.*'
                         )
                     ),
                 callback='parse_item',
