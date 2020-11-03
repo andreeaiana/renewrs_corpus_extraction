@@ -25,7 +25,17 @@ class WeltSpider(BaseSpider):
                 LinkExtractor(
                     allow=(r'(\/\w+)*\/article\d+\/.*\.html'),
                     deny=(r'(\/\w+)*\/plus\d+\/.*\.html',
-                        r'(\/english-news)\/article\d+\/.*\.html'
+                        r'(\/english-news)\/article\d+\/.*\.html',
+                        r'www\.welt\.de\/tv-programm\-\w.*',
+                        r'www\.welt\.de\/mediathek\/dokumentation\/\w.*',
+                        r'www\.welt\.de\/mediathek\/magazin\/\w.*',
+                        r'www\.welt\.de\/mediathek\/moderator\/\w.*',
+                        r'www\.welt\.de\/videos\/',
+                        r'www\.welt\.de\/Advertorials\/\w.*',
+                        r'www\.welt\.de\/sponsored\/\w.*',
+                        r'sportdaten\.welt\.de\/welt\/ergebnisse-und-tabellen\/\w.*',
+                        r'jobs\.welt\.de\/',
+                        r'wetter\.welt\.de\/\w.*'
                         )
                     ),
                 callback='parse_item',
