@@ -64,7 +64,7 @@ class SueddeutscheSpider(BaseSpider):
 
         # Extract the article's paragraphs
         paragraphs = [node.xpath('string()').get() for node in response.xpath('//p[@class=" css-0"]')]
-        text = ' '.join([para for para in paragraphs if para != ' '])
+        text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
 
         # Filter by article length
         if not self.filter_by_length(text):
@@ -80,7 +80,8 @@ class SueddeutscheSpider(BaseSpider):
        
         # Get authors
         authors = response.xpath('//meta[@name="author"]/@content').getall()
-        item['author'] = authors if authors else list()
+        item['author'] = [author for author in authors if author != "Süddeutsche Zeitung"] if authors else list()
+        
         # Get creation, modification, and scraping dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
         last_modified = data['dateModified']
@@ -90,26 +91,31 @@ class SueddeutscheSpider(BaseSpider):
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get() 
         description = response.xpath('//meta[@property="og:description"]/@content').get()
-       
-        # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
+         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
         if response.xpath('//h3[not(@*)]'):
-            headline_no = 0
-            for h3 in response.xpath('//h3[not(@*)]'):
-                # Extract first paragraphs, between title and first headine
-                if headline_no == 0:
-                    paragraphs = [node.xpath('string()').get() for node in h3.xpath('./preceding-sibling::p')]
-                    body[''] = paragraphs
-                
-                # Extract headline and corresponding paragrphs
-                headline = h3.xpath('string()').get()
-                paragraphs = [node.xpath('string(').get() for node in h3.xpath('./following-sibling::p')]
-                body[headline] = paragraphs
-                headline_no += 1
+            # Extract headlines
+            headlines = [h3.xpath('string()').get() for h3 in response.xpath('//h3[not(@*)]')]
+            
+            # Remove surrounding quotes from headlines
+            processed_headlines = [headline.strip('"') for headline in headlines]
+          
+            # If quote inside headline, keep substring fro quote onwards
+            processed_headlines = [headline[headline.index('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
+
+            # Extract paragraphs between the abstract and the first headline
+            body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//p[@class=" css-0" and following-sibling::h3[contains(text(), "' + processed_headlines[0] + '")]]')]
+
+            # Extract paragraphs corresponding to each headline, except the last one
+            for i in range(len(headlines)-1):
+                body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//p[@class=" css-0" and preceding-sibling::h3[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h3[contains(text(), "' + processed_headlines[i+1] +'")]]')]
+           
+            # Extract the paragraohs belonging to the last headline
+            body[headlines[-1]] = [node.xpath('string()').get().strip() for node in response.xpath('//p[@class=" css-0" and preceding-sibling::h3[contains(text(), "' + processed_headlines[-1] + '")]]')]
+
         else:
             # The article has no headlines, just paragraphs
-            paragraphs = [node.xpath('string()').get() for node in response.xpath('//p[@class=" css-0"]')]
-            body[''] = [para for para in paragraphs if para != ' ']
+            body[''] = [para for para in paragraphs if para != ' ' and para != ""]
 
         item['content'] = {'title': title, 'description': description, 'body':body}
 
@@ -128,6 +134,6 @@ class SueddeutscheSpider(BaseSpider):
             item['recommendations'] = list()
 
         # Save article in htmk format
-        save_as_html(response, 'sueddeutsche.de')
+        save_as_html(response, 'sueddeutsche.de', title)
 
         yield item

@@ -103,7 +103,7 @@ class FazSpider(BaseSpider):
             body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//p[@class="First atc-TextParagraph" and following-sibling::h3[contains(text(), "' + processed_headlines[0] + '")]]')]
             body[''].extend([node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="atc-TextParagraph" and following-sibling::h3[contains(text(), "' + processed_headlines[0] + '")]]')])
 
-            # Extract paragraphs corresponding to each headline, except the last on
+            # Extract paragraphs corresponding to each headline, except the last one
             for i in range(len(headlines)-1):
                 body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="atc-TextParagraph" and preceding-sibling::h3[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h3[contains(text(), "' + processed_headlines[i+1] +'")]]')]
            
@@ -130,7 +130,7 @@ class FazSpider(BaseSpider):
             item['recommendations'] = list()
 
         # Save article in htmk format
-        save_as_html(response, 'faz.net')
+        save_as_html(response, 'faz.net', title)
         
         # Check if the article continues on the next page
         next_page = response.xpath('//li[@class="nvg-Paginator_Item nvg-Paginator_Item-to-next-page"]/a/@href').get() 

@@ -111,7 +111,7 @@ class TagesschauSpider(BaseSpider):
             # Extract paragraphs between the abstract and the first headline
             body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text small" and not(descendant::strong) and following-sibling::h2[contains(text(), "' + processed_headlines[0] + '")] or following-sibling::h2/strong[contains(text(), "' + processed_headlines[0] + '")]]')]
 
-            # Extract paragraphs corresponding to each headline, except the last on
+            # Extract paragraphs corresponding to each headline, except the last one
             for i in range(len(headlines)-1):
                 body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text small" and not(descendant::strong) and (preceding-sibling::h2[contains(text(), "' + processed_headlines[i] + '")] or preceding-sibling::h2/strong[contains(text(), "' + processed_headlines[i] + '")]) and (following-sibling::h2[contains(text(), "' + processed_headlines[i+1] +'")] or following-sibling::h2/strong[contains(text(), "' + processed_headlines[i+1] +'")])]')]
            
@@ -153,6 +153,6 @@ class TagesschauSpider(BaseSpider):
             item['recommendations'] = list()
 
         # Save article in htmk format
-        save_as_html(response, 'tagesschau.de')
+        save_as_html(response, 'tagesschau.de', title)
 
         yield item

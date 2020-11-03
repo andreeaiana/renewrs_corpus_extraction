@@ -26,16 +26,6 @@ class WeltSpider(BaseSpider):
                     allow=(r'(\/\w+)*\/article\d+\/.*\.html'),
                     deny=(r'(\/\w+)*\/plus\d+\/.*\.html',
                         r'(\/english-news)\/article\d+\/.*\.html',
-                        r'www\.welt\.de\/tv-programm\-\w.*',
-                        r'www\.welt\.de\/mediathek\/dokumentation\/\w.*',
-                        r'www\.welt\.de\/mediathek\/magazin\/\w.*',
-                        r'www\.welt\.de\/mediathek\/moderator\/\w.*',
-                        r'www\.welt\.de\/videos\/',
-                        r'www\.welt\.de\/Advertorials\/\w.*',
-                        r'www\.welt\.de\/sponsored\/\w.*',
-                        r'sportdaten\.welt\.de\/welt\/ergebnisse-und-tabellen\/\w.*',
-                        r'jobs\.welt\.de\/',
-                        r'wetter\.welt\.de\/\w.*'
                         )
                     ),
                 callback='parse_item',
@@ -84,19 +74,26 @@ class WeltSpider(BaseSpider):
        
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
-        if response.xpath('//h3'):
-            headline_no = 0
-            for h3 in response.xpath('//h3'):
-                # Extract first paragraphs, between title and first headine
-                if headline_no == 0:
-                    paragraphs = [node.xpath('string()').get() for node in h3.xpath('./preceding-sibling::p')]
-                    body[''] = paragraphs
-                
-                # Extract headline and corresponding paragrphs
-                headline = h3.xpath('string()').get()
-                paragraphs = [node.xpath('string(').get() for node in h3.xpath('./following-sibling::p')]
-                body[headline] = paragraphs
-                headline_no += 1
+        if response.xpath('//h3[@class="o-headline"]'):
+            # Extract headlines
+            headlines = [h3.xpath('string()').get() for h3 in response.xpath('//h3[@class="o-headline"]')]
+            
+            # Remove surrounding quotes from headlines
+            processed_headlines = [headline.strip('“') for headline in headlines]
+          
+            # If quote inside headline, keep substring fro quote onwards
+            processed_headlines = [headline[headline.index('„')+1:len(headline)] if '„' in headline else headline for headline in processed_headlines]
+
+            # Extract paragraphs between the abstract and the first headline
+            body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//p[following-sibling::h3[contains(text(), "' + processed_headlines[0] + '")] and not(ancestor::div/@class="c-page-footer__section")]')]
+
+            # Extract paragraphs corresponding to each headline, except the last one
+            for i in range(len(headlines)-1):
+                body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//p[preceding-sibling::h3[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h3[contains(text(), "' + processed_headlines[i+1] +'")] and not(ancestor::div/@class="c-page-footer__section")]')]
+           
+            # Extract the paragraohs belonging to the last headline
+            body[headlines[-1]] = [node.xpath('string()').get().strip() for node in response.xpath('//p[preceding-sibling::h3[contains(text(), "' + processed_headlines[-1] + '")] and not(ancestor::div/@class="c-page-footer__section")]')]
+
         else:
             # The article has no headlines, just paragraphs
             body[''] = [para for para in paragraphs if para != ' ' and para != ""]
@@ -118,6 +115,6 @@ class WeltSpider(BaseSpider):
             item['recommendations'] = list()
 
         # Save article in htmk format
-        save_as_html(response, 'welt.de')
+        save_as_html(response, 'welt.de', title)
 
         yield item

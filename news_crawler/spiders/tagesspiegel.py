@@ -87,7 +87,7 @@ class TagesspiegelSpider(BaseSpider):
        
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
-        if response.xpath('//h3'):
+        if response.xpath('//h3[not(contains(@class, "ts-title"))]'):
             # Extract headlines
             headlines = [h3.xpath('string()').get() for h3 in response.xpath('//h3')]
             
@@ -100,7 +100,7 @@ class TagesspiegelSpider(BaseSpider):
             # Extract paragraphs between the abstract and the first headline
             body[''] = [node.xpath('string()').get() for node in response.xpath('//div/p[following-sibling::h3[contains(text(), "' + processed_headlines[0] + '")] and not(descendant::strong/span)]')]
 
-            # Extract paragraphs corresponding to each headline, except the last on
+            # Extract paragraphs corresponding to each headline, except the last one
             for i in range(len(headlines)-1):
                 body[headlines[i]] = [node.xpath('string()').get() for node in response.xpath('//div/p[preceding-sibling::h3[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h3[contains(text(), "' + processed_headlines[i+1] +'")] and not(descendant::strong/span)]')]
            
@@ -135,6 +135,6 @@ class TagesspiegelSpider(BaseSpider):
             item['recommendations'] = list()
 
         # Save article in htmk format
-        save_as_html(response, 'tagesspiegel.de')
+        save_as_html(response, 'tagesspiegel.de', title)
 
         yield item

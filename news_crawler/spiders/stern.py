@@ -75,7 +75,7 @@ class SternSpider(BaseSpider):
 
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
-        if response.xpath('//h2'):
+        if response.xpath('//h2[contains(@class, "subheadline-element")]'):
            # Extract headlines
            headlines = [h2.xpath('string()').get().strip() for h2 in response.xpath('//h2[contains(@class, "subheadline-element")]')]
            
@@ -88,7 +88,7 @@ class SternSpider(BaseSpider):
            # Extract paragraphs between the abstract and the first headline
            body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text-element u-richtext u-typo u-typo--article-text article__text-element text-element--context-article" and following-sibling::h2[contains(text(), "' + processed_headlines[0] + '")] and not(descendant::strong)]')]
 
-           # Extract paragraphs corresponding to each headline, except the last on
+           # Extract paragraphs corresponding to each headline, except the last one
            for i in range(len(headlines)-1):
                body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text-element u-richtext u-typo u-typo--article-text article__text-element text-element--context-article" and preceding-sibling::h2[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h2[contains(text(), "' + processed_headlines[i+1] +'")] and not(descendant::strong)]')]
            
@@ -123,6 +123,6 @@ class SternSpider(BaseSpider):
             item['recommendations'] = list()
 
         # Save article in htmk format
-        save_as_html(response, 'stern.de')
+        save_as_html(response, 'stern.de', title)
 
         yield item

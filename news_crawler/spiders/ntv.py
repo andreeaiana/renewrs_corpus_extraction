@@ -100,7 +100,7 @@ class NtvSpider(BaseSpider):
            # Extract paragraphs between the abstract and the first headline
            body[''] = [node.xpath('string()').get() for node in response.xpath('//div/p[following-sibling::h2[contains(text(), "' + processed_headlines[0] + '")] and not(descendant::strong)]')]
 
-           # Extract paragraphs corresponding to each headline, except the last on
+           # Extract paragraphs corresponding to each headline, except the last one
            for i in range(len(headlines)-1):
                body[headlines[i]] = [node.xpath('string()').get() for node in response.xpath('//div/p[preceding-sibling::h2[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h2[contains(text(), "' + processed_headlines[i+1] +'")]]')]
            
@@ -121,6 +121,6 @@ class NtvSpider(BaseSpider):
         item['recommendations'] = list()
 
         # Save article in htmk format
-        save_as_html(response, 'ntv.de')
+        save_as_html(response, 'ntv.de', title)
 
         yield item
