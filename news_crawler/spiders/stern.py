@@ -83,9 +83,12 @@ class SternSpider(BaseSpider):
            
            # Remove surrounding quotes from headlines
            processed_headlines = [headline.strip('"') for headline in headlines]
+           processed_headlines = [headline.strip('“') for headline in processed_headlines]
           
            # If quote inside headline, keep substring from quote onwards
            processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
+           processed_headlines = [headline[headline.index('„')+1:len(headline)] if '„' in headline else headline for headline in processed_headlines]
+           processed_headlines = [headline[headline.rindex('“')+1:len(headline)] if '“' in headline else headline for headline in processed_headlines]
 
            # Extract paragraphs between the abstract and the first headline
            body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text-element u-richtext u-typo u-typo--article-text article__text-element text-element--context-article" and following-sibling::h2[contains(text(), "' + processed_headlines[0] + '")] and not(descendant::strong)]')]
@@ -117,14 +120,14 @@ class SternSpider(BaseSpider):
         # Extract first 5 recommendations towards articles from the same news outlet, if available
         recommendations = response.xpath('//div/article/a[@class="teaser__link "]/@href').getall()
         if recommendations:
-            recommendations = ['www.stern.de' + rec for rec in recs if not ('/p/plus' in rec or '/noch-fragen' in rec)]
+            recommendations = ['www.stern.de' + rec for rec in recommendations if not ('/p/plus' in rec or '/noch-fragen' in rec)]
             if len(recommendations) > 5:
                 recommendations = recommendations[:5]
             item['recommendations'] = recommendations
         else:
             item['recommendations'] = list()
 
-        # Save article in htmk format
+        # Save article in html format
         save_as_html(response, 'stern.de', title)
 
         yield item

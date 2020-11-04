@@ -101,9 +101,12 @@ class SueddeutscheSpider(BaseSpider):
             
             # Remove surrounding quotes from headlines
             processed_headlines = [headline.strip('"') for headline in headlines]
+            processed_headlines = [headline.strip('“') for headline in processed_headlines]
           
             # If quote inside headline, keep substring from quote onwards
             processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
+            processed_headlines = [headline[headline.index('„')+1:len(headline)] if '„' in headline else headline for headline in processed_headlines]
+            processed_headlines = [headline[headline.rindex('“')+1:len(headline)] if '“' in headline else headline for headline in processed_headlines]
 
             # Extract paragraphs between the abstract and the first headline
             body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//p[@class=" css-0" and following-sibling::h3[contains(text(), "' + processed_headlines[0] + '")]]')]
@@ -112,7 +115,7 @@ class SueddeutscheSpider(BaseSpider):
             for i in range(len(headlines)-1):
                 body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//p[@class=" css-0" and preceding-sibling::h3[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h3[contains(text(), "' + processed_headlines[i+1] +'")]]')]
            
-            # Extract the paragraohs belonging to the last headline
+            # Extract the paragraphs belonging to the last headline
             body[headlines[-1]] = [node.xpath('string()').get().strip() for node in response.xpath('//p[@class=" css-0" and preceding-sibling::h3[contains(text(), "' + processed_headlines[-1] + '")]]')]
 
         else:
@@ -135,7 +138,7 @@ class SueddeutscheSpider(BaseSpider):
         else:
             item['recommendations'] = list()
 
-        # Save article in htmk format
+        # Save article in html format
         save_as_html(response, 'sueddeutsche.de', title)
 
         yield item

@@ -95,9 +95,12 @@ class NtvSpider(BaseSpider):
            headlines = [h2.xpath('string()').get() for h2 in response.xpath('//h2')]
            # Remove surrounding quotes from headlines
            processed_headlines = [headline.strip('"') for headline in headlines]
+           processed_headlines = [headline.strip('“') for headline in processed_headlines]
           
            # If quote inside headline, keep substring from quote onwards
            processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
+           processed_headlines = [headline[headline.index('„')+1:len(headline)] if '„' in headline else headline for headline in processed_headlines]
+           processed_headlines = [headline[headline.rindex('“')+1:len(headline)] if '“' in headline else headline for headline in processed_headlines]
 
            # Extract paragraphs between the abstract and the first headline
            body[''] = [node.xpath('string()').get() for node in response.xpath('//div/p[following-sibling::h2[contains(text(), "' + processed_headlines[0] + '")] and not(descendant::strong)]')]
@@ -122,7 +125,7 @@ class NtvSpider(BaseSpider):
         # No article-related recommendations
         item['recommendations'] = list()
 
-        # Save article in htmk format
+        # Save article in html format
         save_as_html(response, 'ntv.de', title)
 
         yield item

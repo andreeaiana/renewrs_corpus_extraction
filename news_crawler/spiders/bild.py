@@ -50,6 +50,8 @@ class BildSpider(BaseSpider):
         if not 'datePublished' in data.keys():
             return
         creation_date = data['datePublished']
+        if creation_date == '':
+            return
         if 'Z' in creation_date:
             if '.' in creation_date:
                 creation_date = datetime.fromisoformat(creation_date.split('.')[0])
@@ -108,12 +110,14 @@ class BildSpider(BaseSpider):
             headlines = [h2.xpath('string()').get().strip() for h2 in response.xpath('//h2[@class="crossheading"]')]
             
             # Remove surrounding quotes from headlines
-            processed_headlines = [headline.strip('“') for headline in headlines]
+            processed_headlines = [headline.strip('"') for headline in headlines]
+            processed_headlines = [headline.strip('“') for headline in processed_headlines]
           
             # If quote inside headline, keep substring from quote onwards
+            processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
             processed_headlines = [headline[headline.index('„')+1:len(headline)] if '„' in headline else headline for headline in processed_headlines]
             processed_headlines = [headline[headline.rindex('“')+1:len(headline)] if '“' in headline else headline for headline in processed_headlines]
-
+         
             # Extract paragraphs between the abstract and the first headline
             body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="txt" or @class="article-body"]/p[following-sibling::h2[contains(text(), "' + processed_headlines[0] + '")]]')]
 
@@ -121,7 +125,7 @@ class BildSpider(BaseSpider):
             for i in range(len(headlines)-1):
                 body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="txt" or @class="article-body"]/p[preceding-sibling::h2[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h2[contains(text(), "' + processed_headlines[i+1] +'")]]')]
            
-            # Extract the paragraohs belonging to the last headline
+            # Extract the paragraphs belonging to the last headline
             body[headlines[-1]] = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="txt" or @class="article-body"]/p[preceding-sibling::h2[contains(text(), "' + processed_headlines[-1] + '")]]')]
 
         else:
@@ -149,7 +153,7 @@ class BildSpider(BaseSpider):
         else:
             item['recommendations'] = list()
 
-        # Save article in htmk format
+        # Save article in html format
         save_as_html(response, 'bild.de', title)
         
         yield item

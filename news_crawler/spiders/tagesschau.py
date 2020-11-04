@@ -53,7 +53,7 @@ class TagesschauSpider(BaseSpider):
         data = json.loads(data_json)        
 
         # Filter by date
-        if 'datePublished' not in data:
+        if 'datePublished' not in data.keys():
             return
         creation_date = data['datePublished']
         creation_date = datetime.fromisoformat(creation_date.split('+')[0])
@@ -106,9 +106,12 @@ class TagesschauSpider(BaseSpider):
             
             # Remove surrounding quotes from headlines
             processed_headlines = [headline.strip('"') for headline in headlines]
+            processed_headlines = [headline.strip('“') for headline in processed_headlines]
           
             # If quote inside headline, keep substring from quote onwards
             processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
+            processed_headlines = [headline[headline.index('„')+1:len(headline)] if '„' in headline else headline for headline in processed_headlines]
+            processed_headlines = [headline[headline.rindex('“')+1:len(headline)] if '“' in headline else headline for headline in processed_headlines]
 
             # Extract paragraphs between the abstract and the first headline
             body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text small" and not(descendant::strong) and following-sibling::h2[contains(text(), "' + processed_headlines[0] + '")] or following-sibling::h2/strong[contains(text(), "' + processed_headlines[0] + '")]]')]
@@ -117,7 +120,7 @@ class TagesschauSpider(BaseSpider):
             for i in range(len(headlines)-1):
                 body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text small" and not(descendant::strong) and (preceding-sibling::h2[contains(text(), "' + processed_headlines[i] + '")] or preceding-sibling::h2/strong[contains(text(), "' + processed_headlines[i] + '")]) and (following-sibling::h2[contains(text(), "' + processed_headlines[i+1] +'")] or following-sibling::h2/strong[contains(text(), "' + processed_headlines[i+1] +'")])]')]
            
-            # Extract the paragraohs belonging to the last headline
+            # Extract the paragraphs belonging to the last headline
             body[headlines[-1]] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text small" and not(descendant::strong) and preceding-sibling::h2[contains(text(), "' + processed_headlines[-1] + '")] or preceding-sibling::h2/strong[contains(text(), "' + processed_headlines[-1] + '")]]')]
 
         else:
@@ -154,7 +157,7 @@ class TagesschauSpider(BaseSpider):
         else:
             item['recommendations'] = list()
 
-        # Save article in htmk format
+        # Save article in html format
         save_as_html(response, 'tagesschau.de', title)
 
         yield item
