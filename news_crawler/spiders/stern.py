@@ -39,6 +39,8 @@ class SternSpider(BaseSpider):
         
         # Filter by date
         creation_date = response.xpath('//meta[@name="date"]/@content').get()
+        if not creation_date:
+            return
         creation_date = datetime.fromisoformat(creation_date.split('+')[0])
         if not self.filter_by_date(creation_date):
             return
@@ -82,8 +84,8 @@ class SternSpider(BaseSpider):
            # Remove surrounding quotes from headlines
            processed_headlines = [headline.strip('"') for headline in headlines]
           
-           # If quote inside headline, keep substring fro quote onwards
-           processed_headlines = [headline[headline.index('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
+           # If quote inside headline, keep substring from quote onwards
+           processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
 
            # Extract paragraphs between the abstract and the first headline
            body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text-element u-richtext u-typo u-typo--article-text article__text-element text-element--context-article" and following-sibling::h2[contains(text(), "' + processed_headlines[0] + '")] and not(descendant::strong)]')]

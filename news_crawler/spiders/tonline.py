@@ -100,9 +100,8 @@ class TonlineSpider(BaseSpider):
             # Remove surrounding quotes from headlines
             processed_headlines = [headline.strip('"') for headline in headlines]
           
-            # I quote inside headline, keep substring fro quote onwards
-            processed_headlines = [headline[headline.index('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
-            processed_headlines = [headline[headline.index('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
+            # If quote inside headline, keep substring from quote onwards
+            processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
 
             # Extract paragraphs between the abstract and the first headline
             body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//div[@itemprop="articleBody"]/p[not(preceding-sibling::h2[@itemprop="alternativeHeadline"]) and not(descendant::b) and not(descendant::span[@class="Tiflle"]) and following-sibling::h3[contains(text(), "' + processed_headlines[0] + '")]]')]

@@ -53,6 +53,8 @@ class TagesschauSpider(BaseSpider):
         data = json.loads(data_json)        
 
         # Filter by date
+        if 'datePublished' not in data:
+            return
         creation_date = data['datePublished']
         creation_date = datetime.fromisoformat(creation_date.split('+')[0])
         if not self.filter_by_date(creation_date):
@@ -105,8 +107,8 @@ class TagesschauSpider(BaseSpider):
             # Remove surrounding quotes from headlines
             processed_headlines = [headline.strip('"') for headline in headlines]
           
-            # If quote inside headline, keep substring fro quote onwards
-            processed_headlines = [headline[headline.index('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
+            # If quote inside headline, keep substring from quote onwards
+            processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
 
             # Extract paragraphs between the abstract and the first headline
             body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text small" and not(descendant::strong) and following-sibling::h2[contains(text(), "' + processed_headlines[0] + '")] or following-sibling::h2/strong[contains(text(), "' + processed_headlines[0] + '")]]')]
