@@ -19,7 +19,7 @@ class JungeweltSpider(BaseSpider):
     allowed_domains = ['www.jungewelt.de']
     start_urls = ['https://www.jungewelt.de/']
     
-    # Exclude pages without relevant articles 
+    # Exclude paid articles and pages without relevant articles 
     rules = (
             Rule(
                 LinkExtractor(
@@ -33,7 +33,8 @@ class JungeweltSpider(BaseSpider):
                         r'www\.jungewelt\.de\/termine\/',
                         r'www\.jungewelt\.de\/unterstuetzen\/',
                         r'www\.jungewelt\.de\/rlk\/',
-                        r'www\.jungewelt\-shop\.de\/'
+                        r'www\.jungewelt\-shop\.de\/',
+                        r'www\.jungewelt\.de\/loginFailed\.php\?\w.*'
                         )
                     ),
                 callback='parse_item',
