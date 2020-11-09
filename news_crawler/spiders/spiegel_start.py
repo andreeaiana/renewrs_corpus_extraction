@@ -12,18 +12,20 @@ from news_crawler.items import NewsCrawlerItem
 from news_crawler.utils import save_as_html
 
 
-class SpiegelSpider(BaseSpider):
-    """Spider for Spiegel"""
-    name = 'spiegel'
+class SpiegelStartSpider(BaseSpider):
+    """Spider for Spiegel Start"""
+    name = 'spiegel_start'
     rotate_user_agent = True
     allowed_domains = ['www.spiegel.de']
-    start_urls = ['https://www.spiegel.de/']
+    start_urls = ['https://www.spiegel.de/start/']
     
     # Exclude articles in English and pages without relevant articles 
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'spiegel\.de\/\w.*$'),
+                    allow=(r'www\.spiegel\.de\/start\/\w.*',
+                        r'www\.spiegel\.de\/start\/p\d+\/'
+                        ),
                     deny=(r'spiegel\.de\/international\/\w.*$',
                         r'www\.spiegel\.de\/audio\/',
                         r'www\.spiegel\.de\/plus\/',
@@ -133,7 +135,7 @@ class SpiegelSpider(BaseSpider):
         item['keywords'] = keywords.split(', ') if keywords else list()
 
         # Extract first 5 recommendations towards articles from the same news outlet, if available
-        recommendations = response.xpath('//ul[@class="flex flex-col" and preceding-sibling::span[contains(text(), "Mehr zum Thema")]]//a[@class="text-black block" and not(../descendant::span[@data-flag-name="sponpaid"])]/@href').getall()
+        recommendations = response.xpath('//ul[@class="flex flex-col" and preceding-sibling::span[contains(text(), "Mehr zum Thema")]]//a[@class="text-black block" and not(../descendant::span[@data-flag-name="sponpaid"])]/@href | //div[contains(@class, "max-w-full w-full") and ../preceding-sibling::span[contains(text(), "Mehr zum Thema")]]//a/@href | //div[contains(@class, "max-w-full w-full") and ../../preceding-sibling::span[contains(text(), "Mehr zum Thema")]]//a/@href').getall()
         if recommendations:
             if len(recommendations) > 5:
                 recommendations = recommendations[:5]
@@ -142,6 +144,6 @@ class SpiegelSpider(BaseSpider):
             item['recommendations'] = list()
 
         # Save article in html format
-        save_as_html(response, 'spiegel.de', title)
+        save_as_html(response, 'spiegel_start.de', title)
 
         yield item 

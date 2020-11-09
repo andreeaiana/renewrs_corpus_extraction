@@ -19,7 +19,8 @@ class FocusSpider(BaseSpider):
     rotate_user_agent = True
     allowed_domains = ['www.focus.de']
     start_urls = ['https://www.focus.de/']
-    
+
+    # Exclude pages without relevant articles
     rules = (
             Rule(
                 LinkExtractor(
