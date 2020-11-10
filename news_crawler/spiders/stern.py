@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import re
 import os
 import sys
 from news_crawler.spiders import BaseSpider
@@ -26,7 +27,8 @@ class SternSpider(BaseSpider):
                     allow=(r'stern\.de\/\w.*\.html$'),
                     deny=(r'stern\.de\/p\/plus\/\w.*\.html$',
                         r'stern\.de\/\w.*\/english-version-\w.*\.html$',
-                        r'www\.stern\.de\/gutscheine\/'
+                        r'www\.stern\.de\/gutscheine\/',
+                        r'www\.stern\.de\/\w.*\/themen\/\w.*\.html$'
                         )
                     ),
                 callback='parse_item',

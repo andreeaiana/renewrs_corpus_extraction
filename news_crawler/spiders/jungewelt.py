@@ -18,12 +18,12 @@ class JungeweltSpider(BaseSpider):
     rotate_user_agent = True
     allowed_domains = ['www.jungewelt.de']
     start_urls = ['https://www.jungewelt.de/']
-    
+
     # Exclude paid articles and pages without relevant articles 
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'www\.jungewelt\.de\/artikel\/\w.*'),
+                    allow=(r'www\.jungewelt\.de\/artikel\/\d+\.\w.*'),
                     deny=(r'www\.jungewelt\.de\/\w.*\/leserbriefe\.php$',
                         r'www\.jungewelt\.de\/verlag',
                         r'www\.jungewelt\.de\/ueber_uns\/',
@@ -44,11 +44,11 @@ class JungeweltSpider(BaseSpider):
 
     def parse_item(self, response):
         """Scrapes information from pages into items"""
-
         # Exclude paid articles
-        if response.xpath('//form[@action="/login.php"]').get():
+        pay_message = 'Dieser Beitrag ist am Erscheinungstag gesperrt und nur für Onlineabonnenten lesbar.'
+        if pay_message in response.body.decode('utf-8'):
             return
-     
+
         # Filter by date
         creation_date = response.xpath('//meta[@name="dcterms.date"]/@content').get()
         if not creation_date or creation_date == '':

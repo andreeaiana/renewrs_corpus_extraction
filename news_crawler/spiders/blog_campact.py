@@ -29,7 +29,8 @@ class BlogCampactSpider(BaseSpider):
                         r'www\.campact\.de\/\w.*',
                         r'weact\.campact\.de\/',
                         r'support\.campact\.de\/',
-                        r'aktion\.campact\.de\/\w.*'
+                        r'aktion\.campact\.de\/\w.*',
+                        r'blog\.campact\.de\/\w.*\/comment\-page\-\d+\/\#comments'
                         )
                     ),
                 callback='parse_item',
