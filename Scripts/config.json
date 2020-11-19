@@ -1,0 +1,22 @@
+{
+"keywords":{
+  "Einwander*":{"exclude":[]},
+  "Migrant*":{"exclude":[]},
+  "Migration*":{"exclude":[]},
+  "Refug*":{"exclude":[]},
+  "Asyl*":{"exclude":[]},
+  "Zuwander*":{"exclude":[]},
+  "Immigrant*":{"exclude":[]},
+  "Immigration*":{"exclude":[]},
+  "Flüchtl*":{"exclude":[]},
+  "Geflücht*":{"exclude":[]},
+  "Ausländer*":{"exclude":[]},
+  "Rapefug*":{"exclude":[]},
+  "Invasor*":{"exclude":[]}
+  },
+"to_date":"20/10/2020",
+"from_date":"01/01/2019",
+"top_k":200,
+"min_length_btw_keywords":0,
+"min_keyword_occurrence": 2
+}
