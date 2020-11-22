@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 03:46:57+01:00 page_id=4632 :: Alltag--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 4632--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>Ai Weiwei über die Deutschen: Autoritär-faschistoider Charakter - taz.de</title><meta name="author" content="Hengameh Yaghoobifarah"></meta><meta name="description" content="Die Deutschen sind autoritär, gehorsam, ungehemmt und ohne jegliche Integrität. So fasst es der Künstler Ai Weiwei zusammen – und er hat Recht."></meta><meta name="keywords" content="Ai Weiwei, Deutschland, Rassismus, Alltag, Gesellschaft, taz, tageszeitung "></meta><meta name="taz:title" data-id="5655989" content="Ai Weiwei über die Deutschen: Autoritär-faschistoider Charakter"></meta><meta name="taz:tag" content="Ai Weiwei" data-tag-id="5042898"></meta><meta name="taz:tag" content="Deutschland" data-tag-id="5008491"></meta><meta name="taz:tag" content="Rassismus" data-tag-id="5007524"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta><meta property="og:url" content="https://taz.de/!5655989/"></meta><meta property="og:locale" content="de_DE"></meta><meta property="og:type" content="article"></meta><meta name="twitter:card" content="summary_large_image"></meta><meta name="twitter:site" content="@tazgezwitscher"></meta><meta property="og:title" content="Ai Weiwei über die Deutschen: Autoritär-faschistoider Charakter"></meta><meta property="fb:app_id" content="966242223397117"></meta><meta name="twitter:title" content="Ai Weiwei über die Deutschen: Autoritär-faschistoider Charakter"></meta><meta property="og:description" content="Die Deutschen sind autoritär, gehorsam, ungehemmt und ohne jegliche Integrität. So fasst es der Künstler Ai Weiwei zusammen – und er hat Recht."></meta><meta name="twitter:description" content=" Die Deutschen sind autoritär, gehorsam, ungehemmt und ohne jegliche Integrität. So fasst es der Künstler Ai Weiwei zusammen – und er hat Recht."></meta><meta property="og:image" content="https://taz.de/picture/3927850/948/23582451-1.jpeg"></meta><meta name="twitter:image" content="https://taz.de/picture/3927850/948/23582451-1.jpeg"></meta><meta property="article:published_time" content="2020-01-22T16:40:00+02:00"></meta><meta property="article:modified_time" content="2020-01-22T16:40:42+02:00"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"5655989" // String
+            , page_title_enc      :"5655989: Ai Weiwei über die Deutschen: Autoritär-faschistoider Charakter" // String
+            , custom_url_enc      :"/!5655989" // String
+            , channel             :"web" // String
+            , area                :"Redaktion" // String
+            , department          :"p4632" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : false  // Boolean
+            , is_article          : true  // Boolean
+            , has_tags            : true  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "https://taz.de/lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<link rel="preload" href="/lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff" as="font" type="font/woff" crossorigin="anonymous"></link><link rel="preload" href="/lib/ch/web/pix/tazze46.png" as="image" media="(min-width: 49px)"></link><link rel="canonical" href="https://taz.de/Ai-Weiwei-ueber-die-Deutschen/!5655989/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Alltag" href="/!p4632/rss.xml"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="/rss.xml"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="/"></link><link rel="copyright" type="text/html" title="Impressum" href="/6/impressum/"></link><link rel="stylesheet" type="text/css" media="screen, print" href="/lib/ch/web/css/news2020-10-20_51.css"></link><link href="/lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 6]> <link rel="stylesheet" type="text/css" href="/lib/style/ie6.css"> <![endif]--><!--[if lte IE 7]><style type="text/css">
+			ul.topbar                      >li      >a>span,
+			.secthead>ul[role='navigation']>li      >a>span	{  border-left: 1px solid; padding: 0px 4px;  }
+			ul.topbar                      >li.first>a>span,
+			.secthead>ul[role='navigation']>li.first>a>span	{  border:none; padding-left:0px;  }
+			ul.topbar                      >li      >a>span  {  border-color:white;    }
+			.secthead>ul[role='navigation']>li      >a>span  {  border-color:#888888;  }
+			.box h2 {  line-height:20px;  }
+			.author  {	display:inline;	float:none;	}
+			.sect_spb .sectbody {	padding-top:8px;	}
+			/* fil 2011-04-08 */
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward >ul.toolbar  {  height:28px;  }
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward ul.toolbar >li  {  float: left !important;  }
+			#reward >div  {  clear:both;  }
+			.sect_article >.sectfoot ul.toolbar  {  position:relative !important; top:0px; left:0px; height:24px;  }
+			#micropay ul.toolbar  {  height:52px;  }
+			.sect_article >.sectfoot {  padding-bottom:30px  }
+		</style><![endif]--><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="/uploads/cmp/yieldlove_cmp.js"></script><script type="text/javascript" src="/uploads/cmp/yieldlove.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="/lib/ch/web/js/2020-10-20_51.js"></script><script type="text/javascript"> if( filOtaz_de && filOtaz_de.goMobile )  filOtaz_de.goMobile(); </script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"5655989" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/Gesellschaft/Alltag" // String
+            , is_article      : true  // Boolean
+            , is_corp         : false  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            // 2. check for not closing overlay
+            if ( $("#tzi-paywahl-fg").length && "MutationObserver" in window ){
+                p.trackEvent( 'TZI', 'displayed', 'LAYER_SHOWN_OBSERVE_TEST');    
+                var paywahl = document.getElementById('tzi-paywahl-fg');
+                var observer = new MutationObserver(function(mutations) {
+                  p.trackEvent( 'TZI', 'displayed', 'LAYER_CLOSED_OBSERVE_TEST');    
+                  observer.disconnect();
+                });
+                observer.observe(paywahl, { 
+                    attributes: true, 
+                    attributeFilter: ['style'] 
+                });
+            }
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        // mar: reactivated for tracking of special menu
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+*/
+
+            $(document).on("click", ".longread.article .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL-LONGREAD' ) });
+	        $(document).on("click", ".longread.article .sect_mostread a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'MEISTGELESEN-LONGREAD' ) });
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page:not(.longread) .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page:not(.longread) ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page:not(.longread) .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" src="https://script.ioam.de/iam.js"></script><script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript">
+		// Google Publisher Tag - https://developers.google.com/doubleclick-gpt/reference
+		var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; 
+	(function(){
+		var adArea = 'Gesellschaft';	//
+		googletag.cmd.push( function() {
+			var pa = googletag.pubads();
+			pa.setForceSafeFrame(true);
+			pa.collapseEmptyDivs();
+			pa.setTargeting('position', [ adArea ]);
+      //pa.setTargeting('test', ['fireplace']); //       * * * test only ! * * *
+      //pa.setTargeting('test', ['wallpaper']);   //       * * * test only ! * * *
+      pa.setTargeting('page_id', ['5655989']);
+			if( location.protocol =='https' )
+				pa.setTargeting('ssl', ['ja']);
+			googletag.enableServices();
+			});
+		})();
+	</script><script>
+		// expect jQuery already to be loaded
+	(function() {
+		if( !window.filOtaz_de )		window.filOtaz_de		= Object;
+		if( !window.filOtaz_de.ads )		window.filOtaz_de.ads		= Object;
+		if( !window.filOtaz_de.ads.gpt )	window.filOtaz_de.ads.gpt	= Object;
+
+        var sizes = {
+	           'artikel_medrec-1'    :[300,250]
+	          ,'artikel_medrec_mitte'  :[300,250]
+            ,'ros_sidebar-1'       :[300,250]
+            ,'ros_sidebar-2'       :[300,100]
+            ,'uebersicht_medrec-1' :[300,250]
+            ,'uebersicht_medrec-2' :[300,250]
+            ,'uebersicht_medrec-3' :[300,250]
+            ,'uebersicht_medrec-4' :[300,250]
+            ,'uebersicht_medrec-5' :[300,250]
+            ,'uebersicht_board-1'  :[624,150]
+            ,'ros_billboard-1'     :[870,250]
+            ,'mobile_banner-1'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-2'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-3'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-4'     :[[300,250],[320,50],[320,100]]
+            ,'ros_top-links'       :[[120,600],[160,600],[300,600]]
+            ,'ros_top-mitte'       :[[728,90],[800,250],[870,250],[970,90],[970,250]]
+            ,'ros_top-rechts'      :[[120,600],[160,600],[300,600]]
+            ,'ros_leaderboard-1'   :[728,90]
+            ,'fireplace-mitte'     :[[970,90],[728,90]]
+            ,'fireplace-links'     :[160,601]
+            ,'fireplace-rechts'    :[160,600]
+            ,'fireplace_bg'        :[1,1]
+            };
+        var roadblocks = {};
+  
+  
+      roadblocks = {
+         'ros_top-mitte'   :['fireplace_mitte']
+        ,'ros_top-rechts'  :['fireplace_mitte'] 
+      };
+    
+    
+		// general ad handling
+
+		// --> to be triggered for ad_zone if ad is (to be) delivered
+		filOtaz_de.ads.fitIn = function( container ) {	// make space for ad in layout
+			var container = $( container );
+//console.log('fit '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.addClass('shown');
+			container.addClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').addClass('aded_'+( container.height() >120 ?'big' :'small' ) );
+				var badge = container.hasClass('ad_zone_sold') ? 'Anzeige' : 'taz-Angebot';
+				container.before('<div class="ad_badge">'+ badge +'</div>');
+				}
+			container.trigger('TAZadInserted').trigger('TAZboxChange');
+			};
+
+		// --> to be triggered for ad_zone if no ad is (to be) delivered
+		// redundant?
+		filOtaz_de.ads.reclaim = function( container ) {	// remove whitespace from non-delivered ad
+			var container = $( container );
+//console.log('reclaim '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.removeClass('shown');
+			container.removeClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').removeClass('aded_big aded_small');
+				}
+			container.trigger('TAZadRemoved').trigger('TAZboxChange');
+			};
+    
+    
+
+		var fuzeAdFrame = function( frame ) {	// register frame for messages, fire if one is from our content
+console.log('legacy fuzeAdFrame', frame  );
+			};
+    
+    
+    // Hintergrund per Message
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+    window[eventMethod](messageEvent, function(e) {
+      if (e.data.toString().indexOf("color") != -1) {
+        $("#background").css("background-color", e.data.split(" ")[1]);
+        }
+      }, false);
+    
+    
+		// activate ad frame
+		var adZoneHandled = {};
+    
+    var get_id = function( name ) {
+      return $('div[name=' + name + ']').attr('id');
+      };
+    
+    var get_name = function( id ) {
+      return $('#'+ id ).attr('name');
+      };
+    
+    unblock = function( id, rb_id ) {
+      var name = get_name(id);
+      var index = roadblocks[name].indexOf(rb_id);
+      if ( index > -1 ) {
+        roadblocks[name].splice(index, 1);
+        }
+      if ( !roadblocks[name].length ) {
+        googletag.defineSlot( '/118803185/' + name, sizes[name], id ).addService( googletag.pubads() );
+        googletag.display( id );
+        }
+      };
+    
+    filOtaz_de.ads.gpt.activateAdFrame = function( id ) {  
+			if( !id ) return;
+			if( adZoneHandled[id] ) return; adZoneHandled[id] = true; // only one active zone per id
+ 
+			var packing   = $('#ad_bin_'+ id );
+			id = 'ad_zone_'+ id;
+			var container = packing.find('>#'+ id );
+  
+			var name = container.attr('name');
+			if( !name || !sizes[name] ) return;
+   
+			// handle custom ad load events
+			container.on('filOtaz_de.ads.gpt.noBanner',   function(){  return false;  });
+			container.on('filOtaz_de.ads.gpt.preBanner',  function(){
+				filOtaz_de.ads.fitIn( container );
+				return false;
+				});
+			container.on('filOtaz_de.ads.gpt.postBanner', function(){  return false;  });
+
+
+			// define content
+			googletag.cmd.push( function() {
+				var pa = googletag.pubads();
+        if ( roadblocks[name] ) {
+          pa.addEventListener('slotRenderEnded', function (e) {
+            for (var i=0; i<roadblocks[name].length; i++) {
+              if ( e.slot.getSlotElementId() == 'ad_zone_' + roadblocks[name][i] ) {
+                if ( e.isEmpty ) {
+                  unblock(id, roadblocks[name][i]);
+                  }
+                else {
+                  document.getElementById(id).style.display = 'none';
+                  for (var key in roadblocks) {
+                    if ( !roadblocks.hasOwnProperty(key) ) continue;
+                    for ( var j=0; j<roadblocks[key].length; j++ )
+                    if ( id == 'ad_zone_' + roadblocks[key][j] ) {
+                      unblock(get_id(key), roadblocks[key][j]);
+                      break;
+                      }
+                    }
+                  }
+                }
+              }
+            }); // pa.addEventListener
+          googletag.display(id);
+          }
+        else {
+          pa.display( '/118803185/'+ name, sizes[name], id );
+//console.log( 'asked for', '/118803185/'+ name, sizes[name], id );
+          }
+				pa.addEventListener('slotRenderEnded', function(e) {
+			    if( e.slot.getSlotElementId() != id )  return;	// not our slot
+			    container.trigger( e.isEmpty ? 'filOtaz_de.ads.gpt.noBanner' : 'filOtaz_de.ads.gpt.preBanner' );
+console.log( name +( e.isEmpty ? ' isEmpty' : '' ) );
+					});
+        });
+      }; //filOtaz_de.ads.gpt.activateAdFrame
+
+		// activate wallpaper combo add frame
+/*
+		filOtaz_de.ads.gpt.wallpaper = function() {
+			console.log('filOtaz_de.ads.gpt.wallpaper not yet supported');
+			};
+*/
+
+		})();
+	</script><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link><link rel="manifest" href="/manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body><noscript><img src="https://taz.de/stats/piwik.php?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Redaktion/Gesellschaft/Alltag,Artikel",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><span id="ad_bin_fireplace_bg" class="ad_bin"><div id="ad_zone_fireplace_bg" name="fireplace_bg" class="ad_zone"></div></span><span id="ad_bin_fireplace_mitte" class="ad_bin"><div id="ad_zone_fireplace_mitte" name="fireplace-mitte" class="ad_zone"></div></span><span id="ad_bin_fireplace_links" class="ad_bin"><div id="ad_zone_fireplace_links" name="fireplace-links" class="ad_zone"></div></span><span id="ad_bin_fireplace_rechts" class="ad_bin"><div id="ad_zone_fireplace_rechts" name="fireplace-rechts" class="ad_zone"></div></span><span id="ad_bin_fireplace_script" class="ad_bin"><div id="ad_zone_fireplace_script" name="fireplace-script" class="ad_zone"></div></span><script type="text/javascript">
+(function(){
+  var parent = $('#ad_bin_fireplace_rechts').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_rechts');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_bg').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_bg');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_mitte').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_mitte');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_links').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_links');
+  })(); 
+              </script><div id="adzone_wall" class=""><span id="ad_bin_ros_top_rechts" class="ad_bin"><div id="ad_zone_ros_top_rechts" name="ros_top-rechts" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_rechts';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><span id="ad_bin_ros_top_mitte" class="ad_bin"><div id="ad_zone_ros_top_mitte" name="ros_top-mitte" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></div><div id="pages" class="news"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="/!p4209/#matomo:pk_campaign" id="menu_p5320"><span>Abo</span></a></li><li class="even trodd"><a href="https://taz.de/!p4271/#matomo:pk_campaign" id="menu_p5321"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="even treven"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even trodd"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="odd treven"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="even trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="odd trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="even treven"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd treven"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even treven"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul><div class="full news report article page first odd first_page n1" itemscope="" itemtype="http://schema.org/NewsArticle"><div class="head" role="head"><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="even trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="odd treven"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a></li><li class="even trodd selected"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="odd trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a></li><li class="even treven"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a></li><li class="odd trodd"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a></li><li class="even trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a></li><li class="last odd treven"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><span class="body" role="main"><div class="main rack first_rack" id="xid819017">
+    
+	<div xmlns="" class="metadata" itemscope="">
+<a id="articleURL" href="/!5655989"></a><a id="speakingURL" href="/Ai-Weiwei-ueber-die-Deutschen/!5655989"></a><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-article-ID" content="5655989"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="url-ID" content="5655989"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-obj-ID" content="3927850"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="vgwort-counter-ID" content="ae896214747d4c7188750655bcd54307"></meta><span id="articleID"></span><span id="cmsArticleID">5655989</span><img src="//taz.met.vgwort.de/na/ae896214747d4c7188750655bcd54307" width="1" height="1" alt=""><img src="/count/vgwort/ae896214747d4c7188750655bcd54307.gif" width="1" height="1" alt="">
+</div>
+<div role="region" id="" class="odd sect sect_article news report"><article class="sectbody" itemprop="articleBody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Ai Weiwei über die Deutschen</span><span class="hide">: </span><span>Autoritär-faschistoider Charakter</span>
+</h1>
+<p xmlns="" itemprop="description" class="intro ">Die Deutschen sind autoritär, gehorsam, ungehemmt und ohne jegliche Integrität. So fasst es der Künstler Ai Weiwei zusammen – und er hat Recht.</p>
+      
+      <a xmlns="" class="full picture" href="/picture/3927850/948/23582451-1.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	" itemprop="image"><img src="/picture/3927850/624/23582451-1.jpeg" alt="Porträt von Ai Weiwei" title="Porträt von Ai Weiwei"></a><p xmlns="" class="caption">Vor wenigen Monaten hat Ai Weiwei Deutschland in Richtung Cambridge verlassen <span class="credit"> Foto: Karsten Thieler</span></p>
+    
+      <p xmlns="" class="article first odd">Wäre Deutschland ein Tier, dann ein Schäferhund mit Aszendent in Schlange und Mond in Wolf. „Schade“, denken Sie an dieser Stelle vielleicht, „jetzt wird’s esoterisch“, aber bleiben Sie bitte dran, ich kann es erklären. Der Charakter der Deutschen lässt sich als wachsam, autoritär, gehorsam, ungehemmt, grob und ohne jegliche Integrität beobachten.</p>
+      <p xmlns="" class="article even">Diese für Sie vielleicht als Beleidigung empfundene Beschreibung ist nicht von mir, auch wenn ich dem zustimme, sondern das Erleben <a target="_blank" href="/Ai-Weiwei-ueber-sein-Exil-in-Deutschland/!5619421/">der Künstlers Ai Weiwei</a>. So erzählte er es in einem Interview <a target="_blank" href="https://www.theguardian.com/artanddesign/2020/jan/21/ai-weiwei-on-his-new-life-in-britain-germany-virtual-reality-film">der britischen Zeitung dem <em>Guardian.</em></a> Der chinesische Künstler hat seine Wahlheimat Berlin für das britische Cambridge verlassen. Nicht, weil es dort keinen Rassismus gibt,­ ­sondern weil die britischen ­­Ras­­sis­t*innen immerhin höflich sind.</p>
+      
+      <span id="ad_bin_artikel_medrec_1" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_1" name="artikel_medrec-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">Wer als nicht-<em>weiße</em> Person schon mal eine längere Zeit in anderen überwiegend <em>weißen</em> europäischen Ländern verbracht hat, kann es vielleicht nachvollziehen. Der Rassismus erscheint an deutschen Standards gemessen etwas subtiler, respektvoller, fast schon zärtlich, liebevoll. Deutsche sind wie Zahnpasta: extra white. Im internationalen Vergleich <em>weißer</em> Menschen sind Deutsche die unerträglichsten.</p>
+      <p xmlns="" class="article even">Auch im Jahr 2020 hallt das Echo des Nationalsozialismus nach. Oder etwas weniger poetisch ausgedrückt: Deutsche sind immer noch (und teilweise auch schon wieder) auf ihrem Nazi-Mindset hängengeblieben. Das Wording mag sich verändert haben, doch der autoritär-faschistoide Charakter bleibt erhalten, so auch Ai Weiweis Beobachtung.</p>
+      <p xmlns="" class="article odd">Es geht nicht nur um den weiterhin bestehenden <a target="_blank" href="/Sascha-Lobo-ueber-den-Paragrafen-219a/!5648503/">Nazi-Paragraphen 219a</a>. Die braune Suppe brodelt tiefer. Die <em>weiße</em> bürgerliche Mitte mag sich nicht mehr als arisch beschreiben, <a target="_blank" href="/Kolumne-Habibitus/!5341199/">doch ihre Selbstbezeichnung „biodeutsch“</a>, die selbst in seriösen Medien als neutrale demografische Eigenschaft auftaucht, ist nur ein Synonym für diesen Begriff. Die Blut-und-Boden-Logik ist nie verschwunden. Deswegen der Unterschied zwischen Deutschen und Passdeutschen – jene, die für immer Ausländer und somit eher Last als Bereicherung bleiben werden. Viel zu retten gab es ohnehin nicht, aber Deutschland schafft es immer wieder, das letzte bisschen seines Rufs zu ruinieren. Einfach absurd, dass Deutsche sich für überlegen halten.</p>
+      <p xmlns="" class="article last even">In Berlin wurde Ai Weiwei laut seiner Erzählung schon zwei Mal aus dem Taxi geworfen, weil er ein Fenster geöffnet oder mit seiner Mutter telefoniert hat – während andere auf der Rückbank auch mal vögeln oder koksen. Auf den Sitzen deutscher Autos bringt es dir nichts, berühmt, begabt oder reich zu sein. Egal, wie krass du bist, hier bist du in erster Linie irgend so ein Ausländer.</p>
+    </article></div>
+
+    
+  
+
+    
+  <div role="region" id="" class="odd sect "><div class="sectbody"><a xmlns="" id="reward" shape="rect">Einmal zahlen</a><script> filOtaz_de.flattr();</script></div></div>
+
+    
+	<div class="shariff">.</div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171834/" ratioURL-ressource="171834" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Unsere Kosten-Nutzer-Rechnung</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wenn nur 5 Prozent unserer Leser*innen mitmachen würden, wäre die Zukunft unseres kritischen, unabhängigen Journalismus im Netz gesichert.    
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie die taz jetzt mit Ihrem Beitrag </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171640/" ratioURL-ressource="171640" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Unser täglich Wort gib uns heute</span>
+</h1>
+  		<p xmlns="" class="article first odd">Alle Artikel auf taz.de sind frei zugänglich. Tag für Tag und Monat für Monat stellen wir unsere Arbeit der Öffentlichkeit frei zur Verfügung. Wir machen das aus Überzeugung, denn es braucht kritischen Journalismus im Netz. Aber natürlich brauchen auch wir dafür Geld – und appellieren deshalb an Sie, unsere Leser*innen:     
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt </strong><strong><strong>die taz </strong>mit Ihrem Beitrag</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171128/" ratioURL-ressource="171128" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Frei, aber nicht for free</span>
+</h1>
+  		<p xmlns="" class="article first odd">Als frei zugängliches, unabhängiges Medium sind wir auf die Unterstützung unserer Leser*innen angewiesen. Nur mit Ihrer Beteiligung ist es möglich, die taz in digitalen Zeiten zu finanzieren und unsere Arbeit zu erhalten.  
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt die taz mit Ihrem Beitrag </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!170949/" ratioURL-ressource="170949" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines-2020</span><span class="hide">: </span><span>Seien Sie auf unserer Seite.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Als unabhängiges Medium sind wir auf die Unterstützung unserer Leser*innen angewiesen. Nur mit einer großen Zahl von Freiwilligen kann es gelingen, die taz in digitalen Zeiten zu finanzieren und unsere Arbeit zu erhalten.   
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie uns jetzt mit Ihrem Beitrag</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script type="text/javascript" xml:space="preserve">
+          (function () {
+            patOtaz_de.layer_tzi_paywahl({'campaign': '2019-5-27' });
+          })();
+        </script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Normal/!155790/" ratioURL-ressource="155790" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Normal</span><span class="hide">: </span><span>Freier Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Das Bedürfnis nach vertrauenswürdiger Information ist derzeit sehr hoch, viele blicken und klicken in diesen unsicheren Zeiten auf die Berichterstattung der taz. Während der vergangenen Wochen ist klar geworden, wie wichtig freier Journalismus ist. In Krisenzeiten ist es „systemrelevant”, dass Menschen sich unabhängig informieren können. Ohne Paywall. Wir finden es wichtig, dass uns möglichst viele Menschen lesen – auch jene, die sich kein Abo leisten können. Doch dazu brauchen wir Ihre Hilfe.    
+</p>
+  		<p xmlns="" class="article even">Guter, kritischer Journalismus ist nicht kostenlos zu haben und braucht Finanzierung. Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Im Gegenzug wird sie freiwillig und solidarisch unterstützt. Von unseren Leser*innen, von Ihnen. Mit Ihrer Wertschätzung und Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit, ein Forum für Meinungsvielfalt, eine engagierte Stimme für Minderheiten. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Seien Sie mit uns taz.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Klima/!155427/" ratioURL-ressource="155427" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Klima</span><span class="hide">: </span><span>Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wir berichten seit 1978 über die Zerstörung unseres Planeten – weil wir daran glauben, dass eine bessere Welt möglich ist. Klima- und Umweltberichterstattung haben in der taz schon immer einen großen Raum eingenommen, aber zur Zeit gehen wir noch einmal in die Offensive. Die taz berichtet noch intensiver über die drohende Klimakatastrophe – auf allen Kanälen. Um dies leisten zu können, sind wir auf die Unterstützung unserer Leser*innen angewiesen. Denn guter Journalismus ist aufwändig und nicht kostenlos zu haben.   
+</p>
+  		<p xmlns="" class="article even">Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Unsere Artikel sollen so viel wie möglich gelesen, geliked und geteilt werden. Nur so können sie die ökologisch notwendigen Veränderungen unserer Gesellschaft vorantreiben. Im Gegenzug wird die taz von unseren Leser*innen unterstützt. Freiwillig und solidarisch. Mit Ihrer Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit und eine engagierte Stimme für mehr Klimaschutz. Unterstützen Sie jetzt die taz und helfen Sie uns dabei.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><div role="region" id="" class="odd sect sect_text "><div class="sectbody"><p>
+
+	Fehler auf taz.de entdeckt?
+	    </p><p>
+        Wir freuen uns über eine 
+	<a href="mailto:fehlerhinweis@taz.de?subject=Fehlerhinweis%20zu%20https://taz.de/Ai-Weiwei-ueber-die-Deutschen/!5655989/&amp;body=Zu%20%22Ai Weiwei über die Deutschen: Autoritär-faschistoider Charakter%22%0D%0Ahttps://taz.de/Ai-Weiwei-ueber-die-Deutschen/!5655989/%0D%0A%0D%0ABitte%20beschreiben%20Sie%20uns%20den%20Fehler.%20Sie%20können%20gern%20einen%20Screenshot%20anhängen.%20Wir%20danken%20für%20Ihre%20Hilfe%21%20
+					%0D%0A%0D%0A
+					Inhaltliches%20Feedback%20geben%20Sie%20uns%20gerne%20in%20der%20Kommentarspalte%20oder%20richten%20es%20an%20briefe@taz.de.%20Dort%20leiten%20wir%20ihr%20Feedback%20auch%20an%20die%20Redaktion%20weiter.%20Über%20diese%20Mailadresse%20nehmen%20wir%20nur%20Rechtschreib-%20und%20Faktenkorrekturen%20vor.				">Mail an fehlerhinweis@taz.de</a>!</p><p>
+	Inhaltliches Feedback? 
+	</p><p>
+
+	Gerne als Leser*innenkommentar unter dem Text auf taz.de oder über das
+	<a href="/!112355/"> Kontaktformular</a>.
+		</p></div></div><!-- DEBUG belly: 1 extras here, 0 from directory Alltag, thats 1 merged-->
+      
+      <div class="webelement-content-container" webelementid="html-5698845"><div class="webelement-content-container-content sectbody"><h6>Wir würden Ihnen hier gerne einen externen Inhalt zeigen. Sie entscheiden, ob sie dieses Element auch sehen wollen.</h6><p>Ich bin damit einverstanden, dass mir externe Inhalte angezeigt werden. Damit können personenbezogene Daten an Drittplattformen übermittelt werden. <a href="https://taz.de/!166598" target="_blank">Mehr dazu in unserer Datenschutzerklärung.</a></p></div><div class="webelement-content-container-inner"><label class="checkbox-switch"><input type="checkbox"></input><span class="checkbox-switch-slider-round"></span><span class="webelement-checkbox-switch-text">Externen Inhalt erlauben<span id="consentPreview"></span></span></label><p class="webelemnt-checkbox-switch-disclaimer"></p></div><div class="webelement-html-content" data-initial-state="true" webelementid="html-5698845"><noscript class="html-content" type="text/plain"><script class="podigee-podcast-player" src="https://cdn.podigee.com/podcast-player/javascripts/podigee-podcast-player.js" data-configuration="https://taz-vorgelesen.podigee.io/19-geschichte-rassismus/embed?context=external"></script></noscript></div><div class="webelement-js-content"><script type="text/javascript">steffiOtaz_de.WebelementSwitch().setWebelementSwitch('html-5698845');</script></div></div>
+    </span><span class="wing" role="contentinfo"><div class="rack first_rack" id="xid459821">
+    
+	<!--template mode="layout" match="display[ @obj='descr' ]":start-->
+
+    
+	<div role="region" id="" class="even sect sect_meta "><div class="sectbody"><ul role="navigation" class="left rootline toolbar"><li class="first odd trodd selected"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="last even trodd selected"><a href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span>Alltag</span></a></li></ul><ul role="navigation" class="right toolbar"><li class="date" itemprop="datePublished" content="2020-01-22T16:40:00+02:00">22. 1. 2020</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2020-01-22T16:40:42+02:00"></meta></ul></div></div>
+
+    
+	<div role="region" id="" class="odd sect sect_profile pictured "><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="pictured 
+        
+	
+        
+
+		
+			
+	        
+	
+			author 
+		community 
+		
+        
+                
+		        
+		
+	        
+	        
+                
+
+				
+		
+
+        person objlink" itemprop="url" href="/Hengameh-Yaghoobifarah/!a25938/"><h4 itemprop="name">Hengameh Yaghoobifarah</h4><h5 itemprop="jobTitle">Mitarbeiter_in</h5><img itemprop="image" src="/kommune/files/images/profile/70x70/25938.png" alt="Hengameh Yaghoobifarah" title="Hengameh Yaghoobifarah"></img></a><ul class="contact"><li><a itemprop="sameAs" class="remote microblog" target="_blank" href="http://twitter.com/@habibitus"><img src="/lib/ch/web/pix/icons/microblog.png" class="icon" alt="microblog" title="Hengameh Yaghoobifarah's microblog"></img></a></li></ul></div></div>
+
+    
+	<div role="region" id="" class="even sect sect_tags "><div class="secthead" role="heading"><h2><a name="Themen"><span>Themen</span></a></h2></div><ul role="directory" class="news directory sectbody"><li class="first odd trodd tag"><a role="link" href="/!t5042898/" class="tag dirlink"><span>Ai Weiwei</span></a></li><li class="even trodd tag"><a role="link" href="/!t5008491/" class="tag dirlink"><span>Deutschland</span></a></li><li class="last odd treven tag"><a role="link" href="/!t5007524/" class="tag dirlink"><span>Rassismus</span></a></li></ul></div>
+
+    
+	
+
+    
+	<!-- DEBUG label: 0 extras here, 0 from directory Alltag, thats 0 merged-->
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><span id="ad_bin_ros_sidebar_1" class="ad_bin sold contentad"><div id="ad_zone_ros_sidebar_1" name="ros_sidebar-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_sidebar_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><!-- DEBUG wing: 0 extras here, 0 from directory Alltag, thats 0 merged--></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><span class="tail" role="complementary"><!-- DEBUG tail: 0 extras here, 0 from directory Alltag, thats 0 merged--><div class="rack first_rack" id="xid479112">
+    
+	<div role="region" id="" class="first last odd sect sect_profile brief pictured "><div class="secthead" role="heading"><h2><a name="mehr von"><span>mehr von</span></a></h2></div><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="brief pictured 
+        
+	
+        
+
+		
+			
+	        
+	
+			author 
+		community 
+		
+        
+                
+		        
+		
+	        
+	        
+                
+
+				
+		
+
+        person objlink" itemprop="url" href="/Hengameh-Yaghoobifarah/!a25938/"><h4 itemprop="name">Hengameh Yaghoobifarah</h4><img itemprop="image" src="/kommune/files/images/profile/30x30/25938.png" alt="Hengameh Yaghoobifarah" title="Hengameh Yaghoobifarah"></img></a><ul class="contact"><li><a itemprop="sameAs" class="remote microblog" target="_blank" href="http://twitter.com/@habibitus"><img src="/lib/ch/web/pix/icons/microblog.png" class="icon" alt="microblog" title="Hengameh Yaghoobifarah's microblog"></img></a></li></ul></div></div>
+
+    
+		</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="xid709888" class="even sect sect_adr style_adr "><ul role="directory" class="sectbody corp  directory"><li class=" first last odd trodd online   leaded pictured leaded story"><a class="dept" href="/Talk/!p5298/">Talk</a><a href="/HEUTE-Wahlanalyse-um-18-Uhr/!171900/" ratioURL-ressource="171900" class="objlink leaded pictured leaded story noavatar" role="link"><h4>HEUTE: Wahlanalyse um 18 Uhr</h4><h3>taz Talk US-Wahl 2020</h3><p class="brief">                                                    Unser Liveprogramm zur US-Wahl 2020 mit Zahlen, Analysen und Hintergründen.                                                     </p><img src="/uploads/images/300/0324_RingoHWChiu_AP.jpg" alt="" title=""></img></a></li></ul></div></span><a itemprop="mainEntityOfPage" href="/Ai-Weiwei-ueber-die-Deutschen/!5655989"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div class="full no_rightbar below news page even n2"><div class="head" role="head"><div class="nose" role="heading" id="pg_hd"><h2><a name="Volle Spalte unterm Artikel" href="/Volle-Spalte-unterm-Artikel/!p5315/"><span>Volle Spalte unterm Artikel</span></a></h2></div><ul role="navigation" class="news navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack abtest test_2" id="xid841996">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="meistgelesen"><span>meistgelesen</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd online   report article leaded pictured"><a href="/Liveticker-zur-US-Wahl/!5726183/" ratioURL-ressource="5726183" class="objlink report article leaded pictured noavatar" role="link"><h4>Liveticker zur US-Wahl</h4><h3>Biden gewinnt in Michigan</h3><p>Der Demokrat gibt sich in einer Ansprache siegessicher. US-Präsident Trump bewegt sich derweil in einem alternativen Wahluniversum. Die Entwicklungen im Liveticker.  </p><img src="/picture/4478943/300/us-wahl-biden-trump-7.jpeg" alt="Joe Biden gibt sich bei einer Rede lächelnd siegessicher" title="Joe Biden gibt sich bei einer Rede lächelnd siegessicher"></img></a></li><li class=" even trodd online   subjective column article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date" itemprop="datePublished" content="2020-01-22T16:40:00+02:00">3. 11. 2020</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2020-01-22T16:40:42+02:00"></meta></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5722473"></meta><meta itemprop="cms-obj-ID" content="4476881"></meta></div><a href="/MMA-Superstar-Nurmagomedow/!5722473/" ratioURL-ressource="5722473" class="objlink subjective column article leaded pictured avatar" role="link"><h4>MMA-Superstar Nurmagomedow</h4><h3>Islamistischer Käfigkämpfer</h3><span class="category_and_name avatar"><img itemprop="image" class="avatar_image" src="/kommune/files/images/profile/70x70/87.png"></img><span>Kolumne<b> Russisch Brot </b></span><span class="author"><p>von <b>Andreas Rüttenauer</b> </p></span><p>Die ehemalige MMA-Größe Chabib Nurmagomedow überzieht Frankreichs Präsidenten Emmanuel Macron nach dessen Plädoyer für westliche Werte mit Hasspostings.  </p></span><img src="/picture/4476881/300/26159495-1.jpeg" alt="Kampfsport-Superstar Nurmagomedow im Ring." title="Kampfsport-Superstar Nurmagomedow im Ring."></img></a></li><li class=" last odd treven online   longread article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date" itemprop="datePublished" content="2020-01-22T16:40:00+02:00">30. 10. 2020</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2020-01-22T16:40:42+02:00"></meta></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5721135"></meta><meta itemprop="cms-obj-ID" content="4468470"></meta></div><a href="/Betrug-auf-Datingseiten/!5721135/" ratioURL-ressource="5721135" class="objlink longread article leaded pictured noavatar" role="link"><h4>Betrug auf Datingseiten</h4><h3>Das Geschäft mit gebrochenen Herzen</h3><p>Viele Datingportale setzen falsche Profile ein, um Kund*innen auf ihren Seiten zu halten. Dahinter stehen unterbezahlte Chatmoderator*innen.  <span class="author">Leonard Scharfenberg</span></p><img src="/picture/4468470/300/26188164-1.jpeg" alt="Zeichnung: Ein Mann vor einem Bildschirm, aus dem ein rotes Herz kommt, das ihn nett anblinzelt. Darüber ist ein riesiges, schwarzes und gebrochenes Herz mit bösartigen Augen. Mit der einen Hand packt es den Mann, in der anderen hält es Geldscheine" title="Zeichnung: Ein Mann vor einem Bildschirm, aus dem ein rotes Herz kommt, das ihn nett anblinzelt. Darüber ist ein riesiges, schwarzes und gebrochenes Herz mit bösartigen Augen. Mit der einen Hand packt es den Mann, in der anderen hält es Geldscheine"></img></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+        </div><script type="text/javascript">
+							(function(){
+								// 3 parallel tests are possible (see tmpl-files)
+								var testSet = 				2 ;
+								var countTestElements =      3 ;
+								var weitereArtikelCondition = true ;
+								var currentRack = $(document.getLatestElement()).filter('.rack');
+								var currentVariant = $('#pages > .news.page ').find(' .rack.abtest ').index ( currentRack ) + 1 ;
+
+								// set cookie(s) for ABTests remembering if not existing
+								if ( ! $.cookie('test' + testSet)) $.cookie('test' + testSet, Math.floor( Math.random() * countTestElements ) + 1 ,{domain: 'taz.de', path: '/', expires: 365});
+								if ( $.cookie('test' + testSet) == currentVariant ){ 	
+										// current rack choosen / remembered for test
+										currentRack.addClass(' testshow ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+								} else {
+										currentRack.addClass(' testhide ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+									}
+									//temp - siehe oben
+								if (weitereArtikelCondition == false) { 
+									currentRack.addClass(' testhide ').removeClass(' testshow ')
+								  }
+								})();
+							
+					</script><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div class="rack abtest test_2" id="xid841997">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="Mehr zum Thema"><span>Mehr zum Thema</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd    interview article leaded pictured"><a href="/Ai-Weiwei-ueber-sein-Exil-in-Deutschland/!5619421/" ratioURL-ressource="5619421" class="objlink interview article leaded pictured noavatar" role="link"><h4>Ai Weiwei über sein Exil in Deutschland</h4><h3>„Deutschland hat sich angestrengt“</h3><p>Der Künstler Ai Weiwei möchte sein Berliner Exil verlassen. Ein Gespräch über unfreundliche Taxi-Fahrer, die Arroganz von VW und einen Schatten auf der „deutschen Seele“.  </p><img src="/picture/3644418/300/23621459_Ai_Weiwei_Kuenstler_China_Exil_Berlin.jpeg" alt="Zu sehen ist eine Portrait-Aufnahme des chinesischen Künstlers Ai Weiwei. Er trägt ein blaues Hemd und hat die Augen geschlossen" title="Zu sehen ist eine Portrait-Aufnahme des chinesischen Künstlers Ai Weiwei. Er trägt ein blaues Hemd und hat die Augen geschlossen"></img></a></li><li class=" even trodd    report article leaded pictured"><a href="/Kolumne-Habibitus/!5341199/" ratioURL-ressource="5341199" class="objlink report article leaded pictured noavatar" role="link"><h4>Kolumne Habibitus</h4><h3>„Bio“ ist für mich Abfall</h3><p>Manche Begriffe sind so pseudo-korrekt, dass sie Sprache nur verschlimmbessern können. „Biodeutsch“ ist so ein desaströses Wort.  <span class="author">Hengameh Yaghoobifarah</span></p><img src="/picture/1514828/300/biomuell.jpeg" alt="Diverse Abfälle in einer Biotonne" title="Diverse Abfälle in einer Biotonne"></img></a></li><li class=" last odd treven    report article leaded pictured"><a href="/Fotoausstellung-von-Ai-Weiwei/!5109519/" ratioURL-ressource="5109519" class="objlink report article leaded pictured noavatar" role="link"><h4>Fotoausstellung von Ai Weiwei</h4><h3>Manischer Knipser</h3><p>im Berliner Martin-Gropius-Bau hat eine Fotoausstellung zu der Jugend des chinesischen Künstlers Ai Weiwei begonnen. Die Fotos zeigen die Ursprünge seiner jetzigen Kunst.  <span class="author">Ingo Arend, Ingo Arend</span></p><img src="/picture/245039/300/111019_weiwei_web.jpg" alt="" title=""></img></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+
+        </div><script type="text/javascript">
+							(function(){
+								// 3 parallel tests are possible (see tmpl-files)
+								var testSet = 				2 ;
+								var countTestElements =      3 ;
+								var weitereArtikelCondition = true ;
+								var currentRack = $(document.getLatestElement()).filter('.rack');
+								var currentVariant = $('#pages > .news.page ').find(' .rack.abtest ').index ( currentRack ) + 1 ;
+
+								// set cookie(s) for ABTests remembering if not existing
+								if ( ! $.cookie('test' + testSet)) $.cookie('test' + testSet, Math.floor( Math.random() * countTestElements ) + 1 ,{domain: 'taz.de', path: '/', expires: 365});
+								if ( $.cookie('test' + testSet) == currentVariant ){ 	
+										// current rack choosen / remembered for test
+										currentRack.addClass(' testshow ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+								} else {
+										currentRack.addClass(' testhide ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+									}
+									//temp - siehe oben
+								if (weitereArtikelCondition == false) { 
+									currentRack.addClass(' testhide ').removeClass(' testshow ')
+								  }
+								})();
+							
+					</script><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div class="rack abtest test_2" id="xid848734">
+    	<div role="region" id="" class="first last odd sect sect_thema inside_ressort full style_inside_ressort full "><div class="secthead" role="heading"><h2><a name="Gesellschaft" href="/Gesellschaft/!p4611/"><span>Gesellschaft</span></a></h2><ul class="toolbar" role="toolbar"><li><a href="/Gesellschaft/!p4611;rss/">RSS</a></li></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd online   subjective column article leaded pictured"><a href="/Corona-und-Beziehungen/!5722636/" ratioURL-ressource="5722636" class="objlink subjective column article leaded pictured avatar" role="link"><h4>Corona und Beziehungen</h4><h3>Das Habibitus-Dating-Portal</h3><span class="category_and_name avatar"><img itemprop="image" class="avatar_image" src="/kommune/files/images/profile/70x70/25938.png"></img><span>Kolumne<b> Habibitus </b></span><span class="author"><p>von <b>Hengameh Yaghoobifarah</b> </p></span><p>Cruising am Geldautomaten oder in der Kirche wäre hot, ist zurzeit aber unsafe. Dann doch lieber klassisches Matchmaking für den Knuffelkontakt.  </p></span><img src="/picture/4479499/300/dating-corona-single-1.jpeg" alt="Ein hölzerner Liegestuhl ist von einem Bauzaun umstellt" title="Ein hölzerner Liegestuhl ist von einem Bauzaun umstellt"></img></a></li><li class=" even trodd online   report article leaded pictured"><a href="/Plug-in-zu-Anschlag-in-Oesterreich/!5722635/" ratioURL-ressource="5722635" class="objlink report article leaded pictured noavatar" role="link"><h4>Plug-in zu Anschlag in Österreich</h4><h3>Das O-Loch von Wien</h3><p>Eine inoffizielle Erweiterung für Googles Browser Chrome ersetzt den Namen des Attentäters von Wien mit „Oaschloch“. Gibts das auch für Präsidenten?  <span class="author">Denis Giessler</span></p><img src="/picture/4480441/300/26232037-1.jpeg" alt="Überschrift eines Onlineartikels." title="Überschrift eines Onlineartikels."></img></a></li><li class=" last odd treven online   report article leaded pictured"><a href="/Medienschau-zur-US-Wahl/!5722633/" ratioURL-ressource="5722633" class="objlink report article leaded pictured noavatar" role="link"><h4>Medienschau zur US-Wahl</h4><h3>Eine Lüge als Schlagzeile</h3><p>Deutsche Medien übernahmen in der Wahlnacht nicht belegte Behauptungen von Trump. Was medial sonst noch falsch gelaufen ist.  <span class="author">Carolina Schwarz</span></p><img src="/picture/4480594/300/26231284-1.jpeg" alt="Ein Bild in Schwarz Weiß von Trump vor einem Mikrophon" title="Ein Bild in Schwarz Weiß von Trump vor einem Mikrophon"></img></a></li></ul></div>
+        </div><script type="text/javascript">
+							(function(){
+								// 3 parallel tests are possible (see tmpl-files)
+								var testSet = 				2 ;
+								var countTestElements =      3 ;
+								var weitereArtikelCondition = true ;
+								var currentRack = $(document.getLatestElement()).filter('.rack');
+								var currentVariant = $('#pages > .news.page ').find(' .rack.abtest ').index ( currentRack ) + 1 ;
+
+								// set cookie(s) for ABTests remembering if not existing
+								if ( ! $.cookie('test' + testSet)) $.cookie('test' + testSet, Math.floor( Math.random() * countTestElements ) + 1 ,{domain: 'taz.de', path: '/', expires: 365});
+								if ( $.cookie('test' + testSet) == currentVariant ){ 	
+										// current rack choosen / remembered for test
+										currentRack.addClass(' testshow ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+								} else {
+										currentRack.addClass(' testhide ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+									}
+									//temp - siehe oben
+								if (weitereArtikelCondition == false) { 
+									currentRack.addClass(' testhide ').removeClass(' testshow ')
+								  }
+								})();
+							
+					</script><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><span class="headed wing" role="complementary"></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Ai-Weiwei-ueber-die-Deutschen/!5655989"></a></div><div class="full community page last odd n3"><div class="head" role="head"><ul role="navigation" class=" navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid495498">
+    
+
+	<div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="So können Sie kommentieren:"><span>So können Sie kommentieren:</span></a></h2></div><div class="sectbody"><p>       Bitte <a href="https://www.taz.de/kommune/post.php?a=registration" target="_blank">registrieren Sie sich</a> und halten Sie sich an unsere <a href="http://taz.de/netiquette" target="_blank">Netiquette</a>.     
+</p><p>      Haben Sie Probleme beim Kommentieren oder Registrieren?   
+</p><p>  Dann mailen Sie uns bitte an <a href="mailto:kommune@taz.de" target="_blank">kommune@taz.de</a>   </p></div></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="" class="even sect sect_commentlinks style_commentlinks "><div class="secthead" role="heading"><h2><a name="Leser*innenkommentare"><span>Leser*innenkommentare</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class="member " id="bb_message_3993498"><a class="author person" href="/!ku59975/"><h4>Anna Hemidi</h4></a><time datetime="2020-08-08T15:03:29+02:00"><meta value="1596891809"></meta>08. 08. 2020, 
+		15:03</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Ist Ihre Meinungsblase so undurchlässig geworden, dass Sie den Notausgang nicht mehr finden?<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Seit wann gibt es einen „sanfteren, höflichen“ europäischen Rassismus außerhalb dem von Ihnen so verhassten Schland? Während einiger im Rom und Paris der 90er verbrachten Jahre musste ich lernen, dass bei der Wohnungssuche die Frage „Lei e‘ di colore?“ (oder wahlweise die französische Variante von „sind sie farbig?“) zum Standard gehört, sobald der potenzielle Vermieter einen ausländischen (in meinem Fall deutschen) Akzent am Telefon herauszuhören glaubt. Und das Schlimmste: Keiner schien sich über diesen menschenverachtenden strukturellen Rassismus aufzuregen! Er gehört anscheinend irgendwie zum südländischen „kulturellen Erbe“ der „Mitte“ der Gesellschaft und passt auch ganz gut zum überall (sogar von der dortigen Linken) stolz herumgeblökten „Vive la France“ (kotz!) oder „Viva Italia“ (würg!). Da bin ich ganz froh, dass zumindest bei uns ein gebrülltes „Es lebe Deutschland“ (brech!) nur noch aus tiefbraunen und nicht wie in Frankreich oder Italien unisono aus allen mehr oder minder prominenten Kehlen ertönt. Anstatt sich in Endlosschleife immer wieder in der Überzeugungblase  zu suhlen, dass der Alman-Rassismus doch der Allerschlimmste sei, sollten wir endlich gegen den allgegenwärtigen widerwärtigen strukturellen und alltäglichen Rassismus in ganz Europa anschreiben, denn:<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wo es ein Land sich sprachlich selbst erhöht, bedeutet das im Umkehrschluss auch, dass ein anderes dadurch erniedrigt wird! <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Gerade in Zeiten, in denen um die Einheit Europas, political correctness und jedes Komma und Sternchen für eine gendergerechte Sprache (zu Recht) erbittert gestritten wird, sollte jede Art von „Vive..“ eigentlich in den Müllhaufen feudalistischer Vergangenheit entsorgt werden. Persönlich habe ich in Berlin noch keinen „biodeutsche" Taxifahrer kennengelernt. Aber vielleicht denkt Al Weiwei, der selbst bekennt, kein Deutsch zu sprechen, dass weiße Langnasen sowieso gleich aussehen!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3978480"><a class="author person" href="/!ku53002/"><h4>Joachim Goffart</h4></a><time datetime="2020-06-23T22:27:49+02:00"><meta value="1592944069"></meta>23. 06. 2020, 
+		22:27</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Liebe taz,<br xmlns="http://www.w3.org/1999/xhtml"></br>
+ich bin Deutscher, das habe ich mir nicht selber ausgesucht.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Warum bezeichnet Ihr mich als ‚unerträglich‘ und als ‚Nazi‘? Ihr kennt mich doch gar nicht.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Klingt wie rassistische Hetze! Oder soll das Satire sein?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3985725"><a class="author person" href="/!ku49118/"><h4>Feli</h4></a><time datetime="2020-07-21T17:55:47+02:00"><meta value="1595346947"></meta>21. 07. 2020, 
+		17:55</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Joachim Goffart </span>Hengameh Yaghoobifarah ist ja auch deutsche. Und sie beschreibt einen diskursiven, institutionalisiserten, strukturellen Rassismus, der sich im sich als "weiss" begreifenden Deutschland immer noch manifestiert.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+So ähnlich ist es, wenn gesagt wird, dass die Polizei ein Rassismusproblem hat - auch da sagen immer gleich welche: "Moment mal, ich soll ein Rassist und Nazi sein?" <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Cooler wäre es, wenn mal ein*e Polizist*in sagen würde: "ja, schlimmer noch als in der restlichen Gesellschaft reproduzieren sich innerhalb der Polizei rassistische und rechtsextreme Strukturen, das lässt sich nachweisen (möchte Seehofi aber natürlich nicht so gern, lieber mal prüfen, ob Polizei nicht Gewalt erfährt als bewaffnete Staatsmacht).Müssten wir mal an uns arbeiten."</p>
+<p xmlns="" class="last even">Wenn Sie häufiger mit Menschen sprechen, die von RAssismus in Deutschland betroffen sind, dann erfahren Sie, wie scheiße das ist, permanent von "biodeutsch" und anderen Blut-und-Boden-Bezeichnungen zu lesen, ohne, dass es einen allgemeinen Aufschrei gibt.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Ich begreife die Überspitzung weiss=deutsch eher als Kritik an der Mainstreamkultur, die genau das postuliert. Da fühle ich mich deshalb nicht angegriffen, ich lebe ja selbst in dieser Kultur, wo kolonialrassistische Kinderbücher immer noch die Normalität sind.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Ich kann auch verstehen, dass marginalisierte Gruppen irgendwann keine Lust mehr haben, ohne Provokationen immer nur nett zu sein, wie die Mehrheitsgesellschaft es erwartet, damit es für sie angenehm bleibt und bloß nicht auch mal wehtut.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Rassismuskritik als "rassistische Hetze" zu bezeichnen ist so ähnlich, wie jüdischen Personen Antisemitismus vorzuwerfen, wenn sie auf den grassierenden Antisemitismus eigentlich nur hinweisen. Rassismus bedeutet nicht, dass egal welche Person andere nach vermeintlicher Hautfarbe anspricht und vermeintlich beleidigt - sondern hat mit gesellschaftlichen Machtstrukturen zu tun.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3943995"><a class="author person" href="/!ku35021/"><h4>Leser77</h4></a><time datetime="2020-04-14T18:54:22+02:00"><meta value="1586883262"></meta>14. 04. 2020, 
+		18:54</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Es lebe das Pauschalurteil. Amen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3905960"><a class="author person" href="/!ku54868/"><h4>Simon Roquette</h4></a><time datetime="2020-01-25T15:16:17+01:00"><meta value="1579961777"></meta>25. 01. 2020, 
+		15:16</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Ich kann dem Grundtenor durchaus zustimmen. Aber freilich ist es etwas unterkomplex die fehlende multikulturelle Welterfahrenheit der Deutschen, pauschal auf einen faschistuiden Komplex zurückzuführen. Nicht jeder, der das Wort "biodeutsch" blindlings als neutralen Begriff gebraucht, ist mit einer rassenorientierten Ideologie sozialisiert worden. Aber es ist sicher zutreffend, dass sich aus unserer Geschichte ein genetischer Befund derart entnehmen lässt, dass wir nie ein wirkliches Einwanderungsland waren, das ein Land zu einem richtigen Vielvölkerstaat machen könnte. Ich habe aber zunehmend die Hoffnung, in einer Zeit zu leben, in der wir diese fehlende multikulturelle Kompetenz überwinden werden. Für mich ist der Schlüssel hierzu Bildung: ein hohes Sprachniveau aller im Englischen, eine Vielzahl kostenloser Austauschprogramme, die Förderung multinationaler Teams durch Arbeitgeber/Universitäten. Die Angst vor fremder Kultur sinkt zunehmend mit deren Erfahrung als reale, eigene Wirklichkeit (contact vs. exposure theory).</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3906068"><a class="author person" href="/!ku54846/"><h4>woke</h4></a><time datetime="2020-01-25T21:58:06+01:00"><meta value="1579985886"></meta>25. 01. 2020, 
+		21:58</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Simon Roquette </span>Ich bin für Hoffnung, jedoch steht dieser aktuell entgegen, dass Bildung nicht - bereits frühkindlich - aus Medien bezogen werden sollte, die weiterhin diskriminierende Inhalte reproduzieren.  Sprachlich, Rollenmuster, Klischees. Dass dazu nicht nur aus den eigenen Reihen und aus dem eigenen Netzwerk heraus eingestellt werden sollte: Wer trifft Einstellungsentscheidungen, wie neutral sind diese Entscheidungen, über wen gelangt eine Person zu ihrer Position. Und wie realistisch sind kostenlose Austauschprogramme, die von der Gesamtgesellschaft wahrgenommen werden dürfen? Dazu braucht es einen entsprechenden Hintergrund, der dich berechtigt teilzunehmen. Diese Barrieren lassen sich schwer adhoc abbauen, sollten aber zumindest realistisch thematisiert und sukzessiven reduziert werden. Ich kann im übrigen nicht bestätigen, das Kontakt (plus die eigene wirtschaftliche Absicherung) alleine unsere Gesellschaft toleranter werden lässt. Aus irgendwelchen fadenscheinigen Argumenten laden einige Individuen ihren Frust leidenschaftlich gerne bei Menschen ab, die sich gegen die an sie gerichteten Vorurteile nicht fair wehren können. Und ich finde es fadenscheinig und armselig, dass die Motivation hierbei oftmals auf eine Stammtischlaune zurückzuführen ist.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3908149"><a class="author person" href="/!ku54868/"><h4>Simon Roquette</h4></a><time datetime="2020-01-30T14:44:08+01:00"><meta value="1580391848"></meta>30. 01. 2020, 
+		14:44</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@woke </span>Manche würden sagen, dass Ihre Antwort auf meinen etwas hoffnungsvolleren Kommentar "ein typisch deutscher Reflex" ist, den ich (offen gesagt) nicht gut finde.</p>
+<p xmlns="" class="even">Ja, Menschen genießen nach wie vor aufgrund von Merkmalen und Eigenschaften, für die sich rein gar nichts können, Vorteile. Ja, daraus resultiert eine gewisse Selbstselektion, die gesellschaftliche Ungleichheit perpetuiert. Nein, wir werden die Welt aufgrund genau dieser Begebenheiten nicht von heute auf Morgen vollkommen auf den Kopf stellen.</p>
+<p xmlns="" class="last odd">Deswegen ist doch noch lange nicht alles schlecht, was wir in den letzten 30 Jahren erreicht habe. Deutschland ist (trotz der politischen Landschaft) ein offeneres Land. Rassismus und jede andere Art von Minderheitenfeindlichkeit wird wesentlich viel breiter diskutiert und kritisiert als damals. Vieles von dem, was heute ganz normal ist, wäre noch in den 90ern gar nicht denkbar gewesen. Ist denn wirklich alles so schlecht? Nicht jedes Kind geht auf ein Gymnasium, das ein Austauschprogramm mit einer britischen Schule hat. Nicht jeder besucht eine Universität, die am Bologna-Prozess teilnimmt. Nicht jeder die finanziellen Mittel um ausgedehnte Welterkundungen zu unternehmen. Meine Güte, das kann doch angesichts dessen, wo wir herkommen nicht der Standart sein. Ein bisschen mehr Selbstbewusstsein, Zuversicht und Resilienz bitte!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3908596"><a class="author person" href="/!ku54846/"><h4>woke</h4></a><time datetime="2020-01-31T16:02:41+01:00"><meta value="1580482961"></meta>31. 01. 2020, 
+		16:02</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Simon Roquette </span>Wem hilft es zu Schweigen? Wem hilft es darüber zu Schweigen, dass der Zugang zu Bildung an Bedingungen geknüpft ist, die erstmal erfüllt sein wollen, bevor man dazu gehören darf?</p>
+<p xmlns="" class="even">Betroffene erfahren auf mehreren Ebenen Diskriminierung, oft so früh in ihrem Leben, dass sie gar keine andere Realität kennenlernen.</p>
+<p xmlns="" class="odd">Ihr Angebot ist Resilienz? Sie dürfen meine Antwort gerne unkommentiert lassen. Es ist allerdings nicht sehr schön etwas zu sagen zu haben und nicht zu Wort zu kommen.</p>
+<p xmlns="" class="last even">Bezüglich der angeführten 30 Jahren in denen Sie etwas erreicht zu wissen meinen, muss ich schmunzeln und an einen Satz von Baldwin denken. „Dieses Land feiert hundert Jahre Freiheit hundert Jahre zu früh“. Bezieht sich nicht auf Deutschland, passt aber super.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3905279"><a class="author person" href="/!ku29509/"><h4>Justin Teim</h4></a><time datetime="2020-01-23T20:02:19+01:00"><meta value="1579806139"></meta>23. 01. 2020, 
+		20:02</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Viel zu retten gab es ohnehin nicht, aber Deutschland schafft es immer wieder, das letzte bisschen seines Rufs zu ruinieren. "</p>
+<p xmlns="" class="even">Ach Gottchen Frau Hengameh Yaghoobifarah - die Welt teilt Ihre Ansicht definitiv nicht. Im Gegenteil Deutschland hat laut Studie das beste Image und wird selbst als</p>
+<p xmlns="" class="odd"><a target="_blank" href="https://www.welt.de/newsticker/dpa_nt/infoline_nt/brennpunkte_nt/article170684754/Deutschland-hat-weltweit-bestes-Image.html">www.welt.de/newsti...-bestes-Image.html</a></p>
+<p xmlns="" class="last even"><a target="_blank" href="https://www.travelbook.de/menschen/auswanderer/beste-laender-zum-auswandern">www.travelbook.de/...der-zum-auswandern</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3905196"><a class="author person" href="/!ku54810/"><h4>Hombre</h4></a><time datetime="2020-01-23T16:37:33+01:00"><meta value="1579793853"></meta>23. 01. 2020, 
+		16:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Eine zeitlang waren Hengamehs Kommentare recht unterhaltsam aber irgendwann ist es so, als ob Opa vom Krieg erzählt. Die Geschichten gleichen sich dann doch etwas. Es muß sich recht bequem leben, wenn man für wirklich alles Übel auf dieser Welt den weißen Deutschen, gerne auch Mann, verantwortlich machen kann. Gbt es eigentlich linke/queere Wutbürger? Wenn irgendeiner von Hangamehs Deutschen, außerhalb dieser Blase, die Kommentare lesen würde, wäre das vielleicht gar nicht übel für die arische Überlegenheit.  Man wäre zumindest Superschurke, wenn schon nicht Übermensch</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3905314"><a class="author person" href="/!ku54846/"><h4>woke</h4></a><time datetime="2020-01-23T21:40:13+01:00"><meta value="1579812013"></meta>23. 01. 2020, 
+		21:40</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hombre </span>Hengamehs steht nicht alleine mit diesen sich wiederholenden Beobachtungen, nur ist they leider, vermutlich bewusst, eine der wenigen wirklich wogen, kritischen Personen, die in überregionalen Zeitungen zu diesem Thema Wort kommen. Wenn nur mehr Menschen mit Diskriminierungserfahrungen ernst genommen werden würden, müsste auch Ai Weiwei nicht als Stütze dieser Argumentation herhalten. Jeden Tag erlebe ich in der Mitte der Mehrheitsgesellschaft, wie POC in beiläufigen Bemerkungen entmenschlicht werden, mit würdelosen Klischees und Vergleichen. Ich arbeite in einer Behörde und hab das Gefühl unbezahlt Interkulturelle Kompetenzen zu vermitteln - erschreckend, denn Deutschland wird international sehr ernst genommen und ist diesbezüglich so rückschrittlich. Welches Selbstverständnis wird hier vermittelt? Man könnte meinen, das geht schon klar, denn das Problem wird übersehen, Konsequenzen bleiben aus. Es hält die Schichten undurchlässig, und fingert ungebeten an der ach so unantastbaren Würde der Menschen, die nicht als Biotdeutsche passen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3905167"><a class="author person" href="/!ku389/"><h4>Hanne</h4></a><time datetime="2020-01-23T15:38:17+01:00"><meta value="1579790297"></meta>23. 01. 2020, 
+		15:38</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Da is Ai Weiwei ja nicht der einzige, der zu so einem Schluss kommt. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Leider fällt mir das Buch eines Amerikaners nicht mehr ein, der während der WM 2006 in D unterwegs war und sogar auch "weiß" war und von seinen Begegnungen schrieb.</p>
+<p xmlns="" class="even">Ich habe dafür diese Artikel gefunden:</p>
+<p xmlns="" class="odd"><a target="_blank" href="https://www.fr.de/kultur/sommermaerchen-bereitete-boden-11002689.html">www.fr.de/kultur/s...oden-11002689.html</a></p>
+<p xmlns="" class="even"><a target="_blank" href="https://www.juedische-allgemeine.de/kultur/so-deutsch-will-ich-nie-werden/">www.juedische-allg...ll-ich-nie-werden/</a></p>
+<p xmlns="" class="last odd">"So deutsch will ich nie werden" ist auch eine Aussage.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3905165"><a class="author person" href="/!ku41688/"><h4>APO Pluto</h4><img src="/kommune/files/images/profile/70x70/41688.png" alt="" title=""></img></a><time datetime="2020-01-23T15:33:31+01:00"><meta value="1579790011"></meta>23. 01. 2020, 
+		15:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Ja Frau Hengameh Yaghoobifarah, sie sind autoritär, gehorsam, ungehemmt und ohne jegliche Integrität. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Das wollte ich ihnen schon immer sagen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3905075"><a class="author person" href="/!ku4754/"><h4>Euromeyer</h4></a><time datetime="2020-01-23T12:16:51+01:00"><meta value="1579778211"></meta>23. 01. 2020, 
+		12:16</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Jemand kam, sah und ging wieder. Ich verstehe nur nicht, warum dann jedemal die öffentlichen Bürger super beleidigte Leberwürste sind, obwohl wir doch sonst Bewertungs- und Mäkelmeister sind: Was ist , werte Bewertungsportaljunkies, von Wirten zu halten  die, wenn der Gast das Lokal mies bewertet, rummosern, er sei ein pauschalisiernder Unqualifizierter,  weil er sich weder durch die ganze Speisekarte durchgefressen noch das ganze Personal kennengelernt habe,  noch dazu sei er ein undankbarer Arsch, der nicht zu honorieren weis, dass er bei uns einkehren durfte?<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Und die Blutbodendenke ist Realität, genauso wie die eher unverstellt direkte Art vieler deutsch Sozialisierter.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wenn Weiwei eher auf hinterfotzigen statt direkten Rassismus steht, dann ist er in GB oder F damit besser bedient.  Und ihn auf eine whatsauboutistische Tour de Nazi durch unsere Nachbarländer zu schicken, wäre blos peinlich, das ist nämlich Wedeln mit der vollen Windel um auf die Kackhaufen der Anderen hinzuweisen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3905053"><a class="author person" href="/!ku53119/"><h4>Suryo</h4></a><time datetime="2020-01-23T11:39:14+01:00"><meta value="1579775954"></meta>23. 01. 2020, 
+		11:39</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><a target="_blank" href="https://www.facebook.com/photo.php?fbid=10156729162591781&amp;set=a.10152112137706781&amp;type=3&amp;theater">www.facebook.com/p...781&amp;type=3&amp;theater</a></p>
+<p xmlns="" class="last even">Komisch, der aufrechte Antifaschist Ai hat keine Probleme, ein Selfie mit Alice Weidel zu machen. Vielleicht sind seine Kenntnisse Deutschlands dann doch nicht so umfassend.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3905235"><a class="author person" href="/!ku9368/"><h4>SchnurzelPu</h4></a><time datetime="2020-01-23T18:07:37+01:00"><meta value="1579799257"></meta>23. 01. 2020, 
+		18:07</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Suryo </span>Frau Weidel würde ich auch aus dem Taxi werfen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3905048"><a class="author person" href="/!ku35943/"><h4>Maiskolben</h4></a><time datetime="2020-01-23T11:28:53+01:00"><meta value="1579775333"></meta>23. 01. 2020, 
+		11:28</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">
+	Liebe/r Hengameh,<br xmlns="http://www.w3.org/1999/xhtml"></br>
+	danke für Ihren Artikel. Er sorgt bei mir zumindest dafür, dass ich mich frage, ob da was dran ist und ich komme zu dem Schluss, dass Sie zumindest eine falsche Headline gewählt haben. Auf Ihre Feststellung zu den Charaktereigenschaften "der Deutschen" finde ich im weiteren Text eigentlich gar keinen wirklichen Bezug? Warum also diese Headline und diese indifferenzierten Verallgemeinerungen?
+</p>
+
+<p xmlns="" class="even">
+	"Diese für Sie vielleicht als Beleidigung empfundene Beschreibung ist nicht von mir, auch wenn ich dem zustimme, sondern das Erleben der Künstlers Ai Weiwei." - mindestens sind Sie aber die verteilende Person. Daher finde ich diese Distanzierung an dieser Stelle totalen Quatsch. Entweder stehen Sie dahinter, oder Sie schreiben den Artikel nicht. Worum geht es Ihnen also?
+</p>
+
+<p xmlns="" class="odd">
+	<em>Dieser Kommentar wurde gekürzt. Bitte halten Sie sich an die Netiquette. Die Moderation</em>
+</p>
+
+<p xmlns="" class="last even">
+	Hätte doch besser in die FAZ gepasst.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+	Oh, der Kaffee ist fertig! :)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3905072"><a class="author person"><h4>65572 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2020-01-23T12:08:20+01:00"><meta value="1579777700"></meta>23. 01. 2020, 
+		12:08</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Maiskolben </span>Die Überschrift kann man ohne den Guardian-Artikel nicht verstehen.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Dort kann man verschiedene Äußerungen von Herrn Ai über einige Bewohner Deutschlands finden. Ohne etwas mehr Hintergrund zu diesen Aussagen halte ich es schwierig jedem Bewohner dieses Landes einen autoritär-faschistoiden Charakter zu bescheinigen.</p>
+<p xmlns="" class="last even">Aber vermutlich hat Herr Ai recht, da seine interkulturelle Kompetenz - laut Guardian: "It’s four months since Ai quit Germany for Britain, and he is adapting quickly to his new home. He orders English breakfast tea ..." - beachtlich ist.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3905046"><a class="author person" href="/!ku35881/"><h4>be</h4><img src="/kommune/files/images/profile/70x70/35881.png" alt="" title=""></img></a><time datetime="2020-01-23T11:22:40+01:00"><meta value="1579774960"></meta>23. 01. 2020, 
+		11:22</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Ich vermute, dass selbst dann, wenn jene, die sich selbst als "Biodeutsche", "Autochthone", "Identitäre", etc. wähnen, seit Eintritt in die Grundschule bis zum letzten Schultag ihres Lebens jeden Tag in der ersten Schulstunde statt eines Morgengrußes darauf hingewiesen werden würden, dass sie nichts weiter als das Ergebnis einer Migration äthiopischer Muttis etc. sind, und ihre Überlebensfähigkeit erst durch Migration hergestellt wurde, sie krähten ihren Sermon unverdrossen weiter, da nur dazu fähig, anstelle von Bildung sich etwas einzubilden. Der naheliegenden Maßnahme, diese einfach zu ignorieren und zu den Schwachsinnigen zu zählen, steht entgegen, dass diese dann auch noch dumm sterben würden. Und so ist es - wenn auch allem Anschein nach vergeblich - wenigstens einen Versuch wert, darauf hinzuweisen, welchen blühenden Blödsinn diese Eingebildeten betreiben :</p>
+<p xmlns="" class="last even"><a target="_blank" href="https://www.mpg.de/11344069/genetische-herkunft-der-europaeer.pdf">www.mpg.de/1134406...-der-europaeer.pdf</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3904975"><a class="author person" href="/!ku54830/"><h4>Rosa Minzie</h4></a><time datetime="2020-01-23T09:30:33+01:00"><meta value="1579768233"></meta>23. 01. 2020, 
+		09:30</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Ich kann mit diesem Kommentar anfangen, dass es mir direkt unfassbaren Spaß gebracht hat ihn mit meinen Freund_innen zu spreaden.</p>
+<p xmlns="" class="even">Dass auch hier die Kommentierenden sich an der ein oder anderen Stelle davon so angegriffen, so übersehen, so missverstanden fühlen ist doch Ausdruck davon, dass alle Charakterzuschreibungen die wundesten Punkte getroffen haben.</p>
+<p xmlns="" class="odd">„Betroffene, Nicht-Weiße Personen wollen uns Weiß-Deutschen etwas aus ihrer Lebenswelt erzählen? Lass sie lieber diskreditieren anstatt diese Art und Weise des Seins zu Dekonstruieren. Lass uns lieber selber die diskriminierten, unverstandenen Opfer der Debatte werden.“</p>
+<p xmlns="" class="even">So verschieben sich Diskurse. Weil sie von autoritär-faschistoiden, wachsamen, gehorsamen, ungehemmten, groben Personen geführt werden, ohne jegliche Intigrität.</p>
+<p xmlns="" class="odd">Manche junge Menschen im Internet würden dies als eine „hard to swallow pill“ bezeichnen.</p>
+<p xmlns="" class="last even">#niewiederdeutschland!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3905007"><a class="author person" href="/!ku43247/"><h4>doda</h4></a><time datetime="2020-01-23T10:22:45+01:00"><meta value="1579771365"></meta>23. 01. 2020, 
+		10:22</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Rosa Minzie </span>Sorry, aber dieser Artikel ist Rassismus pur. Merkt das denn hier keiner?</p>
+<p xmlns="" class="even">Werden rassistische Stereotype besser, wenn man sie auf „Deutsche“ bezieht, anstatt auf andere, ebenso konstruierte Gruppen von Menschen?</p>
+<p xmlns="" class="last odd">Was macht jemanden denn zu einem „Deutschen“? Etwa seine Herkunft? Ist das dann keine Blut-und-Boden-Ideologie?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3905194"><a class="author person" href="/!ku54137/"><h4>Adam Weishaupt</h4></a><time datetime="2020-01-23T16:32:46+01:00"><meta value="1579793566"></meta>23. 01. 2020, 
+		16:32</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@doda </span>Der Catch 22 bei dieser Sache ist ja, dass Ihnen auf den Vorwurf "Rassismus pur" hämisch vorgehalten werden wird, es gäbe gegen Weiße per Definition keinen Rassismus. Also ist jede Reaktion hier von vornherein überflüssig. So etwas lässt man am besten ins Leere laufen und wendet sich wieder ernsthaften Themen zu.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3905071"><a class="author person" href="/!ku31981/"><h4>Deep South</h4></a><time datetime="2020-01-23T12:08:08+01:00"><meta value="1579777688"></meta>23. 01. 2020, 
+		12:08</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@doda </span>Es war nichts Anderes zu erwarten. Ai Weiweis etwas wirre, aber eben auch ganz bewußt aus dem Kontext gerissene Aussage ist hier nur Mittel zum (Selbst-) Zweck. Der Artikel is nix weiter, als das nächste Kapitel im identitätspolitischen Dauertrollmodus der Autorin, deren "Werk" hier nahezu ausschließlich aus Provokation, der vermeintlich  -oder besser angeblich- Priviligierten besteht.</p>
+<p xmlns="" class="even">Kaum eine Headline ohne plumpe Beschimpfung, kaum ein Artikel, der nicht als persönliches Vehikel zur pauschalen Abrechnung mit den ganzen doofen und inflationär von ihr zitierten "Heten, Kartoffeln, Allmans und Arschlöchern" da draußen dient. Jetzt halt faschistoid, autoritär, Nazi. Gähn²....</p>
+<p xmlns="" class="last odd">Is mir ehrlich gesagt zu billig und zu langweilig, mich drüber aufzuregen. Wer immerzu nur plärrt, dem hör ich nicht zu.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3905240"><a class="author person" href="/!ku53972/"><h4>Fabian Wetzel</h4></a><time datetime="2020-01-23T18:15:35+01:00"><meta value="1579799735"></meta>23. 01. 2020, 
+		18:15</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Deep South </span>exakt.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3905102"><a class="author person" href="/!ku43247/"><h4>doda</h4></a><time datetime="2020-01-23T13:08:36+01:00"><meta value="1579781316"></meta>23. 01. 2020, 
+		13:08</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Deep South </span>Grundsätzlich stimme ich zu, nur hat das hat mit Identitätspolitik nichts zu tun. Das ist einfach nur plump rassistisch.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3905120"><a class="author person" href="/!ku31981/"><h4>Deep South</h4></a><time datetime="2020-01-23T13:38:50+01:00"><meta value="1579783130"></meta>23. 01. 2020, 
+		13:38</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@doda </span>Jo, sicher. Allerdings verschwimmen da meiner Meinung nach die Grenzen sowieso zunehmend fließend. Wenn das eigentlichen Ziel, die Bekämpfung der Diskrimierung von Minderheiten und die Solidarisierung der Gesellschaft mit diesen, in den Hintergrund gerät und das Abqualifizieren von pauschal zusammenkonstruierten Gruppenbildern, die auf auf Herkunft, Hautfarbe oder Geschlecht basieren  zum Selbstzweck mutiert, dann ist das eben schlicht rassistisch. Egal unter welchem ideologischen Kampfbegriff man das grad verstecken oder umdeuten möchte.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3905125"><a class="author person" href="/!ku43247/"><h4>doda</h4></a><time datetime="2020-01-23T13:48:18+01:00"><meta value="1579783698"></meta>23. 01. 2020, 
+		13:48</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Deep South </span>Danke, das ist gut auf den Punkt gebracht!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3904964"><a class="author person" href="/!ku43247/"><h4>doda</h4></a><time datetime="2020-01-23T09:10:08+01:00"><meta value="1579767008"></meta>23. 01. 2020, 
+		09:10</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Jetzt bin ich platt, dass ich solche rassistischen Verallgemeinerungen auch noch in der TAZ lese.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wer bitteschön sind „die Deutschen“?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3904938"><a class="author person" href="/!ku39307/"><h4>Sven Günther</h4><img src="/kommune/files/images/profile/70x70/39307.png" alt="" title=""></img></a><time datetime="2020-01-23T08:07:14+01:00"><meta value="1579763234"></meta>23. 01. 2020, 
+		08:07</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Ausländischen Besucher die ich privat oder geschäftlich habe, fällt eigentlich immer zuerst auf, die Leute sind zu dick und vor allem italienischen oder französischen Kollegen haben mich schon öfters gefragt, ob ich die Multifunktionsjacke zu Hause lasse wenn sie kommen, das scheine hier ja Uniformcharakter zu haben.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3904892"><a class="author person" href="/!ku50810/"><h4>Filburt</h4></a><time datetime="2020-01-23T00:30:45+01:00"><meta value="1579735845"></meta>23. 01. 2020, 
+		00:30</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Viele Berliner Taxifahrer sind keine Biodeutsche. Aber für Ai Weiwei sehen wohl alle Langnasen gleich aus.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3904929"><a class="author person" href="/!ku39307/"><h4>Sven Günther</h4><img src="/kommune/files/images/profile/70x70/39307.png" alt="" title=""></img></a><time datetime="2020-01-23T07:29:03+01:00"><meta value="1579760943"></meta>23. 01. 2020, 
+		07:29</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Filburt </span>Und ab wann hat man den Ariernachweis für Biodeutsche geschafft?</p>
+<p xmlns="" class="even">Französische Vorfahren als religiöse Flüchtlinge vor 300 Jahren nach Brandenburg-Preußen oder Hessen gekommen, durchgefallen oder bestanden?</p>
+<p xmlns="" class="last odd">Polnische Vorfahren vor 140-120 Jahren ins Ruhrgebiet gekommen, durchgefallen oder bestanden?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3905016"><a class="author person" href="/!ku1831/"><h4>fatkat</h4></a><time datetime="2020-01-23T10:45:46+01:00"><meta value="1579772746"></meta>23. 01. 2020, 
+		10:45</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Sven Günther </span>Sie wissen ganz genau was er meint. Ich lebe in Berlin und viele Taxifahrer sind türkischer oder arabischer Herkunft. Wer weiß, vielleicht Ai Wei Wei einen von denen erwischt.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3905158"><a class="author person" href="/!ku389/"><h4>Hanne</h4></a><time datetime="2020-01-23T15:27:20+01:00"><meta value="1579789640"></meta>23. 01. 2020, 
+		15:27</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@fatkat </span>Aha, meinen Sie tatsächlich, dass er "diese" Menschen nicht unterscheiden kann von "weißen" Deutschen?</p>
+<p xmlns="" class="even">Es gibt einfach eine recht große Anzahl von "weißen" Wieauchimmerhiergepassten und -verwurzelten, die sich eben genauso benehmen und verhalten wie beschrieben. Da ist Al Weiwei ja nicht der einzige, der das so beschreibt.</p>
+<p xmlns="" class="last odd">Und selbst innerhalb von D verhalten sie sich schon unterschiedlich und ganz doll merkt man das, wenn man eben selbst - auch als "Weiße/r" - sich mal im Ausland außerhalb von "Urlaubsressorts" aufhält, dass es auch anders und netter geht.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3905068"><a class="author person" href="/!ku39307/"><h4>Sven Günther</h4><img src="/kommune/files/images/profile/70x70/39307.png" alt="" title=""></img></a><time datetime="2020-01-23T12:04:04+01:00"><meta value="1579777444"></meta>23. 01. 2020, 
+		12:04</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@fatkat </span>Deswegen ja.</p>
+<p xmlns="" class="even">Die Türken die in den '60 oder '70 kamen und deren Kinder und Enkel hier geboren wurden und einen deutschen Pass haben, sind nach der Logik keine "richtigen" Deutschen, also durchgefallen.</p>
+<p xmlns="" class="last odd">Nun ist nur noch die Frage zu klären, besteht die Möglichkeit diese Sichtweise mit zeitlichem Abstand zu ändern oder eben für immer, schwarze Haare, braune Augen und dunklere Haut, nie mehr als "Passdeutsche."</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3904879"><a class="author person" href="/!ku35059/"><h4>hermanator</h4></a><time datetime="2020-01-22T22:37:51+01:00"><meta value="1579729071"></meta>22. 01. 2020, 
+		22:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">
+	Moin<br xmlns="http://www.w3.org/1999/xhtml"></br>
+	jetzt auf die Gefahr hin, wieder mal gg die sog. Netiquette zu verstossen: <em>[...]</em> Es gibt eine Doku zur Herstellung von seinem Mungbohnenwerk, wo er in Gutsherrenmanier ein ganzes Dorf für sich arbeiten lässt: <a target="_blank" href="https://www.youtube.com/watch?v=PueYywpkJW8">www.youtube.com/watch?v=PueYywpkJW8</a>. I.m.h.o: absolut widerlicher Zeitgenosse, sorry.
+</p>
+
+
+
+<p xmlns="" class="last odd">
+	<em>Kommentar bearbeitet. Bitte achten Sie auf Ihre Wortwahl.</em>
+</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3904841"><a class="author person" href="/!ku53695/"><h4>Balder </h4></a><time datetime="2020-01-22T21:12:57+01:00"><meta value="1579723977"></meta>22. 01. 2020, 
+		21:12</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Grobe und ungehemmte Berliner können einem ganz bestimmt begegnen. Aber das sind nicht alle Berliner und nicht alle Deutschen. Gehorsame Berliner sind mir irgendwie bisher nicht so aufgefallen. Und wem gehorcht denn der Punker, wem der Partygänger, wem der Mann vom Späti, wem der Grünenwähler, wem der SPD-wähler, wem die Rentnerin auf dem Bürgersteig mit dem Rollator, wem der Bankdirektor der Sparkasse... Und vergleichen wir den geforderten Gehorsam in Deutschland mit dem in Wuweis Heimat...  In dieser Pauschalität die Beleidigungen Wuweis und im Artikel: Ganz ungehorsam aber gehemmt, denn eigentlich ist mir nach zurückbeleidigen: Rutscht mir beide den Buckel runter.🙂</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="guest " id="bb_message_3904827"><a class="author person"><h4>08439 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2020-01-22T20:29:59+01:00"><meta value="1579721399"></meta>22. 01. 2020, 
+		20:29</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Jo, der Ai Weiwei, er hat wohl noch nicht begriffen, dass es die kapitalistische Zurichtung ist, die den Grad der Freundlichkeit ausmacht, die man als typisch bei bestimmten Nationen wahrnimmt. Die Briten sind höflicher, aber das sind die Österreicher auch. Sind sie deshalb besser? Wohl kaum!</p>
+<p xmlns="" class="even">Wer Deutschland und die Deutschen verstehen will, darf nicht mit Scheuklappen herangehen. Der forsche Berliner mit der großen Schnauze ist m.E. nicht weniger freundlich als der leutselige Frankfurter mit der Sabbelschnut.</p>
+<p xmlns="" class="last odd">Aber es gibt stets genug Ursache zur Ablehnung, wenn man denn will, übrigens auch im sogenannten Vereinigten Königreich.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3904798"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4><img src="/kommune/files/images/profile/70x70/3495.png" alt="" title=""></img></a><time datetime="2020-01-22T19:23:09+01:00"><meta value="1579717389"></meta>22. 01. 2020, 
+		19:23</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">&amp;!Däh&amp;Zisch - Mailtütenfrisch - darf nicht fehlen - “taz lesen - Eben.</p>
+<p xmlns="" class="even">Ach was!   <a target="_blank" href="https://taz.de/Ai-Weiwei-ueber-sein-Exil-in-Deutschland/!5619421/">taz.de/Ai-Weiwei-u...tschland/!5619421/</a> “</p>
+<p xmlns="" class="last odd">kurz - Besser is das.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3905145"><a class="author person" href="/!ku2223/"><h4>Friderike Graebert</h4></a><time datetime="2020-01-23T14:33:29+01:00"><meta value="1579786409"></meta>23. 01. 2020, 
+		14:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lowandorder </span>danke für den link</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3904789"><a class="author person" href="/!ku50705/"><h4>Tobias Schmidt</h4></a><time datetime="2020-01-22T18:55:33+01:00"><meta value="1579715733"></meta>22. 01. 2020, 
+		18:55</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Der Charakter der Deutschen lässt sich als wachsam, autoritär, gehorsam, ungehemmt, grob und ohne jegliche Integrität beobachten."</p>
+<p xmlns="" class="even">Natürlich schade, daß Herr Weiwai das so sieht, aber wenigstens ist er konsequent. Wie ein prominenter US Politiker vor etwa einen halben Jahr sagte: "You can leave."</p>
+<p xmlns="" class="odd">Das gilt auch uneingeschränkt für Deutschland. Niemand wird gezwungen hier zu leben.</p>
+<p xmlns="" class="even">Wem das Leben in Deutschland also so unerträglich ist möge bitte gehen.</p>
+<p xmlns="" class="last odd">Niemand wird ihm hindern.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3905169"><a class="author person" href="/!ku389/"><h4>Hanne</h4></a><time datetime="2020-01-23T15:40:23+01:00"><meta value="1579790423"></meta>23. 01. 2020, 
+		15:40</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Tobias Schmidt </span>Wie wäre es denn mal mit Selbstreflexion und Annehmen von anscheinend berechtigter Kritik?</p>
+<p xmlns="" class="even">Komisch, dass manche von uns "Weißen" das können und andere meinen, sie würden rassistisch beleidigt werden.</p>
+<p xmlns="" class="last odd">Wer ist denn beleidigt?!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="guest " id="bb_message_3904778"><a class="author person"><h4>05158 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2020-01-22T18:32:42+01:00"><meta value="1579714362"></meta>22. 01. 2020, 
+		18:32</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Berlin. Es lebt dort ein so verwegener Menschenschlag beisammen, daß man mit der Delikatesse nicht weit reicht, sondern daß man Haare auf den Zähnen haben und mitunter etwas grob sein muß, um sich über Wasser zu halten.</p>
+<p xmlns="" class="last even">Johann Wolfgang von Goethe</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3920489"><a class="author person" href="/!ku53185/"><h4>TOMBOMBADIL</h4></a><time datetime="2020-02-24T21:51:40+01:00"><meta value="1582577500"></meta>24. 02. 2020, 
+		21:51</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@05158 (Profil gelöscht) </span>Schönes Zitat - wo kann ich es nachlesen?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3905151"><a class="author person" href="/!ku54838/"><h4>jujuj</h4></a><time datetime="2020-01-23T15:12:26+01:00"><meta value="1579788746"></meta>23. 01. 2020, 
+		15:12</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@05158 (Profil gelöscht) </span>danke :)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3904761"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4><img src="/kommune/files/images/profile/70x70/3495.png" alt="" title=""></img></a><time datetime="2020-01-22T18:08:27+01:00"><meta value="1579712907"></meta>22. 01. 2020, 
+		18:08</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Ja wie ^¿^ - Höflicher.</p>
+<p xmlns="" class="even">Doch Doch. Mag die Typen auch lieber.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Die - Pardon - Beg your pardon - Sorry - <br xmlns="http://www.w3.org/1999/xhtml"></br>
+&amp;sw etc - …öh murmeln - Yes. Has Style. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Eh - Se einem auf den Fuß treten.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+🥚jòò 🥚jòò. Geschmacksache halt - wa.</p>
+<p xmlns="" class="odd">&amp; Ach was! Na da schau her! <br xmlns="http://www.w3.org/1999/xhtml"></br>
+“… Es geht nicht, um den weiterhin bestehenden Nazi-Paragraphen 219a.…“</p>
+<p xmlns="" class="even">Fein. Zumal‘s ja gar nicht von ihm ist.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Öh - … Gellewelle &amp; Wollnichwoll - <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wie der Spekulatius davor auch nicht. - Newahr. Alt Trittbrettfahre. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Normal.</p>
+<p xmlns="" class="odd">kurz - “Wer andern in der Nase bohrt. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Hat selbst nix drin.“ Volkers 👄 - Balin -</p>
+<p xmlns="" class="last even">unterm—- &amp; Junggaest - <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Daß die Taxifahrer ausse Frontstadt - die Höflichkeit nicht erfunden haben!<br xmlns="http://www.w3.org/1999/xhtml"></br>
+War schon bekannt - als ich als Schüler &amp; Studi in Hohen Norden - wenn auch nicht in Kiiel -  aufm Bock saß. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Von der Herkunft mal aber ganz ab - wa</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3904829"><a class="author person" href="/!ku44583/"><h4>Boba Test</h4></a><time datetime="2020-01-22T20:33:58+01:00"><meta value="1579721638"></meta>22. 01. 2020, 
+		20:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lowandorder </span>Nunja,<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Es gibt viel zu viele Situationen, bei denen für als  Ausländer befundene Menschen gerne gewaltsam aus Berliner Taxis fliegen.das hat nix mit der für "Berlin typischen Härte " zu tun..<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Kann man sich auch darüber informieren.macht man aber nicht wenn man als weisser deutscher zufrieden ist und die Probleme mit ein bisschen super-charmantem, garantiert bio-deutschem Dialekt wegblödeln kann...und natürlich hat der Ai recht über des deutschen unwillen etwas von "denen da oben " mal selbst in die Hand zu nehmen,lieber lässt man sich alkes diktieren und motzt dann(auf die da oben und auf Leute denen das auffällt)und natürlich riskiert man in Berlin ab und an auf die Fresse zu bekommen, wenn man englisch spricht.man muss nur dunkel genug aussehen.das hat jetzt aber gar nichts mit deutscher Geschichte zu tun... ;-)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3904786"><a class="author person" href="/!ku10858/"><h4>Heide Gehr</h4><img src="/kommune/files/images/profile/70x70/10858.png" alt="" title=""></img></a><time datetime="2020-01-22T18:53:04+01:00"><meta value="1579715584"></meta>22. 01. 2020, 
+		18:53</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lowandorder </span>Dass wir Deutschen schrecklich sind mit unsrer ewigen Klugscheisserei (am liebsten belehren wir die doofen Amis, gell, mit ihren Waffen alle und so diese Blödis... aber andere dürfen auch gern an unsrem Wesen genesen)  -  und dann noch ohne Geschmack und Stil, und so laut - ja, mei, is schade, manchmal gefährlich, vor fremden Publikum immer peinlich .... drum: Ja, diesen Artikel z.B. kann mit dergestalt wilhelminischen Selbstgerechtigkeit so eigentlich nur eine Deutsche schreiben.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3904751"><a class="author person" href="/!ku6381/"><h4>shashikant</h4></a><time datetime="2020-01-22T17:40:55+01:00"><meta value="1579711255"></meta>22. 01. 2020, 
+		17:40</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Ich freue mich, daß mal wieder jemand dieses Thema anspricht.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Ich kann einige Erfahrungen von Ai Weiwei bestätigen, obwohl ich hier geboren bin und akzentfrei deutsch spreche. Der Rassismus ist teilweise sehr subtil.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Einen kleinen Trost an die Leser, die mit dem Artikel unzufrieden sind.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Ich denke, daß es in allen Ländern der Erde Rassismus gibt. Jeder sollte überlegen, ob man das akzeptieren möchte im 21. Jahrhundert.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3904744"><a class="author person" href="/!ku48801/"><h4>boidsen</h4><img src="/kommune/files/images/profile/70x70/48801.png" alt="" title=""></img></a><time datetime="2020-01-22T17:33:57+01:00"><meta value="1579710837"></meta>22. 01. 2020, 
+		17:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Allein die Reaktionen hier zeigen, dass er Recht hat!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3904887"><a class="author person" href="/!ku6381/"><h4>shashikant</h4></a><time datetime="2020-01-22T23:17:44+01:00"><meta value="1579731464"></meta>22. 01. 2020, 
+		23:17</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@boidsen </span>Danke für Ihren treffenden Kommentar!<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Bei den vielen anderen Kommentaren wird mir anders. Der Einzug der AfD in alle Landesparlamente und in den Bundestag kam ja auch erschreckend schnell.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="guest " id="bb_message_3904790"><a class="author person"><h4>65572 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2020-01-22T18:57:25+01:00"><meta value="1579715845"></meta>22. 01. 2020, 
+		18:57</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@boidsen </span>"Der Charakter der Deutschen lässt sich als wachsam, autoritär, gehorsam, ungehemmt, grob und ohne jegliche Integrität beobachten."</p>
+<p xmlns="" class="last even">Bei welcher der Reaktionen konnten Sie diese Eigenschaften feststellen?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3904757"><a class="author person" href="/!ku35287/"><h4>rero</h4></a><time datetime="2020-01-22T17:53:54+01:00"><meta value="1579712034"></meta>22. 01. 2020, 
+		17:53</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@boidsen </span>???<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Welche Reaktion meinen Sie konkret?</p>
+<p xmlns="" class="last even">Sind nur vier da, und eine gibt ihm sogar recht.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3904734"><a class="author person" href="/!ku52879/"><h4>unwichtigermensch</h4><img src="/kommune/files/images/profile/70x70/52879.png" alt="" title=""></img></a><time datetime="2020-01-22T17:18:39+01:00"><meta value="1579709919"></meta>22. 01. 2020, 
+		17:18</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Wenn er wenigstens gesagt hätte, dass ihm der Schweinebraten in Berlin nicht schmeckt. Der ist wirklich grusselig, genau wie im Grunde das komplette (deutsche) Essen da.</p>
+<p xmlns="" class="even">Ansonsten hatte er in Berlin eigentlich gute Chancen doch dem typischen Deutschtum zu entgehen.</p>
+<p xmlns="" class="last odd">Naja. Ich kann aber auch nachvollziehen, dass man hier auch gehen kann und dem Land keine Träne nachweint am Ende.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3904906"><a class="author person" href="/!ku52720/"><h4>FancyBeard</h4></a><time datetime="2020-01-23T01:25:46+01:00"><meta value="1579739146"></meta>23. 01. 2020, 
+		01:25</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@unwichtigermensch </span>Naja, es scheint ja gerade das typische Berliner Deutschtum zu sein, das er ablehnt:D</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3904729"><a class="author person" href="/!ku52233/"><h4>Wondraschek</h4></a><time datetime="2020-01-22T17:10:28+01:00"><meta value="1579709428"></meta>22. 01. 2020, 
+		17:10</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Fein, und jetzt lasst uns über "die" Araber, "die" Juden und "die" Moslems reden, nicht zu vergessen "die" Chinesen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3904722"><a class="author person" href="/!ku18516/"><h4>fly</h4></a><time datetime="2020-01-22T16:59:47+01:00"><meta value="1579708787"></meta>22. 01. 2020, 
+		16:59</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">oh je. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wie schön ist es, immer in seinem Weltbild bestätigt zu werden. Pauschal und ohne Differenzierung.</p>
+<p xmlns="" class="last even">Wenn es in England wirklich so viel besser ist, also bei denen, die aus der EU raus sind/wollen, weil so viele Ausländer ins Land kommen, dann sei es eben so.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3904720"><a class="author person" href="/!ku39994/"><h4>Marc T.</h4><img src="/kommune/files/images/profile/70x70/39994.png" alt="" title=""></img></a><time datetime="2020-01-22T16:54:20+01:00"><meta value="1579708460"></meta>22. 01. 2020, 
+		16:54</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Berlin ist ebensowenig Deutschland wie Paris Frankreich ist.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3904766"><a class="author person" href="/!ku20411/"><h4>Wurstprofessor</h4><img src="/kommune/files/images/profile/70x70/20411.png" alt="" title=""></img></a><time datetime="2020-01-22T18:15:10+01:00"><meta value="1579713310"></meta>22. 01. 2020, 
+		18:15</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Marc T. </span>Allerdings ist Paris auf eine wesentlich angenehmere Art nicht Frankreich als jene, auf die Berlin nicht Deutschland ist!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3904816"><a class="author person" href="/!ku39307/"><h4>Sven Günther</h4><img src="/kommune/files/images/profile/70x70/39307.png" alt="" title=""></img></a><time datetime="2020-01-22T20:08:17+01:00"><meta value="1579720097"></meta>22. 01. 2020, 
+		20:08</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Wurstprofessor </span>Völlig richtig und die sind wirtschaftlich auch kein Totalausfall.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></div><span id="ad_bin_uebersicht_medrec_4" class="ad_bin sold contentad"><div id="ad_zone_uebersicht_medrec_4" name="uebersicht_medrec-4" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'uebersicht_medrec_4';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid476383">
+    
+
+<form name="form" method="post" enctype="application/x-www-form-urlencoded" id="send-comment" class="first last odd sect sect_send-comment_form style_commentform " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><h2><a name="jetzt mitreden"><span>jetzt mitreden</span></a></h2></div><div class="sectbody"><input class="constant" type="hidden" name="test" value="yes"></input><input class="constant" type="hidden" name="id" value="5655989"></input><input type="hidden" name="scope" class="constant" id="form_scope" value="cms-article"></input><input type="hidden" name="asid" class="constant" id="form_asid" value=""></input><span class="field"><p class="label">Ihren Kommentar hier eingeben</p><textarea name="post" class="text" id="form_post"></textarea></span><input type="submit" class="submit" name="ignore" value="abschicken"></input></div></form><script> filOtaz_de.Form( 'send-comment' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+	var formN = $('#send-comment');	// who i am
+
+	if( formN[0].filOtaz_de_handled ) return; formN[0].filOtaz_de_handled = true;	// run only once
+
+
+
+	// ajaxify myself
+	filOtaz_de.ajaxifyForm('send-comment', {
+		mirrorInput	: true ,
+		onSuccess	: function( data ){
+			filOtaz_de.kommune.updateLogin();
+//console.log('success handler send-comment '+ $(data).html() );
+//			var message = $(data).find('.message');
+//			alert( message.length ? message.text() : 'OK' );
+			} 
+		});   
+
+
+	if( formN.parents('.wing').length ) {    // we're in wing
+//console.log('send-comment in wing '+ formN.length +', '+ formN.parents('.wing').length +', '+ formN.parents('.float').length );
+
+	var multiUse = function() {
+
+		// === lend ourselfes to reply-function ===
+
+		// shared functions
+		var onScroll, reset;
+
+		// shared data
+		var form, anchor, prior, bros, dad, uncles, yMin;
+
+
+		$('.community.page >.body >.sect_commentlinks').find('>.sectbody >li, .thread >li').each( function(i,el){	// each comment
+
+			// per comment data
+			var refN	= $(el),
+			    toolbarN	= refN.find('>.toolbar'),
+			    id,
+			    onClick
+			    ;
+
+			toolbarN.find('>.reply >a').click( function(){
+				// reply specific
+				onClick({
+					idKey	: 'asid',
+					title	: {
+						prefix	: '',
+						suffix	: ' antworten'
+						},
+					hint	: 'Antwort bitte hier eingeben',
+					submit	: 'antworten'
+					});
+				} );
+			
+			toolbarN.find('>.report >a').click( function(){
+				// report specific
+				onClick({
+					a	: 'report',
+					idKey	: 'pid',
+					title	: {
+						prefix  : 'Kommentar von ',
+						suffix  : ' melden'
+						},
+					hint    : 'Problem bitte hier beschreiben',
+					submit	: 'melden'
+					});
+				} );
+
+			toolbarN.css({ visibility:'visible' });
+
+
+			onClick = function( par ) {
+
+					// determine shared data late
+				if( !form ) {
+					form = {
+						titleN	: formN.find('>.secthead >h2 >a >span'),
+						aN	: formN.find('>.sectbody >input[name="a"]'),
+						idN	: formN.find('>.sectbody >input[name="asid"]'),
+						pidN	: formN.find('>.sectbody >input[name="pid"]'),
+						textN	: formN.find('>.sectbody >span >textarea'),
+						submitN	: formN.find('>.sectbody >input:submit')
+						};
+					form.hintN 	= form.textN.prev('p');
+					form.org = {
+						title	: form.titleN.text(),
+						hint	: form.hintN.text(),
+						a	: form.aN.attr('value'),
+						submit	: form.submitN.attr('value')
+						};
+					}
+
+				// determine per comment data late
+				if( !id )  	id = refN.attr('id').replace(/^[^0-9]*/, '');
+
+
+				// change presented data to our needs
+
+				if( par.a ) {
+					if( !( form.aN  && form.aN.length  ) )  
+						form.aN  = $('<input class="constant" type="hidden" />').insertBefore( form.submitN );
+					form.aN.attr({	name	: 'a',
+							value	: par.a
+							});
+					}
+				else if( form.aN ) {
+					form.aN.remove();
+					form.aN = null;
+					}
+
+				if( par.idKey ) {
+					if( form.idN ) form.idN.remove();
+					form.idN = $('<input class="constant" type="hidden" />')
+						.attr({	name	: par.idKey,
+							value	: id
+							})
+						.insertBefore( form.submitN );
+					}
+				else if( form.idN ) {
+					form.idN.remove();
+					form.idN = null;
+					}
+
+				form.titleN.empty().append( 
+					par.title.prefix, 
+					$('<span>'+ refN.find('>.author >h4').text() +'</span>').addClass( refN.attr('class') ),
+					par.title.suffix
+					);
+
+				form.hintN.text(		par.hint	);
+
+				form.submitN.attr({	value :	par.submit	});
+
+
+				// add reset options
+				(new filOtaz_de.Form( formN )).cancel( function(){ reset();	afterLogin.fadeIn(); });
+				formN.on('filOtaz_de.Form.done',   reset );
+
+				// geometry
+				var	commBot	=   toolbarN.offset().top +   toolbarN.outerHeight(),
+					formBot = form.textN.offset().top + form.textN.outerHeight(),
+					d	= commBot - formBot
+					;
+				if( !yMin ) yMin = formBot - $(window).scrollTop();
+				if( commBot - $(window).scrollTop() < yMin )  window.scrollTo( 0, commBot - yMin );
+
+				// relocate form to stick w/ referenced comment
+				if( !anchor && d >0 ) {
+					prior = formN.prev(), bros = formN.nextAll(), dad = formN.parent(), uncles = dad.filter('.rack').nextAll(), afterLogin = $('form#bb-login').nextAll().not('script');
+					messageN = $('#successMessage');
+					anchor = $('<div class="community wing pin" />')
+						.css({  position: 'absolute',
+							top     : formN.offset().top +'px',
+							left    : dad.offset().left +'px',
+							width   : formN.width() +'px'
+							})
+						.appendTo( document.body )
+						;
+					if( uncles.length ) {   // we're in rack
+						dad.css({  borderBottomStyle: 'none'  });
+						anchor.append( $('<div />').addClass( dad.attr('class') ).append( formN, bros ), uncles );
+						}
+					else	anchor.append( formN, bros );
+					}
+
+				if( anchor ) {
+
+					// fading out "meistkommentiert" when answering
+
+					afterLogin.fadeOut();
+				// refresh for second ... n time "antworten"
+				// commtented out to prevent "neues kommtar" instead of "antworten"
+				//	if (formN.hasClass('worked')){
+				//		  if( form.aN ) form.aN.remove();
+				//		  if( form.idN ) form.idN.remove();
+				//	}
+
+					anchor.animate(
+						{ 
+							top : formN.offset().top + d
+						},
+					function(){
+							$(window).scroll( onScroll );
+							} );
+						}
+
+				}; //onClick
+
+			} ); //each comment
+
+			onScroll = function() {
+				var ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top;
+				// reset clears the whole form, we don't want that onScroll, so we only call relocateForm instead
+				// if( formN.offset().top <= ref )  reset();
+
+				// Do not scroll when already commented and there is success message
+				if (( formN.offset().top <= ref ) && ! (formN.hasClass('worked')))  relocateForm();
+				};
+			reset = function() {
+				if( reset ) 	formN.off('filOtaz_de.Form.done');
+				resetForm();
+				relocateForm();
+				};
+			relocateForm = function() {
+				// clean up
+				if( onScroll )  $(window).off('scroll.taz_onscroll');
+
+				// relocate form back
+				if( anchor ) {
+					var 	ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top,
+						d = anchor.offset().top - ref
+						;
+					anchor.animate({ top: ref }, d, function(){
+						dad.append( formN, bros );
+						if( uncles.length ) {	// we were in rack
+							dad.css({  borderBottomStyle: null  });
+							dad.after( uncles );
+							}
+						if( anchor ) anchor.remove(); anchor = null;
+						} );
+					}
+				};
+			resetForm = function() {
+				// reset shown data
+				if( form.aN      ) form.aN.remove();
+				if( form.idN     ) form.idN.remove();
+//				if( form.cancelN ) form.cancelN.remove();
+				form.titleN.text(		form.org.title	);
+				form.hintN.text(		form.org.hint	);
+				form.textN.attr({	value : ''		}).trigger('blur');
+				form.submitN.attr({	value : form.org.submit	});
+
+				};
+
+		}; // multiUse
+
+
+		if( formN.parents('.float').length ) { 	// already relocated into float
+			multiUse();
+			}
+		else {					// wait for relocation
+
+			formN.parents('.wing').on('filOtaz_de_float_mounted', function(){  multiUse();  });
+			}
+		} //we're in wing
+
+	})(); </script>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><form name="form" method="post" enctype="application/x-www-form-urlencoded" id="bb-login" class="even sect sect_bb-login_form style_kommune " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><ul role="toolbar" class="toolbar"><li class="login"><a href="" target="_blank">Login</a></li><li class="settings"><a href="https://taz.de/kommune/post.php?a=registration" target="_blank">Registrieren</a></li><li class="newpass"><a shape="rect" target="_blank" href="https://portal.taz.de/?a=nopw">Passwort vergessen?</a></li></ul></div><div class="sectbody"><input type="hidden" name="a" class="constant" id="form_a" value="login"></input><span class="field"><p class="label">E-Mail</p><input type="text" name="email" class="line" id="form_email"></input></span><span class="field"><p class="label">Passwort</p><input type="password" name="password" class="secret" id="form_password"></input></span><input type="submit" class="submit" name="ignore" value="einloggen"></input></div></form><script> filOtaz_de.Form( 'bb-login' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+		var formID = 'bb-login';
+		var form = $('#bb-login');
+
+		if( !form.length ) return;
+		if( form[0].filOtaz_de_form_handled ) return; form[0].filOtaz_de_form_handled = true;
+
+		var nodes, org, firstrun = true;
+		if( !filOtaz_de.kommune ) filOtaz_de.kommune = {};
+		if( !filOtaz_de.kommune.updateLogin ) filOtaz_de.kommune.updateLogin = function(){
+			if( !nodes ) nodes = {	// parse DOM lazily
+				head	: form.find('>.secthead'),
+				body	: form.find('>.sectbody').hide(),
+				a	: form.find('input[name="a"]'),
+				inputs	: form.find('span').has('input[name="email"],input[name="password"]'),
+				submit	: form.find('input.submit'),
+				links	: {
+					all		: form.find('ul.toolbar'),
+					login		: form.find('ul>li.login').click(function(){
+								var me = $(this);
+//								nodes.body
+								me.closest('.secthead').nextAll('.sectbody')	// we might be dynamically inserted, so parse DOM here
+								.slideToggle(function(){
+									me.toggleClass('active');
+									});
+								return false;
+								}),
+					settings	: form.find('ul>li.settings'),
+					newpass		: form.find('ul>li.newpass')
+					}
+				};
+			var duration = firstrun ? 0 : $.fx.speeds._default;
+			var tazsid = $.cookie('tazsid');
+			if(! tazsid ){  // not logged in
+					$('#send-comment .submit').val('Einloggen und Senden');
+					};
+
+			if( tazsid ) {	// already logged in
+					$('#send-comment .submit').val('Abschicken');
+
+				// mar: refresh after login error and then successful login
+				if ( $('#bb-login >.sectbody >p.error').length ){
+
+
+					$('.sect_bb-login').fadeOut().remove();
+					$('.sect_bb-login_form').fadeIn();
+					};
+
+
+				var tazid = $.cookie('tazid');
+//console.log('	now logged in as '+ tazid );
+				if( !org ) org = {	// store original values lazily
+					action	: form.attr('action'),
+					a	: nodes.a.attr('value'),
+					submit	: nodes.submit.attr('value'),
+					links	: {
+						login		: nodes.links.login,
+						settings	: {
+							text	: nodes.links.settings.children('a').text()
+							},
+						newpass		: nodes.links.newpass
+						}
+					};
+				form.attr({ action: 'https://taz.de/kommune/post.php?a=logout' });
+//console.log( tazsid );
+
+				nodes.body.slideUp( duration, function(){
+					form.addClass('session');
+					nodes.a.attr({ value: 'logout' });
+					nodes.inputs.hide();
+					nodes.submit.attr({ value: 'ausloggen' });
+					nodes.body.fadeIn( duration/3 );
+					});
+				if( tazid ) var profileURL = '/!ku'+ tazid +'/';
+				nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.login    )  nodes.links.login.detach();
+					if( profileURL ) {
+						if( !nodes.links.profile ) {
+							nodes.links.profile = $('<li><a href="'+ profileURL +'">mein Profil</a></li>');
+							nodes.links.settings.before( nodes.links.profile );
+							}
+						}
+					if( nodes.links.settings )  nodes.links.settings.children('a').text('Einstellungen');
+					if( nodes.links.newpass  )  nodes.links.newpass.detach();
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+				if( profileURL ) {	// tell user their name
+					if( !nodes.salute ) {
+						nodes.salute = $();
+//console.log('go, get profile '+ profileURL );
+						$.ajax({
+							type		: 'GET',
+							url		: profileURL +'c.xml', 
+							dataType	: 'xml',
+							success		: function( data, status, xhr ){
+								if( !nodes.salute ) return;	// we're too late
+								var name = $('content >item[type="person"] >name', data ).text();
+//console.log('	found '+ name );
+								nodes.salute = $('<h2><a>'+ name +'</a></h2>').hide().prependTo( nodes.head );
+								nodes.salute.slideDown( duration );
+								},
+							error		: function( req, status, message ){
+//console.log( req.status +' '+ status +' :: '+ message );
+								},
+							complete	: function( req, status ){
+								}
+							});
+						}
+					}
+				} //tazsid
+			else if( org )	(function(){	// reset logged out state
+				var orgwas = org; org = null;
+				nodes.body.fadeOut( duration/2, function(){
+					nodes.a.attr({		value	: orgwas.a		});
+					nodes.inputs.show();
+					nodes.submit.attr({	value	: orgwas.submit	});
+					form.removeClass('session');
+					}); 
+				if( nodes.salute )  nodes.salute.slideUp( duration, function(){
+					nodes.salute.remove(); nodes.salute = null;
+					});
+				if( nodes.links.all ) nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.profile ) nodes.links.profile.remove(); nodes.links.profile = null;
+					nodes.links.settings.before( orgwas.links.login.removeClass('active') );
+					nodes.links.settings.children('a').text( orgwas.links.settings.text );
+					nodes.links.settings.after(  orgwas.links.newpass );
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+
+				form.attr({		action	: orgwas.action	});
+				})();
+			firstrun = false;
+			};
+		filOtaz_de.kommune.updateLogin();
+
+		var message = filOtaz_de.ajaxifyForm('bb-login', { handle200 : filOtaz_de.kommune.updateLogin } );
+
+		if( message && message.length )	// secure ajax not supported
+			form.after( message );
+
+		})();
+	</script><div class="rack" id="xid524032">
+    
+
+<div role="region" id="" class="first last odd sect sect_shop style_shop "><div class="secthead" role="heading"><h2><a name="meistkommentiert"><span>meistkommentiert</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class=" first odd trodd   "><a href="/Trump-und-seine-Waehlerschaft/!5726195/" class="objlink noavatar" role="link"><h4>Trump und seine Wählerschaft</h4><h3>Sie wissen, was sie tun</h3></a></li><li class=" even trodd   "><a href="/Liveticker-zur-US-Wahl/!5726183/" class="objlink noavatar" role="link"><h4>Liveticker zur US-Wahl</h4><h3>Biden gewinnt in Michigan</h3></a></li><li class=" odd treven   "><a href="/Buergerentscheid-in-Wiesbaden/!5722442/" class="objlink noavatar" role="link"><h4>Bürgerentscheid in Wiesbaden</h4><h3>Autofans stoppen Tramprojekt</h3></a></li><li class=" even trodd   "><a href="/US-Wahlen-noch-nicht-entschieden/!5726214/" class="objlink noavatar" role="link"><h4>US-Wahlen noch nicht entschieden</h4><h3>Von „blauer Welle“ keine Spur</h3></a></li><li class=" last odd trodd   "><a href="/Trumps-undemokratisches-Verhalten/!5726244/" class="objlink noavatar" role="link"><h4>Trumps undemokratisches Verhalten</h4><h3>Krieg um die Demokratie</h3></a></li></ul></div>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Ai-Weiwei-ueber-die-Deutschen/!5655989"></a></div><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a><ul><li class="first odd trodd"><a href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span>Deutschland</span></a></li><li class="even trodd"><a href="/Politik/Europa/!p4617/" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="/Politik/Amerika/!p4618/" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="/Politik/Afrika/!p4621/" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="/Politik/Asien/!p4619/" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="/Politik/Nahost/!p4620/" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="/Politik/Netzpolitik/!p4622/" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a><ul><li class="first odd trodd"><a href="/Oeko/Oekonomie/!p4623/" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="/Oeko/Oekologie/!p4624/" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="/Oeko/Arbeit/!p4629/" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="/Oeko/Konsum/!p4625/" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="/Oeko/Verkehr/!p4628/" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven"><a href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span>Wissenschaft</span></a></li><li class="last odd trodd"><a href="/Oeko/Netzoekonomie/!p4627/" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Gesellschaft/!p4611/" id="menu_p4611"><span itemprop="title">Gesellschaft</span></a><ul><li class="first odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span itemprop="title">Alltag</span></a></li><li class="even trodd"><a href="/Gesellschaft/Debatte/!p4633/" id="menu_p4633"><span>Debatte</span></a></li><li class="odd treven"><a href="https://gazete.taz.de/" target="_blank" id="menu_p5057"><span>taz.gazete</span></a></li><li class="even trodd"><a href="https://migration-control.taz.de/#de" target="_blank" id="menu_p5058"><span>migration control</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Kolumnen/!p4634/" id="menu_p4634"><span>Kolumnen</span></a></li><li class="even treven"><a href="/Gesellschaft/Medien/!p4630/" id="menu_p4630"><span>Medien</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Bildung/!p4635/" id="menu_p4635"><span>Bildung</span></a></li><li class="even trodd"><a href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span>Gesundheit</span></a></li><li class="last odd treven"><a href="/Gesellschaft/Reise/!p4638/" id="menu_p4638"><span>Reise</span></a></li></ul></li><li class="even trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="/Kultur/Musik/!p4640/" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="/Kultur/Film/!p4641/" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="/Kultur/Kuenste/!p4642/" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="/Kultur/Buch/!p4643/" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="/Kultur/Netzkultur/!p4631/" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="/Sport/Fussball/!p4647/" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="/Sport/Kolumnen/!p4648/" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="/Nord/Hamburg/!p4651/" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="/Nord/Bremen/!p4652/" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="/Nord/Kultur/!p4653/" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="/bei-Tom/!t5180734/" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="/ueber-die-Wahrheit/!115080/" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="/!p4209/#matomo:pk_campaign" id="menu_p5320"><span>Abo</span></a></li><li class="even trodd"><a href="https://taz.de/!p4271/#matomo:pk_campaign" id="menu_p5321"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="even treven"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even trodd"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="odd treven"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="even trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="odd trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="even treven"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd treven"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even treven"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="https://taz.de/!112354/" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="https://taz.de/!p5097/" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="https://taz.de/!114802/" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="https://taz.de/!114191/" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="https://taz.de/!166598/" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4283/" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="https://taz.de/!p4858/" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="https://taz.de/!112355/" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div></body><!-- DEBUG end 03:46:58+01:00--></html>
