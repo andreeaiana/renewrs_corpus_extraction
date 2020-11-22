@@ -10,7 +10,7 @@ from datetime import datetime
 
 sys.path.insert(0, os.path.join(os.getcwd(), "..",))
 from news_crawler.items import NewsCrawlerItem
-from news_crawler.utils import save_as_html
+from news_crawler.utils import remove_empty_paragraphs
 
 
 class HandelsblattSpider(BaseSpider):
@@ -19,12 +19,12 @@ class HandelsblattSpider(BaseSpider):
     rotate_user_agent = True
     allowed_domains = ['www.handelsblatt.com']
     start_urls = ['https://www.handelsblatt.com/']
-   
+
     # Exclude pages without relevant articles
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'www\.handelsblatt\.com\/\w.*'),
+                    allow=(r'www\.handelsblatt\.com\/\w.*\/\d+\.html$'),
                     deny=(r'www\.handelsblatt\.com\/themen\/meine\-news\?\w.*',
                         r'www\.handelsblatt\.com\/finanzen\/finanztools\/',
                         r'www\.handelsblatt\.com\/arts_und_style\/spiele\/',
@@ -46,7 +46,6 @@ class HandelsblattSpider(BaseSpider):
 
     def parse_item(self, response):
         """Scrapes information from pages into items"""
-       
         data_json = response.xpath('//script[@type="application/ld+json"]/text()').get()
         if not data_json:
             return

@@ -79,15 +79,18 @@ USER_AGENT_CHOICES = [
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
+PERSIST_STATS_ENABLED = True
 EXTENSIONS = {
         'scrapy.extensions.closespider.CloseSpider': 500,
+        'news_crawler.extensions.PersistStatsExtension': 500
 }
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'news_crawler.pipelines.NewsCrawlerPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'news_crawler.pipelines.HtmlWriterPipeline': 100,
+    'news_crawler.pipelines.JsonWriterPipeline': 200,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

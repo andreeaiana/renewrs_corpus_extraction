@@ -5,17 +5,20 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Item, Field
 
 
-class NewsCrawlerItem(scrapy.Item):
+class NewsCrawlerItem(Item):
     """ Model for the scraped items"""
-    provenance = scrapy.Field()
-    author = scrapy.Field()
-    creation_date = scrapy.Field()
-    last_modified = scrapy.Field()
-    scraped_date = scrapy.Field() 
-    content = scrapy.Field() # title, description, body
-    keywords = scrapy.Field()
-    recommendations = scrapy.Field()
-    
+    news_outlet = Field()
+    provenance = Field() # url
+    author_person = Field()
+    author_organization = Field()
+    creation_date = Field()
+    last_modified = Field()
+    crawl_date = Field() 
+    content = Field() # title, description, body
+    news_keywords = Field()
+    recommendations = Field()
+    query_keywords = Field()
+    response_body = Field() # Stores response body to be saved as html

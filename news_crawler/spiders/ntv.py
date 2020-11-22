@@ -9,7 +9,7 @@ from datetime import datetime
 
 sys.path.insert(0, os.path.join(os.getcwd(), "..",))
 from news_crawler.items import NewsCrawlerItem
-from news_crawler.utils import save_as_html
+from news_crawler.utils import remove_empty_paragraphs
 
 
 class NtvSpider(BaseSpider):
