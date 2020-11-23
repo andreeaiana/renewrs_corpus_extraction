@@ -32,12 +32,7 @@ class TonlineSpider(BaseSpider):
                         r'www\.t-online\.de\/sport\/live-ticker\/',
                         r'www\.t-online\.de\/computer\/browser\/',
                         r'www\.t-online\.de\/\w.*\/quiz\-\w.*',
-                        r'www\.t-online\.de\/\w.*\-lottozahlen\-\w.*',
-                        r'lotto\.t-online\.de\/',
-                        r'telefonbuch\.t-online\.de\/',
-                        r'tarife-und-produkte\.t-online\.de\/',
-                        r'jobsuche\.t-online\.de\/',
-                        r'horoskop\.t-online\.de\/'
+                        r'www\.t-online\.de\/\w.*\-lottozahlen\-\w.*'
                         )
                     ),
                 callback='parse_item',
@@ -46,46 +41,60 @@ class TonlineSpider(BaseSpider):
             )
 
     def parse_item(self, response):
-        """Scrapes information from pages into items"""
+        """ 
+        Checks article validity. If valid, it parses it.
+        """
       
-        # Filter by date
+        # Check date validity
         creation_date = response.xpath('//meta[@itemprop="datePublished"]/@content').get()
         if not creation_date:
             return
         creation_date = datetime.fromisoformat(creation_date.split('+')[0])
-        if not self.filter_by_date(creation_date):
+        if self.is_out_of_date(creation_date):
             return
 
         # Extract the article's paragraphs
-        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@itemprop="articleBody"]/p[not(preceding-sibling::h2[@itemprop="alternativeHeadline"]) and not(descendant::b) and not(descendant::span[@class="Tiflle"])]')]
-        text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
+        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@itemprop="articleBody"]/p[not(preceding-sibling::h2[@itemprop="alternativeHeadline"]) and not(descendant::span[@class="Tiflle"])]')]
+        paragraphs = remove_empty_paragraphs(paragraphs[1:]) # First paragraph is the article's description
+        text = ' '.join([para for para in paragraphs])
 
-        # Filter by article length
-        if not self.filter_by_length(text):
+        # Check article's length validity
+        if not self.has_min_length(text):
             return
 
-        # Filter by keywords
-        if not self.filter_by_keywords(text):
+        # Check keywords validity
+        if not self.has_valid_keywords(text):
             return
 
-        # Parse the article
+        # Parse the valid article
         item = NewsCrawlerItem()
+
+        item['news_outlet'] = 'tonline'
         item['provenance'] = response.url
-        
+        item['query_keywords'] = self.get_query_keywords()
+
+        # Get creation, modification, and crawling dates
+        item['creation_date'] = creation_date.strftime('%d.%m.%Y')
+        item['last_modified'] = creation_date.strftime('%d.%m.%Y')
+        item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
+
         # Get authors
         data_json = response.xpath('//script[@type="application/ld+json"]/text()').get()
         data = json.loads(data_json)
         data_authors = data['author']
         if data_authors:
-            authors = [data_authors[i]['name'] for i in range(len(data_authors)) if data_authors[i]['@type'] == 'Person']
-            item['author'] = [author for author in authors if author != ""] 
-        else:
-            item['author'] = list()
+            author_person = [data_authors[i]['name'] for i in range(len(data_authors)) if data_authors[i]['@type'] == 'Person']
+            item['author_person'] = [author for author in author_person if author != ""] 
+            author_organization = [data_authors[i]['name'] for i in range(len(data_authors)) if data_authors[i]['@type'] == 'Organization']
+            item['author_organization'] = [author for author in author_organization if author != ""] 
 
-        # Get creation, modification, and scraping dates
-        item['creation_date'] = creation_date.strftime('%d.%m.%Y')
-        item['last_modified'] = creation_date.strftime('%d.%m.%Y')
-        item['scraped_date'] = datetime.now().strftime('%d.%m.%Y')
+        else:
+            item['author_person'] = list()
+            item['author_organization'] = list()
+
+        # Extract keywords
+        news_keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
+        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
         
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get()
@@ -96,36 +105,27 @@ class TonlineSpider(BaseSpider):
         if response.xpath('//h3[not(@*)]'):
             # Extract headlines
             headlines = [h3.xpath('string()').get().strip() for h3 in response.xpath('//h3[not(@*)]')]
-            
-            # Remove surrounding quotes from headlines
-            processed_headlines = [headline.strip('"') for headline in headlines]
-            processed_headlines = [headline.strip('“') for headline in processed_headlines]
-          
-            # If quote inside headline, keep substring from quote onwards
-            processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
-            processed_headlines = [headline[headline.index('„')+1:len(headline)] if '„' in headline else headline for headline in processed_headlines]
-            processed_headlines = [headline[headline.rindex('“')+1:len(headline)] if '“' in headline else headline for headline in processed_headlines]
+           
+            # Extract paragraphs with headlines
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@itemprop="articleBody"]/p[not(preceding-sibling::h2[@itemprop="alternativeHeadline"]) and not(descendant::span[@class="Tiflle"])] | //h3[not(@*)]')]
+            text = text[1:] # First paragraph is the article's description
 
             # Extract paragraphs between the abstract and the first headline
-            body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//div[@itemprop="articleBody"]/p[not(preceding-sibling::h2[@itemprop="alternativeHeadline"]) and not(descendant::b) and not(descendant::span[@class="Tiflle"]) and following-sibling::h3[contains(text(), "' + processed_headlines[0] + '")]]')]
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
 
             # Extract paragraphs corresponding to each headline, except the last one
             for i in range(len(headlines)-1):
-                body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//div[@itemprop="articleBody"]/p[not(preceding-sibling::h2[@itemprop="alternativeHeadline"]) and not(descendant::b) and not(descendant::span[@class="Tiflle"]) and preceding-sibling::h3[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h3[contains(text(), "' + processed_headlines[i+1] +'")]]')]
-           
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
             # Extract the paragraphs belonging to the last headline
-            body[headlines[-1]] = [node.xpath('string()').get().strip() for node in response.xpath('//div[@itemprop="articleBody"]/p[not(preceding-sibling::h2[@itemprop="alternativeHeadline"]) and not(descendant::b) and not(descendant::span[@class="Tiflle"]) and preceding-sibling::h3[contains(text(), "' + processed_headlines[-1] + '")]]')]
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
 
         else:
             # The article has no headlines, just paragraphs
-            body[''] = [para for para in paragraphs if para != ' ' and para != ""]
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
       
-        # Extract keywords
-        keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
-        item['keywords'] = keywords.split(', ') if keywords else list()
-        
         # Extract first 5 recommendations towards articles from the same news outlet, if available
         recommendations = response.xpath('//ul[preceding-sibling::p[contains(text(), "Mehr zum Thema")]]/li/a/@href').getall()
         if recommendations:    
@@ -135,7 +135,6 @@ class TonlineSpider(BaseSpider):
         else:
             item['recommendations'] = list()
 
-        # Save article in html format
-        save_as_html(response, 'tonline.de', title)
-        
+        item['response_body'] = response.body
+
         yield item

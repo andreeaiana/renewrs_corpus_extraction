@@ -35,8 +35,7 @@ class TagesschauSpider(BaseSpider):
                         r'www\.tagesschau\.de\/sitemap\/',
                         r'www\.tagesschau\.de\/app\/',
                         r'www\.tagesschau\.de\/atlas\/',
-                        r'www\.tagesschau\.de\/allemeldungen\/',
-                        r'intern\.tagesschau\.de\/'
+                        r'www\.tagesschau\.de\/allemeldungen\/'
                         )
                     ),
                 callback='parse_item',
@@ -45,58 +44,75 @@ class TagesschauSpider(BaseSpider):
             )
 
     def parse_item(self, response):
-        """Scrapes information from pages into items"""
+        """
+        Checks article validity. If valid, it parses it.
+        """
        
         data_json = response.xpath('//script[@type="application/ld+json"]/text()').get()
         if not data_json:
             return
         data = json.loads(data_json)        
 
-        # Filter by date
+        # Check date validity 
         if 'datePublished' not in data.keys():
             return
         creation_date = data['datePublished']
         creation_date = datetime.fromisoformat(creation_date.split('+')[0])
-        if not self.filter_by_date(creation_date):
+        if self.is_out_of_date(creation_date):
             return
 
         # Extract the article's paragraphs
-        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//p[@class="text small" and not(descendant::strong)]')]
-        text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
+        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//p[@class="text small" and not(descendant::strong)] | //blockquote[@class="zitat"]/p')]
+        paragraphs = remove_empty_paragraphs(paragraphs)
+        text = ' '.join([para for para in paragraphs])
 
-        # Filter by article length
-        if not self.filter_by_length(text):
+        # Check article's length validity
+        if not self.has_min_length(text):
             return
 
-        # Filter by keywords
-        if not self.filter_by_keywords(text):
+        # Check keywords validity
+        if not self.has_valid_keywords(text):
             return
 
-        # Parse the article
+        # Parse the valid article
         item = NewsCrawlerItem()
-        item['provenance'] = response.url
-        
-        # Get authors
-        authors = data['author']['name']
-        if authors and authors != 'tagesschau':
-            authors = authors.split(', ')[0]
-            if 'und' in authors:
-                authors = authors.split(' und ')
-            else:
-                authors = [authors]
-            item['author'] = authors
-        else:
-            item['author'] = list()
 
-        # Get creation, modification, and scraping dates
+        item['news_outlet'] = 'tagesschau'
+        item['provenance'] = response.url
+        item['query_keywords'] = self.get_query_keywords()
+        
+        # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
         last_modified = data['dateModified']
         item['last_modified'] = datetime.fromisoformat(last_modified.split('+')[0]).strftime('%d.%m.%Y')
-        item['scraped_date'] = datetime.now().strftime('%d.%m.%Y')
+        item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
+        
+        # Get authors
+        data_authors = data['author']['name']
+
+        # Check if the author is an organization
+        if data_authors:
+            if data_authors == 'tagesschau':
+                item['author_person'] = list()
+                item['author_organization'] = [data_authors]
+            else:
+                # Check if authors are persons
+                author_person = data_authors.split(', ')[0]
+                author_person = author_person.split(' und ') if ' und ' in author_person else [author_person]
+                item['author_person'] = [author.strip(' Von ') for author in author_person]
+                author_organization = data_authors.split(', ')[1:]
+                item['author_organization'] = [' '.join(elem for elem in author_organization)]
+        else:
+            item['author_person'] = list()
+            item['author_organization'] = list()
+
+        # Extract keywords
+        news_keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
+        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
         
         # Get title, description, and body of article
-        title = response.xpath('//title/text()').get().split(' |')[0]
-        description = response.xpath('//meta[@name="description"]/@content').get().strip()
+        title = response.xpath('//meta[@property="og:title"]/@content').get().strip()
+        description = response.xpath('//meta[@property="og:description"]/@content').get().strip()
        
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
@@ -104,34 +120,24 @@ class TagesschauSpider(BaseSpider):
             # Extract headlines
             headlines = [h2.xpath('string()').get().strip() for h2 in response.xpath('//h2[@class="subtitle small "]')]
             
-            # Remove surrounding quotes from headlines
-            processed_headlines = [headline.strip('"') for headline in headlines]
-            processed_headlines = [headline.strip('“') for headline in processed_headlines]
-          
-            # If quote inside headline, keep substring from quote onwards
-            processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
-            processed_headlines = [headline[headline.index('„')+1:len(headline)] if '„' in headline else headline for headline in processed_headlines]
-            processed_headlines = [headline[headline.rindex('“')+1:len(headline)] if '“' in headline else headline for headline in processed_headlines]
+            # Extract paragraphs with headlines
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//p[@class="text small" and not(descendant::strong)] | //blockquote[@class="zitat"]/p | //h2[@class="subtitle small "]')]
 
             # Extract paragraphs between the abstract and the first headline
-            body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text small" and not(descendant::strong) and following-sibling::h2[contains(text(), "' + processed_headlines[0] + '")] or following-sibling::h2/strong[contains(text(), "' + processed_headlines[0] + '")]]')]
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
 
             # Extract paragraphs corresponding to each headline, except the last one
             for i in range(len(headlines)-1):
-                body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text small" and not(descendant::strong) and (preceding-sibling::h2[contains(text(), "' + processed_headlines[i] + '")] or preceding-sibling::h2/strong[contains(text(), "' + processed_headlines[i] + '")]) and (following-sibling::h2[contains(text(), "' + processed_headlines[i+1] +'")] or following-sibling::h2/strong[contains(text(), "' + processed_headlines[i+1] +'")])]')]
-           
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
             # Extract the paragraphs belonging to the last headline
-            body[headlines[-1]] = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[@class="text small" and not(descendant::strong) and preceding-sibling::h2[contains(text(), "' + processed_headlines[-1] + '")] or preceding-sibling::h2/strong[contains(text(), "' + processed_headlines[-1] + '")]]')]
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
 
         else:
             # The article has no headlines, just paragraphs
-            body[''] = [para for para in paragraphs if para != ' ' and para != ""]
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
-      
-        # Extract keywords
-        keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
-        item['keywords'] = keywords.split(', ') if keywords else list()
         
         # Extract first 5 recommendations towards articles from the same news outlet, if available
         
@@ -157,7 +163,6 @@ class TagesschauSpider(BaseSpider):
         else:
             item['recommendations'] = list()
 
-        # Save article in html format
-        save_as_html(response, 'tagesschau.de', title)
-
+        item['response_body'] = response.body
+        
         yield item

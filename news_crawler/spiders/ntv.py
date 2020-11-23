@@ -23,7 +23,7 @@ class NtvSpider(BaseSpider):
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'\w.*\/.*\-article\d+\.html'),
+                    allow=(r'www\.n\-tv\.de\/\w.*\-article\d+\.html'),
                     deny=(r'www\.n-tv\.de\/mediathek\/videos\/\w.*',
                         r'www\.n-tv\.de\/mediathek\/livestream\/\w.*',
                         r'www\.n-tv\.de\/mediathek\/tvprogramm\/',
@@ -35,8 +35,7 @@ class NtvSpider(BaseSpider):
                         r'www\.n-tv\.de\/boersenkurse\/',
                         r'www\.n-tv\.de\/wirtschaft\/der_boersen_tag\/',
                         r'www\.n-tv\.de\/sport\/der_sport_tag\/',
-                        r'www\.n-tv\.de\/der_tag\/',
-                        r'sportdaten\.n-tv\.de\/'
+                        r'www\.n-tv\.de\/der_tag\/'
                         )
                     ),
                 callback='parse_item',
@@ -45,87 +44,101 @@ class NtvSpider(BaseSpider):
             )
 
     def parse_item(self, response):
-        """Scrapes information from pages into items"""
+        """
+        Checks article validity. If valid, it parses it.
+        """
         
-        # Filter by date
+        # Check date validity 
         creation_date = response.xpath('//meta[@name="date"]/@content').get()
         if not creation_date:
             return
         creation_date = datetime.fromisoformat(creation_date.split('+')[0])
-        if not self.filter_by_date(creation_date):
+        if self.is_out_of_date(creation_date):
             return
 
         # Extract the article's paragraphs
         paragraphs = [node.xpath('string()').get() for node in response.xpath('//div/p[not(contains(@class, "article__source")) and not(descendant::strong)]')]
-        text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
+        paragraphs = remove_empty_paragraphs(paragraphs)
+        text = ' '.join([para for para in paragraphs])
 
-        # Filter by article length
-        if not self.filter_by_length(text):
+        # Check article's length validity
+        if not self.has_min_length(text):
             return
 
-        # Filter by keywords
-        if not self.filter_by_keywords(text):
+        # Check keywords validity
+        if not self.has_valid_keywords(text):
             return
 
-        # Parse the article
+        # Parse the valid article
         item = NewsCrawlerItem()
-        item['provenance'] = response.url
-        
-        # Get authors
-        authors = response.xpath('//div//span[@class="article__author"]/text()').getall()
-        if authors:
-            item['author'] = [author.strip().split('Von ')[-1].rsplit(',')[0] for author in authors] 
-        else:
-            item['author'] = list()
 
-        # Get creation, modification, and scraping dates
+        item['news_outlet'] = 'ntv'
+        item['provenance'] = response.url
+        item['query_keywords'] = self.get_query_keywords()
+        
+        # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
         last_modified = response.xpath('//meta[@name="last-modified"]/@content').get()
         item['last_modified'] = datetime.fromisoformat(last_modified.split('+')[0]).strftime('%d.%m.%Y')
-        item['scraped_date'] = datetime.now().strftime('%d.%m.%Y')
+        item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
+        
+        # Get authors
+        author_person = response.xpath('//div//span[@class="article__author"]/text()').getall()
+        if author_person:
+            author_person = [author.strip().split('Von ')[-1].rsplit(',')[0] for author in author_person]
+            author_person = remove_empty_paragraphs(author_person)
+            if author_person:
+                item['author_person'] = author_person
+            else:
+                author_person = response.xpath('//div//span[@class="article__author"]/a/text()').getall()
+                if author_person:
+                    author_person = [author.split('von ')[-1].split(',')[0] for author in author_person]
+                    author_person = [author.split('Von ')[-1].split(',')[0] for author in author_person]
+                    item['author_person'] = author_person
+                else:
+                    item['author_person'] = list()
+        else:
+            item['author_person'] = list()
+
+        author_organization = response.xpath('//p[@class="article__source"]/text()').get()
+        item['author_organization'] = author_organization.split('Quelle: ')[-1].split(', ') if author_organization else list()
+
+        # Extract keywords, if available
+        news_keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
+        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
         
         # Get title, description, and body of article
-        title = response.xpath('//title/text()').get().split(' - n-tv.de')[0] 
-        description = response.xpath('//meta[@name="description"]/@content').get()
+        title = response.xpath('//meta[@property="og:title"]/@content').get() 
+        description = response.xpath('//meta[@property="og:description"]/@content').get()
        
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
         if response.xpath('//h2'):
            # Extract headlines
-           headlines = [h2.xpath('string()').get() for h2 in response.xpath('//h2')]
-           # Remove surrounding quotes from headlines
-           processed_headlines = [headline.strip('"') for headline in headlines]
-           processed_headlines = [headline.strip('“') for headline in processed_headlines]
-          
-           # If quote inside headline, keep substring from quote onwards
-           processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
-           processed_headlines = [headline[headline.index('„')+1:len(headline)] if '„' in headline else headline for headline in processed_headlines]
-           processed_headlines = [headline[headline.rindex('“')+1:len(headline)] if '“' in headline else headline for headline in processed_headlines]
+           headlines = [h2.xpath('string()').get().strip() for h2 in response.xpath('//h2')]
+
+           # Extract paragraphs with headlines
+           text = [node.xpath('string()').get().strip() for node in response.xpath('//div/p[not(contains(@class, "article__source")) and not(descendant::strong)] | //h2')]
 
            # Extract paragraphs between the abstract and the first headline
-           body[''] = [node.xpath('string()').get() for node in response.xpath('//div/p[following-sibling::h2[contains(text(), "' + processed_headlines[0] + '")] and not(descendant::strong)]')]
+           body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
 
            # Extract paragraphs corresponding to each headline, except the last one
            for i in range(len(headlines)-1):
-               body[headlines[i]] = [node.xpath('string()').get() for node in response.xpath('//div/p[preceding-sibling::h2[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h2[contains(text(), "' + processed_headlines[i+1] +'")]]')]
-           
+               body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
            # Extract the paragraphs belonging to the last headline
-           body[headlines[-1]] = [node.xpath('string()').get() for node in response.xpath('//div/p[preceding-sibling::h2[contains(text(), "' + processed_headlines[-1] + '")] and not(descendant::em) and not(contains(@class, "article__source"))]')]
+           body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
 
         else:
             # The article has no headlines, just paragraphs
-            body[''] = [para for para in paragraphs if para != ' ' and para != ""]
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
       
-        # Extract keywords, if available
-        keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
-        item['keywords'] = keywords.split(', ') if keywords else list()
-        
         # No article-related recommendations
         item['recommendations'] = list()
 
-        # Save article in html format
-        save_as_html(response, 'ntv.de', title)
+        item['response_body'] = response.body
 
         yield item
