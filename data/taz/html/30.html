@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 20:42:06+01:00 page_id=4632 :: Schwerpunkt Kirchentag 2019--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 4632--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>Kirchenasyl in der Krise: David gegen Goliath - taz.de</title><meta name="author" content="Nora Belghaus"></meta><meta name="description" content="Eine alte Tradition der Kirche ist in Gefahr: das Kirchenasyl. Bedroht wird es vom Staat. Auf dem Kirchentag spielt das Thema kaum eine Rolle."></meta><meta name="keywords" content="Kirchenasyl, Dublin-System, Kirchentag 2019, Alltag, Gesellschaft, Schwerpunkt, taz, tageszeitung "></meta><meta name="taz:title" data-id="5604368" content="Kirchenasyl in der Krise: David gegen Goliath"></meta><meta name="taz:tag" content="Schwerpunkt Kirchentag 2019" data-tag-id="5202068" data-tag-category="Schwerpunkt"></meta><meta name="taz:tag" content="Kirchenasyl" data-tag-id="5018568"></meta><meta name="taz:tag" content="Dublin-System" data-tag-id="5018567"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta><meta property="og:url" content="https://taz.de/!5604368/"></meta><meta property="og:locale" content="de_DE"></meta><meta property="og:type" content="article"></meta><meta name="twitter:card" content="summary_large_image"></meta><meta name="twitter:site" content="@tazgezwitscher"></meta><meta property="og:title" content="Kirchenasyl in der Krise: David gegen Goliath"></meta><meta property="fb:app_id" content="966242223397117"></meta><meta name="twitter:title" content="Kirchenasyl in der Krise: David gegen Goliath"></meta><meta property="og:description" content="Eine alte Tradition der Kirche ist in Gefahr: das Kirchenasyl. Bedroht wird es vom Staat. Auf dem Kirchentag spielt das Thema kaum eine Rolle."></meta><meta name="twitter:description" content=" Eine alte Tradition der Kirche ist in Gefahr: das Kirchenasyl. Bedroht wird es vom Staat. Auf dem Kirchentag spielt das Thema kaum eine Rolle."></meta><meta property="og:image" content="https://taz.de/picture/3512801/948/116680275.jpeg"></meta><meta name="twitter:image" content="https://taz.de/picture/3512801/948/116680275.jpeg"></meta><meta property="article:published_time" content="2019-06-22T12:44:00+01:00"></meta><meta property="article:modified_time" content="2019-06-25T16:20:31+01:00"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"5604368" // String
+            , page_title_enc      :"5604368: Kirchenasyl in der Krise: David gegen Goliath" // String
+            , custom_url_enc      :"/!5604368" // String
+            , channel             :"web" // String
+            , area                :"Redaktion" // String
+            , department          :"p4632" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : false  // Boolean
+            , is_article          : true  // Boolean
+            , has_tags            : true  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "https://taz.de/lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<link rel="preload" href="/lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff" as="font" type="font/woff" crossorigin="anonymous"></link><link rel="preload" href="/lib/ch/web/pix/tazze46.png" as="image" media="(min-width: 49px)"></link><link rel="canonical" href="https://taz.de/Kirchenasyl-in-der-Krise/!5604368/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Alltag" href="/!p4632/rss.xml"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="/rss.xml"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="/"></link><link rel="copyright" type="text/html" title="Impressum" href="/6/impressum/"></link><link rel="stylesheet" type="text/css" media="screen, print" href="/lib/ch/web/css/news2020-10-20_55.css"></link><link href="/lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 6]> <link rel="stylesheet" type="text/css" href="/lib/style/ie6.css"> <![endif]--><!--[if lte IE 7]><style type="text/css">
+			ul.topbar                      >li      >a>span,
+			.secthead>ul[role='navigation']>li      >a>span	{  border-left: 1px solid; padding: 0px 4px;  }
+			ul.topbar                      >li.first>a>span,
+			.secthead>ul[role='navigation']>li.first>a>span	{  border:none; padding-left:0px;  }
+			ul.topbar                      >li      >a>span  {  border-color:white;    }
+			.secthead>ul[role='navigation']>li      >a>span  {  border-color:#888888;  }
+			.box h2 {  line-height:20px;  }
+			.author  {	display:inline;	float:none;	}
+			.sect_spb .sectbody {	padding-top:8px;	}
+			/* fil 2011-04-08 */
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward >ul.toolbar  {  height:28px;  }
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward ul.toolbar >li  {  float: left !important;  }
+			#reward >div  {  clear:both;  }
+			.sect_article >.sectfoot ul.toolbar  {  position:relative !important; top:0px; left:0px; height:24px;  }
+			#micropay ul.toolbar  {  height:52px;  }
+			.sect_article >.sectfoot {  padding-bottom:30px  }
+		</style><![endif]--><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="/uploads/cmp/yieldlove_cmp.js"></script><script type="text/javascript" src="/uploads/cmp/yieldlove.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="/lib/ch/web/js/2020-10-20_55.js"></script><script type="text/javascript"> if( filOtaz_de && filOtaz_de.goMobile )  filOtaz_de.goMobile(); </script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"5604368" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/Gesellschaft/Alltag" // String
+            , is_article      : true  // Boolean
+            , is_corp         : false  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            // 2. check for not closing overlay
+            if ( $("#tzi-paywahl-fg").length && "MutationObserver" in window ){
+                p.trackEvent( 'TZI', 'displayed', 'LAYER_SHOWN_OBSERVE_TEST');    
+                var paywahl = document.getElementById('tzi-paywahl-fg');
+                var observer = new MutationObserver(function(mutations) {
+                  p.trackEvent( 'TZI', 'displayed', 'LAYER_CLOSED_OBSERVE_TEST');    
+                  observer.disconnect();
+                });
+                observer.observe(paywahl, { 
+                    attributes: true, 
+                    attributeFilter: ['style'] 
+                });
+            }
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        // mar: reactivated for tracking of special menu
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+*/
+
+            $(document).on("click", ".longread.article .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL-LONGREAD' ) });
+	        $(document).on("click", ".longread.article .sect_mostread a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'MEISTGELESEN-LONGREAD' ) });
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page:not(.longread) .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page:not(.longread) ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page:not(.longread) .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" src="https://script.ioam.de/iam.js"></script><script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript">
+		// Google Publisher Tag - https://developers.google.com/doubleclick-gpt/reference
+		var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; 
+	(function(){
+		var adArea = 'Gesellschaft';	//
+		googletag.cmd.push( function() {
+			var pa = googletag.pubads();
+			pa.setForceSafeFrame(true);
+			pa.collapseEmptyDivs();
+			pa.setTargeting('position', [ adArea ]);
+      //pa.setTargeting('test', ['fireplace']); //       * * * test only ! * * *
+      //pa.setTargeting('test', ['wallpaper']);   //       * * * test only ! * * *
+      pa.setTargeting('page_id', ['5604368']);
+			if( location.protocol =='https' )
+				pa.setTargeting('ssl', ['ja']);
+			googletag.enableServices();
+			});
+		})();
+	</script><script>
+		// expect jQuery already to be loaded
+	(function() {
+		if( !window.filOtaz_de )		window.filOtaz_de		= Object;
+		if( !window.filOtaz_de.ads )		window.filOtaz_de.ads		= Object;
+		if( !window.filOtaz_de.ads.gpt )	window.filOtaz_de.ads.gpt	= Object;
+
+        var sizes = {
+             'artikel_medrec-1'    :[300,250]
+            ,'artikel_medrec-2'    :[300,250]
+            ,'artikel_medrec_mitte' :[300,250]
+            ,'ros_sidebar-1'       :[300,250]
+            ,'ros_sidebar-2'       :[300,100]
+            ,'uebersicht_medrec-1' :[300,250]
+            ,'uebersicht_medrec-2' :[300,250]
+            ,'uebersicht_medrec-3' :[300,250]
+            ,'uebersicht_medrec-4' :[300,250]
+            ,'uebersicht_medrec-5' :[300,250]
+            ,'uebersicht_board-1'  :[624,150]
+            ,'ros_billboard-1'     :[870,250]
+            ,'mobile_banner-1'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-2'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-3'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-4'     :[[300,250],[320,50],[320,100]]
+            ,'ros_top-links'       :[[120,600],[160,600],[300,600]]
+            ,'ros_top-mitte'       :[[728,90],[800,250],[870,250],[970,90],[970,250]]
+            ,'ros_top-rechts'      :[[120,600],[160,600],[300,600]]
+            ,'ros_leaderboard-1'   :[728,90]
+            ,'fireplace-mitte'     :[[970,90],[728,90]]
+            ,'fireplace-links'     :[160,601]
+            ,'fireplace-rechts'    :[160,600]
+            ,'fireplace_bg'        :[1,1]
+            };
+        var roadblocks = {};
+  
+  
+      roadblocks = {
+         'ros_top-mitte'   :['fireplace_mitte']
+        ,'ros_top-rechts'  :['fireplace_mitte'] 
+      };
+    
+    
+		// general ad handling
+
+		// --> to be triggered for ad_zone if ad is (to be) delivered
+		filOtaz_de.ads.fitIn = function( container ) {	// make space for ad in layout
+			var container = $( container );
+//console.log('fit '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.addClass('shown');
+			container.addClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').addClass('aded_'+( container.height() >120 ?'big' :'small' ) );
+				var badge = container.hasClass('ad_zone_sold') ? 'Anzeige' : 'taz-Angebot';
+				container.before('<div class="ad_badge">'+ badge +'</div>');
+				}
+			container.trigger('TAZadInserted').trigger('TAZboxChange');
+			};
+
+		// --> to be triggered for ad_zone if no ad is (to be) delivered
+		// redundant?
+		filOtaz_de.ads.reclaim = function( container ) {	// remove whitespace from non-delivered ad
+			var container = $( container );
+//console.log('reclaim '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.removeClass('shown');
+			container.removeClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').removeClass('aded_big aded_small');
+				}
+			container.trigger('TAZadRemoved').trigger('TAZboxChange');
+			};
+    
+    
+
+		var fuzeAdFrame = function( frame ) {	// register frame for messages, fire if one is from our content
+console.log('legacy fuzeAdFrame', frame  );
+			};
+    
+    
+    // Hintergrund per Message
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+    window[eventMethod](messageEvent, function(e) {
+      if (e.data.toString().indexOf("color") != -1) {
+        $("#background").css("background-color", e.data.split(" ")[1]);
+        }
+      }, false);
+    
+    
+		// activate ad frame
+		var adZoneHandled = {};
+    
+    var get_id = function( name ) {
+      return $('div[name=' + name + ']').attr('id');
+      };
+    
+    var get_name = function( id ) {
+      return $('#'+ id ).attr('name');
+      };
+    
+    unblock = function( id, rb_id ) {
+      var name = get_name(id);
+      var index = roadblocks[name].indexOf(rb_id);
+      if ( index > -1 ) {
+        roadblocks[name].splice(index, 1);
+        }
+      if ( !roadblocks[name].length ) {
+        googletag.defineSlot( '/118803185/' + name, sizes[name], id ).addService( googletag.pubads() );
+        googletag.display( id );
+        }
+      };
+    
+    filOtaz_de.ads.gpt.activateAdFrame = function( id ) {  
+			if( !id ) return;
+			if( adZoneHandled[id] ) return; adZoneHandled[id] = true; // only one active zone per id
+ 
+			var packing   = $('#ad_bin_'+ id );
+			id = 'ad_zone_'+ id;
+			var container = packing.find('>#'+ id );
+  
+			var name = container.attr('name');
+			if( !name || !sizes[name] ) return;
+   
+			// handle custom ad load events
+			container.on('filOtaz_de.ads.gpt.noBanner',   function(){  return false;  });
+			container.on('filOtaz_de.ads.gpt.preBanner',  function(){
+				filOtaz_de.ads.fitIn( container );
+				return false;
+				});
+			container.on('filOtaz_de.ads.gpt.postBanner', function(){  return false;  });
+
+
+			// define content
+			googletag.cmd.push( function() {
+				var pa = googletag.pubads();
+        if ( roadblocks[name] ) {
+          pa.addEventListener('slotRenderEnded', function (e) {
+            for (var i=0; i<roadblocks[name].length; i++) {
+              if ( e.slot.getSlotElementId() == 'ad_zone_' + roadblocks[name][i] ) {
+
+		    if ( e.isEmpty ) {
+                  unblock(id, roadblocks[name][i]);
+                  }
+                else {
+                  document.getElementById(id).style.display = 'none';
+                  for (var key in roadblocks) {
+                    if ( !roadblocks.hasOwnProperty(key) ) continue;
+                    for ( var j=0; j<roadblocks[key].length; j++ )
+                    if ( id == 'ad_zone_' + roadblocks[key][j] ) {
+                      unblock(get_id(key), roadblocks[key][j]);
+                      break;
+                      }
+                    }
+                  }
+                }
+              }
+			    }); // pa.addEventListener
+			    //	    console.log('roadblocks' + id);
+          googletag.display(id);
+          }
+        else {
+          pa.display( '/118803185/'+ name, sizes[name], id );
+	// console.log( 'asked for', '/118803185/'+ name, sizes[name], id );
+          }
+				pa.addEventListener('slotRenderEnded', function(e) {
+			    if( e.slot.getSlotElementId() != id )  return;	// not our slot
+			    container.trigger( e.isEmpty ? 'filOtaz_de.ads.gpt.noBanner' : 'filOtaz_de.ads.gpt.preBanner' );
+console.log( name +( e.isEmpty ? ' isEmpty' : '' ) );
+					});
+        });
+      }; //filOtaz_de.ads.gpt.activateAdFrame
+
+		// activate wallpaper combo add frame
+/*
+		filOtaz_de.ads.gpt.wallpaper = function() {
+			console.log('filOtaz_de.ads.gpt.wallpaper not yet supported');
+			};
+*/
+
+		})();
+	</script><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link><link rel="manifest" href="/manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body><noscript><img src="https://taz.de/stats/piwik.php?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Redaktion/Gesellschaft/Alltag,Artikel",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><span id="ad_bin_fireplace_bg" class="ad_bin"><div id="ad_zone_fireplace_bg" name="fireplace_bg" class="ad_zone"></div></span><span id="ad_bin_fireplace_mitte" class="ad_bin"><div id="ad_zone_fireplace_mitte" name="fireplace-mitte" class="ad_zone"></div></span><span id="ad_bin_fireplace_links" class="ad_bin"><div id="ad_zone_fireplace_links" name="fireplace-links" class="ad_zone"></div></span><span id="ad_bin_fireplace_rechts" class="ad_bin"><div id="ad_zone_fireplace_rechts" name="fireplace-rechts" class="ad_zone"></div></span><span id="ad_bin_fireplace_script" class="ad_bin"><div id="ad_zone_fireplace_script" name="fireplace-script" class="ad_zone"></div></span><script type="text/javascript">
+(function(){
+  var parent = $('#ad_bin_fireplace_rechts').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_rechts');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_bg').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_bg');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_mitte').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_mitte');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_links').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_links');
+  })(); 
+              </script><div id="adzone_wall" class=""><span id="ad_bin_ros_top_rechts" class="ad_bin"><div id="ad_zone_ros_top_rechts" name="ros_top-rechts" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_rechts';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><span id="ad_bin_ros_top_mitte" class="ad_bin"><div id="ad_zone_ros_top_mitte" name="ros_top-mitte" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></div><div id="pages" class="news"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="/!p4209/#matomo:pk_campaign" id="menu_p5320"><span>Abo</span></a></li><li class="even trodd"><a href="https://taz.de/!p4271/#matomo:pk_campaign" id="menu_p5321"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="even treven"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even trodd"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="odd treven"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="even trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="odd trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="even treven"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd treven"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even treven"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul><div class="full news report article page first odd first_page n1" itemscope="" itemtype="http://schema.org/NewsArticle"><div class="head" role="head"><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="even trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="odd treven"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a></li><li class="even trodd selected"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="odd trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a></li><li class="even treven"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a></li><li class="odd trodd"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a></li><li class="even trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a></li><li class="last odd treven"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><span class="body" role="main"><div class="main rack first_rack" id="xid819017">
+    
+	<div xmlns="" class="metadata" itemscope="">
+<a id="articleURL" href="/!5604368"></a><a id="speakingURL" href="/Kirchenasyl-in-der-Krise/!5604368"></a><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-article-ID" content="5604368"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="url-ID" content="5604368"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-obj-ID" content="3512801"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="vgwort-counter-ID" content="c3db8d59ec054063812c845580215a2d"></meta><span id="articleID"></span><span id="cmsArticleID">5604368</span><img src="//taz.met.vgwort.de/na/c3db8d59ec054063812c845580215a2d" width="1" height="1" alt=""><img src="/count/vgwort/c3db8d59ec054063812c845580215a2d.gif" width="1" height="1" alt="">
+</div>
+<div role="region" id="" class="odd sect sect_article news report"><article class="sectbody" itemprop="articleBody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Kirchenasyl in der Krise</span><span class="hide">: </span><span>David gegen Goliath</span>
+</h1>
+<p xmlns="" itemprop="description" class="intro ">Eine alte Tradition der Kirche ist in Gefahr: das Kirchenasyl. Bedroht wird es vom Staat. Auf dem Kirchentag spielt das Thema kaum eine Rolle.</p>
+      
+      <a xmlns="" class="full picture" href="/picture/3512801/948/116680275.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	" itemprop="image"><img src="/picture/3512801/624/116680275.jpeg" alt="In einer Kirche schlafen Flüchtlinge" title="In einer Kirche schlafen Flüchtlinge"></a><p xmlns="" class="caption">Flüchtlinge schlafen in einer Kirche in Hamburg <span class="credit"> Foto: dpa</span></p>
+    
+      <p xmlns="" class="article first odd">Man sucht vergebens. Unter den über 2.000 Veranstaltungen des Kirchentags findet sich in diesem Jahr keine einzige zu dem Thema, das Kirchengemeinden bundesweit intensiv beschäftigt: das Kirchenasyl. Und das, obwohl sich Veranstaltungen unter dem Label „Migration, Integration, Anerkennung“ als roter Faden durch das Programm ziehen.</p>
+      <p xmlns="" class="article even">Auf der Veranstaltung „Recht auf Asyl!?“ am Donnerstag in der Dortmunder Pauluskirche fällt das Stichwort dennoch schon nach 15 Minuten. Ulf Schlüter, Vizepräsident der Evangelischen Kirche von Westfalen, spricht es an: „Früher hatten wir 80 Prozent positive Fälle“, sagt er. Und: „Das Instrument wird heute auf kaltem Weg abgestellt.“ Er meint die schrittweise Verschärfung für Kirchen­asyl-Gesuche seitens des Bundesamts für Migration und Flüchtlinge (Bamf).</p>
+      
+      <span id="ad_bin_artikel_medrec_1" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_1" name="artikel_medrec-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">Kurz vor dem Kirchentag wurde bekannt: Nur 2 von 250 gemeldeten Kirchenasyl-Fällen in den ersten vier Monaten 2019 hat das Bamf positiv entschieden, eine Abschiebung wurde verhindert, ein Asylverfahren in Deutschland eröffnet. 2018 lag die Quote noch bei 12 Prozent, jetzt bei 1,4 Prozent. Die Linke, die die Anfrage bei der Bundesregierung gestellt hatte, warf der Behörde vor, „humanitäre Grundsätze“ würden „dem um sich greifenden Abschiebewahn geopfert“<em>.</em></p>
+      <p xmlns="" class="article even">Kirchenasyl wird nur Geflüchteten gewährt, die einen Härtefall darstellen, also deren Leib und Leben im Falle einer Abschiebung gefährdet wäre. Die meisten Fälle sind sogenannte Dublin-Fälle. Also Geflüchtete, für deren Asylverfahren das Land zuständig ist, in dem sie die EU betreten haben. Also sollen sie dorthin abgeschoben werden. Das Problem: Dort sind die Lebensbedingungen für Geflüchtete meist deutlich schlechter als hier. Oft ist sind ihre Traumata so gravierend, dass eine Abschiebung eine Gefahr für Leib und Leben darstellt– Suizide sind keine Seltenheit.</p>
+      
+      <span id="ad_bin_artikel_medrec_mitte" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_mitte" name="artikel_medrec_mitte" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">Kirchenasyl funktioniert so: Ein Geflüchteter oder eine ganze Familie bekommt einen Abschiebungsbescheid. Die Betroffenen bitten eine Kirchengemeinde um Asyl. Die berät, ob ein Härtefall vorliegt und ob sie in der Lage ist den Schutz zu bieten, also ob Räume und Ehrenamtliche für die Versorgung verfügbar sind.</p>
+      <h6 xmlns="">Wenig Zeit für Entscheidungen</h6>
+      <p xmlns="" class="article even">Oft kommen die Geflüchteten im letzten Moment. Dann ist der Abschiebungstermin etwa schon am nächsten Tag, und der Gemeinde bleibt wenig Zeit für eine Entscheidung. Wird Kirchenasyl gewährt, muss das die Gemeinde dem Bamf melden. Das bedeutet keinen Abschiebestopp, die Behörde nimmt die Meldung nur zur Kenntnis.</p>
+      <p xmlns="" class="article odd">Die Geflüchteten ziehen aus ihrer Unterkunft aus und in die Räume der Kirchengemeinde ein. Der Pfarrer oder die Pfarrerin müssen nach der Meldung ein Härtefalldossier schreiben. Das ist aufwendig und hat sich in der Vergangenheit oft über Monate hingezogen. Auf dieses Vorgehen haben sich Staat und Kirche 2015 geeinigt.</p>
+      <div xmlns="" class="article rack no8">
+      
+      <div xmlns="http://www.w3.org/1999/xhtml" role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="taz beim Kirchentag "><span>taz beim Kirchentag </span></a></h2></div><div class="sectbody"><a class="picture"></a><p><b xmlns="">Kirchentage unter evangelischen ChristInnen</b> heißt: Ernst zu nehmen, was dort verhandelt, erörtert, begrübelt und was direkt zur Sprache gebracht wird.</p><p>In <b xmlns="">Dortmund</b> stehen Themen wie Migration, Feminismus, Klima und Umwelt im Mittelpunkt. Typische taz-Themen also.</p><p>Deshalb begleiten wir den Kirchentag auch: vor Ort und mit vier täglichen <a href="http://www.taz.de/!t5202068/">Sonderseiten in der Zeitung</a>. Die <a href="http://taz.de/PanterStiftung/!p4258/" target="_blank">taz Panter Stiftung</a> hat dafür 9 junge JournalistInnen ins Ruhrgebiet geschickt.</p></div></div>
+    </div>
+      <p xmlns="" class="article even">In Dublin-Fällen hat das Bamf eine „Überstellungsfrist“ von sechs Monaten, in denen die Abschiebung theoretisch geschehen muss. Verstreicht die Frist, muss das Bamf das Asylverfahren in Deutschland eröffnen, und nicht mehr das Erst-Eintrittsland. Das Kirchenasyl wäre dann beendet, die Chance auf ein Bleiberecht bestünde wieder. Die Kirche verschafft also vor allem Zeit: dem Geflüchteten im Schutzraum der Kirche. Der Behörde für die Prüfung, So die Theorie.</p>
+      <p xmlns="" class="article odd">Doch das schien den Innenministern nicht zu gefallen. Im August 2018 beschlossen sie – ohne die Kirchen – neue Regeln für das Kirchenasyl: Nach der Meldung beim Bamf hat die Gemeinde fortan nur vier Wochen Zeit für das Härtefalldossier. Schafft sie das nicht, wird die Überstellungsfrist auf 18 Monate verlängert. Um also zu erwirken, dass das Bamf noch mal seine Entscheidung überdenkt, muss eine Kirchengemeinde unter Umständen bis zu eineinhalb Jahre für die Versorgung des oder der Geflüchteten im Kirchenasyl aufkommen: vom Bett über das Einkaufen und Bringen von Lebensmitteln, Medikamenten hin zur seelsorgerischen Begleitung.</p>
+      
+      <span id="ad_bin_artikel_medrec_2" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_2" name="artikel_medrec-2" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_2';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article even">Für Pfarrer Helge Hohmann vom Institut Kirche und Gesellschaft ist das eine „Politik der Nadelstiche“. Die Gemeinden würden zudem systematisch „verwaltungstechnisch torpediert“. Zum Beispiel, in dem die Kommunikation erschwert werde: Telefonnummern der Sachbearbeiter blieben unbekannt, Nachreichungen von Dokumenten seien nicht möglich. Das Bamf agiere wie eine Maschine, mit einem unberechenbaren Eigen­leben, das die Maßstäbe der Humanität immer weiter verschiebe.</p>
+      <p xmlns="" class="article odd">Immer häufiger geht der Staat auch juristisch gegen Gemeinden vor. In Rheinland-Pfalz wurden Pfarrerinnen und zwei Pfarrer im Herbst 2018 angezeigt.: Der Vorwurf: Beihilfe zum illegalen Aufenthalt. Pfarrerin Sandra Menzel war eine von ihnen. Sie hatte zwei Sudanesen Kirchenasyl gewährt. Das habe diese darin bestärkt, den unerlaubten Aufenthalt fortzusetzen, so die Staatsanwaltschaft.</p>
+      <h6 xmlns="">„Pure Schikane“</h6>
+      <p xmlns="" class="article even">Dann, an einem Donnerstag im Februar: Hausdurchsuchung. Staatsanwältin, Rechtshelfer, Polizeibeamte – fünf Personen betreten das Haus der Familie und blättern für eineinhalb Stunden in Aktenordnern. Menzel habe gefragt, was sie bräuchten, sie könne alles rausgeben. „Aber die wussten selbst nicht, wonach sie suchten“, erzählt sie am Rande des Kirchentags. Auf Wirken ihrer Anwältin zog das Landgericht den Durchsuchungsbeschluss zurück. Letzte Woche wurde das Verfahren eingestellt. Auf dem Kirchentag kommentieren Pfarrer und Ehrenamtliche die Vorgänge mit „purer Schikane“, „Kriminalisierung“ und der „Entkernung des Kirchenasyls“.</p>
+      <p xmlns="" class="article odd">Nur selten wird über Kirchenasyl berichtet, weil die Gemeinden die Fälle oft nicht publik machen. Man wolle es möglichst „still“ halten, um die Behörde nicht zu provozieren, erzählen einem beinahe alle, mit denen man beim Kirchentag über das Thema spricht. Man will dem Bamf keine Argumente liefern für den implizit geäußerten Vorwurf des politischen Aktivismus.</p>
+      <p xmlns="" class="article even">Für Helge Hohmann geht es beim Kirchenasyl nicht um zivilen Ungehorsam, sondern um den Schutz von Menschen in Not als christlichen Akt der Nächstenliebe. Natürlich habe das politische Implikationen, aber die stünden nicht im Vordergrund.</p>
+      <p xmlns="" class="article last odd">Die Zahl der Kirchenasyle ist zurückgegangen – 2018 waren es noch 1.520 gemeldete Fälle. Hinter dem Streit steht eine symbolische Wendung und eine politische Botschaft: Gottes Gnade ist dem Staat nichts mehr wert. „Was für ein Vertrauen“, das Motto des Kirchentages, kann in dieser Beziehung mit einem Fragezeichen versehen werden.</p>
+    </article></div>
+
+    
+  
+
+    
+  <div role="region" id="" class="odd sect "><div class="sectbody"><a xmlns="" id="reward" shape="rect">Einmal zahlen</a><script> filOtaz_de.flattr();</script></div></div>
+
+    
+	<div class="shariff">.</div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171640/" ratioURL-ressource="171640" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Unser täglich Wort gib uns heute</span>
+</h1>
+  		<p xmlns="" class="article first odd">Alle Artikel auf taz.de sind frei zugänglich. Tag für Tag und Monat für Monat stellen wir unsere Arbeit der Öffentlichkeit frei zur Verfügung. Wir machen das aus Überzeugung, denn es braucht kritischen Journalismus im Netz. Aber natürlich brauchen auch wir dafür Geld – und appellieren deshalb an Sie, unsere Leser*innen:     
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt </strong><strong><strong>die taz </strong>mit Ihrem Beitrag</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171330/" ratioURL-ressource="171330" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Geld erhält die Lesbarkeit.</span>
+</h1>
+  		<p xmlns="" class="article first odd">taz.de ist frei zugänglich – ohne Paywall. Aber das geht nur, wenn sich unsere Leser*innen an dieser Idee beteiligen.   
+</p>
+  		<p xmlns="" class="article even"><strong>Deshalb unsere Bitte: Ermöglichen Sie den taz-Journalismus mit Ihrem Beitrag.</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171291/" ratioURL-ressource="171291" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Fast 25.000 mal Danke. Und eine große Bitte.</span>
+</h1>
+  		<p xmlns="" class="article first odd">taz.de ist frei zugänglich – ohne Paywall. Aber das geht nur, wenn sich unsere Leser*innen an dieser Idee beteiligen.      
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie die taz mit einem Beitrag </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!170949/" ratioURL-ressource="170949" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines-2020</span><span class="hide">: </span><span>Seien Sie auf unserer Seite.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Als unabhängiges Medium sind wir auf die Unterstützung unserer Leser*innen angewiesen. Nur mit einer großen Zahl von Freiwilligen kann es gelingen, die taz in digitalen Zeiten zu finanzieren und unsere Arbeit zu erhalten.   
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie uns jetzt mit Ihrem Beitrag</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script type="text/javascript" xml:space="preserve">
+          (function () {
+            patOtaz_de.layer_tzi_paywahl({'campaign': '2019-5-27' });
+          })();
+        </script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Normal/!155790/" ratioURL-ressource="155790" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Normal</span><span class="hide">: </span><span>Freier Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Das Bedürfnis nach vertrauenswürdiger Information ist derzeit sehr hoch, viele blicken und klicken in diesen unsicheren Zeiten auf die Berichterstattung der taz. Während der vergangenen Wochen ist klar geworden, wie wichtig freier Journalismus ist. In Krisenzeiten ist es „systemrelevant”, dass Menschen sich unabhängig informieren können. Ohne Paywall. Wir finden es wichtig, dass uns möglichst viele Menschen lesen – auch jene, die sich kein Abo leisten können. Doch dazu brauchen wir Ihre Hilfe.    
+</p>
+  		<p xmlns="" class="article even">Guter, kritischer Journalismus ist nicht kostenlos zu haben und braucht Finanzierung. Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Im Gegenzug wird sie freiwillig und solidarisch unterstützt. Von unseren Leser*innen, von Ihnen. Mit Ihrer Wertschätzung und Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit, ein Forum für Meinungsvielfalt, eine engagierte Stimme für Minderheiten. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Seien Sie mit uns taz.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Klima/!155427/" ratioURL-ressource="155427" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Klima</span><span class="hide">: </span><span>Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wir berichten seit 1978 über die Zerstörung unseres Planeten – weil wir daran glauben, dass eine bessere Welt möglich ist. Klima- und Umweltberichterstattung haben in der taz schon immer einen großen Raum eingenommen, aber zur Zeit gehen wir noch einmal in die Offensive. Die taz berichtet noch intensiver über die drohende Klimakatastrophe – auf allen Kanälen. Um dies leisten zu können, sind wir auf die Unterstützung unserer Leser*innen angewiesen. Denn guter Journalismus ist aufwändig und nicht kostenlos zu haben.   
+</p>
+  		<p xmlns="" class="article even">Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Unsere Artikel sollen so viel wie möglich gelesen, geliked und geteilt werden. Nur so können sie die ökologisch notwendigen Veränderungen unserer Gesellschaft vorantreiben. Im Gegenzug wird die taz von unseren Leser*innen unterstützt. Freiwillig und solidarisch. Mit Ihrer Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit und eine engagierte Stimme für mehr Klimaschutz. Unterstützen Sie jetzt die taz und helfen Sie uns dabei.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><div role="region" id="" class="odd sect sect_text "><div class="sectbody"><p>
+
+	Fehler auf taz.de entdeckt?
+	    </p><p>
+        Wir freuen uns über eine 
+	<a href="mailto:fehlerhinweis@taz.de?subject=Fehlerhinweis%20zu%20https://taz.de/Kirchenasyl-in-der-Krise/!5604368/&amp;body=Zu%20%22Kirchenasyl in der Krise: David gegen Goliath%22%0D%0Ahttps://taz.de/Kirchenasyl-in-der-Krise/!5604368/%0D%0A%0D%0ABitte%20beschreiben%20Sie%20uns%20den%20Fehler.%20Sie%20können%20gern%20einen%20Screenshot%20anhängen.%20Wir%20danken%20für%20Ihre%20Hilfe%21%20
+					%0D%0A%0D%0A
+					Inhaltliches%20Feedback%20geben%20Sie%20uns%20gerne%20in%20der%20Kommentarspalte%20oder%20richten%20es%20an%20briefe@taz.de.%20Dort%20leiten%20wir%20ihr%20Feedback%20auch%20an%20die%20Redaktion%20weiter.%20Über%20diese%20Mailadresse%20nehmen%20wir%20nur%20Rechtschreib-%20und%20Faktenkorrekturen%20vor.				">Mail an fehlerhinweis@taz.de</a>!</p><p>
+	Inhaltliches Feedback? 
+	</p><p>
+
+	Gerne als Leser*innenkommentar unter dem Text auf taz.de oder über das
+	<a href="/!112355/"> Kontaktformular</a>.
+		</p></div></div><!-- DEBUG belly: 0 extras here, 0 from directory Schwerpunkt Kirchentag 2019, thats 0 merged--></span><span class="wing" role="contentinfo"><div class="rack first_rack" id="xid459821">
+    
+	<!--template mode="layout" match="display[ @obj='descr' ]":start--><div role="region" id="" class="odd sect sect_description decorated focus directory no_body"><div class="secthead" role="heading"><a class="pictured" name="Schwerpunkt Kirchentag 2019" href="/Schwerpunkt-Kirchentag-2019/!t5202068/"><img src="/picture/436077/300/02062015_stuttgart_kirchentag_dpa.jpg"></img></a><h2><a name="Schwerpunkt Kirchentag 2019" href="/Schwerpunkt-Kirchentag-2019/!t5202068/"><span>Schwerpunkt Kirchentag 2019</span></a></h2></div><div class="sectbody"></div></div>
+
+    
+	<div role="region" id="" class="even sect sect_meta "><div class="sectbody"><ul role="navigation" class="left rootline toolbar"><li class="first odd trodd selected"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="last even trodd selected"><a href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span>Alltag</span></a></li></ul><ul role="navigation" class="right toolbar"><li class="date" itemprop="datePublished" content="2019-06-22T12:44:00+01:00">22. 6. 2019</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2019-06-25T16:20:31+01:00"></meta></ul></div></div>
+
+    
+	<div role="region" id="" class="odd sect sect_profile pictured "><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="pictured 
+        
+	
+        
+
+		
+			
+	
+			author 
+		community 
+		
+        
+                
+		        
+		                
+		
+	        
+	        
+                
+
+				
+		
+
+        person objlink" itemprop="url" href="/Nora-Belghaus/!a36981/"><h4 itemprop="name">Nora Belghaus</h4><h5 itemprop="jobTitle">
+		Autor*in
+	</h5><img itemprop="image" src="/kommune/files/images/profile/70x70/36981.png" alt="Nora Belghaus" title="Nora Belghaus"></img></a><ul class="contact"><li><a itemprop="email" class="email" href="mailto:Nora Belghaus &lt;info@norabelghaus.com&gt;"><img src="/lib/ch/web/pix/icons/email.png" class="icon"></img></a></li><li><a itemprop="sameAs" class="remote website" target="_blank" href="http://www.norabelghaus.com"><img src="/lib/ch/web/pix/icons/website.png" class="icon" alt="website" title="Nora Belghaus's website"></img></a></li><li><a itemprop="sameAs" class="remote microblog" target="_blank" href="http://twitter.com/@nora_belghaus"><img src="/lib/ch/web/pix/icons/microblog.png" class="icon" alt="microblog" title="Nora Belghaus's microblog"></img></a></li></ul></div></div>
+
+    
+	<div role="region" id="" class="even sect sect_tags "><div class="secthead" role="heading"><h2><a name="Themen"><span>Themen</span></a></h2></div><ul role="directory" class="news directory sectbody"><li class="even trodd tag"><a role="link" href="/!t5018568/" class="tag dirlink"><span>Kirchenasyl</span></a></li><li class="last odd treven tag"><a role="link" href="/!t5018567/" class="tag dirlink"><span>Dublin-System</span></a></li></ul></div>
+
+    
+	
+
+    
+	<!-- DEBUG label: 0 extras here, 0 from directory Schwerpunkt Kirchentag 2019, thats 0 merged-->
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><span id="ad_bin_ros_sidebar_1" class="ad_bin sold contentad"><div id="ad_zone_ros_sidebar_1" name="ros_sidebar-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_sidebar_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><!-- DEBUG wing: 0 extras here, 0 from directory Schwerpunkt Kirchentag 2019, thats 0 merged--></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><span class="tail" role="complementary"><!-- DEBUG tail: 0 extras here, 0 from directory Schwerpunkt Kirchentag 2019, thats 0 merged--><div class="rack first_rack" id="xid479112">
+    
+	<div role="region" id="" class="first last odd sect sect_profile brief pictured "><div class="secthead" role="heading"><h2><a name="mehr von"><span>mehr von</span></a></h2></div><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="brief pictured 
+        
+	
+        
+
+		
+			
+	
+			author 
+		community 
+		
+        
+                
+		        
+		                
+		
+	        
+	        
+                
+
+				
+		
+
+        person objlink" itemprop="url" href="/Nora-Belghaus/!a36981/"><h4 itemprop="name">Nora Belghaus</h4><img itemprop="image" src="/kommune/files/images/profile/30x30/36981.png" alt="Nora Belghaus" title="Nora Belghaus"></img></a><ul class="contact"><li><a itemprop="email" class="email" href="mailto:Nora Belghaus &lt;info@norabelghaus.com&gt;"><img src="/lib/ch/web/pix/icons/email.png" class="icon"></img></a></li><li><a itemprop="sameAs" class="remote website" target="_blank" href="http://www.norabelghaus.com"><img src="/lib/ch/web/pix/icons/website.png" class="icon" alt="website" title="Nora Belghaus's website"></img></a></li><li><a itemprop="sameAs" class="remote microblog" target="_blank" href="http://twitter.com/@nora_belghaus"><img src="/lib/ch/web/pix/icons/microblog.png" class="icon" alt="microblog" title="Nora Belghaus's microblog"></img></a></li></ul></div></div>
+
+    
+		</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="xid709888" class="even sect sect_adr style_adr "><ul role="directory" class="sectbody corp  directory"><li class=" first last odd trodd online   leaded pictured leaded remote product"><a class="dept" href="/Abo/!p4209/">Abo</a><a href="https://taz.de/!171158/#matomo:pk_campaign=Praemienabo483_HeimatAlbtraum&amp;pk_source=Online&amp;pk_medium=taz.de&amp;pk_kwd=Kachel&amp;pk_content=Packshot" target="_blank" class="objlink leaded pictured leaded remote product noavatar" role="link"><p class="brief">         Testen Sie 10 Wochen die taz am Wochenende und erhalten „Eure Heimat ist unser Albtraum“ von Fatma Aydemir und Hengameh Yaghoobifarah als Prämie.          </p><img src="/uploads/images/300/AdW_HeimatAlbtraum_kachel.png" alt="" title=""></img><div class="hint">Mehr erfahren</div></a></li></ul></div></span><a itemprop="mainEntityOfPage" href="/Kirchenasyl-in-der-Krise/!5604368"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div class="full no_rightbar below news page even n2"><div class="head" role="head"><div class="nose" role="heading" id="pg_hd"><h2><a name="Volle Spalte unterm Artikel" href="/Volle-Spalte-unterm-Artikel/!p5315/"><span>Volle Spalte unterm Artikel</span></a></h2></div><ul role="navigation" class="news navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack abtest test_2" id="xid841996">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="meistgelesen"><span>meistgelesen</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd online   interview article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date" itemprop="datePublished" content="2019-06-22T12:44:00+01:00">15. 11. 2020</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2019-06-25T16:20:31+01:00"></meta></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726067"></meta><meta itemprop="cms-obj-ID" content="4501193"></meta></div><a href="/Ethikraetin-Graumann-zu-Massnahmen/!5726067/" ratioURL-ressource="5726067" class="objlink interview article leaded pictured noavatar" role="link"><h4>Ethikrätin Graumann zu Maßnahmen</h4><h3>„Furcht vor dem Kontrollverlust“</h3><p>Warum gibt es bei 11.000 Coronatoten einen Lockdown, während 25.000 Grippe-Opfer und 30.000 Sterbefälle durch Raucherkrebs in Kauf genommen werden?  </p><img src="/picture/4501193/300/Corona_Lockdown_Interview_Graumann_15112020-1.jpeg" alt="Bitte Abstand halten." title="Bitte Abstand halten."></img></a></li><li class=" even trodd online   report article leaded pictured"><a href="/Aserbaidschan-zerstoert-armenische-Kultur/!5730239/" ratioURL-ressource="5730239" class="objlink report article leaded pictured noavatar" role="link"><h4>Aserbaidschan zerstört armenische Kultur</h4><h3>Abschied vom Kloster Dadiwank</h3><p>Der Krieg in Bergkarabach ist kein religiöser Konflikt. Kulturgüter der Armenier werden zerstört, um den aserbaidschanischen Anspruch zu festigen.  <span class="author">Tigran Petrosyan</span></p><img src="/picture/4515867/300/26291472-1.jpeg" alt="" title=""></img></a></li><li class=" last odd treven online   report article leaded pictured"><a href="/Alpenwanderung-in-Zeiten-der-Pandemie/!5727772/" ratioURL-ressource="5727772" class="objlink report article leaded pictured noavatar" role="link"><h4>Alpenwanderung in Zeiten der Pandemie</h4><h3>Von Oberstdorf nach Meran</h3><p>Alleine wandern in den Bergen. Unsere Autorin wird vom Schnee überrascht und trifft skurrile Typen. Eine Überquerung der Alpen in Coronazeiten.  <span class="author">Luisa Willmann</span></p><img src="/picture/4505565/300/26223637-1.jpeg" alt="Wandergruppe im Schnee" title="Wandergruppe im Schnee"></img></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+        </div><script type="text/javascript">
+							(function(){
+								// 3 parallel tests are possible (see tmpl-files)
+								var testSet = 				2 ;
+								var countTestElements =      3 ;
+								var weitereArtikelCondition = true ;
+								var currentRack = $(document.getLatestElement()).filter('.rack');
+								var currentVariant = $('#pages > .news.page ').find(' .rack.abtest ').index ( currentRack ) + 1 ;
+
+								// set cookie(s) for ABTests remembering if not existing
+								if ( ! $.cookie('test' + testSet)) $.cookie('test' + testSet, Math.floor( Math.random() * countTestElements ) + 1 ,{domain: 'taz.de', path: '/', expires: 365});
+								if ( $.cookie('test' + testSet) == currentVariant ){ 	
+										// current rack choosen / remembered for test
+										currentRack.addClass(' testshow ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+								} else {
+										currentRack.addClass(' testhide ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+									}
+									//temp - siehe oben
+								if (weitereArtikelCondition == false) { 
+									currentRack.addClass(' testhide ').removeClass(' testshow ')
+								  }
+								})();
+							
+					</script><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div class="rack abtest test_2" id="xid841997">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="Mehr zum Thema"><span>Mehr zum Thema</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd    report article leaded pictured"><a href="/Kirchentag-in-Dortmund/!5604789/" ratioURL-ressource="5604789" class="objlink report article leaded pictured noavatar" role="link"><h4>Kirchentag in Dortmund</h4><h3>Rechtsextreme ohne Rückhalt</h3><p>Ein Stadtrundgang durch Dortmund führt an die Orte rechten Terrors. Aber auch an die der Opfer und des Widerstands.  <span class="author">Jolinde Hüchtker</span></p><img src="/picture/3512816/300/23053878.jpeg" alt='Demonstranten protestieren mit einem Transparent mit der Aufschrift "Dortmund bunt statt braun".' title='Demonstranten protestieren mit einem Transparent mit der Aufschrift "Dortmund bunt statt braun".'></img></a></li><li class=" even trodd    interview article leaded pictured"><a href="/Bodo-Ramelow-ueber-Kirche-und-Religion/!5604429/" ratioURL-ressource="5604429" class="objlink interview article leaded pictured noavatar" role="link"><h4>Bodo Ramelow über Kirche und Religion</h4><h3>„Ich bin der Kieselstein im Schuh“</h3><p>Thüringens Ministerpräsident ist Christ. Ein Gespräch über göttliche Hilfe, die Bibel und wie sich Nächstenliebe mit Abschiebungen verträgt.  </p><img src="/picture/3510892/300/110822392.jpeg" alt="Bodo Ramelow in einer Kirche" title="Bodo Ramelow in einer Kirche"></img></a></li><li class=" last odd treven    report article leaded pictured"><a href="/Fridays-for-Future-auf-dem-Kirchentag/!5604428/" ratioURL-ressource="5604428" class="objlink report article leaded pictured noavatar" role="link"><h4>„Fridays for Future“ auf dem Kirchentag</h4><h3>Energisches Kopfnicken</h3><p>Um Klimaschutz geht es auf dem Kirchentag in diesem Jahr natürlich auch. Miteinander reden tun aber oft nur die, die sich ohnehin schon einig sind.  <span class="author">Linda Gerner</span></p><img src="/picture/3510849/300/23224222.jpeg" alt="Eine junge Frau steht vor einem blauen Hintergrund und macht eine dankende Geste" title="Eine junge Frau steht vor einem blauen Hintergrund und macht eine dankende Geste"></img></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+
+        </div><script type="text/javascript">
+							(function(){
+								// 3 parallel tests are possible (see tmpl-files)
+								var testSet = 				2 ;
+								var countTestElements =      3 ;
+								var weitereArtikelCondition = true ;
+								var currentRack = $(document.getLatestElement()).filter('.rack');
+								var currentVariant = $('#pages > .news.page ').find(' .rack.abtest ').index ( currentRack ) + 1 ;
+
+								// set cookie(s) for ABTests remembering if not existing
+								if ( ! $.cookie('test' + testSet)) $.cookie('test' + testSet, Math.floor( Math.random() * countTestElements ) + 1 ,{domain: 'taz.de', path: '/', expires: 365});
+								if ( $.cookie('test' + testSet) == currentVariant ){ 	
+										// current rack choosen / remembered for test
+										currentRack.addClass(' testshow ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+								} else {
+										currentRack.addClass(' testhide ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+									}
+									//temp - siehe oben
+								if (weitereArtikelCondition == false) { 
+									currentRack.addClass(' testhide ').removeClass(' testshow ')
+								  }
+								})();
+							
+					</script><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div class="rack abtest test_2" id="xid848734">
+    	<div role="region" id="" class="first last odd sect sect_thema inside_ressort full style_inside_ressort full "><div class="secthead" role="heading"><h2><a name="Gesellschaft" href="/Gesellschaft/!p4611/"><span>Gesellschaft</span></a></h2><ul class="toolbar" role="toolbar"><li><a href="/Gesellschaft/!p4611;rss/">RSS</a></li></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd online   report article leaded pictured"><a href="/Impfen-gegen-Corona/!5727231/" ratioURL-ressource="5727231" class="objlink report article leaded pictured noavatar" role="link"><h4>Impfen gegen Corona</h4><h3>Hoffen auf guten Stoff</h3><p>Drei Impfstoffe stehen kurz vor der Zulassung. Wie sie wirken, was sie kosten, wer sie kriegt.  <span class="author">Felix Lee, Finn Mayer-Kuckuk</span></p><img src="/picture/4519385/300/26339738-1.jpeg" alt="Eine Medizintechnikerin mit einer Dosis des Coronaimpfstoffs Astrazeneca, den sie gleich einer Testperson verabreicht" title="Eine Medizintechnikerin mit einer Dosis des Coronaimpfstoffs Astrazeneca, den sie gleich einer Testperson verabreicht"></img></a></li><li class=" even trodd online   report article leaded pictured"><a href="/Weihnachten-mit-Corona/!5730900/" ratioURL-ressource="5730900" class="objlink report article leaded pictured noavatar" role="link"><h4>Weihnachten mit Corona</h4><h3>Feiern oder verschieben?</h3><p>Viele hängen gerade jetzt an der Idee vom Weihnachtsfest, wie sie es kennen. Ein Pro und Contra  <span class="author">Ambros Waibel, Tobias Schulze</span></p><img src="/picture/4518785/300/Coronakrise_Weihnachten-1.jpeg" alt="Eine Mund-Nasenschutz-Maske hängt an einem geschmückten Weihnachtsbaum." title="Eine Mund-Nasenschutz-Maske hängt an einem geschmückten Weihnachtsbaum."></img></a></li><li class=" last odd treven online   report article leaded pictured"><a href="/Kooperation-von-Verlagen-mit-Google/!5727287/" ratioURL-ressource="5727287" class="objlink report article leaded pictured noavatar" role="link"><h4>Kooperation von Verlagen mit Google</h4><h3>Zugreifen oder verzichten</h3><p>Mit dem „News Showcase“ testet Google ein Angebot für Presseverlage, ihre Texte zu vermarkten. Die Kooperation wirft Fragen auf.  <span class="author">Jann-Luca Künßberg</span></p><img src="/picture/4518535/300/Google_Presseverlage_News_Showcase-1.jpeg" alt="ein Smartphone mit Google Logo" title="ein Smartphone mit Google Logo"></img></a></li></ul></div>
+        </div><script type="text/javascript">
+							(function(){
+								// 3 parallel tests are possible (see tmpl-files)
+								var testSet = 				2 ;
+								var countTestElements =      3 ;
+								var weitereArtikelCondition = true ;
+								var currentRack = $(document.getLatestElement()).filter('.rack');
+								var currentVariant = $('#pages > .news.page ').find(' .rack.abtest ').index ( currentRack ) + 1 ;
+
+								// set cookie(s) for ABTests remembering if not existing
+								if ( ! $.cookie('test' + testSet)) $.cookie('test' + testSet, Math.floor( Math.random() * countTestElements ) + 1 ,{domain: 'taz.de', path: '/', expires: 365});
+								if ( $.cookie('test' + testSet) == currentVariant ){ 	
+										// current rack choosen / remembered for test
+										currentRack.addClass(' testshow ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+								} else {
+										currentRack.addClass(' testhide ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+									}
+									//temp - siehe oben
+								if (weitereArtikelCondition == false) { 
+									currentRack.addClass(' testhide ').removeClass(' testshow ')
+								  }
+								})();
+							
+					</script><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><span class="headed wing" role="complementary"></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Kirchenasyl-in-der-Krise/!5604368"></a></div><div class="full community page last odd n3"><div class="head" role="head"><ul role="navigation" class=" navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid495498">
+    
+
+	<div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="So können Sie kommentieren:"><span>So können Sie kommentieren:</span></a></h2></div><div class="sectbody"><p>       Bitte <a href="https://www.taz.de/kommune/post.php?a=registration" target="_blank">registrieren Sie sich</a> und halten Sie sich an unsere <a href="http://taz.de/netiquette" target="_blank">Netiquette</a>.     
+</p><p>      Haben Sie Probleme beim Kommentieren oder Registrieren?   
+</p><p>  Dann mailen Sie uns bitte an <a href="mailto:kommune@taz.de" target="_blank">kommune@taz.de</a>   </p></div></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="" class="even sect sect_commentlinks style_commentlinks "><div class="secthead" role="heading"><h2><a name="Leser*innenkommentare"><span>Leser*innenkommentare</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class="member " id="bb_message_3807086"><a class="author person" href="/!ku48418/"><h4>Lockenkopf</h4></a><time datetime="2019-06-22T14:04:05+02:00"><meta value="1561205045"></meta>22. 06. 2019, 
+		14:04</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Das Kirchenasyl beruht auf edlen Motiven und es  ist nicht so, dass mir das Handeln der hieran beteiligten Gemeinden keinen Respekt abnötigen würde. Das Problem ist schlicht, dass es rechtswidrig ist. Es gibt kein kirchliches Sonderrecht in dem Sinne, dass die Kirche berechtigt ist, die Vollziehung von Gesetzen und bestandskräftigen Verwaltungsakten zu verhindern. Daher ist es nachvollziehbar, dass der Staat das Kirchenasyl nicht mehr in dem Maße akzeptiert, wie er das früher getan hat.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807154"><a class="author person" href="/!ku22896/"><h4>Rudolf Fissner</h4><img src="/kommune/files/images/profile/70x70/22896.png" alt="" title=""></img></a><time datetime="2019-06-22T18:52:01+02:00"><meta value="1561222321"></meta>22. 06. 2019, 
+		18:52</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lockenkopf </span>Ein Kirchenasyl ist nicht rechtswidrig. Es ist nicht verboten Menschen aufzunehmen und Unterkunft zu gewähren.</p>
+<p xmlns="" class="even">Es obliegt dem Staat Gesetze umzusetzen. Es ist nicht Aufgabe der Kirchen den Sherif zu spielen.</p>
+<p xmlns="" class="last odd">Aber wer weiß, vielleicht werden die Konfessionslosen ja irgendwann so viel politischen Einfluß haben, dass Kirchenasyl nicht mehr repektiert wird als Wiederstandsform. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Dann muss man wohl wieder Menschen verstecken in Deutschland.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807190"><a class="author person" href="/!ku48418/"><h4>Lockenkopf</h4></a><time datetime="2019-06-22T20:29:34+02:00"><meta value="1561228174"></meta>22. 06. 2019, 
+		20:29</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Rudolf Fissner </span>Selbst Heribert Prantl hat in einem lesenswerten Artikel neulich in der SZ - in dem er das Kirchenasyl vehement verteidigt hat- eingeräumt, dass das Kirchenasyl einen Rechtsbruch darstellt. Es geht nicht darum, dass die Kirchen nicht an der Abschiebung mitwirken. Vielmehr verhindern sie diese aktiv unter Ausnutzung ihrer Sonderstellung als Kirche, obwohl die Abschiebung auf einem bestandskräftigen und vollziehbaren Verwaltungsakt beruht.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807250"><a class="author person" href="/!ku22896/"><h4>Rudolf Fissner</h4><img src="/kommune/files/images/profile/70x70/22896.png" alt="" title=""></img></a><time datetime="2019-06-22T22:52:29+02:00"><meta value="1561236749"></meta>22. 06. 2019, 
+		22:52</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lockenkopf </span>Werden Sie doch bitte konkret und nennen das Gesetz, gegen das beim Kirchenasyl verstoßen wurde.  welches gesetz nannte Prantl wo?</p>
+<p xmlns="" class="even">Es ist genau bekannt wo sich in welcher Kirche der Asylsuchende befindet. das ist sowas von transparent!. Da wird niemand versteckt. Der Staat muss einfach nur knallhart den kalten säkularen konfessionslosen Macker raushängen lassen und sich einen Scheißdreck scheren um die Solidarität von Menschen mit Menschen.</p>
+<p xmlns="" class="odd">Wenn man soetwas will.</p>
+<p xmlns="" class="even">Das Kirchenasyl steht für eine menschliche Gesellschaft und eine eben nicht knallhart durchgreifende Justiz.</p>
+<p xmlns="" class="last odd">Warum machen andere Gruppen soetwas nicht?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="guest " id="bb_message_3807107"><a class="author person"><h4>88181 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2019-06-22T15:02:57+02:00"><meta value="1561208577"></meta>22. 06. 2019, 
+		15:02</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lockenkopf </span>Dann ist es eben rechtswidrig, und?</p>
+<p xmlns="" class="even">Es geht um ein paar Fälle. Und die Sache hat doch gut und reibungslos funktioniert.</p>
+<p xmlns="" class="odd">Jeder noch so wackere Deutsche sollte doch in der Lage sein, dafür ein Auge zuzudrücken.</p>
+<p xmlns="" class="even">Wenn ich bedenke, wie viele Bauten nur in meiner kleinen Gemeinde rechtswidrig errichtet und routiniert nachträglich genehmigt werden.</p>
+<p xmlns="" class="odd">Wäre das nicht so, die Abrissbagger wären im Dauereinsatz.</p>
+<p xmlns="" class="last even">Das Leben will sich nicht immer nach Paragraphen richten.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="guest " id="bb_message_3807101"><a class="author person"><h4>76530 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2019-06-22T14:37:28+02:00"><meta value="1561207048"></meta>22. 06. 2019, 
+		14:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lockenkopf </span>Das haben Sie aber schön erklärt.</p>
+<p xmlns="" class="last even">Wenn Sie das auch mal in Sachen Kirchensteuer tun täten?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807108"><a class="author person" href="/!ku48418/"><h4>Lockenkopf</h4></a><time datetime="2019-06-22T15:03:39+02:00"><meta value="1561208619"></meta>22. 06. 2019, 
+		15:03</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@76530 (Profil gelöscht) </span>Das Recht, Kirchensteuern zu erheben, ist den Kirchen per Gesetz eingeräumt. Das ist der Unterschied. Mehr gibts dazu nicht zu sagen, auch wenn Sie das enttäuschen mag,-)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3807132"><a class="author person"><h4>76530 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2019-06-22T16:43:31+02:00"><meta value="1561214611"></meta>22. 06. 2019, 
+		16:43</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lockenkopf </span>An der Stelle kennen Sie mich offenbar gut. Ich bin jetzt wirklich enttäuscht. Einen Atemzug lang. ;-)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3807100"><a class="author person" href="/!ku37716/"><h4>Uranus</h4><img src="/kommune/files/images/profile/70x70/37716.png" alt="" title=""></img></a><time datetime="2019-06-22T14:36:17+02:00"><meta value="1561206977"></meta>22. 06. 2019, 
+		14:36</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lockenkopf </span>Sie sind sich schon über die Folgen im Klaren über das, was sie da so ekelhaft nüchtern schreiben? Im Artikel heißt es:<br xmlns="http://www.w3.org/1999/xhtml"></br>
+"Kirchenasyl wird nur Geflüchteten gewährt, die einen Härtefall darstellen, also deren Leib und Leben im Falle einer Abschiebung gefährdet wäre. Die meisten Fälle sind sogenannte Dublin-Fälle. Also Geflüchtete, für deren Asylverfahren das Land zuständig ist, in dem sie die EU betreten haben. Also sollen sie dorthin abgeschoben werden. Das Problem: Dort sind die Lebensbedingungen für Geflüchtete meist deutlich schlechter als hier. Oft ist sind ihre Traumata so gravierend, dass eine Abschiebung eine Gefahr für Leib und Leben darstellt– Suizide sind keine Seltenheit."<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Die wichtigere Frage als die nach Legalität ist die nach Legitimität. Zunächst dieses Handeln der Kirche als moralisch gutzuheißen, um es dann mit dem Verweis auf Illegalität auszuhebeln, ist eine Scheiß-Argumentation.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807116"><a class="author person" href="/!ku38947/"><h4>Limits2Growth</h4><img src="/kommune/files/images/profile/70x70/38947.png" alt="" title=""></img></a><time datetime="2019-06-22T15:33:47+02:00"><meta value="1561210427"></meta>22. 06. 2019, 
+		15:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Uranus </span>"Sie sind sich schon über die Folgen im Klaren über das, was sie da so ekelhaft nüchtern schreiben? Im Artikel heißt es:...Suizide keine Seltenheit."</p>
+<p xmlns="" class="even">Das sind zunächst einmal behauptete Folgen. In [1] wird von 20 Selbsttötungen von Flüchtlingen aus den Jahren 2014-2016 berichtet.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Bei Männern in Deutschland liegt die Quote bei 11,9 (Männer 17,6 Frauen 5,8) je 100.000 und Jahr. Damit wären Flüchtlinge sogar weniger gefährdet als die Wohnbevölkerung [2], selbst wenn wie unterstellt eine hohe Dunkelziffer vorliegt.</p>
+<p xmlns="" class="odd">Die Nüchternheit von @Lockenkopf finde ich durchaus angemessen.</p>
+<p xmlns="" class="last even">[1] <a target="_blank" href="https://kritisches-netzwerk.de/forum/folgen-der-abschiebepolitik-immer-mehr-suizidversuche-von-fluechtlingen">kritisches-netzwer...-von-fluechtlingen</a><br xmlns="http://www.w3.org/1999/xhtml"></br>
+[2] <a target="_blank" href="https://de.statista.com/statistik/daten/studie/585/umfrage/selbstmordmethoden-in-deutschland-2006/">de.statista.com/st...-deutschland-2006/</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807157"><a class="author person" href="/!ku22896/"><h4>Rudolf Fissner</h4><img src="/kommune/files/images/profile/70x70/22896.png" alt="" title=""></img></a><time datetime="2019-06-22T18:54:41+02:00"><meta value="1561222481"></meta>22. 06. 2019, 
+		18:54</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Limits2Growth </span>Die Rate an Selbstötung in Deutschland wegen Abschiebung wird wohl kaum bei 11,9/17.6 liegen; Da müssten zuvor ja alle deutschen abgeschoben werden.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="guest " id="bb_message_3807135"><a class="author person"><h4>76530 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2019-06-22T16:49:43+02:00"><meta value="1561214983"></meta>22. 06. 2019, 
+		16:49</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Limits2Growth </span>Die Nüchternheit von @Lockenkopf mag wirklich angemessen sein. Bei der Ihren sehe ich das anders.</p>
+<p xmlns="" class="even">Ein sich selbst so bezeichnender Rechtsstaat, der als Folge seiner Bestimmungen Tote in Kauf nimmt, ist für mich keiner.</p>
+<p xmlns="" class="last odd">Jemand der die Toten verschiedener Teilgruppen vergleicht, ist in meinen Augen ein Erbsenzählender Verharmloser.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807143"><a class="author person" href="/!ku38947/"><h4>Limits2Growth</h4><img src="/kommune/files/images/profile/70x70/38947.png" alt="" title=""></img></a><time datetime="2019-06-22T17:24:04+02:00"><meta value="1561217044"></meta>22. 06. 2019, 
+		17:24</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@76530 (Profil gelöscht) </span>Sie haben meine Aussage nicht verstanden: mir fehlt der Beleg, dass Abschiebung ursächlich für eine erhöhte Suizidrate sind. Haben Sie Belege, oder auch nur anekdotische Evidenz oder das Gefühl, es könnte plausibel sein?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807173"><a class="author person" href="/!ku37716/"><h4>Uranus</h4><img src="/kommune/files/images/profile/70x70/37716.png" alt="" title=""></img></a><time datetime="2019-06-22T19:35:52+02:00"><meta value="1561224952"></meta>22. 06. 2019, 
+		19:35</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Limits2Growth </span>Braucht es den? Abschiebung ist offenbar ein Auslöser für Suizid. Ob Suizid aufgrund dieser oder bspw. drohende Wohnugslosigkeit vorgenommen wird, ist zweitrangig. Aussschlaggebend sollte sein, dass die Voraussetzungen vom Staat geschaffen werden also theoretisch vermeidbar. Wie es sich zeigt, ist es den Behörden aber durchaus egal.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="guest " id="bb_message_3807146"><a class="author person"><h4>76530 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2019-06-22T17:43:25+02:00"><meta value="1561218205"></meta>22. 06. 2019, 
+		17:43</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Limits2Growth </span>Sie haben recht, ich habe Sie falsch verstanden. Deshalb ist auch meine Schlussfolgerung in Bezug auf Ihre Person nicht passend.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3807109"><a class="author person" href="/!ku48418/"><h4>Lockenkopf</h4></a><time datetime="2019-06-22T15:06:40+02:00"><meta value="1561208800"></meta>22. 06. 2019, 
+		15:06</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Uranus </span>In einem Rechtsstaat geht es nicht anders. Da steht Moral nun mal nicht über dem Gesetz. Sonst bräuchte man keine Gesetze. Unter Moral versteht naturgemäß jeder etwas anderes. Wenn jeder seine Moral über das Gesetz stellen würde, hätten wir Anarchie. Das kann man wollen, entspricht aber nicht unserer Staatsordnung und Verfassung.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807171"><a class="author person" href="/!ku37716/"><h4>Uranus</h4><img src="/kommune/files/images/profile/70x70/37716.png" alt="" title=""></img></a><time datetime="2019-06-22T19:32:08+02:00"><meta value="1561224728"></meta>22. 06. 2019, 
+		19:32</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lockenkopf </span>Sie gehen davon aus, dass die BRD ein Rechtsstaat ist (und dies unveränderbar wäre?). Rechtspraxis und so einige Gesetze sprechen aber dagegen. Wo ist die Gleichberechtigung für Asylsuchende, behinderte Menschen, Erwerbslose ...?<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Jein. Anarchie bedeutet herrschaftsfreie Gesellschaftsordnung. Regeln gäbe es da schon. Diese würden allerdings von Allen beschlossen - im Gegensatz zur (marktkonformen) Demokratie. ;)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807252"><a class="author person" href="/!ku22896/"><h4>Rudolf Fissner</h4><img src="/kommune/files/images/profile/70x70/22896.png" alt="" title=""></img></a><time datetime="2019-06-22T22:56:22+02:00"><meta value="1561236982"></meta>22. 06. 2019, 
+		22:56</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Uranus </span>"Regeln gäbe es da schon. Diese würden allerdings von Allen beschlossen"</p>
+<p xmlns="" class="last even">Wenn sie erst noch beschlossen "würden", dann gibt es sie und "gäbe" es sich nicht schon (jetzt). Diese Regeln sind eine Katze im Sack und ich möchte nicht wissen wieviele davon totgeschlagen werden</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3807189"><a class="author person" href="/!ku48418/"><h4>Lockenkopf</h4></a><time datetime="2019-06-22T20:24:25+02:00"><meta value="1561227865"></meta>22. 06. 2019, 
+		20:24</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Uranus </span>Wir haben eine repräsentative Demokratie, so dass der Bundestag als das (für alle) demokratisch legitimierte Legislativorgan die Gesetze macht. Was hat das mit marktkonform zu tun?  Was den Rechtsstaat betrifft: Nach allen Anforderungen, die gemeinhin an einen solchen gestellt werden, leben wir in einem, und zwar in einem ziemlich vorbildlichen. Nur weil Ihnen einige Gesetze inhaltlich nicht passen, können Sie nicht den Rechtsstaat in Zweifel ziehen. Ich mag auch einige Gesetze nicht (möglicherweise andere als sie). Dann muss ich - wie jeder andere auch - darauf hoffen und hinwirken, dass diejenigen Parteien eine Mehrheit erhalten, die Gesetze in meinem Sinne machen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807225"><a class="author person" href="/!ku37716/"><h4>Uranus</h4><img src="/kommune/files/images/profile/70x70/37716.png" alt="" title=""></img></a><time datetime="2019-06-22T21:22:47+02:00"><meta value="1561231367"></meta>22. 06. 2019, 
+		21:22</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lockenkopf </span>Mit marktkonform wollte ich andeuten, dass im Kapitalismus Profitmaximierung Vorrang hat und Gesundheit und Leben von Mensch und Tier hintenansteht. Wenige mächtige Menschen/Institutionen können über Kontakte, direkte Medienbeteiligungen, Lobbyist*innen ... ihren Einfluss gelten machen. Ein Beispiel: Es geht dann um den mit der Produktion von Dieselautos zu erzielenden Gewinn und nicht um die Stickstoxide und Feinstaub, die die Gesundheit der Menschen gefährden (von den Folgen der CO2-Emissionen mal ganz abgesehen).<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wenn der "Rechtsstaat" Menschen (angeblich) gleichstellt, warum dürfen dann Homosexuelle erst seit kurzem heiraten? Warum wird es ihnen immer noch erschwert, sich zusammen um Kinder zu kümmern? Warum werden Menschen diskriminiert, die kein heteronormatives Leben führen wollen? Warum dürfen "Ankerzentren" eingerichtet werden? Warum ist überhaupt die Asylrechtspraxis a la Dublin nicht längst gekippt? Warum wird behinderten Menschen die Folgen ihrer Beeinträchtigung immer noch angerechnet? Wieviele übergriffige Polizeibeamt*innen werden auch verurteilt? ... Es gäbe Menschen-/Grundrechte, der Staat tritt sie aber permanent mit Füßen?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807261"><a class="author person" href="/!ku48418/"><h4>Lockenkopf</h4></a><time datetime="2019-06-23T00:03:18+02:00"><meta value="1561240998"></meta>23. 06. 2019, 
+		00:03</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Uranus </span>Die Rechten sagen (plakativ gesagt), ein Land, in dem Homosexuelle heiraten dürfen und in das in einem Jahr mehr als 1 Mio. Flüchtlinge einreisen können, sei kein Rechtsstaat. Sie sagen, ein Land, in dem Homosexuelle lange Zeit nicht heiraten durften und in dem die Dublin-Regeln gelten, sei kein Rechtsstaat. Jetzt könnte man sagen, einer muss recht haben, also sind wir kein Rechtsstaat. Aber das kann offensichtlich nicht richtig sein. Ein Rechtsstaat zeichnet sich durch Gewaltenteilung, Unabhängigkeit der Gericht sowie Bindung an Recht und Gesetz aus. Hierbei kann es natürlich unterschiedliche Auffassungen etwa darüber geben, was das GG zur Homo-Ehe sagt. Lange Zeit sagte die h.M, dass Art. 6 GG der Homo-Ehe entgegensteht. Wer das anders sah, konnte dies beim BVerfG überprüfen lassen. Das macht den Rechtsstaat aus, nicht hingegen, dass Gesetze und Rechtsprechung auch meinen persönlichen Vorstellungen von Gerechtigkeit entsprechen. Stichwort "Legitimation durch Verfahren" -  ich empfehle Luhmann zur weiteren Vertiefung.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3807441"><a class="author person" href="/!ku37716/"><h4>Uranus</h4><img src="/kommune/files/images/profile/70x70/37716.png" alt="" title=""></img></a><time datetime="2019-06-23T17:39:01+02:00"><meta value="1561304341"></meta>23. 06. 2019, 
+		17:39</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lockenkopf </span>"Ein Rechtsstaat zeichnet sich durch Gewaltenteilung, Unabhängigkeit der Gericht sowie Bindung an Recht und Gesetz aus."<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Soweit stimme ich zu.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+"Hierbei kann es natürlich unterschiedliche Auffassungen etwa darüber geben, was das GG zur Homo-Ehe sagt. Lange Zeit sagte die h.M, dass Art. 6 GG der Homo-Ehe entgegensteht. Wer das anders sah, konnte dies beim BVerfG überprüfen lassen."<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Da fängt es an problematisch zu werden. Es gibt eben nicht in-Stein-gemeißelte-Urteile. Das kann durchaus etwas positives haben, wenn im Verlaufe Urteile fallen, die die Verhältnisse in Teilen verbessern. Relevante Punkte wären, dass Urteile ausgelegt werden, die Richter*innen nominiert&amp;gewählt werden usw.. Und das passiert vor dem Hintergrund von ungleichen Gesellschaftsverhältnissen bzw. von u.a. wirtschaftsideologischen Rahmen. Diese spiegelt der Staat wider. Die Aufzählung ließe sich fortführen: Rechtsbeugung durch ausführende Behörden sowie des Gesetzgebers, Klassenjustiz ...<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Vielleicht noch ein Beispiel, was ich sehr prägnant finde: den Behörden des Ihrer Ansicht nach "Rechtsstaates"  ist es seit 2005 (!) erlaubt, das eigens festgesetzte Existenzminimum bis auf 0 (!) zu kürzen, trotz angeblicher Menschen/Grundrechte (Menschenwürde, da war doch was ...) in einem kapitalistischen System, in dem Teilhabe nur über Einkommen funktioniert.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Will sagen, dass ein Rechtsstaat wohl besser ist als eine Diktatur, per se gut aber ganz und gar nicht.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3807254"><a class="author person" href="/!ku22896/"><h4>Rudolf Fissner</h4><img src="/kommune/files/images/profile/70x70/22896.png" alt="" title=""></img></a><time datetime="2019-06-22T23:02:48+02:00"><meta value="1561237368"></meta>22. 06. 2019, 
+		23:02</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Uranus </span>Wofür braucht der Anarchismus Grundrechte und Menschenrechte?<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wenn diese verteildigt werden müssen, serzt dies voraus, dass diese im Anachismus auch verletzt werden können. Anarchismus ist daher auch nur ein leeres Versprechen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></div><span id="ad_bin_uebersicht_medrec_4" class="ad_bin sold contentad"><div id="ad_zone_uebersicht_medrec_4" name="uebersicht_medrec-4" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'uebersicht_medrec_4';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid476383">
+    
+
+<form name="form" method="post" enctype="application/x-www-form-urlencoded" id="send-comment" class="first last odd sect sect_send-comment_form style_commentform " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><h2><a name="jetzt mitreden"><span>jetzt mitreden</span></a></h2></div><div class="sectbody"><input class="constant" type="hidden" name="test" value="yes"></input><input class="constant" type="hidden" name="id" value="5604368"></input><input type="hidden" name="scope" class="constant" id="form_scope" value="cms-article"></input><input type="hidden" name="asid" class="constant" id="form_asid" value=""></input><span class="field"><p class="label">Ihren Kommentar hier eingeben</p><textarea name="post" class="text" id="form_post"></textarea></span><input type="submit" class="submit" name="ignore" value="abschicken"></input></div></form><script> filOtaz_de.Form( 'send-comment' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+	var formN = $('#send-comment');	// who i am
+
+	if( formN[0].filOtaz_de_handled ) return; formN[0].filOtaz_de_handled = true;	// run only once
+
+
+
+	// ajaxify myself
+	filOtaz_de.ajaxifyForm('send-comment', {
+		mirrorInput	: true ,
+		onSuccess	: function( data ){
+			filOtaz_de.kommune.updateLogin();
+//console.log('success handler send-comment '+ $(data).html() );
+//			var message = $(data).find('.message');
+//			alert( message.length ? message.text() : 'OK' );
+			} 
+		});   
+
+
+	if( formN.parents('.wing').length ) {    // we're in wing
+//console.log('send-comment in wing '+ formN.length +', '+ formN.parents('.wing').length +', '+ formN.parents('.float').length );
+
+	var multiUse = function() {
+
+		// === lend ourselfes to reply-function ===
+
+		// shared functions
+		var onScroll, reset;
+
+		// shared data
+		var form, anchor, prior, bros, dad, uncles, yMin;
+
+
+		$('.community.page >.body >.sect_commentlinks').find('>.sectbody >li, .thread >li').each( function(i,el){	// each comment
+
+			// per comment data
+			var refN	= $(el),
+			    toolbarN	= refN.find('>.toolbar'),
+			    id,
+			    onClick
+			    ;
+
+			toolbarN.find('>.reply >a').click( function(){
+				// reply specific
+				onClick({
+					idKey	: 'asid',
+					title	: {
+						prefix	: '',
+						suffix	: ' antworten'
+						},
+					hint	: 'Antwort bitte hier eingeben',
+					submit	: 'antworten'
+					});
+				} );
+			
+			toolbarN.find('>.report >a').click( function(){
+				// report specific
+				onClick({
+					a	: 'report',
+					idKey	: 'pid',
+					title	: {
+						prefix  : 'Kommentar von ',
+						suffix  : ' melden'
+						},
+					hint    : 'Problem bitte hier beschreiben',
+					submit	: 'melden'
+					});
+				} );
+
+			toolbarN.css({ visibility:'visible' });
+
+
+			onClick = function( par ) {
+
+					// determine shared data late
+				if( !form ) {
+					form = {
+						titleN	: formN.find('>.secthead >h2 >a >span'),
+						aN	: formN.find('>.sectbody >input[name="a"]'),
+						idN	: formN.find('>.sectbody >input[name="asid"]'),
+						pidN	: formN.find('>.sectbody >input[name="pid"]'),
+						textN	: formN.find('>.sectbody >span >textarea'),
+						submitN	: formN.find('>.sectbody >input:submit')
+						};
+					form.hintN 	= form.textN.prev('p');
+					form.org = {
+						title	: form.titleN.text(),
+						hint	: form.hintN.text(),
+						a	: form.aN.attr('value'),
+						submit	: form.submitN.attr('value')
+						};
+					}
+
+				// determine per comment data late
+				if( !id )  	id = refN.attr('id').replace(/^[^0-9]*/, '');
+
+
+				// change presented data to our needs
+
+				if( par.a ) {
+					if( !( form.aN  && form.aN.length  ) )  
+						form.aN  = $('<input class="constant" type="hidden" />').insertBefore( form.submitN );
+					form.aN.attr({	name	: 'a',
+							value	: par.a
+							});
+					}
+				else if( form.aN ) {
+					form.aN.remove();
+					form.aN = null;
+					}
+
+				if( par.idKey ) {
+					if( form.idN ) form.idN.remove();
+					form.idN = $('<input class="constant" type="hidden" />')
+						.attr({	name	: par.idKey,
+							value	: id
+							})
+						.insertBefore( form.submitN );
+					}
+				else if( form.idN ) {
+					form.idN.remove();
+					form.idN = null;
+					}
+
+				form.titleN.empty().append( 
+					par.title.prefix, 
+					$('<span>'+ refN.find('>.author >h4').text() +'</span>').addClass( refN.attr('class') ),
+					par.title.suffix
+					);
+
+				form.hintN.text(		par.hint	);
+
+				form.submitN.attr({	value :	par.submit	});
+
+
+				// add reset options
+				(new filOtaz_de.Form( formN )).cancel( function(){ reset();	afterLogin.fadeIn(); });
+				formN.on('filOtaz_de.Form.done',   reset );
+
+				// geometry
+				var	commBot	=   toolbarN.offset().top +   toolbarN.outerHeight(),
+					formBot = form.textN.offset().top + form.textN.outerHeight(),
+					d	= commBot - formBot
+					;
+				if( !yMin ) yMin = formBot - $(window).scrollTop();
+				if( commBot - $(window).scrollTop() < yMin )  window.scrollTo( 0, commBot - yMin );
+
+				// relocate form to stick w/ referenced comment
+				if( !anchor && d >0 ) {
+					prior = formN.prev(), bros = formN.nextAll(), dad = formN.parent(), uncles = dad.filter('.rack').nextAll(), afterLogin = $('form#bb-login').nextAll().not('script');
+					messageN = $('#successMessage');
+					anchor = $('<div class="community wing pin" />')
+						.css({  position: 'absolute',
+							top     : formN.offset().top +'px',
+							left    : dad.offset().left +'px',
+							width   : formN.width() +'px'
+							})
+						.appendTo( document.body )
+						;
+					if( uncles.length ) {   // we're in rack
+						dad.css({  borderBottomStyle: 'none'  });
+						anchor.append( $('<div />').addClass( dad.attr('class') ).append( formN, bros ), uncles );
+						}
+					else	anchor.append( formN, bros );
+					}
+
+				if( anchor ) {
+
+					// fading out "meistkommentiert" when answering
+
+					afterLogin.fadeOut();
+				// refresh for second ... n time "antworten"
+				// commtented out to prevent "neues kommtar" instead of "antworten"
+				//	if (formN.hasClass('worked')){
+				//		  if( form.aN ) form.aN.remove();
+				//		  if( form.idN ) form.idN.remove();
+				//	}
+
+					anchor.animate(
+						{ 
+							top : formN.offset().top + d
+						},
+					function(){
+							$(window).scroll( onScroll );
+							} );
+						}
+
+				}; //onClick
+
+			} ); //each comment
+
+			onScroll = function() {
+				var ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top;
+				// reset clears the whole form, we don't want that onScroll, so we only call relocateForm instead
+				// if( formN.offset().top <= ref )  reset();
+
+				// Do not scroll when already commented and there is success message
+				if (( formN.offset().top <= ref ) && ! (formN.hasClass('worked')))  relocateForm();
+				};
+			reset = function() {
+				if( reset ) 	formN.off('filOtaz_de.Form.done');
+				resetForm();
+				relocateForm();
+				};
+			relocateForm = function() {
+				// clean up
+				if( onScroll )  $(window).off('scroll.taz_onscroll');
+
+				// relocate form back
+				if( anchor ) {
+					var 	ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top,
+						d = anchor.offset().top - ref
+						;
+					anchor.animate({ top: ref }, d, function(){
+						dad.append( formN, bros );
+						if( uncles.length ) {	// we were in rack
+							dad.css({  borderBottomStyle: null  });
+							dad.after( uncles );
+							}
+						if( anchor ) anchor.remove(); anchor = null;
+						} );
+					}
+				};
+			resetForm = function() {
+				// reset shown data
+				if( form.aN      ) form.aN.remove();
+				if( form.idN     ) form.idN.remove();
+//				if( form.cancelN ) form.cancelN.remove();
+				form.titleN.text(		form.org.title	);
+				form.hintN.text(		form.org.hint	);
+				form.textN.attr({	value : ''		}).trigger('blur');
+				form.submitN.attr({	value : form.org.submit	});
+
+				};
+
+		}; // multiUse
+
+
+		if( formN.parents('.float').length ) { 	// already relocated into float
+			multiUse();
+			}
+		else {					// wait for relocation
+
+			formN.parents('.wing').on('filOtaz_de_float_mounted', function(){  multiUse();  });
+			}
+		} //we're in wing
+
+	})(); </script>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><form name="form" method="post" enctype="application/x-www-form-urlencoded" id="bb-login" class="even sect sect_bb-login_form style_kommune " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><ul role="toolbar" class="toolbar"><li class="login"><a href="" target="_blank">Login</a></li><li class="settings"><a href="https://taz.de/kommune/post.php?a=registration" target="_blank">Registrieren</a></li><li class="newpass"><a shape="rect" target="_blank" href="https://portal.taz.de/?a=nopw">Passwort vergessen?</a></li></ul></div><div class="sectbody"><input type="hidden" name="a" class="constant" id="form_a" value="login"></input><span class="field"><p class="label">E-Mail</p><input type="text" name="email" class="line" id="form_email"></input></span><span class="field"><p class="label">Passwort</p><input type="password" name="password" class="secret" id="form_password"></input></span><input type="submit" class="submit" name="ignore" value="einloggen"></input></div></form><script> filOtaz_de.Form( 'bb-login' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+		var formID = 'bb-login';
+		var form = $('#bb-login');
+
+		if( !form.length ) return;
+		if( form[0].filOtaz_de_form_handled ) return; form[0].filOtaz_de_form_handled = true;
+
+		var nodes, org, firstrun = true;
+		if( !filOtaz_de.kommune ) filOtaz_de.kommune = {};
+		if( !filOtaz_de.kommune.updateLogin ) filOtaz_de.kommune.updateLogin = function(){
+			if( !nodes ) nodes = {	// parse DOM lazily
+				head	: form.find('>.secthead'),
+				body	: form.find('>.sectbody').hide(),
+				a	: form.find('input[name="a"]'),
+				inputs	: form.find('span').has('input[name="email"],input[name="password"]'),
+				submit	: form.find('input.submit'),
+				links	: {
+					all		: form.find('ul.toolbar'),
+					login		: form.find('ul>li.login').click(function(){
+								var me = $(this);
+//								nodes.body
+								me.closest('.secthead').nextAll('.sectbody')	// we might be dynamically inserted, so parse DOM here
+								.slideToggle(function(){
+									me.toggleClass('active');
+									});
+								return false;
+								}),
+					settings	: form.find('ul>li.settings'),
+					newpass		: form.find('ul>li.newpass')
+					}
+				};
+			var duration = firstrun ? 0 : $.fx.speeds._default;
+			var tazsid = $.cookie('tazsid');
+			if(! tazsid ){  // not logged in
+					$('#send-comment .submit').val('Einloggen und Senden');
+					};
+
+			if( tazsid ) {	// already logged in
+					$('#send-comment .submit').val('Abschicken');
+
+				// mar: refresh after login error and then successful login
+				if ( $('#bb-login >.sectbody >p.error').length ){
+
+
+					$('.sect_bb-login').fadeOut().remove();
+					$('.sect_bb-login_form').fadeIn();
+					};
+
+
+				var tazid = $.cookie('tazid');
+//console.log('	now logged in as '+ tazid );
+				if( !org ) org = {	// store original values lazily
+					action	: form.attr('action'),
+					a	: nodes.a.attr('value'),
+					submit	: nodes.submit.attr('value'),
+					links	: {
+						login		: nodes.links.login,
+						settings	: {
+							text	: nodes.links.settings.children('a').text()
+							},
+						newpass		: nodes.links.newpass
+						}
+					};
+				form.attr({ action: 'https://taz.de/kommune/post.php?a=logout' });
+//console.log( tazsid );
+
+				nodes.body.slideUp( duration, function(){
+					form.addClass('session');
+					nodes.a.attr({ value: 'logout' });
+					nodes.inputs.hide();
+					nodes.submit.attr({ value: 'ausloggen' });
+					nodes.body.fadeIn( duration/3 );
+					});
+				if( tazid ) var profileURL = '/!ku'+ tazid +'/';
+				nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.login    )  nodes.links.login.detach();
+					if( profileURL ) {
+						if( !nodes.links.profile ) {
+							nodes.links.profile = $('<li><a href="'+ profileURL +'">mein Profil</a></li>');
+							nodes.links.settings.before( nodes.links.profile );
+							}
+						}
+					if( nodes.links.settings )  nodes.links.settings.children('a').text('Einstellungen');
+					if( nodes.links.newpass  )  nodes.links.newpass.detach();
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+				if( profileURL ) {	// tell user their name
+					if( !nodes.salute ) {
+						nodes.salute = $();
+//console.log('go, get profile '+ profileURL );
+						$.ajax({
+							type		: 'GET',
+							url		: profileURL +'c.xml', 
+							dataType	: 'xml',
+							success		: function( data, status, xhr ){
+								if( !nodes.salute ) return;	// we're too late
+								var name = $('content >item[type="person"] >name', data ).text();
+//console.log('	found '+ name );
+								nodes.salute = $('<h2><a>'+ name +'</a></h2>').hide().prependTo( nodes.head );
+								nodes.salute.slideDown( duration );
+								},
+							error		: function( req, status, message ){
+//console.log( req.status +' '+ status +' :: '+ message );
+								},
+							complete	: function( req, status ){
+								}
+							});
+						}
+					}
+				} //tazsid
+			else if( org )	(function(){	// reset logged out state
+				var orgwas = org; org = null;
+				nodes.body.fadeOut( duration/2, function(){
+					nodes.a.attr({		value	: orgwas.a		});
+					nodes.inputs.show();
+					nodes.submit.attr({	value	: orgwas.submit	});
+					form.removeClass('session');
+					}); 
+				if( nodes.salute )  nodes.salute.slideUp( duration, function(){
+					nodes.salute.remove(); nodes.salute = null;
+					});
+				if( nodes.links.all ) nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.profile ) nodes.links.profile.remove(); nodes.links.profile = null;
+					nodes.links.settings.before( orgwas.links.login.removeClass('active') );
+					nodes.links.settings.children('a').text( orgwas.links.settings.text );
+					nodes.links.settings.after(  orgwas.links.newpass );
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+
+				form.attr({		action	: orgwas.action	});
+				})();
+			firstrun = false;
+			};
+		filOtaz_de.kommune.updateLogin();
+
+		var message = filOtaz_de.ajaxifyForm('bb-login', { handle200 : filOtaz_de.kommune.updateLogin } );
+
+		if( message && message.length )	// secure ajax not supported
+			form.after( message );
+
+		})();
+	</script><div class="rack" id="xid524032">
+    
+
+<div role="region" id="" class="first last odd sect sect_shop style_shop "><div class="secthead" role="heading"><h2><a name="meistkommentiert"><span>meistkommentiert</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class=" first odd trodd   "><a href="/Corona-Politiker-Karl-Lauterbach-im-Portraet/!5727184/" class="objlink noavatar" role="link"><h4>Corona-Politiker Karl Lauterbach im Porträt</h4><h3>Viel Pfeffer, kein Salz</h3></a></li><li class=" even trodd   "><a href="/Ethikraetin-Graumann-zu-Massnahmen/!5726067/" class="objlink noavatar" role="link"><h4>Ethikrätin Graumann zu Maßnahmen</h4><h3>„Furcht vor dem Kontrollverlust“</h3></a></li><li class=" odd treven   "><a href="/Gruene-und-Grundeinkommen/!5730367/" class="objlink noavatar" role="link"><h4>Grüne und Grundeinkommen</h4><h3>Im Grundsatz bedingungslos</h3></a></li><li class=" even trodd   "><a href="/Pro-und-Contra-Homeschooling-in-Berlin/!5727153/" class="objlink noavatar" role="link"><h4>Pro und Contra Homeschooling in Berlin</h4><h3>Schickt die Kinder nach Hause!</h3></a></li><li class=" last odd trodd   "><a href="/Aserbaidschan-zerstoert-armenische-Kultur/!5730239/" class="objlink noavatar" role="link"><h4>Aserbaidschan zerstört armenische Kultur</h4><h3>Abschied vom Kloster Dadiwank</h3></a></li></ul></div>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Kirchenasyl-in-der-Krise/!5604368"></a></div><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a><ul><li class="first odd trodd"><a href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span>Deutschland</span></a></li><li class="even trodd"><a href="/Politik/Europa/!p4617/" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="/Politik/Amerika/!p4618/" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="/Politik/Afrika/!p4621/" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="/Politik/Asien/!p4619/" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="/Politik/Nahost/!p4620/" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="/Politik/Netzpolitik/!p4622/" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a><ul><li class="first odd trodd"><a href="/Oeko/Oekonomie/!p4623/" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="/Oeko/Oekologie/!p4624/" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="/Oeko/Arbeit/!p4629/" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="/Oeko/Konsum/!p4625/" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="/Oeko/Verkehr/!p4628/" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven"><a href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span>Wissenschaft</span></a></li><li class="last odd trodd"><a href="/Oeko/Netzoekonomie/!p4627/" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Gesellschaft/!p4611/" id="menu_p4611"><span itemprop="title">Gesellschaft</span></a><ul><li class="first odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span itemprop="title">Alltag</span></a></li><li class="even trodd"><a href="/Gesellschaft/Debatte/!p4633/" id="menu_p4633"><span>Debatte</span></a></li><li class="odd treven"><a href="https://gazete.taz.de/" target="_blank" id="menu_p5057"><span>taz.gazete</span></a></li><li class="even trodd"><a href="https://migration-control.taz.de/#de" target="_blank" id="menu_p5058"><span>migration control</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Kolumnen/!p4634/" id="menu_p4634"><span>Kolumnen</span></a></li><li class="even treven"><a href="/Gesellschaft/Medien/!p4630/" id="menu_p4630"><span>Medien</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Bildung/!p4635/" id="menu_p4635"><span>Bildung</span></a></li><li class="even trodd"><a href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span>Gesundheit</span></a></li><li class="last odd treven"><a href="/Gesellschaft/Reise/!p4638/" id="menu_p4638"><span>Reise</span></a></li></ul></li><li class="even trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="/Kultur/Musik/!p4640/" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="/Kultur/Film/!p4641/" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="/Kultur/Kuenste/!p4642/" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="/Kultur/Buch/!p4643/" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="/Kultur/Netzkultur/!p4631/" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="/Sport/Fussball/!p4647/" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="/Sport/Kolumnen/!p4648/" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="/Nord/Hamburg/!p4651/" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="/Nord/Bremen/!p4652/" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="/Nord/Kultur/!p4653/" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="/bei-Tom/!t5180734/" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="/ueber-die-Wahrheit/!115080/" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="/!p4209/#matomo:pk_campaign" id="menu_p5320"><span>Abo</span></a></li><li class="even trodd"><a href="https://taz.de/!p4271/#matomo:pk_campaign" id="menu_p5321"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="even treven"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even trodd"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="odd treven"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="even trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="odd trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="even treven"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd treven"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even treven"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="https://taz.de/!112354/" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="https://taz.de/!p5097/" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="https://taz.de/!114802/" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="https://taz.de/!114191/" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="https://taz.de/!166598/" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4283/" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="https://taz.de/!p4858/" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="https://taz.de/!112355/" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div></body><!-- DEBUG end 20:42:06+01:00--></html>

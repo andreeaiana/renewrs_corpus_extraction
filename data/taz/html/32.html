@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 20:44:18+01:00 page_id=4616 :: Deutschland--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 4616--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>Geflüchtete an EU-Außengrenze: „Ich schäme mich für Europa“ - taz.de</title><meta name="author" content="Ulrich Schulte"></meta><meta name="description" content="Der grüne Europaabgeordnete Erik Marquardt ist auf der griechischen Insel Lesbos, wo Geflüchtete ankommen. Er schildert dramatische Szenen."></meta><meta name="keywords" content="EU-Flüchtlingspolitik, Flüchtlingspolitik, Lesbos, Erdogan, Deutschland, Politik, taz, tageszeitung "></meta><meta name="taz:title" data-id="5668063" content="Geflüchtete an EU-Außengrenze: „Ich schäme mich für Europa“"></meta><meta name="taz:tag" content="EU-Flüchtlingspolitik" data-tag-id="5035223"></meta><meta name="taz:tag" content="Flüchtlingspolitik" data-tag-id="5008069"></meta><meta name="taz:tag" content="Lesbos" data-tag-id="5248797"></meta><meta name="taz:tag" content="Erdogan" data-tag-id="5008141"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta><meta property="og:url" content="https://taz.de/!5668063/"></meta><meta property="og:locale" content="de_DE"></meta><meta property="og:type" content="article"></meta><meta name="twitter:card" content="summary_large_image"></meta><meta name="twitter:site" content="@tazgezwitscher"></meta><meta property="og:title" content="Geflüchtete an EU-Außengrenze: „Ich schäme mich für Europa“"></meta><meta property="fb:app_id" content="966242223397117"></meta><meta name="twitter:title" content="Geflüchtete an EU-Außengrenze: „Ich schäme mich für Europa“"></meta><meta property="og:description" content="Der grüne Europaabgeordnete Erik Marquardt ist auf der griechischen Insel Lesbos, wo Geflüchtete ankommen. Er schildert dramatische Szenen."></meta><meta name="twitter:description" content=" Der grüne Europaabgeordnete Erik Marquardt ist auf der griechischen Insel Lesbos, wo Geflüchtete ankommen. Er schildert dramatische Szenen."></meta><meta property="og:image" content="https://taz.de/picture/4003678/948/24883123-1.jpeg"></meta><meta name="twitter:image" content="https://taz.de/picture/4003678/948/24883123-1.jpeg"></meta><meta property="article:published_time" content="2020-03-01T17:02:00+01:00"></meta><meta property="article:modified_time" content="2020-03-02T08:53:40+01:00"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"5668063" // String
+            , page_title_enc      :"5668063: Geflüchtete an EU-Außengrenze: „Ich schäme mich für Europa“" // String
+            , custom_url_enc      :"/!5668063" // String
+            , channel             :"web" // String
+            , area                :"Redaktion" // String
+            , department          :"p4616" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : false  // Boolean
+            , is_article          : true  // Boolean
+            , has_tags            : true  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "https://taz.de/lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<link rel="preload" href="/lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff" as="font" type="font/woff" crossorigin="anonymous"></link><link rel="preload" href="/lib/ch/web/pix/tazze46.png" as="image" media="(min-width: 49px)"></link><link rel="canonical" href="https://taz.de/Gefluechtete-an-EU-Aussengrenze/!5668063/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Deutschland" href="/!p4616/rss.xml"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="/rss.xml"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="/"></link><link rel="copyright" type="text/html" title="Impressum" href="/6/impressum/"></link><link rel="stylesheet" type="text/css" media="screen, print" href="/lib/ch/web/css/news2020-10-20_55.css"></link><link href="/lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 6]> <link rel="stylesheet" type="text/css" href="/lib/style/ie6.css"> <![endif]--><!--[if lte IE 7]><style type="text/css">
+			ul.topbar                      >li      >a>span,
+			.secthead>ul[role='navigation']>li      >a>span	{  border-left: 1px solid; padding: 0px 4px;  }
+			ul.topbar                      >li.first>a>span,
+			.secthead>ul[role='navigation']>li.first>a>span	{  border:none; padding-left:0px;  }
+			ul.topbar                      >li      >a>span  {  border-color:white;    }
+			.secthead>ul[role='navigation']>li      >a>span  {  border-color:#888888;  }
+			.box h2 {  line-height:20px;  }
+			.author  {	display:inline;	float:none;	}
+			.sect_spb .sectbody {	padding-top:8px;	}
+			/* fil 2011-04-08 */
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward >ul.toolbar  {  height:28px;  }
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward ul.toolbar >li  {  float: left !important;  }
+			#reward >div  {  clear:both;  }
+			.sect_article >.sectfoot ul.toolbar  {  position:relative !important; top:0px; left:0px; height:24px;  }
+			#micropay ul.toolbar  {  height:52px;  }
+			.sect_article >.sectfoot {  padding-bottom:30px  }
+		</style><![endif]--><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="/uploads/cmp/yieldlove_cmp.js"></script><script type="text/javascript" src="/uploads/cmp/yieldlove.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="/lib/ch/web/js/2020-10-20_55.js"></script><script type="text/javascript"> if( filOtaz_de && filOtaz_de.goMobile )  filOtaz_de.goMobile(); </script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"5668063" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/Politik/Deutschland" // String
+            , is_article      : true  // Boolean
+            , is_corp         : false  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            // 2. check for not closing overlay
+            if ( $("#tzi-paywahl-fg").length && "MutationObserver" in window ){
+                p.trackEvent( 'TZI', 'displayed', 'LAYER_SHOWN_OBSERVE_TEST');    
+                var paywahl = document.getElementById('tzi-paywahl-fg');
+                var observer = new MutationObserver(function(mutations) {
+                  p.trackEvent( 'TZI', 'displayed', 'LAYER_CLOSED_OBSERVE_TEST');    
+                  observer.disconnect();
+                });
+                observer.observe(paywahl, { 
+                    attributes: true, 
+                    attributeFilter: ['style'] 
+                });
+            }
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        // mar: reactivated for tracking of special menu
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+*/
+
+            $(document).on("click", ".longread.article .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL-LONGREAD' ) });
+	        $(document).on("click", ".longread.article .sect_mostread a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'MEISTGELESEN-LONGREAD' ) });
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page:not(.longread) .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page:not(.longread) ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page:not(.longread) .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" src="https://script.ioam.de/iam.js"></script><script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript">
+		// Google Publisher Tag - https://developers.google.com/doubleclick-gpt/reference
+		var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; 
+	(function(){
+		var adArea = 'Politik';	//
+		googletag.cmd.push( function() {
+			var pa = googletag.pubads();
+			pa.setForceSafeFrame(true);
+			pa.collapseEmptyDivs();
+			pa.setTargeting('position', [ adArea ]);
+      //pa.setTargeting('test', ['fireplace']); //       * * * test only ! * * *
+      //pa.setTargeting('test', ['wallpaper']);   //       * * * test only ! * * *
+      pa.setTargeting('page_id', ['5668063']);
+			if( location.protocol =='https' )
+				pa.setTargeting('ssl', ['ja']);
+			googletag.enableServices();
+			});
+		})();
+	</script><script>
+		// expect jQuery already to be loaded
+	(function() {
+		if( !window.filOtaz_de )		window.filOtaz_de		= Object;
+		if( !window.filOtaz_de.ads )		window.filOtaz_de.ads		= Object;
+		if( !window.filOtaz_de.ads.gpt )	window.filOtaz_de.ads.gpt	= Object;
+
+        var sizes = {
+             'artikel_medrec-1'    :[300,250]
+            ,'artikel_medrec-2'    :[300,250]
+            ,'artikel_medrec_mitte' :[300,250]
+            ,'ros_sidebar-1'       :[300,250]
+            ,'ros_sidebar-2'       :[300,100]
+            ,'uebersicht_medrec-1' :[300,250]
+            ,'uebersicht_medrec-2' :[300,250]
+            ,'uebersicht_medrec-3' :[300,250]
+            ,'uebersicht_medrec-4' :[300,250]
+            ,'uebersicht_medrec-5' :[300,250]
+            ,'uebersicht_board-1'  :[624,150]
+            ,'ros_billboard-1'     :[870,250]
+            ,'mobile_banner-1'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-2'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-3'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-4'     :[[300,250],[320,50],[320,100]]
+            ,'ros_top-links'       :[[120,600],[160,600],[300,600]]
+            ,'ros_top-mitte'       :[[728,90],[800,250],[870,250],[970,90],[970,250]]
+            ,'ros_top-rechts'      :[[120,600],[160,600],[300,600]]
+            ,'ros_leaderboard-1'   :[728,90]
+            ,'fireplace-mitte'     :[[970,90],[728,90]]
+            ,'fireplace-links'     :[160,601]
+            ,'fireplace-rechts'    :[160,600]
+            ,'fireplace_bg'        :[1,1]
+            };
+        var roadblocks = {};
+  
+  
+      roadblocks = {
+         'ros_top-mitte'   :['fireplace_mitte']
+        ,'ros_top-rechts'  :['fireplace_mitte'] 
+      };
+    
+    
+		// general ad handling
+
+		// --> to be triggered for ad_zone if ad is (to be) delivered
+		filOtaz_de.ads.fitIn = function( container ) {	// make space for ad in layout
+			var container = $( container );
+//console.log('fit '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.addClass('shown');
+			container.addClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').addClass('aded_'+( container.height() >120 ?'big' :'small' ) );
+				var badge = container.hasClass('ad_zone_sold') ? 'Anzeige' : 'taz-Angebot';
+				container.before('<div class="ad_badge">'+ badge +'</div>');
+				}
+			container.trigger('TAZadInserted').trigger('TAZboxChange');
+			};
+
+		// --> to be triggered for ad_zone if no ad is (to be) delivered
+		// redundant?
+		filOtaz_de.ads.reclaim = function( container ) {	// remove whitespace from non-delivered ad
+			var container = $( container );
+//console.log('reclaim '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.removeClass('shown');
+			container.removeClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').removeClass('aded_big aded_small');
+				}
+			container.trigger('TAZadRemoved').trigger('TAZboxChange');
+			};
+    
+    
+
+		var fuzeAdFrame = function( frame ) {	// register frame for messages, fire if one is from our content
+console.log('legacy fuzeAdFrame', frame  );
+			};
+    
+    
+    // Hintergrund per Message
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+    window[eventMethod](messageEvent, function(e) {
+      if (e.data.toString().indexOf("color") != -1) {
+        $("#background").css("background-color", e.data.split(" ")[1]);
+        }
+      }, false);
+    
+    
+		// activate ad frame
+		var adZoneHandled = {};
+    
+    var get_id = function( name ) {
+      return $('div[name=' + name + ']').attr('id');
+      };
+    
+    var get_name = function( id ) {
+      return $('#'+ id ).attr('name');
+      };
+    
+    unblock = function( id, rb_id ) {
+      var name = get_name(id);
+      var index = roadblocks[name].indexOf(rb_id);
+      if ( index > -1 ) {
+        roadblocks[name].splice(index, 1);
+        }
+      if ( !roadblocks[name].length ) {
+        googletag.defineSlot( '/118803185/' + name, sizes[name], id ).addService( googletag.pubads() );
+        googletag.display( id );
+        }
+      };
+    
+    filOtaz_de.ads.gpt.activateAdFrame = function( id ) {  
+			if( !id ) return;
+			if( adZoneHandled[id] ) return; adZoneHandled[id] = true; // only one active zone per id
+ 
+			var packing   = $('#ad_bin_'+ id );
+			id = 'ad_zone_'+ id;
+			var container = packing.find('>#'+ id );
+  
+			var name = container.attr('name');
+			if( !name || !sizes[name] ) return;
+   
+			// handle custom ad load events
+			container.on('filOtaz_de.ads.gpt.noBanner',   function(){  return false;  });
+			container.on('filOtaz_de.ads.gpt.preBanner',  function(){
+				filOtaz_de.ads.fitIn( container );
+				return false;
+				});
+			container.on('filOtaz_de.ads.gpt.postBanner', function(){  return false;  });
+
+
+			// define content
+			googletag.cmd.push( function() {
+				var pa = googletag.pubads();
+        if ( roadblocks[name] ) {
+          pa.addEventListener('slotRenderEnded', function (e) {
+            for (var i=0; i<roadblocks[name].length; i++) {
+              if ( e.slot.getSlotElementId() == 'ad_zone_' + roadblocks[name][i] ) {
+
+		    if ( e.isEmpty ) {
+                  unblock(id, roadblocks[name][i]);
+                  }
+                else {
+                  document.getElementById(id).style.display = 'none';
+                  for (var key in roadblocks) {
+                    if ( !roadblocks.hasOwnProperty(key) ) continue;
+                    for ( var j=0; j<roadblocks[key].length; j++ )
+                    if ( id == 'ad_zone_' + roadblocks[key][j] ) {
+                      unblock(get_id(key), roadblocks[key][j]);
+                      break;
+                      }
+                    }
+                  }
+                }
+              }
+			    }); // pa.addEventListener
+			    //	    console.log('roadblocks' + id);
+          googletag.display(id);
+          }
+        else {
+          pa.display( '/118803185/'+ name, sizes[name], id );
+	// console.log( 'asked for', '/118803185/'+ name, sizes[name], id );
+          }
+				pa.addEventListener('slotRenderEnded', function(e) {
+			    if( e.slot.getSlotElementId() != id )  return;	// not our slot
+			    container.trigger( e.isEmpty ? 'filOtaz_de.ads.gpt.noBanner' : 'filOtaz_de.ads.gpt.preBanner' );
+console.log( name +( e.isEmpty ? ' isEmpty' : '' ) );
+					});
+        });
+      }; //filOtaz_de.ads.gpt.activateAdFrame
+
+		// activate wallpaper combo add frame
+/*
+		filOtaz_de.ads.gpt.wallpaper = function() {
+			console.log('filOtaz_de.ads.gpt.wallpaper not yet supported');
+			};
+*/
+
+		})();
+	</script><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link><link rel="manifest" href="/manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body><noscript><img src="https://taz.de/stats/piwik.php?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Redaktion/Politik/Deutschland,Artikel",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><span id="ad_bin_fireplace_bg" class="ad_bin"><div id="ad_zone_fireplace_bg" name="fireplace_bg" class="ad_zone"></div></span><span id="ad_bin_fireplace_mitte" class="ad_bin"><div id="ad_zone_fireplace_mitte" name="fireplace-mitte" class="ad_zone"></div></span><span id="ad_bin_fireplace_links" class="ad_bin"><div id="ad_zone_fireplace_links" name="fireplace-links" class="ad_zone"></div></span><span id="ad_bin_fireplace_rechts" class="ad_bin"><div id="ad_zone_fireplace_rechts" name="fireplace-rechts" class="ad_zone"></div></span><span id="ad_bin_fireplace_script" class="ad_bin"><div id="ad_zone_fireplace_script" name="fireplace-script" class="ad_zone"></div></span><script type="text/javascript">
+(function(){
+  var parent = $('#ad_bin_fireplace_rechts').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_rechts');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_bg').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_bg');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_mitte').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_mitte');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_links').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_links');
+  })(); 
+              </script><div id="adzone_wall" class=""><span id="ad_bin_ros_top_rechts" class="ad_bin"><div id="ad_zone_ros_top_rechts" name="ros_top-rechts" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_rechts';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><span id="ad_bin_ros_top_mitte" class="ad_bin"><div id="ad_zone_ros_top_mitte" name="ros_top-mitte" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></div><div id="pages" class="news"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="/!p4209/#matomo:pk_campaign" id="menu_p5320"><span>Abo</span></a></li><li class="even trodd"><a href="https://taz.de/!p4271/#matomo:pk_campaign" id="menu_p5321"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="even treven"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even trodd"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="odd treven"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="even trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="odd trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="even treven"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd treven"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even treven"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul><div class="full news interview article page first odd first_page n1" itemscope="" itemtype="http://schema.org/NewsArticle"><div class="head" role="head"><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="even trodd selected"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="odd treven"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a></li><li class="even trodd"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="odd trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a></li><li class="even treven"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a></li><li class="odd trodd"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a></li><li class="even trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a></li><li class="last odd treven"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><span class="body" role="main"><div class="main rack first_rack" id="xid819017">
+    
+	<div xmlns="" class="metadata" itemscope="">
+<a id="articleURL" href="/!5668063"></a><a id="speakingURL" href="/Gefluechtete-an-EU-Aussengrenze/!5668063"></a><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-article-ID" content="5668063"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="url-ID" content="5668063"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-obj-ID" content="4003678"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="vgwort-counter-ID" content="8999f1f45b0e421cb0681fb310d62ac7"></meta><span id="articleID"></span><span id="cmsArticleID">5668063</span><img src="//taz.met.vgwort.de/na/8999f1f45b0e421cb0681fb310d62ac7" width="1" height="1" alt=""><img src="/count/vgwort/8999f1f45b0e421cb0681fb310d62ac7.gif" width="1" height="1" alt="">
+</div>
+<div role="region" id="" class="odd sect sect_article news interview"><article class="sectbody" itemprop="articleBody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Geflüchtete an EU-Außengrenze</span><span class="hide">: </span><span>„Ich schäme mich für Europa“</span>
+</h1>
+<p xmlns="" itemprop="description" class="intro ">Der grüne Europaabgeordnete Erik Marquardt ist auf der griechischen Insel Lesbos, wo Geflüchtete ankommen. Er schildert dramatische Szenen.</p>
+      
+      <a xmlns="" class="full picture" href="/picture/4003678/948/24883123-1.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	" itemprop="image"><img src="/picture/4003678/624/24883123-1.jpeg" alt="Menschen auf einem völlig überfüllten Schlauchboot" title="Menschen auf einem völlig überfüllten Schlauchboot"></a><p xmlns="" class="caption">Die griechische Küstenwache eskortiert ein Flüchtlingsboot vor Lesbos <span class="credit"> Foto: AP</span></p>
+    
+      <p xmlns="" class="article first odd">
+        <strong>taz: Herr Marquardt, Sie sind auf Lesbos, der griechischen Insel, auf der im Moment Geflüchtete aus der Türkei ankommen. Warum sind Sie dort?</strong>
+      </p>
+      <p xmlns="" class="article even"><strong>Erik Marquardt:</strong> Ich bin seit Dienstag hier und wollte mir ursprünglich die Zustände in dem Flüchtlingslager Moria ansehen. Eigentlich ist das Camp für 3.000 Geflüchtete ausgelegt, aber aktuell leben hier 20.000 Leute – davon rund 7.000 Kinder.</p>
+      <p xmlns="" class="article odd">
+        <strong>Wie ist die Situation in Moria?</strong>
+      </p>
+      <p xmlns="" class="article even">Fürchterlich. Alles ist voller Dreck und Schlamm, die hygienischen Zustände sind eine Katastrophe. Kinder spielen zwischen Müllbergen. Nachts wird es empfindlich kalt, die Menschen schlafen in unbeheizten Zelten und haben keine ausreichende medizinische Versorgung. Europa duldet ein Camp, das weit unter europäischen Standards liegt.</p>
+      
+      <span id="ad_bin_artikel_medrec_1" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_1" name="artikel_medrec-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">
+        <strong>Der türkische Präsident Erdoğan schickt seit Samstag Geflüchtete aus der Türkei an die europäische Grenze. Wie wirkt sich das auf Lesbos aus?</strong>
+      </p>
+      <p xmlns="" class="article even">Die Küste von Lesbos ist nur rund zehn Kilometer von der türkischen Küste entfernt – hier sind immer wieder Schlauchboote mit Geflüchteten angekommen. Am Samstag war das Wetter zu schlecht für Überfahrten. Aber heute, am Sonntag, sind viele Boote angekommen. 30 bis 50 Leute sitzen darin dicht gedrängt, viele haben keine Rettungswesten.</p>
+      <p xmlns="" class="article odd">
+        <strong>Können sie problemlos an Land gehen?</strong>
+      </p>
+      
+      <span id="ad_bin_artikel_medrec_mitte" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_mitte" name="artikel_medrec_mitte" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article even">Nein. Bei einem Boot war offenbar der Motor ausgefallen, es trieb am Sonntagvormittag in Sichtweite vor der Küste von Lesbos, nicht mehr navigierbar. Die griechische Küstenwache unternahm nichts, obwohl die Menschen darauf in Lebensgefahr schwebten. Ich rief daraufhin die Seenotrettungsleitstelle an.</p>
+      <p xmlns="" class="article odd">
+        <strong>Wie reagierte die Leitstelle?</strong>
+      </p>
+      <p xmlns="" class="article even">Anfangs mit Ausflüchten. Die logen das Blaue vom Himmel herunter. Ein Beamter sagte, das Boot treibe nicht in griechischen, sondern in türkischen Gewässern. Das war aber offensichtlicher Unsinn. Dann hieß es, das Boot müsse den Notruf selbst absetzen. Aber auch das ist falsch. Ich beschäftige mich seit Jahren mit Flüchtlingspolitik und kenne mich aus. Mit einem Mayday Relay kann man einen Notruf für ein anderes Schiff weiterleiten.</p>
+      
+      <span id="ad_bin_artikel_medrec_2" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_2" name="artikel_medrec-2" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_2';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">
+        <strong>Wie ging diese dramatische Geschichte aus?</strong>
+      </p>
+      <p xmlns="" class="article even">Nachdem ich mehrfach telefoniert und Bilder von meinem Smartphone geschickt habe, schleppte die Küstenwache das Boot schließlich in einen Hafen. Dort hinderte die lokale Bevölkerung die Geflüchteten zunächst daran, auszusteigen. Auch die Eltern mit Kindern. Die MitarbeiterInnen der Küstenwache schauten wieder tatenlos zu.</p>
+      <p xmlns="" class="article odd">
+        <strong>Wie ist die Stimmung in der lokalen Bevölkerung?</strong>
+      </p>
+      <p xmlns="" class="article even">Die Stimmung ist hier sehr gereizt. Gruppen junger Männer ziehen umher. Sie haben sich vermummt und bedrohen JournalistInnen oder MitarbeiterInnen von Hilfsorganisationen. Auch ich wurde beschimpft und angerempelt. Ein Freund von mir, der als freier Journalist arbeitet, wurde am Sonntag krankenhausreif geschlagen. Ich verstehe den Unmut der Bevölkerung, die Inseln werden seit Jahren im Stich gelassen. Aber das ist natürlich keine Legitimation für Gewalt. Eigentlich sollte die lokale Bevölkerung zusammen mit den Geflüchteten gegen die Zustände demonstrieren.</p>
+      <p xmlns="" class="article odd">
+        <strong>Warum hilft die Küstenwache nicht engagiert? Sie ist nach internationalem Recht zur Hilfeleistung verpflichtet.</strong>
+      </p>
+      <p xmlns="" class="article even">Ich kann mir vorstellen, dass es politischen Druck gibt, nicht zu helfen.</p>
+      <p xmlns="" class="article odd">
+        <strong>Haben Sie für diese Behauptung einen Beleg?</strong>
+      </p>
+      <p xmlns="" class="article even">Die griechische Regierung hat angekündigt, dutzende Kriegsschiffe in die hiesigen Gewässer zu entsenden – einige habe ich auch schon gesehen. Militär bringt eigentlich nichts, wenn man Geflüchtete abwehren will. Sobald Flüchtlingsboote in griechischen Gewässern sind, müssten ihnen ja auch die Kriegsschiffe helfen, ob sie es nun wollen oder nicht. Ich kann mir das nur so erklären, dass es um Drohgebärden geht, die einen politischen Willen ausdrücken.</p>
+      <div xmlns="" class="article rack no18">
+<div xmlns="http://www.w3.org/1999/xhtml" role="region" id="xid5668064" class="odd sect sect_profile big "><div class="secthead" role="heading"><h2><a name="im Interview:"><span>im Interview:</span></a></h2></div><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="big 
+          
+          
+          
+          
+          
+          
+          
+        person objlink"><h4 itemprop="name">Erik Marquardt</h4></a></div></div><div xmlns="http://www.w3.org/1999/xhtml" role="region" id="xid5668064" class="odd sect sect_profile-descr "><div class="sectbody"><!--1--><p xmlns="" class="bodytext" pos="0">ist Europaabgeordneter der Grünen und Fotograf. Der 32-Jährige beschäftigt sich seit Jahren mit europäischer Flüchtlingspolitik und reist immer wieder an die Außengrenze der EU.</p></div></div>
+</div>
+      <p xmlns="" class="article odd">
+        <strong>Wie geht es Ihnen mit Ihren Beobachtungen?</strong>
+      </p>
+      <p xmlns="" class="article even">Ich schäme mich für Europa. Hier kommen erschöpfte Hilfsbedürftige an, und die Menschen rufen ihnen zu: Fahrt zurück in die Türkei! So etwas dürfen wir nicht hinnehmen.</p>
+      <p xmlns="" class="article odd">
+        <strong>Was muss politisch passieren?</strong>
+      </p>
+      <p xmlns="" class="article last even">Erdoğan versucht die EU zu erpressen. Darauf muss es eine gemeinsame, europäische Antwort geben. Ganz wichtig wäre, schnell humanitäre Hilfe zu leisten. Die Geflüchteten an der türkisch-griechischen Landgrenze brauchen Unterstützung. Außerdem wäre es sinnvoll, Geflüchtete von den griechischen Inseln zu evakuieren und ihre Asylverfahren anderswo zu entscheiden. Sonst kann die Lage hier eskalieren.</p>
+    </article></div>
+
+    
+  
+
+    
+  <div role="region" id="" class="odd sect "><div class="sectbody"><a xmlns="" id="reward" shape="rect">Einmal zahlen</a><script> filOtaz_de.flattr();</script></div></div>
+
+    
+	<div class="shariff">.</div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171640/" ratioURL-ressource="171640" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Unser täglich Wort gib uns heute</span>
+</h1>
+  		<p xmlns="" class="article first odd">Alle Artikel auf taz.de sind frei zugänglich. Tag für Tag und Monat für Monat stellen wir unsere Arbeit der Öffentlichkeit frei zur Verfügung. Wir machen das aus Überzeugung, denn es braucht kritischen Journalismus im Netz. Aber natürlich brauchen auch wir dafür Geld – und appellieren deshalb an Sie, unsere Leser*innen:     
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt </strong><strong><strong>die taz </strong>mit Ihrem Beitrag</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171330/" ratioURL-ressource="171330" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Geld erhält die Lesbarkeit.</span>
+</h1>
+  		<p xmlns="" class="article first odd">taz.de ist frei zugänglich – ohne Paywall. Aber das geht nur, wenn sich unsere Leser*innen an dieser Idee beteiligen.   
+</p>
+  		<p xmlns="" class="article even"><strong>Deshalb unsere Bitte: Ermöglichen Sie den taz-Journalismus mit Ihrem Beitrag.</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171291/" ratioURL-ressource="171291" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Fast 25.000 mal Danke. Und eine große Bitte.</span>
+</h1>
+  		<p xmlns="" class="article first odd">taz.de ist frei zugänglich – ohne Paywall. Aber das geht nur, wenn sich unsere Leser*innen an dieser Idee beteiligen.      
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie die taz mit einem Beitrag </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!170949/" ratioURL-ressource="170949" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines-2020</span><span class="hide">: </span><span>Seien Sie auf unserer Seite.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Als unabhängiges Medium sind wir auf die Unterstützung unserer Leser*innen angewiesen. Nur mit einer großen Zahl von Freiwilligen kann es gelingen, die taz in digitalen Zeiten zu finanzieren und unsere Arbeit zu erhalten.   
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie uns jetzt mit Ihrem Beitrag</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script type="text/javascript" xml:space="preserve">
+          (function () {
+            patOtaz_de.layer_tzi_paywahl({'campaign': '2019-5-27' });
+          })();
+        </script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Normal/!155790/" ratioURL-ressource="155790" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Normal</span><span class="hide">: </span><span>Freier Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Das Bedürfnis nach vertrauenswürdiger Information ist derzeit sehr hoch, viele blicken und klicken in diesen unsicheren Zeiten auf die Berichterstattung der taz. Während der vergangenen Wochen ist klar geworden, wie wichtig freier Journalismus ist. In Krisenzeiten ist es „systemrelevant”, dass Menschen sich unabhängig informieren können. Ohne Paywall. Wir finden es wichtig, dass uns möglichst viele Menschen lesen – auch jene, die sich kein Abo leisten können. Doch dazu brauchen wir Ihre Hilfe.    
+</p>
+  		<p xmlns="" class="article even">Guter, kritischer Journalismus ist nicht kostenlos zu haben und braucht Finanzierung. Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Im Gegenzug wird sie freiwillig und solidarisch unterstützt. Von unseren Leser*innen, von Ihnen. Mit Ihrer Wertschätzung und Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit, ein Forum für Meinungsvielfalt, eine engagierte Stimme für Minderheiten. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Seien Sie mit uns taz.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Klima/!155427/" ratioURL-ressource="155427" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Klima</span><span class="hide">: </span><span>Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wir berichten seit 1978 über die Zerstörung unseres Planeten – weil wir daran glauben, dass eine bessere Welt möglich ist. Klima- und Umweltberichterstattung haben in der taz schon immer einen großen Raum eingenommen, aber zur Zeit gehen wir noch einmal in die Offensive. Die taz berichtet noch intensiver über die drohende Klimakatastrophe – auf allen Kanälen. Um dies leisten zu können, sind wir auf die Unterstützung unserer Leser*innen angewiesen. Denn guter Journalismus ist aufwändig und nicht kostenlos zu haben.   
+</p>
+  		<p xmlns="" class="article even">Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Unsere Artikel sollen so viel wie möglich gelesen, geliked und geteilt werden. Nur so können sie die ökologisch notwendigen Veränderungen unserer Gesellschaft vorantreiben. Im Gegenzug wird die taz von unseren Leser*innen unterstützt. Freiwillig und solidarisch. Mit Ihrer Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit und eine engagierte Stimme für mehr Klimaschutz. Unterstützen Sie jetzt die taz und helfen Sie uns dabei.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><div role="region" id="" class="even sect sect_text "><div class="sectbody"><p>
+
+	Fehler auf taz.de entdeckt?
+	    </p><p>
+        Wir freuen uns über eine 
+	<a href="mailto:fehlerhinweis@taz.de?subject=Fehlerhinweis%20zu%20https://taz.de/Gefluechtete-an-EU-Aussengrenze/!5668063/&amp;body=Zu%20%22Geflüchtete an EU-Außengrenze: „Ich schäme mich für Europa“%22%0D%0Ahttps://taz.de/Gefluechtete-an-EU-Aussengrenze/!5668063/%0D%0A%0D%0ABitte%20beschreiben%20Sie%20uns%20den%20Fehler.%20Sie%20können%20gern%20einen%20Screenshot%20anhängen.%20Wir%20danken%20für%20Ihre%20Hilfe%21%20
+					%0D%0A%0D%0A
+					Inhaltliches%20Feedback%20geben%20Sie%20uns%20gerne%20in%20der%20Kommentarspalte%20oder%20richten%20es%20an%20briefe@taz.de.%20Dort%20leiten%20wir%20ihr%20Feedback%20auch%20an%20die%20Redaktion%20weiter.%20Über%20diese%20Mailadresse%20nehmen%20wir%20nur%20Rechtschreib-%20und%20Faktenkorrekturen%20vor.				">Mail an fehlerhinweis@taz.de</a>!</p><p>
+	Inhaltliches Feedback? 
+	</p><p>
+
+	Gerne als Leser*innenkommentar unter dem Text auf taz.de oder über das
+	<a href="/!112355/"> Kontaktformular</a>.
+		</p></div></div><!-- DEBUG belly: 0 extras here, 0 from directory Deutschland, thats 0 merged--></span><span class="wing" role="contentinfo"><div class="rack first_rack" id="xid459821">
+    
+	<!--template mode="layout" match="display[ @obj='descr' ]":start-->
+
+    
+	<div role="region" id="" class="even sect sect_meta "><div class="sectbody"><ul role="navigation" class="left rootline toolbar"><li class="first odd trodd selected"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="last even trodd selected"><a href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span>Deutschland</span></a></li></ul><ul role="navigation" class="right toolbar"><li class="date" itemprop="datePublished" content="2020-03-01T17:02:00+01:00">1. 3. 2020</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2020-03-02T08:53:40+01:00"></meta></ul></div></div>
+
+    
+	<div role="region" id="" class="odd sect sect_profile pictured "><div class="secthead" role="heading"><h2><a name="das Interview führte"><span>das Interview führte</span></a></h2></div><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="pictured 
+        
+	
+        
+
+		
+			
+	        
+	
+			author 
+		
+		community 
+		
+        
+                
+		        
+		                
+		
+	        
+	        
+                
+
+				
+		
+
+        person objlink" itemprop="url" href="/Ulrich-Schulte/!a45/"><h4 itemprop="name">Ulrich Schulte</h4><h5 itemprop="jobTitle">Leiter Parlamentsbüro</h5><img itemprop="image" src="/kommune/files/images/profile/70x70/45.png" alt="Ulrich Schulte" title="Ulrich Schulte"></img></a><ul class="contact"><li><a itemprop="email" class="email" href="mailto:Ulrich Schulte &lt;schulte@taz.de&gt;"><img src="/lib/ch/web/pix/icons/email.png" class="icon"></img></a></li><li><a itemprop="sameAs" class="remote facebook.com" href="http://facebook.com/Ulrich Schulte" content=""><img src="/lib/ch/web/pix/icons/facebook.com.png" class="icon" alt="facebook.com" title="Ulrich Schulte via facebook.com"></img></a></li><li><a itemprop="sameAs" class="remote microblog" target="_blank" href="http://twitter.com/@UlrichSchulte"><img src="/lib/ch/web/pix/icons/microblog.png" class="icon" alt="microblog" title="Ulrich Schulte's microblog"></img></a></li></ul></div></div>
+
+    
+	<div role="region" id="" class="even sect sect_tags "><div class="secthead" role="heading"><h2><a name="Themen"><span>Themen</span></a></h2></div><ul role="directory" class="news directory sectbody"><li class="first odd trodd tag"><a role="link" href="/!t5035223/" class="tag dirlink"><span>EU-Flüchtlingspolitik</span></a></li><li class="even trodd tag"><a role="link" href="/!t5008069/" class="tag dirlink"><span>Flüchtlingspolitik</span></a></li><li class="odd treven tag"><a role="link" href="/!t5248797/" class="tag dirlink"><span>Lesbos</span></a></li><li class="last even trodd tag"><a role="link" href="/!t5008141/" class="tag dirlink"><span>Erdogan</span></a></li></ul></div>
+
+    
+	
+
+    
+	<!-- DEBUG label: 0 extras here, 0 from directory Deutschland, thats 0 merged-->
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><span id="ad_bin_ros_sidebar_1" class="ad_bin sold contentad"><div id="ad_zone_ros_sidebar_1" name="ros_sidebar-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_sidebar_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><!-- DEBUG wing: 0 extras here, 0 from directory Deutschland, thats 0 merged--></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><span class="tail" role="complementary"><!-- DEBUG tail: 0 extras here, 0 from directory Deutschland, thats 0 merged--><div role="region" id="xid709553" class="last even sect sect_adr style_adr "><ul role="directory" class="sectbody corp  directory"><li class=" first last odd trodd online   leaded pictured leaded remote product"><a class="dept" href="/Abo/!p4209/">Abo</a><a href="https://taz.de/!171158/#matomo:pk_campaign=Praemienabo483_HeimatAlbtraum&amp;pk_source=Online&amp;pk_medium=taz.de&amp;pk_kwd=Kachel&amp;pk_content=Packshot" target="_blank" class="objlink leaded pictured leaded remote product noavatar" role="link"><p class="brief">         Testen Sie 10 Wochen die taz am Wochenende und erhalten „Eure Heimat ist unser Albtraum“ von Fatma Aydemir und Hengameh Yaghoobifarah als Prämie.          </p><img src="/uploads/images/300/AdW_HeimatAlbtraum_kachel.png" alt="" title=""></img><div class="hint">Mehr erfahren</div></a></li></ul></div></span><a itemprop="mainEntityOfPage" href="/Gefluechtete-an-EU-Aussengrenze/!5668063"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div class="full no_rightbar below news page even n2"><div class="head" role="head"><div class="nose" role="heading" id="pg_hd"><h2><a name="Volle Spalte unterm Artikel" href="/Volle-Spalte-unterm-Artikel/!p5315/"><span>Volle Spalte unterm Artikel</span></a></h2></div><ul role="navigation" class="news navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack abtest test_2" id="xid841996">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="meistgelesen"><span>meistgelesen</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd online   interview article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date" itemprop="datePublished" content="2020-03-01T17:02:00+01:00">15. 11. 2020</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2020-03-02T08:53:40+01:00"></meta></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726067"></meta><meta itemprop="cms-obj-ID" content="4501193"></meta></div><a href="/Ethikraetin-Graumann-zu-Massnahmen/!5726067/" ratioURL-ressource="5726067" class="objlink interview article leaded pictured noavatar" role="link"><h4>Ethikrätin Graumann zu Maßnahmen</h4><h3>„Furcht vor dem Kontrollverlust“</h3><p>Warum gibt es bei 11.000 Coronatoten einen Lockdown, während 25.000 Grippe-Opfer und 30.000 Sterbefälle durch Raucherkrebs in Kauf genommen werden?  </p><img src="/picture/4501193/300/Corona_Lockdown_Interview_Graumann_15112020-1.jpeg" alt="Bitte Abstand halten." title="Bitte Abstand halten."></img></a></li><li class=" even trodd online   report article leaded pictured"><a href="/Aserbaidschan-zerstoert-armenische-Kultur/!5730239/" ratioURL-ressource="5730239" class="objlink report article leaded pictured noavatar" role="link"><h4>Aserbaidschan zerstört armenische Kultur</h4><h3>Abschied vom Kloster Dadiwank</h3><p>Der Krieg in Bergkarabach ist kein religiöser Konflikt. Kulturgüter der Armenier werden zerstört, um den aserbaidschanischen Anspruch zu festigen.  <span class="author">Tigran Petrosyan</span></p><img src="/picture/4515867/300/26291472-1.jpeg" alt="" title=""></img></a></li><li class=" last odd treven online   report article leaded pictured"><a href="/Alpenwanderung-in-Zeiten-der-Pandemie/!5727772/" ratioURL-ressource="5727772" class="objlink report article leaded pictured noavatar" role="link"><h4>Alpenwanderung in Zeiten der Pandemie</h4><h3>Von Oberstdorf nach Meran</h3><p>Alleine wandern in den Bergen. Unsere Autorin wird vom Schnee überrascht und trifft skurrile Typen. Eine Überquerung der Alpen in Coronazeiten.  <span class="author">Luisa Willmann</span></p><img src="/picture/4505565/300/26223637-1.jpeg" alt="Wandergruppe im Schnee" title="Wandergruppe im Schnee"></img></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+        </div><script type="text/javascript">
+							(function(){
+								// 3 parallel tests are possible (see tmpl-files)
+								var testSet = 				2 ;
+								var countTestElements =      3 ;
+								var weitereArtikelCondition = true ;
+								var currentRack = $(document.getLatestElement()).filter('.rack');
+								var currentVariant = $('#pages > .news.page ').find(' .rack.abtest ').index ( currentRack ) + 1 ;
+
+								// set cookie(s) for ABTests remembering if not existing
+								if ( ! $.cookie('test' + testSet)) $.cookie('test' + testSet, Math.floor( Math.random() * countTestElements ) + 1 ,{domain: 'taz.de', path: '/', expires: 365});
+								if ( $.cookie('test' + testSet) == currentVariant ){ 	
+										// current rack choosen / remembered for test
+										currentRack.addClass(' testshow ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+								} else {
+										currentRack.addClass(' testhide ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+									}
+									//temp - siehe oben
+								if (weitereArtikelCondition == false) { 
+									currentRack.addClass(' testhide ').removeClass(' testshow ')
+								  }
+								})();
+							
+					</script><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div class="rack abtest test_2" id="xid841997">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="Mehr zum Thema"><span>Mehr zum Thema</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd    report article leaded pictured"><a href="/Aufnahme-von-Fluechtlingskindern/!5667207/" ratioURL-ressource="5667207" class="objlink report article leaded pictured noavatar" role="link"><h4>Aufnahme von Flüchtlingskindern</h4><h3>Groko für „Koalition der Willigen“</h3><p>Union und SPD wollen minderjährige Flüchtlinge aus Griechenland aufnehmen – wenn andere EU-Länder mitmachen. Die Details sind noch vage.  <span class="author">Daniel Godeck</span></p><img src="/picture/4020417/300/Fluchtlinge-Griechenland-1.jpeg" alt="Ein Mädchen im blauen Anorak steht an einem Stacheldrahtzaun" title="Ein Mädchen im blauen Anorak steht an einem Stacheldrahtzaun"></img></a></li><li class=" even trodd    report article leaded pictured"><a href="/Gefluechtete-an-der-griechischen-Grenze/!5666436/" ratioURL-ressource="5666436" class="objlink report article leaded pictured noavatar" role="link"><h4>Geflüchtete an der griechischen Grenze</h4><h3>Union lehnt Kontingente ab</h3><p>Unionspolitiker wehren sich gegen den Vorschlag der Grünen, Geflüchtete aufzunehmen. Dobrindt meint, das setzte „falsche Hoffnungen in die Welt“.  <span class="author">Ulrich Schulte</span></p><img src="/picture/4009409/300/24732968-1.jpeg" alt='Demonstration der Gruppe Seebrücke in Berlin. Auf einem Transparent steht "Wir haben Platz."' title='Demonstration der Gruppe Seebrücke in Berlin. Auf einem Transparent steht "Wir haben Platz."'></img></a></li><li class=" last odd treven    report article leaded pictured"><a href="/Fluechtlinge-an-der-griechischen-Grenze/!5668263/" ratioURL-ressource="5668263" class="objlink report article leaded pictured noavatar" role="link"><h4>Flüchtlinge an der griechischen Grenze</h4><h3>Kind ertrinkt, Polizisten schießen</h3><p>Der „Schutz“ der EU-Grenze fordert ein Leben. Maskierte „Bürgerwehren“ in Griechenland greifen Flüchtlinge, NGOs und Journalisten an.  <span class="author">Christian Jakob</span></p><img src="/picture/4006239/300/130581728-1.jpeg" alt="" title=""></img></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+
+        </div><script type="text/javascript">
+							(function(){
+								// 3 parallel tests are possible (see tmpl-files)
+								var testSet = 				2 ;
+								var countTestElements =      3 ;
+								var weitereArtikelCondition = true ;
+								var currentRack = $(document.getLatestElement()).filter('.rack');
+								var currentVariant = $('#pages > .news.page ').find(' .rack.abtest ').index ( currentRack ) + 1 ;
+
+								// set cookie(s) for ABTests remembering if not existing
+								if ( ! $.cookie('test' + testSet)) $.cookie('test' + testSet, Math.floor( Math.random() * countTestElements ) + 1 ,{domain: 'taz.de', path: '/', expires: 365});
+								if ( $.cookie('test' + testSet) == currentVariant ){ 	
+										// current rack choosen / remembered for test
+										currentRack.addClass(' testshow ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+								} else {
+										currentRack.addClass(' testhide ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+									}
+									//temp - siehe oben
+								if (weitereArtikelCondition == false) { 
+									currentRack.addClass(' testhide ').removeClass(' testshow ')
+								  }
+								})();
+							
+					</script><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div class="rack abtest test_2" id="xid848734">
+    	<div role="region" id="" class="first last odd sect sect_thema inside_ressort full style_inside_ressort full "><div class="secthead" role="heading"><h2><a name="Politik" href="/Politik/!p4615/"><span>Politik</span></a></h2><ul class="toolbar" role="toolbar"><li><a href="/Politik/!p4615;rss/">RSS</a></li></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd online   report article leaded pictured"><a href="/Netanjahu-in-Saudi-Arabien/!5727265/" ratioURL-ressource="5727265" class="objlink report article leaded pictured noavatar" role="link"><h4>Netanjahu in Saudi-Arabien</h4><h3>Ein Israeli im Land des Islams</h3><p>Auch wenn Riad dementiert: Israels Regierungschef Netanjahu hat offenbar Saudi-Arabien besucht. Das ist historisch, aber nicht überraschend.  <span class="author">Jannis Hagmann</span></p><img src="/picture/4519516/300/26337233-1.jpeg" alt="ein Mann steigt in ein Flugzeug" title="ein Mann steigt in ein Flugzeug"></img></a></li><li class=" even trodd online   report article leaded pictured"><a href="/Frankreichs-Ex-Praesident-vor-Gericht/!5727248/" ratioURL-ressource="5727248" class="objlink report article leaded pictured noavatar" role="link"><h4>Frankreichs Ex-Präsident vor Gericht</h4><h3>„Nur ein Freundschaftsdienst“</h3><p>Der französische Ex-Präsident Sarkozy muss sich in einem Prozess verantworten. Wegen Korruption drohen zehn Jahre Haft.  <span class="author">Christine Longin</span></p><img src="/picture/4518527/300/Nicolas-Sarkozy-Prozess-Korruption-1.jpeg" alt="Nicolas Sarkozy mit Mundschutz vor Polizeibeamten." title="Nicolas Sarkozy mit Mundschutz vor Polizeibeamten."></img></a></li><li class=" last odd treven online   report article leaded pictured"><a href="/Debatte-um-Sterbehilfe/!5724744/" ratioURL-ressource="5724744" class="objlink report article leaded pictured noavatar" role="link"><h4>Debatte um Sterbehilfe</h4><h3>15 Gramm Gift, nur für den Fall</h3><p>Hans-Jürgen Brennecke kämpft für sein Recht auf selbstbestimmtes Sterben. Ein Betäubungsmittel steht ihm zu, das Gesundheitsministerium blockiert.  <span class="author">Leonie Gubela</span></p><img src="/picture/4518230/300/Sterbehilfe_Brennecke-1.jpeg" alt="Brennecke schaut aus dem Fenster seines Wohnzimmers" title="Brennecke schaut aus dem Fenster seines Wohnzimmers"></img></a></li></ul></div>
+        </div><script type="text/javascript">
+							(function(){
+								// 3 parallel tests are possible (see tmpl-files)
+								var testSet = 				2 ;
+								var countTestElements =      3 ;
+								var weitereArtikelCondition = true ;
+								var currentRack = $(document.getLatestElement()).filter('.rack');
+								var currentVariant = $('#pages > .news.page ').find(' .rack.abtest ').index ( currentRack ) + 1 ;
+
+								// set cookie(s) for ABTests remembering if not existing
+								if ( ! $.cookie('test' + testSet)) $.cookie('test' + testSet, Math.floor( Math.random() * countTestElements ) + 1 ,{domain: 'taz.de', path: '/', expires: 365});
+								if ( $.cookie('test' + testSet) == currentVariant ){ 	
+										// current rack choosen / remembered for test
+										currentRack.addClass(' testshow ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+								} else {
+										currentRack.addClass(' testhide ').addClass('variant_' + currentVariant).trigger('TAZdomChange')
+									}
+									//temp - siehe oben
+								if (weitereArtikelCondition == false) { 
+									currentRack.addClass(' testhide ').removeClass(' testshow ')
+								  }
+								})();
+							
+					</script><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><span class="headed wing" role="complementary"></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Gefluechtete-an-EU-Aussengrenze/!5668063"></a></div><div class="full community page last odd n3"><div class="head" role="head"><ul role="navigation" class=" navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid495498">
+    
+
+	<div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="So können Sie kommentieren:"><span>So können Sie kommentieren:</span></a></h2></div><div class="sectbody"><p>       Bitte <a href="https://www.taz.de/kommune/post.php?a=registration" target="_blank">registrieren Sie sich</a> und halten Sie sich an unsere <a href="http://taz.de/netiquette" target="_blank">Netiquette</a>.     
+</p><p>      Haben Sie Probleme beim Kommentieren oder Registrieren?   
+</p><p>  Dann mailen Sie uns bitte an <a href="mailto:kommune@taz.de" target="_blank">kommune@taz.de</a>   </p></div></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="" class="even sect sect_commentlinks style_commentlinks "><div class="secthead" role="heading"><h2><a name="Leser*innenkommentare"><span>Leser*innenkommentare</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class="guest " id="bb_message_3924012"><a class="author person"><h4>76530 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2020-03-03T09:55:48+01:00"><meta value="1583225748"></meta>03. 03. 2020, 
+		09:55</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Fremdschämen war - als es aufkam - eine 'Tugend', die Aufmerksamkeit erzeugt hat.</p>
+<p xmlns="" class="even">Heute halte ich es für klüger, es jedem selbst zu überlassen, wie er mit seiner Scham oder der Abwesenheit derselben umgeht.</p>
+<p xmlns="" class="odd">Ob ich mich für Herrn Erdogan, für die EU oder die Deutschen Politiker schäme, hilft keinem. Auch nicht mir selbst.</p>
+<p xmlns="" class="even">Den Flüchtlingen an der griechisch-türkischen Grenze am Allerwenigsten.</p>
+<p xmlns="" class="odd">Was ich am Schlimmsten in dieser causa finde: dass es mit Griechenland die Wiege der Demokratie trifft.</p>
+<p xmlns="" class="last even">Traditionen versus Neuzeit: 0-1.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923977"><a class="author person" href="/!ku19237/"><h4>TazTiz</h4></a><time datetime="2020-03-03T09:04:47+01:00"><meta value="1583222687"></meta>03. 03. 2020, 
+		09:04</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Dieses heuchlerische Schämen ist zum Fremdschämen. Es war 5 Jahre Zeit die eigenen Positionen zu Migration und Asyl auf das reale Szenario einer Zuwanderung aus überbevölkerten und gleichzeitig armen und konfliktreichen Gebieten zu adaptieren. Es geht hier nicht mehr um Asyl oder akute Flucht sondern um Teilhabe am Leben in Europa und in der offenen westlichen Welt. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Jetzt wieder die Karte der emotionalen Erpressung zu spielen, ist einem Politiker, der realen deutschen Politik nicht würdig.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923863"><a class="author person" href="/!ku52881/"><h4>Frau Flieder</h4></a><time datetime="2020-03-02T21:36:29+01:00"><meta value="1583181389"></meta>02. 03. 2020, 
+		21:36</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Es ist sogar hier im Forum Hass zu spüren obwohl derjenige sich als guter Mensch auf der richtigen Seite sieht. Es ist wohl schwer auf einen Nenner zu kommen.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Es ist nun msl richtig, dass die meisten Flüchtlinge nach Deutschland wollen. Richtig ist auch, dass es hier eine sehr gute Versorgung gibt.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wer bezahlt das alles?<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Der ganz normale Steuerzahlet.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Noch mehr Belastung wollen und können diese nicht tragen, ebenso wenig wie die Kommunen.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wir schaffen das auch diesmal nicht.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Die Grünen möchten mehr Menschen aufnehmen. Sollen sie doch bitte mal einen ganz konkreten Plan vorlegen, wie das geht.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3924090"><a class="author person"><h4>76530 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2020-03-03T11:35:59+01:00"><meta value="1583231759"></meta>03. 03. 2020, 
+		11:35</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Frau Flieder </span>Ich sehe das ein klein wenig anders.</p>
+<p xmlns="" class="even">Der Humanist in mir findet die gestrigen Vorschläge von Frau Barbock gut - und edel.</p>
+<p xmlns="" class="odd">Der Bilanzbuchhalter fragt: wer soll das bezahlen, wer hat soviel Geld?</p>
+<p xmlns="" class="even">Der Armutsrentner  sagt: nö. Erst mal ich. Ich habe ältere Rechte hier. Und habe Jahrzehntelang etwas für einige Menschen hier getan.</p>
+<p xmlns="" class="last odd">Und - nun?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3924193"><a class="author person" href="/!ku35021/"><h4>Leser77</h4></a><time datetime="2020-03-03T14:55:04+01:00"><meta value="1583243704"></meta>03. 03. 2020, 
+		14:55</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@76530 (Profil gelöscht) </span>Vor Ort helfen, so gut es geht. Aber keine offenen Grenzen für alle. So sieht dann wohl der kommende pragmatische Umgang aus. Den Rechten wird das nicht rechts genug sein, den Moralisten nicht moralisch einwandfrei. Die eine Grabenseite wird die andere mit Dreck bewerfen. Der Graben wird sich vertiefen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3924222"><a class="author person"><h4>76530 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2020-03-03T15:58:41+01:00"><meta value="1583247521"></meta>03. 03. 2020, 
+		15:58</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Leser77 </span>Ich stimme Ihnen darin zu, dass eine pragmatische Lösung einer dogmatischen vorzuziehen ist. Auch wenn ich dafür, wie gewohnt, verbale Haue von den Gesinnungsethikern bekomme.</p>
+<p xmlns="" class="last even">Denen, die eine pragmatische Lösung (Kompromiss) bekämpfen, muss dann gesagt werden: Freunde, wollt ihr eine Lösung - oder nur Recht behalten?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3924038"><a class="author person" href="/!ku44304/"><h4>VioletPurr</h4></a><time datetime="2020-03-03T10:27:06+01:00"><meta value="1583227626"></meta>03. 03. 2020, 
+		10:27</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Frau Flieder </span>
+	<em>Kommentar entfernt. Bitte achten Sie auf ihre Wortwahl.</em>
+</p>
+
+<p xmlns="" class="last even">
+	<em>Die Moderation</em>
+</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3923791"><a class="author person" href="/!ku55373/"><h4>Käsekuchen</h4></a><time datetime="2020-03-02T18:43:42+01:00"><meta value="1583171022"></meta>02. 03. 2020, 
+		18:43</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Falls es jemanden interessiert, hier ist noch ein Artikel aus dem Guarian von kurz vor Weihnachten, in dem der MEP Damian Boselager von Volt über seinen Besuch in der Region berichtet:<br xmlns="http://www.w3.org/1999/xhtml"></br><a target="_blank" href="https://www.theguardian.com/commentisfree/2019/dec/18/europe-humanitarian-crisis-brussels-refugees">www.theguardian.co...-brussels-refugees</a></p>
+<p xmlns="" class="even">Es war abzusehen, dass die Passivität bzw. fehlende Kompromissbereitschaft beim Flüchtlingsthema früher oder später wieder um die Ohren fliegen wird.</p>
+<p xmlns="" class="last odd">Wir hatten jetzt lange genug Zeit, aber weder wurden die Fluchtursachen konsequent angegangen, noch wurde sich z.B. auf eine Verteilung der Geflüchteten geeinigt...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923697"><a class="author person" href="/!ku35041/"><h4>My Sharona</h4></a><time datetime="2020-03-02T15:51:38+01:00"><meta value="1583160698"></meta>02. 03. 2020, 
+		15:51</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Mal sehen, ob die Grünen ihren eigenen Ansprüchen genügen (besonders fraglich im Südwesten) und sich in der Agonie einer nicht enden wollenden Diskussion um den Umgang mit Flüchtlingen besser schlagen als die Linke (inklusive durchwachsener Wahlergebnisse)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923641"><a class="author person" href="/!ku52176/"><h4>RosaLux</h4></a><time datetime="2020-03-02T14:15:50+01:00"><meta value="1583154950"></meta>02. 03. 2020, 
+		14:15</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Ich glaube schämen ist das falsche Wort. Dafür müsste man sich mit dem neoliberalen EU-Projekt identifizieren. Das tue ich nicht. Ich sehe die Schweinerei genau darin: Waren und Geld fließen über alle Grenzen hinweg während die Menschen festgehalten oder weggeschickt werden, wie es politisch gerade passt. Aber auch hier muss für InternationalistInnen doch die Forderung klar sein: lasst die Menschen dahin, wo sie wollen! Oder warum sollte der Mensch weniger Recht als eine Ware haben (Kapitalismus, schon klar, müssen wir uns aber nicht zu eigen machen)? Also, natürlich Grenzen stürmen, Leute aufnehmen und die Erdogan-Rechnung mit weniger Aufregung durchkreuzen. Manche starren jetzt schon wieder wie die Schlange auf das Kaninchen und fragen sich ob das die Rechten weiter stärkt. Davon darf unsere Haltung nicht abhängen! Im Gegenteil solche Relativierungen machen uns schwach und angreifbar.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3924040"><a class="author person" href="/!ku44304/"><h4>VioletPurr</h4></a><time datetime="2020-03-03T10:28:00+01:00"><meta value="1583227680"></meta>03. 03. 2020, 
+		10:28</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@RosaLux </span>Schön, wie einfach man sich aus der humanitären Verantwortung ziehen kann. Ein*e echte echte*r Europäer*in</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923671"><a class="author person" href="/!ku38646/"><h4>Holzhirn</h4></a><time datetime="2020-03-02T15:20:51+01:00"><meta value="1583158851"></meta>02. 03. 2020, 
+		15:20</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@RosaLux </span>Also sind Sie für die Abschaffung  der EU-Grenzen ? Was wenn das der überwiegende Teil nicht möchte?</p>
+<p xmlns="" class="even">Es gibt viele gute Gründe dagegen. Die Lösung sollte nicht sein solange Menschen nach Europa einwandern zu lassen bis alle Sozial- und Integrationssysteme zusammenbrechen oder die entsprechenden Abgaben verdoppelt werden müssen. Denn das entzweit die ohnehin bereits angerissene Gesellschaft.</p>
+<p xmlns="" class="last odd">Es gibt eben kein internationales Grundrecht auf einen Platz in Europa. Alle Ressourcen sind endlich. Und da der Krieg in Syrien einfach nicht aufhört, sondern im Gegenteil immer weiter zu eskalieren droht (Türkei+Milizen + evtl. Nato vs. Syrien / Russland), ist die Frage ob man eher an der Ursache der Flucht, also dem Krieg, etwas ändern sollte. Und eines sollte man sich eingestehen, den Krieg "gewonnen" hat nun einmal Assad.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923772"><a class="author person" href="/!ku52176/"><h4>RosaLux</h4></a><time datetime="2020-03-02T17:55:56+01:00"><meta value="1583168156"></meta>02. 03. 2020, 
+		17:55</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Holzhirn </span>Oh ja, ich bin für die Abschaffung aller Grenzen und nochmal: für alles andere als für Menschen besteht das was sie so schockiert schon! Übrigens geht es hier aber nicht darum, was ich oder wer anders möchte. Überlegen Sie doch, auf was der Reichtum hier fußt: warum können wir T-Shirts für ein paar Euro kaufen, Handys mit seltenen Rohstoffen zu Spottpreisen etc. Und jetzt stehen Menschen wie sie da und sagen: die können aber nicht alle kommen. Naja, sie folgen den Spuren ihrer Ausbeutung, sehen aufgrund der systematischen Zerschlagung ihrer eigenen Infrastrukturen keine andere Perspektive. Und die anderen, die vor Kriegen fliehen und eine Perspektive suchen, tun das natürlich da, wo es Sicherheit und zumindest ein Minimum an Existenzsicherung gibt-würden Sie und ich nicht anders machen, aber bequem ist es eben schon, hier in die Tasten zu hauen und Menschen abzusprechen, dass sie das tun, was Menschen in besch...Situationen nun mal tun. Ich sehe innerhalb dieses globalen Ausbeutungssystems auch wenig gute Optionen, deswegen müssen wir darüber hinaus denken und heute schon solidarisch handeln wenn wir wollen, dass sich wirklich was ändert. Der Kampf gegen den Krieg gehört dazu. Aber Fluchtursachen bekämpfen heißt eben auch Kapitalismus abschaffen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923800"><a class="author person" href="/!ku38646/"><h4>Holzhirn</h4></a><time datetime="2020-03-02T19:03:07+01:00"><meta value="1583172187"></meta>02. 03. 2020, 
+		19:03</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@RosaLux </span>Ich habe kritische Fragen gestellt, keine eigene Meinung verkündet.</p>
+<p xmlns="" class="last even">Das gegenwärtige Wirtschaftssystem ist leider sowohl dominierend als auch langfristig nicht tragbar. Aber wir können eben nicht das eine ändern, und das Wichtigere verschieben. Der Ansatzpunkt sollte also ein Anderer, oder eine simultane Änderung sein. Aufgrund der aktuellen Stimmung step by step, nicht auf einen Schlag. Es sei denn sie wollen das die Situation eskaliert und eine Gegenbewegung, die ja bereits existiert, alle Fortschritte zerstört.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923778"><a class="author person" href="/!ku41111/"><h4>El-ahrairah</h4><img src="/kommune/files/images/profile/70x70/41111.png" alt="" title=""></img></a><time datetime="2020-03-02T18:06:37+01:00"><meta value="1583168797"></meta>02. 03. 2020, 
+		18:06</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@RosaLux </span>Auch der neoliberale Globalismus fordert die Abschaffung aller Grenzen. Sehen Sie ihn da als zufälligen Weggefährten oder als strategischen Verbündeten?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3923688"><a class="author person" href="/!ku40064/"><h4>Gerhard Krause</h4></a><time datetime="2020-03-02T15:37:56+01:00"><meta value="1583159876"></meta>02. 03. 2020, 
+		15:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Holzhirn </span>Ich meine zu wissen, was ihr Punkt ist. In einem Punkt kann ich Sie wohl beruhigen, was ich ehrlich meine: es dürfte gegenüber den Kosten wohl das Wachstum als positives ausgleichendes Gegengewicht stark anziehen. Das wird gern, sagen wir, von Konservativen nicht gern erwähnt.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923712"><a class="author person" href="/!ku38646/"><h4>Holzhirn</h4></a><time datetime="2020-03-02T16:20:27+01:00"><meta value="1583162427"></meta>02. 03. 2020, 
+		16:20</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Gerhard Krause </span>Ich bin kein Wachstumsfreund, aber Ja. mittelfristig gibt es einen Nutzen. Kurzfristig gibt es mehrere positive wie negative Facetten, daher bin ich mir da nicht sicher .</p>
+<p xmlns="" class="last even">Ich befürchte jedoch das wir in Europa nicht die Unterstützung der Mehrheit der Bevölkerung haben um eine Situation wie 2015 zu wiederholen. Ob die Infrastruktur noch existiert.. naja, Teilweise auf jeden Fall. Es ist leider der Fall, dass die Mehrheit der Menschen nicht für den Mist der in Syrien passiert verantwortlich sein möchte.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923854"><a class="author person" href="/!ku40064/"><h4>Gerhard Krause</h4></a><time datetime="2020-03-02T21:20:35+01:00"><meta value="1583180435"></meta>02. 03. 2020, 
+		21:20</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Holzhirn </span>Ja, das ist gut möglich (Stimmungslage).</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3923555"><a class="author person" href="/!ku6313/"><h4>wirklich?</h4></a><time datetime="2020-03-02T11:57:11+01:00"><meta value="1583146631"></meta>02. 03. 2020, 
+		11:57</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Wo kommen eigentlich die ganzen Undercover-faschos im Taz-Kommentarbereich her. Man früher konnte man hier wenigstens noch entspannt linke Lagerkämpfe ausfechten.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923517"><a class="author person" href="/!ku47014/"><h4>Meinung 7</h4></a><time datetime="2020-03-02T11:08:55+01:00"><meta value="1583143735"></meta>02. 03. 2020, 
+		11:08</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Liebe Taz - liebe KommentatorInnen<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wie kann man helfen? Hat jemand eine Idee, welche Organisation vor Ort hilft und unterstützt werden kann? Die Zustände sind unmenschlich, ich würde gerne etwas tun. Könnte mir auch vorstellen selber dorthin zu fahren. Falls jemand etwas konkretes über Hilfskationen weiss... bitte schreiben. Danke.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923486"><a class="author person" href="/!ku55632/"><h4>Seitenwechsel</h4></a><time datetime="2020-03-02T10:14:40+01:00"><meta value="1583140480"></meta>02. 03. 2020, 
+		10:14</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Habe ich das richtig verstanden:<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Erdogan setzt die Migranten in Schlauchboote und bringt Sie somit in Lebensgefahr? Trifft dies zu dann handelt es sich bei dieser Personalie um einen Menschenschlepper. Der soll unser Verbündeter und Nato-Partner sein? Was da los?!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923716"><a class="author person" href="/!ku55665/"><h4>Europäer237</h4></a><time datetime="2020-03-02T16:27:48+01:00"><meta value="1583162868"></meta>02. 03. 2020, 
+		16:27</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Seitenwechsel </span>Sie verstehen falsch. Die Türkei setzt niemanden irgendwohin. So ich es verstehe kaufen sich die Flüchtlinge die Boote selber und setzen sich eigenverantwortlich in die Boote. Die Türkei hindert sie nur nicht mehr daran die türkische Grenzen zu übertreten. In diesem fall ist Griechenland der Böse. Und die sollen Nato-partner und Eu Mitglied sein? <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Das ist menschenverachtend. Die Türkei verlangt von der Internationalen Gemeinschaft seit Jahren eine Sicherheitszone in Syrien um die Syrer menschenwürdig dort vor ihrem Präsidenten zu schützen. Aber die Internationale Gemeinschaft hat nicht mehr als ein Schulterzucken dafür übrig. Ich hoffe, dass die Türkei standhaft bleibt und, dass zumindest  die Europäer einlenken und das Leid der Menschen gemildert wird. Stichwort: westliche Werte</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3924632"><a class="author person" href="/!ku55632/"><h4>Seitenwechsel</h4></a><time datetime="2020-03-04T13:01:32+01:00"><meta value="1583323292"></meta>04. 03. 2020, 
+		13:01</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Europäer237 </span>Weder Griechenland, noch die Türkei ist Böse...Erdogan als Verteidiger des Menschenrechts darzustellen ist aber doch ein bisschen Vordergründig...eher wird die Geopolitik und die Expansionsstrategie, die wirklich clever ist, offensichtlich. Der Herr vom Bosporus kann sich nun entspannt zurücklehnen und das Theater genießen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923871"><a class="author person" href="/!ku35287/"><h4>rero</h4></a><time datetime="2020-03-02T22:02:30+01:00"><meta value="1583182950"></meta>02. 03. 2020, 
+		22:02</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Europäer237 </span>Warum lassen Sie die strategische Bedeutung dieser "Schutzzone" weg.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3923427"><a class="author person" href="/!ku10526/"><h4>adagiobarber</h4></a><time datetime="2020-03-02T07:28:36+01:00"><meta value="1583130516"></meta>02. 03. 2020, 
+		07:28</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">bitte nicht ursache und wirkung verwechseln.</p>
+<p xmlns="" class="last even">der fehler hinter dem fehler wurde in moskau und ankara ausgebrütet.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923545"><a class="author person" href="/!ku41111/"><h4>El-ahrairah</h4><img src="/kommune/files/images/profile/70x70/41111.png" alt="" title=""></img></a><time datetime="2020-03-02T11:50:02+01:00"><meta value="1583146202"></meta>02. 03. 2020, 
+		11:50</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@adagiobarber </span>Und der Fehler in Ankara und Idlib wurde in Washington ausgebrütet.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923534"><a class="author person" href="/!ku44980/"><h4>Volker Maerz</h4></a><time datetime="2020-03-02T11:25:27+01:00"><meta value="1583144727"></meta>02. 03. 2020, 
+		11:25</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@adagiobarber </span>Und der Fehler hinter dem Fehler hinter dem Fehler in Washington.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3923281"><a class="author person" href="/!ku40064/"><h4>Gerhard Krause</h4></a><time datetime="2020-03-01T20:05:48+01:00"><meta value="1583089548"></meta>01. 03. 2020, 
+		20:05</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Ich schäme mich für Europa“</p>
+<p xmlns="" class="even">Das find' ich jetzt aber mal echt 'n blöden Spruch. Gerade jetzt muss "Europa" positiv besetzt und die im Beitrag in Rede stehenden Ereignisse davon abgegrenzt werden. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Im politischen Modell mag man ja mit dem Wort "Europa" die Verwaltungs- und andere Spitzen richtig bezeichnen, sowie an diese korrekt adressieren, aber Europa sind vielmehr die Menschen, die Millionen Helfer, Menschen mit humanistischer Haltung, aber auch Unschlüssige, die ein Vorbild brauchen  die man ansprechen muss, womöglich auch Mut machen.</p>
+<p xmlns="" class="last odd">Schlichter, der Ausspruch ist einfach schlechtes Marketing, oder das schlechtere Ergebnis einer beabsichtigten besseren Organisation von Reaktion.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923432"><a class="author person" href="/!ku3522/"><h4>frank</h4></a><time datetime="2020-03-02T08:03:40+01:00"><meta value="1583132620"></meta>02. 03. 2020, 
+		08:03</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Gerhard Krause </span>"Europa" ist die Human-Wash Nachfolgerin der EWG. Europäische Wirtschafts Gemeinschaft. Gegründet zum Abbau von Wirtschaftshemmnissen.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wesentlich weiter sind sie heute nicht.</p>
+<p xmlns="" class="last even">Als humanitäre Organisation sah sich die EU noch nie.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3923241"><a class="author person" href="/!ku37003/"><h4>Rolf B.</h4></a><time datetime="2020-03-01T18:44:06+01:00"><meta value="1583084646"></meta>01. 03. 2020, 
+		18:44</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Die EU hat sich noch nie in wesentlichem Maßstab für Menschenrechte eingesetzt, darum erwarte ich da auch nichts.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wir müssen begreifen, dass die EU für den reibungslosen Kapital-, Dienstleistungs- und Warenverkehr gedacht ist. Aus diesem Grunde müsste es eine europäische Staatengemeinschaft geben, die sich neu über eine eigene Sozialcharta definiert. Dazu bräuchten wir aber auch ein EU Parlament, dass die Interessen der Menschen repräsentiert und kein Operettenparlament sein will ohne substantielle parlamentarische Rechte.</p>
+<p xmlns="" class="last even">Während die bürgerliche Mitte mit dem Finger auf Assad oder Putin zeigt, lässt sie im Mittelmeer Menschen bewusst ersaufen oder in unendlich skandalösen Lagern vegetieren.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923239"><a class="author person" href="/!ku48732/"><h4>Kenni303</h4></a><time datetime="2020-03-01T18:40:10+01:00"><meta value="1583084410"></meta>01. 03. 2020, 
+		18:40</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Nur mal zum Verständnis: die Menschen sind in der Türkei in Sicherheit. Viele sogar mit Erwerbseinkommen. Warum überhaupt nach Europa gehen?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923455"><a class="author person" href="/!ku45120/"><h4>Lara Crofti</h4></a><time datetime="2020-03-02T09:21:56+01:00"><meta value="1583137316"></meta>02. 03. 2020, 
+		09:21</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Kenni303 </span>Weil in der EU, speziell auch in Deutschland, die Sozialleistungen mit am höchsten sind auf dieser Erde, auch für Migranten, Kriegs- und Wirtschaftsflüchtlinge. Und die Grenzen natürlich offen stehen, falls nicht, werden sie nötigenfalls mit Gewalt überrannt, siehe Griechenland.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923695"><a class="author person" href="/!ku40064/"><h4>Gerhard Krause</h4></a><time datetime="2020-03-02T15:46:59+01:00"><meta value="1583160419"></meta>02. 03. 2020, 
+		15:46</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lara Crofti </span>Ich meine, dass in der Aussage viele Fehler stecken. Eher scheinen Verwandte, diese mögen ja seinerzeit aufgrund falscher Zusagen oder Ideen zu uns gekommen sein, als eine wesentliche Triebfeder.</p>
+<p xmlns="" class="last even">Außerdem sollten nun endlich mal richtig Vermögende ordentlich Kosten blechen. Sehen Sie die Menschen positiv: ein Grund für mehr Schulen, mehr Bautätigkeit use.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923495"><a class="author person" href="/!ku4343/"><h4>Kaboom</h4></a><time datetime="2020-03-02T10:29:00+01:00"><meta value="1583141340"></meta>02. 03. 2020, 
+		10:29</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lara Crofti </span>Rechts(extremistische) Desinformation, was Sie hier betreiben. Die Sozialleistungen in Deutschland sind keineswegs "mit am höchsten sind auf dieser Erde", die Grenzen sind nicht offen, und ihr letzter Satz ist IMHO schlicht dümmliche Fascho-Agitrprop</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923595"><a class="author person" href="/!ku39442/"><h4>Andreas Klenke</h4></a><time datetime="2020-03-02T12:49:23+01:00"><meta value="1583149763"></meta>02. 03. 2020, 
+		12:49</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Kaboom </span>Dann muss allerdings die Frage erlaubt sein, warum die Mehrzahl der Flüchtlinge Deutschland (siehe ZDF-Video von gestern )als Ziel angibt und Schilder mit "Merkel help" gezeigt werden!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923501"><a class="author person" href="/!ku45120/"><h4>Lara Crofti</h4></a><time datetime="2020-03-02T10:46:17+01:00"><meta value="1583142377"></meta>02. 03. 2020, 
+		10:46</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Kaboom </span>Alles klar, nur weil meine Meinung von Ihrer abweicht, ist es gleich rechte Agitation. Sie können mir sicherlich viele Argumente aufzählen - die keinen finanziellen Aspekt beinhalten - weswegen Migranten nach Deutschland kommen wollen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3923492"><a class="author person" href="/!ku44788/"><h4>tomás zerolo</h4></a><time datetime="2020-03-02T10:25:36+01:00"><meta value="1583141136"></meta>02. 03. 2020, 
+		10:25</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lara Crofti </span>Das ist zynisches Geschwätz.</p>
+<p xmlns="" class="even">So unsympathisch einem die türkische Regierung sein mag (mir ist sie das zutiefst!) -- die haben ein echtes Problem: zwischen 3.5 und 4 Mio. Flüchtlinge auf ihrem Boden.</p>
+<p xmlns="" class="odd">Wir haben uns ja ins Hemd gemacht als in der grossen "Flut" 1 Mio nach Westeuropa kamen (ein Teil davon nach DE).</p>
+<p xmlns="" class="even">Zum Vergleich: Deutschland und die Türkei haben ziemlich genau dieselbe Bevölkerungszahl: 83 Mio.</p>
+<p xmlns="" class="last odd">Bei einem ungleich höheren BIP in DE (rund 5x).</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3923461"><a class="author person" href="/!ku37039/"><h4>Thomas Schöffel</h4></a><time datetime="2020-03-02T09:29:51+01:00"><meta value="1583137791"></meta>02. 03. 2020, 
+		09:29</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lara Crofti </span>Genau, bei uns sind die Sozialleistungen am höchsten. Hätte Frankreich die, wäre der Weg vtl. anders.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3923398"><a class="author person" href="/!ku37946/"><h4>hup</h4></a><time datetime="2020-03-02T02:38:44+01:00"><meta value="1583113124"></meta>02. 03. 2020, 
+		02:38</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Kenni303 </span>So ist das. Diese Leute haben bereits lange Zeit Schutz in gut ausgebauten türkischen Flüchtlingslagern, und sind damit im Sinne der EU keine asylberechtigten Kriegsflüchtlinge mehr nach der Genfer Flüchtlingskonvention.</p>
+<p xmlns="" class="last even">Sie sind Bauern in einem politischen Schachspiel, ein politisches Druckmittel Erdogans dem sie als Menschen egal sind. In der EU sind sie Bauern in einem politischen Schachspiel zwischen Migrationsbefürwortern und Migrationsgegnern.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923530"><a class="author person" href="/!ku44980/"><h4>Volker Maerz</h4></a><time datetime="2020-03-02T11:23:59+01:00"><meta value="1583144639"></meta>02. 03. 2020, 
+		11:23</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@hup </span>Ihre Aussage zu Lagern in der Türkei ist Unfug. Es gibt massenhaft Berichte und Porträts zu Geflüchteten, die sich selbst überlassen sind, wahrscheinlich nicht dort zu lesen, wo Sie sich sonst "informieren".</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923976"><a class="author person" href="/!ku37946/"><h4>hup</h4></a><time datetime="2020-03-03T09:04:09+01:00"><meta value="1583222649"></meta>03. 03. 2020, 
+		09:04</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Volker Maerz </span>„Wo ich mich sonst informiere“ - Sie meinen z.b. die NZZ?</p>
+<p xmlns="" class="last even"><a target="_blank" href="https://www.nzz.ch/international/naher-osten-und-nordafrika/die-weisse-zeltstadt-von-suruc-1.18489852">www.nzz.ch/interna...n-suruc-1.18489852</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3923232"><a class="author person" href="/!ku50620/"><h4>südtiroler</h4></a><time datetime="2020-03-01T18:25:41+01:00"><meta value="1583083541"></meta>01. 03. 2020, 
+		18:25</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Im Vorfeld des Herrn Marquardt lief übrigens eine Flug-Blatt Aktion. " stürmt die Grenze". 2 Aktivisten wurden inhaftiert.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923426"><a class="author person" href="/!ku51837/"><h4>Max Sterckxc</h4></a><time datetime="2020-03-02T07:27:29+01:00"><meta value="1583130449"></meta>02. 03. 2020, 
+		07:27</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@südtiroler </span>Richtig so!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3923199"><a class="author person" href="/!ku44788/"><h4>tomás zerolo</h4></a><time datetime="2020-03-01T17:41:09+01:00"><meta value="1583080869"></meta>01. 03. 2020, 
+		17:41</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Widerlich. Wegschauen, damit die anderen so unter Druck geraten, dass sie in ihrer Not die Drecksarbeit machen.</p>
+<p xmlns="" class="last even">Es ist unerträglich, wie wir GriechInnen und ItalienerInnen schon seit Jahren im Stich lassen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923399"><a class="author person" href="/!ku37946/"><h4>hup</h4></a><time datetime="2020-03-02T02:48:18+01:00"><meta value="1583113698"></meta>02. 03. 2020, 
+		02:48</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@tomás zerolo </span>Wo kommt eigentlich diese Variante der modernen Dolchstoßlegende des „im Stich lassens“ her? Seit Jahren ist es akzeptierte Praxis, dass sowohl Italien als auch Griechenland einen Großteil der Flüchtlinge informell im Transit an z.B. Deutschland zur Beantragung des Asyls abgeben kann („Durchreisen lassen“) - entgegen des Dublinabkommens.</p>
+<p xmlns="" class="last even">Das ist eine massive Entlastung der EU Grenzstaaten - im Multimilliardenbereich.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3923489"><a class="author person" href="/!ku44788/"><h4>tomás zerolo</h4></a><time datetime="2020-03-02T10:19:16+01:00"><meta value="1583140756"></meta>02. 03. 2020, 
+		10:19</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@hup </span>Schauen Sie sich doch mal die realen Verhältnisse in Moria (oder irgendwo in Süditalien) an. Und lassen Sie lieber die Dölche stecken.</p>
+<p xmlns="" class="even">Meines Erachtens ist es teil einer perfiden Strategie, die aber leider kurzsichtig ist: möge der Druck in Griechenland so steigen, dass die Populisten sich des "Problems schon annehmen". Nicht viel anders als in Ungarn, Rumänien, usw.</p>
+<p xmlns="" class="last odd">Zynisch -- aber eben auch gefährlich.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3923195"><a class="author person" href="/!ku33474/"><h4>Günter</h4></a><time datetime="2020-03-01T17:33:20+01:00"><meta value="1583080400"></meta>01. 03. 2020, 
+		17:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Zitat<br xmlns="http://www.w3.org/1999/xhtml"></br>
+"Ich schäme mich für Europa. Hier kommen erschöpfte Hilfsbedürftige an, und die Menschen rufen ihnen zu: Fahrt zurück in die Türkei! So etwas dürfen wir nicht hinnehmen."<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Zitat Ende</p>
+<p xmlns="" class="last even">Hier jemand der es nicht hingenommen hat und keiner will zuhören:<br xmlns="http://www.w3.org/1999/xhtml"></br><a target="_blank" href="https://www.martin-patzelt.de/lokal_1_1_141_Offener-Brief-.html">www.martin-patzelt...ffener-Brief-.html</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></div><span id="ad_bin_uebersicht_medrec_4" class="ad_bin sold contentad"><div id="ad_zone_uebersicht_medrec_4" name="uebersicht_medrec-4" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'uebersicht_medrec_4';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid476383">
+    
+
+<form name="form" method="post" enctype="application/x-www-form-urlencoded" id="send-comment" class="first last odd sect sect_send-comment_form style_commentform " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><h2><a name="jetzt mitreden"><span>jetzt mitreden</span></a></h2></div><div class="sectbody"><input class="constant" type="hidden" name="test" value="yes"></input><input class="constant" type="hidden" name="id" value="5668063"></input><input type="hidden" name="scope" class="constant" id="form_scope" value="cms-article"></input><input type="hidden" name="asid" class="constant" id="form_asid" value=""></input><span class="field"><p class="label">Ihren Kommentar hier eingeben</p><textarea name="post" class="text" id="form_post"></textarea></span><input type="submit" class="submit" name="ignore" value="abschicken"></input></div></form><script> filOtaz_de.Form( 'send-comment' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+	var formN = $('#send-comment');	// who i am
+
+	if( formN[0].filOtaz_de_handled ) return; formN[0].filOtaz_de_handled = true;	// run only once
+
+
+
+	// ajaxify myself
+	filOtaz_de.ajaxifyForm('send-comment', {
+		mirrorInput	: true ,
+		onSuccess	: function( data ){
+			filOtaz_de.kommune.updateLogin();
+//console.log('success handler send-comment '+ $(data).html() );
+//			var message = $(data).find('.message');
+//			alert( message.length ? message.text() : 'OK' );
+			} 
+		});   
+
+
+	if( formN.parents('.wing').length ) {    // we're in wing
+//console.log('send-comment in wing '+ formN.length +', '+ formN.parents('.wing').length +', '+ formN.parents('.float').length );
+
+	var multiUse = function() {
+
+		// === lend ourselfes to reply-function ===
+
+		// shared functions
+		var onScroll, reset;
+
+		// shared data
+		var form, anchor, prior, bros, dad, uncles, yMin;
+
+
+		$('.community.page >.body >.sect_commentlinks').find('>.sectbody >li, .thread >li').each( function(i,el){	// each comment
+
+			// per comment data
+			var refN	= $(el),
+			    toolbarN	= refN.find('>.toolbar'),
+			    id,
+			    onClick
+			    ;
+
+			toolbarN.find('>.reply >a').click( function(){
+				// reply specific
+				onClick({
+					idKey	: 'asid',
+					title	: {
+						prefix	: '',
+						suffix	: ' antworten'
+						},
+					hint	: 'Antwort bitte hier eingeben',
+					submit	: 'antworten'
+					});
+				} );
+			
+			toolbarN.find('>.report >a').click( function(){
+				// report specific
+				onClick({
+					a	: 'report',
+					idKey	: 'pid',
+					title	: {
+						prefix  : 'Kommentar von ',
+						suffix  : ' melden'
+						},
+					hint    : 'Problem bitte hier beschreiben',
+					submit	: 'melden'
+					});
+				} );
+
+			toolbarN.css({ visibility:'visible' });
+
+
+			onClick = function( par ) {
+
+					// determine shared data late
+				if( !form ) {
+					form = {
+						titleN	: formN.find('>.secthead >h2 >a >span'),
+						aN	: formN.find('>.sectbody >input[name="a"]'),
+						idN	: formN.find('>.sectbody >input[name="asid"]'),
+						pidN	: formN.find('>.sectbody >input[name="pid"]'),
+						textN	: formN.find('>.sectbody >span >textarea'),
+						submitN	: formN.find('>.sectbody >input:submit')
+						};
+					form.hintN 	= form.textN.prev('p');
+					form.org = {
+						title	: form.titleN.text(),
+						hint	: form.hintN.text(),
+						a	: form.aN.attr('value'),
+						submit	: form.submitN.attr('value')
+						};
+					}
+
+				// determine per comment data late
+				if( !id )  	id = refN.attr('id').replace(/^[^0-9]*/, '');
+
+
+				// change presented data to our needs
+
+				if( par.a ) {
+					if( !( form.aN  && form.aN.length  ) )  
+						form.aN  = $('<input class="constant" type="hidden" />').insertBefore( form.submitN );
+					form.aN.attr({	name	: 'a',
+							value	: par.a
+							});
+					}
+				else if( form.aN ) {
+					form.aN.remove();
+					form.aN = null;
+					}
+
+				if( par.idKey ) {
+					if( form.idN ) form.idN.remove();
+					form.idN = $('<input class="constant" type="hidden" />')
+						.attr({	name	: par.idKey,
+							value	: id
+							})
+						.insertBefore( form.submitN );
+					}
+				else if( form.idN ) {
+					form.idN.remove();
+					form.idN = null;
+					}
+
+				form.titleN.empty().append( 
+					par.title.prefix, 
+					$('<span>'+ refN.find('>.author >h4').text() +'</span>').addClass( refN.attr('class') ),
+					par.title.suffix
+					);
+
+				form.hintN.text(		par.hint	);
+
+				form.submitN.attr({	value :	par.submit	});
+
+
+				// add reset options
+				(new filOtaz_de.Form( formN )).cancel( function(){ reset();	afterLogin.fadeIn(); });
+				formN.on('filOtaz_de.Form.done',   reset );
+
+				// geometry
+				var	commBot	=   toolbarN.offset().top +   toolbarN.outerHeight(),
+					formBot = form.textN.offset().top + form.textN.outerHeight(),
+					d	= commBot - formBot
+					;
+				if( !yMin ) yMin = formBot - $(window).scrollTop();
+				if( commBot - $(window).scrollTop() < yMin )  window.scrollTo( 0, commBot - yMin );
+
+				// relocate form to stick w/ referenced comment
+				if( !anchor && d >0 ) {
+					prior = formN.prev(), bros = formN.nextAll(), dad = formN.parent(), uncles = dad.filter('.rack').nextAll(), afterLogin = $('form#bb-login').nextAll().not('script');
+					messageN = $('#successMessage');
+					anchor = $('<div class="community wing pin" />')
+						.css({  position: 'absolute',
+							top     : formN.offset().top +'px',
+							left    : dad.offset().left +'px',
+							width   : formN.width() +'px'
+							})
+						.appendTo( document.body )
+						;
+					if( uncles.length ) {   // we're in rack
+						dad.css({  borderBottomStyle: 'none'  });
+						anchor.append( $('<div />').addClass( dad.attr('class') ).append( formN, bros ), uncles );
+						}
+					else	anchor.append( formN, bros );
+					}
+
+				if( anchor ) {
+
+					// fading out "meistkommentiert" when answering
+
+					afterLogin.fadeOut();
+				// refresh for second ... n time "antworten"
+				// commtented out to prevent "neues kommtar" instead of "antworten"
+				//	if (formN.hasClass('worked')){
+				//		  if( form.aN ) form.aN.remove();
+				//		  if( form.idN ) form.idN.remove();
+				//	}
+
+					anchor.animate(
+						{ 
+							top : formN.offset().top + d
+						},
+					function(){
+							$(window).scroll( onScroll );
+							} );
+						}
+
+				}; //onClick
+
+			} ); //each comment
+
+			onScroll = function() {
+				var ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top;
+				// reset clears the whole form, we don't want that onScroll, so we only call relocateForm instead
+				// if( formN.offset().top <= ref )  reset();
+
+				// Do not scroll when already commented and there is success message
+				if (( formN.offset().top <= ref ) && ! (formN.hasClass('worked')))  relocateForm();
+				};
+			reset = function() {
+				if( reset ) 	formN.off('filOtaz_de.Form.done');
+				resetForm();
+				relocateForm();
+				};
+			relocateForm = function() {
+				// clean up
+				if( onScroll )  $(window).off('scroll.taz_onscroll');
+
+				// relocate form back
+				if( anchor ) {
+					var 	ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top,
+						d = anchor.offset().top - ref
+						;
+					anchor.animate({ top: ref }, d, function(){
+						dad.append( formN, bros );
+						if( uncles.length ) {	// we were in rack
+							dad.css({  borderBottomStyle: null  });
+							dad.after( uncles );
+							}
+						if( anchor ) anchor.remove(); anchor = null;
+						} );
+					}
+				};
+			resetForm = function() {
+				// reset shown data
+				if( form.aN      ) form.aN.remove();
+				if( form.idN     ) form.idN.remove();
+//				if( form.cancelN ) form.cancelN.remove();
+				form.titleN.text(		form.org.title	);
+				form.hintN.text(		form.org.hint	);
+				form.textN.attr({	value : ''		}).trigger('blur');
+				form.submitN.attr({	value : form.org.submit	});
+
+				};
+
+		}; // multiUse
+
+
+		if( formN.parents('.float').length ) { 	// already relocated into float
+			multiUse();
+			}
+		else {					// wait for relocation
+
+			formN.parents('.wing').on('filOtaz_de_float_mounted', function(){  multiUse();  });
+			}
+		} //we're in wing
+
+	})(); </script>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><form name="form" method="post" enctype="application/x-www-form-urlencoded" id="bb-login" class="even sect sect_bb-login_form style_kommune " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><ul role="toolbar" class="toolbar"><li class="login"><a href="" target="_blank">Login</a></li><li class="settings"><a href="https://taz.de/kommune/post.php?a=registration" target="_blank">Registrieren</a></li><li class="newpass"><a shape="rect" target="_blank" href="https://portal.taz.de/?a=nopw">Passwort vergessen?</a></li></ul></div><div class="sectbody"><input type="hidden" name="a" class="constant" id="form_a" value="login"></input><span class="field"><p class="label">E-Mail</p><input type="text" name="email" class="line" id="form_email"></input></span><span class="field"><p class="label">Passwort</p><input type="password" name="password" class="secret" id="form_password"></input></span><input type="submit" class="submit" name="ignore" value="einloggen"></input></div></form><script> filOtaz_de.Form( 'bb-login' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+		var formID = 'bb-login';
+		var form = $('#bb-login');
+
+		if( !form.length ) return;
+		if( form[0].filOtaz_de_form_handled ) return; form[0].filOtaz_de_form_handled = true;
+
+		var nodes, org, firstrun = true;
+		if( !filOtaz_de.kommune ) filOtaz_de.kommune = {};
+		if( !filOtaz_de.kommune.updateLogin ) filOtaz_de.kommune.updateLogin = function(){
+			if( !nodes ) nodes = {	// parse DOM lazily
+				head	: form.find('>.secthead'),
+				body	: form.find('>.sectbody').hide(),
+				a	: form.find('input[name="a"]'),
+				inputs	: form.find('span').has('input[name="email"],input[name="password"]'),
+				submit	: form.find('input.submit'),
+				links	: {
+					all		: form.find('ul.toolbar'),
+					login		: form.find('ul>li.login').click(function(){
+								var me = $(this);
+//								nodes.body
+								me.closest('.secthead').nextAll('.sectbody')	// we might be dynamically inserted, so parse DOM here
+								.slideToggle(function(){
+									me.toggleClass('active');
+									});
+								return false;
+								}),
+					settings	: form.find('ul>li.settings'),
+					newpass		: form.find('ul>li.newpass')
+					}
+				};
+			var duration = firstrun ? 0 : $.fx.speeds._default;
+			var tazsid = $.cookie('tazsid');
+			if(! tazsid ){  // not logged in
+					$('#send-comment .submit').val('Einloggen und Senden');
+					};
+
+			if( tazsid ) {	// already logged in
+					$('#send-comment .submit').val('Abschicken');
+
+				// mar: refresh after login error and then successful login
+				if ( $('#bb-login >.sectbody >p.error').length ){
+
+
+					$('.sect_bb-login').fadeOut().remove();
+					$('.sect_bb-login_form').fadeIn();
+					};
+
+
+				var tazid = $.cookie('tazid');
+//console.log('	now logged in as '+ tazid );
+				if( !org ) org = {	// store original values lazily
+					action	: form.attr('action'),
+					a	: nodes.a.attr('value'),
+					submit	: nodes.submit.attr('value'),
+					links	: {
+						login		: nodes.links.login,
+						settings	: {
+							text	: nodes.links.settings.children('a').text()
+							},
+						newpass		: nodes.links.newpass
+						}
+					};
+				form.attr({ action: 'https://taz.de/kommune/post.php?a=logout' });
+//console.log( tazsid );
+
+				nodes.body.slideUp( duration, function(){
+					form.addClass('session');
+					nodes.a.attr({ value: 'logout' });
+					nodes.inputs.hide();
+					nodes.submit.attr({ value: 'ausloggen' });
+					nodes.body.fadeIn( duration/3 );
+					});
+				if( tazid ) var profileURL = '/!ku'+ tazid +'/';
+				nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.login    )  nodes.links.login.detach();
+					if( profileURL ) {
+						if( !nodes.links.profile ) {
+							nodes.links.profile = $('<li><a href="'+ profileURL +'">mein Profil</a></li>');
+							nodes.links.settings.before( nodes.links.profile );
+							}
+						}
+					if( nodes.links.settings )  nodes.links.settings.children('a').text('Einstellungen');
+					if( nodes.links.newpass  )  nodes.links.newpass.detach();
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+				if( profileURL ) {	// tell user their name
+					if( !nodes.salute ) {
+						nodes.salute = $();
+//console.log('go, get profile '+ profileURL );
+						$.ajax({
+							type		: 'GET',
+							url		: profileURL +'c.xml', 
+							dataType	: 'xml',
+							success		: function( data, status, xhr ){
+								if( !nodes.salute ) return;	// we're too late
+								var name = $('content >item[type="person"] >name', data ).text();
+//console.log('	found '+ name );
+								nodes.salute = $('<h2><a>'+ name +'</a></h2>').hide().prependTo( nodes.head );
+								nodes.salute.slideDown( duration );
+								},
+							error		: function( req, status, message ){
+//console.log( req.status +' '+ status +' :: '+ message );
+								},
+							complete	: function( req, status ){
+								}
+							});
+						}
+					}
+				} //tazsid
+			else if( org )	(function(){	// reset logged out state
+				var orgwas = org; org = null;
+				nodes.body.fadeOut( duration/2, function(){
+					nodes.a.attr({		value	: orgwas.a		});
+					nodes.inputs.show();
+					nodes.submit.attr({	value	: orgwas.submit	});
+					form.removeClass('session');
+					}); 
+				if( nodes.salute )  nodes.salute.slideUp( duration, function(){
+					nodes.salute.remove(); nodes.salute = null;
+					});
+				if( nodes.links.all ) nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.profile ) nodes.links.profile.remove(); nodes.links.profile = null;
+					nodes.links.settings.before( orgwas.links.login.removeClass('active') );
+					nodes.links.settings.children('a').text( orgwas.links.settings.text );
+					nodes.links.settings.after(  orgwas.links.newpass );
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+
+				form.attr({		action	: orgwas.action	});
+				})();
+			firstrun = false;
+			};
+		filOtaz_de.kommune.updateLogin();
+
+		var message = filOtaz_de.ajaxifyForm('bb-login', { handle200 : filOtaz_de.kommune.updateLogin } );
+
+		if( message && message.length )	// secure ajax not supported
+			form.after( message );
+
+		})();
+	</script><div class="rack" id="xid524032">
+    
+
+<div role="region" id="" class="first last odd sect sect_shop style_shop "><div class="secthead" role="heading"><h2><a name="meistkommentiert"><span>meistkommentiert</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class=" first odd trodd   "><a href="/Corona-Politiker-Karl-Lauterbach-im-Portraet/!5727184/" class="objlink noavatar" role="link"><h4>Corona-Politiker Karl Lauterbach im Porträt</h4><h3>Viel Pfeffer, kein Salz</h3></a></li><li class=" even trodd   "><a href="/Ethikraetin-Graumann-zu-Massnahmen/!5726067/" class="objlink noavatar" role="link"><h4>Ethikrätin Graumann zu Maßnahmen</h4><h3>„Furcht vor dem Kontrollverlust“</h3></a></li><li class=" odd treven   "><a href="/Gruene-und-Grundeinkommen/!5730367/" class="objlink noavatar" role="link"><h4>Grüne und Grundeinkommen</h4><h3>Im Grundsatz bedingungslos</h3></a></li><li class=" even trodd   "><a href="/Pro-und-Contra-Homeschooling-in-Berlin/!5727153/" class="objlink noavatar" role="link"><h4>Pro und Contra Homeschooling in Berlin</h4><h3>Schickt die Kinder nach Hause!</h3></a></li><li class=" last odd trodd   "><a href="/Aserbaidschan-zerstoert-armenische-Kultur/!5730239/" class="objlink noavatar" role="link"><h4>Aserbaidschan zerstört armenische Kultur</h4><h3>Abschied vom Kloster Dadiwank</h3></a></li></ul></div>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Gefluechtete-an-EU-Aussengrenze/!5668063"></a></div><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Politik/!p4615/" id="menu_p4615"><span itemprop="title">Politik</span></a><ul><li class="first odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span itemprop="title">Deutschland</span></a></li><li class="even trodd"><a href="/Politik/Europa/!p4617/" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="/Politik/Amerika/!p4618/" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="/Politik/Afrika/!p4621/" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="/Politik/Asien/!p4619/" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="/Politik/Nahost/!p4620/" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="/Politik/Netzpolitik/!p4622/" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a><ul><li class="first odd trodd"><a href="/Oeko/Oekonomie/!p4623/" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="/Oeko/Oekologie/!p4624/" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="/Oeko/Arbeit/!p4629/" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="/Oeko/Konsum/!p4625/" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="/Oeko/Verkehr/!p4628/" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven"><a href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span>Wissenschaft</span></a></li><li class="last odd trodd"><a href="/Oeko/Netzoekonomie/!p4627/" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a><ul><li class="first odd trodd"><a href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span>Alltag</span></a></li><li class="even trodd"><a href="/Gesellschaft/Debatte/!p4633/" id="menu_p4633"><span>Debatte</span></a></li><li class="odd treven"><a href="https://gazete.taz.de/" target="_blank" id="menu_p5057"><span>taz.gazete</span></a></li><li class="even trodd"><a href="https://migration-control.taz.de/#de" target="_blank" id="menu_p5058"><span>migration control</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Kolumnen/!p4634/" id="menu_p4634"><span>Kolumnen</span></a></li><li class="even treven"><a href="/Gesellschaft/Medien/!p4630/" id="menu_p4630"><span>Medien</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Bildung/!p4635/" id="menu_p4635"><span>Bildung</span></a></li><li class="even trodd"><a href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span>Gesundheit</span></a></li><li class="last odd treven"><a href="/Gesellschaft/Reise/!p4638/" id="menu_p4638"><span>Reise</span></a></li></ul></li><li class="even trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="/Kultur/Musik/!p4640/" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="/Kultur/Film/!p4641/" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="/Kultur/Kuenste/!p4642/" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="/Kultur/Buch/!p4643/" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="/Kultur/Netzkultur/!p4631/" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="/Sport/Fussball/!p4647/" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="/Sport/Kolumnen/!p4648/" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="/Nord/Hamburg/!p4651/" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="/Nord/Bremen/!p4652/" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="/Nord/Kultur/!p4653/" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="/bei-Tom/!t5180734/" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="/ueber-die-Wahrheit/!115080/" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="/!p4209/#matomo:pk_campaign" id="menu_p5320"><span>Abo</span></a></li><li class="even trodd"><a href="https://taz.de/!p4271/#matomo:pk_campaign" id="menu_p5321"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="even treven"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even trodd"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="odd treven"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="even trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="odd trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="even treven"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd treven"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even treven"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="https://taz.de/!112354/" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="https://taz.de/!p5097/" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="https://taz.de/!114802/" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="https://taz.de/!114191/" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="https://taz.de/!166598/" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4283/" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="https://taz.de/!p4858/" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="https://taz.de/!112355/" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div></body><!-- DEBUG end 20:44:19+01:00--></html>

@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 19:46:06+01:00 page_id=5265 :: Reportage und Recherche--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 5265--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>Essay zu Integration und Zuwanderung: Dieses Deutschland gehört mir - taz.de</title><meta name="author" content="Yasaman Soltani"></meta><meta name="description" content="Die Deutschiranerin Yasaman Soltani hörte oft, sie solle dahin zurückgehen, wo sie herkomme. Sie ging wirklich, kehrte zurück – und hat viel gelernt."></meta><meta name="keywords" content="Longread, Integration, Migration, Black Lives Matter, Hanau, Teheran, Frankfurt/Main, Iran, Reportage und Recherche, taz, tageszeitung "></meta><meta name="taz:title" data-id="5691765" content="Essay zu Integration und Zuwanderung: Dieses Deutschland gehört mir"></meta><meta name="taz:tag" content="Longread" data-tag-id="5298183"></meta><meta name="taz:tag" content="Integration" data-tag-id="5010246"></meta><meta name="taz:tag" content="Migration" data-tag-id="5007824"></meta><meta name="taz:tag" content="Black Lives Matter" data-tag-id="5320244"></meta><meta name="taz:tag" content="Hanau" data-tag-id="5563930"></meta><meta name="taz:tag" content="Teheran" data-tag-id="5027887"></meta><meta name="taz:tag" content="Frankfurt/Main" data-tag-id="5444222"></meta><meta name="taz:tag" content="Iran" data-tag-id="5007776"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta><meta property="og:url" content="https://taz.de/!5691765/"></meta><meta property="og:locale" content="de_DE"></meta><meta property="og:type" content="article"></meta><meta name="twitter:card" content="summary_large_image"></meta><meta name="twitter:site" content="@tazgezwitscher"></meta><meta property="og:title" content="Essay zu Integration und Zuwanderung: Dieses Deutschland gehört mir"></meta><meta property="fb:app_id" content="966242223397117"></meta><meta name="twitter:title" content="Essay zu Integration und Zuwanderung: Dieses Deutschland gehört mir"></meta><meta property="og:description" content="Die Deutschiranerin Yasaman Soltani hörte oft, sie solle dahin zurückgehen, wo sie herkomme. Sie ging wirklich, kehrte zurück – und hat viel gelernt."></meta><meta name="twitter:description" content=" Die Deutschiranerin Yasaman Soltani hörte oft, sie solle dahin zurückgehen, wo sie herkomme. Sie ging wirklich, kehrte zurück – und hat viel gelernt."></meta><meta property="og:image" content="https://taz.de/picture/4215113/948/25390214-1.jpeg"></meta><meta name="twitter:image" content="https://taz.de/picture/4215113/948/25390214-1.jpeg"></meta><meta property="article:published_time" content="2020-06-21T12:50:00+01:00"></meta><meta property="article:modified_time" content="2020-06-21T21:48:11+01:00"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"5691765" // String
+            , page_title_enc      :"5691765: Essay zu Integration und Zuwanderung: Dieses Deutschland gehört mir" // String
+            , custom_url_enc      :"/!5691765" // String
+            , channel             :"web" // String
+            , area                :"Redaktion" // String
+            , department          :"p5265" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : false  // Boolean
+            , is_article          : true  // Boolean
+            , has_tags            : true  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "https://taz.de/lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<link rel="preload" href="/lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff" as="font" type="font/woff" crossorigin="anonymous"></link><link rel="preload" href="/lib/ch/web/pix/tazze46.png" as="image" media="(min-width: 49px)"></link><link rel="canonical" href="https://taz.de/Essay-zu-Integration-und-Zuwanderung/!5691765/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Reportage und Recherche" href="/!p5265/rss.xml"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="/rss.xml"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="/"></link><link rel="copyright" type="text/html" title="Impressum" href="/6/impressum/"></link><link rel="stylesheet" type="text/css" media="screen, print" href="/lib/ch/web/css/news2020-10-20_55.css"></link><link href="/lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 6]> <link rel="stylesheet" type="text/css" href="/lib/style/ie6.css"> <![endif]--><!--[if lte IE 7]><style type="text/css">
+			ul.topbar                      >li      >a>span,
+			.secthead>ul[role='navigation']>li      >a>span	{  border-left: 1px solid; padding: 0px 4px;  }
+			ul.topbar                      >li.first>a>span,
+			.secthead>ul[role='navigation']>li.first>a>span	{  border:none; padding-left:0px;  }
+			ul.topbar                      >li      >a>span  {  border-color:white;    }
+			.secthead>ul[role='navigation']>li      >a>span  {  border-color:#888888;  }
+			.box h2 {  line-height:20px;  }
+			.author  {	display:inline;	float:none;	}
+			.sect_spb .sectbody {	padding-top:8px;	}
+			/* fil 2011-04-08 */
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward >ul.toolbar  {  height:28px;  }
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward ul.toolbar >li  {  float: left !important;  }
+			#reward >div  {  clear:both;  }
+			.sect_article >.sectfoot ul.toolbar  {  position:relative !important; top:0px; left:0px; height:24px;  }
+			#micropay ul.toolbar  {  height:52px;  }
+			.sect_article >.sectfoot {  padding-bottom:30px  }
+		</style><![endif]--><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="/uploads/cmp/yieldlove_cmp.js"></script><script type="text/javascript" src="/uploads/cmp/yieldlove.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="/lib/ch/web/js/2020-10-20_55.js"></script><script type="text/javascript"> if( filOtaz_de && filOtaz_de.goMobile )  filOtaz_de.goMobile(); </script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"5691765" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/Reportage-und-Recherche" // String
+            , is_article      : true  // Boolean
+            , is_corp         : false  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            // 2. check for not closing overlay
+            if ( $("#tzi-paywahl-fg").length && "MutationObserver" in window ){
+                p.trackEvent( 'TZI', 'displayed', 'LAYER_SHOWN_OBSERVE_TEST');    
+                var paywahl = document.getElementById('tzi-paywahl-fg');
+                var observer = new MutationObserver(function(mutations) {
+                  p.trackEvent( 'TZI', 'displayed', 'LAYER_CLOSED_OBSERVE_TEST');    
+                  observer.disconnect();
+                });
+                observer.observe(paywahl, { 
+                    attributes: true, 
+                    attributeFilter: ['style'] 
+                });
+            }
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        // mar: reactivated for tracking of special menu
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+*/
+
+            $(document).on("click", ".longread.article .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL-LONGREAD' ) });
+	        $(document).on("click", ".longread.article .sect_mostread a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'MEISTGELESEN-LONGREAD' ) });
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page:not(.longread) .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page:not(.longread) ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page:not(.longread) .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" src="https://script.ioam.de/iam.js"></script><script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript">
+		// Google Publisher Tag - https://developers.google.com/doubleclick-gpt/reference
+		var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; 
+	(function(){
+		var adArea = 'Reportage-und-Recherche';	//
+		googletag.cmd.push( function() {
+			var pa = googletag.pubads();
+			pa.setForceSafeFrame(true);
+			pa.collapseEmptyDivs();
+			pa.setTargeting('position', [ adArea ]);
+      //pa.setTargeting('test', ['fireplace']); //       * * * test only ! * * *
+      //pa.setTargeting('test', ['wallpaper']);   //       * * * test only ! * * *
+      pa.setTargeting('page_id', ['5691765']);
+			if( location.protocol =='https' )
+				pa.setTargeting('ssl', ['ja']);
+			googletag.enableServices();
+			});
+		})();
+	</script><script>
+		// expect jQuery already to be loaded
+	(function() {
+		if( !window.filOtaz_de )		window.filOtaz_de		= Object;
+		if( !window.filOtaz_de.ads )		window.filOtaz_de.ads		= Object;
+		if( !window.filOtaz_de.ads.gpt )	window.filOtaz_de.ads.gpt	= Object;
+
+        var sizes = {
+             'artikel_medrec-1'    :[300,250]
+            ,'artikel_medrec-2'    :[300,250]
+            ,'artikel_medrec_mitte' :[300,250]
+            ,'ros_sidebar-1'       :[300,250]
+            ,'ros_sidebar-2'       :[300,100]
+            ,'uebersicht_medrec-1' :[300,250]
+            ,'uebersicht_medrec-2' :[300,250]
+            ,'uebersicht_medrec-3' :[300,250]
+            ,'uebersicht_medrec-4' :[300,250]
+            ,'uebersicht_medrec-5' :[300,250]
+            ,'uebersicht_board-1'  :[624,150]
+            ,'ros_billboard-1'     :[870,250]
+            ,'mobile_banner-1'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-2'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-3'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-4'     :[[300,250],[320,50],[320,100]]
+            ,'ros_top-links'       :[[120,600],[160,600],[300,600]]
+            ,'ros_top-mitte'       :[[728,90],[800,250],[870,250],[970,90],[970,250]]
+            ,'ros_top-rechts'      :[[120,600],[160,600],[300,600]]
+            ,'ros_leaderboard-1'   :[728,90]
+            ,'fireplace-mitte'     :[[970,90],[728,90]]
+            ,'fireplace-links'     :[160,601]
+            ,'fireplace-rechts'    :[160,600]
+            ,'fireplace_bg'        :[1,1]
+            };
+        var roadblocks = {};
+  
+  
+      roadblocks = {
+         'ros_top-mitte'   :['fireplace_mitte']
+        ,'ros_top-rechts'  :['fireplace_mitte'] 
+      };
+    
+    
+		// general ad handling
+
+		// --> to be triggered for ad_zone if ad is (to be) delivered
+		filOtaz_de.ads.fitIn = function( container ) {	// make space for ad in layout
+			var container = $( container );
+//console.log('fit '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.addClass('shown');
+			container.addClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').addClass('aded_'+( container.height() >120 ?'big' :'small' ) );
+				var badge = container.hasClass('ad_zone_sold') ? 'Anzeige' : 'taz-Angebot';
+				container.before('<div class="ad_badge">'+ badge +'</div>');
+				}
+			container.trigger('TAZadInserted').trigger('TAZboxChange');
+			};
+
+		// --> to be triggered for ad_zone if no ad is (to be) delivered
+		// redundant?
+		filOtaz_de.ads.reclaim = function( container ) {	// remove whitespace from non-delivered ad
+			var container = $( container );
+//console.log('reclaim '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.removeClass('shown');
+			container.removeClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').removeClass('aded_big aded_small');
+				}
+			container.trigger('TAZadRemoved').trigger('TAZboxChange');
+			};
+    
+    
+
+		var fuzeAdFrame = function( frame ) {	// register frame for messages, fire if one is from our content
+console.log('legacy fuzeAdFrame', frame  );
+			};
+    
+    
+    // Hintergrund per Message
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+    window[eventMethod](messageEvent, function(e) {
+      if (e.data.toString().indexOf("color") != -1) {
+        $("#background").css("background-color", e.data.split(" ")[1]);
+        }
+      }, false);
+    
+    
+		// activate ad frame
+		var adZoneHandled = {};
+    
+    var get_id = function( name ) {
+      return $('div[name=' + name + ']').attr('id');
+      };
+    
+    var get_name = function( id ) {
+      return $('#'+ id ).attr('name');
+      };
+    
+    unblock = function( id, rb_id ) {
+      var name = get_name(id);
+      var index = roadblocks[name].indexOf(rb_id);
+      if ( index > -1 ) {
+        roadblocks[name].splice(index, 1);
+        }
+      if ( !roadblocks[name].length ) {
+        googletag.defineSlot( '/118803185/' + name, sizes[name], id ).addService( googletag.pubads() );
+        googletag.display( id );
+        }
+      };
+    
+    filOtaz_de.ads.gpt.activateAdFrame = function( id ) {  
+			if( !id ) return;
+			if( adZoneHandled[id] ) return; adZoneHandled[id] = true; // only one active zone per id
+ 
+			var packing   = $('#ad_bin_'+ id );
+			id = 'ad_zone_'+ id;
+			var container = packing.find('>#'+ id );
+  
+			var name = container.attr('name');
+			if( !name || !sizes[name] ) return;
+   
+			// handle custom ad load events
+			container.on('filOtaz_de.ads.gpt.noBanner',   function(){  return false;  });
+			container.on('filOtaz_de.ads.gpt.preBanner',  function(){
+				filOtaz_de.ads.fitIn( container );
+				return false;
+				});
+			container.on('filOtaz_de.ads.gpt.postBanner', function(){  return false;  });
+
+
+			// define content
+			googletag.cmd.push( function() {
+				var pa = googletag.pubads();
+        if ( roadblocks[name] ) {
+          pa.addEventListener('slotRenderEnded', function (e) {
+            for (var i=0; i<roadblocks[name].length; i++) {
+              if ( e.slot.getSlotElementId() == 'ad_zone_' + roadblocks[name][i] ) {
+
+		    if ( e.isEmpty ) {
+                  unblock(id, roadblocks[name][i]);
+                  }
+                else {
+                  document.getElementById(id).style.display = 'none';
+                  for (var key in roadblocks) {
+                    if ( !roadblocks.hasOwnProperty(key) ) continue;
+                    for ( var j=0; j<roadblocks[key].length; j++ )
+                    if ( id == 'ad_zone_' + roadblocks[key][j] ) {
+                      unblock(get_id(key), roadblocks[key][j]);
+                      break;
+                      }
+                    }
+                  }
+                }
+              }
+			    }); // pa.addEventListener
+			    //	    console.log('roadblocks' + id);
+          googletag.display(id);
+          }
+        else {
+          pa.display( '/118803185/'+ name, sizes[name], id );
+	// console.log( 'asked for', '/118803185/'+ name, sizes[name], id );
+          }
+				pa.addEventListener('slotRenderEnded', function(e) {
+			    if( e.slot.getSlotElementId() != id )  return;	// not our slot
+			    container.trigger( e.isEmpty ? 'filOtaz_de.ads.gpt.noBanner' : 'filOtaz_de.ads.gpt.preBanner' );
+console.log( name +( e.isEmpty ? ' isEmpty' : '' ) );
+					});
+        });
+      }; //filOtaz_de.ads.gpt.activateAdFrame
+
+		// activate wallpaper combo add frame
+/*
+		filOtaz_de.ads.gpt.wallpaper = function() {
+			console.log('filOtaz_de.ads.gpt.wallpaper not yet supported');
+			};
+*/
+
+		})();
+	</script><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link><link rel="manifest" href="/manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body><noscript><img src="https://taz.de/stats/piwik.php?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Redaktion/Reportage-und-Recherche,Artikel",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><span id="ad_bin_fireplace_bg" class="ad_bin"><div id="ad_zone_fireplace_bg" name="fireplace_bg" class="ad_zone"></div></span><span id="ad_bin_fireplace_mitte" class="ad_bin"><div id="ad_zone_fireplace_mitte" name="fireplace-mitte" class="ad_zone"></div></span><span id="ad_bin_fireplace_links" class="ad_bin"><div id="ad_zone_fireplace_links" name="fireplace-links" class="ad_zone"></div></span><span id="ad_bin_fireplace_rechts" class="ad_bin"><div id="ad_zone_fireplace_rechts" name="fireplace-rechts" class="ad_zone"></div></span><span id="ad_bin_fireplace_script" class="ad_bin"><div id="ad_zone_fireplace_script" name="fireplace-script" class="ad_zone"></div></span><script type="text/javascript">
+(function(){
+  var parent = $('#ad_bin_fireplace_rechts').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_rechts');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_bg').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_bg');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_mitte').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_mitte');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_links').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_links');
+  })(); 
+              </script><div id="adzone_wall" class=""><span id="ad_bin_ros_top_rechts" class="ad_bin"><div id="ad_zone_ros_top_rechts" name="ros_top-rechts" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_rechts';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><span id="ad_bin_ros_top_mitte" class="ad_bin"><div id="ad_zone_ros_top_mitte" name="ros_top-mitte" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></div><div id="pages" class="news"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="/!p4209/#matomo:pk_campaign" id="menu_p5320"><span>Abo</span></a></li><li class="even trodd"><a href="https://taz.de/!p4271/#matomo:pk_campaign" id="menu_p5321"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="even treven"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even trodd"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="odd treven"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="even trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="odd trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="even treven"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd treven"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even treven"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul><div class="full news longread article page first odd first_page n1" itemscope="" itemtype="http://schema.org/NewsArticle"><div class="head" role="head"><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="even trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="odd treven"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a></li><li class="even trodd"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="odd trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a></li><li class="even treven"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a></li><li class="odd trodd"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a></li><li class="even trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a></li><li class="last odd treven"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><span class="body" role="main"><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171640/" ratioURL-ressource="171640" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news longread"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Unser täglich Wort gib uns heute</span>
+</h1>
+  		<p xmlns="" class="article first odd"><span class="big-cap-outer"><span class="big-cap-inner">A</span></span>lle Artikel auf taz.de sind frei zugänglich. Tag für Tag und Monat für Monat stellen wir unsere Arbeit der Öffentlichkeit frei zur Verfügung. Wir machen das aus Überzeugung, denn es braucht kritischen Journalismus im Netz. Aber natürlich brauchen auch wir dafür Geld – und appellieren deshalb an Sie, unsere Leser*innen:     
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt </strong><strong><strong>die taz </strong>mit Ihrem Beitrag</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171330/" ratioURL-ressource="171330" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news longread"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Geld erhält die Lesbarkeit.</span>
+</h1>
+  		<p xmlns="" class="article first odd"><span class="big-cap-outer"><span class="big-cap-inner">t</span></span>az.de ist frei zugänglich – ohne Paywall. Aber das geht nur, wenn sich unsere Leser*innen an dieser Idee beteiligen.   
+</p>
+  		<p xmlns="" class="article even"><strong>Deshalb unsere Bitte: Ermöglichen Sie den taz-Journalismus mit Ihrem Beitrag.</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171291/" ratioURL-ressource="171291" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news longread"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Fast 25.000 mal Danke. Und eine große Bitte.</span>
+</h1>
+  		<p xmlns="" class="article first odd"><span class="big-cap-outer"><span class="big-cap-inner">t</span></span>az.de ist frei zugänglich – ohne Paywall. Aber das geht nur, wenn sich unsere Leser*innen an dieser Idee beteiligen.      
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie die taz mit einem Beitrag </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!170949/" ratioURL-ressource="170949" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news longread"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines-2020</span><span class="hide">: </span><span>Seien Sie auf unserer Seite.</span>
+</h1>
+  		<p xmlns="" class="article first odd"><span class="big-cap-outer"><span class="big-cap-inner">A</span></span>ls unabhängiges Medium sind wir auf die Unterstützung unserer Leser*innen angewiesen. Nur mit einer großen Zahl von Freiwilligen kann es gelingen, die taz in digitalen Zeiten zu finanzieren und unsere Arbeit zu erhalten.   
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie uns jetzt mit Ihrem Beitrag</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script type="text/javascript" xml:space="preserve">
+          (function () {
+            patOtaz_de.layer_tzi_paywahl({'campaign': '2019-5-27' });
+          })();
+        </script><div class="main rack" id="xid819017">
+    
+	<div xmlns="" class="metadata" itemscope="">
+<a id="articleURL" href="/!5691765"></a><a id="speakingURL" href="/Essay-zu-Integration-und-Zuwanderung/!5691765"></a><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-article-ID" content="5691765"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="url-ID" content="5691765"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-obj-ID" content="4215113"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="vgwort-counter-ID" content="b74ec076188541f6ada490c5bd33915e"></meta><span id="articleID"></span><span id="cmsArticleID">5691765</span><img src="//taz.met.vgwort.de/na/b74ec076188541f6ada490c5bd33915e" width="1" height="1" alt=""><img src="/count/vgwort/b74ec076188541f6ada490c5bd33915e.gif" width="1" height="1" alt="">
+</div>
+<div role="region" id="" class="odd sect sect_article news longread"><article class="sectbody" itemprop="articleBody"><div xmlns="" class="secthead">
+      <a class="full picture" href="/picture/4215113/948/25390214-1.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	" itemprop="image"><img src="/picture/4215113/948/25390214-1.jpeg" alt="" title=""></a><p class="caption">„Auf den Straßen sprachen plötzlich viele Menschen meine Sprache“: Soltani in Frankfurt/Main <span class="credit"> Foto: Bernd Hartung</span></p>
+    <div class="headlineWrapper"><h1 class="headline" itemprop="headline">
+<span class="kicker">Essay zu Integration und Zuwanderung</span><span class="hide">:</span><span>Dieses Deutschland gehört mir</span>
+</h1></div>
+<p class="intro" itemprop="description">Die Deutschiranerin Yasaman Soltani hörte oft, sie solle dahin zurückgehen, wo sie herkomme. Sie ging wirklich, kehrte zurück – und hat viel gelernt.</p>
+<div class="profile_wrapper">
+<p class="author_intro">Ein Artikel von</p>
+<div class="author_list"><a class="author person objlink" rel="auhtor" itemprop="url" href="/Yasaman-Soltani/!a58627"><h4>Yasaman Soltani</h4></a></div>
+</div>
+<div class="dateLocWrapper"><div class="location_wrapper"><p>21.6.2020, 12:50 UHR</p></div></div>
+</div>
+      
+      
+    
+      <p xmlns="" class="article first odd"><span class="big-cap-outer"><span class="big-cap-inner">F</span></span>rau Soltani, wenn es Ihnen hier nicht gefällt, dann gehen Sie doch wieder dorthin zurück, wo Sie hergekommen sind.“</p>
+      <p xmlns="" class="article even">Als ich vor <a target="_blank" href="https://www.zeit.de/gesellschaft/zeitgeschehen/2012-04/-leserartikel-integration-deutsch-sprechen">acht Jahren einen Leserartikel für <em>Zeit Online</em></a> schrieb und darin ausführte, dass die Integration von Ausländern nicht nur durch diese zu erreichen sei, sondern auch eine Beteiligung der deutschen Bevölkerung erfordere, las ich zahllose Kommentare, die mir ein verbales Rückflugticket ausstellten. Damals, 2012, war das Wort <a target="_blank" href="/Hate-Speech-im-Internet/!5628313/">„Hasskommentar“</a> noch neu, und ich kannte den Umgang damit nicht.</p>
+      
+      
+      <div class="webelement-content-container" webelementid="html-5696646"><div class="webelement-content-container-content sectbody"><h6>Wir würden Ihnen hier gerne einen externen Inhalt zeigen. Sie entscheiden, ob sie dieses Element auch sehen wollen.</h6><p>Ich bin damit einverstanden, dass mir externe Inhalte angezeigt werden. Damit können personenbezogene Daten an Drittplattformen übermittelt werden. <a href="https://taz.de/!166598" target="_blank">Mehr dazu in unserer Datenschutzerklärung.</a></p></div><div class="webelement-content-container-inner"><label class="checkbox-switch"><input type="checkbox"></input><span class="checkbox-switch-slider-round"></span><span class="webelement-checkbox-switch-text">Externen Inhalt erlauben<span id="consentPreview"></span></span></label><p class="webelemnt-checkbox-switch-disclaimer"></p></div><div class="webelement-html-content" data-initial-state="true" webelementid="html-5696646"><noscript class="html-content" type="text/plain"><iframe src="https://taz-vorgelesen.podigee.io/9-deutschland-integration-iran/embed?context=external&theme=default" style="border: 0" border="0" height="150" width="100%"></iframe></noscript></div><div class="webelement-js-content"><script type="text/javascript">steffiOtaz_de.WebelementSwitch().setWebelementSwitch('html-5696646');</script></div></div>
+    
+      <p xmlns="" class="article odd">Ich las einen nach dem anderen und wurde trauriger und trauriger, bis ich endlich verstand, dass es sich nicht um konstruktive Kritik an meinem Artikel handelte. Meine Sätze hatten etwas angerührt. 50.000 Aufrufe. 522 Kommentare. Über Tage meistgelesener Artikel. Ich versuchte, die Kontrolle über die Reaktionen zu gewinnen, erstellte eine Liste, in die ich alle positiven und negativen Kommentare eintrug. Doch ihre Worte schwirrten mir im Kopf umher und taten weh. Die Negativen hatten einfach mehr Gewicht.</p>
+      <p xmlns="" class="article even">Kommentar Nummer 66 lautete: „Wer die angebotene Wurst nicht will, verlässt bitte den Laden und lässt sich woanders bedienen.“ Aber in welchen anderen Laden sollte ich denn gehen? War dieses Land nicht mein Laden? „Warum hassen sie uns?“, hatten Asylbewerber in Hoyerswerda damals auf ein Laken geschrieben.</p>
+      
+      <span id="ad_bin_artikel_medrec_1" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_1" name="artikel_medrec-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">Heute frage ich mich das nicht mehr. Das „Warum“ interessiert mich schlicht nicht mehr. Früher, als Jugendliche, habe ich diskutiert, mich gewehrt. An Wahlständen der CDU stemmten wir uns gegen Gegner der doppelten Staatsbürgerschaft. Wir wollten unsere Herkunft nicht aufgeben, und wir wollten Deutsche sein.</p>
+      <p xmlns="" class="article even">Bei meinem Schülerpraktikum in einer Werbeagentur regte man sich beim Mittagessen gern über die „Ausländer“ auf, und ich, in meiner frischen Bereitschaft, mich aufzulehnen, hielt dagegen. „Auch ich bin Ausländerin“, verkündete ich. „Nein, du bist anders. Du bist total gut integriert.“ Total gut integriert? Wer waren sie, dass sie mir in meinem vermeintlich eigenen Land, diese Auszeichnung gaben? Durfte ich es andersherum genauso? Durfte ich zu ihnen auch „Du sprichst aber gut Deutsch“ sagen?</p>
+      <p xmlns="" class="article odd">Kommentar Nummer 22: „Liebe Zuwanderer, nutzt das Angebot, anstatt zu meckern. Auf dem silbernen Ta­blett werdet ihr die Integration nämlich kaum hinterhergetragen bekommen. Mein Nachbar aus Jugoslavien <em>(sic)</em> ist bestens integriert. Und jugo­slavisch <em>(sic)</em> spricht er nicht mehr – er hat sein Geburtsland hinter sich gelassen. Er hat keine doppelte Staatsangehörigkeit! Er hat sich eben ganz und gar integriert und ist von einem Einheimischen nicht mehr zu unterscheiden.“</p>
+      
+      <span id="ad_bin_artikel_medrec_mitte" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_mitte" name="artikel_medrec_mitte" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article even">Einmal abgesehen davon, dass es 2012 das Land Jugoslawien gar nicht mehr gab und es die Sprache Jugoslawisch nie gegeben hat, fragte ich mich, ob der Leser recht hatte. War das das Rezept, um hier akzeptiert zu werden? Seine Muttersprache nicht mehr sprechen? Sein Vaterland hinter sich lassen?</p>
+      <p xmlns="" class="article odd">Mein Vaterland ist der Iran. Dort bin ich 1983 geboren. Wir verließen meine Heimat, als ich sechs Jahre alt war. Meine Eltern waren damals Anfang dreißig, mein Bruder war gerade mal drei. Es war keine gute Zeit, um im Iran zu leben. Der Iran-Irak-Krieg war seit einem Jahr zu Ende, das Land war farblos und karg. Aber 1989 war auch keine gute Zeit, um in Deutschland anzukommen.</p>
+      <p xmlns="" class="article even">Hoyerswerda, 1991.</p>
+      <p xmlns="" class="article odd">Rostock-Lichtenhagen, 1992.</p>
+      <p xmlns="" class="article even">Solingen, 1993.</p>
+      <p xmlns="" class="article odd">Als ich erwachsen war, erzählte mir mein Vater, dass er nach unserer Ankunft aus Deutschland fliehen wollte. Dabei waren wir doch gerade erst geflohen. Wir waren Flüchtlinge. Und er erzählte mir auch, dass er sich damals einen Vollbart wachsen ließ. Ein Gemisch aus Wut und Trotz. Vielleicht auch Stolz. Er wollte sich als Ausländer nicht verstecken.</p>
+      <p xmlns="" class="article even">Wir lebten in Frankfurt am Main. Ich erinnere mich an wenig aus dieser Zeit. Ich aß hier meine erste Banane, das weiß ich noch. Und ich erinnere mich an einen Schultag, an dem meine Mutter mich zu spät abholte. Ich saß weinend im Büro der Schulleiterin, die mir Fragen auf Deutsch stellte, die ich zwar verstand, doch nicht auf Deutsch beantworten konnte. Vielleicht war es auch mein Schluchzen, das mich vom Antworten abhielt. Ich weiß es nicht mehr.</p>
+      
+      <span id="ad_bin_artikel_medrec_2" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_2" name="artikel_medrec-2" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_2';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">Ich weiß nur, dass ich nickte und den Kopf schüttelte, um ihre Fragen zu beantworten. Nur sieht das persische Nicken und Kopfschütteln anders aus als das Deutsche. Im Iran hebt man sein Kinn, um zu sagen: „Nein.“ Die umgekehrte Bewegung, also, das Kinn zu senken, bedeutet „Ja.“ Und so hielt die Schulleiterin sowohl mein Ja als auch mein Nein für ein amputiertes Ja.</p>
+      <p xmlns="" class="article even">Ich erinnere mich auch daran, dass wir für unseren Asylantrag Stuhlproben abgeben mussten. Auch wir Kinder mussten uns im Bad auf den Boden hocken und auf ein Stück Papier kacken, damit wir es eintüten und verschicken konnten.</p>
+      <p xmlns="" class="article odd">Ich erinnere mich, dass ich nicht konnte und wie meine Mutter, die die Angst vor den deutschen Behörden noch nicht verinnerlicht hatte, kurzerhand das Produkt meines Bruders halbierte und eine der Hälften in meinem Namen abschickte. Mit sechs Jahren wusste ich nicht, was Erniedrigung bedeutet, doch diese Szene ist mir in meinem erwachsenen Gehirn als erniedrigend in Erinnerung geblieben.</p>
+      
+      <a xmlns="" class="half picture" href="/picture/4215113/948/25389543-2.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	"><img src="/picture/4215113/300/25389543-2.jpeg" alt="" title=""></a><p xmlns="" class="caption lastInCol">Soltani mit ihrem Bruder vor dem Frankfurter Dom, 1991 <span class="credit"> Foto: privat</span></p>
+    
+      <p xmlns="" class="article even">„Die Anträge auf Anerkennung als Asylberechtigte werden abgelehnt“, hieß es einige Monate später in einem Schreiben vom Bundesamt für die Anerkennung ausländischer Flüchtlinge – wie die Behörde damals noch hieß –, das an mich und meinen Bruder gerichtet war. Er war drei und ich sechs Jahre alt. Hatten wir umsonst gekackt?</p>
+      <p xmlns="" class="article odd">Unser Anwalt ging in Berufung, und unser Leben in Deutschland nahm seinen Anfang. Wir lernten Deutsch, mein Bruder und ich sprachen nach einem Jahr kein Persisch mehr zu Hause, unsere Mutter nannten wir „Mutti“. Meine Eltern fingen an zu arbeiten, und ich erinnere mich an manche Geschichten, die sie von der Arbeit erzählten, davon, wie ihre Kollegen ihnen begegneten.</p>
+      <p xmlns="" class="article even">Dass viele freundlich waren, ist meiner Meinung nach nicht erwähnenswert, das sollte selbstverständlich sein, meine Eltern waren es ja auch. Neben der Freundlichkeit war da noch etwas anderes. Ein Gefühl, das ihnen als Ausländer vermittelte, dass sie im Vergleich zu ihren deutschen Kollegen immer ein bisschen dümmer waren, weil ihr Deutsch nicht muttersprachlich war.</p>
+      <p xmlns="" class="article odd">Ich erinnere mich an eine wütende Hilflosigkeit und daran, wie ich mir vorstellte, meine Mutter auf der Arbeit zu besuchen und ihre Kollegen in einwandfreiem Deutsch zurechtzuweisen. Ich tat es nie. Die Wut blieb.</p>
+      <h6 xmlns="">Wütend auf Merkel und Mustafa</h6>
+      <p xmlns="" class="article even">Mein Bruder und ich gingen zur Schule, aufs Gymnasium, es folgten Studium, Promotion, Approbation, Postdoc. Zusammen legten wir einen beispiellosen Lebenslauf hin, in den sich Erfahrungen streuten, die uns immer wieder daran erinnerten, dass wir nicht „wirklich“ von hier kamen. Die Polizei hielt Jugendliche, die nicht deutsch aussahen, unzählige Male auf der Straße an.</p>
+      <p xmlns="" class="article odd">Ältere deutsche Frauen setzten sich in der U-Bahn weg, wenn neben ihnen jemand mit dunklerer Haut, dunkleren Haaren oder dunklem Bart Platz nahm. Eltern schämten sich, dass die Tochter einen ausländischen Freund mit nach Hause brachte, Professoren vergaben fünf Promotionsstellen an fünf deutsche, also hier geborene Studenten.</p>
+      <p xmlns="" class="article even">An den Migranten gerichtet, hieß es: „Sie können doch so gut Englisch, da ist England genau das Richtige.“ Als ich mich für ein Promotionsstipendium bewerben wollte, sagte mein Professor: „Stipendium? Dafür reichen deine Noten doch nicht.“ Ich hatte einen Einserschnitt im Diplom. Und als ich es trotzdem tat und es erhielt, sagte eine Freundin: „Ja, die Stiftung braucht endlich mal ein Paar Migranten. Sieht sonst echt nicht gut aus.“</p>
+      <p xmlns="" class="article odd">Dann wurde ich Psychotherapeutin. Die teure Ausbildung, die unbezahlte Arbeit in der Psychiatrie finanzierte ich selbst. Es gab sonst kaum Migranten, die sich diesen teuren Job leisten konnten. Für uns hatten die Großeltern nicht gespart, die waren gar nicht hier.</p>
+      <p xmlns="" class="article even">Zu dieser Zeit, 2015, „brach“ die „Flüchtlingswelle“ über Deutschland herein. Und ich behandelte als Erste in unserer Klinik einen geflüchteten Patienten. „Beantragen Sie da erst mal weniger Stunden. Wir wissen ja nicht, ob der die Therapie nur für seinen Asylantrag will“, schlug ein Kollege damals vor. Ich hörte nicht auf ihn und beantragte so viele Stunden, wie er brauchte, damit es ihm wieder gut ging.</p>
+      <p xmlns="" class="article odd">Langsam veränderte sich das Stadtbild. In Frankfurt sprachen plötzlich viele Menschen meine Sprache auf den Straßen. Mir gefiel das. Doch viele Bürger waren wütend. Wütend auf Merkel, auf Mohammed, auf Mustafa. Waren sie auch wütend auf mich?</p>
+      <p xmlns="" class="article even">„Du bist ja nicht wie die anderen Ausländer. Die Iraner sind so fleißig und an Bildung interessiert“, sagte die Mutter einer Freundin. Wir waren die „guten Migranten“. Ich war also nicht wie die anderen Ausländer. Aber auch nicht wie die Deutschen. Wer war ich dann? Deutsche, Frau mit Migrationshintergrund, Migrantin, Ausländerin, Flüchtling, Kanakin.</p>
+      <p xmlns="" class="article odd">Ein ordentliches Kastensystem. „Migra­tions­hintergrund“ klingt für mich wie „Behindertenausweis“ mit unklarer Prozentzahl. Bis 1949 wird per Definition zurückverfolgt, ob die eigenen Eltern zugewandert sind oder nicht. Das will man hier nämlich genau wissen.</p>
+      <p xmlns="" class="article even">„Aber Yasa, wir brauchen doch auch Putzfrauen in dieser Gesellschaft“, antwortete ein Kollege mir, als ich mich für die Schulbildung einer jungen syrischen Klientin einsetzte, und ich verstand, dass die Kanakenkaste notwendig war. Ich hatte dem syrischen Mädchen gesagt, was mir meine Eltern damals gesagt hatten: „Du musst dich so lange bilden, bis du ganz oben in der Gesellschaft einsteigst. Von unten aufsteigen wird dir als Ausländerin schwer gelingen.“</p>
+      <p xmlns="" class="article odd">Und ich hatte mich gebildet. Immer fleißig gelernt, für mich, für meine Eltern, immer mit einer 1 vorneweg. Mehr Bildung ging kaum. Ich hatte auf meine Eltern gehört und war oben eingestiegen.</p>
+      <p xmlns="" class="article even">Und dann saß ich eines Morgens als Leiterin meiner Abteilung in einer Sitzung, und eine Kollegin fragte in die Runde: „Wer kann das Manuskript Korrektur lesen? Am besten macht das ein ‚native speaker‘.“ In unserer Runde gab es zwei Deutsche, die sich meldeten. Auch ich hob meine Hand. „Frau Soltani, aber Sie sind doch keine ‚native speakerin‘ “, sagte sie, und ich senkte langsam die Hand.</p>
+      <p xmlns="" class="article odd">Weiter in der Kommentarspalte. Nun hieß es höflich: „Vielleicht sollten Sie, werte Frau Soltani, auch einen Augenblick darüber nachdenken, wie es Ihnen heute ergehen würde, wären Ihre Eltern im Iran geblieben, anstatt mit Ihnen nach Deutschland zu gehen“, hatte ein anderer Leser geschrieben.</p>
+      <p xmlns="" class="article even">Ja, ich habe tatsächlich oft darüber nachgedacht, wie es uns heute ergehen würde, hätten wir den Iran nie verlassen. Was habe ich jetzt, was ich nicht gehabt hätte? Was habe ich für immer verloren, was ich dort gehabt hätte? Niemand kann mir eine Antwort auf diese Fragen geben. Und dann hatte derselbe Leser noch hinzugefügt: „Neben Ihren Eltern sollten Sie Deutschland dankbar sein, anstatt zu beckmessern.“</p>
+      <p xmlns="" class="article odd">Meinen Eltern war ich dankbar. Doch musste ich Deutschland dankbar sein? Ich konnte keinem Land dankbar sein. Vielleicht meinte der Leser, ich solle Frau Merkel oder Herrn Kohl, der damals Bundeskanzler war, dankbar sein. Doch ich spüre keine Dankbarkeit Deutschland gegenüber. Meine Familie leistet ihren Beitrag, arbeitet, zahlt Steuern. Ich zahle Steuern und behandle die kranken Menschen dieser Gesellschaft. Darunter einen Patienten, der früher in der rechten Szene unterwegs war.</p>
+      <p xmlns="" class="article even">„Ist interessant, dass Sie jetzt eine ausländische Therapeutin haben“, sagte ich, als er mir davon erzählte. „Ja, ist interessant“, sagte er, und es wurde eine gute Therapie. Ich finde, Deutschland kann mir und allen hart arbeitenden Kanaken verdammt noch mal dankbar sein. Es müsste einen Kanaken-Dankbarkeits-Tag geben! Ohne uns würde diese Gesellschaft nicht funktionieren.</p>
+      <p xmlns="" class="article odd">Kommentar Nummer 87: „Die junge Dame konnte hier kostenfrei zur Schule gehen und anschließend studieren, und sie wird aufgrund des Studiums eine bessere Chance auf ein gutes Leben haben als all diejenigen, die ihr dies mit ihren Steuergeldern ermöglichten.“ Waren wir nicht dazu bestimmt, aufzuholen oder gar zu überholen?</p>
+      <p xmlns="" class="article even">Ich wollte in einem Land leben, in dem meine Anwesenheit nicht nur toleriert wurde, nicht nur selbstverständlich war, sondern auch wertgeschätzt wurde. Aber „beckmessern“ durfte ich ja nicht, und wenn man es doch tat, hieß es: „Gehen Sie doch dorthin, wo Sie hergekommen sind, wenn es Ihnen hier nicht gefällt.“</p>
+      <p xmlns="" class="article odd">Vielleicht hatten sie ja recht. Vielleicht sollte ich genau das tun. Es war ein gleichzeitiges Abgeschoben- und Angezogenwerden. Das ständig vermittelte Gefühl, nicht „ursprünglich“ von hier zu sein, und die Sehnsucht, wirklich dazuzugehören, waren die Motoren, die eine Entscheidung vorantrieben: Deutschland verlassen und in den Iran zurückkehren.</p>
+      <p xmlns="" class="article even">„Was ist bloß in dich gefahren? Du willst Deutschland verlassen und in den Iran ziehen?“, sagten meine Freunde. Sie hatten recht. Ich hatte doch alles, was man in Deutschland zum Leben brauchte. Ich war Psychotherapeutin. Ich verdiente genug Geld, ging zum Yoga, hatte meine Freunde und meine Freuden. Ich genoss meine Pseudofreiheit im Zeitalter des Konsums, schaute Netflix, kaufte bei Amazon, ging auf Junggesellenabschiede, schmiss Babyshowers für meine Freundinnen, machte Urlaub, war gestresst, klagte ständig über zu viel Arbeit, dachte über Versicherungen für dies und jenes nach und wiederholte diesen Loop Jahr für Jahr. Es war ein gehetzt betäubtes Leben in Frieden und Sicherheit.</p>
+      <h6 xmlns="">Analphabetin im eigenen Land</h6>
+      <p xmlns="" class="article odd">Und so lief auch der Arbeitsalltag hier einfach vor sich hin. „Ich habe eine kleine, süße Inderin mit depressiven Symptomen gesehen“, sagte eine Kollegin, als sie eine neue Patientin vorstellte. „Ich finde es nicht besonders respektvoll, so über Patienten zu reden. Ich stelle meine deutschen Patienten auch nicht als ‚kleine, süße Deutsche‘ vor“, sagte ich. Und die anderen? Schwiegen. Und ich? Fühlte mich leer, hatte mich ins Aus gespielt. Aus der Ausgrenzung in die Ausgrenzung.</p>
+      <p xmlns="" class="article even">„Gibt es eigentlich schwarze Wundpflaster für Schwarze? Müsste es doch“, fragte ich eines Mittags in die Runde meiner Kollegen. Wir googelten und fanden heraus, dass das bereits in den 60er Jahren in den USA thematisiert worden war. „Man kann sich aber auch über jede Kleinigkeit aufregen“, murmelte eine Kollegin. „Wenn dein Volk über zweihundert Jahre versklavt wurde, und du noch heute täglich Rassismus erfährst, dann ist es keine Kleinigkeit, wenn dein Hautton nicht als Hautton anerkannt wird“, antwortete ich. Und wieder hatte ich mich aus dem Kreis begeben, hatte etwas angesprochen, das zu Mittag schwer verdaulich war. Und die anderen? Schwiegen.</p>
+      <p xmlns="" class="article odd">Wir Kanaken spürten Rassismus, er war da, passierte uns, unseren Eltern, Geschwistern und Freunden, und doch sprach man uns diese Erfahrung ab. „In Deutschland haben alle die gleichen Chancen!“, sagte eine deutsche Freundin, als ich erklärte, dass mein Name bei Bewerbungen wohl weniger Chancen hätte als ihrer. Ihr schien es schwerzufallen, sich einzugestehen, dass wir unter ungleichen Bedingungen gleich weit gekommen waren.</p>
+      <p xmlns="" class="article even">„Wahrgenommene Diskriminierung? Was soll das denn sein? Da kann ja jeder kommen und sagen, er fühlt sich diskriminiert“, sagte ein Kollege, als ich vorschlug, für meine Doktorarbeit zu erfragen, in welchem Ausmaß Migranten Diskriminierung wahrnahmen. Ich arbeitete vor einigen Jahren an einem renommierten Forschungsinstitut, das zahlreiche Migrantenforschungsprojekte durchführte. Dafür gab es nämlich viele Forschungsgelder.</p>
+      <p xmlns="" class="article odd">Die Direktorin sagte: „Ich war in Afrika, und wir waren auf dem Anwesen eines Kollegen. Es war so süß, dort hingen die kleinen schwarzen Kinder wie Äffchen in den Bäumen.“ Aber da konnte ja jeder kommen und sich diskriminiert fühlen.</p>
+      <p xmlns="" class="article even">Ich zumindest hatte mich ja assimiliert, wie man es von mir verlangt hatte. Sie nannten es zwar „integriert“, doch was sie meinten, war „assimiliert“. Ich als Kanakin musste ihnen den Unterschied erklären.</p>
+      <p xmlns="" class="article odd">In diesem Prozess der Assimilierung war ich mir selbst fremd geworden. Ich fühlte mich fremd in mir und mit mir. Ich hatte die Ausgrenzung verinnerlicht, mich dabei verloren und mochte mich nicht. Ich suchte nach diesem Gefühl der Zugehörigkeit. Wahrhaftiger, körperlicher Zugehörigkeit, die durch den Magen ging. Ich wollte mich durch die Erde, die mich geboren hatte, ernähren lassen. Ich dachte, ich würde mich im Iran wiederfinden.</p>
+      <p xmlns="" class="article even">Auf früheren Reisen in den Iran lief ich durch die Straßen Teherans und schaute in Gesichter, die mir bekannt, evolutionär vertraut waren. Die Stadt war voller Onkel und Tanten, die ich nicht kannte. Die Bärte der Männer sahen aus wie der Bart meines Vaters auf den Fotos von früher. Die Ringe an ihren Fingern waren die Ringe, die meine Großeltern trugen. Auch ich wollte einen solchen Ring haben. Ich wollte ihn an meinem Ringfinger tragen. Ich wollte den Iran heiraten und mich, bis dass der Tod uns schied, an ihn binden.</p>
+      
+      <a xmlns="" class="textwide picture" href="/picture/4215113/948/25389541-3.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	"><img src="/picture/4215113/624/25389541-3.jpeg" alt="" title=""></a><p xmlns="" class="caption">Soltani in Teheran: Irgendwann nervte „das blöde Kopftuch, das meine Haare platt drückte“ <span class="credit"> Foto: Foto: privat</span></p>
+    
+      <p xmlns="" class="article odd">Kommentar Nummer 70: „Übrigens ist meine ganz persönliche Erfahrung mit Menschen aus dem Iran leider genau die, die hier in dem Artikel präsentiert wird. Vermeidet man 1001 Möglichkeiten, sie zu beleidigen, finden sie die 1002. Möglichkeit. Mir kommt es manchmal fast so vor, als würden sie nur darauf warten, beleidigt zu werden. Ursache ist meiner Meinung nach ein völlig überkommenes Ehrgefühl.“</p>
+      <p xmlns="" class="article even">Diese unerhörten Sätze ein Leben lang ungehört lassen und weitergehen? Es lebten doch so viele meiner Kanakenfreunde in Deutschland und genossen ihren Wohlstand. Ich konnte es nicht. „Ich bin Postmigration“, sagte ich zu meinen Freunden und meinte damit, dass ich es leid war, expliziten und impliziten Rassismus abzuklären. Mich zu erklären. Andere aufzuklären. Sollten sie doch ihr Land für sich haben.</p>
+      <p xmlns="" class="article odd">Und so kündigte ich meinen Job, ließ mein Leben in Deutschland hinter mir, schwamm gegen den „Flüchtlingsstrom“ flussaufwärts und kam dort an, wo keiner hinwollte, von wo so viele wegwollten und wo manche mich hinwünschten. Freunde schenkten mir zum Abschied nicht ein, sondern gleich drei Kopftücher, und ich machte mich auf den Weg.</p>
+      <p xmlns="" class="article even">Ich hörte die Stimme meiner Mutter: „Jetzt? Nach deiner Approbation? Jetzt willst du alles stehen und liegen lassen, um in den Iran zu gehen? Sei doch vernünftig.“ In den Iran zu gehen, war alles andere als vernünftig. Das war keine rationale Entscheidung, ergab keinen Sinn. „Aber du musst doch ein Kopftuch tragen“, sagten meine Freunde. „Es ist gefährlich dort, wir machen uns doch nur Sorgen um dich“, sagten sie auch. Und: „Das hältst du nie im Leben aus. Dir ist deine Freiheit viel zu wichtig.“</p>
+      <p xmlns="" class="article odd">Sie fragten: „Du willst nach Irak? Ist da nicht Krieg?“ Es half nichts. Vernunft, gute gemeinte Ratschläge und Warnungen ließen mich nicht zweifeln. Dorthin, wo ich hergekommen war, dachte ich nur. Im Sommer 2019 kam ich in Teheran an und stand mit beiden Beinen auf dem Boden, die Fäuste in die Seiten gestemmt in dieser Stadt. Ich schlug mein Zelt auf und spürte nach. Ich suchte und wusste nicht, wonach.</p>
+      <p xmlns="" class="article even">Im Iran konnte ich kaum lesen und schreiben, ich hatte hier nie die Schule besucht. Analphabetin im eigenen Land, dachte ich und bahnte mir Buchstabe um Buchstabe den Weg zu einem Wort, das ich dann oftmals nicht kannte. „Bitte füllen Sie dieses Formular aus“, sagte ein Bankangestellter, als ich dort ein Konto eröffnen wollte.</p>
+      <p xmlns="" class="article odd">Ich nahm das Formular entgegen, starrte auf die Wörter und griff nach dem Stift, der neben mir lag. „Name“, las ich mir langsam selbst vor. Zumindest meinen Namen musste ich doch schreiben können. Verloren starrte ich auf die restlichen leeren Felder, die ich nicht zu füllen vermochte. Mir war heiß, die Klimaanlage half wenig. Noch weniger half der wartende Blick des Bankangestellten.</p>
+      <h6 xmlns="">Wie eine Erstklässlerin in Teheran</h6>
+      <p xmlns="" class="article even">Ein lange vergessenes Gefühl holte mich ein. Eine Sprachlosigkeit, die ich in Deutschland zum ersten Mal erfahren hatte. Ich saß am ersten Schultag einer Mitschülerin gegenüber, bemerkte, dass wir die gleichen Hefte hatten, wollte sie darauf hinweisen und eine Verbindung herstellen, suchte nach ihrem Blick, lächelte, schaute auf mein Heft, dann auf ihres und wollte etwas sagen. Und konnte nicht.</p>
+      <p xmlns="" class="article odd">Die Worte blieben mir im Hals stecken, denn es waren die falschen. Der Augenblick überraschte mich selbst. Sprachlosigkeit hatte ich in meinem kurzen Leben bis dahin noch nicht bewusst erlebt. Und heute in der Bank? Ich gab mich geschlagen. Es hatte keinen Sinn, so zu tun, als sei ich von hier. „Entschuldigen Sie bitte, es ist für mich etwas schwierig, dieses Formular auszufüllen. Könnten Sie mir dabei behilflich sein?“</p>
+      <p xmlns="" class="article even">Und so begleitete er mich durch das Dickicht des Formulars. Stolz wie eine Erstklässlerin kam ich am anderen Ende heraus, machte ein Foto und schickte es meinem Vater. „Mein erstes ausgefülltes Formular“, schrieb ich darunter. Das Leben in Teheran war gar nicht so anders als in Frankfurt und gleichzeitig völlig anders. Ich hatte eine Wohnung im Norden der Stadt, die ich mir nach und nach einrichtete und in der ich tagsüber schrieb.</p>
+      <p xmlns="" class="article odd">Ich ging auch hier zum Yoga, meldete mich mit einem Freund bei einem Essay-Workshop an und besuchte einen Philosophiekurs, in dem wir Texte von Goethe lasen. Freitags ging ich mit Freunden zu Galerie-Eröffnungen, sah mir Theaterstücke an und lud zu Filmabenden bei mir zu Hause ein. „Du siehst selbst total deutsch aus. Das muss wohl daran liegen, dass du dort so lange gelebt hast“, sagte eine Freundin. Ich nickte höflich.</p>
+      <p xmlns="" class="article even">Hier war ich etwas Besonderes, die Freundin aus Europa, obwohl ich mit aller Kraft versuchte, mich anzupassen und meinen deutschen Akzent loszuwerden. Nicht als anders auffallen und doch anders sein. Das Fremdsein haftete weiter an mir. Und trotzdem fühlte ich mich zu Hause bei den Menschen hier. Ihr Lautsein, ihre Emotionen, das viele Essen, hier fühlte ich mich lebendig.</p>
+      <p xmlns="" class="article odd">In Deutschland war es, als würde man mit angezogener Handbremse durchs Leben fahren. Dort drehte ich meine Lautstärke herunter. Zimmerlautstärke eben. Gesetzliche Mittagsruhe. „Psst! Das ist Ruhestörung!“ Ich sehnte mich danach, diese Ruhe zu stören. Ich wollte laut sein, ungestüm, unordentlich, ungeplant. Teheran war all das. Und mehr. Eben ganz anders als Deutschland.</p>
+      <h6 xmlns="">Halle und Hanau</h6>
+      <p xmlns="" class="article even">Kurze Zeit nach meiner Ankunft stand wieder ein Krieg kurz bevor, doch Donald Trump brach den Angriff zehn Minuten vorher ab. Hier lebte man mit diesem und anderen Damoklesschwertern. Wie? Ich weiß es nicht. Die Armut war direkt vor der Haustür, die Menschen waren hilflos und wütend. Und ich – ich war hierhergekommen, um mich selbst zu finden? Ich schämte mich.</p>
+      <p xmlns="" class="article odd">Der Blick vieler Menschen schien zu sagen: „Die hat keine Ahnung. Diese verwöhnten Europäer, die dort im Überfluss leben, wissen nicht, was wirkliche Probleme sind.“ Und sie hatten recht. Das dicke Fell, das sich die Menschen hier hatten zulegen müssen, fehlte mir. Nach einem halben Jahr machte mir alles zu schaffen. Die Luftverschmutzung, die mir in meiner Wohnung den Atem nahm, das Chlor im Wasser, das unter der Dusche in meinen Augen brannte, das blöde Kopftuch, das meine Haare platt drückte.</p>
+      <p xmlns="" class="article even">Ich gehörte nicht mehr zu diesem Land, schon lange nicht mehr. Doch ich wollte bleiben, mir beweisen, dass es ging. Wie konnte ich nach sechs Monaten aufgeben und einfach an das Leben in Deutschland anknüpfen? Es war kein Entweder-oder, es war zu einem Weder-noch geworden.</p>
+      <p xmlns="" class="article odd">Ein weiteres Jahr wollte ich in Teheran leben, kam nach Deutschland, wollte vier Wochen bleiben, kurz durchatmen und wieder zurückfliegen. Doch dann überschlugen sich die Ereignisse, der Iran stand erneut kurz vor einem Krieg, sie schossen das Passagierflugzeug über Teheran ab, es folgten Proteste. Und Deutschland?</p>
+      <p xmlns="" class="article even">In meiner Abwesenheit: der Anschlag in Halle, der Mord an Lübcke. Nach meiner Rückkehr: die Wahl in Thüringen, der rassistische Anschlag in Hanau. Gehen, bleiben, gehen, bleiben, bis Corona mir den Rückweg versperrte, mir die Entscheidung abnahm und mir viel Zeit zum Nachdenken gab. Ich verstand, dass ich nicht mit leeren Händen aus dem Iran zurückgekehrt war. Ich hatte etwas mitgebracht. Es war eine Heimat, die ich mir erschlossen hatte und die ich nun in mir trug.</p>
+      <p xmlns="" class="article odd">Und die deutsche Heimat? Der Mord an George Floyd hatte etwas bewegt, auf der ganzen Welt und auch hier. Im behäbigen Deutschland wurden Wellen spürbar. Mit zehntausend anderen Kanaken und Deutschen stand ich auf dem Römerberg in Frankfurt und rief: „Black Lives Matter!“</p>
+      <p xmlns="" class="article last even">Dieses Deutschland gehört mir! Ich war dort, wo ich hergekommen bin.</p>
+    </article></div>
+
+    
+  
+
+    
+  <div role="region" id="" class="odd sect "><div class="sectbody"><a xmlns="" id="reward" shape="rect">Einmal zahlen</a><script> filOtaz_de.flattr();</script></div></div>
+
+    
+	<div class="shariff">.</div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><!-- DEBUG belly: 3 extras here, 0 from directory Reportage und Recherche, thats 3 merged-->
+      
+      <div class="webelement-content-container" webelementid="html-5697249"><div class="webelement-content-container-content sectbody"><h6>Wir würden Ihnen hier gerne einen externen Inhalt zeigen. Sie entscheiden, ob sie dieses Element auch sehen wollen.</h6><p>Ich bin damit einverstanden, dass mir externe Inhalte angezeigt werden. Damit können personenbezogene Daten an Drittplattformen übermittelt werden. <a href="https://taz.de/!166598" target="_blank">Mehr dazu in unserer Datenschutzerklärung.</a></p></div><div class="webelement-content-container-inner"><label class="checkbox-switch"><input type="checkbox"></input><span class="checkbox-switch-slider-round"></span><span class="webelement-checkbox-switch-text">Externen Inhalt erlauben<span id="consentPreview"></span></span></label><p class="webelemnt-checkbox-switch-disclaimer"></p></div><div class="webelement-html-content" data-initial-state="true" webelementid="html-5697249"><noscript class="html-content" type="text/plain"><iframe src="https://taz-vorgelesen.podigee.io/11-martin-luther-king-klassenkampf/embed?context=external&theme=default" style="border: 0" border="0" height="150" width="100%"></iframe></noscript></div><div class="webelement-js-content"><script type="text/javascript">steffiOtaz_de.WebelementSwitch().setWebelementSwitch('html-5697249');</script></div></div>
+    
+      
+      <div class="webelement-content-container" webelementid="html-5709089"><div class="webelement-content-container-content sectbody"><h6>Wir würden Ihnen hier gerne einen externen Inhalt zeigen. Sie entscheiden, ob sie dieses Element auch sehen wollen.</h6><p>Ich bin damit einverstanden, dass mir externe Inhalte angezeigt werden. Damit können personenbezogene Daten an Drittplattformen übermittelt werden. <a href="https://taz.de/!166598" target="_blank">Mehr dazu in unserer Datenschutzerklärung.</a></p></div><div class="webelement-content-container-inner"><label class="checkbox-switch"><input type="checkbox"></input><span class="checkbox-switch-slider-round"></span><span class="webelement-checkbox-switch-text">Externen Inhalt erlauben<span id="consentPreview"></span></span></label><p class="webelemnt-checkbox-switch-disclaimer"></p></div><div class="webelement-html-content" data-initial-state="true" webelementid="html-5709089"><noscript class="html-content" type="text/plain"><iframe src="https://taz-vorgelesen.podigee.io/41-hanau-terrorismus-vertrauen/embed?context=external&theme=default" style="border: 0" border="0" height="150" width="100%"></iframe></noscript></div><div class="webelement-js-content"><script type="text/javascript">steffiOtaz_de.WebelementSwitch().setWebelementSwitch('html-5709089');</script></div></div>
+    
+      
+      <div class="webelement-content-container" webelementid="html-5701037"><div class="webelement-content-container-content sectbody"><h6>Wir würden Ihnen hier gerne einen externen Inhalt zeigen. Sie entscheiden, ob sie dieses Element auch sehen wollen.</h6><p>Ich bin damit einverstanden, dass mir externe Inhalte angezeigt werden. Damit können personenbezogene Daten an Drittplattformen übermittelt werden. <a href="https://taz.de/!166598" target="_blank">Mehr dazu in unserer Datenschutzerklärung.</a></p></div><div class="webelement-content-container-inner"><label class="checkbox-switch"><input type="checkbox"></input><span class="checkbox-switch-slider-round"></span><span class="webelement-checkbox-switch-text">Externen Inhalt erlauben<span id="consentPreview"></span></span></label><p class="webelemnt-checkbox-switch-disclaimer"></p></div><div class="webelement-html-content" data-initial-state="true" webelementid="html-5701037"><noscript class="html-content" type="text/plain"><iframe src="https://taz-vorgelesen.podigee.io/18-eu-iran-sanktionen/embed?context=external&theme=default" style="border: 0" border="0" height="150" width="100%"></iframe></noscript></div><div class="webelement-js-content"><script type="text/javascript">steffiOtaz_de.WebelementSwitch().setWebelementSwitch('html-5701037');</script></div></div>
+    <div class="rack" id="xid821112">
+    
+	<!-- DEBUG tail: 0 extras here, 0 from directory Reportage und Recherche, thats 0 merged-->
+
+    
+	<div role="region" id="" class="last even sect sect_related style_related "><div class="secthead" role="heading"><h2><a name="Mehr zum Thema"><span>Mehr zum Thema</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd    interview article leaded pictured"><a href="/Bildungsaktivistin-ueber-Diversitaet/!5693838/" ratioURL-ressource="5693838" class="objlink interview article leaded pictured noavatar" role="link"><h4>Bildungsaktivistin über Diversität</h4><h3>„Ich möchte meinen Teil beitragen“</h3><p>Gloria Boateng wünscht sich eine Gesellschaft, an der alle partizipieren. Für ihre Arbeit beim Verein SchlauFox ist sie mehrfach ausgezeichnet worden.  </p><img src="/picture/4245625/192/167288203_df8d5cf53b-1.jpeg" alt="Gloria Boateng" title="Gloria Boateng"></img></a></li><li class=" even trodd    longread article leaded pictured"><a href="/Migration-und-Fachkraeftemangel/!5692784/" ratioURL-ressource="5692784" class="objlink longread article leaded pictured noavatar" role="link"><h4>Migration und Fachkräftemangel</h4><h3>Was immer ihn glücklich macht</h3><p>Ein junger Vietnamese bekommt in Thüringen die Chance, Elektroniker zu werden. Nach drei Monaten schmeißt er hin. Die Story eines Missverständnisses.  <span class="author">Anna Lehmann</span></p><img src="/picture/4232009/192/23718447-1.jpeg" alt="Tu Nguyen in der Fabrikhalle" title="Tu Nguyen in der Fabrikhalle"></img></a></li><li class=" last odd treven    report article leaded pictured"><a href="/Diskriminierung-in-Edeka-Markt/!5691023/" ratioURL-ressource="5691023" class="objlink report article leaded pictured noavatar" role="link"><h4>Diskriminierung in Edeka-Markt</h4><h3>Job nur ohne Kopftuch</h3><p>Der Geschäftsführer eines Hamburger Edeka verbot Meriam B., mit Kopftuch zu arbeiten. B. machte den Fall öffentlich – und bekam eine Entschuldigung.  <span class="author">Yasemin Fusco</span></p><img src="/picture/4224118/192/166245478_09c776565c-1.jpeg" alt="Meriam B. in ihrem Instagram-Video" title="Meriam B. in ihrem Instagram-Video"></img></a></li></ul></div>
+
+    
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div class="rack mostread" id="xid821127">
+    
+	<div role="region" id="" class="first last odd sect sect_mostread style_moreleads "><div class="secthead" role="heading"><h2><a name="meistgelesen"><span>meistgelesen</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd online   interview article leaded pictured"><div class="meta"><ul role="navigation" class="left toolbar"><li class="date" itemprop="datePublished" content="2020-06-21T12:50:00+01:00">15. 11. 2020</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2020-06-21T21:48:11+01:00"></meta></ul><ul role="navigation" class="right rootline toolbar"></ul></div><div class="metadata" itemscope=""><meta itemprop="cms-article-ID" content="5726067"></meta><meta itemprop="cms-obj-ID" content="4501193"></meta></div><a href="/Ethikraetin-Graumann-zu-Massnahmen/!5726067/" ratioURL-ressource="5726067" class="objlink interview article leaded pictured noavatar" role="link"><h4>Ethikrätin Graumann zu Maßnahmen</h4><h3>„Furcht vor dem Kontrollverlust“</h3><p>Warum gibt es bei 11.000 Coronatoten einen Lockdown, während 25.000 Grippe-Opfer und 30.000 Sterbefälle durch Raucherkrebs in Kauf genommen werden?  </p><img src="/picture/4501193/192/Corona_Lockdown_Interview_Graumann_15112020-1.jpeg" alt="Bitte Abstand halten." title="Bitte Abstand halten."></img></a></li><li class=" last even trodd online   report article leaded pictured"><a href="/Aserbaidschan-zerstoert-armenische-Kultur/!5730239/" ratioURL-ressource="5730239" class="objlink report article leaded pictured noavatar" role="link"><h4>Aserbaidschan zerstört armenische Kultur</h4><h3>Abschied vom Kloster Dadiwank</h3><p>Der Krieg in Bergkarabach ist kein religiöser Konflikt. Kulturgüter der Armenier werden zerstört, um den aserbaidschanischen Anspruch zu festigen.  <span class="author">Tigran Petrosyan</span></p><img src="/picture/4515867/192/26291472-1.jpeg" alt="" title=""></img></a></li></ul></div>
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Normal/!155790/" ratioURL-ressource="155790" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news longread"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Normal</span><span class="hide">: </span><span>Freier Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd"><span class="big-cap-outer"><span class="big-cap-inner">D</span></span>as Bedürfnis nach vertrauenswürdiger Information ist derzeit sehr hoch, viele blicken und klicken in diesen unsicheren Zeiten auf die Berichterstattung der taz. Während der vergangenen Wochen ist klar geworden, wie wichtig freier Journalismus ist. In Krisenzeiten ist es „systemrelevant”, dass Menschen sich unabhängig informieren können. Ohne Paywall. Wir finden es wichtig, dass uns möglichst viele Menschen lesen – auch jene, die sich kein Abo leisten können. Doch dazu brauchen wir Ihre Hilfe.    
+</p>
+  		<p xmlns="" class="article even">Guter, kritischer Journalismus ist nicht kostenlos zu haben und braucht Finanzierung. Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Im Gegenzug wird sie freiwillig und solidarisch unterstützt. Von unseren Leser*innen, von Ihnen. Mit Ihrer Wertschätzung und Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit, ein Forum für Meinungsvielfalt, eine engagierte Stimme für Minderheiten. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Seien Sie mit uns taz.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Klima/!155427/" ratioURL-ressource="155427" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news longread"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Klima</span><span class="hide">: </span><span>Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd"><span class="big-cap-outer"><span class="big-cap-inner">W</span></span>ir berichten seit 1978 über die Zerstörung unseres Planeten – weil wir daran glauben, dass eine bessere Welt möglich ist. Klima- und Umweltberichterstattung haben in der taz schon immer einen großen Raum eingenommen, aber zur Zeit gehen wir noch einmal in die Offensive. Die taz berichtet noch intensiver über die drohende Klimakatastrophe – auf allen Kanälen. Um dies leisten zu können, sind wir auf die Unterstützung unserer Leser*innen angewiesen. Denn guter Journalismus ist aufwändig und nicht kostenlos zu haben.   
+</p>
+  		<p xmlns="" class="article even">Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Unsere Artikel sollen so viel wie möglich gelesen, geliked und geteilt werden. Nur so können sie die ökologisch notwendigen Veränderungen unserer Gesellschaft vorantreiben. Im Gegenzug wird die taz von unseren Leser*innen unterstützt. Freiwillig und solidarisch. Mit Ihrer Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit und eine engagierte Stimme für mehr Klimaschutz. Unterstützen Sie jetzt die taz und helfen Sie uns dabei.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><div role="region" id="" class="last even sect sect_text "><div class="sectbody"><p>
+
+	Fehler auf taz.de entdeckt?
+	    </p><p>
+        Wir freuen uns über eine 
+	<a href="mailto:fehlerhinweis@taz.de?subject=Fehlerhinweis%20zu%20https://taz.de/Essay-zu-Integration-und-Zuwanderung/!5691765/&amp;body=Zu%20%22Essay zu Integration und Zuwanderung: Dieses Deutschland gehört mir%22%0D%0Ahttps://taz.de/Essay-zu-Integration-und-Zuwanderung/!5691765/%0D%0A%0D%0ABitte%20beschreiben%20Sie%20uns%20den%20Fehler.%20Sie%20können%20gern%20einen%20Screenshot%20anhängen.%20Wir%20danken%20für%20Ihre%20Hilfe%21%20
+					%0D%0A%0D%0A
+					Inhaltliches%20Feedback%20geben%20Sie%20uns%20gerne%20in%20der%20Kommentarspalte%20oder%20richten%20es%20an%20briefe@taz.de.%20Dort%20leiten%20wir%20ihr%20Feedback%20auch%20an%20die%20Redaktion%20weiter.%20Über%20diese%20Mailadresse%20nehmen%20wir%20nur%20Rechtschreib-%20und%20Faktenkorrekturen%20vor.				">Mail an fehlerhinweis@taz.de</a>!</p><p>
+	Inhaltliches Feedback? 
+	</p><p>
+
+	Gerne als Leser*innenkommentar unter dem Text auf taz.de oder über das
+	<a href="/!112355/"> Kontaktformular</a>.
+		</p></div></div></span><span class="wing" role="contentinfo"></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><span class="tail" role="complementary"><div role="region" id="xid823659" class="first last odd sect sect_adr style_adr "><ul role="directory" class="sectbody corp  directory"><li class=" first last odd trodd online   leaded pictured leaded remote product"><a class="dept" href="/Abo/!p4209/">Abo</a><a href="https://taz.de/!171158/#matomo:pk_campaign=Praemienabo483_HeimatAlbtraum&amp;pk_source=Online&amp;pk_medium=taz.de&amp;pk_kwd=Kachel&amp;pk_content=Packshot" target="_blank" class="objlink leaded pictured leaded remote product noavatar" role="link"><p class="brief">         Testen Sie 10 Wochen die taz am Wochenende und erhalten „Eure Heimat ist unser Albtraum“ von Fatma Aydemir und Hengameh Yaghoobifarah als Prämie.          </p><img src="/uploads/images/300/AdW_HeimatAlbtraum_kachel.png" alt="" title=""></img><div class="hint">Mehr erfahren</div></a></li></ul></div></span><a itemprop="mainEntityOfPage" href="/Essay-zu-Integration-und-Zuwanderung/!5691765"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div class="full community page last even n2"><div class="head" role="head"><ul role="navigation" class=" navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div role="region" id="xid461804" class="odd sect sect_Die Kommentarfunktion unter diesem Artikel ist geschlossen. closed no_body"><div class="secthead" role="heading"><h2><a name="Die Kommentarfunktion unter diesem Artikel ist geschlossen."><span>Die Kommentarfunktion unter diesem Artikel ist geschlossen.</span></a></h2></div><div class="sectbody"></div></div><div class="rack first_rack" id="xid495498">
+    
+
+	<div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="So können Sie kommentieren:"><span>So können Sie kommentieren:</span></a></h2></div><div class="sectbody"><p>       Bitte <a href="https://www.taz.de/kommune/post.php?a=registration" target="_blank">registrieren Sie sich</a> und halten Sie sich an unsere <a href="http://taz.de/netiquette" target="_blank">Netiquette</a>.     
+</p><p>      Haben Sie Probleme beim Kommentieren oder Registrieren?   
+</p><p>  Dann mailen Sie uns bitte an <a href="mailto:kommune@taz.de" target="_blank">kommune@taz.de</a>   </p></div></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="" class="even sect sect_commentlinks style_commentlinks "><div class="secthead" role="heading"><h2><a name="Leser*innenkommentare"><span>Leser*innenkommentare</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class="member " id="bb_message_3977891"><a class="author person" href="/!ku41211/"><h4>Monahita</h4></a><time datetime="2020-06-22T20:33:05+02:00"><meta value="1592850785"></meta>22. 06. 2020, 
+		20:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">E</span></span>ine letzte Sache: Die Autorin beklagt sehr zurecht den antisemitischen Anschlag von Halle, den rechtsextremen Mord an Walter Lübcke und das Massaker von Hanau. Aus diesen verurteilenswürdigen Gewalttaten leitet sie jedoch am Ende ihres Artikels ab, dass sie am liebsten in den Iran zurückkehren würde, und dass bloß das Corona-Virus ihr einen Strich durch die Rechnung gemacht habe. Was sie jedoch geflissentlich verschweigt, ist, dass erst im November letzten Jahres die iranische Regierung – kein geistesgestörter Einzeltäter, sondern der Staat selbst! – 1500 Menschen auf offener Straße ermordete und tausende Menschen dafür festnahm, dass sie ihren politischen Dissenz ausdrückte. Weiterhin haben Frauen nach den geltenden Scharia-Gesetzen weniger Rechte als Männer; Ehrenmorde und Kinderhe dominieren weiterhin vielerorts das Familienleben. <br xmlns="http://www.w3.org/1999/xhtml"></br><br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>All dies kommt in Frau Soltanis Artikel überhaupt nicht vor, der doch die Abwägung zwischen ihren beiden Heimaten zum Kerninhalt hat. Hingegen schildert sie, wie toll es ihr in Teheran gefiel, wie sie Yoga- und Philosophiekurse besuchte, und dass ihr die deutsche Mentalität im Vergleich zur iranischen Lebensfreude vor allem gegen den Strich gehe. Dieser maximal privilegierte und von der realen Lebenserfahrungen der meisten iranischen Frauen absolut losgelöste Reiz des Exotischen wird den Terrorakten auf deutschem Boden entgegengestellt, so als ob hier die Hölle und dort das Paradies auf Erden läge. Und doch fliehen die Menschen aus dem Iran nach Deutschland, nicht umgekehrt.<br xmlns="http://www.w3.org/1999/xhtml"></br><br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Mit ihrer zugleich maximal privilegierten und zutiefst selbstmitleidigen Perspektive, die alle Erfahrungen nur als Bestätigungen des eigenen Weltbildes – und nicht zuletzt: der eigenen romantischen Vorstellung vom lebensfrohen Orient – einordnen kann, ist Frau Yasaman Soltani am Ende doch ein gutes Stück deutscher, als sie es sich selbst eingestehen will. Eine Kartoffel mit Safran eben.</p></div></li><li class="member " id="bb_message_3977890"><a class="author person" href="/!ku41211/"><h4>Monahita</h4></a><time datetime="2020-06-22T20:32:45+02:00"><meta value="1592850765"></meta>22. 06. 2020, 
+		20:32</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">i</span></span>ch stamme aus dem Iran. Ich kam im Jahre 1986, mit 25 Jahren, nach Deutschland. Die Erfahrungen, die Frau Soltani an dieser Stelle schildert, teile ich auf keine Weise. Tatsächlich verhält es sich in meinem Falle ganz gegenteilig: Ich habe hier Menschen kennengelernt und Erfahrungen gemacht, die ich im Iran niemals hätte kennenlernen oder machen können.<br xmlns="http://www.w3.org/1999/xhtml"></br><br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Ich kam damals nach Deutschland, weil ich in Freiheit leben wollte; genau diese Freiheit habe ich hier gefunden. Dies weiß ich wertzuschätzen, und dafür bin ich dankbar. Ich frage mich wirklich, warum Frauen, deren Eltern vor einem totalitären theokratischen Regime hierher geflohen sind, hier Schutz und Sicherheit gesucht – und gefunden – haben, und die alles dafür gaben, um ihre Tochter in Freiheit erziehen und studieren lassen zu können, warum eine Frau wie Yasaman Soltani also sich so undankbar und verbittert über dieses Land und seine autochthone Bevölkerung äußert.<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Es ist schade, dass ich der deutschen Schriftsprache nicht so perfekt mächtig bin wie Frau Soltani, sonst hätte auch ich meine Erfahrungen verfassen und veröffentlichen können; es handelt sich, wie bereits gesagt, um das genaue Gegenteil des im Artikel geschilderten Leidens. Jedoch kommt noch hinzu, dass kein Autor und keine Journalistin Interesse an unserem Schicksal, an den Erzählungen von Migrantinnen mit positivem Bezug zu Deutschland und den Deutschen hat. Exil-Iranerinnen meiner Generation scheinen in der Welt der akademisch gebildeten medialen Elite gar nicht zu existieren. Im Gegensatz zur Generation von Frau Yasaman Soltani musste ich Zensur leider schon öfter erleben.</p></div></li><li class="member " id="bb_message_3977079"><a class="author person" href="/!ku57073/"><h4>macci</h4></a><time datetime="2020-06-22T07:52:11+02:00"><meta value="1592805131"></meta>22. 06. 2020, 
+		07:52</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">D</span></span>arf ich Dich mal kurz drücken,</p></div></li><li class="member " id="bb_message_3977055"><a class="author person" href="/!ku58784/"><h4>Gustavo Cortes</h4></a><time datetime="2020-06-22T07:01:19+02:00"><meta value="1592802079"></meta>22. 06. 2020, 
+		07:01</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span class="big-cap-outer"><span class="big-cap-inner">D</span></span>anke für den tollen Artikel. Obwohl ich auch einen ausländischen Vor- und Nachnamen habe und - anders als Frau Soltani - sogar optisch sofort als "Ausländer" identifiziert werden kann, habe ich viele Erfahrungen nie machen müssen. Ich bin auch in etwa im selben Alter und genauso lange hier.</p>
+<p xmlns="" class="last even">Ich habe Rassismus nur eine Handvoll Mal im privaten erlebt. (Kein Einlass in die Disko, Wohnungssuche etc.) jedoch nie einen institutionalisierten durch Behörden oder auch meine Universität.  Vielleicht einer der Vorteile der Provinz in der ich aufwuchs? Keine Ahnung.</p></div></li><li class="member " id="bb_message_3976873"><a class="author person" href="/!ku40653/"><h4>Links van der Linke</h4></a><time datetime="2020-06-21T22:07:11+02:00"><meta value="1592770031"></meta>21. 06. 2020, 
+		22:07</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">V</span></span>ielen, vielen Dank für den klaren Text. In einer ähnlich Situation entschied ich, nicht zurückzukehren, in Deutschland als Heitmatloser zu bleiben, in meinem Deutschland, wie ich jetzt lese. Danke!</p></div></li><li class="member " id="bb_message_3976849"><a class="author person" href="/!ku33733/"><h4>Peter Hansen</h4></a><time datetime="2020-06-21T21:37:12+02:00"><meta value="1592768232"></meta>21. 06. 2020, 
+		21:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">L</span></span>iebe Frau Soltani, schön, dass es Sie gibt und das Sie hier sind.</p></div></li><li class="member " id="bb_message_3976832"><a class="author person" href="/!ku58877/"><h4>SteelTownSteve</h4></a><time datetime="2020-06-21T21:24:44+02:00"><meta value="1592767484"></meta>21. 06. 2020, 
+		21:24</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">B</span></span>ei uns in Duisburg da fragt man nich woher kommze oder wat Du bis, sondern da fragt man watte kannz. <br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>In diesem Sinne sollte es funktionieren.<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Aber von beiden Seiten.</p></div></li><li class="member " id="bb_message_3976817"><a class="author person" href="/!ku57820/"><h4>honkytonky</h4></a><time datetime="2020-06-21T21:02:29+02:00"><meta value="1592766149"></meta>21. 06. 2020, 
+		21:02</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span class="big-cap-outer"><span class="big-cap-inner">E</span></span>in sehr schöner Text. Vielen Dank, Frau Soltani. :-)</p>
+<p xmlns="" class="even">Sie decken Misstände auf - und zwar in einer Weise, die betroffen macht. Und ich hoffe, Sie finden hier in Deutschland doch auch ein Stück Heimat.</p>
+<p xmlns="" class="odd">Vielleicht hilft dabei der folgende Gedanke:</p>
+<p xmlns="" class="even">Deutschland ist sicher auch nicht die beste aller Welten. Ausländerfeindlichkeit gibt es leider überall. Vermutlich auch im Iran.</p>
+<p xmlns="" class="odd">Und leider gibt es auch viele Gründe diskriminiert zu werden. Wegen seiner Herkunft, seines Glaubens, seiner sexuellen Orientierung, seiner politischen Auffassung.</p>
+<p xmlns="" class="even">Aber im Vergleich zu vielen Ländern dieser Welt haben wir in Deutschland sicher eine verhältnismäßig offene und tolerante Gesellschaft. Bei allen Unzulänglichkeiten ist dies vielleicht ab und an ein Trost.</p>
+<p xmlns="" class="last odd">Und Ihr Essay hilft dabei, von- und miteinander zu lernen. Lassen Sie sich nicht entmutigen! :-)</p></div><ul class="thread"><li class="member " id="bb_message_3977690"><a class="author person" href="/!ku37716/"><h4>Uranus</h4><img src="/kommune/files/images/profile/70x70/37716.png" alt="" title=""></img></a><time datetime="2020-06-22T15:48:34+02:00"><meta value="1592833714"></meta>22. 06. 2020, 
+		15:48</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@honkytonky </span><span class="big-cap-outer"><span class="big-cap-inner">M</span></span>it Ihrem Kommentar beschönigen Sie die hiesigen diskriminierenden Verhältnisse, verneinen Kritik und Proteste der Aktivist*innen wie BLM. Vergleiche sind kaum eine Hilfe, wenn es um auitobiographische Berichte von Unterdrückung geht. Diskriminierungserfahrungen mit Relativierungen zu begegnen ist wie in vielen anderen Fällen auch eine schlechte Idee.<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Es geht auch nicht um eine tolerante Gesellschaft sondern um AKZEPTANZ. Die Menschen annehmen und nicht bloß dulden.<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>"Ausländer*innenfeindlichkeit" ist ein veralteter Begriff und hier unzutreffend. Es geht eben nicht um die Staatsangehörigkeit - oftmals haben die negativ Betroffenen ja sogar bspw. einen deutschen Pass - sondern um (kultur)rassistische Bewertungen, Haltungen und Handeln.<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Gut gemeint ist nicht immer auch gut, würde ich meinen. Vielleicht setzen Sie sich mal mehr mit der Perspektive von negativ Betroffenen auseinander.</p></div></li></ul></li><li class="member " id="bb_message_3976671"><a class="author person" href="/!ku12770/"><h4>Lapa</h4></a><time datetime="2020-06-21T18:10:28+02:00"><meta value="1592755828"></meta>21. 06. 2020, 
+		18:10</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">D</span></span>anke.</p></div></li><li class="member " id="bb_message_3976669"><a class="author person" href="/!ku58867/"><h4>Ute Rüger</h4></a><time datetime="2020-06-21T18:09:39+02:00"><meta value="1592755779"></meta>21. 06. 2020, 
+		18:09</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span class="big-cap-outer"><span class="big-cap-inner">A</span></span>syl zu erhalten ist ein Menschenrecht. <br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Nicht mehr, und nicht weniger, und das Recht darauf ist schon gar nicht "von Deutschlands Gnaden".<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Ich schäme mich für "die Deutschen", immer und immer wieder, und eigentlich fehlen mir die Worte um auszudrücken was ich sagen möchte.</p>
+<p xmlns="" class="even">Ich kenne Ihre Probleme quasi aus der zweiten Reihe.</p>
+<p xmlns="" class="odd">Sowohl mein Ex-Mann ( seit 25 Jahren in D), als auch mein Partner (seit 30 Jahren in CH) wird es immer noch schwer gemacht in ihrer "neuen" Heimat anzukommen und sich heimisch zu fühlen. Dabei leben beide länger in Europa, als sie in ihrem Geburtsland je gelebt haben.</p>
+<p xmlns="" class="last even">Was ist so schwer daran Menschen als genau das zu akzeptieren was sie sind, nämlich Menschen.</p></div></li><li class="member " id="bb_message_3976625"><a class="author person" href="/!ku58345/"><h4>Pete B.</h4></a><time datetime="2020-06-21T16:31:19+02:00"><meta value="1592749879"></meta>21. 06. 2020, 
+		16:31</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">C</span></span>hapeau Madame!</p></div></li><li class="member " id="bb_message_3976613"><a class="author person" href="/!ku37716/"><h4>Uranus</h4><img src="/kommune/files/images/profile/70x70/37716.png" alt="" title=""></img></a><time datetime="2020-06-21T16:19:33+02:00"><meta value="1592749173"></meta>21. 06. 2020, 
+		16:19</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">V</span></span>ielen Dank für Ihren Einblick Yasaman Soltani! Ich wünsche Ihnen alles Gute und dass es Ihnen gelingt, trotz der Widrigkeiten sich da zuhause fühlen können, wo Sie es wollen! Und das selbstredend auch in Deutschland!<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Ich würde viele der Kommentare als den Extremismus der (bürgerlichen) Mitte deuten, der als reaktionärer Nährboden für Nazismus dienen kann. Ein Ergebnis der Digitalisierung und damit auch der digitalen Verbreitung von Haltungen, die bis vor einer Weile zuvorderst auf Stammtischen (und sicherlich auch in Vereinen, Parteisitzungen, Hörsäälen u.ä.) zu hören gewesen sind. Solche Absonderungen sind hier ja auch vorzufinden. Eine politische Haltung, für die die AFD einsteht, sie    befeuert und von der sie versucht zu profitieren. Entsprechend beeinflusst ist auch der Diskurs.<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Lichtblicke sehe ich aber auch wie Sie immer wieder. Bleibt zu hoffen und daran zu arbeiten, dass weitere Verschärfungen im Sinne der Rechten verhindert bzw. zurückgedrängt werden können. ¡No pasarán!</p></div></li><li class="member " id="bb_message_3976612"><a class="author person" href="/!ku58863/"><h4>Ertan Kar</h4></a><time datetime="2020-06-21T16:18:39+02:00"><meta value="1592749119"></meta>21. 06. 2020, 
+		16:18</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">S</span></span>itze am Bosporus auf meinem Stuhl gefesselt und versuche den Text meine Frau zu übersetzen. Klasse geschrieben! Ich habe mich wiedergefunden in Ihrem Artikel. Bin der Meinung dass Sie Kapitel Iran zu früh geschlossen haben. Das passt gar nicht zu Ihrem Lebenslauf. Wenn Sie jetzt aufgeben dann frage ich Sie warum Sie nicht vor zehn oder zwanzig Jahren nicht aufgegeben haben.<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Viele Grüße aus dem Bosporus an Frau Soltani und alle taz LeserInnen<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Ertan K.</p></div></li><li class="member " id="bb_message_3976591"><a class="author person" href="/!ku58858/"><h4>Burak Gunbatar</h4></a><time datetime="2020-06-21T15:32:33+02:00"><meta value="1592746353"></meta>21. 06. 2020, 
+		15:32</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">F</span></span>rau Soltani,<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Sie haben mir als in ein in Deutschland geborener Kanake (Deutschtürke oder was auch immer) aus der Seele gesprochen. ich bin 6 Jahre älter als Sie und habe schon, denke ich mittlerweile, einen Dachschaden vom Alltagsrassismus: Wohnungssuche, Arbeitssuche, aggressive Blicke von biologisch Deutschen auf der Strasse, in der Bahn, Sprüche wie z.B. " ich kann deinen Namen nicht aussprechen" auf der Arbeit, alle par Jahre (oder Monate, je nach dem wo ich mich befinde) wiederkehrende physikalische Angriffe von Nazis, verbale Attacken von  Nazi- Trollen im Internet, aggressive Blicke, wenn ich am Telefon mit jemandem mich auf Türkisch unterhalte, Beleidigungen auf der Strasse nach einem Deutschlandländerspiel ...Die ganzen ständig seit 40 Jahren wiederkehrenden ausländerfeindlichen Wahlkämpfe von Verbot doppelter Staatsbürgerschaft an Türken (" Wo kann ich gegen türken unterschreiben?" hiess es damals von Pasanten auf der Strasse , wissen Sie noch?) bis dato. Ich  Frau Soltani, auch ich bin deswegen schon mal in die heimat, bei mir Türkei, ausgezogen; leider auch erfolglos. Das Problem ist leider, dass die Wirtschaft in diesen Ländern instabil ist. Freiheit: gut, die gibt es meiner Ansicht nach auch nicht in der bürgerlichen Demokratie der BRD mitsamt seinen Zeitarbeitsfirmen, Hartz4 und AFD&amp;Co. Das heisst selbsverständlich nicht, dass ich das autokratische Regime in Teheran oder Ankara gutheisse. Ich habe es einfach satt, bei der Wohnungssuche derart behandelt zu werden, oder die Blicke von Biodeutsche auf der Strasse zu ertragen, dass ich den Spaziergang ohne rassistischen Blicke in Istanbul etc. einfach vermisse. Grüße</p></div></li><li class="member " id="bb_message_3976579"><a class="author person" href="/!ku54684/"><h4>Hooligan Holger</h4></a><time datetime="2020-06-21T15:10:19+02:00"><meta value="1592745019"></meta>21. 06. 2020, 
+		15:10</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">S</span></span>ehr guter Artikel, danke!<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Ich denke und hoffe, dass ein Großteil der Menschheit keine Bewertung eines Menschen abgibt abhängig davon , wo der Mensch herkommt, wie er spricht, an was er glaubt, welche Hautfarbe er hat, usw.<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Leider gibts halt in D so erzkonservative Fanatiker wie die AfD, die so etwas zum Thema machen und Menschen danach werten.</p></div></li><li class="member " id="bb_message_3976578"><a class="author person" href="/!ku58857/"><h4>kmst</h4></a><time datetime="2020-06-21T15:09:46+02:00"><meta value="1592744986"></meta>21. 06. 2020, 
+		15:09</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">N</span></span>icht nur "Nichtdeutsche" werden diskriminiert. Auch wir Deutschen aus den " neuen" Bundesländern standen oder stehen zum Teil in der bundesdeutschen Gesellschaftshirarchie im Gefühl der Deutschen aus den " alten" Bundesländern unten. Die "unsichtbare" Hirarchie in der Arbeitswelt eines deutschen Autoherstellers im Jahr 2001 wie folgt: Einheimischer ( Bayer), dann Türken, Griechen, Italiener in dritter Generation, dann Osteuropäer wie Polen und Ukrainer. Ganz unten dann die Ostdeutschen. Da erzählte der einheimischen Bayer dem Deutschtürken einen Witz. Was haben wir gegen schwere Arbeit ?   . . . Na die ostdeutschen Leiharbeiter. <br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Und alles lachte . . . . Na ja, die Illusion von Brüderlichkeit und Einigkeit ist längst geplatzt.<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Seien sie stolz auf sich selbst, ihre Leistung und Wurzeln. Gehen sie mit erhobenen Haupt durch dieses Deutschland. Ohne Marshallplan und Gastarbeiter wäre Westdeutschland nie dort, wo es 1989 stand.</p></div></li><li class="member " id="bb_message_3976560"><a class="author person" href="/!ku57336/"><h4>sessler</h4></a><time datetime="2020-06-21T14:50:19+02:00"><meta value="1592743819"></meta>21. 06. 2020, 
+		14:50</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">A</span></span>uch von mir - danke für diesen Text!</p></div></li><li class="member " id="bb_message_3976557"><a class="author person" href="/!ku44788/"><h4>tomás zerolo</h4></a><time datetime="2020-06-21T14:46:20+02:00"><meta value="1592743580"></meta>21. 06. 2020, 
+		14:46</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span class="big-cap-outer"><span class="big-cap-inner">.</span></span>..und Sie gehören auch zu diesem Deutschland.</p>
+<p xmlns="" class="even">Ein Glück für dieses Deutschland, würde ich sagen.</p>
+<p xmlns="" class="last odd">Mich hat dieser Text nah an die Tränen gebracht. Danke dafür.</p></div></li><li class="member " id="bb_message_3976519"><a class="author person" href="/!ku56731/"><h4>Schulz2020</h4></a><time datetime="2020-06-21T13:55:13+02:00"><meta value="1592740513"></meta>21. 06. 2020, 
+		13:55</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span class="big-cap-outer"><span class="big-cap-inner">D</span></span>ie im Artikel getätigten Beobachtungen bzw. die Schilderungen der erlebten (subtilen) Diskriminierungen stehen sicherlich für sich selbst.</p>
+<p xmlns="" class="even">Aber was sind die Ursachen?</p>
+<p xmlns="" class="odd">Meiner Ansicht nach geht es im Wesentlichen um Verteilungskämpfe, konkreter um Wohlstand, um die besten Arbeitsplätze, es geht um Macht.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Diskriminierungen, z.B. aufgrund der Herkunft, sind meistens nur Mittel zum Zweck und in der Regel nicht Ausdruck echten Rassismus.</p>
+<p xmlns="" class="even">Die Verfasserin schreibt im Artikel, man müsse in der Gesellschaft oben einsteigen, von unten würde ein Aufstieg (als Ausländerin) <br xmlns="http://www.w3.org/1999/xhtml"></br>
+nicht gelingen.</p>
+<p xmlns="" class="odd">Aha, es geht also darum, in der Gesellschaft aufzusteigen, das ist interessant. Was bedeutet Aufstieg in diesem Zusammenhang?<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Möglicherweise das Erreichen von Wohlstand, einen sicheren Job, Macht, Einfluß, etc, etc.</p>
+<p xmlns="" class="even">Provokant gefragt, vielleicht sind ja genau diese Ziele größtenteils die Ursache von Diskrimierungen aufgrund von Herkunft?</p>
+<p xmlns="" class="last odd">Und noch eine provokante Frage, hat man den "Aufstieg" erstmal geschafft, gehört man dann nicht selber zu den Menschen, die andere<br xmlns="http://www.w3.org/1999/xhtml"></br>
+diskrimieren?</p></div><ul class="thread"><li class="member " id="bb_message_3977506"><a class="author person" href="/!ku37716/"><h4>Uranus</h4><img src="/kommune/files/images/profile/70x70/37716.png" alt="" title=""></img></a><time datetime="2020-06-22T13:30:49+02:00"><meta value="1592825449"></meta>22. 06. 2020, 
+		13:30</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Schulz2020 </span><span class="big-cap-outer"><span class="big-cap-inner">"</span></span>Provokant gefragt, vielleicht sind ja genau diese Ziele größtenteils die Ursache von Diskrimierungen aufgrund von Herkunft?"<br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Mit Worten: Von Rassismus negativ Betroffene sind selbst schuld, wenn/weil sie bestrebt sind ihre Position zu verbessern?! Das ist Opfer-Täter-Umkehr und missgünstiger, braunangehauchter Schwachsinn!</p></div><ul class="thread"><li class="member " id="bb_message_3977810"><a class="author person" href="/!ku56731/"><h4>Schulz2020</h4></a><time datetime="2020-06-22T18:23:08+02:00"><meta value="1592842988"></meta>22. 06. 2020, 
+		18:23</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Uranus </span><span class="big-cap-outer"><span class="big-cap-inner">V</span></span>on Schuld habe ich nicht gesprochen und auch nicht gemeint.</p>
+<p xmlns="" class="even">Es geht um die Frage, wie glaubwürdig ist jemand, der Diskriminierung kritisiert, <br xmlns="http://www.w3.org/1999/xhtml"></br>
+aber selber andere Menschen diskriminiert?</p>
+<p xmlns="" class="odd">Z.B. die Homosexuelle, die aufgrund Ihrer sexuellen Orientierung diskriminiert wurde (bzw. wird?), aber selber ausländerfeindlich <br xmlns="http://www.w3.org/1999/xhtml"></br>
+("Kopftuchmädchen und andere Taugenichtse") ist?</p>
+<p xmlns="" class="last even">Oder mit andere Worten ausgedrückt, die allergroße Mehrheit der Menschen, die lauthals aufschreien, wenn es z.B. um Diskriminierungen aufgrund<br xmlns="http://www.w3.org/1999/xhtml"></br>
+der Hautfarbe oder Herkunft geht, schreien seltsamer meistens nicht lauthals auf, wenn z.B. der Gebrauch von Handys in der Kritik steht.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Da wird dann stillschweigend die Diskriminierung der Menschen hingenommmen, die für den Abbau der Metalle ihre Gesundheit ruinieren.</p></div></li></ul></li></ul></li><li class="member " id="bb_message_3976506"><a class="author person" href="/!ku34421/"><h4>HanM</h4></a><time datetime="2020-06-21T13:44:57+02:00"><meta value="1592739897"></meta>21. 06. 2020, 
+		13:44</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">S</span></span>ehr gut. Danke.</p></div></li><li class="member " id="bb_message_3976489"><a class="author person" href="/!ku46512/"><h4>sachmah</h4></a><time datetime="2020-06-21T13:38:35+02:00"><meta value="1592739515"></meta>21. 06. 2020, 
+		13:38</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span class="big-cap-outer"><span class="big-cap-inner">D</span></span>anke für den Beitrag. Wer Menschen wegen ihrer „Herkunft“ diskriminiert, muss sich von mir auch diskriminieren lassen. Zunächst heißt diskriminieren unterschieden: und da unterscheide ich wie viele andere danach, ob und welchen Beitrag Menschen bei uns in der Gesellschaft leisten. Dazu gehört nicht so ein schwachsinnig-beliebig verdrehbares Wort wie Integration. Sondern zB angestrebter und ausgeübter Beruf und sowas. Oder alles andere was konstruktiv ist. Das gilt für alle. <br xmlns="http://www.w3.org/1999/xhtml"></br><span class="big-cap-outer"><span class="big-cap-inner">
+</span></span>Ich liebe Deutschland und bin stolz oder froh oder glücklich oder wie man es sagen möchte auf die guten Dinge die wir erreicht haben. Ich arbeite gerne für das Land und die Gesellschaft. Das fällt mir immer dann schwer wenn ich mitbekomme, wie hinzugekomme oder deren Kinder mit Hass und Stereotypen angegangen werden. Dann frage ich mich, hätte ich eine andere, nicht „biodeutsche“ Herkunft, würde man dann auch plötzlich so eine komische Bewertungsskala anlegen? Ich fürchte ja. Daher geht das Thema alle an und es richtig und notwendig darüber zu reden.</p></div><ul class="thread"><li class="member " id="bb_message_3976956"><a class="author person" href="/!ku27917/"><h4>Senza Parole</h4></a><time datetime="2020-06-22T00:11:46+02:00"><meta value="1592777506"></meta>22. 06. 2020, 
+		00:11</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@sachmah </span><span class="big-cap-outer"><span class="big-cap-inner">I</span></span>ch finde man kann nur stolz sein auf das, was man selber erreicht hat, nie auf ein Land.</p></div></li></ul></li></ul></div><span id="ad_bin_uebersicht_medrec_4" class="ad_bin sold contentad"><div id="ad_zone_uebersicht_medrec_4" name="uebersicht_medrec-4" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'uebersicht_medrec_4';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid476383">
+    
+
+
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><form name="form" method="post" enctype="application/x-www-form-urlencoded" id="bb-login" class="even sect sect_bb-login_form style_kommune " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><ul role="toolbar" class="toolbar"><li class="login"><a href="" target="_blank">Login</a></li><li class="settings"><a href="https://taz.de/kommune/post.php?a=registration" target="_blank">Registrieren</a></li><li class="newpass"><a shape="rect" target="_blank" href="https://portal.taz.de/?a=nopw">Passwort vergessen?</a></li></ul></div><div class="sectbody"><input type="hidden" name="a" class="constant" id="form_a" value="login"></input><span class="field"><p class="label">E-Mail</p><input type="text" name="email" class="line" id="form_email"></input></span><span class="field"><p class="label">Passwort</p><input type="password" name="password" class="secret" id="form_password"></input></span><input type="submit" class="submit" name="ignore" value="einloggen"></input></div></form><script> filOtaz_de.Form( 'bb-login' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+		var formID = 'bb-login';
+		var form = $('#bb-login');
+
+		if( !form.length ) return;
+		if( form[0].filOtaz_de_form_handled ) return; form[0].filOtaz_de_form_handled = true;
+
+		var nodes, org, firstrun = true;
+		if( !filOtaz_de.kommune ) filOtaz_de.kommune = {};
+		if( !filOtaz_de.kommune.updateLogin ) filOtaz_de.kommune.updateLogin = function(){
+			if( !nodes ) nodes = {	// parse DOM lazily
+				head	: form.find('>.secthead'),
+				body	: form.find('>.sectbody').hide(),
+				a	: form.find('input[name="a"]'),
+				inputs	: form.find('span').has('input[name="email"],input[name="password"]'),
+				submit	: form.find('input.submit'),
+				links	: {
+					all		: form.find('ul.toolbar'),
+					login		: form.find('ul>li.login').click(function(){
+								var me = $(this);
+//								nodes.body
+								me.closest('.secthead').nextAll('.sectbody')	// we might be dynamically inserted, so parse DOM here
+								.slideToggle(function(){
+									me.toggleClass('active');
+									});
+								return false;
+								}),
+					settings	: form.find('ul>li.settings'),
+					newpass		: form.find('ul>li.newpass')
+					}
+				};
+			var duration = firstrun ? 0 : $.fx.speeds._default;
+			var tazsid = $.cookie('tazsid');
+			if(! tazsid ){  // not logged in
+					$('#send-comment .submit').val('Einloggen und Senden');
+					};
+
+			if( tazsid ) {	// already logged in
+					$('#send-comment .submit').val('Abschicken');
+
+				// mar: refresh after login error and then successful login
+				if ( $('#bb-login >.sectbody >p.error').length ){
+
+
+					$('.sect_bb-login').fadeOut().remove();
+					$('.sect_bb-login_form').fadeIn();
+					};
+
+
+				var tazid = $.cookie('tazid');
+//console.log('	now logged in as '+ tazid );
+				if( !org ) org = {	// store original values lazily
+					action	: form.attr('action'),
+					a	: nodes.a.attr('value'),
+					submit	: nodes.submit.attr('value'),
+					links	: {
+						login		: nodes.links.login,
+						settings	: {
+							text	: nodes.links.settings.children('a').text()
+							},
+						newpass		: nodes.links.newpass
+						}
+					};
+				form.attr({ action: 'https://taz.de/kommune/post.php?a=logout' });
+//console.log( tazsid );
+
+				nodes.body.slideUp( duration, function(){
+					form.addClass('session');
+					nodes.a.attr({ value: 'logout' });
+					nodes.inputs.hide();
+					nodes.submit.attr({ value: 'ausloggen' });
+					nodes.body.fadeIn( duration/3 );
+					});
+				if( tazid ) var profileURL = '/!ku'+ tazid +'/';
+				nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.login    )  nodes.links.login.detach();
+					if( profileURL ) {
+						if( !nodes.links.profile ) {
+							nodes.links.profile = $('<li><a href="'+ profileURL +'">mein Profil</a></li>');
+							nodes.links.settings.before( nodes.links.profile );
+							}
+						}
+					if( nodes.links.settings )  nodes.links.settings.children('a').text('Einstellungen');
+					if( nodes.links.newpass  )  nodes.links.newpass.detach();
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+				if( profileURL ) {	// tell user their name
+					if( !nodes.salute ) {
+						nodes.salute = $();
+//console.log('go, get profile '+ profileURL );
+						$.ajax({
+							type		: 'GET',
+							url		: profileURL +'c.xml', 
+							dataType	: 'xml',
+							success		: function( data, status, xhr ){
+								if( !nodes.salute ) return;	// we're too late
+								var name = $('content >item[type="person"] >name', data ).text();
+//console.log('	found '+ name );
+								nodes.salute = $('<h2><a>'+ name +'</a></h2>').hide().prependTo( nodes.head );
+								nodes.salute.slideDown( duration );
+								},
+							error		: function( req, status, message ){
+//console.log( req.status +' '+ status +' :: '+ message );
+								},
+							complete	: function( req, status ){
+								}
+							});
+						}
+					}
+				} //tazsid
+			else if( org )	(function(){	// reset logged out state
+				var orgwas = org; org = null;
+				nodes.body.fadeOut( duration/2, function(){
+					nodes.a.attr({		value	: orgwas.a		});
+					nodes.inputs.show();
+					nodes.submit.attr({	value	: orgwas.submit	});
+					form.removeClass('session');
+					}); 
+				if( nodes.salute )  nodes.salute.slideUp( duration, function(){
+					nodes.salute.remove(); nodes.salute = null;
+					});
+				if( nodes.links.all ) nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.profile ) nodes.links.profile.remove(); nodes.links.profile = null;
+					nodes.links.settings.before( orgwas.links.login.removeClass('active') );
+					nodes.links.settings.children('a').text( orgwas.links.settings.text );
+					nodes.links.settings.after(  orgwas.links.newpass );
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+
+				form.attr({		action	: orgwas.action	});
+				})();
+			firstrun = false;
+			};
+		filOtaz_de.kommune.updateLogin();
+
+		var message = filOtaz_de.ajaxifyForm('bb-login', { handle200 : filOtaz_de.kommune.updateLogin } );
+
+		if( message && message.length )	// secure ajax not supported
+			form.after( message );
+
+		})();
+	</script><div class="rack" id="xid524032">
+    
+
+<div role="region" id="" class="first last odd sect sect_shop style_shop "><div class="secthead" role="heading"><h2><a name="meistkommentiert"><span>meistkommentiert</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class=" first odd trodd   "><a href="/Corona-Politiker-Karl-Lauterbach-im-Portraet/!5727184/" class="objlink noavatar" role="link"><h4>Corona-Politiker Karl Lauterbach im Porträt</h4><h3>Viel Pfeffer, kein Salz</h3></a></li><li class=" even trodd   "><a href="/Ethikraetin-Graumann-zu-Massnahmen/!5726067/" class="objlink noavatar" role="link"><h4>Ethikrätin Graumann zu Maßnahmen</h4><h3>„Furcht vor dem Kontrollverlust“</h3></a></li><li class=" odd treven   "><a href="/Gruene-und-Grundeinkommen/!5730367/" class="objlink noavatar" role="link"><h4>Grüne und Grundeinkommen</h4><h3>Im Grundsatz bedingungslos</h3></a></li><li class=" even trodd   "><a href="/Pro-und-Contra-Homeschooling-in-Berlin/!5727153/" class="objlink noavatar" role="link"><h4>Pro und Contra Homeschooling in Berlin</h4><h3>Schickt die Kinder nach Hause!</h3></a></li><li class=" last odd trodd   "><a href="/Grundsatzprogramm-der-Gruenen/!5727103/" class="objlink noavatar" role="link"><h4>Grundsatzprogramm der Grünen</h4><h3>Unter dem Sperrfeuer</h3></a></li></ul></div>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Essay-zu-Integration-und-Zuwanderung/!5691765"></a></div><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a><ul><li class="first odd trodd"><a href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span>Deutschland</span></a></li><li class="even trodd"><a href="/Politik/Europa/!p4617/" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="/Politik/Amerika/!p4618/" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="/Politik/Afrika/!p4621/" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="/Politik/Asien/!p4619/" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="/Politik/Nahost/!p4620/" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="/Politik/Netzpolitik/!p4622/" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a><ul><li class="first odd trodd"><a href="/Oeko/Oekonomie/!p4623/" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="/Oeko/Oekologie/!p4624/" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="/Oeko/Arbeit/!p4629/" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="/Oeko/Konsum/!p4625/" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="/Oeko/Verkehr/!p4628/" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven"><a href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span>Wissenschaft</span></a></li><li class="last odd trodd"><a href="/Oeko/Netzoekonomie/!p4627/" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a><ul><li class="first odd trodd"><a href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span>Alltag</span></a></li><li class="even trodd"><a href="/Gesellschaft/Debatte/!p4633/" id="menu_p4633"><span>Debatte</span></a></li><li class="odd treven"><a href="https://gazete.taz.de/" target="_blank" id="menu_p5057"><span>taz.gazete</span></a></li><li class="even trodd"><a href="https://migration-control.taz.de/#de" target="_blank" id="menu_p5058"><span>migration control</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Kolumnen/!p4634/" id="menu_p4634"><span>Kolumnen</span></a></li><li class="even treven"><a href="/Gesellschaft/Medien/!p4630/" id="menu_p4630"><span>Medien</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Bildung/!p4635/" id="menu_p4635"><span>Bildung</span></a></li><li class="even trodd"><a href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span>Gesundheit</span></a></li><li class="last odd treven"><a href="/Gesellschaft/Reise/!p4638/" id="menu_p4638"><span>Reise</span></a></li></ul></li><li class="even trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="/Kultur/Musik/!p4640/" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="/Kultur/Film/!p4641/" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="/Kultur/Kuenste/!p4642/" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="/Kultur/Buch/!p4643/" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="/Kultur/Netzkultur/!p4631/" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="/Sport/Fussball/!p4647/" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="/Sport/Kolumnen/!p4648/" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="/Nord/Hamburg/!p4651/" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="/Nord/Bremen/!p4652/" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="/Nord/Kultur/!p4653/" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="/bei-Tom/!t5180734/" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="/ueber-die-Wahrheit/!115080/" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="/!p4209/#matomo:pk_campaign" id="menu_p5320"><span>Abo</span></a></li><li class="even trodd"><a href="https://taz.de/!p4271/#matomo:pk_campaign" id="menu_p5321"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="even treven"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even trodd"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="odd treven"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="even trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="odd trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="even treven"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd treven"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even treven"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="https://taz.de/!112354/" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="https://taz.de/!p5097/" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="https://taz.de/!114802/" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="https://taz.de/!114191/" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="https://taz.de/!166598/" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4283/" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="https://taz.de/!p4858/" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="https://taz.de/!112355/" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div></body><!-- DEBUG end 19:46:06+01:00--></html>
