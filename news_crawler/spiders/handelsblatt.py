@@ -45,56 +45,69 @@ class HandelsblattSpider(BaseSpider):
             )
 
     def parse_item(self, response):
-        """Scrapes information from pages into items"""
+        """
+        Checks article validity. If valid, it parses it.
+        """
+        
         data_json = response.xpath('//script[@type="application/ld+json"]/text()').get()
         if not data_json:
             return
         data = json.loads(data_json)        
 
-        # Filter by date
+        # Check date validity 
         if 'dateCreated' not in data.keys():
             return
         creation_date = data['dateCreated']
         creation_date = datetime.fromisoformat(creation_date.split('+')[0])
-        if not self.filter_by_date(creation_date):
+        if self.is_out_of_date(creation_date):
             return
 
         # Extract the article's paragraphs
         paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//p[not(ancestor::div[@class="vhb-caption"]) and not(contains(@class, "vhb-notice")) and not(contains(@class, "vhb-comment-content")) and not(descendant::strong[contains(text(), "Mehr:")])]')]
-        text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
+        paragraphs = remove_empty_paragraphs(paragraphs)
+        text = ' '.join([para for para in paragraphs])
 
-        # Filter by article length
-        if not self.filter_by_length(text):
+        # Check article's length validity
+        if not self.has_min_length(text):
             return
 
-        # Filter by keywords
-        if not self.filter_by_keywords(text):
+        # Check keywords validity
+        if not self.has_valid_keywords(text):
             return
 
-        # Parse the article
+        # Parse the valid article
         item = NewsCrawlerItem()
-        item['provenance'] = response.url
         
-        # Get authors (can be displayed in different ways)
-        authors = response.xpath('//div[contains(@class, "vhb-author--onecolumn")]/ul/li/a/text()').getall()
-        if authors:
-            item['author'] = [author.strip() for author in authors]
-        else:
-            authors = response.xpath('//div[contains(@class, "vhb-author--onecolumn")]/ul/li/text()').getall()
-            if authors:
-                item['author'] = [author.strip() for author in authors]
-            else:
-                authors = response.xpath('//div[contains(@class, "vhb-author--onecolumn")]/a/span/text()').getall()
-                if authors:
-                    item['author'] = [author.strip() for author in authors]
-                else:
-                    item['author'] = list()
-
-        # Get creation, modification, and scraping dates
+        item['news_outlet'] = 'handelsblatt'
+        item['provenance'] = response.url
+        item['query_keywords'] = self.get_query_keywords()
+        
+        # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
         # No last-modified date available
         item['last_modified'] = creation_date.strftime('%d.%m.%Y')
-        item['scraped_date'] = datetime.now().strftime('%d.%m.%Y')
+        item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
+        
+        # Get authors (can be displayed in different ways)
+        author_person = response.xpath('//div[contains(@class, "vhb-author--onecolumn")]/ul/li/a/text()').getall()
+        if author_person:
+            item['author_person'] = [author.strip() for author in author_person]
+        else:
+            author_person = response.xpath('//div[contains(@class, "vhb-author--onecolumn")]/ul/li/text()').getall()
+            if author_person:
+                item['author_person'] = [author.strip() for author in author_person]
+            else:
+                author_person = response.xpath('//div[contains(@class, "vhb-author--onecolumn")]/a/span/text()').getall()
+                if author_person:
+                    item['author_person'] = [author.strip() for author in author_person]
+                else:
+                    item['author_person'] = list()
+        author_organization = response.xpath('//ul[@class="vhb-author-shortcutlist"]/li[@class="vhb-author-shortcutlist--name"]/text()').getall()
+        item['author_organization'] = author_organization if author_organization else list()
+
+        # Extract keywords
+        news_keywords = response.xpath('//meta[@name="keywords"]/@content').get()
+        item['news_keywords'] = news_keywords.split(',') if news_keywords else list()
         
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get()
@@ -110,32 +123,27 @@ class HandelsblattSpider(BaseSpider):
             text = [node.xpath('string()').get().strip() for node in response.xpath('//p[not(ancestor::div[@class="vhb-caption"]) and not(contains(@class, "vhb-notice")) and not(contains(@class, "vhb-comment-content")) and not(descendant::strong[contains(text(), "Mehr:")])] | //h3[not(descendant::a)]')]
           
             # Extract paragraphs between the abstract and the first headline
-            body[''] = text[:text.index(headlines[0])]
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
 
             # Extract paragraphs corresponding to each headline, except the last one
             for i in range(len(headlines)-1):
-                body[headlines[i]] = text[text.index(headlines[i])+1:text.index(headlines[i+1])]
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
 
             # Extract the paragraphs belonging to the last headline
-            body[headlines[-1]] = text[text.index(headlines[-1])+1:]
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
 
         else:
             # The article has no headlines, just paragraphs
-            body[''] = [para for para in paragraphs if para != ' ' and para != ""]
+            body[''] = paragraphs 
 
         item['content'] = {'title': title, 'description': description, 'body':body}
       
-        # Extract keywords
-        keywords = response.xpath('//meta[@name="keywords"]/@content').get()
-        item['keywords'] = keywords.split(',') if keywords else list()
-        
         # Extract first 5 recommendations towards articles from the same news outlet, if available
         recommendations = response.xpath('//div[@class="vhb-teaser--recommendation-row"]/div/h3/a/@href').getall()
         if len(recommendations) > 5:
             recommendations = recommendations[:5]
         item['recommendations'] = ['https://www.handelsblatt.com' + rec for rec in recommendations] if recommendations else list()
 
-        # Save article in html format
-        save_as_html(response, 'handelsblatt.com', title)
+        item['response_body'] = response.body
 
         yield item

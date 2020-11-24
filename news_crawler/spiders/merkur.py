@@ -30,14 +30,7 @@ class MerkurSpider(BaseSpider):
                         r'www\.merkur\.de\/ueber-uns\/',
                         r'www\.merkur\.de\/videos-fotostrecken\/',
                         r'www\.merkur\.de\/abo\/',
-                        r'www\.merkur\.de\/auto\/verkehrsmeldungen\/',
-                        r'promo\.merkur\.de\/',
-                        r'autoanzeigen\.merkur\.de\/',
-                        r'jobs\.merkur\.de\/',
-                        r'trauer\.merkur\.de\/',
-                        r'markt\.merkur\.de\/',
-                        r'veranstaltungen\.merkur\.de\/',
-                        r'weinshop\.merkur\.de\/'
+                        r'www\.merkur\.de\/auto\/verkehrsmeldungen\/'
                         )
                     ),
                 callback='parse_item',
@@ -46,48 +39,66 @@ class MerkurSpider(BaseSpider):
             )
 
     def parse_item(self, response):
-        """Scrapes information from pages into items"""
-    
+        """
+        Checks article validity. If valid, it parses it.
+        """
+        
         data_json = response.xpath('//script[@type="application/ld+json"]/text()').get()
         if not data_json:
             return
         data = json.loads(data_json)
 
-        # Filter by date
+        # Check date validity 
         if not 'datePublished' in data.keys():
             return
         creation_date = data['datePublished']
         if not creation_date:
             return
         creation_date = datetime.fromisoformat(creation_date.split('+')[0])
-        if not self.filter_by_date(creation_date):
+        if self.is_out_of_date(creation_date):
             return
 
         # Extract the article's paragraphs
         paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//p[contains(@class, "id-Article-content-item") and not(contains(@class, "summary")) and not(contains(@class, "copyright"))]')]
-        text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
+        paragraphs = remove_empty_paragraphs(paragraphs)
+        text = ' '.join([para for para in paragraphs])
 
-        # Filter by article length
-        if not self.filter_by_length(text):
+        # Check article's length validity
+        if not self.has_min_length(text):
             return
 
-        # Filter by keywords
-        if not self.filter_by_keywords(text):
+        # Check keywords validity
+        if not self.has_valid_keywords(text):
             return
 
-        # Parse the article
+        # Parse the valid article
         item = NewsCrawlerItem()
-        item['provenance'] = response.url
         
-        # Get authors
-        authors = response.xpath('//meta[@property="lp.article:author"]/@content').getall()
-        item['author'] = authors if authors else list()
-
-        # Get creation, modification, and scraping dates
+        item['news_outlet'] = 'merkur'
+        item['provenance'] = response.url
+        item['query_keywords'] = self.get_query_keywords()
+        
+        # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
         last_modified = data['dateModified']
         item['last_modified'] = datetime.fromisoformat(last_modified.split('+')[0]).strftime('%d.%m.%Y') 
-        item['scraped_date'] = datetime.now().strftime('%d.%m.%Y')
+        item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
+        
+        # Get authors
+        # Check if the authors are persons
+        author_person = response.xpath('//meta[@property="lp.article:author"]/@content').getall()
+        if author_person:
+            item['author_person'] = author_person
+            item['author_organization'] = list()
+        else:
+            # Check if the author is an organization
+            author_organization = data['author']['name']
+            author_organization = remove_empty_paragraphs(author_organization)
+            item['author_person'] = list()
+            item['author_organization'] = author_organization if author_organization else list()
+
+        # No keywords available
+        item['news_keywords'] = list()
         
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get()
@@ -99,38 +110,28 @@ class MerkurSpider(BaseSpider):
             # Extract headlines
             headlines = [h3.xpath('string()').get().strip() for h3 in response.xpath('//h3/span[contains(@class, "id-Article-content-item-headline-text")]')]
             
-            # Remove surrounding quotes from headlines
-            processed_headlines = [headline.strip('"') for headline in headlines]
-            processed_headlines = [headline.strip('“') for headline in processed_headlines]
-          
-            # If quote inside headline, keep substring from quote onwards
-            processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
-            processed_headlines = [headline[headline.index('„')+1:len(headline)] if '„' in headline else headline for headline in processed_headlines]
-            processed_headlines = [headline[headline.rindex('“')+1:len(headline)] if '“' in headline else headline for headline in processed_headlines]
+            # Extract paragraphs with headlines
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//p[contains(@class, "id-Article-content-item") and not(contains(@class, "summary")) and not(contains(@class, "copyright"))] | //h3/span[contains(@class, "id-Article-content-item-headline-text")]')]
 
             # Extract paragraphs between the abstract and the first headline
-            body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//p[contains(@class, "id-Article-content-item") and not(contains(@class, "summary")) and not(contains(@class, "copyright")) and following-sibling::h3/span[contains(@class, "id-Article-content-item-headline-text") and contains(text(), "' + processed_headlines[0] + '")]]')]
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
 
             # Extract paragraphs corresponding to each headline, except the last one
             for i in range(len(headlines)-1):
-                body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//p[contains(@class, "id-Article-content-item") and not(contains(@class, "summary")) and not(contains(@class, "copyright")) and preceding-sibling::h3/span[contains(@class, "id-Article-content-item-headline-text") and contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h3/span[contains(@class, "id-Article-content-item-headline-text") and contains(text(), "' + processed_headlines[i+1] +'")]]')]
-           
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
             # Extract the paragraphs belonging to the last headline
-            body[headlines[-1]] = [node.xpath('string()').get().strip() for node in response.xpath('//p[contains(@class, "id-Article-content-item") and not(contains(@class, "summary")) and not(contains(@class, "copyright")) and preceding-sibling::h3/span[contains(@class, "id-Article-content-item-headline-text") and contains(text(), "' + processed_headlines[-1] + '")]]')]
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
 
         else:
             # The article has no headlines, just paragraphs
-            body[''] = [para for para in paragraphs if para != ' ' and para != ""]
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
       
-        # No keywords available
-        item['keywords'] = list()
-        
         # No recommendations related to the article are available
         item['recommendations'] = list()
 
-        # Save article in html format
-        save_as_html(response, 'merkur.de', title)
+        item['response_body'] = response.body
 
         yield item

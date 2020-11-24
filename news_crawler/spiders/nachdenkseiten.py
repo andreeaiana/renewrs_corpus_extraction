@@ -42,41 +42,54 @@ class NachdenkseitenSpider(BaseSpider):
             )
 
     def parse_item(self, response):
-        """Scrapes information from pages into items"""
-     
-        # Filter by date
+        """
+        Checks article validity. If valid, it parses it.
+        """
+        
+        # Check date validity 
         creation_date = response.xpath('//span[@class="postMeta"]/text()').get()
         if not creation_date:
             return
         creation_date = creation_date.split(' um')[0]
         creation_date = dateparser.parse(creation_date)
-        if not self.filter_by_date(creation_date):
+        if self.is_out_of_date(creation_date):
             return
 
         # Extract the article's paragraphs
         paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="articleContent" or @class="footnote"]/p[not(contains(@class, "powerpress_links"))] | //blockquote/p')]
-        text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
+        # Remove irrelevant paragraphs
+        paragraphs = [para for para in paragraphs if not 'Dieser Beitrag ist auch als Audio-Podcast' in para and not 'Titelbild: ' in para]
+        paragraphs = remove_empty_paragraphs(paragraphs)
+        text = ' '.join([para for para in paragraphs])
 
-        # Filter by article length
-        if not self.filter_by_length(text):
+        # Check article's length validity
+        if not self.has_min_length(text):
             return
 
-        # Filter by keywords
-        if not self.filter_by_keywords(text):
+        # Check keywords validity
+        if not self.has_valid_keywords(text):
             return
 
-        # Parse the article
+        # Parse the valid article
         item = NewsCrawlerItem()
+
+        item['news_outlet'] = 'nachdenkseiten'
         item['provenance'] = response.url
+        item['query_keywords'] = self.get_query_keywords()
+        
+        # Get creation, modification, and crawling dates
+        item['creation_date'] = creation_date.strftime('%d.%m.%Y')
+        item['last_modified'] = creation_date.strftime('%d.%m.%Y')
+        item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
         
         # Get authors
         authors = response.xpath('//span[@class="author"]/a/text()').getall()
-        item['author'] = [author for author in authors if author != 'Redaktion'] if authors else list()
+        item['author_person'] = [author for author in authors if len(author.split()) >= 2] if authors else list()
+        item['author_organization'] = [author for author in authors if len(author.split()) == 1] if authors else list()
 
-        # Get creation, modification, and scraping dates
-        item['creation_date'] = creation_date.strftime('%d.%m.%Y')
-        item['last_modified'] = creation_date.strftime('%d.%m.%Y')
-        item['scraped_date'] = datetime.now().strftime('%d.%m.%Y')
+        # Extract keywords
+        news_keywords = response.xpath('//a[@rel="tag"]/text()').getall()
+        item['news_keywords'] = news_keywords if news_keywords else list()
         
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get()
@@ -85,18 +98,13 @@ class NachdenkseitenSpider(BaseSpider):
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
         # The article has no headlines, just paragraphs
-        body[''] = [para for para in paragraphs if para != ' ' and para != ""]
+        body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
       
-        # Extract keywords
-        keywords = response.xpath('//a[@rel="tag"]/text()').getall()
-        item['keywords'] = keywords if keywords else list()
-        
         # No recommendations related to the article are available
         item['recommendations'] = list()
 
-        # Save article in html format
-        save_as_html(response, 'nachdenkseiten.de', title)
+        item['response_body'] = response.body
 
         yield item

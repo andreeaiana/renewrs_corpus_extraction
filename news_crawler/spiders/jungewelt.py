@@ -43,50 +43,66 @@ class JungeweltSpider(BaseSpider):
             )
 
     def parse_item(self, response):
-        """Scrapes information from pages into items"""
+        """
+        Checks article validity. If valid, it parses it.
+        """
+        
         # Exclude paid articles
         pay_message = 'Dieser Beitrag ist am Erscheinungstag gesperrt und nur für Onlineabonnenten lesbar.'
         if pay_message in response.body.decode('utf-8'):
             return
 
-        # Filter by date
+        # Check date validity 
         creation_date = response.xpath('//meta[@name="dcterms.date"]/@content').get()
         if not creation_date or creation_date == '':
             return
         creation_date = datetime.strptime(creation_date, '%Y-%m-%d')
-        if not self.filter_by_date(creation_date):
+        if self.is_out_of_date(creation_date):
             return
 
         # Extract the article's paragraphs
-        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//p[not(ancestor::div[@class="col-md-8 mx-auto mt-4 bg-light"]) and not(descendant::strong[contains(text(), "Unverzichtbar!")])]')]
-        text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
+        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//p[not(ancestor::div[@class="col-md-8 mx-auto mt-4 bg-light"]) and not(descendant::strong[contains(text(), "Unverzichtbar!")]) and not(ancestor::div[@id="Infobox"])]')]
+        paragraphs = remove_empty_paragraphs(paragraphs)
+        text = ' '.join([para for para in paragraphs])
 
-        # Filter by article length
-        if not self.filter_by_length(text):
+        # Check article's length validity
+        if not self.has_min_length(text):
             return
 
-        # Filter by keywords
-        if not self.filter_by_keywords(text):
+        # Check keywords validity
+        if not self.has_valid_keywords(text):
             return
 
         # Parse the article
         item = NewsCrawlerItem()
+        
+        item['news_outlet'] = 'jungewelt'
         item['provenance'] = response.url
+        item['query_keywords'] = self.get_query_keywords()
+        
+        # Get creation, modification, and crawling dates
+        item['creation_date'] = creation_date.strftime('%d.%m.%Y')
+        item['last_modified'] = creation_date.strftime('%d.%m.%Y')
+        item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
         
         # Get authors
         authors = response.xpath('//meta[@name="Author"]/@content').get()
+        # Check if authors are persons
         if authors:
-            authors = authors.split(', ') if authors else list()
+            authors = authors.split(', ') 
             # Remove location from the author's name, if included
-            item['author'] = [author for author in authors if len(author.split())>=2]
+            item['author_person'] = [author for author in authors if len(author.split())>=2]
+            item['author_organization'] = list()
         else:
-            item['author'] = list()
+            # Check if the author is an organization (mentioned at the end of the last paragraph)
+            author_organization = paragraphs[-1].split('. ')[-1].lstrip('(').rstrip(')').split('/')
+            item['author_organization'] = author_organization if author_organization else list()
+            item['author_person'] = list()
 
-        # Get creation, modification, and scraping dates
-        item['creation_date'] = creation_date.strftime('%d.%m.%Y')
-        item['last_modified'] = creation_date.strftime('%d.%m.%Y')
-        item['scraped_date'] = datetime.now().strftime('%d.%m.%Y')
-        
+        # Extract keywords
+        news_keywords = response.xpath('//meta[@name="keywords"]/@content').get()
+        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
+
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get()
         description = response.xpath('//meta[@property="og:description"]/@content').get().split(' • ')[0]
@@ -95,37 +111,27 @@ class JungeweltSpider(BaseSpider):
         body = dict()
         if response.xpath('//h3[not(@*) and not(ancestor::footer)]'):
             # Extract headlines
-            headlines = [h3.xpath('string()').get() for h3 in response.xpath('//h3[not(@*) and not(ancestor::footer)]')]
+            headlines = [h3.xpath('string()').get().strip() for h3 in response.xpath('//h3[not(@*) and not(ancestor::footer)]')]
             
-            # Remove surrounding quotes from headlines
-            processed_headlines = [headline.strip('"') for headline in headlines]
-            processed_headlines = [headline.strip('“') for headline in processed_headlines]
-          
-            # If quote inside headline, keep substring from quote onwards
-            processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
-            processed_headlines = [headline[headline.index('„')+1:len(headline)] if '„' in headline else headline for headline in processed_headlines]
-            processed_headlines = [headline[headline.rindex('“')+1:len(headline)] if '“' in headline else headline for headline in processed_headlines]
+            # Extract paragraphs with headlines
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//p[not(ancestor::div[@class="col-md-8 mx-auto mt-4 bg-light"]) and not(descendant::strong[contains(text(), "Unverzichtbar!")]) and not(ancestor::div[@id="Infobox"])] | //h3[not(@*) and not(ancestor::footer)]')]
 
             # Extract paragraphs between the abstract and the first headline
-            body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//p[not(ancestor::div[@class="col-md-8 mx-auto mt-4 bg-light"]) and not(descendant::strong[contains(text(), "Unverzichtbar!")]) and following-sibling::h3[contains(text(), "' + processed_headlines[0] + '")]]')]
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
 
             # Extract paragraphs corresponding to each headline, except the last one
             for i in range(len(headlines)-1):
-                body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//p[not(ancestor::div[@class="col-md-8 mx-auto mt-4 bg-light"]) and not(descendant::strong[contains(text(), "Unverzichtbar!")]) and preceding-sibling::h3[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h3[contains(text(), "' + processed_headlines[i+1] +'")]]')]
-           
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
             # Extract the paragraphs belonging to the last headline
-            body[headlines[-1]] = [node.xpath('string()').get().strip() for node in response.xpath('//p[not(ancestor::div[@class="col-md-8 mx-auto mt-4 bg-light"]) and not(descendant::strong[contains(text(), "Unverzichtbar!")]) and preceding-sibling::h3[contains(text(), "' + processed_headlines[-1] + '")]]')]
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
 
         else:
             # The article has no headlines, just paragraphs
-            body[''] = [para for para in paragraphs if para != ' ' and para != ""]
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
       
-        # Extract keywords
-        keywords = response.xpath('//meta[@name="keywords"]/@content').get()
-        item['keywords'] = keywords.split(', ') if keywords else list()
-
         # Extract first 5 recommendations towards articles from the same news outlet, if available
         recommendations = response.xpath('//div[@id="similars"]/ul/li[not(contains(@class, "protected"))]//a[not(ancestor::h3)]/@href').getall()
         if recommendations:
@@ -135,7 +141,6 @@ class JungeweltSpider(BaseSpider):
         else:
             item['recommendations'] = list()
 
-        # Save article in html format
-        save_as_html(response, 'jungewelt.de', title)
+        item['response_body'] = response.body
 
         yield item

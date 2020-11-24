@@ -2,6 +2,7 @@
 
 import os
 import sys
+import json
 from news_crawler.spiders import BaseSpider
 from scrapy.spiders import Rule 
 from scrapy.linkextractors import LinkExtractor
@@ -38,13 +39,6 @@ class SpiegelStartSpider(BaseSpider):
                         r'www\.spiegel\.de\/video\/',
                         r'www\.spiegel\.de\/newsletter',
                         r'www\.spiegel\.de\/services',
-                        r'sportdaten\.spiegel\.de\/',
-                        r'spiele\.spiegel\.de\/',
-                        r'akademie\.spiegel\.de\/',
-                        r'jobs\.spiegel\.de\/',
-                        r'immobilienbewertung\.spiegel\.de\/',
-                        r'sportwetten\.spiegel\.de\/',
-                        r'ed\.spiegel\.de\/',
                         r'www\.spiegel\.de\/lebenundlernen\/schule\/ferien-schulferien-und-feiertage-a-193925\.html',
                         r'www\.spiegel\.de\/dienste\/besser-surfen-auf-spiegel-online-so-funktioniert-rss-a-1040321\.html',
                         r'www\.spiegel\.de\/gutscheine\/',
@@ -61,46 +55,65 @@ class SpiegelStartSpider(BaseSpider):
             )
 
     def parse_item(self, response):
-        """Scrapes information from pages into items"""
-       
+        """
+        Checks article validity. If valid, it parses it.
+        """
+        
         # Exclude paid articls (i.e. SpiegelPlus)
         if response.xpath('//span[@class="flex-shrink-0 leading-none"]').get():
             return
 
-        # Filter by date
+        # Check date validity 
         creation_date = response.xpath('//meta[@name="date"]/@content').get()
         if not creation_date:
             return
         creation_date = datetime.fromisoformat(creation_date.split('+')[0])
-        if not self.filter_by_date(creation_date):
+        if self.is_out_of_date(creation_date):
             return
 
         # Extract the article's paragraphs
         paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[contains(@class, "RichText RichText--iconLinks")]/p')]
-        text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
+        paragraphs = remove_empty_paragraphs(paragraphs)
+        text = ' '.join([para for para in paragraphs])
 
-        # Filter by article length
-        if not self.filter_by_length(text):
+        # Check article's length validity
+        if not self.has_min_length(text):
             return
 
-        # Filter by keywords
-        if not self.filter_by_keywords(text):
+        # Check keywords validity
+        if not self.has_valid_keywords(text):
             return
 
-        # Parse the article
+        # Parse the valid article
         item = NewsCrawlerItem()
-        item['provenance'] = response.url
         
-        # Get authors
-        authors = response.xpath('//meta[@name="author"]/@content').get()
-        item['author'] = authors.split(', DER SPIEGEL')[0].split(', ') if authors else list()
-
-        # Get creation, modification, and scraping dates
+        item['news_outlet'] = 'spiegel_start'
+        item['provenance'] = response.url
+        item['query_keywords'] = self.get_query_keywords()
+        
+        # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
         last_modified = response.xpath('//meta[@name="last-modified"]/@content').get()
         item['last_modified'] = datetime.fromisoformat(last_modified.split('+')[0]).strftime('%d.%m.%Y')
-        item['scraped_date'] = datetime.now().strftime('%d.%m.%Y')
+        item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
         
+        # Get authors
+        data_json = response.xpath('//script[@type="application/ld+json"]/text()').get()
+        if data_json:
+            data = json.loads(data_json)
+            data_authors = data[0]['author']
+            if type(data_authors) != list:
+                data_authors = [data_authors]
+            item['author_person'] = [author['name'] for author in data_authors if author['@type']=='Person']
+            item['author_organization'] = [author['name'] for author in data_authors if author['@type']=='Organization']
+        else:
+            item['author_person'] = list()
+            item['author_organization'] = list()
+        
+        # Extract keywords, if available 
+        news_keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
+        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
+
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get().split(' - DER SPIEGEL')[0]
         description = response.xpath('//meta[@property="og:description"]/@content').get()
@@ -109,31 +122,27 @@ class SpiegelStartSpider(BaseSpider):
         body = dict()
         if response.xpath('//h3'):
             # Extract headlines
-            headlines = [h3.xpath('string()').get() for h3 in response.xpath('//h3')]
+            headlines = [h3.xpath('string()').get().strip() for h3 in response.xpath('//h3')]
 
             # Extract the paragraphs and headlines together
             text = [node.xpath('string()').get().strip() for node in response.xpath('//div[contains(@class, "RichText RichText--iconLinks")]/p | //h3')]
           
             # Extract paragraphs between the abstract and the first headline
-            body[''] = text[:text.index(headlines[0])]
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
 
             # Extract paragraphs corresponding to each headline, except the last one
             for i in range(len(headlines)-1):
-                body[headlines[i]] = text[text.index(headlines[i])+1:text.index(headlines[i+1])]
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
 
             # Extract the paragraphs belonging to the last headline
-            body[headlines[-1]] = text[text.index(headlines[-1])+1:]
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
 
         else:
             # The article has no headlines, just paragraphs
-            body[''] = [para for para in paragraphs if para != ' ' and para != ""]
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
       
-        # Extract keywords, if available 
-        keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
-        item['keywords'] = keywords.split(', ') if keywords else list()
-
         # Extract first 5 recommendations towards articles from the same news outlet, if available
         recommendations = response.xpath('//ul[@class="flex flex-col" and preceding-sibling::span[contains(text(), "Mehr zum Thema")]]//a[@class="text-black block" and not(../descendant::span[@data-flag-name="sponpaid"])]/@href | //div[contains(@class, "max-w-full w-full") and ../preceding-sibling::span[contains(text(), "Mehr zum Thema")]]//a/@href | //div[contains(@class, "max-w-full w-full") and ../../preceding-sibling::span[contains(text(), "Mehr zum Thema")]]//a/@href').getall()
         if recommendations:
@@ -143,7 +152,6 @@ class SpiegelStartSpider(BaseSpider):
         else:
             item['recommendations'] = list()
 
-        # Save article in html format
-        save_as_html(response, 'spiegel_start.de', title)
+        item['response_body'] = response.body
 
         yield item 

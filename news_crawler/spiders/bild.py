@@ -39,14 +39,16 @@ class BildSpider(BaseSpider):
             )
 
     def parse_item(self, response):
-        """Scrapes information from pages into items"""
-
+        """
+        Checks article validity. If valid, it parses it.
+        """
+        
         data_json = response.xpath('//script[@type="application/ld+json"]/text()').get()
         if not data_json:
             return
         data = json.loads(data_json)
 
-        # Filter by date
+        # Check date validity 
         if not 'datePublished' in data.keys():
             return
         creation_date = data['datePublished']
@@ -59,35 +61,30 @@ class BildSpider(BaseSpider):
                 creation_date = datetime.fromisoformat(creation_date[:-1])
         else:
             creation_date = datetime.fromisoformat(creation_date.split('+')[0])
-        if not self.filter_by_date(creation_date):
+        if self.is_out_of_date(creation_date):
             return
 
         # Extract the article's paragraphs
         paragraphs = [node.xpath('string()').get() for node in response.xpath('//div[@class="txt" or @class="article-body"]/p')]
-        text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
+        paragraphs = remove_empty_paragraphs(paragraphs)
+        text = ' '.join([para for para in paragraphs])
 
-        # Filter by article length
-        if not self.filter_by_length(text):
+        # Check article's length validity
+        if not self.has_min_length(text):
             return
 
-        # Filter by keywords
-        if not self.filter_by_keywords(text):
+        # Check keywords validity
+        if not self.has_valid_keywords(text):
             return
 
-        # Parse the article
+        # Parse the valid article
         item = NewsCrawlerItem()
-        item['provenance'] = response.url
         
-        # Get authors
-        authors = response.xpath('//div[@class="authors"]//span[@class="authors__name"]/text()').get()
-        if authors:
-            authors = authors.split(' UND ') if 'UND' in authors else authors
-        else:
-            authors = response.xpath('//div[@class="author"]//span[@class="author__name"]/text()').get()
-            authors = [authors] if authors else authors
-        item['author'] = authors if authors else list()
-
-        # Get creation, modification, and scraping dates
+        item['news_outlet'] = 'bild'
+        item['provenance'] = response.url
+        item['query_keywords'] = self.get_query_keywords()
+        
+        # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
         last_modified = data['dateModified']
         if 'Z' in last_modified:
@@ -97,7 +94,27 @@ class BildSpider(BaseSpider):
                 item['last_modified'] = datetime.fromisoformat(last_modified[:-1]).strftime('%d.%m.%Y')
         else:
              item['last_modified'] = datetime.fromisoformat(last_modified.split('+')[0]).strftime('%d.%m.%Y')
-        item['scraped_date'] = datetime.now().strftime('%d.%m.%Y')
+        item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
+        
+        # Get authors
+        author_person = response.xpath('//div[@class="authors"]//span[@class="authors__name"]/text()').get()
+        if author_person:
+            author_person = author_person.split(' UND ') if 'UND' in author_person else [author_person]
+        else:
+            author_person = response.xpath('//div[@class="author"]//span[@class="author__name"]/text()').get()
+            author_person = [author_person] if author_person else list()
+        item['author_person'] = author_person
+        data_author = data['author']
+        if type(data_author) != list:
+            data_author = [data_author]
+        item['author_organization'] = [author['name'] for author in data_author if author['@type']=='Organization'] 
+
+        # Extract keywords
+        news_keywords = response.xpath('//meta[@name="keywords"]/@content').get()
+        if news_keywords:
+            item['news_keywords'] = news_keywords.split(', ') if ', ' in news_keywords else news_keywords.split(',')
+        else:
+            item['news_keywords'] = list()
         
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get().strip()
@@ -109,38 +126,25 @@ class BildSpider(BaseSpider):
             # Extract headlines
             headlines = [h2.xpath('string()').get().strip() for h2 in response.xpath('//h2[@class="crossheading"]')]
             
-            # Remove surrounding quotes from headlines
-            processed_headlines = [headline.strip('"') for headline in headlines]
-            processed_headlines = [headline.strip('“') for headline in processed_headlines]
-          
-            # If quote inside headline, keep substring from quote onwards
-            processed_headlines = [headline[headline.rindex('"')+1:len(headline)] if '"' in headline else headline for headline in processed_headlines]
-            processed_headlines = [headline[headline.index('„')+1:len(headline)] if '„' in headline else headline for headline in processed_headlines]
-            processed_headlines = [headline[headline.rindex('“')+1:len(headline)] if '“' in headline else headline for headline in processed_headlines]
-         
+            # Extract paragraphs with headlines
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="txt" or @class="article-body"]/p | //h2[@class="crossheading"]')]
+
             # Extract paragraphs between the abstract and the first headline
-            body[''] = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="txt" or @class="article-body"]/p[following-sibling::h2[contains(text(), "' + processed_headlines[0] + '")]]')]
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
 
             # Extract paragraphs corresponding to each headline, except the last one
             for i in range(len(headlines)-1):
-                body[headlines[i]] = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="txt" or @class="article-body"]/p[preceding-sibling::h2[contains(text(), "' + processed_headlines[i] + '")] and following-sibling::h2[contains(text(), "' + processed_headlines[i+1] +'")]]')]
-           
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
             # Extract the paragraphs belonging to the last headline
-            body[headlines[-1]] = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="txt" or @class="article-body"]/p[preceding-sibling::h2[contains(text(), "' + processed_headlines[-1] + '")]]')]
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
 
         else:
             # The article has no headlines, just paragraphs
-            body[''] = [para for para in paragraphs if para != ' ' and para != ""]
+            body[''] = paragraphs 
 
         item['content'] = {'title': title, 'description': description, 'body':body}
       
-        # Extract keywords
-        keywords = response.xpath('//meta[@name="keywords"]/@content').get()
-        if keywords:
-            item['keywords'] = keywords.split(', ') if ', ' in keywords else keywords.split(',')
-        else:
-            item['keywords'] = list()
-        
         # Extract first 5 recommendations towards articles from the same news outlet, if available
         recommendations = response.xpath('//div[@class="related-topics__container"]/article/a/@href').getall()
         if not recommendations:
@@ -153,7 +157,6 @@ class BildSpider(BaseSpider):
         else:
             item['recommendations'] = list()
 
-        # Save article in html format
-        save_as_html(response, 'bild.de', title)
+        item['response_body'] = response.body
         
         yield item

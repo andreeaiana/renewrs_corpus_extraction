@@ -24,7 +24,7 @@ class FocusSpider(BaseSpider):
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'focus\.de\/\w.*\.html$'),
+                    allow=(r'www\.focus\.de\/\w.*\.html$'),
                     deny=(r'www\.focus\.de\/service\/',
                         r'www\.focus\.de\/focustv\/',
                         r'www\.focus\.de\/videos\/',
@@ -37,11 +37,6 @@ class FocusSpider(BaseSpider):
                         r'www\.focus\.de\/gesundheit\/testcenter\/',
                         r'www\.focus\.de\/wissen\/natur\/meteorologie\/',
                         r'www\.focus\.de\/finanzen\/boerse\/robo',
-                        r'gutscheine\.focus\.de\/',
-                        r'kleinanzeige\.focus\.de\/',
-                        r'nl\.focus\.de\/',
-                        r'praxistipps\.focus\.de\/',
-                        r'vergleich\.focus\.de\/',
                         r'www\.focus\.de\/intern\/',
                         r'www\.focus\.de\/finanzen\/focus\-online\-kooperationen\-services\-vergleiche\-rechner\_id'
                         )
@@ -52,48 +47,65 @@ class FocusSpider(BaseSpider):
             )
 
     def parse_item(self, response):
-        """Scrapes information from pages into items"""
+        """
+        Checks article validity. If valid, it parses it.
+        """
     
         json_data = response.xpath('//script[@type="application/ld+json"]/text()').get()
         if not json_data:
             return
         data = json.loads(json_data)
 
-        # Filter by date
+        # Check date validity 
         if not 'datePublished' in data.keys():
             return
         creation_date = data['datePublished']
         if not creation_date:
             return
         creation_date = datetime.fromisoformat(creation_date.split('+')[0])
-        if not self.filter_by_date(creation_date):
+        if self.is_out_of_date(creation_date):
             return
 
         # Extract the article's paragraphs
         paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="textBlock"]/p[not(contains(@class, "noads")) and not(descendant::em[contains(text(), "Lesen Sie auch")])]')]
-        text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
+        paragraphs = remove_empty_paragraphs(paragraphs)
+        text = ' '.join([para for para in paragraphs])
 
-        # Filter by article length
-        if not self.filter_by_length(text):
+        # Check article's length validity
+        if not self.has_min_length(text):
             return
 
-        # Filter by keywords
-        if not self.filter_by_keywords(text):
+        # Check keywords validity
+        if not self.has_valid_keywords(text):
             return
 
-        # Parse the article
+        # Parse the valid article
         item = NewsCrawlerItem()
-        item['provenance'] = response.url
         
-        # Get authors
-        authors = response.xpath('//div[@class="authorMeta"]/span/a/text()').getall()
-        item['author'] = authors if authors else list()
-
-        # Get creation, modification, and scraping dates
+        item['news_outlet'] = 'focus'
+        item['provenance'] = response.url
+        item['query_keywords'] = self.get_query_keywords()
+        
+        # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
         last_modified = data['dateModified']
         item['last_modified'] = datetime.fromisoformat(last_modified.split('+')[0]).strftime('%d.%m.%Y')
-        item['scraped_date'] = datetime.now().strftime('%d.%m.%Y')
+        item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
+        
+        # Get authors
+        author_person = response.xpath('//div[@class="authorMeta"]/span/a/text()').getall()
+        item['author_person'] = author_person if author_person else list()
+        # Check if the author is an organization
+        author_organization = response.xpath('//div[@class="textBlock "]/span[@class="created"]/text()').get()
+        if author_organization:
+            author_organization = author_organization.split('/')
+            author_organization = remove_empty_paragraphs(author_organization)
+            item['author_organization'] = author_organization
+        else:
+            item['author_organization'] = list()
+
+        # No keywords available
+        item['news_keywords'] = list()
         
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get()
@@ -104,34 +116,30 @@ class FocusSpider(BaseSpider):
         if response.xpath('//h2[not(contains(@class, "mm-h2"))]'):
 
            # Extract headlines
-           headlines = [h2.xpath('string()').get() for h2 in response.xpath('//h2[not(contains(@class, "mm-h2"))]')]
+           headlines = [h2.xpath('string()').get().strip() for h2 in response.xpath('//h2[not(contains(@class, "mm-h2"))]')]
 
            # Extract the paragraphs and headlines together
            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="textBlock"]/p[not(contains(@class, "noads")) and not(descendant::em[contains(text(), "Lesen Sie auch")])] | //h2[not(contains(@class, "mm-h2"))]')]
           
            # Extract paragraphs between the abstract and the first headline
-           body[''] = text[:text.index(headlines[0])]
+           body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
 
            # Extract paragraphs corresponding to each headline, except the last one
            for i in range(len(headlines)-1):
-               body[headlines[i]] = text[text.index(headlines[i])+1:text.index(headlines[i+1])]
+               body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
 
            # Extract the paragraphs belonging to the last headline
-           body[headlines[-1]] = text[text.index(headlines[-1])+1:]
+           body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
 
         else:
             # The article has no headlines, just paragraphs
-            body[''] = [para for para in paragraphs if para != ' ' and para != ""]
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
       
-        # No keywords available
-        item['keywords'] = list()
-        
         # No article-related recommendations
         item['recommendations'] = list()
 
-        # Save article in html format
-        save_as_html(response, 'focus.de', title)
+        item['response_body'] = response.body
 
         yield item

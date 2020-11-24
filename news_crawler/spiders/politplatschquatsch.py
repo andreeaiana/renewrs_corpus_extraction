@@ -32,15 +32,17 @@ class PolitplatschquatschSpider(BaseSpider):
             )
 
     def parse_item(self, response):
-        """Scrapes information from pages into items"""
-
-        # Filter by date
+        """
+        Checks article validity. If valid, it parses it.
+        """
+        
+        # Check date validity 
         creation_date = response.xpath('//h2[@class="date-header"]/span/text()').get()
         if not creation_date:
             return
         creation_date = creation_date.split(', ')[-1]
         creation_date = dateparser.parse(creation_date)
-        if not self.filter_by_date(creation_date):
+        if self.is_out_of_date(creation_date):
             return
 
         # Extract the article's content
@@ -53,7 +55,7 @@ class PolitplatschquatschSpider(BaseSpider):
             raw_paragraphs = [para.replace('\n', '') for para in raw_paragraphs]
             raw_paragraphs = [para.replace('\xa0', '') for para in raw_paragraphs]
             paragraphs = [para.strip() for para in raw_paragraphs]
-            paragraphs = [para for para in paragraphs if para != '' and para != ' ']
+            paragraphs = remove_empty_paragraphs(paragraphs)
             text = ' '.join([para for para in paragraphs])
  
         else:
@@ -67,27 +69,35 @@ class PolitplatschquatschSpider(BaseSpider):
                     paragraphs.extend(para.split('\n'))
                 else:
                     paragraphs.append(para)
-            text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
+            paragraphs = remove_empty_paragraphs(paragraphs)
+            text = ' '.join([para for para in paragraphs])
 
-        # Filter by article length
-        if not self.filter_by_length(text):
+        # Check article's length validity
+        if not self.has_min_length(text):
             return
 
-        # Filter by keywords
-        if not self.filter_by_keywords(text):
+        # Check keywords validity
+        if not self.has_valid_keywords(text):
             return
 
-        # Parse the article
+        # Parse the valid article
         item = NewsCrawlerItem()
-        item['provenance'] = response.url
         
-        # No authors listed
-        item['author'] = list()
-
-        # Get creation, modification, and scraping dates
+        item['news_outlet'] = 'politplatschquatsch'
+        item['provenance'] = response.url
+        item['query_keywords'] = self.get_query_keywords()
+        
+        # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
         item['last_modified'] = creation_date.strftime('%d.%m.%Y')
-        item['scraped_date'] = datetime.now().strftime('%d.%m.%Y')
+        item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
+        
+        # No authors listed
+        item['author_person'] = list()
+        item['author_organization'] = list()
+
+        # No keywords available
+        item['news_keywords'] = list()
         
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get()
@@ -97,17 +107,13 @@ class PolitplatschquatschSpider(BaseSpider):
         body = dict()
         
         # Headlines are not handled consistently
-        body[''] = [para for para in paragraphs if para != ' ' and para != ""]
+        body[''] = paragraphs 
 
         item['content'] = {'title': title, 'description': description, 'body':body}
       
-        # No keywords available
-        item['keywords'] = list()
-        
         # No recommendations related to the article are available
         item['recommendations'] = list()
 
-        # Save article in html format
-        save_as_html(response, 'politplatschquatsch.com', title)
+        item['response_body'] = response.body
 
         yield item
