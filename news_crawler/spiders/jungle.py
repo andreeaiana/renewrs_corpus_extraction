@@ -18,7 +18,7 @@ class JungleSpider(BaseSpider):
     rotate_user_agent = True
     allowed_domains = ['jungle.world']
     start_urls = ['https://jungle.world/']
-    
+
     # Exclude pages without relevant articles 
     rules = (
             Rule(
@@ -32,13 +32,14 @@ class JungleSpider(BaseSpider):
             )
 
     def parse_item(self, response):
-        """Scrapes information from pages into items"""
-
-        # Exclude paid articles
+        """
+        Checks article validity. If valid, it parses it.
+        """
+        
         if 'Anmeldung erforderlich' in response.xpath('//meta[@name="dcterms.title"]/@content').get():
             return
 
-        # Filter by date
+        # Check date validity 
         creation_date = response.xpath('//div/span[@class="date"]/text()').get()
         if not creation_date:
             return
@@ -46,34 +47,43 @@ class JungleSpider(BaseSpider):
         if creation_date == '':
             return
         creation_date = datetime.strptime(creation_date, '%d.%m.%Y')
-        if not self.filter_by_date(creation_date):
+        if self.is_out_of_date(creation_date):
             return
 
         # Extract the article's paragraphs
         paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="lead"] | //p[not(ancestor::div[@class="caption"]) and not(descendant::a[@class="btn btn-default scrollTop"])]')]
-        text = ' '.join([para for para in paragraphs if para != ' ' and para != ""])
+        paragraphs = remove_empty_paragraphs(paragraphs)
+        text = ' '.join([para for para in paragraphs])
 
-        # Filter by article length
-        if not self.filter_by_length(text):
+        # Check article's length validity
+        if not self.has_min_length(text):
             return
 
-        # Filter by keywords
-        if not self.filter_by_keywords(text):
+        # Check keywords validity
+        if not self.has_valid_keywords(text):
             return
 
-        # Parse the article
+        # Parse the valid article
         item = NewsCrawlerItem()
+        
+        item['news_outlet'] = 'jungle'
         item['provenance'] = response.url
+        item['query_keywords'] = self.get_query_keywords()
+        
+        # Get creation, modification, and crawling dates
+        item['creation_date'] = creation_date.strftime('%d.%m.%Y')
+        item['last_modified'] = creation_date.strftime('%d.%m.%Y')
+        item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
         
         # Get authors
         authors = response.xpath('//meta[@name="dcterms.publisher"]/@content').get()
-        item['author'] = authors.split(', ') if authors else list()
+        item['author_person'] = authors.split(', ') if authors else list()
+        item['author_organization'] = list()
 
-        # Get creation, modification, and scraping dates
-        item['creation_date'] = creation_date.strftime('%d.%m.%Y')
-        item['last_modified'] = creation_date.strftime('%d.%m.%Y')
-        item['scraped_date'] = datetime.now().strftime('%d.%m.%Y')
-        
+        # Extract keywords
+        news_keywords = response.xpath('//meta[@name="keywords"]/@content').get()
+        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
+
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get()
         description = response.xpath('//meta[@property="og:description"]/@content').get().split(' • ')[0]
@@ -81,18 +91,13 @@ class JungleSpider(BaseSpider):
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
         # The articles have no headlines, just paragraphs
-        body[''] = [para for para in paragraphs if para != ' ' and para != ""]
+        body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
       
-        # Extract keywords
-        keywords = response.xpath('//meta[@name="keywords"]/@content').get()
-        item['keywords'] = keywords.split(', ') if keywords else list()
-
         # No recommendations related to the current article available
         item['recommendations'] = list()
 
-        # Save article in html format
-        save_as_html(response, 'jungle.world', title)
+        item['response_body'] = response.body
 
         yield item
