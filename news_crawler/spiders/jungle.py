@@ -39,6 +39,10 @@ class JungleSpider(BaseSpider):
         if 'Anmeldung erforderlich' in response.xpath('//meta[@name="dcterms.title"]/@content').get():
             return
 
+        # Check if page is duplicate
+        if '?page=' in response.url:
+            return
+
         # Check date validity 
         creation_date = response.xpath('//div/span[@class="date"]/text()').get()
         if not creation_date:

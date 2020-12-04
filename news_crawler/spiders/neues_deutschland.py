@@ -49,6 +49,9 @@ class NeuesDeutschlandSpider(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
+        # Check if page is duplicate
+        if 'html?' in response.url:
+            return
         
         # Check date validity 
         creation_date = response.xpath('//meta[@name="date"]/@content').get()

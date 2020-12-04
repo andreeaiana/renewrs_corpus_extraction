@@ -24,7 +24,8 @@ class KlasseGegenKlasseSpider(BaseSpider):
             Rule(
                 LinkExtractor(
                     allow=(r'www\.klassegegenklasse\.org\/\w.*\/'),
-                    deny=(r'www\.klassegegenklasse\.org\/kategorie\/turkce\/'
+                    deny=(r'www\.klassegegenklasse\.org\/\w.*\/\?replytocom=\d+',
+                        r'www\.klassegegenklasse\.org\/kategorie\/turkce\/'
                         )
                     ),
                 callback='parse_item',
