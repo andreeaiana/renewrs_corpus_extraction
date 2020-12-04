@@ -37,7 +37,11 @@ class KlasseGegenKlasseSpider(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
-        
+
+        # Check if page is duplicate (same article with 2 URLs, with 'http' and 'https')
+        if not response.url.startswith('https:'):
+            return
+
         # Check date validity 
         creation_date = response.xpath('//time/@datetime').get()
         if not creation_date:
