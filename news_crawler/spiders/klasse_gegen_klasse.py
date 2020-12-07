@@ -24,7 +24,8 @@ class KlasseGegenKlasseSpider(BaseSpider):
             Rule(
                 LinkExtractor(
                     allow=(r'www\.klassegegenklasse\.org\/\w.*\/'),
-                    deny=(r'www\.klassegegenklasse\.org\/kategorie\/turkce\/'
+                    deny=(r'www\.klassegegenklasse\.org\/\w.*\/\?replytocom=\d+',
+                        r'www\.klassegegenklasse\.org\/kategorie\/turkce\/'
                         )
                     ),
                 callback='parse_item',
@@ -36,7 +37,11 @@ class KlasseGegenKlasseSpider(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
-        
+
+        # Check if page is duplicate (same article with 2 URLs, with 'http' and 'https')
+        if not response.url.startswith('https:'):
+            return
+
         # Check date validity 
         creation_date = response.xpath('//time/@datetime').get()
         if not creation_date:
