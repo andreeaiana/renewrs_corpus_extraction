@@ -99,7 +99,7 @@ class ContraMagazin(BaseSpider):
         if news_keywords:
             news_keywords = json.loads(news_keywords)
             news_keywords = news_keywords['@graph'][4]['keywords']
-        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
+        item['news_keywords'] = news_keywords.split(',') if news_keywords else list()
 
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get()
