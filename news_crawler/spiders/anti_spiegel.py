@@ -102,7 +102,7 @@ class Antispiegel(BaseSpider):
         data_json = response.xpath("//script[@class='yoast-schema-graph']/text()").get()
         data_json = json.loads(data_json)
         news_keywords = data_json['@graph'][3]['keywords']
-        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
+        item['news_keywords'] = news_keywords.split(',') if news_keywords else list()
 
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get()

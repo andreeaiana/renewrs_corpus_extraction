@@ -90,7 +90,7 @@ class Journalistenwatch(BaseSpider):
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
-        item['author_person'] = response.xpath('//meta[@itemprop="author"]/@content').get()
+        item['author_person'] = response.xpath('//meta[@itemprop="author"]/@content').getall()
         item['author_organization'] = list()
 
         # Extract keywords, if available

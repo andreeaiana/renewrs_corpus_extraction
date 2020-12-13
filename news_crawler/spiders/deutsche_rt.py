@@ -94,7 +94,7 @@ class DeutscheRT(BaseSpider):
 
         # Get authors
         item['author_person'] = list()
-        item['author_organization'] = data_json['publisher']['name']
+        item['author_organization'] = [data_json['publisher']['name']]
 
         # Extract keywords, if available
         news_keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
