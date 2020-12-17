@@ -13,16 +13,29 @@ BOT_NAME = 'news_crawler'
 
 SPIDER_MODULES = ['news_crawler.spiders']
 NEWSPIDER_MODULE = 'news_crawler.spiders'
+
+# Run spider until item count or timeout
 CLOSESPIDER_ITEMCOUNT = 200 
-CLOSESPIDER_TIMEOUT = 3600*24*3 # Run spider until item count or timeout (3 days) reached
+#CLOSESPIDER_TIMEOUT = 3600*24*3 # For topic 'refugees and migration'
+CLOSESPIDER_TIMEOUT = 3600*24*6 # For topic 'Grundeinkommen'
+
 
 # Project-specific variables
-START_DATE = "01.01.2019"
-END_DATE = "20.10.2020"
+#TOPIC = 'refugees_migration'
+TOPIC = 'grundeinkommen'
+
+#START_DATE = "01.01.2019" # For topic 'refugees and migration'
+START_DATE = "01.01.2017" # For topic 'Grundeinkommen'
+
+#END_DATE = "20.10.2020" # For topic 'refugees and migration'
+END_DATE = "16.12.2020" # For topic 'Grundeinkommen'
+
 ARTICLE_LENGTH = 150
 KEYWORDS_MIN_FREQUENCY = 2
 KEYWORDS_MIN_DISTANCE = 50
-KEYWORDS = ['flüchtl', 'geflücht', 'asyl', 'zuwander', 'immigrant', 'immigration', 'migration', 'migrant',  'ausländer', 'einwander', 'refug', 'rapefug', 'invasor']
+
+#KEYWORDS = ['flüchtl', 'geflücht', 'asyl', 'zuwander', 'immigrant', 'immigration', 'migration', 'migrant',  'ausländer', 'einwander', 'refug', 'rapefug', 'invasor'] # For topic 'refugees and migration'
+KEYWORDS = ['grundeinkommen', 'bedingungslos einkommen'] # For topic 'Grundeinkommen'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'news_crawler (+http://www.yourdomain.com)'

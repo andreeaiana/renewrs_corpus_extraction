@@ -4,6 +4,7 @@ import os
 import json
 from scrapy import signals
 from scrapy.exceptions import NotConfigured
+from scrapy.utils.project import get_project_settings
 
 
 class PersistStatsExtension(object):
@@ -33,7 +34,9 @@ class PersistStatsExtension(object):
 
     def spider_opened(self, spider):
         # Check if directory exists for the given spider, and create it if it does not
-        folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'data', spider.name)
+        settings = get_project_settings()
+        topic = settings.get('TOPIC')
+        folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'data', topic, spider.name)
         if not os.path.isdir(folder):
             os.makedirs(self.folder)
         self.file = open(os.path.join(folder, 'core_stats.json'), 'w')

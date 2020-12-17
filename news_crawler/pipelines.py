@@ -6,13 +6,16 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import os
 import json
+from scrapy.utils.project import get_project_settings
 
 
 class HtmlWriterPipeline(object):
     """ Creates one directory per spider and stores each scraped page as html """
     def open_spider(self, spider):
         # Create directory for the given spider
-        self.folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'data', spider.name, 'html')
+        settings = get_project_settings()
+        topic = settings.get('TOPIC')
+        self.folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'data', topic, spider.name, 'html')
         if not os.path.isdir(self.folder):
             os.makedirs(self.folder)
         
@@ -31,7 +34,9 @@ class JsonWriterPipeline(object):
     """ Creates one directory per spider and writes each item into a new json file """
     def open_spider(self, spider):
         # Create directory for the given spider
-        self.folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'data', spider.name, 'json')
+        settings = get_project_settings()
+        topic = settings.get('TOPIC')
+        self.folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'data', topic, spider.name, 'json')
         if not os.path.isdir(self.folder):
             os.makedirs(self.folder)
 
