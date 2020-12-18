@@ -40,6 +40,11 @@ class BaseSpider(CrawlSpider):
             raise NotConfigured
         self.keywords = settings.get('KEYWORDS')
 
+        # Check if there are compound keywords (e.g. bedingungslos* einkommen*), and if so, separate single-token and multiple-token keywords
+        self.compound_keywords = [keyword for keyword in self.keywords if len(keyword.split())>1]
+        if self.compound_keywords:
+            self.keywords = [keyword for keyword in self.keywords if not keyword in self.compound_keywords]
+
         if not settings.get('KEYWORDS_MIN_FREQUENCY'):
             raise NotConfigured
         self.keywords_min_frequency = settings.get('KEYWORDS_MIN_FREQUENCY')
@@ -51,6 +56,7 @@ class BaseSpider(CrawlSpider):
         self.query_keywords= list()
 
         super(BaseSpider, self).__init__()
+
 
     def is_out_of_date(self, date):
         """ 
@@ -83,7 +89,23 @@ class BaseSpider(CrawlSpider):
 
         # Extract matching positions and tokens
         matching_pos_tokens = [(tokens.index(token), token) for token in tokens if any(keyword in token for keyword in self.keywords)]
-        
+
+        # Extract matching positions and tokens for compound keyword stems (e.g. bedingungslos* einkommen*)
+        compound_query_keywords = list()
+        if self.compound_keywords:
+            matching_compound_pos_tokens = [(tokens.index(token), token) for token in tokens for keyword in self.compound_keywords if ((keyword.split()[0] in token) and (keyword.split()[-1] in tokens[tokens.index(token)+1]))]
+            if matching_compound_pos_tokens:
+                matching_compound_pos = [pos for (pos, _) in matching_compound_pos_tokens]
+                
+                # Remove matches that might result from querying using both 'keywords' and 'compound keywords'
+                matching_pos_tokens = [(pos, token) for (pos, token) in matching_pos_tokens if (pos-1) not in matching_compound_pos]
+
+                # Add matches from compound keywords to all matches
+                matching_pos_tokens.extend(matching_compound_pos_tokens)
+
+                # Update used query compound keywords
+                compound_query_keywords.extend(self.compound_keywords)
+
         # Check if there are any query keyword stems in the text
         if matching_pos_tokens:
             matching_positions, matching_tokens = map(list, zip(*matching_pos_tokens))
@@ -94,8 +116,10 @@ class BaseSpider(CrawlSpider):
                 # Check the token difference between query keyword stems 
                 if any(abs(pos_1-pos_2) >= self.keywords_min_distance for (pos_1, pos_2) in list(combinations(matching_positions, 2))):
                     
-                    # Update the list of query keyword stems found
+                    # Update the list of query keyword stems used
                     self.query_keywords = list(set(filter(lambda x: any(x in token for token in matching_tokens), self.keywords)))
+                    if compound_query_keywords:
+                        self.query_keywords.extend(list(set(compound_query_keywords)))
                     return True
         return False
 
