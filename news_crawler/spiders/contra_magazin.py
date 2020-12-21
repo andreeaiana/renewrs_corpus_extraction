@@ -2,6 +2,7 @@
 
 import os
 import sys
+import json
 from news_crawler.spiders import BaseSpider
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
@@ -12,27 +13,22 @@ from news_crawler.items import NewsCrawlerItem
 from news_crawler.utils import remove_empty_paragraphs
 
 
-class CompactOnline(BaseSpider):
-    """Spider for Compact Online"""
-    name = 'compact_online'
+class ContraMagazin(BaseSpider):
+    """Spider for ContraMagazin"""
+    name = 'contra_magazin'
     rotate_user_agent = True
-    allowed_domains = ['www.compact-online.de']
-    start_urls = ['https://www.compact-online.de/']
+    allowed_domains = ['www.contra-magazin.com']
+    start_urls = ['https://www.contra-magazin.com/']
 
     # Exclude articles in English and pages without relevant articles
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'www\.compact\-online\.de\/\w.*'),
-                    deny=(r'abo\.compact\-shop\.de\/',
-                        r'www\.compact\-shop\.de\/',
-                        r'www\.compact\-online\.de\/kontakt\/',
-                        r'www\.compact\-online\.de\/spenden\/',
-                        r'www\.compact\-online\.de\/digital\-pass\/',
-                        r'www\.compact\-online\.de\/compact\-tv\/',
-                        r'www\.compact\-online\.de\/compact\-live\/',
-                        r'www\.compact\-online\.de\/newsletter\-anmeldung\/',
-                        r'www\.compact\-online\.de\/werben\-in\-compact\/'
+                    allow=(r'www\.contra\-magazin\.com\/\d+\/\d+\/\w.*'),
+                    deny=(r'www\.contra\-magazin\.com\/category\/contra\-premium\/',
+                        r'www\.contra\-magazin\.com\/abonnement\-plaene\/',
+                        r'www\.contra\-magazin\.com\/abonnement\-login\/',
+                        r'www\.contra\-magazin\.com\/nutzungsbedingungen\-agbs\/'
                         )
                     ),
                 callback='parse_item',
@@ -54,7 +50,7 @@ class CompactOnline(BaseSpider):
             return
 
         # Extract the article's paragraphs
-        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[contains(@class, "post-content description")]/p | //div[contains(@class, "post-content description")]/blockquote/p')]
+        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[contains(@class, "entry-content clearfix")]/p')]
         paragraphs = paragraphs[1:]
         paragraphs = remove_empty_paragraphs(paragraphs)
         text = ' '.join([para for para in paragraphs])
@@ -70,7 +66,7 @@ class CompactOnline(BaseSpider):
         # Parse the valid article
         item = NewsCrawlerItem()
 
-        item['news_outlet'] = 'compact_online'
+        item['news_outlet'] = 'contra_magazin'
         item['provenance'] = response.url
         item['query_keywords'] = self.get_query_keywords()
 
@@ -81,13 +77,20 @@ class CompactOnline(BaseSpider):
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
-        item['author_person'] = list()
-        item['author_person'].append(response.xpath('//span[@class="posted-by"]/span/a/text()').get())
-        item['author_organization'] = list()
+        authors = response.xpath('//a[@rel="author"]/text()').getall()
+        if authors:
+            item['author_person'] = [author for author in authors if author != 'Contra Magazin Redaktion']
+            item['author_organization'] = [author for author in authors if author == 'Contra Magazin Redaktion']
+        else:
+            item['author_person'] = list()
+            item['author_organization'] = list()
 
         # Extract keywords, if available
-        news_keywords = response.xpath('//meta[@property="article:tag"]/@content').getall()
-        item['news_keywords'] = news_keywords if news_keywords else list()
+        news_keywords = response.xpath('//script[@class="yoast-schema-graph"]/text()').get()
+        if news_keywords:
+            news_keywords = json.loads(news_keywords)
+            news_keywords = news_keywords['@graph'][4]['keywords']
+        item['news_keywords'] = news_keywords.split(',') if news_keywords else list()
 
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get().strip()
@@ -100,7 +103,8 @@ class CompactOnline(BaseSpider):
         item['content'] = {'title': title, 'description': description, 'body':body}
 
         # Extract first 5 recommendations towards articles from the same news outlet, if available
-        recommendations = response.xpath('//section[@class="related-posts"]//article/a/@href').getall()
+        recommendations = response.xpath('//a[@target="_blank"]/@href').getall()
+        recommendations = [link for link in recommendations if self.start_urls[0] in link]
         if recommendations:
             if len(recommendations) > 5:
                 recommendations = recommendations[:5]

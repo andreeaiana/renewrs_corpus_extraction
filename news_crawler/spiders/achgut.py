@@ -2,7 +2,6 @@
 
 import os
 import sys
-import json
 from news_crawler.spiders import BaseSpider
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
@@ -18,34 +17,22 @@ class Achgut(BaseSpider):
     """Spider for Achgut"""
     name = 'achgut'
     rotate_user_agent = True
-    # allowed_domains = ['https://www.rubikon.news']
+    allowed_domains = ['www.achgut.com']
     start_urls = ['https://www.achgut.com/']
-    months_en = {"januar":"january", "februar":"february", "märz":"march", "mai":"may", "juni":"june", "juli":"july", "oktober":"october", "dezember":"december"}
 
     # Exclude articles in English and pages without relevant articles
     rules = (
             Rule(
                 LinkExtractor(
-                        allow=(r'achgut\.com\/\w.*$'),
-                    deny=(r'achgut\.com\/international\/\w.*$',
-                        r'www\.achgut\.com\/audio\/',
-                        r'www\.achgut\.com\/plus\/',
-                        r'www\.achgut\.com\/thema\/mobilitaet-videos\/',
-                        r'www\.achgut\.com\/thema\/podcasts',
-                        r'www\.achgut\.com\/thema\/audiostorys\/',
-                        r'www\.achgut\.com\/thema\/spiegel-update\/',
-                        r'www\.achgut\.com\/thema\/spiegel-tv\/',
-                        r'www\.achgut\.com\/thema\/bundesliga_experten\/',
-                        r'www\.achgut\.com\/video\/',
-                        r'www\.achgut\.com\/newsletter',
-                        r'www\.achgut\.com\/services',
-                        r'www\.achgut\.com\/lebenundlernen\/schule\/ferien-schulferien-und-feiertage-a-193925\.html',
-                        r'www\.achgut\.com\/dienste\/besser-surfen-auf-spiegel-online-so-funktioniert-rss-a-1040321\.html',
-                        r'www\.achgut\.com\/gutscheine\/',
-                        r'www\.achgut\.com\/impressum',
-                        r'www\.achgut\.com\/kontakt',
-                        r'www\.achgut\.com\/nutzungsbedingungen',
-                        r'www\.achgut\.com\/datenschutz-spiegel'
+                    allow=(r'www\.achgut\.com\/artikel\/\w.*$'),
+                    deny=(r'www\.achgut\.com\/podcast',
+                        r'www\.achgut\.com\/presseschau',
+                        r'www\.achgut\.com\/suche',
+                        r'www\.achgut\.com\/autoren',
+                        r'www\.achgut\.com\/seite\/\w.*',
+                        r'newsletter\.achgut\.com\/',
+                        r'paten\.achgut\.com\/',
+                        r'shop\.achgut\.com\/',
                         )
                     ),
                 callback='parse_item',
@@ -57,6 +44,7 @@ class Achgut(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
+
         # Check date validity
         dates = response.xpath("//div[@class='column full']//div[@class='teaser_text_meta']/text()").getall()
         try:
@@ -93,40 +81,53 @@ class Achgut(BaseSpider):
 
         # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
-        #could not get last modified
-        # last_modified = response.xpath('//meta[@property="article:modified_time"]/@content').get()
-        # item['last_modified'] = datetime.fromisoformat(last_modified.split('+')[0]).strftime('%d.%m.%Y')
+        item['last_modified'] = creation_date.strftime('%d.%m.%Y')
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
-        item['author_person'] = response.xpath("//div[@class='column full']//div[@class='teaser_text_meta']/*[1]/text()").get().strip()
+        authors = response.xpath('//div[@id="author_header"]/text()').getall()
+        item['author_person'] = authors if authors else list() 
         item['author_organization'] = list()
 
         # Extract keywords, if available
-        news_keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
-        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
+        item['news_keywords'] = list()
 
         # Get title, description, and body of article
-        title = response.xpath('//meta[@property="og:title"]/@content').get()
-        description = response.xpath('//meta[@property="og:description"]/@content').get()
+        title = response.xpath('//meta[@property="og:title"]/@content').get().strip()
+        description = response.xpath('//meta[@property="og:description"]/@content').get().strip()
 
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
 
-        # The article has inconsistent headlines
-        for p in paragraphs:
-            if description.replace("...","") in p:
-                paragraphs.remove(p)
-        body[''] = paragraphs
+        if response.xpath('//div[@id="article_content"]//h3[not(@*)]'):
+            # Extract headlines
+            headlines = [h3.xpath('string()').get().strip() for h3 in response.xpath('//div[@id="article_content"]//h3[not(@*)]')]
+
+            # Extract the paragraphs and headlines together
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@id="article_maincontent"]/p | //div[@id="article_content"]//h3[not(@*)]')]
+          
+            # Extract paragraphs between the abstract and the first headline
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
+
+            # Extract paragraphs corresponding to each headline, except the last one
+            for i in range(len(headlines)-1):
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
+            # Extract the paragraphs belonging to the last headline
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
+
+        else:
+            # The article has no headlines, just paragraphs
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
-
+        
         # Extract first 5 recommendations towards articles from the same news outlet, if available
         recommendations = [response.urljoin(link) for link in response.xpath("//div[@class='teaser_blog_text']/h3/a/@href").getall()]
         if recommendations:
             if len(recommendations) > 5:
                 recommendations = recommendations[:5]
-                item['recommendations'] = recommendations
+            item['recommendations'] = recommendations
         else:
             item['recommendations'] = list()
 

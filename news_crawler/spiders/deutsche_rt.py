@@ -25,26 +25,18 @@ class DeutscheRT(BaseSpider):
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'de\.rt\.com\/\w.*$'),
-                    deny=(r'de\.rt\.com\/international\/\w.*$',
-                        r'www\.de\.rt\.com\/audio\/',
-                        r'www\.de\.rt\.com\/plus\/',
-                        r'www\.de\.rt\.com\/thema\/mobilitaet-videos\/',
-                        r'www\.de\.rt\.com\/thema\/podcasts',
-                        r'www\.de\.rt\.com\/thema\/audiostorys\/',
-                        r'www\.de\.rt\.com\/thema\/spiegel-update\/',
-                        r'www\.de\.rt\.com\/thema\/spiegel-tv\/',
-                        r'www\.de\.rt\.com\/thema\/bundesliga_experten\/',
-                        r'www\.de\.rt\.com\/video\/',
-                        r'www\.de\.rt\.com\/newsletter',
-                        r'www\.de\.rt\.com\/services',
-                        r'www\.de\.rt\.com\/lebenundlernen\/schule\/ferien-schulferien-und-feiertage-a-193925\.html',
-                        r'www\.de\.rt\.com\/dienste\/besser-surfen-auf-spiegel-online-so-funktioniert-rss-a-1040321\.html',
-                        r'www\.de\.rt\.com\/gutscheine\/',
-                        r'www\.de\.rt\.com\/impressum',
-                        r'www\.de\.rt\.com\/kontakt',
-                        r'www\.de\.rt\.com\/nutzungsbedingungen',
-                        r'www\.de\.rt\.com\/datenschutz-spiegel'
+                    allow=(r'de\.rt\.com\/\w.*'),
+                    deny=(r'de\.rt\.com\/video\/',
+                        r'de\.rt\.com\/spezial\/',
+                        r'de\.rt\.com\/programme\/',
+                        r'de\.rt\.com\/strippenzieher\/',
+                        r'de\.rt\.com\/dokumentation\/',
+                        r'de\.rt\.com\/impressum\/',
+                        r'de\.rt\.com\/jobs\/',
+                        r'de\.rt\.com\/privacy\-policy\/',
+                        r'de\.rt\.com\/uber\-uns\/',
+                        r'de\.rt\.com\/terms\-of\-use\/',
+                        r'de\.rt\.com\/nutzungsbedingungen\-fuer\-die\-kommentarfunktion\-bei\-rt\-deutsch\/'
                         )
                     ),
                 callback='parse_item',
@@ -56,6 +48,7 @@ class DeutscheRT(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
+
         # Check date validity
         creation_date = response.xpath('//meta[@name="publish-date"]/@content').get()
         if not creation_date:
@@ -65,7 +58,7 @@ class DeutscheRT(BaseSpider):
             return
 
         # Extract the article's paragraphs
-        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="Text-root Text-type_5 ArticleView-text ViewText-root "]/p')]
+        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="Text-root Text-type_5 ArticleView-text ViewText-root "]/p[not(descendant::strong)] | //div[@class="Text-root Text-type_5 ArticleView-text ViewText-root "]/blockquote/p')]
         paragraphs = remove_empty_paragraphs(paragraphs)
         text = ' '.join([para for para in paragraphs])
 
@@ -80,7 +73,7 @@ class DeutscheRT(BaseSpider):
         # Parse the valid article
         item = NewsCrawlerItem()
 
-        item['news_outlet'] = 'deutsche rt'
+        item['news_outlet'] = 'deutsche_rt'
         item['provenance'] = response.url
         item['query_keywords'] = self.get_query_keywords()
 
@@ -97,30 +90,45 @@ class DeutscheRT(BaseSpider):
         item['author_organization'] = [data_json['publisher']['name']]
 
         # Extract keywords, if available
-        news_keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
-        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
+        news_keywords = response.xpath('//div/ul[@class="Tags-list Tags-default"]/li/a/text()').getall()
+        item['news_keywords'] = news_keywords if news_keywords else list()
 
         # Get title, description, and body of article
-        title = response.xpath('//meta[@name="twitter:title"]/@content').get()
-        description = response.xpath('//meta[@name="twitter:description"]/@content').get()
+        title = response.xpath('//meta[@name="twitter:title"]/@content').get().strip()
+        description = response.xpath('//meta[@name="twitter:description"]/@content').get().strip()
 
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
 
-        # The article has inconsistent headlines
-        for p in paragraphs:
-            if description.replace("...","") in p:
-                paragraphs.remove(p)
-        body[''] = paragraphs
+        if response.xpath('//div[@class="Text-root Text-type_5 ArticleView-text ViewText-root "]/p/strong[not(contains(text(), "Mehr zum Thema"))] | //h4'):
+            # Extract headlines
+            headlines = [h.xpath('string()').get().strip() for h in response.xpath('//div[@class="Text-root Text-type_5 ArticleView-text ViewText-root "]/p/strong[not(contains(text(), "Mehr zum Thema"))] | //h4')]
 
+            # Extract the paragraphs and headlines together
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="Text-root Text-type_5 ArticleView-text ViewText-root "]/p[not(descendant::strong)] | //div[@class="Text-root Text-type_5 ArticleView-text ViewText-root "]/blockquote/p | //div[@class="Text-root Text-type_5 ArticleView-text ViewText-root "]/p/strong[not(contains(text(), "Mehr zum Thema"))] | //h4')]
+          
+            # Extract paragraphs between the abstract and the first headline
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
+
+            # Extract paragraphs corresponding to each headline, except the last one
+            for i in range(len(headlines)-1):
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
+            # Extract the paragraphs belonging to the last headline
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
+
+        else:
+            # The article has no headlines, just paragraphs
+            body[''] = paragraphs
+        
         item['content'] = {'title': title, 'description': description, 'body':body}
 
         # Extract first 5 recommendations towards articles from the same news outlet, if available
-        recommendations = [response.urljoin(link) for link in response.xpath('//article[@class="SimpleCard-root SimpleCard-is1to1 "]//a/@href').getall()]
+        recommendations = response.xpath('//p/a[preceding-sibling::strong[contains(text(), "Mehr zum Thema")]]/@href').getall()
         if recommendations:
             if len(recommendations) > 5:
                 recommendations = recommendations[:5]
-                item['recommendations'] = recommendations
+            item['recommendations'] = recommendations
         else:
             item['recommendations'] = list()
 

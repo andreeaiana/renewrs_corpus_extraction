@@ -148,7 +148,7 @@ class SpiegelStartSpider(BaseSpider):
         if recommendations:
             if len(recommendations) > 5:
                 recommendations = recommendations[:5]
-                item['recommendations'] = recommendations
+            item['recommendations'] = recommendations
         else:
             item['recommendations'] = list()
 

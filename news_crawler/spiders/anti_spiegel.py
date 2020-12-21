@@ -24,26 +24,12 @@ class Antispiegel(BaseSpider):
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'anti-spiegel\.ru\/\w.*$'),
-                    deny=(r'anti-spiegel\.ru\/international\/\w.*$',
-                        r'www\.anti-spiegel\.ru\/audio\/',
-                        r'www\.anti-spiegel\.ru\/plus\/',
-                        r'www\.anti-spiegel\.ru\/thema\/mobilitaet-videos\/',
-                        r'www\.anti-spiegel\.ru\/thema\/podcasts',
-                        r'www\.anti-spiegel\.ru\/thema\/audiostorys\/',
-                        r'www\.anti-spiegel\.ru\/thema\/spiegel-update\/',
-                        r'www\.anti-spiegel\.ru\/thema\/spiegel-tv\/',
-                        r'www\.anti-spiegel\.ru\/thema\/bundesliga_experten\/',
-                        r'www\.anti-spiegel\.ru\/video\/',
-                        r'www\.anti-spiegel\.ru\/newsletter',
-                        r'www\.anti-spiegel\.ru\/services',
-                        r'www\.anti-spiegel\.ru\/lebenundlernen\/schule\/ferien-schulferien-und-feiertage-a-193925\.html',
-                        r'www\.anti-spiegel\.ru\/dienste\/besser-surfen-auf-spiegel-online-so-funktioniert-rss-a-1040321\.html',
-                        r'www\.anti-spiegel\.ru\/gutscheine\/',
-                        r'www\.anti-spiegel\.ru\/impressum',
-                        r'www\.anti-spiegel\.ru\/kontakt',
-                        r'www\.anti-spiegel\.ru\/nutzungsbedingungen',
-                        r'www\.anti-spiegel\.ru\/datenschutz-spiegel'
+                    allow=(r'www\.anti\-spiegel\.ru\/\d+\/\w.*'),
+                    deny=(r'www\.anti\-spiegel\.ru\/dokus\-vortraege\/',
+                        r'www\.anti\-spiegel\.ru\/newsletter\/',
+                        r'www\.anti\-spiegel\.ru\/kontakt\/',
+                        r'www\.anti\-spiegel\.ru\/dokus\-vortraege\/',
+                        r'www\.anti\-spiegel\.ru\/werbung\-auf\-anti\-spiegel\/'
                         )
                     ),
                 callback='parse_item',
@@ -55,6 +41,7 @@ class Antispiegel(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
+
         # Check date validity
         creation_date = response.xpath('//meta[@property="article:published_time"]/@content').get()
         if not creation_date:
@@ -64,11 +51,12 @@ class Antispiegel(BaseSpider):
             return
 
         # Extract the article's paragraphs
-        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[contains(@class, "entry-content")]/p')]
+        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[contains(@class, "entry-content")]/p | //div/blockquote/p')]
         paragraphs = remove_empty_paragraphs(paragraphs)
+        paragraphs = paragraphs[1:] # First pargraph is the description
         text = ' '.join([para for para in paragraphs])
 
-        # # Check article's length validity
+        # Check article's length validity
         if not self.has_min_length(text):
             return
 
@@ -105,28 +93,40 @@ class Antispiegel(BaseSpider):
         item['news_keywords'] = news_keywords.split(',') if news_keywords else list()
 
         # Get title, description, and body of article
-        title = response.xpath('//meta[@property="og:title"]/@content').get()
-        description = response.xpath('//meta[@property="og:description"]/@content').get()
+        title = response.xpath('//meta[@property="og:title"]/@content').get().strip()
+        description = response.xpath('//meta[@property="og:description"]/@content').get().strip()
 
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
 
-        # The article has inconsistent headlines
-        for p in paragraphs:
-            if description.replace("...","") in p:
-                paragraphs.remove(p)
-        body[''] = paragraphs
+        if response.xpath('//h2[not(@*)] | //h3[not(@*)]'):
+            # Extract headlines
+            headlines = [h.xpath('string()').get().strip() for h in response.xpath('//h2[not(@*)] | //h3[not(@*)]')]
 
+            # Extract the paragraphs and headlines together
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[contains(@class, "entry-content")]/p | //div/blockquote/p | //h2[not(@*)] | //h3[not(@*)]')]
+
+            # Remove first paragraph (i.e. description) to avoid duplicated paragrahs
+            text = text[1:]
+
+            # Extract paragraphs between the abstract and the first headline
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
+
+            # Extract paragraphs corresponding to each headline, except the last one
+            for i in range(len(headlines)-1):
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
+            # Extract the paragraphs belonging to the last headline
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
+
+        else:
+            # The article has no headlines, just paragraphs
+            body[''] = paragraphs
+        
         item['content'] = {'title': title, 'description': description, 'body':body}
 
         # Extract first 5 recommendations towards articles from the same news outlet, if available
-        recommendations = response.xpath('//section[@class="related-posts"]//article/a/@href').getall()
-        if recommendations:
-            if len(recommendations) > 5:
-                recommendations = recommendations[:5]
-                item['recommendations'] = recommendations
-        else:
-            item['recommendations'] = list()
+        item['recommendations'] = list()
 
         item['response_body'] = response.body
 
