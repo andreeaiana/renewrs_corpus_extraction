@@ -12,7 +12,7 @@ from news_crawler.items import NewsCrawlerItem
 from news_crawler.utils import remove_empty_paragraphs
 
 
-class CompactOnline(BaseSpider):
+class Rationalgalerie(BaseSpider):
     """Spider for Rationalgalerie"""
     name = 'rationalgalerie'
     rotate_user_agent = True
