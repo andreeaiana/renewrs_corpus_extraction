@@ -25,7 +25,8 @@ class Rubikon(BaseSpider):
             Rule(
                 LinkExtractor(
                     allow=(r'www\.rubikon\.news\/artikel\/\w.*'),
-                    deny=(r'www\.rubikon\.news\/unterstuetzen',
+                    deny=(r'www\.rubikon\.news\/artikel\/\w.*\.md',
+                        r'www\.rubikon\.news\/unterstuetzen',
                         r'www\.rubikon\.news\/autoren',
                         r'www\.rubikon\.news\/beirat',
                         r'www\.rubikon\.news\/newsletter',

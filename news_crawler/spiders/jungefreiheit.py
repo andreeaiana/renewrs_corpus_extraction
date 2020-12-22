@@ -50,7 +50,11 @@ class Jungefreiheit(BaseSpider):
         creation_date = data[4]['datePublished']
         if not creation_date:
             return
-        creation_date = datetime.fromisoformat(creation_date.split('+')[0])
+        if 'CEST' in creation_date:
+            creation_date = creation_date.split('CEST')[0]
+            creation_date = datetime.fromisoformat(creation_date)
+        else:
+            creation_date = datetime.fromisoformat(creation_date.split('+')[0])
         if self.is_out_of_date(creation_date):
             return
 
