@@ -73,7 +73,7 @@ class ContraMagazin(BaseSpider):
         # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
         last_modified = response.xpath('//meta[@property="article:modified_time"]/@content').get()
-        item['last_modified'] = datetime.fromisoformat(last_modified.split('+')[0]).strftime('%d.%m.%Y')
+        item['last_modified'] = datetime.fromisoformat(last_modified.split('+')[0]).strftime('%d.%m.%Y') if last_modified else creation_date.strftime('%d.%m.%Y')
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
@@ -90,7 +90,9 @@ class ContraMagazin(BaseSpider):
         if news_keywords:
             news_keywords = json.loads(news_keywords)
             news_keywords = news_keywords['@graph'][4]['keywords']
-        item['news_keywords'] = news_keywords.split(',') if news_keywords else list()
+            item['news_keywords'] = news_keywords.split(',') if news_keywords else list()
+        else:
+            item['news_keywords'] = list()
 
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get().split(' - Contra Magazin')[0]

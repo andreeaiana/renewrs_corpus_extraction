@@ -16,7 +16,7 @@ class Opposition24(BaseSpider):
     """Spider for Opposition24"""
     name = 'opposition24'
     rotate_user_agent = True
-    allowed_domains = ['opposition24.com/']
+#    allowed_domains = ['opposition24.com/']
     start_urls = ['https://opposition24.com/']
 
     # Exclude articles in English and pages without relevant articles

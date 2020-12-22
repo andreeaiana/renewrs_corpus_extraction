@@ -95,21 +95,22 @@ class Journalistenwatch(BaseSpider):
             # Extract headlines
             headlines = [h.xpath('string()').get().strip() for h in response.xpath('//div[@class="td-post-content td-pb-padding-side"]/p/strong')]
             headlines = headlines[1:]
+            if headlines:
+                # Extract the paragraphs and headlines together
+                text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="td-post-content td-pb-padding-side"]//p[not(descendant::strong)] | //div[@class="td-post-content td-pb-padding-side"]/p/strong')]
+                text = text[1:]
 
-            # Extract the paragraphs and headlines together
-            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="td-post-content td-pb-padding-side"]//p[not(descendant::strong)] | //div[@class="td-post-content td-pb-padding-side"]/p/strong')]
-            text = text[1:]
+                # Extract paragraphs between the abstract and the first headline
+                body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
 
-            # Extract paragraphs between the abstract and the first headline
-            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
+                # Extract paragraphs corresponding to each headline, except the last one
+                for i in range(len(headlines)-1):
+                    body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
 
-            # Extract paragraphs corresponding to each headline, except the last one
-            for i in range(len(headlines)-1):
-                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
-
-            # Extract the paragraphs belonging to the last headline
-            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
-
+                # Extract the paragraphs belonging to the last headline
+                body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
+            else:
+                body[''] = paragraphs
         else:
             # The article has no headlines, just paragraphs
             body[''] = paragraphs

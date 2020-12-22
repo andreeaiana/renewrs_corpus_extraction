@@ -6,7 +6,7 @@ from news_crawler.spiders import BaseSpider
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
 from datetime import datetime
-import dateutil.parser as date_parser
+import dateparser 
 
 sys.path.insert(0, os.path.join(os.getcwd(), "..",))
 from news_crawler.items import NewsCrawlerItem
@@ -17,7 +17,7 @@ class Rubikon(BaseSpider):
     """Spider for Rubikon"""
     name = 'rubikon'
     rotate_user_agent = True
-    allowed_domains = ['https://www.rubikon.news']
+    allowed_domains = ['www.rubikon.news']
     start_urls = ['https://www.rubikon.news/']
 
     # Exclude articles in English and pages without relevant articles
@@ -52,7 +52,7 @@ class Rubikon(BaseSpider):
         if not creation_date:
             return
         creation_date = creation_date.strip().split(', ')[1]
-        creation_date = date_parser.parse(creation_date)
+        creation_date = dateparser.parse(creation_date)
         if not creation_date:
             return
         if self.is_out_of_date(creation_date):

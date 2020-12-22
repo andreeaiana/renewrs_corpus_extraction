@@ -17,17 +17,16 @@ class Rationalgalerie(BaseSpider):
     name = 'rationalgalerie'
     rotate_user_agent = True
     allowed_domains = ['www.rationalgalerie.de']
-    start_urls = ['https://rationalgalerie.de/']
+    start_urls = ['https://www.rationalgalerie.de/']
 
     # Exclude articles in English and pages without relevant articles
     rules = (
             Rule(
                 LinkExtractor(
                     allow=(r'www\.rationalgalerie\.de\/\w.*'),
-                    deny=(r'www\.rationalgalerie\.de\/\weiteres\/suche',
-                        r'www\.rationalgalerie\.de\/\weiteres\/kontakt',
-                        r'www\.rationalgalerie\.de\/\informationen\/impressum',
-                        r'www\.rationalgalerie\.de\/\informationen\/datenschutz'
+                    deny=(r'www\.rationalgalerie\.de\/weiteres\/kontakt',
+                        r'www\.rationalgalerie\.de\/informationen\/impressum',
+                        r'www\.rationalgalerie\.de\/informationen\/datenschutz'
                         )
                     ),
                 callback='parse_item',
