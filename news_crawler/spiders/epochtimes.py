@@ -14,7 +14,7 @@ from news_crawler.utils import remove_empty_paragraphs
 
 
 class Epochtimes(BaseSpider):
-    """Spider for Epochtimes"""
+    """Spider for The Epoch Times"""
     name = 'epochtimes'
     rotate_user_agent = True
     allowed_domains = ['www.epochtimes.de']
@@ -24,26 +24,13 @@ class Epochtimes(BaseSpider):
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'epochtimes\.de\/\w.*$'),
-                    deny=(r'epochtimes\.de\/international\/\w.*$',
-                        r'www\.epochtimes\.de\/audio\/',
-                        r'www\.epochtimes\.de\/plus\/',
-                        r'www\.epochtimes\.de\/thema\/mobilitaet-videos\/',
-                        r'www\.epochtimes\.de\/thema\/podcasts',
-                        r'www\.epochtimes\.de\/thema\/audiostorys\/',
-                        r'www\.epochtimes\.de\/thema\/spiegel-update\/',
-                        r'www\.epochtimes\.de\/thema\/spiegel-tv\/',
-                        r'www\.epochtimes\.de\/thema\/bundesliga_experten\/',
-                        r'www\.epochtimes\.de\/video\/',
-                        r'www\.epochtimes\.de\/newsletter',
-                        r'www\.epochtimes\.de\/services',
-                        r'www\.epochtimes\.de\/lebenundlernen\/schule\/ferien-schulferien-und-feiertage-a-193925\.html',
-                        r'www\.epochtimes\.de\/dienste\/besser-surfen-auf-spiegel-online-so-funktioniert-rss-a-1040321\.html',
-                        r'www\.epochtimes\.de\/gutscheine\/',
-                        r'www\.epochtimes\.de\/impressum',
-                        r'www\.epochtimes\.de\/kontakt',
-                        r'www\.epochtimes\.de\/nutzungsbedingungen',
-                        r'www\.epochtimes\.de\/datenschutz-spiegel'
+                    allow=(r'www\.epochtimes\.de\/\w.*\.html'),
+                    deny=(r'www\.epochtimes\.de\/newsticker',
+                        r'www\.epochtimes\.de\/premium',
+                        r'www\.epochtimes\.de\/abo',
+                        r'www\.epochtimes\.de\/datenschutzerklaerung',
+                        r'www\.epochtimes\.de\/epoch\-times\/impressum',
+                        r'www\.epochtimes\.de\/epoch\-times\/epoch\-times\-epochtimes\-a4717\.html'
                         )
                     ),
                 callback='parse_item',
@@ -55,6 +42,7 @@ class Epochtimes(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
+        
         # Check date validity
         creation_date = response.xpath('//meta[@name="article:published_time"]/@content').get()
         if not creation_date:
@@ -64,7 +52,7 @@ class Epochtimes(BaseSpider):
             return
 
         # Extract the article's paragraphs
-        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@id="news-content"]//p')]
+        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@id="news-content"]//p[not(preceding-sibling::h2[@*])] | //div[@id="news-content"]//blockquote/p[not(preceding-sibling::h2[@*])]')]
         paragraphs = remove_empty_paragraphs(paragraphs)
         text = ' '.join([para for para in paragraphs])
 
@@ -90,16 +78,14 @@ class Epochtimes(BaseSpider):
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
-        item['author_person'] = list()
-        item['author_organization'] = list()
         data_json = response.xpath('//script[@type="application/ld+json"]/text()').get()
-        data_json = json.loads(data_json)
-        data_json = data_json['author']
-        if data_json['@type']=="Person":
-            item['author_person'].append(data_json['name'])
+        if data_json:
+            data = json.loads(data_json)
+            item['author_person'] = [data['author']['name']] if data['author']['name']!='Epoch Times' else list()
+            item['author_organization'] = [data['author']['name']] if data['author']['name']=='Epoch Times' else list()
         else:
-            item['author_organization'].append(data_json['name'])
-
+            item['author_person'] = list()
+            item['author_organization'] = list()
 
         # Extract keywords, if available
         news_keywords = response.xpath('//meta[@name="keywords"]/@content').get()
@@ -111,21 +97,35 @@ class Epochtimes(BaseSpider):
 
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
+        if response.xpath('//h2[not(@*)]'):
+            # Extract headlines
+            headlines = [h2.xpath('string()').get().strip() for h2 in response.xpath('//h2[not(@*)]')]
 
-        # The article has inconsistent headlines
-        for p in paragraphs:
-            if description.replace("...","") in p:
-                paragraphs.remove(p)
-        body[''] = paragraphs
+            # Extract the paragraphs and headlines together
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@id="news-content"]//p[not(preceding-sibling::h2[@*])] | //div[@id="news-content"]//blockquote/p[not(preceding-sibling::h2[@*])] | //h2[not(@*)]')]
+          
+            # Extract paragraphs between the abstract and the first headline
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
+
+            # Extract paragraphs corresponding to each headline, except the last one
+            for i in range(len(headlines)-1):
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
+            # Extract the paragraphs belonging to the last headline
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
+
+        else:
+            # The article has no headlines, just paragraphs
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
 
         # Extract first 5 recommendations towards articles from the same news outlet, if available
-        recommendations = response.xpath('//div[@class="mu-title "]//a/@href').getall()
+        recommendations = response.xpath('//ul[@class="mu-related"]/li[@class="related-article"]/a/@href').getall()
         if recommendations:
             if len(recommendations) > 5:
                 recommendations = recommendations[:5]
-                item['recommendati ons'] = recommendations
+            item['recommendati ons'] = recommendations
         else:
             item['recommendations'] = list()
 

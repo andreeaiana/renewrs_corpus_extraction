@@ -2,7 +2,6 @@
 
 import os
 import sys
-import json
 from news_crawler.spiders import BaseSpider
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
@@ -24,27 +23,12 @@ class Tichyseinblick(BaseSpider):
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'tichyseinblick\.de\/\w.*$'),
-                    deny=(r'tichyseinblick\.de\/international\/\w.*$',
-                        r'www\.tichyseinblick\.de\/audio\/',
-                        r'www\.tichyseinblick\.de\/plus\/',
-                        r'www\.tichyseinblick\.de\/thema\/mobilitaet-videos\/',
-                        r'www\.tichyseinblick\.de\/thema\/podcasts',
-                        r'www\.tichyseinblick\.de\/thema\/audiostorys\/',
-                        r'www\.tichyseinblick\.de\/thema\/spiegel-update\/',
-                        r'www\.tichyseinblick\.de\/thema\/spiegel-tv\/',
-                        r'www\.tichyseinblick\.de\/thema\/bundesliga_experten\/',
-                        r'www\.tichyseinblick\.de\/video\/',
-                        r'www\.tichyseinblick\.de\/newsletter',
-                        r'www\.tichyseinblick\.de\/services',
-                        r'www\.tichyseinblick\.de\/lebenundlernen\/schule\/ferien-schulferien-und-feiertage-a-193925\.html',
-                        r'www\.tichyseinblick\.de\/dienste\/besser-surfen-auf-spiegel-online-so-funktioniert-rss-a-1040321\.html',
-                        r'www\.tichyseinblick\.de\/gutscheine\/',
-                        r'www\.tichyseinblick\.de\/impressum',
-                        r'www\.tichyseinblick\.de\/kontakt',
-                        r'www\.tichyseinblick\.de\/nutzungsbedingungen',
-                        r'www\.tichyseinblick\.de\/datenschutz-spiegel',
-                        r'www\.tichyseinblick-live\.de\/'
+                    allow=(r'www\.tichyseinblick\.de\/\w.*'),
+                    deny=(r'www\.tichyseinblick\.de\/video\/',
+                        r'www\.tichyseinblick\.de\/autoren\/',
+                        r'www\.tichyseinblick\.de\/podcast\/',
+                        r'www\.tichyseinblick\.de\/kontakt\/',
+                        r'www\.tichyseinblick\.de\/newsletter\/anmeldung\/'
                         )
                     ),
                 callback='parse_item',
@@ -56,6 +40,7 @@ class Tichyseinblick(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
+        
         # Check date validity
         creation_date = response.xpath('//meta[@property="article:published_time"]/@content').get()
         if not creation_date:
@@ -65,7 +50,7 @@ class Tichyseinblick(BaseSpider):
             return
 
         # Extract the article's paragraphs
-        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath("//div[@class='pf-content']/p")]
+        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="pf-content"]/p')]
         paragraphs = remove_empty_paragraphs(paragraphs)
         text = ' '.join([para for para in paragraphs])
 
@@ -91,13 +76,13 @@ class Tichyseinblick(BaseSpider):
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
-        item['author_person'] = list()
-        item['author_person'].append(response.xpath("//div[@class='rty-article-page-author ']//a/text()").get())
+        authors = response.xpath("//div[@class='rty-article-page-author ']//a/text()").get()
+        item['author_person'] = authors if authors else list()
         item['author_organization'] = list()
 
         # Extract keywords, if available
         news_keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
-        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
+        item['news_keywords'] = news_keywords.split(', ') if news_keywords and news_keywords!='' else list()
 
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get()
@@ -105,23 +90,31 @@ class Tichyseinblick(BaseSpider):
 
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
+        if response.xpath('//div[@class="pf-content"]/h5'):
+            # Extract headlines
+            headlines = [h5.xpath('string()').get().strip() for h5 in response.xpath('//div[@class="pf-content"]/h5')]
 
-        # The article has inconsistent headlines
-        for p in paragraphs:
-            if description.replace("...","") in p:
-                paragraphs.remove(p)
-        body[''] = paragraphs
+            # Extract the paragraphs and headlines together
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="pf-content"]/p | //div[@class="pf-content"]/h5')]
+          
+            # Extract paragraphs between the abstract and the first headline
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
+
+            # Extract paragraphs corresponding to each headline, except the last one
+            for i in range(len(headlines)-1):
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
+            # Extract the paragraphs belonging to the last headline
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
+
+        else:
+            # The article has no headlines, just paragraphs
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
 
         # Extract first 5 recommendations towards articles from the same news outlet, if available
-        recommendations = response.xpath('//section[@class="related-posts"]//article/a/@href').getall()
-        if recommendations:
-            if len(recommendations) > 5:
-                recommendations = recommendations[:5]
-                item['recommendations'] = recommendations
-        else:
-            item['recommendations'] = list()
+        item['recommendations'] = list()
 
         item['response_body'] = response.body
 

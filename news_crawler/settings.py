@@ -25,7 +25,7 @@ CLOSESPIDER_TIMEOUT = 3600*24*6 # For topic 'Grundeinkommen'
 TOPIC = 'grundeinkommen'
 
 #START_DATE = "01.01.2019" # For topic 'refugees and migration'
-START_DATE = "01.01.2017" # For topic 'Grundeinkommen'
+START_DATE = "01.01.2015" # For topic 'Grundeinkommen'
 
 #END_DATE = "20.10.2020" # For topic 'refugees and migration'
 END_DATE = "16.12.2020" # For topic 'Grundeinkommen'

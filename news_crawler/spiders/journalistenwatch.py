@@ -23,7 +23,7 @@ class Journalistenwatch(BaseSpider):
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'www\.journalistenwatch\.com\/\d+\/\d+\/\d+\/\w.*'),
+                    allow=(r'www\.journalistenwatch\.com\/\w.*'),
                     deny=(r'www\.journalistenwatch\.com\/impressum\/',
                         r'www\.journalistenwatch\.com\/datenshutzerklaerung\/',
                         r'www\.journalistenwatch\.com\/kontakt\/',
@@ -86,7 +86,7 @@ class Journalistenwatch(BaseSpider):
         item['news_keywords'] = list()
 
         # Get title, description, and body of article
-        title = response.xpath('//meta[@property="og:title"]/@content').get().strip()
+        title = response.xpath('//meta[@property="og:title"]/@content').get().split(' \u203a Jouwatch')[0]
         description = response.xpath('//meta[@property="og:description"]/@content').get().strip()
 
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs

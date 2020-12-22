@@ -17,7 +17,7 @@ class EfMagazin(BaseSpider):
     name = 'ef_magazin'
     rotate_user_agent = True
     allowed_domains = ['ef-magazin.de']
-    start_urls = ['https://www.ef-magazin.de/']
+    start_urls = ['https://ef-magazin.de/']
 
     # Exclude articles in English and pages without relevant articles
     rules = (

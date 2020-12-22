@@ -2,7 +2,6 @@
 
 import os
 import sys
-import json
 from news_crawler.spiders import BaseSpider
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
@@ -17,33 +16,22 @@ class Opposition24(BaseSpider):
     """Spider for Opposition24"""
     name = 'opposition24'
     rotate_user_agent = True
-    # allowed_domains = ['https://opposition24.com/']
+    allowed_domains = ['opposition24.com/']
     start_urls = ['https://opposition24.com/']
 
     # Exclude articles in English and pages without relevant articles
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'https://opposition24\.com\/\w.*$'),
-                    deny=(r'opposition24\.com\/international\/\w.*$',
-                        r'www\.opposition24\.com\/audio\/',
-                        r'www\.opposition24\.com\/plus\/',
-                        r'www\.opposition24\.com\/thema\/mobilitaet-videos\/',
-                        r'www\.opposition24\.com\/thema\/podcasts',
-                        r'www\.opposition24\.com\/thema\/audiostorys\/',
-                        r'www\.opposition24\.com\/thema\/spiegel-update\/',
-                        r'www\.opposition24\.com\/thema\/spiegel-tv\/',
-                        r'www\.opposition24\.com\/thema\/bundesliga_experten\/',
-                        r'www\.opposition24\.com\/video\/',
-                        r'www\.opposition24\.com\/newsletter',
-                        r'www\.opposition24\.com\/services',
-                        r'www\.opposition24\.com\/lebenundlernen\/schule\/ferien-schulferien-und-feiertage-a-193925\.html',
-                        r'www\.opposition24\.com\/dienste\/besser-surfen-auf-spiegel-online-so-funktioniert-rss-a-1040321\.html',
-                        r'www\.opposition24\.com\/gutscheine\/',
-                        r'www\.opposition24\.com\/impressum',
-                        r'www\.opposition24\.com\/kontakt',
-                        r'www\.opposition24\.com\/nutzungsbedingungen',
-                        r'www\.opposition24\.com\/datenschutz-spiegel'
+                    allow=(r'opposition24\.com\/\w.*'),
+                    deny=(r'opposition24\.com\/datenschutz\/',
+                        r'opposition24\.com\/impressum\/',
+                        r'opposition24\.com\/leitbild\/',
+                        r'opposition24\.com\/spenden\/',
+                        r'opposition24\.com\/podcasts\/',
+                        r'opposition24\.com\/youtube\/',
+                        r'opposition24\.com\/regeln\-fuer\-kommentare\/',
+                        r'opposition24\.com\/werben\-und\-partnerangebote\/'
                         )
                     ),
                 callback='parse_item',
@@ -55,6 +43,7 @@ class Opposition24(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
+        
         # Check date validity
         creation_date = response.xpath('//meta[@itemprop="datePublished"]/@content').get()
         if not creation_date:
@@ -90,35 +79,29 @@ class Opposition24(BaseSpider):
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
-        item['author_person'] = list()
-        item['author_person'].append(response.xpath('//div[@class="td-author-by"]/following-sibling::a/text()').get())
+        authors = response.xpath('//div[@class="td-author-by"]/following-sibling::a/text()').getall()
+        item['author_person'] = authors if authors else list()
         item['author_organization'] = list()
 
         # Extract keywords, if available
-        news_keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
-        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
+        item['news_keywords'] = list()
 
         # Get title, description, and body of article
-        title = response.xpath('//meta[@property="og:title"]/@content').get()
-        description = response.xpath('//meta[@property="og:description"]/@content').get()
+        title = response.xpath('//meta[@property="og:title"]/@content').get().strip()
+        description = response.xpath('//meta[@property="og:description"]/@content').get().strip().replace('\n\n', ' ')
 
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
-
-        # The article has inconsistent headlines
-        for p in paragraphs:
-            if description.replace("...","") in p:
-                paragraphs.remove(p)
         body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
 
         # Extract first 5 recommendations towards articles from the same news outlet, if available
-        recommendations = set(response.xpath('//div[@class="td-related-row"]//a/@href').getall())
+        recommendations = list(set(response.xpath('//div[@class="td-mega-row"]//a/@href').getall()))
         if recommendations:
             if len(recommendations) > 5:
                 recommendations = recommendations[:5]
-                item['recommendations'] = recommendations
+            item['recommendations'] = recommendations
         else:
             item['recommendations'] = list()
 

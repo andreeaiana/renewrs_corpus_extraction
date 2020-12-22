@@ -2,7 +2,6 @@
 
 import os
 import sys
-import json
 from news_crawler.spiders import BaseSpider
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
@@ -17,34 +16,18 @@ class CompactOnline(BaseSpider):
     """Spider for Compact Online"""
     name = 'rationalgalarie'
     rotate_user_agent = True
-    allowed_domains = ['rationalgalerie.de']
+    allowed_domains = ['www.rationalgalerie.de']
     start_urls = ['https://rationalgalerie.de/']
 
     # Exclude articles in English and pages without relevant articles
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'rationalgalerie\.de\/\w.*$'),
-                    deny=(r'rationalgalerie\.de\/international\/\w.*$',
-                        r'www\.rationalgalerie\.de\/audio\/',
-                        r'www\.rationalgalerie\.de\/plus\/',
-                        r'www\.rationalgalerie\.de\/thema\/mobilitaet-videos\/',
-                        r'www\.rationalgalerie\.de\/thema\/podcasts',
-                        r'www\.rationalgalerie\.de\/thema\/audiostorys\/',
-                        r'www\.rationalgalerie\.de\/thema\/spiegel-update\/',
-                        r'www\.rationalgalerie\.de\/thema\/spiegel-tv\/',
-                        r'www\.rationalgalerie\.de\/thema\/bundesliga_experten\/',
-                        r'www\.rationalgalerie\.de\/video\/',
-                        r'www\.rationalgalerie\.de\/newsletter',
-                        r'www\.rationalgalerie\.de\/services',
-                        r'www\.rationalgalerie\.de\/lebenundlernen\/schule\/ferien-schulferien-und-feiertage-a-193925\.html',
-                        r'www\.rationalgalerie\.de\/dienste\/besser-surfen-auf-spiegel-online-so-funktioniert-rss-a-1040321\.html',
-                        r'www\.rationalgalerie\.de\/gutscheine\/',
-                        r'www\.rationalgalerie\.de\/impressum',
-                        r'www\.rationalgalerie\.de\/kontakt',
-                        r'www\.rationalgalerie\.de\/nutzungsbedingungen',
-                        r'www\.rationalgalerie\.de\/datenschutz-spiegel',
-                        r'www\.rationalgalerie-live\.de\/'
+                    allow=(r'www\.rationalgalerie\.de\/\w.*'),
+                    deny=(r'www\.rationalgalerie\.de\/\weiteres\/suche',
+                        r'www\.rationalgalerie\.de\/\weiteres\/kontakt',
+                        r'www\.rationalgalerie\.de\/\informationen\/impressum',
+                        r'www\.rationalgalerie\.de\/\informationen\/datenschutz'
                         )
                     ),
                 callback='parse_item',
@@ -56,6 +39,7 @@ class CompactOnline(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
+        
         # Check date validity
         creation_date = response.xpath('//meta[@property="article:published_time"]/@content').get()
         if not creation_date:
@@ -65,7 +49,7 @@ class CompactOnline(BaseSpider):
             return
 
         # Extract the article's paragraphs
-        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath("//div[@class='aticle-text']/p")]
+        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="aticle-text"]/p[not(descendant::strong) and not(descendant::span[@class="txt-c-r"])]')]
         paragraphs = remove_empty_paragraphs(paragraphs)
         text = ' '.join([para for para in paragraphs])
 
@@ -87,16 +71,16 @@ class CompactOnline(BaseSpider):
         # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
         last_modified = response.xpath('//meta[@property="article:modified_time"]/@content').get()
-        item['last_modified'] = datetime.strptime(creation_date,'%d.%m.%Y')
+        item['last_modified'] = datetime.strptime(last_modified,'%d.%m.%Y')
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
-        item['author_person'] = list()
-        item['author_person'].append(response.xpath('//meta[@name="author"]/@content').get())
+        authors = response.xpath('//meta[@name="author"]/@content').getall()
+        item['author_person'] = authors if authors else list()
         item['author_organization'] = list()
 
         # Extract keywords, if available
-        news_keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
+        news_keywords = response.xpath('//meta[@name="keywords"]/@content').get()
         item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
 
         # Get title, description, and body of article
@@ -105,23 +89,31 @@ class CompactOnline(BaseSpider):
 
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
+        if response.xpath('//div[@class="aticle-text"]/p[not(descendant::span[@class="txt-c-r"]) and descendant::strong]'):
+            # Extract headlines
+            headlines = [h.xpath('string()').get().strip() for h in response.xpath('//div[@class="aticle-text"]/p[not(descendant::span[@class="txt-c-r"]) and descendant::strong]')]
 
-        # The article has inconsistent headlines
-        for p in paragraphs:
-            if description.replace("...","") in p:
-                paragraphs.remove(p)
-        body[''] = paragraphs
+            # Extract the paragraphs and headlines together
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="aticle-text"]/p[not(descendant::strong) and not(descendant::span[@class="txt-c-r"])] | //div[@class="aticle-text"]/p[not(descendant::span[@class="txt-c-r"]) and descendant::strong]')]
+          
+            # Extract paragraphs between the abstract and the first headline
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
+
+            # Extract paragraphs corresponding to each headline, except the last one
+            for i in range(len(headlines)-1):
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
+            # Extract the paragraphs belonging to the last headline
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
+
+        else:
+            # The article has no headlines, just paragraphs
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
 
         # Extract first 5 recommendations towards articles from the same news outlet, if available
-        recommendations = [response.urljoin(link) for link in response.xpath("//div[@class='pos-relative']/h4/a/@href").getall()]
-        if recommendations:
-            if len(recommendations) > 5:
-                recommendations = recommendations[:5]
-                item['recommendations'] = recommendations
-        else:
-            item['recommendations'] = list()
+        item['recommendations'] = list()
 
         item['response_body'] = response.body
 

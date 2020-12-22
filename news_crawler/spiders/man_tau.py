@@ -2,7 +2,6 @@
 
 import os
 import sys
-import json
 from news_crawler.spiders import BaseSpider
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
@@ -24,27 +23,11 @@ class ManTau(BaseSpider):
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'man-tau\.com\/\w.*$'),
-                    deny=(r'man-tau\.com\/international\/\w.*$',
-                        r'www\.man-tau\.com\/audio\/',
-                        r'www\.man-tau\.com\/plus\/',
-                        r'www\.man-tau\.com\/thema\/mobilitaet-videos\/',
-                        r'www\.man-tau\.com\/thema\/podcasts',
-                        r'www\.man-tau\.com\/thema\/audiostorys\/',
-                        r'www\.man-tau\.com\/thema\/spiegel-update\/',
-                        r'www\.man-tau\.com\/thema\/spiegel-tv\/',
-                        r'www\.man-tau\.com\/thema\/bundesliga_experten\/',
-                        r'www\.man-tau\.com\/video\/',
-                        r'www\.man-tau\.com\/newsletter',
-                        r'www\.man-tau\.com\/services',
-                        r'www\.man-tau\.com\/lebenundlernen\/schule\/ferien-schulferien-und-feiertage-a-193925\.html',
-                        r'www\.man-tau\.com\/dienste\/besser-surfen-auf-spiegel-online-so-funktioniert-rss-a-1040321\.html',
-                        r'www\.man-tau\.com\/gutscheine\/',
-                        r'www\.man-tau\.com\/impressum',
-                        r'www\.man-tau\.com\/kontakt',
-                        r'www\.man-tau\.com\/nutzungsbedingungen',
-                        r'www\.man-tau\.com\/datenschutz-spiegel',
-                        r'www\.kritisches-netzwerk-live\.de\/'
+                    allow=(r'man\-tau\.com\/\d+\/\d+\/\d+\/\w.*'),
+                    deny=(r'man\-tau\.com\/\d+\/\d+\/\d+\/\w.*\/\?replytocom\=\d+$'
+                        r'man\-tau\.com\/infos\/',
+                        r'man\-tau\.com\/mitmachen\/',
+                        r'man\-tau\.com\/banner\-und\-e\-mail\-signaturen\/'
                         )
                     ),
                 callback='parse_item',
@@ -56,6 +39,7 @@ class ManTau(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
+        
         # Check date validity
         creation_date = response.xpath('//meta[@property="article:published_time"]/@content').get()
         if not creation_date:
@@ -65,7 +49,7 @@ class ManTau(BaseSpider):
             return
 
         # Extract the article's paragraphs
-        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath("//div[@class='entry-content']/p")]
+        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="entry-content"]/p[@style="text-align: justify;"] | //div[@class="entry-content"]/blockquote/p[@style="text-align: justify;"]')]
         paragraphs = remove_empty_paragraphs(paragraphs)
         text = ' '.join([para for para in paragraphs])
 
@@ -91,37 +75,45 @@ class ManTau(BaseSpider):
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
-        item['author_person'] = list()
-        item['author_person'].append(response.xpath('//meta[@itemprop="author"]/@content').get())
+        authors = response.xpath('//meta[@itemprop="author"]/@content').getall()
+        item['author_person'] = authors if authors else list()
         item['author_organization'] = list()
 
         # Extract keywords, if available
-        news_keywords = response.xpath('//meta[@name="keywords"]/@content').get()
-        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
+        news_keywords = response.xpath('//meta[@property="article:section"]/@content').getall()
+        item['news_keywords'] = news_keywords if news_keywords else list()
 
         # Get title, description, and body of article
-        title = response.xpath('//meta[@property="og:title"]/@content').get()
-        description = response.xpath('//meta[@property="og:description"]/@content').get()
+        title = response.xpath('//meta[@property="og:title"]/@content').get().strip()
+        description = response.xpath('//meta[@property="og:description"]/@content').get().strip().replace('\r\n', '')
 
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
+        if response.xpath('//h4[@style="text-align: center;"]'):
+            # Extract headlines
+            headlines = [h4.xpath('string()').get().strip() for h4 in response.xpath('//h4[@style="text-align: center;"]')]
 
-        # The article has inconsistent headlines
-        for p in paragraphs:
-            if description.replace("...","") in p:
-                paragraphs.remove(p)
-        body[''] = paragraphs
+            # Extract the paragraphs and headlines together
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="entry-content"]/p[@style="text-align: justify;"] | //div[@class="entry-content"]/blockquote/p[@style="text-align: justify;"] | //h4[@style="text-align: center;"]')]
+          
+            # Extract paragraphs between the abstract and the first headline
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
+
+            # Extract paragraphs corresponding to each headline, except the last one
+            for i in range(len(headlines)-1):
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
+            # Extract the paragraphs belonging to the last headline
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
+
+        else:
+            # The article has no headlines, just paragraphs
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
 
         # Extract first 5 recommendations towards articles from the same news outlet, if available
-        recommendations = response.xpath('//div[@class="main-box-inside"]/article/div[@class="meta-image"]/a/@href').getall()
-        if recommendations:
-            if len(recommendations) > 5:
-                recommendations = recommendations[:5]
-                item['recommendations'] = recommendations
-        else:
-            item['recommendations'] = list()
+        item['recommendations'] = list()
 
         item['response_body'] = response.body
 

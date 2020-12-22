@@ -16,8 +16,8 @@ class KritischesNetzwerk(BaseSpider):
     """Spider for Kritisches Netzwerk"""
     name = 'kritisches_netzwerk'
     rotate_user_agent = True
-    allowed_domains = ['www.kritisches-netzwerk.de']
-    start_urls = ['https://www.kritisches-netzwerk.de/']
+    allowed_domains = ['kritisches-netzwerk.de']
+    start_urls = ['https://kritisches-netzwerk.de/']
 
     # Exclude articles in English and pages without relevant articles
     rules = (

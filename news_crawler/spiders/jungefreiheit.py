@@ -24,26 +24,14 @@ class Jungefreiheit(BaseSpider):
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'jungefreiheit\.de\/\w.*$'),
-                    deny=(r'jungefreiheit\.de\/international\/\w.*$',
-                        r'www\.jungefreiheit\.de\/audio\/',
-                        r'www\.jungefreiheit\.de\/plus\/',
-                        r'www\.jungefreiheit\.de\/thema\/mobilitaet-videos\/',
-                        r'www\.jungefreiheit\.de\/thema\/podcasts',
-                        r'www\.jungefreiheit\.de\/thema\/audiostorys\/',
-                        r'www\.jungefreiheit\.de\/thema\/spiegel-update\/',
-                        r'www\.jungefreiheit\.de\/thema\/spiegel-tv\/',
-                        r'www\.jungefreiheit\.de\/thema\/bundesliga_experten\/',
-                        r'www\.jungefreiheit\.de\/video\/',
-                        r'www\.jungefreiheit\.de\/newsletter',
-                        r'www\.jungefreiheit\.de\/services',
-                        r'www\.jungefreiheit\.de\/lebenundlernen\/schule\/ferien-schulferien-und-feiertage-a-193925\.html',
-                        r'www\.jungefreiheit\.de\/dienste\/besser-surfen-auf-spiegel-online-so-funktioniert-rss-a-1040321\.html',
-                        r'www\.jungefreiheit\.de\/gutscheine\/',
-                        r'www\.jungefreiheit\.de\/impressum',
-                        r'www\.jungefreiheit\.de\/kontakt',
-                        r'www\.jungefreiheit\.de\/nutzungsbedingungen',
-                        r'www\.jungefreiheit\.de\/datenschutz-spiegel'
+                    allow=(r'jungefreiheit\.de\/\w.*'),
+                    deny=(r'jungefreiheit\.de\/archiv\/',
+                        r'jungefreiheit\.de\/informationen\/',
+                        r'jungefreiheit\.de\/service\/',
+                        r'jungefreiheit\.de\/faq\/',
+                        r'jungefreiheit\.de\/aktuelle\-jf\/',
+                        r'jungefreiheit\.de\/datenschutzerklaerung\/',
+                        r'jungefreiheit\.de\/kategorie\/pressemitteilung\/'
                         )
                     ),
                 callback='parse_item',
@@ -55,10 +43,11 @@ class Jungefreiheit(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
+        
         # Check date validity
         data_json = response.xpath('//script[@type="application/ld+json"]/text()').get()
-        data_json = json.loads(data_json)['@graph']
-        creation_date = data_json[4]['datePublished']
+        data = json.loads(data_json)['@graph']
+        creation_date = data[4]['datePublished']
         if not creation_date:
             return
         creation_date = datetime.fromisoformat(creation_date.split('+')[0])
@@ -66,7 +55,7 @@ class Jungefreiheit(BaseSpider):
             return
 
         # Extract the article's paragraphs
-        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="elementor-widget-container"]/p')]
+        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="elementor-widget-container"]/p[not(@*)]')]
         paragraphs = remove_empty_paragraphs(paragraphs)
         text = ' '.join([para for para in paragraphs])
 
@@ -88,23 +77,18 @@ class Jungefreiheit(BaseSpider):
         # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
 
-        data_json = json.loads(data_json)
-        last_modified = data_json[4]['dateModified']
+        last_modified = data[4]['dateModified']
         item['last_modified'] = datetime.fromisoformat(last_modified.split('+')[0]).strftime('%d.%m.%Y')
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
-        item['author_person'] = list()
-        item['author_organization'] = list()
-        author = data_json[4]['author']
-        if author['@type'] == "Person":
-            item['author_person'].append(author['name'])
-        else:
-            item['author_organization'].append(author['name'])
+        authors = data[4]['author']
+        item['author_person'] = [authors['name']] if authors['name']!='Online Redaktion' else list()
+        item['author_organization'] = [authors['name']] if authors['name']=='Online Redaktion' else list()
 
         # Extract keywords, if available
-        news_keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
-        item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
+        news_keywords = response.xpath('//meta[@property="article:tag"]/@content').getall()
+        item['news_keywords'] = news_keywords if news_keywords else list()
 
         # Get title, description, and body of article
         title = response.xpath('//meta[@property="og:title"]/@content').get()
@@ -112,12 +96,26 @@ class Jungefreiheit(BaseSpider):
 
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
+        if response.xpath('//h3[not(@*)]'):
+            # Extract headlines
+            headlines = [h3.xpath('string()').get().strip() for h3 in response.xpath('//h3[not(@*)]')]
 
-        # The article has inconsistent headlines
-        for p in paragraphs:
-            if description.replace("...","") in p:
-                paragraphs.remove(p)
-        body[''] = paragraphs
+            # Extract the paragraphs and headlines together
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="elementor-widget-container"]/p[not(@*)] | //h3[not(@*)]')]
+          
+            # Extract paragraphs between the abstract and the first headline
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
+
+            # Extract paragraphs corresponding to each headline, except the last one
+            for i in range(len(headlines)-1):
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
+            # Extract the paragraphs belonging to the last headline
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
+
+        else:
+            # The article has no headlines, just paragraphs
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
 
@@ -126,7 +124,7 @@ class Jungefreiheit(BaseSpider):
         if recommendations:
             if len(recommendations) > 5:
                 recommendations = recommendations[:5]
-                item['recommendations'] = recommendations
+            item['recommendations'] = recommendations
         else:
             item['recommendations'] = list()
 
