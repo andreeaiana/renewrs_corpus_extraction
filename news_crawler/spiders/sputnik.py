@@ -2,7 +2,6 @@
 
 import os
 import sys
-import json
 from news_crawler.spiders import BaseSpider
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
@@ -17,33 +16,22 @@ class Sputniknews(BaseSpider):
     """Spider for Sputniknews"""
     name = 'sputniknews'
     rotate_user_agent = True
-    allowed_domains = ['de.sputniknews.com']
-    start_urls = ['https://de.sputniknews.com/']
+    allowed_domains = ['snanews.de']
+    start_urls = ['https://snanews.de']
 
     # Exclude articles in English and pages without relevant articles
     rules = (
             Rule(
                 LinkExtractor(
-                    allow=(r'de\.sputniknews\.com\/\w.*$'),
-                    deny=(r'de\.sputniknews\.com\/international\/\w.*$',
-                        r'www\.de\.sputniknews\.com\/audio\/',
-                        r'www\.de\.sputniknews\.com\/plus\/',
-                        r'www\.de\.sputniknews\.com\/thema\/mobilitaet-videos\/',
-                        r'www\.de\.sputniknews\.com\/thema\/podcasts',
-                        r'www\.de\.sputniknews\.com\/thema\/audiostorys\/',
-                        r'www\.de\.sputniknews\.com\/thema\/spiegel-update\/',
-                        r'www\.de\.sputniknews\.com\/thema\/spiegel-tv\/',
-                        r'www\.de\.sputniknews\.com\/thema\/bundesliga_experten\/',
-                        r'www\.de\.sputniknews\.com\/video\/',
-                        r'www\.de\.sputniknews\.com\/newsletter',
-                        r'www\.de\.sputniknews\.com\/services',
-                        r'www\.de\.sputniknews\.com\/lebenundlernen\/schule\/ferien-schulferien-und-feiertage-a-193925\.html',
-                        r'www\.de\.sputniknews\.com\/dienste\/besser-surfen-auf-spiegel-online-so-funktioniert-rss-a-1040321\.html',
-                        r'www\.de\.sputniknews\.com\/gutscheine\/',
-                        r'www\.de\.sputniknews\.com\/impressum',
-                        r'www\.de\.sputniknews\.com\/kontakt',
-                        r'www\.de\.sputniknews\.com\/nutzungsbedingungen',
-                        r'www\.de\.sputniknews\.com\/datenschutz-spiegel'
+                    allow=(r'snanews\.de\/\d+\/\w.*\.html$'),
+                    deny=(r'snanews\.de\/category\_multimedia\/',
+                        r'snanews\.de\/location\_oesterreich\/',
+                        r'snanews\.de\/\?modal\=feedback',
+                        r'snanews\.de\/docs\/impressum\.html',
+                        r'snanews\.de\/docs\/cookie\.html',
+                        r'snanews\.de\/docs\/nutzungsrichtlinien\.html',
+                        r'snanews\.de\/docs\/ueber\_uns\.html',
+                        r'snanews\.de\/docs\/privacy\_policy\.html'
                         )
                     ),
                 callback='parse_item',
@@ -55,8 +43,9 @@ class Sputniknews(BaseSpider):
         """
         Checks article validity. If valid, it parses it.
         """
+        
         # Check date validity
-        creation_date = response.xpath('//meta[@itemprop="datePublished"]/@content').get()
+        creation_date = response.xpath('//div[@itemprop="datePublished"]/text()').get()
         if not creation_date:
             return
         creation_date = datetime.fromisoformat(creation_date.split('T')[0])
@@ -64,7 +53,7 @@ class Sputniknews(BaseSpider):
             return
 
         # Extract the article's paragraphs
-        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@itemprop="articleBody"]//p')]
+        paragraphs = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="article__text"] | //div[@class="article__quote-text"]')]
         paragraphs = remove_empty_paragraphs(paragraphs)
         text = ' '.join([para for para in paragraphs])
 
@@ -79,23 +68,23 @@ class Sputniknews(BaseSpider):
         # Parse the valid article
         item = NewsCrawlerItem()
 
-        item['news_outlet'] = 'pi-news'
+        item['news_outlet'] = 'sputniknews'
         item['provenance'] = response.url
         item['query_keywords'] = self.get_query_keywords()
 
         # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
-        last_modified = response.xpath('//meta[@itemprop="dateModified"]/@content').get()
+        last_modified = response.xpath('//div[@itemprop="dateModified"]/text()').get()
         item['last_modified'] = datetime.fromisoformat(last_modified.split('T')[0]).strftime('%d.%m.%Y')
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
-        item['author_person'] = list()
+        authors = response.xpath('//div[@itemprop="creator"]/div[@itemprop="name"]/text()').getall()
+        item['author_person'] = authors if authors else list()
         item['author_organization'] = list()
-        item['author_person'].append(response.xpath('//meta[@name="author"]/@content').get())
 
         # Extract keywords, if available
-        news_keywords = response.xpath('//meta[@name="news_keywords"]/@content').get()
+        news_keywords = response.xpath('//meta[@name="keywords"]/@content').get()
         item['news_keywords'] = news_keywords.split(', ') if news_keywords else list()
 
         # Get title, description, and body of article
@@ -104,24 +93,31 @@ class Sputniknews(BaseSpider):
 
         # Body as dictionary: key = headline (if available, otherwise empty string), values = list of corresponding paragraphs
         body = dict()
+        if response.xpath('//h3[@class="article__h2"] | //h2[@class="article__h2"]'):
+            # Extract headlines
+            headlines = [h2.xpath('string()').get().strip() for h2 in response.xpath('//h3[@class="article__h2"] | //h2[@class="article__h2"]')]
 
-        # The article has inconsistent headlines
-        for p in paragraphs:
-            if description is not None:
-                if description.replace("...","") in p:
-                    paragraphs.remove(p)
-        body[''] = paragraphs
+            # Extract the paragraphs and headlines together
+            text = [node.xpath('string()').get().strip() for node in response.xpath('//div[@class="article__text"] | //div[@class="article__quote-text"] | //h3[@class="article__h2"] | //h2[@class="article__h2"]')]
+          
+            # Extract paragraphs between the abstract and the first headline
+            body[''] = remove_empty_paragraphs(text[:text.index(headlines[0])])
+
+            # Extract paragraphs corresponding to each headline, except the last one
+            for i in range(len(headlines)-1):
+                body[headlines[i]] = remove_empty_paragraphs(text[text.index(headlines[i])+1:text.index(headlines[i+1])])
+
+            # Extract the paragraphs belonging to the last headline
+            body[headlines[-1]] = remove_empty_paragraphs(text[text.index(headlines[-1])+1:])
+
+        else:
+            # The article has no headlines, just paragraphs
+            body[''] = paragraphs
 
         item['content'] = {'title': title, 'description': description, 'body':body}
 
         # Extract first 5 recommendations towards articles from the same news outlet, if available
-        recommendations = set(response.xpath("//div[@class='td-related-row']//a/@href").getall())
-        if recommendations:
-            if len(recommendations) > 5:
-                recommendations = recommendations[:5]
-                item['recommendations'] = recommendations
-        else:
-            item['recommendations'] = list()
+        item['recommendations'] = list()
 
         item['response_body'] = response.body
 
