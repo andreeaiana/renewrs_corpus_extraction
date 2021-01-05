@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 10:41:43+01:00 page_id=4616 :: Deutschland--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 4616--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>Grüne und Grundeinkommen: Im Grundsatz bedingungslos - taz.de</title><meta name="author" content="taz. die tageszeitung"></meta><meta name="description" content="Die Grünen bekennen sich auf dem digitalen Parteitag zum bedingungslosen Grundeinkommen. Das war in der Ökopartei lange umstritten."></meta><meta name="keywords" content="Grüne, Bedingungsloses Grundeinkommen, Parteitag, Digital, Deutschland, Politik, taz, tageszeitung "></meta><meta name="taz:title" data-id="5730367" content="Grüne und Grundeinkommen: Im Grundsatz bedingungslos"></meta><meta name="taz:tag" content="Grüne" data-tag-id="5007739"></meta><meta name="taz:tag" content="Bedingungsloses Grundeinkommen" data-tag-id="5037330"></meta><meta name="taz:tag" content="Parteitag" data-tag-id="5007551"></meta><meta name="taz:tag" content="Digital" data-tag-id="5045285"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta><meta property="og:url" content="https://taz.de/!5730367/"></meta><meta property="og:locale" content="de_DE"></meta><meta property="og:type" content="article"></meta><meta name="twitter:card" content="summary_large_image"></meta><meta name="twitter:site" content="@tazgezwitscher"></meta><meta property="og:title" content="Grüne und Grundeinkommen: Im Grundsatz bedingungslos"></meta><meta property="fb:app_id" content="966242223397117"></meta><meta name="twitter:title" content="Grüne und Grundeinkommen: Im Grundsatz bedingungslos"></meta><meta property="og:description" content="Die Grünen bekennen sich auf dem digitalen Parteitag zum bedingungslosen Grundeinkommen. Das war in der Ökopartei lange umstritten."></meta><meta name="twitter:description" content=" Die Grünen bekennen sich auf dem digitalen Parteitag zum bedingungslosen Grundeinkommen. Das war in der Ökopartei lange umstritten."></meta><meta property="og:image" content="https://taz.de/picture/4516330/948/bedingungsloses-grundeinkommen-parteitag-gruene-baerbock-habeck-1.jpeg"></meta><meta name="twitter:image" content="https://taz.de/picture/4516330/948/bedingungsloses-grundeinkommen-parteitag-gruene-baerbock-habeck-1.jpeg"></meta><meta property="article:published_time" content="2020-11-22T16:28:00+01:00"></meta><meta property="article:modified_time" content="2020-11-23T10:58:07+01:00"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"5730367" // String
+            , page_title_enc      :"5730367: Grüne und Grundeinkommen: Im Grundsatz bedingungslos" // String
+            , custom_url_enc      :"/!5730367" // String
+            , channel             :"web" // String
+            , area                :"Redaktion" // String
+            , department          :"p4616" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : false  // Boolean
+            , is_article          : true  // Boolean
+            , has_tags            : true  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "https://taz.de/lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<link rel="preload" href="/lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff" as="font" type="font/woff" crossorigin="anonymous"></link><link rel="preload" href="/lib/ch/web/pix/tazze46.png" as="image" media="(min-width: 49px)"></link><link rel="canonical" href="https://taz.de/Gruene-und-Grundeinkommen/!5730367/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Deutschland" href="/!p4616/rss.xml"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="/rss.xml"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="/"></link><link rel="copyright" type="text/html" title="Impressum" href="/6/impressum/"></link><link rel="stylesheet" type="text/css" media="screen, print" href="/lib/ch/web/css/news2020-12-08_12.css"></link><link href="/lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 6]> <link rel="stylesheet" type="text/css" href="/lib/style/ie6.css"> <![endif]--><!--[if lte IE 7]><style type="text/css">
+			ul.topbar                      >li      >a>span,
+			.secthead>ul[role='navigation']>li      >a>span	{  border-left: 1px solid; padding: 0px 4px;  }
+			ul.topbar                      >li.first>a>span,
+			.secthead>ul[role='navigation']>li.first>a>span	{  border:none; padding-left:0px;  }
+			ul.topbar                      >li      >a>span  {  border-color:white;    }
+			.secthead>ul[role='navigation']>li      >a>span  {  border-color:#888888;  }
+			.box h2 {  line-height:20px;  }
+			.author  {	display:inline;	float:none;	}
+			.sect_spb .sectbody {	padding-top:8px;	}
+			/* fil 2011-04-08 */
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward >ul.toolbar  {  height:28px;  }
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward ul.toolbar >li  {  float: left !important;  }
+			#reward >div  {  clear:both;  }
+			.sect_article >.sectfoot ul.toolbar  {  position:relative !important; top:0px; left:0px; height:24px;  }
+			#micropay ul.toolbar  {  height:52px;  }
+			.sect_article >.sectfoot {  padding-bottom:30px  }
+		</style><![endif]--><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="/uploads/cmp/yieldlove_cmp.js"></script><script type="text/javascript" src="/uploads/cmp/yieldlove.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="/lib/ch/web/js/2020-12-08_12.js"></script><script type="text/javascript"> if( filOtaz_de && filOtaz_de.goMobile )  filOtaz_de.goMobile(); </script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"5730367" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/Politik/Deutschland" // String
+            , is_article      : true  // Boolean
+            , is_corp         : false  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            // 2. check for not closing overlay
+            if ( $("#tzi-paywahl-fg").length && "MutationObserver" in window ){
+                p.trackEvent( 'TZI', 'displayed', 'LAYER_SHOWN_OBSERVE_TEST');    
+                var paywahl = document.getElementById('tzi-paywahl-fg');
+                var observer = new MutationObserver(function(mutations) {
+                  p.trackEvent( 'TZI', 'displayed', 'LAYER_CLOSED_OBSERVE_TEST');    
+                  observer.disconnect();
+                });
+                observer.observe(paywahl, { 
+                    attributes: true, 
+                    attributeFilter: ['style'] 
+                });
+            }
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        // mar: reactivated for tracking of special menu
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+*/
+
+            $(document).on("click", ".longread.article .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL-LONGREAD' ) });
+	        $(document).on("click", ".longread.article .sect_mostread a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'MEISTGELESEN-LONGREAD' ) });
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page:not(.longread) .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page:not(.longread) ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page:not(.longread) .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" async="async" src="https://script.ioam.de/iam.js"></script><script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript">
+		// Google Publisher Tag - https://developers.google.com/doubleclick-gpt/reference
+		var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; 
+	(function(){
+		var adArea = 'Politik';	//
+		googletag.cmd.push( function() {
+			var pa = googletag.pubads();
+			pa.setForceSafeFrame(true);
+			pa.collapseEmptyDivs();
+			pa.setTargeting('position', [ adArea ]);
+      //pa.setTargeting('test', ['fireplace']); //       * * * test only ! * * *
+      //pa.setTargeting('test', ['wallpaper']);   //       * * * test only ! * * *
+      pa.setTargeting('page_id', ['5730367']);
+			if( location.protocol =='https' )
+				pa.setTargeting('ssl', ['ja']);
+			googletag.enableServices();
+			});
+		})();
+	</script><script>
+		// expect jQuery already to be loaded
+	(function() {
+		if( !window.filOtaz_de )		window.filOtaz_de		= Object;
+		if( !window.filOtaz_de.ads )		window.filOtaz_de.ads		= Object;
+		if( !window.filOtaz_de.ads.gpt )	window.filOtaz_de.ads.gpt	= Object;
+
+        var sizes = {
+             'artikel_medrec-1'    :[300,250]
+            ,'artikel_medrec-2'    :[300,250]
+            ,'artikel_medrec_mitte' :[300,250]
+            ,'ros_sidebar-1'       :[300,250]
+            ,'ros_sidebar-2'       :[300,100]
+            ,'uebersicht_medrec-1' :[300,250]
+            ,'uebersicht_medrec-2' :[300,250]
+            ,'uebersicht_medrec-3' :[300,250]
+            ,'uebersicht_medrec-4' :[300,250]
+            ,'uebersicht_medrec-5' :[300,250]
+            ,'uebersicht_board-1'  :[624,150]
+            ,'ros_billboard-1'     :[870,250]
+            ,'mobile_banner-1'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-2'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-3'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-4'     :[[300,250],[320,50],[320,100]]
+            ,'ros_top-links'       :[[120,600],[160,600],[300,600]]
+            ,'ros_top-mitte'       :[[728,90],[800,250],[870,250],[970,90],[970,250]]
+            ,'ros_top-rechts'      :[[120,600],[160,600],[300,600]]
+            ,'ros_leaderboard-1'   :[728,90]
+            ,'fireplace-mitte'     :[[970,90],[728,90]]
+            ,'fireplace-links'     :[160,601]
+            ,'fireplace-rechts'    :[160,600]
+            ,'fireplace_bg'        :[1,1]
+            };
+        var roadblocks = {};
+  
+  
+      roadblocks = {
+         'ros_top-mitte'   :['fireplace_mitte']
+        ,'ros_top-rechts'  :['fireplace_mitte'] 
+      };
+    
+    
+		// general ad handling
+
+		// --> to be triggered for ad_zone if ad is (to be) delivered
+		filOtaz_de.ads.fitIn = function( container ) {	// make space for ad in layout
+			var container = $( container );
+//console.log('fit '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.addClass('shown');
+			container.addClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').addClass('aded_'+( container.height() >120 ?'big' :'small' ) );
+				var badge = container.hasClass('ad_zone_sold') ? 'Anzeige' : 'taz-Angebot';
+				container.before('<div class="ad_badge">'+ badge +'</div>');
+				}
+			container.trigger('TAZadInserted').trigger('TAZboxChange');
+			};
+
+		// --> to be triggered for ad_zone if no ad is (to be) delivered
+		// redundant?
+		filOtaz_de.ads.reclaim = function( container ) {	// remove whitespace from non-delivered ad
+			var container = $( container );
+//console.log('reclaim '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.removeClass('shown');
+			container.removeClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').removeClass('aded_big aded_small');
+				}
+			container.trigger('TAZadRemoved').trigger('TAZboxChange');
+			};
+    
+    
+
+		var fuzeAdFrame = function( frame ) {	// register frame for messages, fire if one is from our content
+console.log('legacy fuzeAdFrame', frame  );
+			};
+    
+    
+    // Hintergrund per Message
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+    window[eventMethod](messageEvent, function(e) {
+      if (e.data.toString().indexOf("color") != -1) {
+        $("#background").css("background-color", e.data.split(" ")[1]);
+        }
+      }, false);
+    
+    
+		// activate ad frame
+		var adZoneHandled = {};
+    
+    var get_id = function( name ) {
+      return $('div[name=' + name + ']').attr('id');
+      };
+    
+    var get_name = function( id ) {
+      return $('#'+ id ).attr('name');
+      };
+    
+    unblock = function( id, rb_id ) {
+      var name = get_name(id);
+      var index = roadblocks[name].indexOf(rb_id);
+      if ( index > -1 ) {
+        roadblocks[name].splice(index, 1);
+        }
+      if ( !roadblocks[name].length ) {
+        googletag.defineSlot( '/118803185/' + name, sizes[name], id ).addService( googletag.pubads() );
+        googletag.display( id );
+        }
+      };
+    
+    filOtaz_de.ads.gpt.activateAdFrame = function( id ) {  
+			if( !id ) return;
+			if( adZoneHandled[id] ) return; adZoneHandled[id] = true; // only one active zone per id
+ 
+			var packing   = $('#ad_bin_'+ id );
+			id = 'ad_zone_'+ id;
+			var container = packing.find('>#'+ id );
+  
+			var name = container.attr('name');
+			if( !name || !sizes[name] ) return;
+   
+			// handle custom ad load events
+			container.on('filOtaz_de.ads.gpt.noBanner',   function(){  return false;  });
+			container.on('filOtaz_de.ads.gpt.preBanner',  function(){
+				filOtaz_de.ads.fitIn( container );
+				return false;
+				});
+			container.on('filOtaz_de.ads.gpt.postBanner', function(){  return false;  });
+
+
+			// define content
+			googletag.cmd.push( function() {
+				var pa = googletag.pubads();
+        if ( roadblocks[name] ) {
+          pa.addEventListener('slotRenderEnded', function (e) {
+            for (var i=0; i<roadblocks[name].length; i++) {
+              if ( e.slot.getSlotElementId() == 'ad_zone_' + roadblocks[name][i] ) {
+
+		    if ( e.isEmpty ) {
+                  unblock(id, roadblocks[name][i]);
+                  }
+                else {
+                  document.getElementById(id).style.display = 'none';
+                  for (var key in roadblocks) {
+                    if ( !roadblocks.hasOwnProperty(key) ) continue;
+                    for ( var j=0; j<roadblocks[key].length; j++ )
+                    if ( id == 'ad_zone_' + roadblocks[key][j] ) {
+                      unblock(get_id(key), roadblocks[key][j]);
+                      break;
+                      }
+                    }
+                  }
+                }
+              }
+			    }); // pa.addEventListener
+			    //	    console.log('roadblocks' + id);
+          googletag.display(id);
+          }
+        else {
+          pa.display( '/118803185/'+ name, sizes[name], id );
+	// console.log( 'asked for', '/118803185/'+ name, sizes[name], id );
+          }
+				pa.addEventListener('slotRenderEnded', function(e) {
+			    if( e.slot.getSlotElementId() != id )  return;	// not our slot
+			    container.trigger( e.isEmpty ? 'filOtaz_de.ads.gpt.noBanner' : 'filOtaz_de.ads.gpt.preBanner' );
+console.log( name +( e.isEmpty ? ' isEmpty' : '' ) );
+					});
+        });
+      }; //filOtaz_de.ads.gpt.activateAdFrame
+
+		// activate wallpaper combo add frame
+/*
+		filOtaz_de.ads.gpt.wallpaper = function() {
+			console.log('filOtaz_de.ads.gpt.wallpaper not yet supported');
+			};
+*/
+
+		})();
+	</script><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link><link rel="manifest" href="/manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body class=""><noscript><img src="https://taz.de/stats/piwik.php?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Redaktion/Politik/Deutschland,Artikel",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><span id="ad_bin_fireplace_bg" class="ad_bin"><div id="ad_zone_fireplace_bg" name="fireplace_bg" class="ad_zone"></div></span><span id="ad_bin_fireplace_mitte" class="ad_bin"><div id="ad_zone_fireplace_mitte" name="fireplace-mitte" class="ad_zone"></div></span><span id="ad_bin_fireplace_links" class="ad_bin"><div id="ad_zone_fireplace_links" name="fireplace-links" class="ad_zone"></div></span><span id="ad_bin_fireplace_rechts" class="ad_bin"><div id="ad_zone_fireplace_rechts" name="fireplace-rechts" class="ad_zone"></div></span><span id="ad_bin_fireplace_script" class="ad_bin"><div id="ad_zone_fireplace_script" name="fireplace-script" class="ad_zone"></div></span><script type="text/javascript">
+(function(){
+  var parent = $('#ad_bin_fireplace_rechts').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_rechts');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_bg').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_bg');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_mitte').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_mitte');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_links').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_links');
+  })(); 
+              </script><div id="adzone_wall" class=""><span id="ad_bin_ros_top_rechts" class="ad_bin"><div id="ad_zone_ros_top_rechts" name="ros_top-rechts" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_rechts';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><span id="ad_bin_ros_top_mitte" class="ad_bin"><div id="ad_zone_ros_top_mitte" name="ros_top-mitte" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></div><div id="pages" class="news"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="odd trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="even treven"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="odd trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="even trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="odd treven"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="even trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="odd trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="even treven"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul><div class="full news report article page first odd first_page n1" itemscope="" itemtype="http://schema.org/NewsArticle"><div class="head" role="head"><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="even trodd selected"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="odd treven"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a></li><li class="even trodd"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="odd trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a></li><li class="even treven"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a></li><li class="odd trodd"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a></li><li class="even trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a></li><li class="last odd treven"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><span class="body" role="main"><div class="main rack first_rack" id="xid819017">
+    
+	<div xmlns="" class="metadata" itemscope="">
+<a id="articleURL" href="/!5730367"></a><a id="speakingURL" href="/Gruene-und-Grundeinkommen/!5730367"></a><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-article-ID" content="5730367"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="url-ID" content="5730367"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-obj-ID" content="4516330"></meta><span id="articleID"></span><span id="cmsArticleID">5730367</span>
+</div>
+<div role="region" id="" class="odd sect sect_article news report"><article class="sectbody" itemprop="articleBody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Grüne und Grundeinkommen</span><span class="hide">: </span><span>Im Grundsatz bedingungslos</span>
+</h1>
+<p xmlns="" itemprop="description" class="intro ">Die Grünen bekennen sich auf dem digitalen Parteitag zum bedingungslosen Grundeinkommen. Das war in der Ökopartei lange umstritten.</p>
+      
+      <a xmlns="" class="full picture" href="/picture/4516330/948/bedingungsloses-grundeinkommen-parteitag-gruene-baerbock-habeck-1.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	" itemprop="image"><img src="/picture/4516330/624/bedingungsloses-grundeinkommen-parteitag-gruene-baerbock-habeck-1.jpeg" alt="Robert Hacke und Annalena Baerbock auf einem orangefarbenen Sofa" title="Robert Hacke und Annalena Baerbock auf einem orangefarbenen Sofa"></a><p xmlns="" class="caption">Prost, auf das bedingungslose Grundeinkommen <span class="credit"> Foto: Kay Nietfeld/dpa</span></p>
+    
+      <p xmlns="" class="article first odd"><span>BERLIN</span> <em>taz/dpa</em> | Jetzt also doch: Die Grünen bekennen sich in ihrem Grundsatzprogramm zu einem <a target="_blank" href="/Parteitag-der-Gruenen/!5725627/">bedingungslosen Grundeinkommen</a>, kurz BGE. Damit hat sich die Parteibasis am Sonntag auf dem digitalen Parteitag der Grünen unter anderem gegen die Parteichef*innen Annalena Baerbock und Robert Habeck sowie den Bundesvorstand durchgesetzt.</p>
+      <p xmlns="" class="article even">Die Idee des Grundeinkommens ist, dass jede und jeder in Deutschland <a target="_blank" href="/Bedingungsloses-Grundeinkommen/!5589159/">von der Geburt bis zum Tod regelmäßig Geld</a> vom Staat erhält – so viel, wie zum Leben nötig ist. Ohne, dass die Menschen dafür etwas tun müssen. Auch unabhängig davon, wie viel Geld jemand auf dem Konto oder einen Job hat. Bedingungslos eben.</p>
+      
+      <span id="ad_bin_artikel_medrec_1" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_1" name="artikel_medrec-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">Mit dem Vorstoß <a target="_blank" href="/Bewerberfrist-fuer-Versuch-endet/!5727924/">für das BGE</a> sprachen sich die Delegierten sich am Sonntag gegen den Willen des Bundesvorstands für einen Änderungsantrag aus, in dem es heißt: „Verdeckte Armut wird überwunden. Dabei orientieren wir uns an der Leitidee eines bedingungslosen Grundeinkommens.“ Das Konzept einer Garantiesicherung, das Parteichefin Annalena Baerbock auf dem Parteitag erneut beworben hatte, blieb aber auch Teil des Programms.</p>
+      <p xmlns="" class="article last even">Die „Garantiesicherung“ soll aus Sicht der Grünen <a target="_blank" href="/Hartz-IV-Bezieherinnen-berichten/!5722573/">Hartz IV</a> ersetzen. „Sie schützt vor Armut und garantiert ohne Sanktionen das soziokulturelle Existenzminimum“, heißt es im angenommenen Text. Die Sicherung soll „ohne weitere Bedingungen für jeden Menschen gelten, dessen eigene finanzielle Mittel nicht ausreichen“ – also nicht bedingungslos gezahlt werden. Die Idee des bedingungslosen Grundeinkommens sieht dagegen vor, dass es jeder und jede bekommt.</p>
+    </article></div>
+
+    
+  
+
+    
+  <div role="region" id="" class="odd sect "><div class="sectbody"><a xmlns="" id="reward" shape="rect">Einmal zahlen</a><script> filOtaz_de.flattr();</script></div></div>
+
+    
+	<div class="shariff">.</div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171498/" ratioURL-ressource="171498" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Wieviel ist freie Presse wert?</span>
+</h1>
+  		<p xmlns="" class="article first odd">taz.de ist frei zugänglich – ohne Paywall. Wir sind der Überzeugung, dass es kritische Informationen im Netz geben muss, die nicht kostenpflichtig sind. Aber das geht nur, wenn sich unsere Leser*innen an dieser Idee beteiligen und den taz-Journalismus mittragen.   
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt die taz.</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/tazzahl-ich-als-einzigartiges-Bezahlmodell/!164013/" ratioURL-ressource="164013" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">taz.zahl ich als einzigartiges Bezahlmodell.</span><span class="hide">: </span><span>Die einzige Tageszeitung diesseits der Paywall.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Unsere Informationen sollen nicht hinter einer Paywall verschwinden. Gerade jetzt braucht es faktentreuen, unabhängigen Journalismus. Wir setzen auf Freiwilligkeit und hoffen auf Ihre Beteiligung.  
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen auch Sie die taz mit 5,- Euro im Monat</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/tazde-ist-Konzern-unabhaengig/!163180/" ratioURL-ressource="163180" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">taz.de ist (Konzern-)unabhängig</span><span class="hide">: </span><span>Hinter vielen Zeitungen steht ein Konzern. Hinter uns stehen Sie.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Die taz ist als überregionale Tageszeitung ohne großen Medienkonzern  im Rücken eine Ausnahme. Dies ermöglicht uns, frei und unabhängig zu  berichten. Unsere Inhalte sind frei zugänglich, aber natürlich brauchen auch wir Geld. Deshalb sind wir auf Sie, unsere Leser*innen, angewiesen.    
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt die taz</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script type="text/javascript" xml:space="preserve">
+          (function () {
+            patOtaz_de.layer_tzi_paywahl({'campaign': '2019-5-27' });
+          })();
+        </script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Normal/!155790/" ratioURL-ressource="155790" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Normal</span><span class="hide">: </span><span>Freier Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Das Bedürfnis nach vertrauenswürdiger Information ist derzeit sehr hoch, viele blicken und klicken in diesen unsicheren Zeiten auf die Berichterstattung der taz. Während der vergangenen Wochen ist klar geworden, wie wichtig freier Journalismus ist. In Krisenzeiten ist es „systemrelevant”, dass Menschen sich unabhängig informieren können. Ohne Paywall. Wir finden es wichtig, dass uns möglichst viele Menschen lesen – auch jene, die sich kein Abo leisten können. Doch dazu brauchen wir Ihre Hilfe.      
+</p>
+  		<p xmlns="" class="article even">Guter, kritischer Journalismus ist nicht kostenlos zu haben und braucht Finanzierung. Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Im Gegenzug wird sie freiwillig und solidarisch unterstützt. Von unseren Leser*innen, von Ihnen. Mit Ihrer Wertschätzung und Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit, ein Forum für Meinungsvielfalt, eine engagierte Stimme für Minderheiten. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Seien Sie mit uns taz. Zusammen mit den 25.500, die schon dabei sind.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Klima/!155427/" ratioURL-ressource="155427" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Klima</span><span class="hide">: </span><span>Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wir berichten seit 1978 über die Zerstörung unseres Planeten – weil wir daran glauben, dass eine bessere Welt möglich ist. Klima- und Umweltberichterstattung haben in der taz schon immer einen großen Raum eingenommen, aber zurzeit gehen wir noch einmal in die Offensive. Die taz berichtet noch intensiver über die drohende Klimakatastrophe – auf allen Kanälen. Um dies leisten zu können, sind wir auf die Unterstützung unserer Leser*innen angewiesen. Denn guter Journalismus ist aufwändig und nicht kostenlos zu haben.      
+</p>
+  		<p xmlns="" class="article even">Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Unsere Artikel sollen so viel wie möglich gelesen, geliked und geteilt werden. Nur so können sie die ökologisch notwendigen Veränderungen unserer Gesellschaft vorantreiben. Im Gegenzug wird die taz von unseren Leser*innen unterstützt. Freiwillig und solidarisch. Mit Ihrer Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit und eine engagierte Stimme für mehr Klimaschutz. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. 25.500 machen schon mit.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><div role="region" id="" class="even sect sect_text "><div class="sectbody"><p>
+
+	Fehler auf taz.de entdeckt?
+	    </p><p>
+        Wir freuen uns über eine 
+	<a href="mailto:fehlerhinweis@taz.de?subject=Fehlerhinweis%20zu%20https://taz.de/Gruene-und-Grundeinkommen/!5730367/&amp;body=Zu%20%22Grüne und Grundeinkommen: Im Grundsatz bedingungslos%22%0D%0Ahttps://taz.de/Gruene-und-Grundeinkommen/!5730367/%0D%0A%0D%0ABitte%20beschreiben%20Sie%20uns%20den%20Fehler.%20Sie%20können%20gern%20einen%20Screenshot%20anhängen.%20Wir%20danken%20für%20Ihre%20Hilfe%21%20
+					%0D%0A%0D%0A
+					Inhaltliches%20Feedback%20geben%20Sie%20uns%20gerne%20in%20der%20Kommentarspalte%20oder%20richten%20es%20an%20briefe@taz.de.%20Dort%20leiten%20wir%20ihr%20Feedback%20auch%20an%20die%20Redaktion%20weiter.%20Über%20diese%20Mailadresse%20nehmen%20wir%20nur%20Rechtschreib-%20und%20Faktenkorrekturen%20vor.				">Mail an fehlerhinweis@taz.de</a>!</p><p>
+	Inhaltliches Feedback? 
+	</p><p>
+
+	Gerne als Leser*innenkommentar unter dem Text auf taz.de oder über das
+	<a href="/!112355/"> Kontaktformular</a>.
+		</p></div></div><!-- DEBUG belly: 0 extras here, 0 from directory Deutschland, thats 0 merged--></span><span class="wing" role="contentinfo"><div class="rack first_rack" id="xid459821">
+    
+	<!--template mode="layout" match="display[ @obj='descr' ]":start-->
+
+    
+	<div role="region" id="" class="even sect sect_meta "><div class="sectbody"><ul role="navigation" class="left rootline toolbar"><li class="first odd trodd selected"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="last even trodd selected"><a href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span>Deutschland</span></a></li></ul><ul role="navigation" class="right toolbar"><li class="date" itemprop="datePublished" content="2020-11-22T16:28:00+01:00">22. 11. 2020</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2020-11-23T10:58:07+01:00"></meta></ul></div></div>
+
+    
+	
+
+    
+	<div role="region" id="" class="even sect sect_tags "><div class="secthead" role="heading"><h2><a name="Themen"><span>Themen</span></a></h2></div><ul role="directory" class="news directory sectbody"><li class="first odd trodd tag"><a role="link" href="/!t5007739/" class="tag dirlink"><span>Grüne</span></a></li><li class="even trodd tag"><a role="link" href="/!t5037330/" class="tag dirlink"><span>Bedingungsloses Grundeinkommen</span></a></li><li class="odd treven tag"><a role="link" href="/!t5007551/" class="tag dirlink"><span>Parteitag</span></a></li><li class="last even trodd tag"><a role="link" href="/!t5045285/" class="tag dirlink"><span>Digital</span></a></li></ul></div>
+
+    
+	
+
+    
+	<!-- DEBUG label: 0 extras here, 0 from directory Deutschland, thats 0 merged-->
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><span id="ad_bin_ros_sidebar_1" class="ad_bin sold contentad"><div id="ad_zone_ros_sidebar_1" name="ros_sidebar-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_sidebar_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><!-- DEBUG wing: 0 extras here, 0 from directory Deutschland, thats 0 merged--></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><span class="tail" role="complementary"><!-- DEBUG tail: 0 extras here, 0 from directory Deutschland, thats 0 merged--><div role="region" id="xid709553" class="last even sect sect_adr style_adr "><ul role="directory" class="sectbody corp  directory"><li class=" first last odd trodd online   leaded pictured leaded remote story"><a class="dept" href="/FUTURZWEI/!p5099/">FUTURZWEI</a><a href="https://taz.de/Ex-Ministerin-Wara-Wende-im-Interview/!5740472/" target="_blank" class="objlink leaded pictured leaded remote story noavatar" role="link"><h4>Ex-Ministerin Wara Wende im Interview</h4><h3>Fehler und Sexismus in der Politik</h3><p class="brief">  Quereinsteigerin Wara Wende wurde als Ministerin zum Rücktritt gezwungen. Was war der Fehler?  </p><img src="/uploads/images/300/taz-FUTURZWEI-Wara-Wende-Fehler-Sexismus-Spitzenpolitik-Ex-Ministerin-Interview-Anja-Weber-1.jpg" alt="" title=""></img></a></li></ul></div></span><a itemprop="mainEntityOfPage" href="/Gruene-und-Grundeinkommen/!5730367"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div class="full no_rightbar below news page even n2"><div class="head" role="head"><div class="nose" role="heading" id="pg_hd"><h2><a name="Volle Spalte unterm Artikel" href="/Volle-Spalte-unterm-Artikel/!p5315/"><span>Volle Spalte unterm Artikel</span></a></h2></div><ul role="navigation" class="news navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid841997">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="Mehr zum Thema"><span>Mehr zum Thema</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd    report article leaded pictured"><a href="/Parteitag-der-Gruenen/!5730294/" ratioURL-ressource="5730294" class="objlink report article leaded pictured noavatar" role="link"><h4>Parteitag der Grünen</h4><h3>Demütig zur Macht</h3><p>Sicherheit durch Veränderung: Das ist die Botschaft der Grünen-Spitze auf dem digitalen Parteitag. Für Aufregung sorgt Baerbocks weißes Kleid.  <span class="author">Ulrich Schulte</span></p><img src="/picture/4515263/300/Annalena_Baerbock-1.jpeg" alt="Annalena Baerbock in weißem Kleid im Fernsehstudio des Digital-Parteitags der Grünen" title="Annalena Baerbock in weißem Kleid im Fernsehstudio des Digital-Parteitags der Grünen"></img></a></li><li class=" even trodd    longread article leaded pictured"><a href="/Fridays-for-Future-und-die-Gruenen/!5727724/" ratioURL-ressource="5727724" class="objlink longread article leaded pictured noavatar" role="link"><h4>Fridays for Future und die Grünen</h4><h3>Die Gradwanderung</h3><p>Fridays for Future wirft den Grünen Halbherzigkeit im Kampf gegen die Erderhitzung vor. Wie gefährlich ist das für die Ökopartei?  <span class="author">Bernhard Pötter, Ulrich Schulte</span></p><img src="/picture/4513141/300/26312289-1.jpeg" alt="rünen-Chef Robert Habeck im Gespräch mit Fridays for Future" title="rünen-Chef Robert Habeck im Gespräch mit Fridays for Future"></img></a></li><li class=" last odd treven    report article leaded pictured"><a href="/Vor-dem-Gruenen-Parteitag/!5730181/" ratioURL-ressource="5730181" class="objlink report article leaded pictured noavatar" role="link"><h4>Vor dem Grünen-Parteitag</h4><h3>Kampf ums 1,5-Grad-Ziel</h3><p>Die Grünen-Spitze warnt die Basis vor allzu radikaler Klimaschutzpolitik. Man dürfe das Pariser Klimaabkommen nicht schwächen, sagt Michael Kellner.  <span class="author">Ulrich Schulte</span></p><img src="/picture/4513739/300/melissa-bradley-96iwiAxOuJw-unsplash-1-klimaabkommen-gruenenparteitag-1.jpeg" alt="Ein Eisbrocken im Meer" title="Ein Eisbrocken im Meer"></img></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><span class="headed wing" role="complementary"></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Gruene-und-Grundeinkommen/!5730367"></a></div><div class="full community page last odd n3"><div class="head" role="head"><ul role="navigation" class=" navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid495498">
+    
+
+	<div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="So können Sie kommentieren:"><span>So können Sie kommentieren:</span></a></h2></div><div class="sectbody"><p>       Bitte <a href="https://www.taz.de/kommune/post.php?a=registration" target="_blank">registrieren Sie sich</a> und halten Sie sich an unsere <a href="http://taz.de/netiquette" target="_blank">Netiquette</a>.     
+</p><p>      Haben Sie Probleme beim Kommentieren oder Registrieren?   
+</p><p>  Dann mailen Sie uns bitte an <a href="mailto:kommune@taz.de" target="_blank">kommune@taz.de</a>   </p></div></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="" class="even sect sect_commentlinks style_commentlinks "><div class="secthead" role="heading"><h2><a name="Leser*innenkommentare"><span>Leser*innenkommentare</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class="member " id="bb_message_4046624"><a class="author person" href="/!ku3150/"><h4>uvw</h4></a><time datetime="2020-11-24T05:01:17+01:00"><meta value="1606190477"></meta>24. 11. 2020, 
+		05:01</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Das glaub ich erst, wenn ichs sehe. Dass sich bei den Grünen die "Basis" durchsetzt und dann bei diesem grundlegenden Thema ein BGE und nicht eine wie auch immer selbstdefinierte "Garantiesicherung" oder "Bürgergeld" oder bla, Hauptsache nicht BGE, das wollen wir erst mal sehen. Halte das für einen PR-Stunt.</p>
+<p xmlns="" class="even">Übrigens gibt es noch das Konzept der Gratiskultur (Ausgaben reduzieren statt Einnahmen erhöhen, zb kostenloser ÖPNV) Was war denn damit?</p>
+<p xmlns="" class="odd">Die haben nicht über Nacht eine Wandlung zu einer nicht mehr neoliberalen Partei gemacht, in der Ausbeutung der Massen zentrales Konzept ist.</p>
+<p xmlns="" class="last even">Übrigens, gibts von den Grünen auch andere Fotos als immer die beiden Grinsbeutel?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_4046404"><a class="author person" href="/!ku10594/"><h4>hanuman</h4></a><time datetime="2020-11-23T16:11:44+01:00"><meta value="1606144304"></meta>23. 11. 2020, 
+		16:11</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">IN DER TAZ...<br xmlns="http://www.w3.org/1999/xhtml"></br>
+ist schon klügeres über das bedingungslose einkommen mit mehr sachkenntnis über finanzierung und ersparte aufwendungen geschrieben worden. aber immerhin, der fuss ist in der tür - und die politik wieder um eine utopie reicher. wenn jetzt noch die 15-stunden-woche und die steuer  auf vermögen hinzukommen und erwerbsarbeit entlastet wird, dann hat die coronakrise ja doch noch einen erfolg zu verzeichnen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_4046393"><a class="author person" href="/!ku18516/"><h4>fly</h4></a><time datetime="2020-11-23T15:56:12+01:00"><meta value="1606143372"></meta>23. 11. 2020, 
+		15:56</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Argumentationslücke?</p>
+<p xmlns="" class="even">"...Jeder Grundeinkommensbezieher kann jeden Euro, den er über das Grundeinkommen selbst erwirtschaftet/erhält, behalten, ..."</p>
+<p xmlns="" class="odd">Da jeder das BGE bekommt, wird also keiner mehr ESt bezahlen.</p>
+<p xmlns="" class="last even">Nur noch der Konsum wird besteuert? 300% Aufschlag auf die Schokolade? 400% auf das Datenvolumen? Dann wird das BGE aber schnell nicht mehr reichen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046607"><a class="author person" href="/!ku424/"><h4>Rainer B.</h4><img src="/kommune/files/images/profile/70x70/424.png" alt="" title=""></img></a><time datetime="2020-11-24T00:43:24+01:00"><meta value="1606175004"></meta>24. 11. 2020, 
+		00:43</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@fly </span>Der Grundfreibetrag liegt im nächsten Jahr bei 9.696,- für ledige bzw. bei 19.392,- für verheiratete Steuerpflichtige. Für ein zu versteuerndes Einkommen, das über diesem Freibetrag liegt, muss selbstverständlich auch weiterhin Einkommensteuer gezahlt werden. Daran wird auch ein bedingungsloses Grundeinkommen gar nichts ändern. Anders als bei Hartz IV wird aber selbst erwirtschaftetes Einkommen nicht mehr mit dem Grundeinkommen verrechnet. D.h. der Auszahlungsbetrag des Grundeinkommens wird auch bei Nebeneinkommen nicht sinken. Die Einkommensteuer wird als  Jahressteuer immer und bei allen gleich auf das ganze Jahr gerechnet. Dass man sein Geld behalten kann, bedeutet keineswegs, dass man auf sein Einkommen nicht ggf. Steuern zu entrichten hätte, es sei denn, man würde die Einkommensteuer gleichzeitig abschaffen. Davon ist aber sicher nicht auszugehen.</p>
+<p xmlns="" class="last even"><a target="_blank" href="https://www.ecovis.com/duesseldorf-koeln/blog/2020/08/06/erhoehung-grundfreibetrag-und-kinderfreibetrag/">www.ecovis.com/due...-kinderfreibetrag/</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4047045"><a class="author person" href="/!ku4051/"><h4>Uwe Kulick</h4></a><time datetime="2020-11-24T22:01:33+01:00"><meta value="1606251693"></meta>24. 11. 2020, 
+		22:01</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Rainer B. </span>Der Grundfreibetrag muss in Zukunft so hoch sein wie das bedingungslose Grundeinkommen plus Minijoblohn 450 Euro, denn dann lohnt auch ein kleines Grundeinkommen, und das für die, die es am nötigsten brauchen, ganz besonders, nur die 20 Prozent Bezieher satter Wohlstands- bis hin zu Reichtums-Einkommen würden netto steuerlich stärker belastet und ihre erfolgreichen Firmen auch. Damit wäre Umfairteilung per maßvoller Steuerfeinregulierung möglich. Sie muss maßvoll sein, um keine massenhafte Steuerflucht zu provozieren, durch die das BGE-Projekt nach 3 Monaten pleite wäre!</p>
+<p xmlns="" class="even">Sprich: Anno 2020 wäre IMHO ein Grundeinkommen für jeden, also bedingungslos, möglich, also vom Säugling bis zum Greis, für jeden monatlich 333 Euro  - ersetzt Kindergeld, aber keine Renten und Sozialleistungen. Erhöhen wir einfach die Staatsquote auf regelmäßig 50%. Mehr würde als Sozialismus empfunden, das gäbe nicht nur Steuer- sondern auch Unternehmensflucht.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Ein maßvolles umfairteilend steuerfinanziertes BGE bringt 80 Prozent der Bevölkerung ein Plus im Portemonnaie! Und diese Leistung muss es stetig zuverlässig erbringen, so dass auch die demokratische Mehrheit dafür nachhaltig besteht!</p>
+<p xmlns="" class="odd">Sozialstaat plus mehrheitsfähiges, NICHT schuldenfinanziertes BGE-Modell mit signifikantem Umfairteilungs-Effekt, beides zusammen, BGE und Soziales, ist meiner Berechnung nach so, ja nur so zu haben.</p>
+<p xmlns="" class="even">Andere Modelle, die meist 1000 Euro pro Kopf und Monat versprechen, sind entweder "negative Einkommenssteuer" und bringen daher nur einer Minderheit mehr im Portemonnaie, schaffen dafür aber, ganz neoliberal, den Sozialstaat ab, oder sie sind nicht solide finanziert, oder sie sind Wolkenkukuksheime, in die wir weder einziehen sollten noch wirklich einziehen wollten.</p>
+<p xmlns="" class="last odd">Und das schöne beim "kleinen BGE": Nicht nur, dass es nachhaltig zuverlässig machbar wäre, sobald es den Leuten erklärt wird und der Konsens dafür reift: Soziales Miteinander ist hochkompatibel mit kleinem BGE. Großes BGE würde Vereinzelung fördern.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4047322"><a class="author person" href="/!ku424/"><h4>Rainer B.</h4><img src="/kommune/files/images/profile/70x70/424.png" alt="" title=""></img></a><time datetime="2020-11-25T14:18:28+01:00"><meta value="1606310308"></meta>25. 11. 2020, 
+		14:18</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Uwe Kulick </span>Ein Großteil dessen, was hier unter „Sozialstaat“ abgerechnet wird, sind tatsächlich Kosten für Verwaltungen - von Gebäudekosten bis zu Pensionen. Die ersatzlose Abschaffung des Hartz IV Strafvollzugs wäre deshalb gleichzeitig schon ein nicht unwesentlicher Teil zur Finanzierung des BGE. Wer keine Miete zahlen muss, mag mit 333 Euro im Prinzip schon zurechtkommen, für normale Mieter in den Zentren reichen 1.000 Euro i.d.R. nicht. Der Betrag wird letztlich ganz entscheidend von den jeweiligen Mietkosten mitgeprägt werden. Bei Hartz IV wird derzeit die Miete in einem angemessenen Umfang mitberücksichtigt. Wie das beim „kleinen BGE“ praktisch aussehen sollte, ist nicht ganz klar.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_4046322"><a class="author person" href="/!ku424/"><h4>Rainer B.</h4><img src="/kommune/files/images/profile/70x70/424.png" alt="" title=""></img></a><time datetime="2020-11-23T13:26:18+01:00"><meta value="1606134378"></meta>23. 11. 2020, 
+		13:26</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Na also - geht doch. So bleibt der SPD und der „Union“ wenigstens noch etwas Verhandlungsspielraum (;-))</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_4046320"><a class="author person" href="/!ku62292/"><h4>Ajuga</h4></a><time datetime="2020-11-23T13:23:06+01:00"><meta value="1606134186"></meta>23. 11. 2020, 
+		13:23</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Die grüne Basis hat sich in den Schlüsselpunkten 1,5°-Ziel und BGE durchgesetzt. Das ist einerseits inhaltlich bemerkenswert, aber vor allem ist es ein Indikator für den Machtverlust der "Generation Kretschmann" - und eine verdeckte Kampfansage an die CDU/CSU. Selbst die Linkspartei hätte mit einer Merz-CDU noch mehr Schnittmengen (Arbeitsplätze auf Kosten des Klimas, und "fordernde" Sozialpolitik).</p>
+<p xmlns="" class="even">Ich bin gespannt auf die Landtagswahl in BaWü. Irgendeine "Klimaliste" würde ich unter normalen Umständen nicht wählen, weil das R2G die entscheidenden % unter der Sperrklausel versenkt, oder zB die Klimaliste Köln direkt mal eine Kooperation mit u.a. der FDP vereinbart hat, also platt gesagt den "Verrat ihrer Ideal", für den die Grünen 20 Jahre gebraucht haben, in 20 Tagen durchgezogen hat.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+In BaWü sieht es aber anders aus - da geht es um die Abwahl von Grün-Schwarz, und die "Klimaliste" hat eine realistische Chance, die 5% zu knacken.</p>
+<p xmlns="" class="last odd">Momoentan machen die Grünen noch auf Harmonie und Einigkeit. Aber nach dem CDU-Parteitag und der BaWü-Wahl wird das vorbei sein. Sie werden sich zwar trotzdem nicht eindeutig positionieren - der Anspruch ist, eine Koalition anzuführen, statt als Juniorpartner jede Schnapsidee der SPD oder CDU/CSU abzunicken -, aber der Generationenkonflikt zwischen den die Parteiführung dmonierenden "Macht um jeden Preis"-Anhängern und der in der Basis mittlerweile starken, wenn nicht bereits dominanten "Mehrheit ohne Union"-Strömung ist nicht aufgehoben.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_4046285"><a class="author person" href="/!ku38507/"><h4>Hartz</h4></a><time datetime="2020-11-23T12:21:10+01:00"><meta value="1606130470"></meta>23. 11. 2020, 
+		12:21</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Schafft Hartz IV endlich bedingungslos ab!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046585"><a class="author person" href="/!ku42732/"><h4>Rohm Dietmar</h4></a><time datetime="2020-11-23T23:14:58+01:00"><meta value="1606169698"></meta>23. 11. 2020, 
+		23:14</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hartz </span>Richtig, die Leute sollen arbeiten,- oder?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046800"><a class="author person" href="/!ku38507/"><h4>Hartz</h4></a><time datetime="2020-11-24T13:17:37+01:00"><meta value="1606220257"></meta>24. 11. 2020, 
+		13:17</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Rohm Dietmar </span>Für Tariflohn ja!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_4046278"><a class="author person" href="/!ku69031/"><h4>H B</h4></a><time datetime="2020-11-23T12:03:08+01:00"><meta value="1606129388"></meta>23. 11. 2020, 
+		12:03</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">In Nah-Zukunft werden wir öfter etwas hören: ...Great Reset....</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_4046230"><a class="author person" href="/!ku414/"><h4>Normalo</h4><img src="/kommune/files/images/profile/70x70/414.png" alt="" title=""></img></a><time datetime="2020-11-23T10:53:56+01:00"><meta value="1606125236"></meta>23. 11. 2020, 
+		10:53</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"...Ohne, dass die Menschen dafür etwas tun müssen."</p>
+<p xmlns="" class="even">Das kam offenbar mal wieder etwas kurz: NATÜRLICH müssten "die Menschen" dafür etwas tun - und zwar all Jene, die (noch) für Geld arbeiten. Die müssten richtig ranklotzen und den ganzen Mehrwert (jährlich in D schätzungsweise eine schlappe Billion) erwirtschaften, der für ein BGE abgeschöpft werden müsste. Wie man gedenkt, sie dazu zu motivieren, bleibt eine gerne gegenüber den Segnungen des BGE untergepflügte Frage.</p>
+<p xmlns="" class="odd">Es ist eine Illusion zu glauben, dass Menschen in der Breite ein intrinsisches Interesse hätten, sich für einen unterproportionalen eigenen Profit wirklich anzustrengen. Für jeden, der das nicht aus freien Stücken tut, wird aber der Anteil, den jeder produktiv Tätige von seiner Leistung abzweigen muss, umso größer. Am Ende ist zu befürchten, dass nur die wirklichen Topverdiener noch nennenswert etwas davon hätten, einem Vollzeitjob nachzugehen. Die sind aber zahlenmäßig zu wenige, um die ganze Nation zu ernähren, und ihre Leistung erzielte auch nicht die Hebelwirkungen, die ihre hohen Einkünfte rechtfertigt, wenn der Unterbau zuhause bliebe.</p>
+<p xmlns="" class="even">Falls hier wieder auf die ach so üppigen Gewinne der Kapitalisten geschaut wird, die dann halt massiv höhere Löhne zahlen müssten: Die werden einen Teufel tun. Zum einen sind die Anteile des Unternehmesgewinns am Umsatz in aller Regel nur ein Bruchteil der Personalkosten. Da ist also nicht annähernd so viel Luft, wie man sich das wünschen würde. Zum Anderen wird es immer Länder geben, deren Bewohner das Kissen eines BGE nicht haben und die man daher auch nicht mit gewaltigen Lohnaufschlägen locken muss.</p>
+<p xmlns="" class="last odd">Merke: Bei Konflikten zwischen Theorie und Praxis gewinnt in aller  Regel die Praxis...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046908"><a class="author person" href="/!ku38017/"><h4>Jens Rolf</h4></a><time datetime="2020-11-24T17:11:40+01:00"><meta value="1606234300"></meta>24. 11. 2020, 
+		17:11</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Normalo </span>"Zum einen sind die Anteile des Unternehmensgewinns am Umsatz in aller Regel nur ein Bruchteil der Personalkosten." - Das ist individuell so extrem unterschiedlich, dass eine solche Aussage nicht als Ausgangspunkt für eine Diskussion taugt.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4047348"><a class="author person" href="/!ku414/"><h4>Normalo</h4><img src="/kommune/files/images/profile/70x70/414.png" alt="" title=""></img></a><time datetime="2020-11-25T14:49:51+01:00"><meta value="1606312191"></meta>25. 11. 2020, 
+		14:49</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Jens Rolf </span>Für das BGE wäre es nötig, dass Unternehmen, die sich massive Lohnerhöhungen leisten können, der absolute Normalfall sind. Und genau das ist nicht der Fall. "Normal" sind Gewinne, die sich um 10-20% der Personalkosten bewegen.</p>
+<p xmlns="" class="last even"> Unternehmen, die soviel Gewinn abwerfen, dass sie es nach einer massiven Erhöhung der Löhne und Gehälter (sagen wir 30%+) auch noch täten, gibt es dagegen nur sehr selten, oder es sind Kleinunternehmen, bei denen der Gewinn auch gleichzeitig der Arbeitslohn des den Umsatz wesentlich selbst generierenden Inhabers ist (Freiberufler, Handwerksmeister etc.). Je höher der Grad an Arbeitsteilung im Betrieb, desto höher ist gewöhnlich die Lohnquote im Vergleich zur Rendite. Es gibt Ausnahmen, aber auf deren wenigen Schultern kann man ganz sicher kein Konstrukt wie das BGE aufbauen, zumal die dann in der Regel wieder einen eher geringen Personalbedarf haben.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_4046485"><a class="author person" href="/!ku1567/"><h4>guzzibiker</h4></a><time datetime="2020-11-23T19:30:48+01:00"><meta value="1606156248"></meta>23. 11. 2020, 
+		19:30</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Normalo </span>Danke! alles sehr richtig beschrieben!<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Besonders der letzte Merksatz sollte bei all den Theorien, die hier so umherwabern, deutlich mehr Beachtung finden.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_4046293"><a class="author person" href="/!ku37877/"><h4>Hugo</h4></a><time datetime="2020-11-23T12:33:37+01:00"><meta value="1606131217"></meta>23. 11. 2020, 
+		12:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Normalo </span>In der jetzigen Kapitalismus-Variante würde erstmal das Grundeinkommen auf ca. Alg 2 (Hartz IV), also unter 500€/Monat plus (kleine) Miete und Krankenversicherung runtergestutzt werden. Also nix mit 1200€ (incl. Miete und KV), eher </p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046464"><a class="author person" href="/!ku37877/"><h4>Hugo</h4></a><time datetime="2020-11-23T18:19:02+01:00"><meta value="1606151942"></meta>23. 11. 2020, 
+		18:19</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hugo </span>Da fehlt die Hälfte *aaarrghh*!<br xmlns="http://www.w3.org/1999/xhtml"></br>
+..., eher </p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046582"><a class="author person" href="/!ku37877/"><h4>Hugo</h4></a><time datetime="2020-11-23T22:59:37+01:00"><meta value="1606168777"></meta>23. 11. 2020, 
+		22:59</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hugo </span>Jetzt schreib ichs ned nochma, war nix böses *schulerzuck*.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_4046244"><a class="author person" href="/!ku17609/"><h4>bestrosi75</h4></a><time datetime="2020-11-23T11:17:01+01:00"><meta value="1606126621"></meta>23. 11. 2020, 
+		11:17</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Normalo </span>Ihre Skepsis kann ich verstehen, sie ist ja auch nicht neu. Wie dem begegnen? Indem nicht nur die Einkommens-Verteilung umgestellt wird, sondern auch das Steuersystem.</p>
+<p xmlns="" class="even">Jeder Grundeinkommensbezieher kann jeden Euro, den er über das Grundeinkommen selbst erwirtschaftet/erhält, behalten, es wird im Gegensatz zu heute nichts angerechnet. Das ist für sich schon ein Anreiz zur Leistung.</p>
+<p xmlns="" class="odd">Wie wird das Grundeinkommen dann finanziert? Nun, jeder muss auch konsumieren, seien es Grundbedarfe, zur Selbstverwirklichung oder gar als Luxus. Und DORT wird dann angesetzt, also der Konsum besteuert, mit ensprechend unterschiedlichen Sätzen. Und damit das Geld auch ausgegeben wird (v.a. von den "Reichen"), kann man aus dem Fiat-Geld auch ein Schwundgeld machen, wie es ja jetzt schon durch Negativzinsen sich anbahnt.</p>
+<p xmlns="" class="last even">Grundeinkommen ist damit nur ein Teil der Umstellung, worauf? Auf nachhaltiges Leben.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046385"><a class="author person" href="/!ku414/"><h4>Normalo</h4><img src="/kommune/files/images/profile/70x70/414.png" alt="" title=""></img></a><time datetime="2020-11-23T15:33:52+01:00"><meta value="1606142032"></meta>23. 11. 2020, 
+		15:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@bestrosi75 </span>Das klingt Alles irgendwie bekannt - und riecht nach Scheitern.</p>
+<p xmlns="" class="even">Aber gehen wir es durch. Man kann/darf also sein eigenes Grundeinkommen selbst erwirtschaften, ohne was davon wieder hergeben zu müssen, feine Sache (wenn auch kein nennenswerter Vorteil gegenüber reinem "dolce far niente") - und dann?? Ein auskömmliches BGE mag ja ganz nett sein, aber der Wohlstand, von dem heute Hartz-Empfänger abgeschnitten sind, lebt von einer deutlich höheren Pro-Kopf-Leistung der Produktivkräfte als dem BGE. Wieso sollten die also dafür noch arbeiten?</p>
+<p xmlns="" class="odd">Und was ist mit dem alles andere als randständigen Teil der Bevölkerung, die nicht oder unterhalb eines BGE zur Wertschöpfung beitragen? Soll deren BGE nur durch die Luxusbesteuerung einer kleinen reichen Minderheit reinkommen? Wie reich könnte man in so einem System überhaupt noch werden (wenn man nicht gerade kraft Bonzentums Zugriff auf die staatlichen Geldströme hat)?</p>
+<p xmlns="" class="even">Was ist das BGE (oder das kleine Extra, dass die Steuern von jedem Mehrverdienst übrig lassen) am Ende wert, wenn man sich davon nur das, was Papa Staat für wirklich nötig hält, aber am Ende eben nicht die massiv besteuerten "Luxusartikel" kaufen kann (die einer kleinen Elite vorbehalten bleiben)?</p>
+<p xmlns="" class="last odd">Das sind schlicht altbekannte DDR-Verhältnisse. Sogar Hartz IV kann das besser. Und in Sachen Nachhaltigkeit waren solche leistungsfeindlichen Mangelwirtschaftssysteme auch noch nie Vorreiter, weder ökonomisch noch ökologisch.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046457"><a class="author person" href="/!ku414/"><h4>Normalo</h4><img src="/kommune/files/images/profile/70x70/414.png" alt="" title=""></img></a><time datetime="2020-11-23T17:55:05+01:00"><meta value="1606150505"></meta>23. 11. 2020, 
+		17:55</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Normalo </span>Entschuldigung, ich hatte ein Missverständnis hinsichtlich der Erwerbsbesteuerung: Man darf also alles Geld behalten, das man verdient, auch über das BGE hinaus.</p>
+<p xmlns="" class="even">Das klingt schon besser, wird aber vermutlich auch ein sehr großes Loch in die Staatskasse reißen, den die Konsumbesteuerung kaum einfangen kann. Konsum ist ja nicht Alles. Gerade Reiche geben den geringsten Anteil ihrer Einkünfte für Konsum aus. Und wenn jemand nicht ausgibt sondern reinvestiert, ist das zwar gut für die Wirtschaft, aber es finanziert erstmal kein Grundeinkommen - zumal nicht gesagt ist, dass die Investion in Deutschland stattfindet.</p>
+<p xmlns="" class="last odd">Gleiches gilt für Konsum. Auch der ist so mobil wie die Konsumenten. Und wer ist am moblisten? Richtig.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_4046161"><a class="author person" href="/!ku20803/"><h4>Laughin Man</h4><img src="/kommune/files/images/profile/70x70/20803.png" alt="" title=""></img></a><time datetime="2020-11-23T08:34:41+01:00"><meta value="1606116881"></meta>23. 11. 2020, 
+		08:34</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Wer glaubt den Grünen denn bitte diese Wahl Ente?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046881"><a class="author person" href="/!ku5223/"><h4>Pia Mansfeld</h4></a><time datetime="2020-11-24T16:30:59+01:00"><meta value="1606231859"></meta>24. 11. 2020, 
+		16:30</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Laughin Man </span>Jeden Morgen steht ein dummer Mensch auf... Man muss ihn nur finden.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_4046037"><a class="author person" href="/!ku3694/"><h4>Andreas_2020</h4></a><time datetime="2020-11-22T21:14:21+01:00"><meta value="1606076061"></meta>22. 11. 2020, 
+		21:14</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">So verlockend es klingt, stellt sich die Frage, wie Arbeit verlockend und attraktiv bleiben soll, wenn es ein Armutsfestes bedingungsloses Grundeinkommen gibt? Oder ist dieses BGE nicht Hartz-IV? Das Ganze ist ein Ende der Arbeitsgesellschaft und es könnte direkt in eine staatliche Almosengesellschaft münden, wo dann Menschen nicht mehr benötigt werden oder sich freiwillig zurückziehen dürfen. Problematisch daran ist die Frage, wie hoch kann so ein BGE wirklich ausfallen?</p>
+<p xmlns="" class="last even">Ich glaube nicht ans BGE, weil damit auch der politische Druck, Arbeit und Teilhabe am Arbeitsmarkt zu schaffen und zu garantieren, zu Ende geht. Es entsteht aber ein System staatlicher Abhängigkeit und eine Art Frage, wie gerecht soll es denn beim BGE zugehen. Es könnte von Regierung zu Regierung schwanken, es könnte eine Partei geben, die nur die vertritt, die auf dem Arbeitsmarkt ins BGE aussortiert wurden. Es könnte sein, dass irgendwann alle Ü45 da landen und sich über die Höhe bitterlich beklagen ...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046342"><a class="author person" href="/!ku38507/"><h4>Hartz</h4></a><time datetime="2020-11-23T14:05:35+01:00"><meta value="1606136735"></meta>23. 11. 2020, 
+		14:05</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Andreas_2020 </span>Das Ende der Arbeitsgesellschaft kommt sowieso mit Riesenschritten!<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Beweis dafür sind u.a. solche Absurditäten wie die sogenannten "Arbeitsgelegenheiten" (am Markt vorbei, also überflüssig, daher bloße Scheinarbeiten). Und was sonst noch für ein Unsinn bei den "Jobcentern" (allein der Begriff!) und den Arbeitsagenturen (arbeiten da Agenten?) erzählt wird...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046460"><a class="author person" href="/!ku35021/"><h4>Leser77</h4></a><time datetime="2020-11-23T18:10:03+01:00"><meta value="1606151403"></meta>23. 11. 2020, 
+		18:10</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hartz </span>Wenn Ihre Arbeitsgesellaschaft tatsächlich endet, wer erwirtschaftet dann das Geld fürs BGE?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046802"><a class="author person" href="/!ku38507/"><h4>Hartz</h4></a><time datetime="2020-11-24T13:19:30+01:00"><meta value="1606220370"></meta>24. 11. 2020, 
+		13:19</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Leser77 </span>Schauen Sie mal in eine moderne Fabrik.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Was sehen Sie da?<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Maschinen, Roboter, Computer...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046990"><a class="author person" href="/!ku35021/"><h4>Leser77</h4></a><time datetime="2020-11-24T19:37:17+01:00"><meta value="1606243037"></meta>24. 11. 2020, 
+		19:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hartz </span>Auch, und Menschen. Jede Menge. Und in den Büros erst.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4047241"><a class="author person" href="/!ku38507/"><h4>Hartz</h4></a><time datetime="2020-11-25T11:41:39+01:00"><meta value="1606300899"></meta>25. 11. 2020, 
+		11:41</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Leser77 </span>Vollautomatisch</p>
+<p xmlns="" class="even">Schauen Sie mal einen Werksfilm z.B. von VW so von 1970. Und danch sehen Sie den aktuellen Werksfilm: Die Hallen sind beträchtlich leerer geworden!<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Es gibt bereits vollautomatische Fabriken.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Und sehr bald fahren Busse ohne Fahrer- Das ist z.B. in Lyon schon seit Jahren so und in Nürnberg. In Deutschland sind Versuchslinien in Betrieb. Auch Laster fahren bald vollautomatisch.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Was heißt das also? ...</p>
+<p xmlns="" class="odd">" Und in den Büros erst." Es stehen zahllose Büros leer - viele seit Jahren. Sie finden darüber jede Menge Artikel und Berichte.</p>
+<p xmlns="" class="last even">Was ist die logische Antwort auf diese nicht wegzudiskutierenden Entwicklungen? Da kommt man drauf...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4048408"><a class="author person" href="/!ku35021/"><h4>Leser77</h4></a><time datetime="2020-11-27T15:21:32+01:00"><meta value="1606486892"></meta>27. 11. 2020, 
+		15:21</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hartz </span>Es gibt tausende Berufe, die heute keiner mehr ausübt. Und? Es entstehen immer wieder neue. Arbeit ist eine Hydra.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_4046209"><a class="author person" href="/!ku12040/"><h4>LeSti</h4></a><time datetime="2020-11-23T10:13:34+01:00"><meta value="1606122814"></meta>23. 11. 2020, 
+		10:13</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Andreas_2020 </span>Arbeit, die durch ein BGE nicht mehr attraktiv und verlockend ist, ist es jetzt auch nicht. Menschen haben sie aus finanziellem Zwang gemacht.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Da sehr viele Menschen aber lieber mehr als weniger haben, werden auch weiterhin genug Menschen arbeiten gehen. Aber vielleicht dann weniger. Nur noch einen Putzjob statt jetzt zwei, weil das dann reicht, um die Familie durchzubringen.</p>
+<p xmlns="" class="last even">Eine ganz andere Frage ist, was man mit den mehreren Hunderttausend Beschäftigten und Beamten macht, die gerade Hartz IV, Sozialhilfen etc. verwalten. Von denen wird man einen Großteil nicht mehr brauchen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_4046184"><a class="author person" href="/!ku58248/"><h4>Grummelpummel</h4></a><time datetime="2020-11-23T09:09:25+01:00"><meta value="1606118965"></meta>23. 11. 2020, 
+		09:09</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Andreas_2020 </span>Die meisten Menschen wollen sich irgendwie beschäftigen. Es ist eine Minderheit, die sich damit zufrieden gibt, ein ganzes Leben in den Tag zu leben.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Den meisten Menschen wäre nur das BGE zu wenig, denn der Wunsch nach etwas Luxus, Urlaub etc. ist da.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Die Arbeitswelt würde sich mit Sicherheit ändern. Arbeitgeber müssten mehr bieten, um Leute zu bekommen. Das muss nicht unbedingt mehr Lohn als jetzt sein, das können auch viel flexiblere Arbeitszeiten, viel geringere Wochenstunden etc. sein.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Es könnte (man darf ja träumen) auch dazu führen, dass mehr Menschen soziale Berufe ausüben wollen, weil sie mit BGE und Gehhalt tatsächlich gut leben können und so die Chance haben, eine sie wirklich erfüllende Tätigkeit auszuüben.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Arbeit würde sich vielleicht anders verteilen, sie würde vielleicht anders gestaltet und gewichtet. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wenn ich es mir leisten könnte, würde ich nur noch 20 Stunden in der Woche einer Erwerbstätigkeit nachgehen und dafür mehr Zeit für meine über 80jährigen Eltern haben. Oder auch wieder Zeit, um Jugendarbeit zu machen.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Für all das muss aber eben auch ein System- und Denkwechsel statt finden.Ich glaube, daran wird es noch eine ganze Weile scheitern.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_4046130"><a class="author person" href="/!ku12048/"><h4>Andreas J</h4></a><time datetime="2020-11-23T06:22:01+01:00"><meta value="1606108921"></meta>23. 11. 2020, 
+		06:22</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Andreas_2020 </span>Ach, dann lieber wie gehabt ins Hartz IV-System aussortiert werden um der staatlichen Gängelei ausgesetzt zu sein, in einem System das die Schuld immer beim Individuum sucht? Auch über Hartz IV wird sich bitterlich beklagt weil es ist zu gering ist und man latent unter Verdacht steht faul zu sein und deshalb gepiesackt und bedroht wird bis man einen unterbezahlten Job annimmt. Wird nur von der Politik und den nicht Betroffenen ignoriert.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+" es könnte eine Partei geben, die nur die vertritt, die auf dem Arbeitsmarkt ins BGE aussortiert wurden". <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Und? Parteien und Lobbyverbände die in erster Linie die Kapitalinteressen der Vermögenden vertreten gibt es genug.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_4046062"><a class="author person" href="/!ku69491/"><h4>Alicesin</h4></a><time datetime="2020-11-22T22:15:24+01:00"><meta value="1606079724"></meta>22. 11. 2020, 
+		22:15</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Andreas_2020 </span>Nun das BGE würde eher viele Leute animieren wieder zu arbeiten und zwar in Berufen in denen sie wirklich arbeiten wollen. Wer in Deutschland nicht arbeiten will, arbeitet auch nicht. Durch das BGE wäre eher die Tendenz vorhanden das mehr Leute arbeiten gehen. Wir nehmen z.B. ein junges Mädchen welches gerne als Frisörin arbeiten möchte jedoch aufgrund des geringen Verdienstes sich entscheidet einen besser bezahlten Beruf zu erlernen. Ich verstehe durchaus von vielen die Bedenken dass dann keiner mehr arbeiten gehen möchte dann, jedoch muss man auch mal die Kehrseite betrachten, aktuell schlecht bezahlte Berufe werden wieder attraktiver, Familien haben die Möglichkeit das nur ein Elternteil arbeiten geht und das andere sich voll und ganz um die Kinderbetreuung kümmert. Bspw könnte man auch damit die Rentenkasse abschaffen und einfach die Regelung "BGE ab dem 18. LJ bis zum Tode" 1000-1200€ pro Person. Bevor das Argument kommt: "Woher das Geld" Wir rechnen die Rentenkasse weg, wir rechnen Hartz 4 weg inkl. sämtliche Leistungen. Zumal es auch für die Mitarbeiter des Jobcenters weitaus angenehmer ist, da sie dann mit Leuten interagieren welche wirklich Hilfe bei der Berufssuche haben möchte.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046345"><a class="author person" href="/!ku38507/"><h4>Hartz</h4></a><time datetime="2020-11-23T14:07:27+01:00"><meta value="1606136847"></meta>23. 11. 2020, 
+		14:07</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Alicesin </span>Die Verfolgungsbetreuung wäre mit einem BGE ausgehebelt.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_4045965"><a class="author person" href="/!ku456/"><h4>Eric Manneschmidt</h4></a><time datetime="2020-11-22T18:34:09+01:00"><meta value="1606066449"></meta>22. 11. 2020, 
+		18:34</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Übrigens läuft aktuell eine Europäische Bürgerinitiative für Bedingungslose Grundeinkommen in Europa, bitte mitzeichnen und weitersagen: <a target="_blank" href="http://ebi-grundeinkommen.de/">ebi-grundeinkommen.de/</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_4045939"><a class="author person" href="/!ku25652/"><h4>Ricky-13</h4><img src="/kommune/files/images/profile/70x70/25652.png" alt="" title=""></img></a><time datetime="2020-11-22T17:23:56+01:00"><meta value="1606062236"></meta>22. 11. 2020, 
+		17:23</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">taz: "Die Grünen bekennen sich auf dem digitalen Parteitag zum bedingungslosen Grundeinkommen."</p>
+<p xmlns="" class="even">Das ist ja schon mal ein Anfang. In einer Welt voller Maschinen, Computer, Automaten, Regelungstechnik, Roboter und demnächst auch Künstliche Intelligenz (KI), wird der Mensch als Arbeitskraft irgendwann überflüssig werden, egal ob er nun Hilfsarbeiter oder Ingenieur ist, deshalb kann man das BGE auch nicht ewig "wegdiskutieren".</p>
+<p xmlns="" class="last odd">Finanzieren lässt sich das BGE übrigens auch. Auf Google einfach mal "BGE-Rechner" eingeben, da kann man dann sehen wie so eine Finanzierung aussehen könnte.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046200"><a class="author person" href="/!ku414/"><h4>Normalo</h4><img src="/kommune/files/images/profile/70x70/414.png" alt="" title=""></img></a><time datetime="2020-11-23T09:40:46+01:00"><meta value="1606120846"></meta>23. 11. 2020, 
+		09:40</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Ricky-13 </span>Ich weiß nicth, wie oft schon die selbstabschaffung des Menschen als produktiver Wirtschaftsfaktor beschriehen wurde. Historisch hat er immer wieder Aufgaben gefunden, die trotz Automatisierung noch seine Zeit (und die Ressourcen seiner Mitmenschen) wert waren. Daran ändern auch 3D-Drucker nichts.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046324"><a class="author person" href="/!ku25652/"><h4>Ricky-13</h4><img src="/kommune/files/images/profile/70x70/25652.png" alt="" title=""></img></a><time datetime="2020-11-23T13:37:07+01:00"><meta value="1606135027"></meta>23. 11. 2020, 
+		13:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Normalo </span>Sie schreiben: "Historisch hat er immer wieder Aufgaben gefunden, die trotz Automatisierung …"</p>
+<p xmlns="" class="even">Das ist vollkommen richtig, nur sind wir jetzt an einem Punkt angelangt, wo sogar anspruchsvolle Aufgaben von "Maschinen" übernommen werden können. Außerdem wächst die Menschheit immer mehr an und es kann in dieser hochtechnisierten Welt dann natürlich nicht mehr für alle Menschen eine Erwerbsarbeit geben, deshalb muss ein BGE her, damit es nicht zu Aufständen der Besitzlosen kommt. Im Jahr 1900 hatten wir 1,6 Milliarden Menschen und heute, gerade einmal 120 Jahre später, sind wir schon bei rund 8 Milliarden Menschen angelangt. So etwas nennt man exponentielles Wachstum, obwohl es eher superexponentielles Wachstum heißen sollte. Wer etwas Mathematik beherrscht, der weiß, dass der Exponent bei dem exponentiellen Wachstum dabei natürlich auch immer größer wird.</p>
+<p xmlns="" class="odd">Dass Industrie 4.0 gerade das Verschwinden ganzer Berufssparten ermöglicht und das es in dieser hochtechnisierten Welt immer weniger echte Jobs gibt, von denen der arbeitende Homo sapiens auch leben kann, das spricht kaum ein Politiker an, denn dann müssten Politiker endlich mal einen Schritt in das 21. Jahrhundert machen. Dass der Mensch schon jetzt in einer vollautomatischen Fabrik/Lager etc. nur noch ein Störfaktor ist, sollte langsam auch mal dem größten BGE-Gegner klar geworden sein. Es ist ja jetzt schon zu einer "Polarisierung der Jobs" gekommen. Die gut bezahlten und die schlecht bezahlten Jobs nehmen zu, aber die Arbeitsplätze in der Mitte nehmen immer mehr ab.</p>
+<p xmlns="" class="even">Es muss ohnehin ein Umdenken stattfinden, denn der Klimawandel - der durch den ausufernden Kapitalismus (Wirtschaftswachstum etc.) immer mehr ansteigt - lässt nicht mit sich verhandeln und wird sich nicht für 1000 Jahre in eine Höhle zurückziehen, nur weil der Mensch sein Monopolyspiel weiterspielen möchte.</p>
+<p xmlns="" class="last odd">"Die reinste Form des Wahnsinns ist es, alles beim Alten zu belassen und gleichzeitig zu hoffen, dass sich etwas ändert." (Albert Einstein)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046645"><a class="author person" href="/!ku414/"><h4>Normalo</h4><img src="/kommune/files/images/profile/70x70/414.png" alt="" title=""></img></a><time datetime="2020-11-24T08:26:42+01:00"><meta value="1606202802"></meta>24. 11. 2020, 
+		08:26</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Ricky-13 </span>Alles, was Sie beschreiben klingt(!) richtig. Dieselben Argumente kamen aber schon erst bei der Industrialisierung und dann bei der Digitalisierung der Produktionsprozesse. Erst war es die einfache Handarbeit, dann die handwerkliche Facharbeit, die angeblich verschwinden sollten. Die Effekte waren auch real, und Tätigkeiten wurden überflüssig. Die befürchteten menschenleeren Fabriken und milliardengroßen Heere an Arbeitslosen sind aber nie Realität geworden. Es ergaben sich neue Tätigkeitsfelder, die selbst die explodierende Bevölkerung nach wie weitgehend beschäftigt halten.</p>
+<p xmlns="" class="last even">Insofern widerspreche ich Ihnen in Bezug auf die Faktoren nicht. Aber die von Ihnen prophezeihten Ergebnisse glaube ich erst, wenn ich sie sehe.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046822"><a class="author person" href="/!ku25652/"><h4>Ricky-13</h4><img src="/kommune/files/images/profile/70x70/25652.png" alt="" title=""></img></a><time datetime="2020-11-24T14:10:21+01:00"><meta value="1606223421"></meta>24. 11. 2020, 
+		14:10</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Normalo </span>Es ist nur eine Frage der Zeit, dann sind 70 bis 80 Prozent aller Arbeitsplätze durch Maschinen besetzt, auch wenn Leute wie Sie das nicht wahrhaben wollen. Momentan wehren sich nur noch die Leute gegen das BGE, die an dem Niedriglohnsektor viel Geld verdienen. Das 21. Jahrhundert mit all seiner Technik ist aber schon lange in Gang, nur unsere Politiker wollen sich keinen Schritt in die Zukunft bewegen.</p>
+<p xmlns="" class="even">Den Satz, den ich geschrieben habe "Im Jahr 1900 hatten wir 1,6 Milliarden Menschen und heute, gerade einmal 120 Jahre später, sind wir schon bei rund 8 Milliarden Menschen angelangt" haben Sie wohl überlesen. Das ist aber das Hauptproblem, egal ob wir nun Maschinen, Computer, Automaten, Regelungstechnik, Roboter und Künstliche Intelligenz (KI) haben oder nicht, denn bei so vielen Menschen kann es nicht mehr für alle Menschen eine Erwerbsarbeit geben. Nähroboter machen demnächst weltweit 50 Millionen Näherinnen arbeitslos. Wo werden solche Frauen wohl landen? Über Armutsprostitution wurde in der taz ja schon berichtet.</p>
+<p xmlns="" class="odd">Dass das BGE irgendwann kommen wird, egal wie immer es dann auch aussieht und finanziert wird, ist eigentlich schon jedem klar. R.D. Precht, ein Befürworter des BGE, unterhält sich schon seit Jahren mit Politikern (auch mit den Konservativen aus der Union) und Wirtschaftsmanagern über das BGE und da erzählt man ihm, dass Politiker und Manager schon lange über das BGE diskutieren.</p>
+<p xmlns="" class="last even">Irgendwann wird das BGE ohnehin kommen, denn wenn sogar die USA und die asiatischen Länder vom BGE reden, dann können wir es hier in Europa nicht ewig wegdiskutieren - auch wenn es einige gerne möchten.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4046875"><a class="author person" href="/!ku414/"><h4>Normalo</h4><img src="/kommune/files/images/profile/70x70/414.png" alt="" title=""></img></a><time datetime="2020-11-24T16:15:08+01:00"><meta value="1606230908"></meta>24. 11. 2020, 
+		16:15</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Ricky-13 </span>Es ist wohl ein wenig Glaubensfrage. Denn ja, ich habe auch keine Glaskugel zur Hand, die mir verrät, welche nächste Dimension von wirschaftsrelevanter Tätigkeit sich jamand einfallen lassen wird. Ich kann nur überzeugt sein, dass uns Menschen schon was einfallen wird - und sei es aus Langeweile.</p>
+<p xmlns="" class="even">Natürlich erkenne ich an, das die Automatisierungsmöglichkeiten, die uns absehbar die nächste Generation digitaler Werkzeuge bringen wird, Alles bisherige in den Schatten stellt. SIE sollten im Gegenzug vielleicht einbeziehen, dass das die Definition von "Fortschritt" ist, und dass dieselben Sätze zum Ende aller Vollbeschäftigungsmöglichkeiten von "Leuten wie [- diesmal -] Ihnen" schon angesichts früherer Fortschritte mit gleicher unerschütterlicher Überzeugung aufgeschrieben wurden (und das Precht nicht gerade davon berichte, welche Experten ihn beim Thema BGE haben kalt abblitzen lassen, ist jetzt auch nicht verwunderlich). Diese Leute lagen allesamt falsch. Woher wollen Sie wissen, dass sie heute richtig lägen?</p>
+<p xmlns="" class="odd">Nicht mehr für's Nähen und andere automatisierbare Dinge bezahlt zu werden und deshalb nur noch die Prositution als Alternative sehen (SO groß ist der Bedarf da übrigens im Zweifel auch nicht), unterschätzt aus meiner Sicht schlicht die Fähigkeiten unserer Spezies (bzw. denkt die realität zu statisch). Wer hätte vor dreißig Jahren gedacht, das man mal sein Geld als "Webdesigner", "Influencer" oder "E-Sports-Profi" verdienen können würde?</p>
+<p xmlns="" class="even">Also - die GANZ alten Weisheiten bitte nicht vergtessen: Panta rhei.</p>
+<p xmlns="" class="last odd">ps und nein, ich habe die Bevölkerungsexplosion nicht überlesen. Schauen Sie nochmal genau hin :-)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4047282"><a class="author person" href="/!ku25652/"><h4>Ricky-13</h4><img src="/kommune/files/images/profile/70x70/25652.png" alt="" title=""></img></a><time datetime="2020-11-25T12:59:15+01:00"><meta value="1606305555"></meta>25. 11. 2020, 
+		12:59</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Normalo </span>"Ich kann nur überzeugt sein, dass uns Menschen schon was einfallen wird - und sei es aus Langeweile."</p>
+<p xmlns="" class="even">Darum geht es doch gar nicht, denn dass sich der Mensch etwas einfallen lässt, um seinem 'Dasein' ein bisschen Abwechslung zu geben, ist klar. Es geht um Erwerbsarbeit, wovon man auch leben kann. Schon James Allen Hightower (US-Politiker, Autor und progressiver politischer Aktivist) sagte: "Es geht nicht um Jobs. Selbst Sklaven hatten Jobs. Es geht um Einkommen".</p>
+<p xmlns="" class="odd">Wir haben jetzt schon ca. 10 Millionen Niedriglohnempfänger in Deutschland. Viele Milliarden Euro werden jährlich aus Steuermitteln aufgewendet, um nicht existenzsichernde Arbeit aufzustocken. Die Gesellschaft subventioniert also schon seit vielen Jahren Arbeitgeber, die ihren Angestellten nur Niedriglöhne zahlen. Millionen Arbeitnehmer bekommen schon jetzt keine anständigen Löhne mehr gezahlt und die Digitalisierung wird in naher Zukunft auch noch riesige Schneisen der Arbeitslosigkeit schlagen, und da kommen Sie mir mit solchen Spielereien wie  "Webdesigner", "Influencer" oder "E-Sports-Profi".  Das Institut für Arbeitsmarkt- und Berufsforschung (IAB) der Bundesagentur für Arbeit erzählt auch immer solche schönen Märchen und hofft wohl, dass die Bevölkerung über das "Einhorn auf der grünen Wiese" nicht zu genau nachdenkt.</p>
+<p xmlns="" class="even">Ich weiß, dass Sie die Bevölkerungsexplosion nicht überlesen haben. Dass aber laut UN DESA (Population Division) die Weltbevölkerung seit 1900 um das 5-fache angestiegen ist, und man das nicht mehr mit "neuen Jobs" als "Webdesigner" etc.pp. auffangen kann, sollte Ihnen auch klar sein.</p>
+<p xmlns="" class="last odd">Sie schreiben Panta rhei. - „Alles bewegt sich fort und nichts bleibt“. Ich denke auch, dass wir die alte Arbeitswelt in den Fluss werfen und uns endlich ins 21. Jahrhundert begeben sollten, in der es hoffentlich eine Gerechtigkeit für "Alle" gibt und nicht nur für ein paar Kapitalisten, die von der Arbeit der großen Masse gut leben. Ein BGE (Bedingungsloses Grundeinkommen) wäre ein erster Schritt.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4047367"><a class="author person" href="/!ku38507/"><h4>Hartz</h4></a><time datetime="2020-11-25T15:37:00+01:00"><meta value="1606315020"></meta>25. 11. 2020, 
+		15:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Ricky-13 </span>Irreale Politik erfindet Sinnloskurse</p>
+<p xmlns="" class="last even">Ich stimme Ihnen zu.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Webdesigner sind schon in gro0er Zahl arbeitslos. Und das bereits seit ca. 20 Jahren...<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wenn das Jobcebter ausgerechnet davon schwärmt, so zeigt das nur die auffällige und anhaltende Hilflosigkeit dort!<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Man kann nicht 0,5l Bier  (Angebot) in einem  0,2 l Glas (Nachfrage) unterbringen. Geht einfach nicht. Da kann man noch so lange labern und irgendwelche Begriffe zwecks Schönrederei erfinden. Das ist nur ein irreales Spielchen. Davon leben hier zu viele Leute auf Steuerzahlergeld in einer ausgeuferten und teuren Sinnlosindustrie.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Also BGE her! ...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4047446"><a class="author person" href="/!ku25652/"><h4>Ricky-13</h4><img src="/kommune/files/images/profile/70x70/25652.png" alt="" title=""></img></a><time datetime="2020-11-25T19:46:20+01:00"><meta value="1606329980"></meta>25. 11. 2020, 
+		19:46</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hartz </span>Nicht nur die "Sinnlosindustrie" wäre überflüssig, auch die Bundesagentur für Arbeit. Die Arbeitsagenturen, die mit einem unglaublichen Bürokratismus und knapp 100.000 Mitarbeitern einen egozentrischen Aufwand betreiben, der in gar keinem Verhältnis zu den Vermittlungserfolgen steht, kostet dem Steuerzahler nämlich jährlich einige Milliarden Euro (JC-Gebäude, Löhne etc.). Mit dem Geld könnte man viele Schulen oder Universitäten sanieren, oder wenigstens endlich mal dafür sorgen, dass die Fenster in den Schulen auf- und zu gehen. In der momentanen Corona-Pandemie hätte man dafür ja auch endlich mal genügend Zeit übrig.</p>
+<p xmlns="" class="even">Wer auch noch sehen und nachdenken kann, der weiß: Wenn es tatsächlich noch Jobs zu verteilen gäbe, von dem ein Mensch auch existieren kann, dann könnte der Staat sich doch eine Behörde, wie die Bundesagentur für Arbeit/Jobcenter, mit 100.000 Mitarbeitern sparen.</p>
+<p xmlns="" class="last odd">Das BGE würde den Bürgern endlich die Angst nehmen, vor Hunger, vor Obdachlosigkeit und der Bevormundung durch die Bundesagentur für Arbeit/Jobcenter. Aber das ist wohl alles nicht im Sinne der Oberen Zehntausend.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_4047807"><a class="author person" href="/!ku38507/"><h4>Hartz</h4></a><time datetime="2020-11-26T14:14:47+01:00"><meta value="1606396487"></meta>26. 11. 2020, 
+		14:14</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Ricky-13 </span>Absurd...</p>
+<p xmlns="" class="last even">Volle Zustimmung aus eigener Erfahrung. In den Arbeitsagenturen läuft Realsatire!<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Die Zustände sind absurd und teuer. Das sich wiederholende Gequatsche dort (gähän!) schafft keine Arbeitsplätze und ist vorwiegend anödend.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_4045926"><a class="author person" href="/!ku35736/"><h4>danny schneider</h4></a><time datetime="2020-11-22T16:49:37+01:00"><meta value="1606060177"></meta>22. 11. 2020, 
+		16:49</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Also das ein Staat mit einem bedingungslosem Grundeinkommen weiterhin funktioniert glaube ich nicht. Und selbst ein Grundeinkommen, das ich durchaus sinnvoll sehe, macht nur Sinn wenn das komplette Steuerrecht, sowie die Lohneinkommen gleichfalls umgestellt werden. Außderdem macht es nur dann Sinn wenn das Grundeinkommen den Mindestlohn setzt und dann müsste der höher sein. Gut das Doppelte.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></div><span id="ad_bin_uebersicht_medrec_4" class="ad_bin sold contentad"><div id="ad_zone_uebersicht_medrec_4" name="uebersicht_medrec-4" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'uebersicht_medrec_4';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid476383">
+    
+
+<form name="form" method="post" enctype="application/x-www-form-urlencoded" id="send-comment" class="first last odd sect sect_send-comment_form style_commentform " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><h2><a name="jetzt mitreden"><span>jetzt mitreden</span></a></h2></div><div class="sectbody"><input class="constant" type="hidden" name="test" value="yes"></input><input class="constant" type="hidden" name="id" value="5730367"></input><input type="hidden" name="scope" class="constant" id="form_scope" value="cms-article"></input><input type="hidden" name="asid" class="constant" id="form_asid" value=""></input><span class="field"><p class="label">Ihren Kommentar hier eingeben</p><textarea name="post" class="text" id="form_post"></textarea></span><input type="submit" class="submit" name="ignore" value="abschicken"></input></div></form><script> filOtaz_de.Form( 'send-comment' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+	var formN = $('#send-comment');	// who i am
+
+	if( formN[0].filOtaz_de_handled ) return; formN[0].filOtaz_de_handled = true;	// run only once
+
+
+
+	// ajaxify myself
+	filOtaz_de.ajaxifyForm('send-comment', {
+		mirrorInput	: true ,
+		onSuccess	: function( data ){
+			filOtaz_de.kommune.updateLogin();
+//console.log('success handler send-comment '+ $(data).html() );
+//			var message = $(data).find('.message');
+//			alert( message.length ? message.text() : 'OK' );
+			} 
+		});   
+
+
+	if( formN.parents('.wing').length ) {    // we're in wing
+//console.log('send-comment in wing '+ formN.length +', '+ formN.parents('.wing').length +', '+ formN.parents('.float').length );
+
+	var multiUse = function() {
+
+		// === lend ourselfes to reply-function ===
+
+		// shared functions
+		var onScroll, reset;
+
+		// shared data
+		var form, anchor, prior, bros, dad, uncles, yMin;
+
+
+		$('.community.page >.body >.sect_commentlinks').find('>.sectbody >li, .thread >li').each( function(i,el){	// each comment
+
+			// per comment data
+			var refN	= $(el),
+			    toolbarN	= refN.find('>.toolbar'),
+			    id,
+			    onClick
+			    ;
+
+			toolbarN.find('>.reply >a').click( function(){
+				// reply specific
+				onClick({
+					idKey	: 'asid',
+					title	: {
+						prefix	: '',
+						suffix	: ' antworten'
+						},
+					hint	: 'Antwort bitte hier eingeben',
+					submit	: 'antworten'
+					});
+				} );
+			
+			toolbarN.find('>.report >a').click( function(){
+				// report specific
+				onClick({
+					a	: 'report',
+					idKey	: 'pid',
+					title	: {
+						prefix  : 'Kommentar von ',
+						suffix  : ' melden'
+						},
+					hint    : 'Problem bitte hier beschreiben',
+					submit	: 'melden'
+					});
+				} );
+
+			toolbarN.css({ visibility:'visible' });
+
+
+			onClick = function( par ) {
+
+					// determine shared data late
+				if( !form ) {
+					form = {
+						titleN	: formN.find('>.secthead >h2 >a >span'),
+						aN	: formN.find('>.sectbody >input[name="a"]'),
+						idN	: formN.find('>.sectbody >input[name="asid"]'),
+						pidN	: formN.find('>.sectbody >input[name="pid"]'),
+						textN	: formN.find('>.sectbody >span >textarea'),
+						submitN	: formN.find('>.sectbody >input:submit')
+						};
+					form.hintN 	= form.textN.prev('p');
+					form.org = {
+						title	: form.titleN.text(),
+						hint	: form.hintN.text(),
+						a	: form.aN.attr('value'),
+						submit	: form.submitN.attr('value')
+						};
+					}
+
+				// determine per comment data late
+				if( !id )  	id = refN.attr('id').replace(/^[^0-9]*/, '');
+
+
+				// change presented data to our needs
+
+				if( par.a ) {
+					if( !( form.aN  && form.aN.length  ) )  
+						form.aN  = $('<input class="constant" type="hidden" />').insertBefore( form.submitN );
+					form.aN.attr({	name	: 'a',
+							value	: par.a
+							});
+					}
+				else if( form.aN ) {
+					form.aN.remove();
+					form.aN = null;
+					}
+
+				if( par.idKey ) {
+					if( form.idN ) form.idN.remove();
+					form.idN = $('<input class="constant" type="hidden" />')
+						.attr({	name	: par.idKey,
+							value	: id
+							})
+						.insertBefore( form.submitN );
+					}
+				else if( form.idN ) {
+					form.idN.remove();
+					form.idN = null;
+					}
+
+				form.titleN.empty().append( 
+					par.title.prefix, 
+					$('<span>'+ refN.find('>.author >h4').text() +'</span>').addClass( refN.attr('class') ),
+					par.title.suffix
+					);
+
+				form.hintN.text(		par.hint	);
+
+				form.submitN.attr({	value :	par.submit	});
+
+
+				// add reset options
+				(new filOtaz_de.Form( formN )).cancel( function(){ reset();	afterLogin.fadeIn(); });
+				formN.on('filOtaz_de.Form.done',   reset );
+
+				// geometry
+				var	commBot	=   toolbarN.offset().top +   toolbarN.outerHeight(),
+					formBot = form.textN.offset().top + form.textN.outerHeight(),
+					d	= commBot - formBot
+					;
+				if( !yMin ) yMin = formBot - $(window).scrollTop();
+				if( commBot - $(window).scrollTop() < yMin )  window.scrollTo( 0, commBot - yMin );
+
+				// relocate form to stick w/ referenced comment
+				if( !anchor && d >0 ) {
+					prior = formN.prev(), bros = formN.nextAll(), dad = formN.parent(), uncles = dad.filter('.rack').nextAll(), afterLogin = $('form#bb-login').nextAll().not('script');
+					messageN = $('#successMessage');
+					anchor = $('<div class="community wing pin" />')
+						.css({  position: 'absolute',
+							top     : formN.offset().top +'px',
+							left    : dad.offset().left +'px',
+							width   : formN.width() +'px'
+							})
+						.appendTo( document.body )
+						;
+					if( uncles.length ) {   // we're in rack
+						dad.css({  borderBottomStyle: 'none'  });
+						anchor.append( $('<div />').addClass( dad.attr('class') ).append( formN, bros ), uncles );
+						}
+					else	anchor.append( formN, bros );
+					}
+
+				if( anchor ) {
+
+					// fading out "meistkommentiert" when answering
+
+					afterLogin.fadeOut();
+				// refresh for second ... n time "antworten"
+				// commtented out to prevent "neues kommtar" instead of "antworten"
+				//	if (formN.hasClass('worked')){
+				//		  if( form.aN ) form.aN.remove();
+				//		  if( form.idN ) form.idN.remove();
+				//	}
+
+					anchor.animate(
+						{ 
+							top : formN.offset().top + d
+						},
+					function(){
+							$(window).scroll( onScroll );
+							} );
+						}
+
+				}; //onClick
+
+			} ); //each comment
+
+			onScroll = function() {
+				var ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top;
+				// reset clears the whole form, we don't want that onScroll, so we only call relocateForm instead
+				// if( formN.offset().top <= ref )  reset();
+
+				// Do not scroll when already commented and there is success message
+				if (( formN.offset().top <= ref ) && ! (formN.hasClass('worked')))  relocateForm();
+				};
+			reset = function() {
+				if( reset ) 	formN.off('filOtaz_de.Form.done');
+				resetForm();
+				relocateForm();
+				};
+			relocateForm = function() {
+				// clean up
+				if( onScroll )  $(window).off('scroll.taz_onscroll');
+
+				// relocate form back
+				if( anchor ) {
+					var 	ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top,
+						d = anchor.offset().top - ref
+						;
+					anchor.animate({ top: ref }, d, function(){
+						dad.append( formN, bros );
+						if( uncles.length ) {	// we were in rack
+							dad.css({  borderBottomStyle: null  });
+							dad.after( uncles );
+							}
+						if( anchor ) anchor.remove(); anchor = null;
+						} );
+					}
+				};
+			resetForm = function() {
+				// reset shown data
+				if( form.aN      ) form.aN.remove();
+				if( form.idN     ) form.idN.remove();
+//				if( form.cancelN ) form.cancelN.remove();
+				form.titleN.text(		form.org.title	);
+				form.hintN.text(		form.org.hint	);
+				form.textN.attr({	value : ''		}).trigger('blur');
+				form.submitN.attr({	value : form.org.submit	});
+
+				};
+
+		}; // multiUse
+
+
+		if( formN.parents('.float').length ) { 	// already relocated into float
+			multiUse();
+			}
+		else {					// wait for relocation
+
+			formN.parents('.wing').on('filOtaz_de_float_mounted', function(){  multiUse();  });
+			}
+		} //we're in wing
+
+	})(); </script>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><form name="form" method="post" enctype="application/x-www-form-urlencoded" id="bb-login" class="even sect sect_bb-login_form style_kommune " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><ul role="toolbar" class="toolbar"><li class="login"><a href="" target="_blank">Login</a></li><li class="settings"><a href="https://taz.de/kommune/post.php?a=registration" target="_blank">Registrieren</a></li><li class="newpass"><a shape="rect" target="_blank" href="https://portal.taz.de/?a=nopw">Passwort vergessen?</a></li></ul></div><div class="sectbody"><input type="hidden" name="a" class="constant" id="form_a" value="login"></input><span class="field"><p class="label">E-Mail</p><input type="text" name="email" class="line" id="form_email"></input></span><span class="field"><p class="label">Passwort</p><input type="password" name="password" class="secret" id="form_password"></input></span><input type="submit" class="submit" name="ignore" value="einloggen"></input></div></form><script> filOtaz_de.Form( 'bb-login' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+		var formID = 'bb-login';
+		var form = $('#bb-login');
+
+		if( !form.length ) return;
+		if( form[0].filOtaz_de_form_handled ) return; form[0].filOtaz_de_form_handled = true;
+
+		var nodes, org, firstrun = true;
+		if( !filOtaz_de.kommune ) filOtaz_de.kommune = {};
+		if( !filOtaz_de.kommune.updateLogin ) filOtaz_de.kommune.updateLogin = function(){
+			if( !nodes ) nodes = {	// parse DOM lazily
+				head	: form.find('>.secthead'),
+				body	: form.find('>.sectbody').hide(),
+				a	: form.find('input[name="a"]'),
+				inputs	: form.find('span').has('input[name="email"],input[name="password"]'),
+				submit	: form.find('input.submit'),
+				links	: {
+					all		: form.find('ul.toolbar'),
+					login		: form.find('ul>li.login').click(function(){
+								var me = $(this);
+//								nodes.body
+								me.closest('.secthead').nextAll('.sectbody')	// we might be dynamically inserted, so parse DOM here
+								.slideToggle(function(){
+									me.toggleClass('active');
+									});
+								return false;
+								}),
+					settings	: form.find('ul>li.settings'),
+					newpass		: form.find('ul>li.newpass')
+					}
+				};
+			var duration = firstrun ? 0 : $.fx.speeds._default;
+			var tazsid = $.cookie('tazsid');
+			if(! tazsid ){  // not logged in
+					$('#send-comment .submit').val('Einloggen und Senden');
+					};
+
+			if( tazsid ) {	// already logged in
+					$('#send-comment .submit').val('Abschicken');
+
+				// mar: refresh after login error and then successful login
+				if ( $('#bb-login >.sectbody >p.error').length ){
+
+
+					$('.sect_bb-login').fadeOut().remove();
+					$('.sect_bb-login_form').fadeIn();
+					};
+
+
+				var tazid = $.cookie('tazid');
+//console.log('	now logged in as '+ tazid );
+				if( !org ) org = {	// store original values lazily
+					action	: form.attr('action'),
+					a	: nodes.a.attr('value'),
+					submit	: nodes.submit.attr('value'),
+					links	: {
+						login		: nodes.links.login,
+						settings	: {
+							text	: nodes.links.settings.children('a').text()
+							},
+						newpass		: nodes.links.newpass
+						}
+					};
+				form.attr({ action: 'https://taz.de/kommune/post.php?a=logout' });
+//console.log( tazsid );
+
+				nodes.body.slideUp( duration, function(){
+					form.addClass('session');
+					nodes.a.attr({ value: 'logout' });
+					nodes.inputs.hide();
+					nodes.submit.attr({ value: 'ausloggen' });
+					nodes.body.fadeIn( duration/3 );
+					});
+				if( tazid ) var profileURL = '/!ku'+ tazid +'/';
+				nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.login    )  nodes.links.login.detach();
+					if( profileURL ) {
+						if( !nodes.links.profile ) {
+							nodes.links.profile = $('<li><a href="'+ profileURL +'">mein Profil</a></li>');
+							nodes.links.settings.before( nodes.links.profile );
+							}
+						}
+					if( nodes.links.settings )  nodes.links.settings.children('a').text('Einstellungen');
+					if( nodes.links.newpass  )  nodes.links.newpass.detach();
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+				if( profileURL ) {	// tell user their name
+					if( !nodes.salute ) {
+						nodes.salute = $();
+//console.log('go, get profile '+ profileURL );
+						$.ajax({
+							type		: 'GET',
+							url		: profileURL +'c.xml', 
+							dataType	: 'xml',
+							success		: function( data, status, xhr ){
+								if( !nodes.salute ) return;	// we're too late
+								var name = $('content >item[type="person"] >name', data ).text();
+//console.log('	found '+ name );
+								nodes.salute = $('<h2><a>'+ name +'</a></h2>').hide().prependTo( nodes.head );
+								nodes.salute.slideDown( duration );
+								},
+							error		: function( req, status, message ){
+//console.log( req.status +' '+ status +' :: '+ message );
+								},
+							complete	: function( req, status ){
+								}
+							});
+						}
+					}
+				} //tazsid
+			else if( org )	(function(){	// reset logged out state
+				var orgwas = org; org = null;
+				nodes.body.fadeOut( duration/2, function(){
+					nodes.a.attr({		value	: orgwas.a		});
+					nodes.inputs.show();
+					nodes.submit.attr({	value	: orgwas.submit	});
+					form.removeClass('session');
+					}); 
+				if( nodes.salute )  nodes.salute.slideUp( duration, function(){
+					nodes.salute.remove(); nodes.salute = null;
+					});
+				if( nodes.links.all ) nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.profile ) nodes.links.profile.remove(); nodes.links.profile = null;
+					nodes.links.settings.before( orgwas.links.login.removeClass('active') );
+					nodes.links.settings.children('a').text( orgwas.links.settings.text );
+					nodes.links.settings.after(  orgwas.links.newpass );
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+
+				form.attr({		action	: orgwas.action	});
+				})();
+			firstrun = false;
+			};
+		filOtaz_de.kommune.updateLogin();
+
+		var message = filOtaz_de.ajaxifyForm('bb-login', { handle200 : filOtaz_de.kommune.updateLogin } );
+
+		if( message && message.length )	// secure ajax not supported
+			form.after( message );
+
+		})();
+	</script><div class="rack" id="xid524032">
+    
+
+<div role="region" id="" class="first last odd sect sect_shop style_shop "><div class="secthead" role="heading"><h2><a name="meistkommentiert"><span>meistkommentiert</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class=" first odd trodd   "><a href="/Aggressionen-gegen-E-Autos/!5735378/" class="objlink noavatar" role="link"><h4>Aggressionen gegen E-Autos</h4><h3>Straßenbekanntschaften</h3></a></li><li class=" even trodd   "><a href="/Vor-dem-Schlachter-gerettet/!5738451/" class="objlink noavatar" role="link"><h4>Vor dem Schlachter gerettet</h4><h3>Goofy, ein Weihnachtsmärchen</h3></a></li><li class=" odd treven   "><a href="/Rasante-Entwicklung-bei-Elektroautos/!5724823/" class="objlink noavatar" role="link"><h4>Rasante Entwicklung bei Elektroautos</h4><h3>Gebrauchte E-Autos sind Ladenhüter</h3></a></li><li class=" even trodd   "><a href="/Solidaritaet-in-der-Corona-Panademie/!5740496/" class="objlink noavatar" role="link"><h4>Solidarität in der Corona-Panademie</h4><h3>Müller nimmt Milliardäre ins Gebet</h3></a></li><li class=" last odd trodd   "><a href="/Ein-Jahr-nach-dem-Covid-Ausbruch/!5736069/" class="objlink noavatar" role="link"><h4>Ein Jahr nach dem Covid-Ausbruch</h4><h3>Wie China triumphiert</h3></a></li></ul></div>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Gruene-und-Grundeinkommen/!5730367"></a></div><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Politik/!p4615/" id="menu_p4615"><span itemprop="title">Politik</span></a><ul><li class="first odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span itemprop="title">Deutschland</span></a></li><li class="even trodd"><a href="/Politik/Europa/!p4617/" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="/Politik/Amerika/!p4618/" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="/Politik/Afrika/!p4621/" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="/Politik/Asien/!p4619/" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="/Politik/Nahost/!p4620/" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="/Politik/Netzpolitik/!p4622/" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a><ul><li class="first odd trodd"><a href="/Oeko/Oekonomie/!p4623/" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="/Oeko/Oekologie/!p4624/" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="/Oeko/Arbeit/!p4629/" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="/Oeko/Konsum/!p4625/" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="/Oeko/Verkehr/!p4628/" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven"><a href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span>Wissenschaft</span></a></li><li class="last odd trodd"><a href="/Oeko/Netzoekonomie/!p4627/" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a><ul><li class="first odd trodd"><a href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span>Alltag</span></a></li><li class="even trodd"><a href="/Gesellschaft/Reportage-und-Recherche/!p5265/" id="menu_p5265"><span>Reportage und Recherche</span></a></li><li class="odd treven"><a href="/Gesellschaft/Debatte/!p4633/" id="menu_p4633"><span>Debatte</span></a></li><li class="even trodd"><a href="/Gesellschaft/Kolumnen/!p4634/" id="menu_p4634"><span>Kolumnen</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Medien/!p4630/" id="menu_p4630"><span>Medien</span></a></li><li class="even treven"><a href="/Gesellschaft/Bildung/!p4635/" id="menu_p4635"><span>Bildung</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span>Gesundheit</span></a></li><li class="last even trodd"><a href="/Gesellschaft/Reise/!p4638/" id="menu_p4638"><span>Reise</span></a></li></ul></li><li class="even trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="/Kultur/Musik/!p4640/" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="/Kultur/Film/!p4641/" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="/Kultur/Kuenste/!p4642/" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="/Kultur/Buch/!p4643/" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="/Kultur/Netzkultur/!p4631/" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="/Sport/Fussball/!p4647/" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="/Sport/Kolumnen/!p4648/" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="/Nord/Hamburg/!p4651/" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="/Nord/Bremen/!p4652/" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="/Nord/Kultur/!p4653/" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="/bei-Tom/!t5180734/" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="/ueber-die-Wahrheit/!115080/" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="odd trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="even treven"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="odd trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="even trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="odd treven"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="even trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="odd trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="even treven"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="https://taz.de/!112354/" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="https://taz.de/!p5097/" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="https://taz.de/!114802/" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="https://taz.de/!114191/" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="https://taz.de/!166598/" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4283/" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="https://taz.de/!p4858/" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="https://taz.de/!112355/" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div></body><!-- DEBUG end 10:41:43+01:00--></html>

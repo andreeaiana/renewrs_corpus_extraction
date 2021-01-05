@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 18:48:59+01:00 page_id=4616 :: Schwerpunkt Bundestagswahl 2017--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 4616--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>Grüne vor der Bundestagswahl: Aufstiegskämpfer - taz.de</title><meta name="author" content="Ulrich Schulte"></meta><meta name="description" content="Am Mittwoch entscheidet sich, wer die Grünen in den Wahlkampf führt. Özdemir und Hofreiter stammen aus Arbeiterfamilien. Ein Stigma?"></meta><meta name="keywords" content="Grüne, Cem Özdemir, Anton Hofreiter, Bundestagswahl 2017, Deutschland, Politik, Schwerpunkt, taz, tageszeitung "></meta><meta name="taz:title" data-id="5371474" content="Grüne vor der Bundestagswahl: Aufstiegskämpfer"></meta><meta name="taz:tag" content="Grüne" data-tag-id="5007739"></meta><meta name="taz:tag" content="Schwerpunkt Bundestagswahl 2017" data-tag-id="5007549" data-tag-category="Schwerpunkt"></meta><meta name="taz:tag" content="Cem Özdemir" data-tag-id="5007735"></meta><meta name="taz:tag" content="Anton Hofreiter" data-tag-id="5010733"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta><meta property="og:url" content="https://taz.de/!5371474/"></meta><meta property="og:locale" content="de_DE"></meta><meta property="og:type" content="article"></meta><meta name="twitter:card" content="summary_large_image"></meta><meta name="twitter:site" content="@tazgezwitscher"></meta><meta property="og:title" content="Grüne vor der Bundestagswahl: Aufstiegskämpfer"></meta><meta property="fb:app_id" content="966242223397117"></meta><meta name="twitter:title" content="Grüne vor der Bundestagswahl: Aufstiegskämpfer"></meta><meta property="og:description" content="Am Mittwoch entscheidet sich, wer die Grünen in den Wahlkampf führt. Özdemir und Hofreiter stammen aus Arbeiterfamilien. Ein Stigma?"></meta><meta name="twitter:description" content=" Am Mittwoch entscheidet sich, wer die Grünen in den Wahlkampf führt. Özdemir und Hofreiter stammen aus Arbeiterfamilien. Ein Stigma?"></meta><meta property="og:image" content="https://taz.de/picture/1728213/948/ee62e4417ffbdd909a36cee96c3aca2f_edited_60119567_b178663f3e.jpeg"></meta><meta name="twitter:image" content="https://taz.de/picture/1728213/948/ee62e4417ffbdd909a36cee96c3aca2f_edited_60119567_b178663f3e.jpeg"></meta><meta property="article:published_time" content="2017-01-17T17:41:00+01:00"></meta><meta property="article:modified_time" content="2017-01-18T12:08:42+01:00"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"5371474" // String
+            , page_title_enc      :"5371474: Grüne vor der Bundestagswahl: Aufstiegskämpfer" // String
+            , custom_url_enc      :"/!5371474" // String
+            , channel             :"web" // String
+            , area                :"Redaktion" // String
+            , department          :"p4616" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : false  // Boolean
+            , is_article          : true  // Boolean
+            , has_tags            : true  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "https://taz.de/lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<link rel="preload" href="/lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff" as="font" type="font/woff" crossorigin="anonymous"></link><link rel="preload" href="/lib/ch/web/pix/tazze46.png" as="image" media="(min-width: 49px)"></link><link rel="canonical" href="https://taz.de/Gruene-vor-der-Bundestagswahl/!5371474/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Deutschland" href="/!p4616/rss.xml"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="/rss.xml"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="/"></link><link rel="copyright" type="text/html" title="Impressum" href="/6/impressum/"></link><link rel="stylesheet" type="text/css" media="screen, print" href="/lib/ch/web/css/news2020-12-08_12.css"></link><link href="/lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 6]> <link rel="stylesheet" type="text/css" href="/lib/style/ie6.css"> <![endif]--><!--[if lte IE 7]><style type="text/css">
+			ul.topbar                      >li      >a>span,
+			.secthead>ul[role='navigation']>li      >a>span	{  border-left: 1px solid; padding: 0px 4px;  }
+			ul.topbar                      >li.first>a>span,
+			.secthead>ul[role='navigation']>li.first>a>span	{  border:none; padding-left:0px;  }
+			ul.topbar                      >li      >a>span  {  border-color:white;    }
+			.secthead>ul[role='navigation']>li      >a>span  {  border-color:#888888;  }
+			.box h2 {  line-height:20px;  }
+			.author  {	display:inline;	float:none;	}
+			.sect_spb .sectbody {	padding-top:8px;	}
+			/* fil 2011-04-08 */
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward >ul.toolbar  {  height:28px;  }
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward ul.toolbar >li  {  float: left !important;  }
+			#reward >div  {  clear:both;  }
+			.sect_article >.sectfoot ul.toolbar  {  position:relative !important; top:0px; left:0px; height:24px;  }
+			#micropay ul.toolbar  {  height:52px;  }
+			.sect_article >.sectfoot {  padding-bottom:30px  }
+		</style><![endif]--><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="/uploads/cmp/yieldlove_cmp.js"></script><script type="text/javascript" src="/uploads/cmp/yieldlove.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="/lib/ch/web/js/2020-12-08_12.js"></script><script type="text/javascript"> if( filOtaz_de && filOtaz_de.goMobile )  filOtaz_de.goMobile(); </script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"5371474" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/Politik/Deutschland" // String
+            , is_article      : true  // Boolean
+            , is_corp         : false  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            // 2. check for not closing overlay
+            if ( $("#tzi-paywahl-fg").length && "MutationObserver" in window ){
+                p.trackEvent( 'TZI', 'displayed', 'LAYER_SHOWN_OBSERVE_TEST');    
+                var paywahl = document.getElementById('tzi-paywahl-fg');
+                var observer = new MutationObserver(function(mutations) {
+                  p.trackEvent( 'TZI', 'displayed', 'LAYER_CLOSED_OBSERVE_TEST');    
+                  observer.disconnect();
+                });
+                observer.observe(paywahl, { 
+                    attributes: true, 
+                    attributeFilter: ['style'] 
+                });
+            }
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        // mar: reactivated for tracking of special menu
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+*/
+
+            $(document).on("click", ".longread.article .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL-LONGREAD' ) });
+	        $(document).on("click", ".longread.article .sect_mostread a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'MEISTGELESEN-LONGREAD' ) });
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page:not(.longread) .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page:not(.longread) ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page:not(.longread) .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" async="async" src="https://script.ioam.de/iam.js"></script><script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript">
+		// Google Publisher Tag - https://developers.google.com/doubleclick-gpt/reference
+		var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; 
+	(function(){
+		var adArea = 'Politik';	//
+		googletag.cmd.push( function() {
+			var pa = googletag.pubads();
+			pa.setForceSafeFrame(true);
+			pa.collapseEmptyDivs();
+			pa.setTargeting('position', [ adArea ]);
+      //pa.setTargeting('test', ['fireplace']); //       * * * test only ! * * *
+      //pa.setTargeting('test', ['wallpaper']);   //       * * * test only ! * * *
+      pa.setTargeting('page_id', ['5371474']);
+			if( location.protocol =='https' )
+				pa.setTargeting('ssl', ['ja']);
+			googletag.enableServices();
+			});
+		})();
+	</script><script>
+		// expect jQuery already to be loaded
+	(function() {
+		if( !window.filOtaz_de )		window.filOtaz_de		= Object;
+		if( !window.filOtaz_de.ads )		window.filOtaz_de.ads		= Object;
+		if( !window.filOtaz_de.ads.gpt )	window.filOtaz_de.ads.gpt	= Object;
+
+        var sizes = {
+             'artikel_medrec-1'    :[300,250]
+            ,'artikel_medrec-2'    :[300,250]
+            ,'artikel_medrec_mitte' :[300,250]
+            ,'ros_sidebar-1'       :[300,250]
+            ,'ros_sidebar-2'       :[300,100]
+            ,'uebersicht_medrec-1' :[300,250]
+            ,'uebersicht_medrec-2' :[300,250]
+            ,'uebersicht_medrec-3' :[300,250]
+            ,'uebersicht_medrec-4' :[300,250]
+            ,'uebersicht_medrec-5' :[300,250]
+            ,'uebersicht_board-1'  :[624,150]
+            ,'ros_billboard-1'     :[870,250]
+            ,'mobile_banner-1'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-2'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-3'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-4'     :[[300,250],[320,50],[320,100]]
+            ,'ros_top-links'       :[[120,600],[160,600],[300,600]]
+            ,'ros_top-mitte'       :[[728,90],[800,250],[870,250],[970,90],[970,250]]
+            ,'ros_top-rechts'      :[[120,600],[160,600],[300,600]]
+            ,'ros_leaderboard-1'   :[728,90]
+            ,'fireplace-mitte'     :[[970,90],[728,90]]
+            ,'fireplace-links'     :[160,601]
+            ,'fireplace-rechts'    :[160,600]
+            ,'fireplace_bg'        :[1,1]
+            };
+        var roadblocks = {};
+  
+  
+      roadblocks = {
+         'ros_top-mitte'   :['fireplace_mitte']
+        ,'ros_top-rechts'  :['fireplace_mitte'] 
+      };
+    
+    
+		// general ad handling
+
+		// --> to be triggered for ad_zone if ad is (to be) delivered
+		filOtaz_de.ads.fitIn = function( container ) {	// make space for ad in layout
+			var container = $( container );
+//console.log('fit '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.addClass('shown');
+			container.addClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').addClass('aded_'+( container.height() >120 ?'big' :'small' ) );
+				var badge = container.hasClass('ad_zone_sold') ? 'Anzeige' : 'taz-Angebot';
+				container.before('<div class="ad_badge">'+ badge +'</div>');
+				}
+			container.trigger('TAZadInserted').trigger('TAZboxChange');
+			};
+
+		// --> to be triggered for ad_zone if no ad is (to be) delivered
+		// redundant?
+		filOtaz_de.ads.reclaim = function( container ) {	// remove whitespace from non-delivered ad
+			var container = $( container );
+//console.log('reclaim '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.removeClass('shown');
+			container.removeClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').removeClass('aded_big aded_small');
+				}
+			container.trigger('TAZadRemoved').trigger('TAZboxChange');
+			};
+    
+    
+
+		var fuzeAdFrame = function( frame ) {	// register frame for messages, fire if one is from our content
+console.log('legacy fuzeAdFrame', frame  );
+			};
+    
+    
+    // Hintergrund per Message
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+    window[eventMethod](messageEvent, function(e) {
+      if (e.data.toString().indexOf("color") != -1) {
+        $("#background").css("background-color", e.data.split(" ")[1]);
+        }
+      }, false);
+    
+    
+		// activate ad frame
+		var adZoneHandled = {};
+    
+    var get_id = function( name ) {
+      return $('div[name=' + name + ']').attr('id');
+      };
+    
+    var get_name = function( id ) {
+      return $('#'+ id ).attr('name');
+      };
+    
+    unblock = function( id, rb_id ) {
+      var name = get_name(id);
+      var index = roadblocks[name].indexOf(rb_id);
+      if ( index > -1 ) {
+        roadblocks[name].splice(index, 1);
+        }
+      if ( !roadblocks[name].length ) {
+        googletag.defineSlot( '/118803185/' + name, sizes[name], id ).addService( googletag.pubads() );
+        googletag.display( id );
+        }
+      };
+    
+    filOtaz_de.ads.gpt.activateAdFrame = function( id ) {  
+			if( !id ) return;
+			if( adZoneHandled[id] ) return; adZoneHandled[id] = true; // only one active zone per id
+ 
+			var packing   = $('#ad_bin_'+ id );
+			id = 'ad_zone_'+ id;
+			var container = packing.find('>#'+ id );
+  
+			var name = container.attr('name');
+			if( !name || !sizes[name] ) return;
+   
+			// handle custom ad load events
+			container.on('filOtaz_de.ads.gpt.noBanner',   function(){  return false;  });
+			container.on('filOtaz_de.ads.gpt.preBanner',  function(){
+				filOtaz_de.ads.fitIn( container );
+				return false;
+				});
+			container.on('filOtaz_de.ads.gpt.postBanner', function(){  return false;  });
+
+
+			// define content
+			googletag.cmd.push( function() {
+				var pa = googletag.pubads();
+        if ( roadblocks[name] ) {
+          pa.addEventListener('slotRenderEnded', function (e) {
+            for (var i=0; i<roadblocks[name].length; i++) {
+              if ( e.slot.getSlotElementId() == 'ad_zone_' + roadblocks[name][i] ) {
+
+		    if ( e.isEmpty ) {
+                  unblock(id, roadblocks[name][i]);
+                  }
+                else {
+                  document.getElementById(id).style.display = 'none';
+                  for (var key in roadblocks) {
+                    if ( !roadblocks.hasOwnProperty(key) ) continue;
+                    for ( var j=0; j<roadblocks[key].length; j++ )
+                    if ( id == 'ad_zone_' + roadblocks[key][j] ) {
+                      unblock(get_id(key), roadblocks[key][j]);
+                      break;
+                      }
+                    }
+                  }
+                }
+              }
+			    }); // pa.addEventListener
+			    //	    console.log('roadblocks' + id);
+          googletag.display(id);
+          }
+        else {
+          pa.display( '/118803185/'+ name, sizes[name], id );
+	// console.log( 'asked for', '/118803185/'+ name, sizes[name], id );
+          }
+				pa.addEventListener('slotRenderEnded', function(e) {
+			    if( e.slot.getSlotElementId() != id )  return;	// not our slot
+			    container.trigger( e.isEmpty ? 'filOtaz_de.ads.gpt.noBanner' : 'filOtaz_de.ads.gpt.preBanner' );
+console.log( name +( e.isEmpty ? ' isEmpty' : '' ) );
+					});
+        });
+      }; //filOtaz_de.ads.gpt.activateAdFrame
+
+		// activate wallpaper combo add frame
+/*
+		filOtaz_de.ads.gpt.wallpaper = function() {
+			console.log('filOtaz_de.ads.gpt.wallpaper not yet supported');
+			};
+*/
+
+		})();
+	</script><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link><link rel="manifest" href="/manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body class=""><noscript><img src="https://taz.de/stats/piwik.php?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Redaktion/Politik/Deutschland,Artikel",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><span id="ad_bin_fireplace_bg" class="ad_bin"><div id="ad_zone_fireplace_bg" name="fireplace_bg" class="ad_zone"></div></span><span id="ad_bin_fireplace_mitte" class="ad_bin"><div id="ad_zone_fireplace_mitte" name="fireplace-mitte" class="ad_zone"></div></span><span id="ad_bin_fireplace_links" class="ad_bin"><div id="ad_zone_fireplace_links" name="fireplace-links" class="ad_zone"></div></span><span id="ad_bin_fireplace_rechts" class="ad_bin"><div id="ad_zone_fireplace_rechts" name="fireplace-rechts" class="ad_zone"></div></span><span id="ad_bin_fireplace_script" class="ad_bin"><div id="ad_zone_fireplace_script" name="fireplace-script" class="ad_zone"></div></span><script type="text/javascript">
+(function(){
+  var parent = $('#ad_bin_fireplace_rechts').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_rechts');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_bg').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_bg');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_mitte').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_mitte');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_links').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_links');
+  })(); 
+              </script><div id="adzone_wall" class=""><span id="ad_bin_ros_top_rechts" class="ad_bin"><div id="ad_zone_ros_top_rechts" name="ros_top-rechts" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_rechts';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><span id="ad_bin_ros_top_mitte" class="ad_bin"><div id="ad_zone_ros_top_mitte" name="ros_top-mitte" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></div><div id="pages" class="news"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="odd trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="even treven"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="odd trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="even trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="odd treven"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="even trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="odd trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="even treven"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul><div class="full news report article page first odd first_page n1" itemscope="" itemtype="http://schema.org/NewsArticle"><div class="head" role="head"><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="even trodd selected"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="odd treven"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a></li><li class="even trodd"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="odd trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a></li><li class="even treven"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a></li><li class="odd trodd"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a></li><li class="even trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a></li><li class="last odd treven"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><span class="body" role="main"><div class="main rack first_rack" id="xid819017">
+    
+	<div xmlns="" class="metadata" itemscope="">
+<a id="articleURL" href="/!5371474"></a><a id="speakingURL" href="/Gruene-vor-der-Bundestagswahl/!5371474"></a><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-article-ID" content="5371474"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="url-ID" content="5371474"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-obj-ID" content="1728213"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="vgwort-counter-ID" content="bc97e57bf02942b8b9c03d7ce042a396"></meta><span id="articleID"></span><span id="cmsArticleID">5371474</span><img src="//taz.met.vgwort.de/na/bc97e57bf02942b8b9c03d7ce042a396" width="1" height="1" alt=""><img src="/count/vgwort/bc97e57bf02942b8b9c03d7ce042a396.gif" width="1" height="1" alt="">
+</div>
+<div role="region" id="" class="odd sect sect_article news report"><article class="sectbody" itemprop="articleBody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Grüne vor der Bundestagswahl</span><span class="hide">: </span><span>Aufstiegskämpfer</span>
+</h1>
+<p xmlns="" itemprop="description" class="intro ">Am Mittwoch entscheidet sich, wer die Grünen in den Wahlkampf führt. Özdemir und Hofreiter stammen aus Arbeiterfamilien. Ein Stigma?</p>
+      
+      <a xmlns="" class="full picture" href="/picture/1728213/948/ee62e4417ffbdd909a36cee96c3aca2f_edited_60119567_b178663f3e.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	" itemprop="image"><img src="/picture/1728213/624/ee62e4417ffbdd909a36cee96c3aca2f_edited_60119567_b178663f3e.jpeg" alt="zwei Männer vor grünem Hintergrund" title="zwei Männer vor grünem Hintergrund"></a><p xmlns="" class="caption">Es sind kleine Momente, in denen man spürt, dass Cem Özdemir und Anton Hofreiter etwas verbindet <span class="credit"> Foto: dpa</span></p>
+    
+      <p xmlns="" class="article first odd">Cem Özdemir fühlte sich fremd, als er 1994 plötzlich bei diesem Galadiner in Berlin saß. Blank polierte Messer und Gabeln lagen auf dem Tischtuch vor ihm, mehrere neben jedem Teller. Ödzemir hatte einen Schweinedurst, doch er wusste nicht, in welches der Gläser das Mineralwasser gehört.</p>
+      <p xmlns="" class="article even">Auch Anton Hofreiter fand sich in einer anderen Welt wieder, als er 2005 aus Bayern in den Bundestag in die Hauptstadt kam. Joschka Fischer fläzte sich da noch in den Fraktionssitzungen und erklärte die weltpolitische Lage. Hofreiter irritierten Fischers perfekt sitzender Dreiteiler. Er hatte selbst noch nie so was getragen.</p>
+      
+      <span id="ad_bin_artikel_medrec_1" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_1" name="artikel_medrec-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">Özdemir und Hofreiter haben auf den ersten Blick nicht viel mehr gemeinsam als den Grünen-Mitgliedsausweis. Özdemir, 51, Parteichef, Oberrealo im Bund mit Faible für Außenpolitik, trägt das Haar akkurat gestutzt, fühlt sich pudelwohl im schmal geschnittenen Anzug, kennt viele Unternehmer persönlich und will mit den Grünen in die bürgerliche Mitte.</p>
+      <p xmlns="" class="article even">Hofreiter, 46, Fraktionschef, Anführer der Linksgrünen, Fokus auf Öko und Gerechtigkeit, weigert sich beharrlich, das schulterlange Haar abzuschneiden, liebt Heavy Metal, Sakko mit Jeans und will sehr reiche Menschen mit der Vermögensteuer zur Kasse bitten.</p>
+      <p xmlns="" class="article odd">Aber die zwei wichtigen Grünen verbindet etwas, was das ganze Leben prägt: Beide kommen aus Arbeiterfamilien, den Aufstieg in die gediegene Mittelschicht mussten sie sich erkämpfen.</p>
+      <h6 xmlns="">Keine Partei für das Proletariat</h6>
+      <p xmlns="" class="article even">Die Grünen sind keine Partei, die für das Proletariat steht. Einst systemskeptisch und rebellisch sind sie längst zur Avantgarde einer neuen deutschen Bürgerlichkeit geworden. In ökoaffinen Milieus wird so genau auf Lebensstil und Distinktion geachtet wie kaum irgendwo sonst.</p>
+      <p xmlns="" class="article odd">Das Gemüse hat bio zu sein, das Echtholzspielzeug gesundheitlich unbedenklich, RTL II ist auf der Fernbedienung gelöscht. Parteitage sind Feste der Toleranz, aber wer Lidl-Würstchen, Dosenbier und die <em>Bild-</em>Zeitung auspackte, würde vermutlich mit sofortigem Ausschluss bestraft.</p>
+      <p xmlns="" class="article even">Wie gehen die Grünen, die von sich glauben, sie seien die toleranteste aller Parteien, mit Aufsteigern um? Lassen sie sie ihr Anderssein spüren?</p>
+      <p xmlns="" class="article odd">„Dass jemand wie ich ein ausgebildeter Erzieher und ein Öko wird, ist ja fast so wahrscheinlich wie ein Sechser im Lotto.“ Özdemir, grünes Samtsakko, müde Augen von den anstrengenden Wochen vor Weihnachten, erzählt bei einem Italiener in Berlin-Mitte von seiner Kindheit.</p>
+      <p xmlns="" class="article even">Seinen Eltern, türkischen Gastarbeitern, waren die Ritua­le der deutschen Mittelschicht fremd. Freiwillig auf einen Fernseher verzichten? Oder auf Süßigkeiten für die Kinder? „Unvorstellbar. Für meine Mutter war es Ausdruck von Liebe, ihrem Kind Süßigkeiten zu geben.“</p>
+      <h6 xmlns="">Der Sohn soll es besser haben</h6>
+      <p xmlns="" class="article odd">Freitags, wenn im Wohnzimmer der Özdemirs die Filme mit Stan Laurel und Oliver Hardy liefen, saßen alle Kinder aus der Nachbarschaft vor dem Fernseher und bekamen Hanuta, Duplo und türkische Spezialitäten.</p>
+      <p xmlns="" class="article even">Özdemirs Vater, der sich aus einem türkischen Dorf bei Tokat nach Bad Urach, Baden-Württemberg, aufmachte, war Hilfsarbeiter in einer Feuerlöscherfabrik. Die Mutter arbeitete in der Papierherstellung, machte dann eine Änderungsschneiderei auf. Er schuftete nach Feierabend noch an der Tankstelle, sie schnitt sich am scharfen Papier die Arme auf. Alles, damit es der einzige Sohn es mal besser hat.</p>
+      <p xmlns="" class="article odd">Auch Hofreiters Großväter waren Arbeiter. Der eine Maurer, der andere stellte Strommasten auf. Er konnte, so die Familienlegende, einen Holzmast allein auf der Schulter tragen. Hofreiters Vater lernte Maschinenschlosser, die Mutter schaffte im Büro. Hofreiter und seine beiden Brüder waren die Ersten aus der Familie, die aufs Gymnasium gingen.</p>
+      <p xmlns="" class="article even">Özdemirs und Hofreiters Karrieren münden in unterschiedliche Entwürfe von sich selbst. Bei den Grünen funk­tio­nie­ren sie als perfekte Gegenspieler, inhaltlich und habituell. Beide wollen Spitzenkandidat im Wahlkampf werden. Am 18. Januar geben die Grünen bekannt, wen die 60.000 Mitglieder gewählt haben.</p>
+      <p xmlns="" class="article odd">Spitzenkandidat, das könnte das Sprungbrett in die nächste Regierung sein. Özdemir und Hofreiter, die Aufsteiger, wollen noch höher hinaus.</p>
+      <h6 xmlns="">50 Fehler, Rekord, Applaus für Cem, ätzte der Lehrer</h6>
+      <p xmlns="" class="article even">Manchmal blitzt im politischen Alltag auf, dass beide ihre Herkunft verbindet. Ein Dezemberabend in Stuttgart. Die vier Konkurrenten um die Spitzenkandidatur – Özdemir, Hofreiter, Katrin Göring-Eckardt und Robert Habeck – stehen an einem Tresen, hinter ihnen ein Großplakat, auf das der Slogan „Basis ist Boss“ gedruckt ist.</p>
+      <p xmlns="" class="article odd">Habeck, Schleswig-Holsteins Energiewendeminister, wirbt gerade für das bedingungslose Grundeinkommen. Jeder bekäme ein Gehalt vom Staat, von dem er leben könnte. Kein Zwang zu ungeliebter Arbeit mehr, kein Frust, totale Selbstverwirklichung. Habeck redet und redet, jetzt schon sieben Minuten lang.</p>
+      <p xmlns="" class="article even">Hofreiter hat den Kopf in die Hand gestützt und starrt ins Leere, Özdemir hebt angriffslustig das Kinn. Dann legt er los. Das Grundeinkommen werde immer von Leuten aus einer bestimmten Schicht vorgeschlagen, sagt Özdemir. Architekten etwa, bei denen zwischen Aufträgen Pausen lägen.</p>
+      <div xmlns="" class="article rack no21">
+      <div xmlns="http://www.w3.org/1999/xhtml" role="region" id="" class="first last odd sect sect_quote "><div class="sectbody quote obj"><span class="person">Parteichef Cem Özdemir</span><p>„Dass jemand wie ich ein ausgebildeter Erzieher und ein Öko wird, ist fast so wahrscheinlich wie ein Sechser im Lotto“</p></div></div>
+    </div>
+      <p xmlns="" class="article odd">Aber was hätte einem Kind wie ihm damals wirklich geholfen? Eine Ganztagsschule, ein Mittagessen, eine gute Kita, ein elternunabhängiges Bafög. Özdemir pickt bei jedem Wort mit dem Zeigefinger in die Luft.</p>
+      <p xmlns="" class="article even">Er wolle nicht, dass die Grünen die nächsten vier Jahre „philosophisch über große Fragen diskutieren“, statt an solchen Stellschrauben zu drehen. Hofreiter schiebt für das Grundeinkommen das gemeine Lob einer „wunderschönen Idee“ hinterher.</p>
+      <h6 xmlns="">Nicht in der Akademikerblase</h6>
+      <p xmlns="" class="article odd">Da reden zwei, die Ahnung vom echten Leben haben, heißt das. Wir sitzen nicht in der Akademikerblase, anders als Habeck, dieser intellektuelle Träumer. Habeck, von Beruf Schriftsteller, die Eltern führten die Apotheke am Rathaus, schaut bedröppelt.</p>
+      <p xmlns="" class="article even">Es ist einer der Momente, in denen ihnen die Inszenierung ihrer Biografie Applaus und Lacher einbringt. Sie wird zum Trumpf. Aber so ist es nicht immer.</p>
+      <p xmlns="" class="article odd">Der Aufsteiger genießt ein zerrissenes Glück. Er hat die harte Welt seiner Kindheit hinter sich und gehört nun zur Elite, doch eine Unsicherheit bleibt. In die Welt von früher will er nicht zurück, der neuen fühlt er sich nicht wirklich zugehörig.</p>
+      <p xmlns="" class="article even">Der Soziologe Pierre Bourdieu bezeichnet den Habitus, also das erlernte Auftreten einer Person, als „geronnene Lebensgeschichte“. Der Neigung des Kleinbürgers, sich mit den Augen der anderen zu betrachten, stehe die Selbstsicherheit des Bourgeois gegenüber. Der eine wirkt in besseren Kreisen unbeholfen, der andere lässig, weil er verinnerlicht hat, dass ihm Privilegien zustehen.</p>
+      
+      <a xmlns="" class="third picture" href="/picture/1728213/948/ee62e4417ffbdd909a36cee96c3aca2f_edited_60121852_341e064477.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	"><img src="/picture/1728213/192/ee62e4417ffbdd909a36cee96c3aca2f_edited_60121852_341e064477.jpeg" alt="Grünen-Politiker Anton Hofreiter" title="Grünen-Politiker Anton Hofreiter"></a><p xmlns="" class="caption">Der Öko: Anton Hofreiter <span class="credit"> Foto: dpa</span></p>
+    
+      <p xmlns="" class="article odd">Bei beiden Politikern finden sich solche Muster. Hofreiter wirkt bei Fototerminen heute noch so befangen, als wäre er lieber Tausende Kilometer weit weg im peruanischen Regenwald, den er als junger Biologe erforschte.</p>
+      <p xmlns="" class="article even">Özdemir hat sich eine akkurate, fast übertriebene Höflichkeit angewöhnt. Er gibt auch in größeren Runden jedem die Hand, begrüßt selbstverständlich stets die Frau zuerst.</p>
+      <h6 xmlns="">Jeder kann es schaffen?</h6>
+      <p xmlns="" class="article odd">Das Lachen seiner Mitschüler damals in der Schule habe ihn trainiert für alle weiteren Kämpfe, sagt Özdemir. Bei dem Italiener in Berlin erzählt er eine Anekdote nach der anderen.</p>
+      <p xmlns="" class="article even">Wie er und José, der zweite Migrant in der Klasse, in der Grundschule stets die Schlechtesten waren. Wie der Lehrer die Hefte nach der Klassenarbeit austeilte, Cems und Josés ganz unten im Stapel. Über 50 Fehler auf zwei DIN-A5-Seiten, neuer Rekord der Schule, Applaus für Cem.</p>
+      <p xmlns="" class="article odd">Wenn man so will, ist Özdemir der Inbegriff des <em>American Way of Life</em>. Von der Haupt- zur Realschule, Ausbildung zum Erzieher, über den zweiten Bildungsweg ein Studium der Sozialpädagogik – und die Politikkarriere. Jeder kann es schaffen, wenn er sich anstrengt. Vom kleinen Cem, der auf der Hauptschule verprügelt wurde, zum Parteichef.</p>
+      
+      <a xmlns="" class="third picture" href="/picture/1728213/948/ee62e4417ffbdd909a36cee96c3aca2f_edited_60121625_1c889334da.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	"><img src="/picture/1728213/192/ee62e4417ffbdd909a36cee96c3aca2f_edited_60121625_1c889334da.jpeg" alt="Grünen-Politiker Cem Özdemir" title="Grünen-Politiker Cem Özdemir"></a><p xmlns="" class="caption">Der Angepasste: Cem Özdemir <span class="credit"> Foto: dpa</span></p>
+    
+      <p xmlns="" class="article even">Aber wenn man wissen will, wie er solche Abwertungen als Kind empfunden hat, wird Özdemir einsilbig. Darüber spricht man nicht gern, als Spitzenpolitiker, der Stärke zeigen muss, schon gar nicht. Denn auch die Grünen waren nicht immer nett zu ihm.</p>
+      <h6 xmlns="">Misstrauen verinnerlicht</h6>
+      <p xmlns="" class="article odd">Lange Jahre schien es eine Art Deal zu geben: Er gab den Vorzeige-Cem, den einzigen migrantische Parteichef Deutschlands – aber die Grünen gaben nicht allzu viel auf seine Ansagen. Sie duldeten, liebten ihn aber nie.</p>
+      <p xmlns="" class="article even">Bis heute zieht Özdemir sein Ding meist allein durch. In der Fraktion lassen sich seine Fans an einer Hand abzählen. Wenn Özdemir also ein gewisses Misstrauen verinnerlicht hat, ist es nicht ganz unberechtigt.</p>
+      <p xmlns="" class="article odd">Der Tiefpunkt war die Bonusmeilen-Affäre. 2002 im Bundestagswahlkampf kam heraus, dass Özdemir mit dienstlich angesammelten Bonusmeilen privat verreist war. Außerdem, dass er einen Kredit bei einem umstrittenen PR-Berater aufgenommen hatte.</p>
+      <p xmlns="" class="article even">Özdemirs Rückhalt bei den Grünen schmolz dahin wie ein Eiswürfel in sonnenwarmer Bionade. Rücktritt vom Mandat, Auszeit in den USA, Brüssel und Straßburg.</p>
+      <p xmlns="" class="article odd">Rezzo Schlauch, Fraktionschef, Grünen-Urgestein und Sohn eines Pfarrers, gestand wenig später, ebenfalls Dienstmeilen für einen privaten First-Class-Flug nach Thailand genutzt zu haben. Er schmetterte Rücktrittsforderungen ab – und wurde Staatssekretär im Wirtschaftsministerium.</p>
+      <h6 xmlns="">Grüne sind die Inkarnation der Bürgerlichkeit</h6>
+      <p xmlns="" class="article even">Als Özdemir 2008 Parteichef werden sollte, wollte er wieder ein Bundestagsmandat. Doch die Delegierten ließen ihn beim Kampf um gute Listenplätze zweimal durchfallen. Özdemir schulterte seinen Rucksack und schlich aus der Halle, er sah von Weitem aus wie eine traurige Schildkröte. Claudia Roth, die andere Parteichefin, Tochter eines Zahnarztes, saß damals seit Jahren im Bundestag.</p>
+      <p xmlns="" class="article odd">Die Grünen, so schreibt der Politologe Franz Walter, seien zur „Inkarnation der Bürgerlichkeit“ geworden. Schaut man sich die Menschen an, die Winfried Kretschmann in Baden-Württemberg zweimal zu historischen Siegen verhalfen, spricht viel für diese These.</p>
+      <p xmlns="" class="article even">Grün wählten im März 2016 in Baden-Württemberg die Frauen, die hoch Gebildeten, die evangelischen Christen. Ihre stärkste Wählerkohorte bildeten die 45- bis 59-Jährigen. Sie schnitten stark bei Angestellten und Selbstständigen ab und schwach bei den Arbeitslosen.</p>
+      <p xmlns="" class="article odd">Grünen-Wähler sind Architekten, Rechtsanwältinnen, sie sitzen im öffentlichen Dienst, sie verdienen gut, zahlen Häuser ab und achten darauf, dass ihr Nachwuchs die besten Schulen besucht. Zu viele Cems, das sagt man aber nur verschämt, sollten nicht in der Klasse der früh geförderten Johanna-Marie sitzen. Oder zu viele Tonis, die heute Kevins heißen.</p>
+      <p xmlns="" class="article even">„Wir haben das große Glück, einen gewissen Klassenstolz mitbekommen zu haben.“ Anton Hofreiter, hellblaues Hemd, der oberste Knopf offen, schaut auf und zitiert mit tiefer Stimme und rollendem R ein paar Sätze aus Bertolt Brechts „Fragen eines lesenden Arbeiters“.</p>
+      <p xmlns="" class="article odd">Cäsar schlug die Gallier. Hatte er nicht wenigstens einen Koch bei sich? In seinem Abgeordnetenbüro hinter dem Schreibtisch hängt eine Berglandschaft in Öl, in der Ecke steht ein schwarzer Boxsack zwischen den Bücherregalen.</p>
+      <h6 xmlns="">„Der gibt mal einen guten Bauarbeiter ab“</h6>
+      <p xmlns="" class="article even">Hofreiter wuchs in den Siebzigern in dem Dorf Sauerlach bei München auf. Die Eltern wählten SPD, schimpften auf Helmut Schmidt, der den Großbauern das Geld hinterherschmeiße. Franz-Josef Strauß war der Feind. Im Schrank standen gebundene Ausgaben der Büchergilde Gutenberg. Jack London, Bert Brecht, Kurt Tucholsky.</p>
+      <p xmlns="" class="article odd">Einmal, da war Anton Hofreiter noch in der Grundschule, spielte er mit anderen Kindern im Schnee. Er zog einen Schlitten, die anderen saßen darauf. „Schau an“, sagte die Lehrerin, „der Toni ist ja kräftig. Der gibt mal einen guten Bauarbeiter ab.“</p>
+      <p xmlns="" class="article even">Hofreiter erzählt anders als Özdemir nur sparsam und vorsichtig von seiner Familie. Er will der Öffentlichkeit nicht zu viel über sich verraten. Manchmal vergehen zwölf, vierzehn Sekunden, bevor er antwortet.</p>
+      <p xmlns="" class="article odd">„Wer sich bildet, steigt auf. Dieses Versprechen lag damals in der Luft.“ Das habe ihnen der Vater eingetrichtert. Der hatte schon einen ordentlichen Aufstieg geschafft: Erst Maschinenschlosser, dann zweiter Bildungsweg, Ingenieur bei der Gesellschaft für Strahlen- und Umweltforschung.</p>
+      <p xmlns="" class="article even">„Ich komme aus einem klassisch sozialdemokratisch geprägten Aufsteigermilieu.“ Der Vater, seine Brüder und er profitierten von der Bildungsexpansion in den 70ern und 80ern. Anton Hofreiter studierte Biologie, schrieb seine Dissertation über Inka-Liliengewächse und ist heute Fraktionschef. Der eine Bruder ist Anwalt, der andere Professor für Zoologie.</p>
+      <h6 xmlns="">Gleiche Chancen für jedes Kind</h6>
+      <p xmlns="" class="article odd">Hofreiter ist ein Spitzenpolitiker, der sich einen sympathisch egalitären Blick auf die Welt bewahrt hat. Er grüßt die Pförtner in den Bundestagsgebäuden, ratscht auf Sommerfesten mit Freunden, ohne im Augenwinkel zu checken, ob am Nebentisch jemand Wichtigeres steht.</p>
+      <p xmlns="" class="article even">Özdemir und Hofreiter leiten aus ihrer Biografie unterschiedliche Auffassungen einer gerechten Gesellschaft ab. Özdemir wirbt vor allem für gute Bildungsinstitutionen – gleiche Chancen für jedes Kind.</p>
+      <p xmlns="" class="article odd">Hofreiter betont stärker, dass außerdem der Reichtum in Deutschland anders verteilt werden müsse. Gute Infrastruktur ist teuer, argumentiert er, und auch ein Maurer, der nicht zur Uni will, habe ein Recht auf Schwimmbäder.</p>
+      <p xmlns="" class="article even">Wenn man mit Grünen über Özdemir und seine Karriere spricht, fällt oft das Wort „Überanpassung“. Sie ist eine stete Gefahr für den Aufsteiger: Im Bemühen dazuzugehören, wirkt er beflissen, strebsam und übereifrig. Was andere Grüne im Elternhaus nebenbei lernten, muss er sich erarbeiten.</p>
+      <p xmlns="" class="article odd">Vergangenes Jahr hat Özdemir im Urlaub den Faust gelesen, davor den Kohlhaas, seinen Kindern liest er gerade griechische Sagen vor. Er nimmt Karnevalsorden entgegen und lässt sich vom Deutschen Brauer-Bund zum Bierbotschafter küren.</p>
+      <p xmlns="" class="article even">Hofreiter wiederum kultiviert seine Unangepasstheit: die Haare, die Liebe zu Schweinebraten, die deftige Sprache. Etwas total bescheuert zu finden, gehört bei ihm, verdammt noch mal dazu.</p>
+      <h6 xmlns="">Typus des wütenden Klartextpolitikers</h6>
+      <p xmlns="" class="article odd">Natürlich hat auch er gelernt, sich zu inszenieren, seitdem er 2013 Chef wurde. Aber es wirkt noch unbeholfener als bei Özdemir. Weil Hofreiter gemerkt hat, dass der Typus des wütenden Klartextpolitikers gut ankommt, beschließt er zum Beispiel manchmal, sich nun aber richtig in Rage zu reden. Die Unsicherheit des Aufsteigers über seinen Status, bei Hofreiter merkt man sie noch. Aber er hat auch gelernt, sie für sich zu nutzen.</p>
+      <p xmlns="" class="article even">Özdemir hat sich mit den Jahren freigespielt. Kaum ein Grüner bezweifelt heute noch, dass der nette Cem zum wichtigsten Mann in Berlin geworden ist. Er, der immer darauf achten musste, was andere von ihm denken, pfeift jetzt öfter mal darauf.</p>
+      <p xmlns="" class="article odd">Als die Grünen sich 2014 darüber stritten, ob die Kurden im Nordirak mit deutschen Waffen unterstützt werden müssten, sagte Özdemir, die Kurden könnten die IS-Miliz nicht „mit der Yogamatte unterm Arm“ besiegen.</p>
+      <p xmlns="" class="article even">Viele Grüne wetten bei der Spitzenkandidatenurwahl auf Öz­demir. Er habe das Auftreten und das Format für ein Ministeramt, sagen sie – Hofreiter nicht.</p>
+      <h6 xmlns="">Führt Anpassung zum Erfolg?</h6>
+      <p xmlns="" class="article odd">Es wäre auch ein Beweis dafür, dass Anpassung zum Erfolg führt. Die Grünen, die früher als strickende und bärtige Rebellen im Bundestag saßen, wissen das längst. Sie loben Angela Merkel, die CDU-Kanzlerin. Sie tragen Asylrechtsverschärfungen mit, die sie früher verdammten. Manchmal wirkt das so beflissen, als seien sie selbst eifrige Aufsteiger, die unbedingt dazugehören wollten.</p>
+      <p xmlns="" class="article even">In der vierten Klasse fragte ein Lehrer, wer auf welche Schule wolle. Cem meldet sich bei „Gymnasium“. Junge, geh aufs Gymnasium, das hatte die Mutter zu Hause gesagt, die bei den Elternabenden nicht verstand, was die Lehrer sagten.</p>
+      <p xmlns="" class="article last odd">Der Lehrer sah Cems Arm spät, er saß ganz hinten. Erst lachte der Lehrer, am Ende lachte die ganze Klasse. Als derselbe Cem vierzig Jahre später sagt, er wolle die Grünen in die Bundestagswahl führen, am besten in die Regierung, da lacht niemand mehr.</p>
+    </article></div>
+
+    
+  
+
+    
+  <div role="region" id="" class="odd sect "><div class="sectbody"><a xmlns="" id="reward" shape="rect">Einmal zahlen</a><script> filOtaz_de.flattr();</script></div></div>
+
+    
+	<div class="shariff">.</div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171498/" ratioURL-ressource="171498" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Wieviel ist freie Presse wert?</span>
+</h1>
+  		<p xmlns="" class="article first odd">taz.de ist frei zugänglich – ohne Paywall. Wir sind der Überzeugung, dass es kritische Informationen im Netz geben muss, die nicht kostenpflichtig sind. Aber das geht nur, wenn sich unsere Leser*innen an dieser Idee beteiligen und den taz-Journalismus mittragen.   
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt die taz.</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/tazzahl-ich-als-einzigartiges-Bezahlmodell/!164013/" ratioURL-ressource="164013" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">taz.zahl ich als einzigartiges Bezahlmodell.</span><span class="hide">: </span><span>Die einzige Tageszeitung diesseits der Paywall.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Unsere Informationen sollen nicht hinter einer Paywall verschwinden. Gerade jetzt braucht es faktentreuen, unabhängigen Journalismus. Wir setzen auf Freiwilligkeit und hoffen auf Ihre Beteiligung.  
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen auch Sie die taz mit 5,- Euro im Monat</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/tazde-ist-Konzern-unabhaengig/!163180/" ratioURL-ressource="163180" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">taz.de ist (Konzern-)unabhängig</span><span class="hide">: </span><span>Hinter vielen Zeitungen steht ein Konzern. Hinter uns stehen Sie.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Die taz ist als überregionale Tageszeitung ohne großen Medienkonzern  im Rücken eine Ausnahme. Dies ermöglicht uns, frei und unabhängig zu  berichten. Unsere Inhalte sind frei zugänglich, aber natürlich brauchen auch wir Geld. Deshalb sind wir auf Sie, unsere Leser*innen, angewiesen.    
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt die taz</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script type="text/javascript" xml:space="preserve">
+          (function () {
+            patOtaz_de.layer_tzi_paywahl({'campaign': '2019-5-27' });
+          })();
+        </script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Normal/!155790/" ratioURL-ressource="155790" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Normal</span><span class="hide">: </span><span>Freier Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Das Bedürfnis nach vertrauenswürdiger Information ist derzeit sehr hoch, viele blicken und klicken in diesen unsicheren Zeiten auf die Berichterstattung der taz. Während der vergangenen Wochen ist klar geworden, wie wichtig freier Journalismus ist. In Krisenzeiten ist es „systemrelevant”, dass Menschen sich unabhängig informieren können. Ohne Paywall. Wir finden es wichtig, dass uns möglichst viele Menschen lesen – auch jene, die sich kein Abo leisten können. Doch dazu brauchen wir Ihre Hilfe.      
+</p>
+  		<p xmlns="" class="article even">Guter, kritischer Journalismus ist nicht kostenlos zu haben und braucht Finanzierung. Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Im Gegenzug wird sie freiwillig und solidarisch unterstützt. Von unseren Leser*innen, von Ihnen. Mit Ihrer Wertschätzung und Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit, ein Forum für Meinungsvielfalt, eine engagierte Stimme für Minderheiten. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Seien Sie mit uns taz. Zusammen mit den 25.500, die schon dabei sind.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Klima/!155427/" ratioURL-ressource="155427" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Klima</span><span class="hide">: </span><span>Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wir berichten seit 1978 über die Zerstörung unseres Planeten – weil wir daran glauben, dass eine bessere Welt möglich ist. Klima- und Umweltberichterstattung haben in der taz schon immer einen großen Raum eingenommen, aber zurzeit gehen wir noch einmal in die Offensive. Die taz berichtet noch intensiver über die drohende Klimakatastrophe – auf allen Kanälen. Um dies leisten zu können, sind wir auf die Unterstützung unserer Leser*innen angewiesen. Denn guter Journalismus ist aufwändig und nicht kostenlos zu haben.      
+</p>
+  		<p xmlns="" class="article even">Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Unsere Artikel sollen so viel wie möglich gelesen, geliked und geteilt werden. Nur so können sie die ökologisch notwendigen Veränderungen unserer Gesellschaft vorantreiben. Im Gegenzug wird die taz von unseren Leser*innen unterstützt. Freiwillig und solidarisch. Mit Ihrer Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit und eine engagierte Stimme für mehr Klimaschutz. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. 25.500 machen schon mit.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><div role="region" id="" class="even sect sect_text "><div class="sectbody"><p>
+
+	Fehler auf taz.de entdeckt?
+	    </p><p>
+        Wir freuen uns über eine 
+	<a href="mailto:fehlerhinweis@taz.de?subject=Fehlerhinweis%20zu%20https://taz.de/Gruene-vor-der-Bundestagswahl/!5371474/&amp;body=Zu%20%22Grüne vor der Bundestagswahl: Aufstiegskämpfer%22%0D%0Ahttps://taz.de/Gruene-vor-der-Bundestagswahl/!5371474/%0D%0A%0D%0ABitte%20beschreiben%20Sie%20uns%20den%20Fehler.%20Sie%20können%20gern%20einen%20Screenshot%20anhängen.%20Wir%20danken%20für%20Ihre%20Hilfe%21%20
+					%0D%0A%0D%0A
+					Inhaltliches%20Feedback%20geben%20Sie%20uns%20gerne%20in%20der%20Kommentarspalte%20oder%20richten%20es%20an%20briefe@taz.de.%20Dort%20leiten%20wir%20ihr%20Feedback%20auch%20an%20die%20Redaktion%20weiter.%20Über%20diese%20Mailadresse%20nehmen%20wir%20nur%20Rechtschreib-%20und%20Faktenkorrekturen%20vor.				">Mail an fehlerhinweis@taz.de</a>!</p><p>
+	Inhaltliches Feedback? 
+	</p><p>
+
+	Gerne als Leser*innenkommentar unter dem Text auf taz.de oder über das
+	<a href="/!112355/"> Kontaktformular</a>.
+		</p></div></div><!-- DEBUG belly: 0 extras here, 0 from directory Schwerpunkt Bundestagswahl 2017, thats 0 merged--></span><span class="wing" role="contentinfo"><div class="rack first_rack" id="xid459821">
+    
+	<!--template mode="layout" match="display[ @obj='descr' ]":start--><div role="region" id="" class="odd sect sect_description decorated focus directory no_body"><div class="secthead" role="heading"><a class="pictured" name="Schwerpunkt Bundestagswahl 2017" href="/Schwerpunkt-Bundestagswahl-2017/!t5007549/"><img src="/picture/41064/300/imago64427161h.jpg"></img></a><h2><a name="Schwerpunkt Bundestagswahl 2017" href="/Schwerpunkt-Bundestagswahl-2017/!t5007549/"><span>Schwerpunkt Bundestagswahl 2017</span></a></h2></div><div class="sectbody"></div></div>
+
+    
+	<div role="region" id="" class="even sect sect_meta "><div class="sectbody"><ul role="navigation" class="left rootline toolbar"><li class="first odd trodd selected"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="last even trodd selected"><a href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span>Deutschland</span></a></li></ul><ul role="navigation" class="right toolbar"><li class="date" itemprop="datePublished" content="2017-01-17T17:41:00+01:00">17. 1. 2017</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2017-01-18T12:08:42+01:00"></meta></ul></div></div>
+
+    
+	<div role="region" id="" class="odd sect sect_profile pictured "><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="pictured 
+        
+	
+        
+
+		
+			
+	        
+	
+			author 
+		
+		community 
+		
+        
+                
+		        
+		                
+		
+	        
+	        
+                
+
+				
+		
+
+        person objlink" itemprop="url" href="/Ulrich-Schulte/!a45/"><h4 itemprop="name">Ulrich Schulte</h4><h5 itemprop="jobTitle">Leiter Parlamentsbüro</h5><img itemprop="image" src="/kommune/files/images/profile/70x70/45.png" alt="Ulrich Schulte" title="Ulrich Schulte"></img></a><ul class="contact"><li><a itemprop="email" class="email" href="mailto:Ulrich Schulte &lt;schulte@taz.de&gt;"><img src="/lib/ch/web/pix/icons/email.png" class="icon"></img></a></li><li><a itemprop="sameAs" class="remote facebook.com" href="http://facebook.com/Ulrich Schulte" content=""><img src="/lib/ch/web/pix/icons/facebook.com.png" class="icon" alt="facebook.com" title="Ulrich Schulte via facebook.com"></img></a></li><li><a itemprop="sameAs" class="remote microblog" target="_blank" href="http://twitter.com/@UlrichSchulte"><img src="/lib/ch/web/pix/icons/microblog.png" class="icon" alt="microblog" title="Ulrich Schulte's microblog"></img></a></li></ul></div></div>
+
+    
+	<div role="region" id="" class="even sect sect_tags "><div class="secthead" role="heading"><h2><a name="Themen"><span>Themen</span></a></h2></div><ul role="directory" class="news directory sectbody"><li class="first odd trodd tag"><a role="link" href="/!t5007739/" class="tag dirlink"><span>Grüne</span></a></li><li class="odd treven tag"><a role="link" href="/!t5007735/" class="tag dirlink"><span>Cem Özdemir</span></a></li><li class="last even trodd tag"><a role="link" href="/!t5010733/" class="tag dirlink"><span>Anton Hofreiter</span></a></li></ul></div>
+
+    
+	
+
+    
+	<!-- DEBUG label: 0 extras here, 0 from directory Schwerpunkt Bundestagswahl 2017, thats 0 merged-->
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><span id="ad_bin_ros_sidebar_1" class="ad_bin sold contentad"><div id="ad_zone_ros_sidebar_1" name="ros_sidebar-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_sidebar_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><!-- DEBUG wing: 0 extras here, 0 from directory Schwerpunkt Bundestagswahl 2017, thats 0 merged--></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><span class="tail" role="complementary"><!-- DEBUG tail: 0 extras here, 0 from directory Schwerpunkt Bundestagswahl 2017, thats 0 merged--><div role="region" id="xid709553" class="last even sect sect_adr style_adr "><ul role="directory" class="sectbody corp  directory"><li class=" first last odd trodd online   leaded pictured leaded remote story"><a class="dept" href="/FUTURZWEI/!p5099/">FUTURZWEI</a><a href="https://taz.de/Ex-Ministerin-Wara-Wende-im-Interview/!5740472/" target="_blank" class="objlink leaded pictured leaded remote story noavatar" role="link"><h4>Ex-Ministerin Wara Wende im Interview</h4><h3>Fehler und Sexismus in der Politik</h3><p class="brief">  Quereinsteigerin Wara Wende wurde als Ministerin zum Rücktritt gezwungen. Was war der Fehler?  </p><img src="/uploads/images/300/taz-FUTURZWEI-Wara-Wende-Fehler-Sexismus-Spitzenpolitik-Ex-Ministerin-Interview-Anja-Weber-1.jpg" alt="" title=""></img></a></li></ul></div></span><a itemprop="mainEntityOfPage" href="/Gruene-vor-der-Bundestagswahl/!5371474"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div class="full no_rightbar below news page even n2"><div class="head" role="head"><div class="nose" role="heading" id="pg_hd"><h2><a name="Volle Spalte unterm Artikel" href="/Volle-Spalte-unterm-Artikel/!p5315/"><span>Volle Spalte unterm Artikel</span></a></h2></div><ul role="navigation" class="news navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid841997">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="Mehr zum Thema"><span>Mehr zum Thema</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd    interview article leaded pictured"><a href="/KMK-Chefin-ueber-Bildungsoptionen/!5375727/" ratioURL-ressource="5375727" class="objlink interview article leaded pictured noavatar" role="link"><h4>KMK-Chefin über Bildungsoptionen</h4><h3>„Wir haben sehr gute Hauptschüler“</h3><p>Die Ausbildung muss gegenüber dem Studium wieder an Ansehen gewinnen, findet Susanne Eisenmann (CDU), neue Präsidentin der Kultusministerkonferenz.  </p><img src="/picture/1763685/300/524e8481fa2cd4dd3c9f6d705ef5f9ee_edited_61570902_4863605ae9.jpeg" alt="Ein Mann trägt eine Kabelrolle eine Treppe herunter" title="Ein Mann trägt eine Kabelrolle eine Treppe herunter"></img></a></li><li class=" even trodd    report article leaded pictured"><a href="/Urwahl-der-Gruenen/!5372843/" ratioURL-ressource="5372843" class="objlink report article leaded pictured noavatar" role="link"><h4>Urwahl der Grünen</h4><h3>Die Protestantin und der Vegetarier</h3><p>Katrin Göring-Eckardts Neuer ist der „anatolische Schwabe“ Cem Özdemir. Großer Gewinner ist der Norddeutsche Robert Habeck.  <span class="author">Pascal Beucker</span></p><img src="/picture/1738652/300/87adcfaec44c18873394b286cb68852d_edited_60519385_444298b2ad.jpeg" alt="Cem Özdemir und Katrin Göhring-Eckhardt stehen vor dem Grünen-Logo. Cem Özdemir putzt sich die Nase" title="Cem Özdemir und Katrin Göhring-Eckhardt stehen vor dem Grünen-Logo. Cem Özdemir putzt sich die Nase"></img></a></li><li class=" last odd treven    report article leaded pictured"><a href="/Urwahl-der-Gruenen-Spitzenkandidaten/!5376025/" ratioURL-ressource="5376025" class="objlink report article leaded pictured noavatar" role="link"><h4>Urwahl der Grünen-Spitzenkandidaten</h4><h3>75 Stimmen Vorsprung für Özdemir</h3><p>Ganz knapp gewann Parteichef Cem Özdemir die Urwahl. Die schon gesetzte Fraktionsvorsitzende Katrin Göring-Eckardt bekam eine klare Bestätigung der Basis.  </p><img src="/picture/1736589/300/3f5310117651096651166a6a784dbf69_edited_60425332_547a6e261b.jpeg" alt="Cem Özdemir und Karin Göring-Eckardt reden miteinander" title="Cem Özdemir und Karin Göring-Eckardt reden miteinander"></img></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><span class="headed wing" role="complementary"></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Gruene-vor-der-Bundestagswahl/!5371474"></a></div><div class="full community page last odd n3"><div class="head" role="head"><ul role="navigation" class=" navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid495498">
+    
+
+	<div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="So können Sie kommentieren:"><span>So können Sie kommentieren:</span></a></h2></div><div class="sectbody"><p>       Bitte <a href="https://www.taz.de/kommune/post.php?a=registration" target="_blank">registrieren Sie sich</a> und halten Sie sich an unsere <a href="http://taz.de/netiquette" target="_blank">Netiquette</a>.     
+</p><p>      Haben Sie Probleme beim Kommentieren oder Registrieren?   
+</p><p>  Dann mailen Sie uns bitte an <a href="mailto:kommune@taz.de" target="_blank">kommune@taz.de</a>   </p></div></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="" class="even sect sect_commentlinks style_commentlinks "><div class="secthead" role="heading"><h2><a name="Leser*innenkommentare"><span>Leser*innenkommentare</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class="member " id="bb_message_3449278"><a class="author person" href="/!ku14187/"><h4>mowgli</h4></a><time datetime="2017-01-18T14:53:56+01:00"><meta value="1484747636"></meta>18. 01. 2017, 
+		14:53</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Was, wenn Cem Özdemir erfährt: Die taz hat heute so getan, als hätte er noch 1994 nicht mit Messern und Gabel essen können und lieber direkt aus der hohlen Hand getrunken als aus dem Glas? Und was mag Anton Hofreiter wohl sagen, wenn er herausfindet: Ulrich Schulte hat öffentlich behauptet, er war vor 12 Jahren noch neidisch auf "Fischers perfekt sitzender Dreiteiler"? </p>
+
+<p xmlns="" class="odd">
+Die Schultern werden sie wohl fast unmerklich heben, sich schütteln und dann sagen: "Lass die doch plappern!" Man ist schließlich wer anno 2017. Und was man denkt, steht einem ja nicht auf der Stirn geschrieben.</p>
+
+<p xmlns="" class="odd">
+Özdemirs türkischen Gastarbeiter-Eltern mögen die Rituale der deutschen Oberschicht fremd gewesen sein. Abgeschreckt hat das wohl nicht. Mit der deutschen Mittelschicht  hat sie zudem ein Ritual verbunden: Die Beschwörung des Aufstiegs. Die "Sandwich-Schicht" will überall auf dieser Welt "höher hinaus". Zwar schaffen es die Wenigsten bis ganz nach oben, die Meisten aber können mit ihrem Gestrampel immerhin das Absteigen verhindern. Zumindest hat das in den 70-ern noch funktioniert.</p>
+
+<p xmlns="" class="odd">
+Was meint Herr Hofreiter, wenn er von einem "gewissen Klassenstolz" spricht, den er angeblich "mitbekommen" hat? Brechts "Fragen..." zitieren er mit Stolz. Die Sache mit dem Bauarbeiter macht er lächerlich. Der Mann wollte nie Koch werden. Er wollte immer schon ein Cäsar sein und im Geschichtsbuch stehen. Genau wie Özdemir. Wenn etwas den "Habitu"“ der Aufsteiger unerträglich macht für andere, dann ist es diese Art der Unehrlichkeit. Die führt nämlich in Zweifel zu einer eklatanten Rückgratschwäche. </p>
+
+<p xmlns="" class="last odd">
+Rezzo Schlauch war seinerzeit mit sich im Reinen, schätze ich. Sich "mit den Augen anderer zu sehen", fiele ihm wohl im Traum nicht ein. Und Lügen oder Stehlen sind für Pfarrers-Söhne offenbar normal. Von Schlauch lernen Özdemir und Hofreiter gerade Siegen, fürchte ich. Wenn sie es schaffen, wird ihre Partei sie lieben. Herkunft? Spielt dann gar keine Rolle mehr.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3449262"><a class="author person" href="/!ku36068/"><h4>Sorsha</h4></a><time datetime="2017-01-18T14:02:16+01:00"><meta value="1484744536"></meta>18. 01. 2017, 
+		14:02</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Tut mir Leid, liebe taz...</p>
+<p xmlns="" class="even">
+Aber das ihr Akademikerkinder hier zwei Vorführ-Aufsteiger in Szene setzt, um euch wohler zu fühlen damit, dass ihr bei jeder Gelegenheit eure Privilegien gegen uns absichert, ändert nichts.</p>
+
+<p xmlns="" class="last even">
+Und weil ihr Akademiker das tut, mach ich jetzt das selbe und sichere meine Privilegien gegen euch ab, indem ich euch darauf hinweise, dass ihr euch nicht mehr bei Subkulturen aus dem Arbeitermilieu anbiedern dürft</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3449216"><a class="author person" href="/!ku587/"><h4>Nico Frank</h4></a><time datetime="2017-01-18T11:32:25+01:00"><meta value="1484735545"></meta>18. 01. 2017, 
+		11:32</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Leider werden hier immer wieder Kommentare gelöscht, sobald man falsche Tatsachen ERWÄHNT DIE DER taz NICHT PASSEN: </p>
+<p xmlns="" class="last even">
+So entsteht ein verstelltes Bild von den Kommentaren insgesamt. Es muss erlaubt sein, zu erwähnen, weshalb einem der eine Kandidat besser gefällt als der Andere.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3449174"><a class="author person" href="/!ku587/"><h4>Nico Frank</h4></a><time datetime="2017-01-18T09:31:37+01:00"><meta value="1484728297"></meta>18. 01. 2017, 
+		09:31</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Ich bin für Anton Hofreiter, nicht nur weil ich ihn persönlich kenne und er ein Bayer ist, sondern weil er bei den Grünen für Glaubwürdigkeit steht wie kein anderer in seiner Partei. Er ist der wahrhaft leibgewordene Grüne, der auch noch ein Fundskerl ist. Özdemir ist für mein dafürhalten, genau das Gegenteil von Anton Hofreiter. Özdemir kennt keine Grenzen, wenn solche die Grünen führen, kann den Wähler alles erwarten. Für was steht die Grüne mit einem Typ wie Özdemir? </p>
+<p xmlns="" class="last even">
+Özdemir ist das personifizierte Establishment bei den Grünen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3449128"><a class="author person" href="/!ku389/"><h4>Hanne</h4></a><time datetime="2017-01-18T00:42:46+01:00"><meta value="1484696566"></meta>18. 01. 2017, 
+		00:42</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Grünen-Wähler sind Architekten, Rechtsanwältinnen, sie sitzen im öffentlichen Dienst, sie verdienen gut, zahlen Häuser ab und achten darauf, dass ihr Nachwuchs die besten Schulen besucht."</p>
+
+<p xmlns="" class="odd">
+Das ist für mich der traurige, aber wahre Kern des Beitrages zu den GRÜNEN.</p>
+
+<p xmlns="" class="odd">
+Und ja kein bedingungsloses Grundeinkommen, das entspricht ja auch nicht der protestantischen Arbeitsethik und den "Aufsteigern".</p>
+
+<p xmlns="" class="odd">
+KGE ist quasi der Inbegriff der grünen Wählerschaft...</p>
+
+<p xmlns="" class="last odd">
+Aber mit ihr möchte ich noch nicht mal beim Elternabend sitzen und Klassenfahrten abstimmen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3449199"><a class="author person"><h4>74450 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-01-18T10:32:20+01:00"><meta value="1484731940"></meta>18. 01. 2017, 
+		10:32</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hanne </span>"Das ist für mich der traurige, aber wahre Kern des Beitrages zu den GRÜNEN."</p>
+
+<p xmlns="" class="odd">
+Was ist daran traurig, dass Menschen gut verdienen und ihre Kinder auf gute Schulen schicken?</p>
+
+<p xmlns="" class="last odd">
+Zum Thema Grundeinkommen: Es gibt viele sehr gute Argumente gegen das bedingungslose Grundeinkommen. Das die Grünen deshalb dagegen sind, stimmt aber ganz einfach nicht: <a target="_blank" href="http://gruenes-grundeinkommen.de/">http://gruenes-grundeinkommen.de/</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3449281"><a class="author person" href="/!ku14187/"><h4>mowgli</h4></a><time datetime="2017-01-18T15:01:55+01:00"><meta value="1484748115"></meta>18. 01. 2017, 
+		15:01</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@74450 (Profil gelöscht) </span>Nicht dass "Menschen gut verdienen und ihre Kinder auf gute Schulen schicken" ist "traurig", sondern dass die Grünen dafür sorgen, dass nur eine Minderheit aller Menschen gut verdient und seine Kinder auf gute Schulen schicken kann.</p>
+
+<p xmlns="" class="last odd">
+Eine Partei, die sich offiziell der (dringend nötigen) Weltrettung verschrieben hat, sollte unbedingt darüber nachdenken, ob sie weiter im selben Umfang Klientelpflege betreiben möchte wie bisher. Tut sie es, ist sie nämlich für andere als eben solche Leute, die den Aufstieg unbedingt aus eigener Kraft schaffen wollen, kaum wählbar. Das ist in sofern ärgerlich, als unsre Welt (wenn überhaupt) nicht von einer 10- oder 15-%-Minderheit gerettet werden kann, sondern nur von einer großen Mehrheit aller Wähler.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="guest " id="bb_message_3449057"><a class="author person"><h4>1326 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-01-17T19:31:22+01:00"><meta value="1484677882"></meta>17. 01. 2017, 
+		19:31</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Sehr gut Analyse, nicht wenige Leute mit ähnlicher Sozialisation erkennen gewisse Verhaltensweise an sich wieder. </p>
+<p xmlns="" class="last even">
+Was die Taz allerdings nicht anspricht, ist die Tatsache, dass 50% bei der "Wahl" schon gesetzt sind, ganz ohne Abstimmung. 100% Demokratisch ist das nicht.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="guest " id="bb_message_3449039"><a class="author person"><h4>10236 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-01-17T18:52:50+01:00"><meta value="1484675570"></meta>17. 01. 2017, 
+		18:52</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Die vier Konkurrenten um die Spitzenkandidatur – Özdemir, Hofreiter, Katrin Göring-Eckardt und Robert Habeck..."</p>
+
+<p xmlns="" class="odd">
+KG-E ist konkurenzlos...</p>
+
+<p xmlns="" class="odd">
+"Özdemir wirbt vor allem für gute Bildungsinstitutionen – gleiche Chancen für jedes Kind."</p>
+
+<p xmlns="" class="last odd">
+Dann sollte die Grünen an die 4-jährige Grundschule ran.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="guest " id="bb_message_3449025"><a class="author person"><h4>81331 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-01-17T18:31:04+01:00"><meta value="1484674264"></meta>17. 01. 2017, 
+		18:31</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Ach bitte, Herr Hofreiter stammt mitnichten aus einer "Arbeiterfamilie".</p>
+<p xmlns="" class="even">
+Sein Vater war Ingenieur, zuhause standen Bücher von Brecht und Tucholsky in den Regalen, alle Kinder konnten studieren.</p>
+<p xmlns="" class="last odd">
+Netter Versuch, taz.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3449016"><a class="author person" href="/!ku18748/"><h4>auswurftaste</h4></a><time datetime="2017-01-17T18:07:30+01:00"><meta value="1484672850"></meta>17. 01. 2017, 
+		18:07</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Ödzemir hatte einen Schweinedurst, doch er wusste nicht, in welches der Gläser das Mineralwasser gehört."</p>
+
+<p xmlns="" class="last odd">
+Das ist ein typisches Mittelschichtsproblem. Dem Proleten und der Oberschicht ist sowas egal. Beide trinken zur Not auch aus der Flasche.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3449015"><a class="author person" href="/!ku18516/"><h4>fly</h4></a><time datetime="2017-01-17T17:59:45+01:00"><meta value="1484672385"></meta>17. 01. 2017, 
+		17:59</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Danke, dass ich das endlich weiss und was zum stigmatisieren habe. Arbeiterkinder. Nee so was. Ach, ich bin ja auch eins. Egal, nix geht über RTL II News: Skandal, niedliche Bilder von irgendwas, Brot und Spiele und alles in 10 Minuten vorbei. Alles andere ist eh drum her rum Gerede über eine Politik, die man vorher nicht durchschauen kann und die man hinterher immer perfekt erklären kann. Genau wie die Börse.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3449023"><a class="author person" href="/!ku1978/"><h4>Horst Lafos</h4></a><time datetime="2017-01-17T18:25:18+01:00"><meta value="1484673918"></meta>17. 01. 2017, 
+		18:25</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@fly </span>Bitte, dass bei Uns die Basis entscheidet und keine Vorstände oder Fraktionen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></div><span id="ad_bin_uebersicht_medrec_4" class="ad_bin sold contentad"><div id="ad_zone_uebersicht_medrec_4" name="uebersicht_medrec-4" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'uebersicht_medrec_4';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid476383">
+    
+
+<form name="form" method="post" enctype="application/x-www-form-urlencoded" id="send-comment" class="first last odd sect sect_send-comment_form style_commentform " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><h2><a name="jetzt mitreden"><span>jetzt mitreden</span></a></h2></div><div class="sectbody"><input class="constant" type="hidden" name="test" value="yes"></input><input class="constant" type="hidden" name="id" value="5371474"></input><input type="hidden" name="scope" class="constant" id="form_scope" value="cms-article"></input><input type="hidden" name="asid" class="constant" id="form_asid" value=""></input><span class="field"><p class="label">Ihren Kommentar hier eingeben</p><textarea name="post" class="text" id="form_post"></textarea></span><input type="submit" class="submit" name="ignore" value="abschicken"></input></div></form><script> filOtaz_de.Form( 'send-comment' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+	var formN = $('#send-comment');	// who i am
+
+	if( formN[0].filOtaz_de_handled ) return; formN[0].filOtaz_de_handled = true;	// run only once
+
+
+
+	// ajaxify myself
+	filOtaz_de.ajaxifyForm('send-comment', {
+		mirrorInput	: true ,
+		onSuccess	: function( data ){
+			filOtaz_de.kommune.updateLogin();
+//console.log('success handler send-comment '+ $(data).html() );
+//			var message = $(data).find('.message');
+//			alert( message.length ? message.text() : 'OK' );
+			} 
+		});   
+
+
+	if( formN.parents('.wing').length ) {    // we're in wing
+//console.log('send-comment in wing '+ formN.length +', '+ formN.parents('.wing').length +', '+ formN.parents('.float').length );
+
+	var multiUse = function() {
+
+		// === lend ourselfes to reply-function ===
+
+		// shared functions
+		var onScroll, reset;
+
+		// shared data
+		var form, anchor, prior, bros, dad, uncles, yMin;
+
+
+		$('.community.page >.body >.sect_commentlinks').find('>.sectbody >li, .thread >li').each( function(i,el){	// each comment
+
+			// per comment data
+			var refN	= $(el),
+			    toolbarN	= refN.find('>.toolbar'),
+			    id,
+			    onClick
+			    ;
+
+			toolbarN.find('>.reply >a').click( function(){
+				// reply specific
+				onClick({
+					idKey	: 'asid',
+					title	: {
+						prefix	: '',
+						suffix	: ' antworten'
+						},
+					hint	: 'Antwort bitte hier eingeben',
+					submit	: 'antworten'
+					});
+				} );
+			
+			toolbarN.find('>.report >a').click( function(){
+				// report specific
+				onClick({
+					a	: 'report',
+					idKey	: 'pid',
+					title	: {
+						prefix  : 'Kommentar von ',
+						suffix  : ' melden'
+						},
+					hint    : 'Problem bitte hier beschreiben',
+					submit	: 'melden'
+					});
+				} );
+
+			toolbarN.css({ visibility:'visible' });
+
+
+			onClick = function( par ) {
+
+					// determine shared data late
+				if( !form ) {
+					form = {
+						titleN	: formN.find('>.secthead >h2 >a >span'),
+						aN	: formN.find('>.sectbody >input[name="a"]'),
+						idN	: formN.find('>.sectbody >input[name="asid"]'),
+						pidN	: formN.find('>.sectbody >input[name="pid"]'),
+						textN	: formN.find('>.sectbody >span >textarea'),
+						submitN	: formN.find('>.sectbody >input:submit')
+						};
+					form.hintN 	= form.textN.prev('p');
+					form.org = {
+						title	: form.titleN.text(),
+						hint	: form.hintN.text(),
+						a	: form.aN.attr('value'),
+						submit	: form.submitN.attr('value')
+						};
+					}
+
+				// determine per comment data late
+				if( !id )  	id = refN.attr('id').replace(/^[^0-9]*/, '');
+
+
+				// change presented data to our needs
+
+				if( par.a ) {
+					if( !( form.aN  && form.aN.length  ) )  
+						form.aN  = $('<input class="constant" type="hidden" />').insertBefore( form.submitN );
+					form.aN.attr({	name	: 'a',
+							value	: par.a
+							});
+					}
+				else if( form.aN ) {
+					form.aN.remove();
+					form.aN = null;
+					}
+
+				if( par.idKey ) {
+					if( form.idN ) form.idN.remove();
+					form.idN = $('<input class="constant" type="hidden" />')
+						.attr({	name	: par.idKey,
+							value	: id
+							})
+						.insertBefore( form.submitN );
+					}
+				else if( form.idN ) {
+					form.idN.remove();
+					form.idN = null;
+					}
+
+				form.titleN.empty().append( 
+					par.title.prefix, 
+					$('<span>'+ refN.find('>.author >h4').text() +'</span>').addClass( refN.attr('class') ),
+					par.title.suffix
+					);
+
+				form.hintN.text(		par.hint	);
+
+				form.submitN.attr({	value :	par.submit	});
+
+
+				// add reset options
+				(new filOtaz_de.Form( formN )).cancel( function(){ reset();	afterLogin.fadeIn(); });
+				formN.on('filOtaz_de.Form.done',   reset );
+
+				// geometry
+				var	commBot	=   toolbarN.offset().top +   toolbarN.outerHeight(),
+					formBot = form.textN.offset().top + form.textN.outerHeight(),
+					d	= commBot - formBot
+					;
+				if( !yMin ) yMin = formBot - $(window).scrollTop();
+				if( commBot - $(window).scrollTop() < yMin )  window.scrollTo( 0, commBot - yMin );
+
+				// relocate form to stick w/ referenced comment
+				if( !anchor && d >0 ) {
+					prior = formN.prev(), bros = formN.nextAll(), dad = formN.parent(), uncles = dad.filter('.rack').nextAll(), afterLogin = $('form#bb-login').nextAll().not('script');
+					messageN = $('#successMessage');
+					anchor = $('<div class="community wing pin" />')
+						.css({  position: 'absolute',
+							top     : formN.offset().top +'px',
+							left    : dad.offset().left +'px',
+							width   : formN.width() +'px'
+							})
+						.appendTo( document.body )
+						;
+					if( uncles.length ) {   // we're in rack
+						dad.css({  borderBottomStyle: 'none'  });
+						anchor.append( $('<div />').addClass( dad.attr('class') ).append( formN, bros ), uncles );
+						}
+					else	anchor.append( formN, bros );
+					}
+
+				if( anchor ) {
+
+					// fading out "meistkommentiert" when answering
+
+					afterLogin.fadeOut();
+				// refresh for second ... n time "antworten"
+				// commtented out to prevent "neues kommtar" instead of "antworten"
+				//	if (formN.hasClass('worked')){
+				//		  if( form.aN ) form.aN.remove();
+				//		  if( form.idN ) form.idN.remove();
+				//	}
+
+					anchor.animate(
+						{ 
+							top : formN.offset().top + d
+						},
+					function(){
+							$(window).scroll( onScroll );
+							} );
+						}
+
+				}; //onClick
+
+			} ); //each comment
+
+			onScroll = function() {
+				var ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top;
+				// reset clears the whole form, we don't want that onScroll, so we only call relocateForm instead
+				// if( formN.offset().top <= ref )  reset();
+
+				// Do not scroll when already commented and there is success message
+				if (( formN.offset().top <= ref ) && ! (formN.hasClass('worked')))  relocateForm();
+				};
+			reset = function() {
+				if( reset ) 	formN.off('filOtaz_de.Form.done');
+				resetForm();
+				relocateForm();
+				};
+			relocateForm = function() {
+				// clean up
+				if( onScroll )  $(window).off('scroll.taz_onscroll');
+
+				// relocate form back
+				if( anchor ) {
+					var 	ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top,
+						d = anchor.offset().top - ref
+						;
+					anchor.animate({ top: ref }, d, function(){
+						dad.append( formN, bros );
+						if( uncles.length ) {	// we were in rack
+							dad.css({  borderBottomStyle: null  });
+							dad.after( uncles );
+							}
+						if( anchor ) anchor.remove(); anchor = null;
+						} );
+					}
+				};
+			resetForm = function() {
+				// reset shown data
+				if( form.aN      ) form.aN.remove();
+				if( form.idN     ) form.idN.remove();
+//				if( form.cancelN ) form.cancelN.remove();
+				form.titleN.text(		form.org.title	);
+				form.hintN.text(		form.org.hint	);
+				form.textN.attr({	value : ''		}).trigger('blur');
+				form.submitN.attr({	value : form.org.submit	});
+
+				};
+
+		}; // multiUse
+
+
+		if( formN.parents('.float').length ) { 	// already relocated into float
+			multiUse();
+			}
+		else {					// wait for relocation
+
+			formN.parents('.wing').on('filOtaz_de_float_mounted', function(){  multiUse();  });
+			}
+		} //we're in wing
+
+	})(); </script>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><form name="form" method="post" enctype="application/x-www-form-urlencoded" id="bb-login" class="even sect sect_bb-login_form style_kommune " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><ul role="toolbar" class="toolbar"><li class="login"><a href="" target="_blank">Login</a></li><li class="settings"><a href="https://taz.de/kommune/post.php?a=registration" target="_blank">Registrieren</a></li><li class="newpass"><a shape="rect" target="_blank" href="https://portal.taz.de/?a=nopw">Passwort vergessen?</a></li></ul></div><div class="sectbody"><input type="hidden" name="a" class="constant" id="form_a" value="login"></input><span class="field"><p class="label">E-Mail</p><input type="text" name="email" class="line" id="form_email"></input></span><span class="field"><p class="label">Passwort</p><input type="password" name="password" class="secret" id="form_password"></input></span><input type="submit" class="submit" name="ignore" value="einloggen"></input></div></form><script> filOtaz_de.Form( 'bb-login' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+		var formID = 'bb-login';
+		var form = $('#bb-login');
+
+		if( !form.length ) return;
+		if( form[0].filOtaz_de_form_handled ) return; form[0].filOtaz_de_form_handled = true;
+
+		var nodes, org, firstrun = true;
+		if( !filOtaz_de.kommune ) filOtaz_de.kommune = {};
+		if( !filOtaz_de.kommune.updateLogin ) filOtaz_de.kommune.updateLogin = function(){
+			if( !nodes ) nodes = {	// parse DOM lazily
+				head	: form.find('>.secthead'),
+				body	: form.find('>.sectbody').hide(),
+				a	: form.find('input[name="a"]'),
+				inputs	: form.find('span').has('input[name="email"],input[name="password"]'),
+				submit	: form.find('input.submit'),
+				links	: {
+					all		: form.find('ul.toolbar'),
+					login		: form.find('ul>li.login').click(function(){
+								var me = $(this);
+//								nodes.body
+								me.closest('.secthead').nextAll('.sectbody')	// we might be dynamically inserted, so parse DOM here
+								.slideToggle(function(){
+									me.toggleClass('active');
+									});
+								return false;
+								}),
+					settings	: form.find('ul>li.settings'),
+					newpass		: form.find('ul>li.newpass')
+					}
+				};
+			var duration = firstrun ? 0 : $.fx.speeds._default;
+			var tazsid = $.cookie('tazsid');
+			if(! tazsid ){  // not logged in
+					$('#send-comment .submit').val('Einloggen und Senden');
+					};
+
+			if( tazsid ) {	// already logged in
+					$('#send-comment .submit').val('Abschicken');
+
+				// mar: refresh after login error and then successful login
+				if ( $('#bb-login >.sectbody >p.error').length ){
+
+
+					$('.sect_bb-login').fadeOut().remove();
+					$('.sect_bb-login_form').fadeIn();
+					};
+
+
+				var tazid = $.cookie('tazid');
+//console.log('	now logged in as '+ tazid );
+				if( !org ) org = {	// store original values lazily
+					action	: form.attr('action'),
+					a	: nodes.a.attr('value'),
+					submit	: nodes.submit.attr('value'),
+					links	: {
+						login		: nodes.links.login,
+						settings	: {
+							text	: nodes.links.settings.children('a').text()
+							},
+						newpass		: nodes.links.newpass
+						}
+					};
+				form.attr({ action: 'https://taz.de/kommune/post.php?a=logout' });
+//console.log( tazsid );
+
+				nodes.body.slideUp( duration, function(){
+					form.addClass('session');
+					nodes.a.attr({ value: 'logout' });
+					nodes.inputs.hide();
+					nodes.submit.attr({ value: 'ausloggen' });
+					nodes.body.fadeIn( duration/3 );
+					});
+				if( tazid ) var profileURL = '/!ku'+ tazid +'/';
+				nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.login    )  nodes.links.login.detach();
+					if( profileURL ) {
+						if( !nodes.links.profile ) {
+							nodes.links.profile = $('<li><a href="'+ profileURL +'">mein Profil</a></li>');
+							nodes.links.settings.before( nodes.links.profile );
+							}
+						}
+					if( nodes.links.settings )  nodes.links.settings.children('a').text('Einstellungen');
+					if( nodes.links.newpass  )  nodes.links.newpass.detach();
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+				if( profileURL ) {	// tell user their name
+					if( !nodes.salute ) {
+						nodes.salute = $();
+//console.log('go, get profile '+ profileURL );
+						$.ajax({
+							type		: 'GET',
+							url		: profileURL +'c.xml', 
+							dataType	: 'xml',
+							success		: function( data, status, xhr ){
+								if( !nodes.salute ) return;	// we're too late
+								var name = $('content >item[type="person"] >name', data ).text();
+//console.log('	found '+ name );
+								nodes.salute = $('<h2><a>'+ name +'</a></h2>').hide().prependTo( nodes.head );
+								nodes.salute.slideDown( duration );
+								},
+							error		: function( req, status, message ){
+//console.log( req.status +' '+ status +' :: '+ message );
+								},
+							complete	: function( req, status ){
+								}
+							});
+						}
+					}
+				} //tazsid
+			else if( org )	(function(){	// reset logged out state
+				var orgwas = org; org = null;
+				nodes.body.fadeOut( duration/2, function(){
+					nodes.a.attr({		value	: orgwas.a		});
+					nodes.inputs.show();
+					nodes.submit.attr({	value	: orgwas.submit	});
+					form.removeClass('session');
+					}); 
+				if( nodes.salute )  nodes.salute.slideUp( duration, function(){
+					nodes.salute.remove(); nodes.salute = null;
+					});
+				if( nodes.links.all ) nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.profile ) nodes.links.profile.remove(); nodes.links.profile = null;
+					nodes.links.settings.before( orgwas.links.login.removeClass('active') );
+					nodes.links.settings.children('a').text( orgwas.links.settings.text );
+					nodes.links.settings.after(  orgwas.links.newpass );
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+
+				form.attr({		action	: orgwas.action	});
+				})();
+			firstrun = false;
+			};
+		filOtaz_de.kommune.updateLogin();
+
+		var message = filOtaz_de.ajaxifyForm('bb-login', { handle200 : filOtaz_de.kommune.updateLogin } );
+
+		if( message && message.length )	// secure ajax not supported
+			form.after( message );
+
+		})();
+	</script><div class="rack" id="xid524032">
+    
+
+<div role="region" id="" class="first last odd sect sect_shop style_shop "><div class="secthead" role="heading"><h2><a name="meistkommentiert"><span>meistkommentiert</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class=" first odd trodd   "><a href="/Richterin-ueber-Triage/!5735415/" class="objlink noavatar" role="link"><h4>Richterin über Triage</h4><h3>„Wir werden als Erste geopfert“</h3></a></li><li class=" even trodd   "><a href="/Ein-Jahr-nach-dem-Covid-Ausbruch/!5736069/" class="objlink noavatar" role="link"><h4>Ein Jahr nach dem Covid-Ausbruch</h4><h3>Wie China triumphiert</h3></a></li><li class=" odd treven   "><a href="/Coronavirus-im-Vereinigten-Koenigreich/!5735853/" class="objlink noavatar" role="link"><h4>Coronavirus im Vereinigten Königreich</h4><h3>Tagsüber bitte mehr Haltung</h3></a></li><li class=" even trodd   "><a href="/Ungleichbehandlung-von-Religionen/!5735268/" class="objlink noavatar" role="link"><h4>Ungleichbehandlung von Religionen</h4><h3>Leise rieseln die Privilegien</h3></a></li><li class=" last odd trodd   "><a href="/Klimaexperte-ueber-Vertriebswege/!5739936/" class="objlink noavatar" role="link"><h4>Klimaexperte über Vertriebswege</h4><h3>„Onlinehandel ist häufig besser“</h3></a></li></ul></div>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Gruene-vor-der-Bundestagswahl/!5371474"></a></div><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Politik/!p4615/" id="menu_p4615"><span itemprop="title">Politik</span></a><ul><li class="first odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span itemprop="title">Deutschland</span></a></li><li class="even trodd"><a href="/Politik/Europa/!p4617/" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="/Politik/Amerika/!p4618/" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="/Politik/Afrika/!p4621/" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="/Politik/Asien/!p4619/" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="/Politik/Nahost/!p4620/" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="/Politik/Netzpolitik/!p4622/" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a><ul><li class="first odd trodd"><a href="/Oeko/Oekonomie/!p4623/" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="/Oeko/Oekologie/!p4624/" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="/Oeko/Arbeit/!p4629/" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="/Oeko/Konsum/!p4625/" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="/Oeko/Verkehr/!p4628/" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven"><a href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span>Wissenschaft</span></a></li><li class="last odd trodd"><a href="/Oeko/Netzoekonomie/!p4627/" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a><ul><li class="first odd trodd"><a href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span>Alltag</span></a></li><li class="even trodd"><a href="/Gesellschaft/Reportage-und-Recherche/!p5265/" id="menu_p5265"><span>Reportage und Recherche</span></a></li><li class="odd treven"><a href="/Gesellschaft/Debatte/!p4633/" id="menu_p4633"><span>Debatte</span></a></li><li class="even trodd"><a href="/Gesellschaft/Kolumnen/!p4634/" id="menu_p4634"><span>Kolumnen</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Medien/!p4630/" id="menu_p4630"><span>Medien</span></a></li><li class="even treven"><a href="/Gesellschaft/Bildung/!p4635/" id="menu_p4635"><span>Bildung</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span>Gesundheit</span></a></li><li class="last even trodd"><a href="/Gesellschaft/Reise/!p4638/" id="menu_p4638"><span>Reise</span></a></li></ul></li><li class="even trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="/Kultur/Musik/!p4640/" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="/Kultur/Film/!p4641/" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="/Kultur/Kuenste/!p4642/" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="/Kultur/Buch/!p4643/" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="/Kultur/Netzkultur/!p4631/" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="/Sport/Fussball/!p4647/" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="/Sport/Kolumnen/!p4648/" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="/Nord/Hamburg/!p4651/" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="/Nord/Bremen/!p4652/" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="/Nord/Kultur/!p4653/" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="/bei-Tom/!t5180734/" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="/ueber-die-Wahrheit/!115080/" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="odd trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="even treven"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="odd trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="even trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="odd treven"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="even trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="odd trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="even treven"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="https://taz.de/!112354/" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="https://taz.de/!p5097/" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="https://taz.de/!114802/" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="https://taz.de/!114191/" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="https://taz.de/!166598/" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4283/" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="https://taz.de/!p4858/" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="https://taz.de/!112355/" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div></body><!-- DEBUG end 18:48:59+01:00--></html>

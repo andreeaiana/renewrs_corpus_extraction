@@ -1,0 +1,2133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 00:31:56+01:00 page_id=4632 :: Schwerpunkt Finanzkrise--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 4632--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>Nick Srnicek zur Post-Arbeitsgesellschaft: „Arbeiten ist nichts Erstrebenswertes“ - taz.de</title><meta name="author" content="Nina Scholz"></meta><meta name="description" content="Um etwas zu verändern, fehlen den Linken konkrete Strategien. Nick Srnicek will nun mit einem neuen Modell den Neoliberalismus eindämmen."></meta><meta name="keywords" content="Prekäre Arbeit, Institut zur Zukunft der Arbeit, Befristete Beschäftigung, Die Linke, Linke, Digitalisierung, Kapitalismus, Finanzkrise, Alltag, Gesellschaft, Schwerpunkt, taz, tageszeitung "></meta><meta name="taz:title" data-id="5399523" content="Nick Srnicek zur Post-Arbeitsgesellschaft: „Arbeiten ist nichts Erstrebenswertes“"></meta><meta name="taz:tag" content="Prekäre Arbeit" data-tag-id="5302203"></meta><meta name="taz:tag" content="Institut zur Zukunft der Arbeit" data-tag-id="5022109"></meta><meta name="taz:tag" content="Befristete Beschäftigung" data-tag-id="5311776"></meta><meta name="taz:tag" content="Die Linke" data-tag-id="5011637"></meta><meta name="taz:tag" content="Linke" data-tag-id="5010385"></meta><meta name="taz:tag" content="Digitalisierung" data-tag-id="5011441"></meta><meta name="taz:tag" content="Kapitalismus" data-tag-id="5010783"></meta><meta name="taz:tag" content="Schwerpunkt Finanzkrise" data-tag-id="5009668" data-tag-category="Schwerpunkt"></meta><meta name="taz:tag" content="Lesestück Interview" data-tag-id="5303349" data-tag-category="Lesestück"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta><meta property="og:url" content="https://taz.de/!5399523/"></meta><meta property="og:locale" content="de_DE"></meta><meta property="og:type" content="article"></meta><meta name="twitter:card" content="summary_large_image"></meta><meta name="twitter:site" content="@tazgezwitscher"></meta><meta property="og:title" content="Nick Srnicek zur Post-Arbeitsgesellschaft: „Arbeiten ist nichts Erstrebenswertes“"></meta><meta property="fb:app_id" content="966242223397117"></meta><meta name="twitter:title" content="Nick Srnicek zur Post-Arbeitsgesellschaft: „Arbeiten ist nichts Erstrebenswertes“"></meta><meta property="og:description" content="Um etwas zu verändern, fehlen den Linken konkrete Strategien. Nick Srnicek will nun mit einem neuen Modell den Neoliberalismus eindämmen."></meta><meta name="twitter:description" content=" Um etwas zu verändern, fehlen den Linken konkrete Strategien. Nick Srnicek will nun mit einem neuen Modell den Neoliberalismus eindämmen."></meta><meta property="og:image" content="https://taz.de/picture/1944221/948/ad47c29d8f2358e33d1d240dc62b9ca1_edited_68872000_8fe58eee04.jpeg"></meta><meta name="twitter:image" content="https://taz.de/picture/1944221/948/ad47c29d8f2358e33d1d240dc62b9ca1_edited_68872000_8fe58eee04.jpeg"></meta><meta property="article:published_time" content="2017-05-01T09:23:00+01:00"></meta><meta property="article:modified_time" content="2017-05-01T11:41:03+01:00"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"5399523" // String
+            , page_title_enc      :"5399523: Nick Srnicek zur Post-Arbeitsgesellschaft: „Arbeiten ist nichts Erstrebenswertes“" // String
+            , custom_url_enc      :"/!5399523" // String
+            , channel             :"web" // String
+            , area                :"Redaktion" // String
+            , department          :"p4632" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : false  // Boolean
+            , is_article          : true  // Boolean
+            , has_tags            : true  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "https://taz.de/lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<script type="text/javascript"> 
+	       
+(function(){
+
+
+	if ( ((location.href.match(/goMobile/g) || []).length) > 1 ) {
+		console.log( 'prevent loop' );
+		return
+	}
+	
+	// console.log('ratioURL_channel ' + readCookie('ratioURL_channel') );
+
+	if ( readCookie('ratioURL_channel') == 'web' ){ 
+ 		return;
+		// web view was selected explicitly
+	}
+	var getWidth;
+	if (screen.width > screen.height){
+		   getWidth = screen.height;
+		} else {
+		   getWidth = screen.width;
+	}
+	
+
+
+	if (getWidth < 551) {
+		//mobile
+
+		var goto = location.pathname;
+		// to do: look if this is running
+		if ( (/goMobile/).test( location.search ) && (/count/).test( location.href ) || ( location.search.indexOf('goMobile') > 1 ) ){	// back here despite cache-killer: give up.
+				
+				if ((/;web/).test( location.pathname )) {
+					location.href = goto
+					
+				};
+//				document.createElement("img").src='/count/debug/go-mobile/quit/cachekiller+'+ (new Date()).getTime();
+				return false;
+			}
+		
+			if( (/moby/).test( readCookie('ratioURL_channel') ) ) { // back here despite cookie: reload w/ cache-killer to prevent loop
+			// Google-Bot needs this to see mobile (https://search.google.com/search-console/inspect fil 2018-12-03)
+			location.href = '/count/redirect/go-mobile-nocache'+ goto 
+				+( location.search ? location.search +'&' : '?' ) +'goMobile2='+ (new Date()).getTime()
+				+location.hash;
+//			document.createElement("img").src='/count/debug/go-mobile/quit/cookie+'+ (new Date()).getTime();
+			return;
+			}
+
+	//	$.cookie('ratioURL_channel', 'moby', {domain:'taz.de', path:'/'} );	// try to set channel cookie …
+		document.cookie = 'ratioURL_channel=moby; domain=taz.de; path=/';
+
+
+		if( (/moby/).test( readCookie('ratioURL_channel') ) ) {	// … cookie was successfully set: reload …
+			if (location.search.indexOf('nocache') != -1) return;	// old cache killer for transition period
+			location.reload( true );
+			return;
+			}
+		else {						// … setting cookie failed: load explicit channel url …
+			if (location.search.indexOf('nocache') != -1) return;	// old cache killer for transition period
+			if( goto =='/' )
+				goto = '/!p4608;moby/';
+			else	goto = goto.replace(/[/]$/,';moby/');
+			location.href = '/count/redirect/go-mobile-nocookie'+ goto 
+				+location.search
+				+location.hash;
+			return;
+			}
+
+		} else {
+		//desktop
+	}
+
+		// vanilla js cookie reader
+		function readCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0;i < ca.length;i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			}
+			return null;
+		}
+
+
+	})();	
+	
+		</script><link rel="preload" href="/lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff" as="font" type="font/woff" crossorigin="anonymous"></link><link rel="preload" href="/lib/ch/web/pix/tazze46.png" as="image" media="(min-width: 49px)"></link><link rel="canonical" href="https://taz.de/Nick-Srnicek-zur-Post-Arbeitsgesellschaft/!5399523/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Alltag" href="/!p4632/rss.xml"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="/rss.xml"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="/"></link><link rel="copyright" type="text/html" title="Impressum" href="/6/impressum/"></link><link rel="stylesheet" type="text/css" media="screen, print" href="/lib/ch/web/css/news2020-12-08_21.css"></link><link href="/lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 6]> <link rel="stylesheet" type="text/css" href="/lib/style/ie6.css"> <![endif]--><!--[if lte IE 7]><style type="text/css">
+			ul.topbar                      >li      >a>span,
+			.secthead>ul[role='navigation']>li      >a>span	{  border-left: 1px solid; padding: 0px 4px;  }
+			ul.topbar                      >li.first>a>span,
+			.secthead>ul[role='navigation']>li.first>a>span	{  border:none; padding-left:0px;  }
+			ul.topbar                      >li      >a>span  {  border-color:white;    }
+			.secthead>ul[role='navigation']>li      >a>span  {  border-color:#888888;  }
+			.box h2 {  line-height:20px;  }
+			.author  {	display:inline;	float:none;	}
+			.sect_spb .sectbody {	padding-top:8px;	}
+			/* fil 2011-04-08 */
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward >ul.toolbar  {  height:28px;  }
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward ul.toolbar >li  {  float: left !important;  }
+			#reward >div  {  clear:both;  }
+			.sect_article >.sectfoot ul.toolbar  {  position:relative !important; top:0px; left:0px; height:24px;  }
+			#micropay ul.toolbar  {  height:52px;  }
+			.sect_article >.sectfoot {  padding-bottom:30px  }
+		</style><![endif]--><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="/uploads/cmp/yieldlove_cmp.js"></script><script type="text/javascript" src="/uploads/cmp/yieldlove.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="/lib/ch/web/js/2020-12-08_21.js"></script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"5399523" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/Gesellschaft/Alltag" // String
+            , is_article      : true  // Boolean
+            , is_corp         : false  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            // 2. check for not closing overlay
+            if ( $("#tzi-paywahl-fg").length && "MutationObserver" in window ){
+                p.trackEvent( 'TZI', 'displayed', 'LAYER_SHOWN_OBSERVE_TEST');    
+                var paywahl = document.getElementById('tzi-paywahl-fg');
+                var observer = new MutationObserver(function(mutations) {
+                  p.trackEvent( 'TZI', 'displayed', 'LAYER_CLOSED_OBSERVE_TEST');    
+                  observer.disconnect();
+                });
+                observer.observe(paywahl, { 
+                    attributes: true, 
+                    attributeFilter: ['style'] 
+                });
+            }
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        // mar: reactivated for tracking of special menu
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+*/
+
+            $(document).on("click", ".longread.article .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL-LONGREAD' ) });
+	        $(document).on("click", ".longread.article .sect_mostread a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'MEISTGELESEN-LONGREAD' ) });
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page:not(.longread) .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page:not(.longread) ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page:not(.longread) .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" src="https://script.ioam.de/iam.js?m=1"></script><script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript">
+		// Google Publisher Tag - https://developers.google.com/doubleclick-gpt/reference
+		var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; 
+	(function(){
+		var adArea = 'Gesellschaft';	//
+		googletag.cmd.push( function() {
+			var pa = googletag.pubads();
+			pa.setForceSafeFrame(true);
+			pa.collapseEmptyDivs();
+			pa.setTargeting('position', [ adArea ]);
+      //pa.setTargeting('test', ['fireplace']); //       * * * test only ! * * *
+      //pa.setTargeting('test', ['wallpaper']);   //       * * * test only ! * * *
+      pa.setTargeting('page_id', ['5399523']);
+			if( location.protocol =='https' )
+				pa.setTargeting('ssl', ['ja']);
+			googletag.enableServices();
+			});
+		})();
+	</script><script>
+		// expect jQuery already to be loaded
+	(function() {
+		if( !window.filOtaz_de )		window.filOtaz_de		= Object;
+		if( !window.filOtaz_de.ads )		window.filOtaz_de.ads		= Object;
+		if( !window.filOtaz_de.ads.gpt )	window.filOtaz_de.ads.gpt	= Object;
+
+        var sizes = {
+             'artikel_medrec-1'    :[300,250]
+            ,'artikel_medrec-2'    :[300,250]
+            ,'artikel_medrec_mitte' :[300,250]
+            ,'ros_sidebar-1'       :[300,250]
+            ,'ros_sidebar-2'       :[300,100]
+            ,'uebersicht_medrec-1' :[300,250]
+            ,'uebersicht_medrec-2' :[300,250]
+            ,'uebersicht_medrec-3' :[300,250]
+            ,'uebersicht_medrec-4' :[300,250]
+            ,'uebersicht_medrec-5' :[300,250]
+            ,'uebersicht_board-1'  :[624,150]
+            ,'ros_billboard-1'     :[870,250]
+            ,'mobile_banner-1'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-2'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-3'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-4'     :[[300,250],[320,50],[320,100]]
+            ,'ros_top-links'       :[[120,600],[160,600],[300,600]]
+            ,'ros_top-mitte'       :[[728,90],[800,250],[870,250],[970,90],[970,250]]
+            ,'ros_top-rechts'      :[[120,600],[160,600],[300,600]]
+            ,'ros_leaderboard-1'   :[728,90]
+            ,'fireplace-mitte'     :[[970,90],[728,90]]
+            ,'fireplace-links'     :[160,601]
+            ,'fireplace-rechts'    :[160,600]
+            ,'fireplace_bg'        :[1,1]
+            };
+        var roadblocks = {};
+  
+  
+      roadblocks = {
+         'ros_top-mitte'   :['fireplace_mitte']
+        ,'ros_top-rechts'  :['fireplace_mitte'] 
+      };
+    
+    
+		// general ad handling
+
+		// --> to be triggered for ad_zone if ad is (to be) delivered
+		filOtaz_de.ads.fitIn = function( container ) {	// make space for ad in layout
+			var container = $( container );
+//console.log('fit '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.addClass('shown');
+			container.addClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').addClass('aded_'+( container.height() >120 ?'big' :'small' ) );
+				var badge = container.hasClass('ad_zone_sold') ? 'Anzeige' : 'taz-Angebot';
+				container.before('<div class="ad_badge">'+ badge +'</div>');
+				}
+			container.trigger('TAZadInserted').trigger('TAZboxChange');
+			};
+
+		// --> to be triggered for ad_zone if no ad is (to be) delivered
+		// redundant?
+		filOtaz_de.ads.reclaim = function( container ) {	// remove whitespace from non-delivered ad
+			var container = $( container );
+//console.log('reclaim '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.removeClass('shown');
+			container.removeClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').removeClass('aded_big aded_small');
+				}
+			container.trigger('TAZadRemoved').trigger('TAZboxChange');
+			};
+    
+    
+
+		var fuzeAdFrame = function( frame ) {	// register frame for messages, fire if one is from our content
+console.log('legacy fuzeAdFrame', frame  );
+			};
+    
+    
+    // Hintergrund per Message
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+    window[eventMethod](messageEvent, function(e) {
+      if (e.data.toString().indexOf("color") != -1) {
+        $("#background").css("background-color", e.data.split(" ")[1]);
+        }
+      }, false);
+    
+    
+		// activate ad frame
+		var adZoneHandled = {};
+    
+    var get_id = function( name ) {
+      return $('div[name=' + name + ']').attr('id');
+      };
+    
+    var get_name = function( id ) {
+      return $('#'+ id ).attr('name');
+      };
+    
+    unblock = function( id, rb_id ) {
+      var name = get_name(id);
+      var index = roadblocks[name].indexOf(rb_id);
+      if ( index > -1 ) {
+        roadblocks[name].splice(index, 1);
+        }
+      if ( !roadblocks[name].length ) {
+        googletag.defineSlot( '/118803185/' + name, sizes[name], id ).addService( googletag.pubads() );
+        googletag.display( id );
+        }
+      };
+    
+    filOtaz_de.ads.gpt.activateAdFrame = function( id ) {  
+			if( !id ) return;
+			if( adZoneHandled[id] ) return; adZoneHandled[id] = true; // only one active zone per id
+ 
+			var packing   = $('#ad_bin_'+ id );
+			id = 'ad_zone_'+ id;
+			var container = packing.find('>#'+ id );
+  
+			var name = container.attr('name');
+			if( !name || !sizes[name] ) return;
+   
+			// handle custom ad load events
+			container.on('filOtaz_de.ads.gpt.noBanner',   function(){  return false;  });
+			container.on('filOtaz_de.ads.gpt.preBanner',  function(){
+				filOtaz_de.ads.fitIn( container );
+				return false;
+				});
+			container.on('filOtaz_de.ads.gpt.postBanner', function(){  return false;  });
+
+
+			// define content
+			googletag.cmd.push( function() {
+				var pa = googletag.pubads();
+        if ( roadblocks[name] ) {
+          pa.addEventListener('slotRenderEnded', function (e) {
+            for (var i=0; i<roadblocks[name].length; i++) {
+              if ( e.slot.getSlotElementId() == 'ad_zone_' + roadblocks[name][i] ) {
+
+		    if ( e.isEmpty ) {
+                  unblock(id, roadblocks[name][i]);
+                  }
+                else {
+                  document.getElementById(id).style.display = 'none';
+                  for (var key in roadblocks) {
+                    if ( !roadblocks.hasOwnProperty(key) ) continue;
+                    for ( var j=0; j<roadblocks[key].length; j++ )
+                    if ( id == 'ad_zone_' + roadblocks[key][j] ) {
+                      unblock(get_id(key), roadblocks[key][j]);
+                      break;
+                      }
+                    }
+                  }
+                }
+              }
+			    }); // pa.addEventListener
+			    //	    console.log('roadblocks' + id);
+          googletag.display(id);
+          }
+        else {
+          pa.display( '/118803185/'+ name, sizes[name], id );
+	// console.log( 'asked for', '/118803185/'+ name, sizes[name], id );
+          }
+				pa.addEventListener('slotRenderEnded', function(e) {
+			    if( e.slot.getSlotElementId() != id )  return;	// not our slot
+			    container.trigger( e.isEmpty ? 'filOtaz_de.ads.gpt.noBanner' : 'filOtaz_de.ads.gpt.preBanner' );
+console.log( name +( e.isEmpty ? ' isEmpty' : '' ) );
+					});
+        });
+      }; //filOtaz_de.ads.gpt.activateAdFrame
+
+		// activate wallpaper combo add frame
+/*
+		filOtaz_de.ads.gpt.wallpaper = function() {
+			console.log('filOtaz_de.ads.gpt.wallpaper not yet supported');
+			};
+*/
+
+		})();
+	</script><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link><link rel="manifest" href="/manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body class=""><noscript><img src="https://taz.de/stats/piwik.php?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Redaktion/Gesellschaft/Alltag,Artikel",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><span id="ad_bin_fireplace_bg" class="ad_bin"><div id="ad_zone_fireplace_bg" name="fireplace_bg" class="ad_zone"></div></span><span id="ad_bin_fireplace_mitte" class="ad_bin"><div id="ad_zone_fireplace_mitte" name="fireplace-mitte" class="ad_zone"></div></span><span id="ad_bin_fireplace_links" class="ad_bin"><div id="ad_zone_fireplace_links" name="fireplace-links" class="ad_zone"></div></span><span id="ad_bin_fireplace_rechts" class="ad_bin"><div id="ad_zone_fireplace_rechts" name="fireplace-rechts" class="ad_zone"></div></span><span id="ad_bin_fireplace_script" class="ad_bin"><div id="ad_zone_fireplace_script" name="fireplace-script" class="ad_zone"></div></span><script type="text/javascript">
+(function(){
+  var parent = $('#ad_bin_fireplace_rechts').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_rechts');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_bg').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_bg');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_mitte').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_mitte');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_links').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_links');
+  })(); 
+              </script><div id="adzone_wall" class=""><span id="ad_bin_ros_top_rechts" class="ad_bin"><div id="ad_zone_ros_top_rechts" name="ros_top-rechts" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_rechts';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><span id="ad_bin_ros_top_mitte" class="ad_bin"><div id="ad_zone_ros_top_mitte" name="ros_top-mitte" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></div><div id="pages" class="news"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="odd trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="even treven"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="odd trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="even trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="odd treven"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="even trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="odd trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="even treven"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul><div class="full news interview article page first odd first_page n1" itemscope="" itemtype="http://schema.org/NewsArticle"><div class="head" role="head"><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="even trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="odd treven"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a></li><li class="even trodd selected"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="odd trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a></li><li class="even treven"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a></li><li class="odd trodd"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a></li><li class="even trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a></li><li class="last odd treven"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><span class="body" role="main"><div class="main rack first_rack" id="xid819017">
+    
+	<div xmlns="" class="metadata" itemscope="">
+<a id="articleURL" href="/!5399523"></a><a id="speakingURL" href="/Nick-Srnicek-zur-Post-Arbeitsgesellschaft/!5399523"></a><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-article-ID" content="5399523"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="url-ID" content="5399523"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-obj-ID" content="1944221"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="vgwort-counter-ID" content="fd6e1b77be7d4b7f97a6bb4c47e058d9"></meta><span id="articleID"></span><span id="cmsArticleID">5399523</span><img src="//taz.met.vgwort.de/na/fd6e1b77be7d4b7f97a6bb4c47e058d9" width="1" height="1" alt=""><img src="/count/vgwort/fd6e1b77be7d4b7f97a6bb4c47e058d9.gif" width="1" height="1" alt="">
+</div>
+<div role="region" id="" class="odd sect sect_article news interview"><article class="sectbody" itemprop="articleBody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Nick Srnicek zur Post-Arbeitsgesellschaft</span><span class="hide">: </span><span>„Arbeiten ist nichts Erstrebenswertes“</span>
+</h1>
+<p xmlns="" itemprop="description" class="intro ">Um etwas zu verändern, fehlen den Linken konkrete Strategien. Nick Srnicek will nun mit einem neuen Modell den Neoliberalismus eindämmen.</p>
+      
+      <a xmlns="" class="full picture" href="/picture/1944221/948/ad47c29d8f2358e33d1d240dc62b9ca1_edited_68872000_8fe58eee04.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	" itemprop="image"><img src="/picture/1944221/624/ad47c29d8f2358e33d1d240dc62b9ca1_edited_68872000_8fe58eee04.jpeg" alt="Ein Mann liegt im Bett und hält ein Handy in den Händen, sein Gesicht ist davon verdeckt" title="Ein Mann liegt im Bett und hält ein Handy in den Händen, sein Gesicht ist davon verdeckt"></a><p xmlns="" class="caption">Werden wir in Zukunft gut leben ohne Arbeit? <span class="credit"> Foto: dpa</span></p>
+    
+      <p xmlns="" class="article first odd">
+        <strong>taz: Herr Srnicek, die Jobs werden immer schlechter, die Löhne sinken, die Mieten hingegen steigen, die Unzufriedenheit wächst – eigentlich eine ideale Situation für die Linke – aber sie gewinnt einfach nicht. Wieso?</strong>
+      </p>
+      <p xmlns="" class="article even"><strong>Nick Srnicek:</strong> Die Gründe dafür sind vielfältig. Linke Institutionen, wie Parteien oder Gewerkschaften, die jahrzehntelang dafür gesorgt haben, dass es zumindest so etwas wie eine linke Macht in westlichen Gesellschaften gab, befinden sich seit Jahrzehnten auf dem absteigenden Ast. Sozialdemokratische Parteien sind sogar zu neoliberalen Hybriden geworden. Das wirtschaftliche Fundament hat sich außerdem maßgeblich verändert: Als die meisten Menschen noch morgens in die Fabrik gegangen sind, fiel es leichter, politische Aktionen zu koordinieren. Heute leben wir in einer Dienstleistungsgesellschaft. Die Menschen haben unterschiedliche Jobs und Realitäten, und es ist viel schwieriger, diese Interessen auf einen Nenner zu bringen. Drittens ist die Linke selbst heute sehr kopflos: sie ist in der Defensive und setzt auf kurzfristige politische Aktionen, die schnell wieder verpuffen und oft ergebnislos bleiben. Es existiert keine langfristige Strategie oder Perspektive.</p>
+      
+      <span id="ad_bin_artikel_medrec_1" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_1" name="artikel_medrec-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">
+        <strong>Beobachten Sie das eigentlich nur als Wissenschaftler oder erleben Sie es auch persönlich?</strong>
+      </p>
+      <p xmlns="" class="article even">Ich habe diesen Frust selber erlebt. Ich war nach der Finanzkrise bei „Occupy London“ aktiv. Wir waren voller Hoffnung, wollten die Finanzwirtschaft ändern und direkte Demokratie voranbringen, bis dann innerhalb kürzester Zeit alles auseinandergefallen ist und ich mich gefragt habe: Was ist denn eigentlich schiefgelaufen? Mir wurde klar, es wurde überhaupt nicht mehr über das gesprochen, was sein könnte. Es gab keinen konkreten Zukunftsentwurf, auf den wir uns hätten einigen können.</p>
+      <div xmlns="" class="article rack no4">
+<div xmlns="http://www.w3.org/1999/xhtml" role="region" id="xid5403342" class="odd sect sect_profile big pictured "><div class="secthead" role="heading"><h2><a name="im Interview:"><span>im Interview:</span></a></h2></div><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="big pictured 
+          
+          
+          
+          
+          
+          
+          
+          
+        person objlink"><h4 itemprop="name">Nick Srnicek</h4><img itemprop="image" src="/picture/1944457/138/ad47c29d8f2358e33d1d240dc62b9ca1_edited_68873483_f50e78a157.jpeg" alt="Nick Srnicek" title="Nick Srnicek"></img></a><p class="caption"><span class="credit">Foto: privat</span></p></div></div><div xmlns="http://www.w3.org/1999/xhtml" role="region" id="xid5403342" class="odd sect sect_profile-descr "><div class="sectbody"><!--1--><p xmlns="" class="bodytext" pos="0">Jahrgang 1982, schreibt über linke Bewegung und digitalen Kapitalismus. Zuletzt erschien von ihm „Die Zukunft erfinden. Postkapi­talismus und eine Welt ohne Arbeit“. Heute Abend diskutiert er im HAU über Plattform­kapitalismus.</p></div></div>
+</div>
+      <p xmlns="" class="article odd">
+        <strong>Marxisten wie David Harvey argumentieren, dass die Stadtproteste heute das Potenzial haben, widerständige Strukturen zu entwickeln, die über das eigene Milieu hinausgehen und in denen die Klassen- und Eigentumsfragen zunehmend gestellt werden. Sehen Sie das auch?</strong>
+      </p>
+      <p xmlns="" class="article even">Nicht wirklich. Der neoliberale Kapitalismus ist einfach zu allmächtig als dass diese defensive Politik dagegen ankommen könnte. Die Proteste gegen Zwangsräumung, die es in vielen Städten gibt, sind zwar sehr wichtig – dort kämpfen Menschen dafür, dass sich die Lebenssituation der Menschen nicht noch mehr verschlechtert –, aber sie verteidigen doch bloß den Status quo. Es fehlt auch hier eine Strategie wie man über eine Feuerlöschpolitik hinaus etwas erreichen könnte.</p>
+      <p xmlns="" class="article odd">
+        <strong>Was schlagen Sie stattdessen vor?</strong>
+      </p>
+      <p xmlns="" class="article even">Mein Kollege Alex Williams und ich schlagen in unserem Buch „Die Zukunft erfinden“ eine Post-Arbeitsgesellschaft vor, also eine Gesellschaft, in der Menschen ohne Arbeit gut leben können. Wir würden zwar noch im Kapitalismus leben, kapitalistische Akkumulation wäre noch der wirtschaftliche und gesellschaftliche Motor, aber wir würden den Neoliberalismus massiv eindämmen. Das wäre schon mal eine viel bessere Situation als heute, wo es nur noch wenige Jobs gibt, die gut bezahlt sind, und sehr viel Konkurrenz und Armut herrscht.</p>
+      <p xmlns="" class="article odd">
+        <strong>Wie wollen Sie diese Post-Arbeitsgesellschaft erreichen?</strong>
+      </p>
+      <p xmlns="" class="article even">Die Linke sollte gemeinschaftlich für Automatisierung, für Verkürzung der Arbeitszeit, für ein bedingungsloses Grundeinkommen und gegen das neoliberale Arbeitsethos kämpfen. Das sind die vier Pfeiler der Post-Arbeitsgesellschaft.</p>
+      <p xmlns="" class="article odd">
+        <strong>Ist das Ersetzen der menschlichen Arbeitskraft durch Maschinen nicht das Grundprinzip des Kapitalismus?</strong>
+      </p>
+      <p xmlns="" class="article even">Das stimmt. Trotzdem haben wir heute eine andere Ausgangslage als in der Vergangenheit. Früher gab es viel Arbeit und eine starke Arbeiterbewegung, die dann für kürzere Arbeitstage gekämpft hat. Bis vor ein paar Jahrzehnten hatten wir auch immer wieder Phasen von starkem Wirtschaftswachstum, in denen neue Jobs entstanden sind. Beides gibt es heute so nicht mehr und somit auch keine Vollbeschäftigung. Viele Leute arbeiten schon heute gar nicht mehr oder in schlecht bezahlten Jobs. Die Linke sollte eine Situation vorantreiben, in der immer weniger Menschen arbeiten müssen und trotzdem gut leben können. Es muss ein Umdenken geben. Arbeiten ist nichts Erstrebenswertes. Wir werden nie wieder Vollbeschäftigung haben, die Zahl der schlecht bezahlten Jobs wächst stetig. Es ist also besser, für die Abschaffung der Arbeit zu kämpfen, also für mehr Beschäftigung, die sowieso unrealistisch ist.</p>
+      <p xmlns="" class="article odd">
+        <strong>Sie werben für das bedingungslose Grundeinkommen. Ein Lieblingsprojekt von Silicon-Valley-Milliardären und Investmentbankern, die sich damit aus Umverteilung und anderen sozialen Verträgen lösen wollen. Sollte uns das nicht skeptisch stimmen?</strong>
+      </p>
+      <p xmlns="" class="article even">Absolut. Und deswegen müssen wir uns das Thema aneignen und von links dagegenhalten. Derzeit wird die Debatte von Leuten wie Elon Musk bestimmt, also von rechten Neoliberalen. Es ist sehr gefährlich, ihnen dieses Feld einfach zu überlassen. Eine linke Version des bedingungslosen Grundeinkommens ist aber kein Feigenblatt, sondern eins von vielen Instrumenten zur Umverteilung von Reichtum und Macht. Wenn die Menschen ein bedingungsloses Grundeinkommen haben, können sie Jobs, die sie nicht wollen, ablehnen. Sie haben außerdem Zeit für politisches Engagement und können einfach streiken, weil sie finanziell abgesichert sind. Das wäre ein riesiger Schritt.</p>
+      <p xmlns="" class="article odd">
+        <strong>Sie kritisieren die Linke dafür, dass sie sehr schwach ist. Würde es sie nicht noch mehr schwächen, für ein bedingungsloses Grundeinkommen zu kämpfen, das sie am Ende vielleicht gar nicht durchsetzen können?</strong>
+      </p>
+      <p xmlns="" class="article even">Mein Ziel ist ja nicht das Grundeinkommen, sondern die Post-Arbeitsgesellschaft. Das Grundeinkommen ist lediglich einer der Pfeiler, auf denen sie steht. Wir müssen das Gesamtpaket erstreiten. Und mal ganz ehrlich: Alles, was wir erkämpfen werden, ist doch besser als das, was wir jetzt haben?</p>
+      <p xmlns="" class="article odd">
+        <strong>Und da hilft auch die Reduzierung der Arbeitszeit für alle?</strong>
+      </p>
+      <p xmlns="" class="article even">Es gibt sowieso nicht mehr genug Jobs für alle, warum sollten dann nicht alle weniger arbeiten? Aktuell ist das doch noch sehr viel stärker gespalten. Manche Menschen arbeiten 60 oder 70 Stunden in der Woche, andere nur 20 oder weniger Stunden. Manche machen das freiwillig, für andere entsteht so große Not. Im idealen Szenario arbeiten nur die, die auch wollen, mehr. Die anderen müssen nicht. Ich finde, das klingt doch sehr gut, oder?</p>
+      <p xmlns="" class="article odd">
+        <strong>Aber wie erreichen wir jetzt diese Post-Arbeitsgesellschaft?</strong>
+      </p>
+      <p xmlns="" class="article even">Da können wir einiges von den Vordenkern des Neoliberalismus lernen. Die meisten denken, der Neoliberalismus hätte sich ab den 1970er Jahren langsam etabliert und hätte dann nach und nach irgendwie die Welt übernommen. So war es aber nicht. Die Idee des Neoliberalismus gibt es schon seit den 1930er Jahren und wurde dann von einer kleinen, elitären Gruppe international eta­bliert. Die hatten eine Vision, einen Plan und einen sehr langen Atem. Sie wollten weg von der damals vorherrschenden Wirtschaftspolitik des Keynesianismus und ihn durch den Neo­liberalismus ersetzen. Aus dieser Geschichte können wir lernen, wie es gehen könnte.</p>
+      <p xmlns="" class="article odd">
+        <strong>Inwiefern?</strong>
+      </p>
+      <p xmlns="" class="article even">Wir brauchen einen langen Atem und eine langfristige Strategie. Die Vordenker des Neoliberalismus haben es so gemacht, wie es schon der Marxist Antonio Gramsci beschrieben hat: Sie haben sich die vorherrschende Hegemonie angeschaut und die Idee einer Gegenhegemonie entwickelt, die sie dann strategisch über Jahrzehnte platziert haben. Sie haben Think-tanks auf allen Kontinenten gegründet, sie waren in den Medien vertreten, haben Politiker beraten und haben in Talkshows gesessen. Sie haben so den Common Sense, die Art und Weise, wie Menschen denken und handeln, nach und nach grundlegend verändert.</p>
+      <p xmlns="" class="article odd">
+        <strong>Und davon kann die Linke lernen?</strong>
+      </p>
+      <p xmlns="" class="article even">Es geht natürlich nicht darum, eins zu eins zu kopieren, was sie gemacht haben. Aber es kann sehr hilfreich dabei sein, eine langfristige Strategie zu entwickeln und sich zu überlegen wie man sie umsetzen kann. Die Linke beschäftigt sich derzeit entweder mit den nächsten Wahlen oder möchte am liebsten immer gleich die Revolution. Das ist einfach zu kurzfristig gedacht, um wirklich etwas bewegen zu können.</p>
+      <p xmlns="" class="article odd">
+        <strong>Also lieber Hardcore-Lobbypolitik betreiben?</strong>
+      </p>
+      <p xmlns="" class="article even">(lacht) Lobbypolitik ist nicht zwangsläufig etwas Schlechtes! Wenn die Frage ist, wie wir eine revolutionäre Situation aufbauen können, müssen wir uns auch klarmachen, dass wir alle zivilgesellschaftlichen Bereiche verändern müssen. Die Linke konzentriert sich aber meist nur auf einen Bereich zu einer Zeit – mal ist es eine Partei, die nach links gedreht werden soll, mal sind es die Gewerkschaften, mal ist es die Kultur – und dann verliert sie wieder auf allen anderen Feldern.</p>
+      <p xmlns="" class="article odd">
+        <strong>Wir sollten also linke Thinktanks gründen?</strong>
+      </p>
+      <p xmlns="" class="article last even">Warum nicht? Thinktanks sind Orte, an den man sich jenseits der alltäglichen Politik konzentriert Gedanken über Strategien und die Zukunft macht. Und die braucht die Linke dringender denn je.</p>
+    </article></div>
+
+    
+  
+
+    
+  <div role="region" id="" class="odd sect "><div class="sectbody"><a xmlns="" id="reward" shape="rect">Einmal zahlen</a><script> filOtaz_de.flattr();</script></div></div>
+
+    
+	<div class="shariff">.</div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171498/" ratioURL-ressource="171498" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Wieviel ist freie Presse wert?</span>
+</h1>
+  		<p xmlns="" class="article first odd">taz.de ist frei zugänglich – ohne Paywall. Wir sind der Überzeugung, dass es kritische Informationen im Netz geben muss, die nicht kostenpflichtig sind. Aber das geht nur, wenn sich unsere Leser*innen an dieser Idee beteiligen und den taz-Journalismus mittragen.   
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt die taz.</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/tazzahl-ich-als-einzigartiges-Bezahlmodell/!164013/" ratioURL-ressource="164013" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">taz.zahl ich als einzigartiges Bezahlmodell.</span><span class="hide">: </span><span>Die einzige Tageszeitung diesseits der Paywall.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Unsere Informationen sollen nicht hinter einer Paywall verschwinden. Gerade jetzt braucht es faktentreuen, unabhängigen Journalismus. Wir setzen auf Freiwilligkeit und hoffen auf Ihre Beteiligung.  
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen auch Sie die taz mit 5,- Euro im Monat</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/tazde-ist-Konzern-unabhaengig/!163180/" ratioURL-ressource="163180" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">taz.de ist (Konzern-)unabhängig</span><span class="hide">: </span><span>Hinter vielen Zeitungen steht ein Konzern. Hinter uns stehen Sie.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Die taz ist als überregionale Tageszeitung ohne großen Medienkonzern  im Rücken eine Ausnahme. Dies ermöglicht uns, frei und unabhängig zu  berichten. Unsere Inhalte sind frei zugänglich, aber natürlich brauchen auch wir Geld. Deshalb sind wir auf Sie, unsere Leser*innen, angewiesen.    
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt die taz</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script type="text/javascript" xml:space="preserve">
+          (function () {
+            patOtaz_de.layer_tzi_paywahl({'campaign': '2019-5-27' });
+          })();
+        </script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Normal/!155790/" ratioURL-ressource="155790" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Normal</span><span class="hide">: </span><span>Freier Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Das Bedürfnis nach vertrauenswürdiger Information ist derzeit sehr hoch, viele blicken und klicken in diesen unsicheren Zeiten auf die Berichterstattung der taz. Während der vergangenen Wochen ist klar geworden, wie wichtig freier Journalismus ist. In Krisenzeiten ist es „systemrelevant”, dass Menschen sich unabhängig informieren können. Ohne Paywall. Wir finden es wichtig, dass uns möglichst viele Menschen lesen – auch jene, die sich kein Abo leisten können. Doch dazu brauchen wir Ihre Hilfe.      
+</p>
+  		<p xmlns="" class="article even">Guter, kritischer Journalismus ist nicht kostenlos zu haben und braucht Finanzierung. Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Im Gegenzug wird sie freiwillig und solidarisch unterstützt. Von unseren Leser*innen, von Ihnen. Mit Ihrer Wertschätzung und Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit, ein Forum für Meinungsvielfalt, eine engagierte Stimme für Minderheiten. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Seien Sie mit uns taz. Zusammen mit den 25.500, die schon dabei sind.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Klima/!155427/" ratioURL-ressource="155427" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Klima</span><span class="hide">: </span><span>Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wir berichten seit 1978 über die Zerstörung unseres Planeten – weil wir daran glauben, dass eine bessere Welt möglich ist. Klima- und Umweltberichterstattung haben in der taz schon immer einen großen Raum eingenommen, aber zurzeit gehen wir noch einmal in die Offensive. Die taz berichtet noch intensiver über die drohende Klimakatastrophe – auf allen Kanälen. Um dies leisten zu können, sind wir auf die Unterstützung unserer Leser*innen angewiesen. Denn guter Journalismus ist aufwändig und nicht kostenlos zu haben.      
+</p>
+  		<p xmlns="" class="article even">Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Unsere Artikel sollen so viel wie möglich gelesen, geliked und geteilt werden. Nur so können sie die ökologisch notwendigen Veränderungen unserer Gesellschaft vorantreiben. Im Gegenzug wird die taz von unseren Leser*innen unterstützt. Freiwillig und solidarisch. Mit Ihrer Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit und eine engagierte Stimme für mehr Klimaschutz. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. 25.500 machen schon mit.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><div role="region" id="" class="odd sect sect_text "><div class="sectbody"><p>
+
+	Fehler auf taz.de entdeckt?
+	    </p><p>
+        Wir freuen uns über eine 
+	<a href="mailto:fehlerhinweis@taz.de?subject=Fehlerhinweis%20zu%20https://taz.de/Nick-Srnicek-zur-Post-Arbeitsgesellschaft/!5399523/&amp;body=Zu%20%22Nick Srnicek zur Post-Arbeitsgesellschaft: „Arbeiten ist nichts Erstrebenswertes“%22%0D%0Ahttps://taz.de/Nick-Srnicek-zur-Post-Arbeitsgesellschaft/!5399523/%0D%0A%0D%0ABitte%20beschreiben%20Sie%20uns%20den%20Fehler.%20Sie%20können%20gern%20einen%20Screenshot%20anhängen.%20Wir%20danken%20für%20Ihre%20Hilfe%21%20
+					%0D%0A%0D%0A
+					Inhaltliches%20Feedback%20geben%20Sie%20uns%20gerne%20in%20der%20Kommentarspalte%20oder%20richten%20es%20an%20briefe@taz.de.%20Dort%20leiten%20wir%20ihr%20Feedback%20auch%20an%20die%20Redaktion%20weiter.%20Über%20diese%20Mailadresse%20nehmen%20wir%20nur%20Rechtschreib-%20und%20Faktenkorrekturen%20vor.				">Mail an fehlerhinweis@taz.de</a>!</p><p>
+	Inhaltliches Feedback? 
+	</p><p>
+
+	Gerne als Leser*innenkommentar unter dem Text auf taz.de oder über das
+	<a href="/!112355/"> Kontaktformular</a>.
+		</p></div></div><!-- DEBUG belly: 1 extras here, 0 from directory Schwerpunkt Finanzkrise, thats 1 merged-->
+      
+      <div class="webelement-content-container" webelementid="html-5716882"><div class="webelement-content-container-content sectbody"><h6>Wir würden Ihnen hier gerne einen externen Inhalt zeigen. Sie entscheiden, ob sie dieses Element auch sehen wollen.</h6><p>Ich bin damit einverstanden, dass mir externe Inhalte angezeigt werden. Damit können personenbezogene Daten an Drittplattformen übermittelt werden. <a href="https://taz.de/!166598" target="_blank">Mehr dazu in unserer Datenschutzerklärung.</a></p></div><div class="webelement-content-container-inner"><label class="checkbox-switch"><input type="checkbox"></input><span class="checkbox-switch-slider-round"></span><span class="webelement-checkbox-switch-text">Externen Inhalt erlauben<span id="consentPreview"></span></span></label><p class="webelemnt-checkbox-switch-disclaimer"></p></div><div class="webelement-html-content" data-initial-state="true" webelementid="html-5716882"><noscript class="html-content" type="text/plain"><iframe src="https://taz-vorgelesen.podigee.io/56-neue-episode/embed?context=external&theme=default" style="border: 0" border="0" height="150" width="100%"></iframe></noscript></div><div class="webelement-js-content"><script type="text/javascript">steffiOtaz_de.WebelementSwitch().setWebelementSwitch('html-5716882');</script></div></div>
+    </span><span class="wing" role="contentinfo"><div class="rack first_rack" id="xid459821">
+    
+	<!--template mode="layout" match="display[ @obj='descr' ]":start--><div role="region" id="" class="odd sect sect_description decorated focus directory no_body"><div class="secthead" role="heading"><a class="pictured" name="Schwerpunkt Finanzkrise" href="/Schwerpunkt-Finanzkrise/!t5009668/"><img src="/picture/45302/300/Schwerpunkt_Finanzkrise1.jpg"></img></a><h2><a name="Schwerpunkt Finanzkrise" href="/Schwerpunkt-Finanzkrise/!t5009668/"><span>Schwerpunkt Finanzkrise</span></a></h2></div><div class="sectbody"></div></div>
+
+    
+	<div role="region" id="" class="even sect sect_meta "><div class="sectbody"><ul role="navigation" class="left rootline toolbar"><li class="first odd trodd selected"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="last even trodd selected"><a href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span>Alltag</span></a></li></ul><ul role="navigation" class="right toolbar"><li class="date" itemprop="datePublished" content="2017-05-01T09:23:00+01:00">1. 5. 2017</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2017-05-01T11:41:03+01:00"></meta></ul></div></div>
+
+    
+	<div role="region" id="" class="odd sect sect_profile "><div class="secthead" role="heading"><h2><a name="das Interview führte"><span>das Interview führte</span></a></h2></div><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="author person objlink" itemprop="url" href="/Nina-Scholz/!a34367/"><h4 itemprop="name">Nina Scholz</h4></a></div></div>
+
+    
+	<div role="region" id="" class="even sect sect_tags "><div class="secthead" role="heading"><h2><a name="Themen"><span>Themen</span></a></h2></div><ul role="directory" class="news directory sectbody"><li class="first odd trodd tag"><a role="link" href="/!t5302203/" class="tag dirlink"><span>Prekäre Arbeit</span></a></li><li class="even trodd tag"><a role="link" href="/!t5022109/" class="tag dirlink"><span>Institut zur Zukunft der Arbeit</span></a></li><li class="odd treven tag"><a role="link" href="/!t5311776/" class="tag dirlink"><span>Befristete Beschäftigung</span></a></li><li class="even trodd tag"><a role="link" href="/!t5011637/" class="tag dirlink"><span>Die Linke</span></a></li><li class="odd trodd tag"><a role="link" href="/!t5010385/" class="tag dirlink"><span>Linke</span></a></li><li class="even treven tag"><a role="link" href="/!t5011441/" class="tag dirlink"><span>Digitalisierung</span></a></li><li class="odd trodd tag"><a role="link" href="/!t5010783/" class="tag dirlink"><span>Kapitalismus</span></a></li></ul></div>
+
+    
+	
+
+    
+	<!-- DEBUG label: 0 extras here, 0 from directory Schwerpunkt Finanzkrise, thats 0 merged-->
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><span id="ad_bin_ros_sidebar_1" class="ad_bin sold contentad"><div id="ad_zone_ros_sidebar_1" name="ros_sidebar-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_sidebar_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><!-- DEBUG wing: 0 extras here, 0 from directory Schwerpunkt Finanzkrise, thats 0 merged--></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><span class="tail" role="complementary"><!-- DEBUG tail: 0 extras here, 0 from directory Schwerpunkt Finanzkrise, thats 0 merged--><div class="rack first_rack" id="xid479112">
+    
+	<div role="region" id="" class="first last odd sect sect_profile brief "><div class="secthead" role="heading"><h2><a name="mehr von"><span>mehr von</span></a></h2></div><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="brief author person objlink" itemprop="url" href="/Nina-Scholz/!a34367/"><h4 itemprop="name">Nina Scholz</h4></a></div></div>
+
+    
+		</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="xid709888" class="even sect sect_adr style_adr "><ul role="directory" class="sectbody corp  directory"><li class=" first last odd trodd online   leaded pictured leaded remote story"><a class="dept" href="/FUTURZWEI/!p5099/">FUTURZWEI</a><a href="https://taz.de/!5740649" target="_blank" class="objlink leaded pictured leaded remote story noavatar" role="link"><h4>Jagoda Marinić über realen Wandel</h4><h3>Sanfte Radikalität</h3><p class="brief">  Changemakerin Jagoda Marinić musste lernen, „Radikalität“ und „Mehrheit“ zusammenzubringen.    </p><img src="/uploads/images/300/taz-FUTURZWEI-Sanfte-Radikalitaet-Wandel-Changemaker-Jagoda-Marinic-Heidelberg-Anja-Weber-1.jpg" alt="" title=""></img></a></li></ul></div></span><a itemprop="mainEntityOfPage" href="/Nick-Srnicek-zur-Post-Arbeitsgesellschaft/!5399523"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div class="full no_rightbar below news page even n2"><div class="head" role="head"><div class="nose" role="heading" id="pg_hd"><h2><a name="Volle Spalte unterm Artikel" href="/Volle-Spalte-unterm-Artikel/!p5315/"><span>Volle Spalte unterm Artikel</span></a></h2></div><ul role="navigation" class="news navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid841997">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="Mehr zum Thema"><span>Mehr zum Thema</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd    interview article leaded pictured"><a href="/Soziologe-ueber-linke-Technikstrategien/!5433224/" ratioURL-ressource="5433224" class="objlink interview article leaded pictured noavatar" role="link"><h4>Soziologe über linke Technikstrategien</h4><h3>„Wir überlisten die Algorithmen“</h3><p>Was ist linke Technik? Mit dieser Frage beschäftigt sich Richard Barbrook. Ein Gespräch übers Silicon Valley und linken Wahlkampf.  </p><img src="/picture/2189452/300/13902412.jpeg" alt="Ein Kinderdreirad steht auf einem Haufen Platinen" title="Ein Kinderdreirad steht auf einem Haufen Platinen"></img></a></li><li class=" even trodd    report article leaded pictured"><a href="/Crowdworking-als-Zukunft-der-Arbeit/!5398743/" ratioURL-ressource="5398743" class="objlink report article leaded pictured noavatar" role="link"><h4>Crowdworking als Zukunft der Arbeit</h4><h3>Ackern für 3 Euro die Stunde</h3><p>Arbeit online erledigen und damit Geld verdienen – davon können nur wenige leben. Soziale Absicherung und Mindestlohn sind nicht drin.  <span class="author">Hannes Koch</span></p><img src="/picture/1934832/300/c5caaf6919aa76a355a8e5e787745cfc_edited_68506408_529ecc0338.jpeg" alt="Drei Menschen sitzen vor Computern." title="Drei Menschen sitzen vor Computern."></img></a></li><li class=" last odd treven    subjective commentary article leaded pictured"><a href="/Debatte-Veraenderte-Arbeitsmoral/!5399052/" ratioURL-ressource="5399052" class="objlink subjective commentary article leaded pictured noavatar" role="link"><h4>Debatte Veränderte Arbeitsmoral</h4><h3>Es gibt ein Recht auf Faulheit</h3><span class="category_and_name"><span>Kommentar </span><span class="author"><p>von <b>Kersten Augustin</b> </p></span></span><p>Martin Schulz sagt, dass er die „hart arbeitende Bevölkerung“ gewinnen will. Er sollte sich lieber um die Faulen kümmern.  </p><img src="/picture/1937750/300/95cf9b079ba91b54570008a8f786715d_edited_68627490_08dd3f6a7e.jpeg" alt="Martin Schulz vor riesigen SPD-Lettern" title="Martin Schulz vor riesigen SPD-Lettern"></img></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><span class="headed wing" role="complementary"></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Nick-Srnicek-zur-Post-Arbeitsgesellschaft/!5399523"></a></div><div class="full community page last odd n3"><div class="head" role="head"><ul role="navigation" class=" navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid495498">
+    
+
+	<div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="So können Sie kommentieren:"><span>So können Sie kommentieren:</span></a></h2></div><div class="sectbody"><p>       Bitte <a href="https://www.taz.de/kommune/post.php?a=registration" target="_blank">registrieren Sie sich</a> und halten Sie sich an unsere <a href="http://taz.de/netiquette" target="_blank">Netiquette</a>.     
+</p><p>      Haben Sie Probleme beim Kommentieren oder Registrieren?   
+</p><p>  Dann mailen Sie uns bitte an <a href="mailto:kommune@taz.de" target="_blank">kommune@taz.de</a>   </p></div></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="" class="even sect sect_commentlinks style_commentlinks "><div class="secthead" role="heading"><h2><a name="Leser*innenkommentare"><span>Leser*innenkommentare</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class="member " id="bb_message_3482813"><a class="author person" href="/!ku4346/"><h4>kami</h4></a><time datetime="2017-05-03T17:15:57+02:00"><meta value="1493824557"></meta>03. 05. 2017, 
+		17:15</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Da stimme ich mal mit Ihnen überein, auch wenn ich Ihre obige Einschätzung nicht teile, dass  immer mehr schlecht bezahlte Jobs in D gar kein Problem seien. (Die Statistiken zur wachsenden Schere zwischen Arm und Reich und dem explodierten  Niedriglohnsektor in D zeigen da ganz andere Fakten, siehe meine Antwort an "Werner W."  weiter oben.)</p>
+
+<p xmlns="" class="odd">
+Dennoch braucht es dafür in der Tat neue Ansätze - und zwar nicht nur für neue Arbeitsformen, sondern auch neue Absicherungsformen von Arbeitslosen, Kranken etc. und deren Finanzierungsquellen aka Besteuerung. </p>
+<p xmlns="" class="even">
+Unser gesamtes Sozialsystem beruht ja irrwitzigerweise fast ausschließlich auf der Besteuerung von Lohnarbeit - während Fantastilliarden z.B. im Finanzsektor gemacht werden, die komplett unter- bzw. unbesteuert bleiben. Dito für leistungslose Geldsegen wie hohe Erbschaften etc. </p>
+
+<p xmlns="" class="even">
+Allerdings sehe ich im Gegensatz zu Ihnen die Idee eines BGEs nicht einfach als altbackene Umverteilung unter Beibehaltung eines problematischen Status quo. Es gibt da ja sehr verschiedene BGE-Modelle, aber so ziemlich alle haben Implikationen bezüglich der Art und Rolle von Lohnarbeit, die weit über bloße Umverteilung hinausgehen. Ganz ehrlich: Haben Sie sich mal eingehender mit dem BGE beschäftigt? Ihre Kommentare dazu wirken nicht so. </p>
+
+<p xmlns="" class="last even">
+Bis umfassende Systemänderungen in Bezug auf neue Arbeitsformen etc. erdacht und erreicht sind, habe ich im Gegensatz zu Ihnen übrigens auch keine Probleme damit, auch erstmal umzuverteilen. Es ist ganz einfach mehr als genug für alle da, nur immer ungerechter verteilt. Diese ungerechte Entwicklung hat rein gar nichts mit "Leistung" zu tun, und ist das Ergebnis einer künstlichen Umverteilung von unten nach oben. Wieso also bitte nicht mal etwas RÜCKverteilung von oben nach unten? Wir hatten das schon mal in anderen Kommentarspalten: Ihre Kritik an Umverteilung sieht komischerweise immer nur die Rückverteilung von oben nach unten und nie die vorige bzw. aktuelle Umverteilung in die andere Richtung.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3482110"><a class="author person" href="/!ku10287/"><h4>Werner W.</h4></a><time datetime="2017-05-01T11:59:22+02:00"><meta value="1493632762"></meta>01. 05. 2017, 
+		11:59</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Es gibt sowieso nicht mehr genug Jobs für alle"</p>
+<p xmlns="" class="even">
+Es ist die Frage zu diskutieren ob Herr Srnicek die Realität richtig (und überhaupt) sieht. Schon seit vielen Jahren Jahren steigt die Zahl der Vollarbeitsplätze stetig und es werden in einigen Bereichen Mängel an Arbeitskräften gesehen. </p>
+
+<p xmlns="" class="even">
+Und das bedingungslose Grundeinkommen hat ja nicht das Ziel das weniger gearbeitet wird (im Gegenteil) sondern da produktiver und mit mehr Freude an der Sache gearbeitet wird. Insbesondere könnte man dann diese überbordende Sozialbürokratie abschaffen in der viele Menschen in unproduktiven Arbeitsplätzen festgehalten werden. Auch diese Menschen könnten (würden und müßten) dann produktiv arbeiten. </p>
+
+<p xmlns="" class="last even">
+Nach meinem Eindruck hat Herr Srnicek überhaupt gar nicht verstanden was das Ziel vernünftiger Wirtschafts- und Sozialpolitik sein sollte.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3482196"><a class="author person" href="/!ku6313/"><h4>wirklich?</h4></a><time datetime="2017-05-01T15:47:44+02:00"><meta value="1493646464"></meta>01. 05. 2017, 
+		15:47</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Werner W. </span>Welche Realität sehen sie denn? Offenbar kann man doch Dinge sehr unterschiedlich sehen, wenn man aus unterschiedlichen Perspektiven schaut , schauen sie sich also die Arbeitslosigkeit in Stuttgart oder in Deutschland an, sehen sie Deutschland als ein losgekoppeltes System, das einfach sehr gut wirtschaftetund deswegen soviele Arbeitsplätze "schafft". Ja, Deutschlands Industrie ist sehr effizient. Das soll auch kein Vorwurf an Deutschland sein, aber Fakt ist doch das die Industrie hier nur Gewinne einfährt weil sie im Bezug auf Deutschland eine massive Überproduktion hat, zum Glück beliefern wir  aber ja auch den Rest der Welt. Können die anderen ja auch machen, eben nicht, das ist ja der Punkt. Die Marktwirtschaft hat nun mal als ureigenstes Prinzip immer effizienter zu werden, dass heißt eine immer größere Produktion mit immer weniger Menschen zu bewältigen. Das funktioniert solange wie unser Wohlstand im selben Tempo mitwächst, da wir dadurch die Effizienzsteigerungen ausgleichen können. Nun haben wir aber dummerweise 2 Probleme, zum einen ist diese Welt nicht dafür ausgelegt das unser Wohlstand ins unendliche steigt, zum anderen kann der Wohlstand nur steigen wenn die Gewinne zumindest an halbwegs breite Bevölkerungsschichten verteilt werden, sonst kann schließlich niemand noch mehr konsumieren und unsere wunderbarer Traum vom ewigen Wachstum funktioniert auch nicht mehr. Aber vielleicht lebe ich ja garnicht in der Realität und unser aller Wohlstand wächst doch noch ins unendliche und die ganze Welt wird in 50 Jahren industrialisiert sein und weltweit wird es nur 5% Arbeitlosigkeit geben.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3482188"><a class="author person" href="/!ku4346/"><h4>kami</h4></a><time datetime="2017-05-01T15:38:05+02:00"><meta value="1493645885"></meta>01. 05. 2017, 
+		15:38</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Werner W. </span>P.S.: Nicht zu vergessen, dass Deutschland seit der Sanktionierungsagenda inzwischen den größten europäischen Niedriglohnsektor in Kombination mit geringsten Mindestlöhnen hat. </p>
+
+<p xmlns="" class="last odd">
+Schon toll, Ihre "stetig steigenden Vollarbeitsplätze"...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3482179"><a class="author person" href="/!ku4346/"><h4>kami</h4></a><time datetime="2017-05-01T15:31:01+02:00"><meta value="1493645461"></meta>01. 05. 2017, 
+		15:31</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Werner W. </span>"Es ist die Frage zu diskutieren ob Herr Srnicek die Realität richtig (und überhaupt) sieht. Schon seit vielen Jahren Jahren steigt die Zahl der Vollarbeitsplätze stetig und es werden in einigen Bereichen Mängel an Arbeitskräften gesehen."</p>
+
+<p xmlns="" class="odd">
+Also sämtliche seriösen Statistiken belegen, dass das "Jobwunder" seit Einführung der Agenda 2010 keines ist, weil die gestiegene Erwerbstätigkeit (um knap 7% von 2003-2013) einer wesentlich geringeren Änderung des Gesamtarbeitsvolumens entgegensteht. Dafür haben sich gleichzeitig Erwerbstätigkeiten in Teilzeit (+25%) und geringfügiger Teilzeit (+17%) insbesondere für Frauen exponentiell erhöht. </p>
+
+<p xmlns="" class="last odd">
+Sie sehen wohl nur die "Realität", die Sie sehen wollen bzw. die Ihnen die faken Jubelarien von INSM und Nahles eintrichtern.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="guest " id="bb_message_3482107"><a class="author person"><h4>61321 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-01T11:52:49+02:00"><meta value="1493632369"></meta>01. 05. 2017, 
+		11:52</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Erste Unterstellung: Nick Srnicek kennt die Arbeitswelt nicht, er hat sie nie von innen gesehen, schreibt also über Dinge die für ihn schwer zu fassen sind.</p>
+<p xmlns="" class="even">
+Damit verbunden ist die zweite Unterstellung: Er hat nicht wirklich die physische und psychologische Beziehung des Menschen zu seiner Arbeit, zum Produkt seiner Arbeit und den Arbeitenden um ihn herum im Blick.</p>
+
+<p xmlns="" class="even">
+Die als zwangsläufig erachtete Aussicht einer neuen Zweiklassengesellschaft verwundert daher nicht: diejenigen, die noch die automatisierte Produktion am Laufen halten und im klassischen Sinne arbeiten und diejenigen, die vom Produktionsprozess bedingungslos befreit sind, deren Existenz dennoch gesichert ist. Die alte Frage nach Besitz der Produktionsmittel wird dabei anscheinend stillschweigend als erledigt angesehen.</p>
+
+<p xmlns="" class="even">
+Man sollte immer skeptisch gegenüber solchen Visionen sein, die reine Schreibtischprodukte sind. Umso mehr, als hier die Vision einer durch und durch digitalen und automatisierten Welt beschworen wird. Was unterscheidet denn das von der kapitalistischen Sicht auf die Zukunft?</p>
+<p xmlns="" class="odd">
+Neue inhumane Verhältnisse an den Arbeitsplätzen der Zukunft drohen. </p>
+<p xmlns="" class="last even">
+Die Ökologie scheint darüber hinaus sowieso keine Rolle zu spielen. Unter welchen Bedingungen ein Weizenfeld bestellt werden soll, eine Kuh gehalten werden soll, Grundlagen unserer physischen Existenz, müssen in unseren Zukunftsbetrachtungen unbedingt enthalten sein.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3482140"><a class="author person" href="/!ku4346/"><h4>kami</h4></a><time datetime="2017-05-01T13:31:51+02:00"><meta value="1493638311"></meta>01. 05. 2017, 
+		13:31</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@61321 (Profil gelöscht) </span>Es ist ziemlich eindeutig, wer hier keinen Bezug zur Realität hat, wenn Sie glauben, dass für Akademiker die Couch Potato-Schlaraffenlandgelder einfach so vom Himmel fallen, während Sie arbeiten gehen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3482227"><a class="author person"><h4>61321 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-01T17:21:01+02:00"><meta value="1493652061"></meta>01. 05. 2017, 
+		17:21</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@kami </span>Wenn Sie diskutieren möchen, sehr gerne, gehören doch Ihre Beiträge regelmäßig zu den hoch-anspruchsvollen intellektuellen Herausforderungen in den hießigen Kommentarspalten.</p>
+<p xmlns="" class="last even">
+Allerdings sollten Sie dann auf irgendwas von dem eingehen, was ich schrieb, zumal ich durch Ihre pointierten Einwände dann möglicherweise echt herausgefordert werde</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3482311"><a class="author person" href="/!ku4346/"><h4>kami</h4></a><time datetime="2017-05-01T21:20:52+02:00"><meta value="1493666452"></meta>01. 05. 2017, 
+		21:20</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@61321 (Profil gelöscht) </span>Danke für die Blumen.. aber es ist doch ziemlich klar, worauf sich diese Antwort bezieht - nämlich auf Ihre Unterstellung, die Sie schon gleich zum Einstieg Ihres Kommentars hinlegen. Ich zitiere Sie nochmals: "Erste Unterstellung: Nick Srnicek kennt die Arbeitswelt nicht, er hat sie nie von innen gesehen, schreibt also über Dinge die für ihn schwer zu fassen sind."</p>
+
+<p xmlns="" class="odd">
+Aha. Publizisten und Universitätsdozenten wie Srnicek haben also "keinen Bezug zur Arbeitswelt". Sorry, das ist doch Blödsinn - und übrigens eine krachende Beleidigung für alle, die in diesen Bereichen ARBEITEN. (Und zwar heutzutage immer mehr arbeiten für immer weniger Geld in immer unsichereren Beschäftigungsverhältnissen, wenn sie nicht gleich als "selbständige" Lektoren mit "Lehrauftrag" verheizt werden. ) </p>
+<p xmlns="" class="even">
+Ihr Kommentar ist einer von gleich dreien hintereinander, die nicht nur dem promovierten Absolventen der London School of Economics mal eben keine Ahnung von Ökonomie und Arbeitswelten unterstellt, sondern die dem Universitätsdozenten und Autor mehrerer Fachbücher unterstellen, die Realität von Arbeit überhaupt nicht aus eigener Anschauung als Teil der arbeitenden Bevölkerung zu kennen. </p>
+
+<p xmlns="" class="last even">
+Ich stimme bei weitem auch nicht mit allen Thesen Srniceks überein, aber das ist doch wirklich kein Einstieg in anspruchsvolle Diskussionen. - Und noch dazu, wie schon gesagt, eine echte Beleidung für ganze hart arbeitende Berfugssparten (übrigens inclusive meiner Wenigkeit).</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3482406"><a class="author person"><h4>61321 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-02T11:49:58+02:00"><meta value="1493718598"></meta>02. 05. 2017, 
+		11:49</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@kami </span>Ein Vorschlag: ich lese mich da etwas ein und wenn die nächste Gelegenheit kommt , können wir weiter reden (wird ja hier nicht der letzte Artikel zum Thema sein). </p>
+<p xmlns="" class="last even">
+Mit meiner vorgefassten Meinung allein macht es wenig Sinn zu diskutieren. Zugegeben.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3482605"><a class="author person" href="/!ku4346/"><h4>kami</h4></a><time datetime="2017-05-03T01:28:33+02:00"><meta value="1493767713"></meta>03. 05. 2017, 
+		01:28</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@61321 (Profil gelöscht) </span>Ja, können wir sehr gerne machen. Allerdings ging es in den obigen Kommentaren ja nicht wirklich um die Thesen in Srniceks Büchern, sondern Ihre Unterstellungen bezüglich angeblich "Arbeit nicht aus eigener Anschauung kennenden" Unidozenten und Publizisten im Allgemeinen und Srniceks Person im Besonderen. Um die zu überdenken braucht es m.E. kein Einlesen in seine Bücher - aber vielleicht ein Einlesen in die heftigen Arbeits- und Bezahlungskonditionen in diesen Branchen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3482103"><a class="author person" href="/!ku15616/"><h4>Saccharomyces cerevisiae</h4><img src="/kommune/files/images/profile/70x70/15616.png" alt="" title=""></img></a><time datetime="2017-05-01T11:51:28+02:00"><meta value="1493632288"></meta>01. 05. 2017, 
+		11:51</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Was versteht der werte Herr Srnicek eigentlich unter "Neoliberalismus"?</p>
+<p xmlns="" class="even">
+Der Begriff ist doch zu einer abgedroschenen Phrase der Linken verkommen.</p>
+<p xmlns="" class="odd">
+Ähnlich wie beim "Wer-als-erster Faschismus-schreit-hat-gewonnen" beeilt sich der Neoaktivist, am Diskurs  vorbei Parolen zu brüllen. Und wundert sich dann warum sich nichts verändert.</p>
+<p xmlns="" class="even">
+Oh, und diese Visionen:</p>
+<p xmlns="" class="odd">
+"Eine linke Version des bedingungslosen Grundeinkommens ist aber kein Feigenblatt, sondern eins von vielen Instrumenten zur Umverteilung von Reichtum und Macht. "</p>
+<p xmlns="" class="even">
+Aber klar, die saturierte Couch-potatoe will unbedingt etwas an am Schlaraffenland verändern!</p>
+<p xmlns="" class="last odd">
+Träum weiter, Genosse.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3482144"><a class="author person" href="/!ku4346/"><h4>kami</h4></a><time datetime="2017-05-01T13:50:50+02:00"><meta value="1493639450"></meta>01. 05. 2017, 
+		13:50</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Saccharomyces cerevisiae </span>"Saturierte Couch-potatoe"? "Schlaraffenland?"</p>
+
+<p xmlns="" class="odd">
+Genau, und Smieceks Bücher und Artikel haben sich alle von alleine geschrieben, wie sich sicher auch seine Seminare alle von alleine vorbereiten und halten, und ein paar Schlaraffenlandelfen die Hausarbeiten und Abschlussarbeiten seiner Studierenden korrigieren und Gutachten dafür schreiben. </p>
+
+<p xmlns="" class="odd">
+Haben Sie und die Herren über Ihnen eigentlich die geringste Ahnung, mit wieviel Arbeit sich Universitätsdozenten dieser Tage wie wenig Geld erarbeiten??? </p>
+
+<p xmlns="" class="odd">
+Es ist eine Sache, inhaltlich gegen seine Positionen zu argumentieren. Aber diese Unterstellungen, der Autor müsse ein fauler Schmarotzer sein, sind echt unterirdisch. Passt aber gut zu Ihren sonstigen Ausführungen zu "linken Phrasen" und Gegreine darüber, dass alle angeblich immer gleich Faschismus schreien. Fehlt nur noch ein bisschen PI-Sprech zu "SJWs" und "political correctness-Diktatur."</p>
+<p xmlns="" class="last even">
+Wenn hier was saturiert und selbstgefällig ist, dann diese ekelhafte neurechte, permanent andere aufs Ignoranteste herabsetzende Tour.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3482232"><a class="author person" href="/!ku15616/"><h4>Saccharomyces cerevisiae</h4><img src="/kommune/files/images/profile/70x70/15616.png" alt="" title=""></img></a><time datetime="2017-05-01T17:50:20+02:00"><meta value="1493653820"></meta>01. 05. 2017, 
+		17:50</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@kami </span>Wie kommen Sie, "Kami", denn aus die Idee dass sich die  "saturierten Couch-potatoe" auf den Autor oder irgendwelche Dozenten bezog und nicht auf die Hypothese vom "linken Instrument zur Umverteilung"?</p>
+<p xmlns="" class="even">
+Abgesehen davon weiß ich ziemlich gut was Dozenten so verdienen:</p>
+<p xmlns="" class="odd">
+TV-L E 13 (je nach Stufe zwischen 3600 und 5200 €/Monat plus Zulagen)</p>
+<p xmlns="" class="last even">
+Jammern auf hohen Niveau hat.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3482607"><a class="author person" href="/!ku4346/"><h4>kami</h4></a><time datetime="2017-05-03T01:43:55+02:00"><meta value="1493768635"></meta>03. 05. 2017, 
+		01:43</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Saccharomyces cerevisiae </span>Naja, wen Sie mit einer direkten ad-hominem-Watschen gegen Srnicek in Ihren Kommentar einsteigen und mit einer direkten ad-hominem-Watschen gegen Srnicek enden, bietet sich schon die Interpretation an, dass "die saturierte Couch-potatoe" dazwichen sich nicht plötzlich auf was anderes bezieht. </p>
+
+<p xmlns="" class="last odd">
+Süß übrigens, dass Sie mal eben TV-L E 13 gegoogelt haben. Jetzt googeln Sie doch auch bitte nochmal, wie viele Mittelbauler volle feste TV-L E13er-Stellen haben und wie viele auf Teilzeit-Fristverträgen arbeiten, wo von den de facto 70 erbrachten Wochenstunden nominell ein Bruchteilchen davon in den Verträgen ausgewiesen sind und bezahlt werden. Oder wie die Mittelbauler nach Ende ihrer Teilzeitfristverträge dann noch komplett unbezahlt die Hausarbeiten- und Abschlussarbeitenstapel aus dem vorigen Semester korrigieren müssen etc. Ist schon lustig, wenn einer  anderen fehlende Realitätskenntnis vorwirft, der selbst nicht zwischen Realität und einer was-man-theoretisch-bekommen-würde-wenn-man-theoretisch-solche-Verträge-noch-bekommen-könnte-Tabelle unterscheiden kann.  3600-5200€/Monat plus Zulagen? Ich zitiere Sie mal: "Träum weiter."</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3483940"><a class="author person" href="/!ku15616/"><h4>Saccharomyces cerevisiae</h4><img src="/kommune/files/images/profile/70x70/15616.png" alt="" title=""></img></a><time datetime="2017-05-07T09:41:33+02:00"><meta value="1494142893"></meta>07. 05. 2017, 
+		09:41</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@kami </span>Die Frage nach Srniceks Definition ist also eine "Watschn"? Wenn der Begriff "Neoliberalismus", wie es nun mal Realität ist, als Anklage und Stigma per se herhalten muss stellt sich schon die Frage was der einzelne Verwender eigentlich darunter versteht.</p>
+<p xmlns="" class="even">
+Wenn Dozenten und wissenschaftliche Hilfskräfte von ihren Fakultäten in einem wie hier geschilderten Maße ausgebeutet werden, wieso wehren sie sich nicht mit den zur Verfügung stehenden arbeitsrechtlichen Instrumenten wie Verweigerung von unbezahlten Überstunden oder Klagen auf Entgelt vor dem Arbeitsgericht?</p>
+<p xmlns="" class="odd">
+Weil Sie Angst um ihre Master- oder Doktorarbeit haben?</p>
+<p xmlns="" class="even">
+Dann steht der Rechtsweg auch nach Beendigung  des  Beschäftigungsverhältnisses offen.</p>
+<p xmlns="" class="odd">
+Oder weil Sie einfach keine andere Beschäftigung mit dem jeweiligen Studienabschluss finden?</p>
+<p xmlns="" class="even">
+Dazu kann ich nur eine zugegebenermaßen sehr sarkastische Oberstudienrätin (A 14) zitieren:</p>
+<p xmlns="" class="odd">
+"Das Ergreifen eines Berufes zur persönlichen Zufriedenheit ist ein Ausdruck von höherer Intelligenz".</p>
+<p xmlns="" class="last even">
+Aber das war jetzt nicht beleidigend gemeint.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3482099"><a class="author person" href="/!ku423/"><h4>Georg Schmidt</h4></a><time datetime="2017-05-01T11:37:57+02:00"><meta value="1493631477"></meta>01. 05. 2017, 
+		11:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">die hohen Feiertage der ARbeiter, alle vergessen</p>
+<p xmlns="" class="even">
+1.Mai von ARbeitern erkämpft vergessen. 17 JUNI , glaube ich, Aufstand der ARbeiter in Berlin vergessen- und alles ohne die Dichter, sänger usw Bert Brecht hatte sich sogar während die Arbeiter gegen rusischen Panzer kämpften versteckt</p>
+<p xmlns="" class="last odd">
+keine Zeile wert naja</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3482310"><a class="author person" href="/!ku38824/"><h4>Machiavelli</h4></a><time datetime="2017-05-01T21:14:47+02:00"><meta value="1493666087"></meta>01. 05. 2017, 
+		21:14</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Georg Schmidt </span>Passt nicht ins Narrativ.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3482098"><a class="author person" href="/!ku12116/"><h4>Tom Farmer</h4></a><time datetime="2017-05-01T11:37:49+02:00"><meta value="1493631469"></meta>01. 05. 2017, 
+		11:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Immer mehr schlechte Jobs und jeder kämpft um seine Existenz?</p>
+<p xmlns="" class="even">
+Leider nicht Teil meiner Beobachtung, zumindest hier in DE.</p>
+
+<p xmlns="" class="even">
+Viele Absichten und keine konkrete Vorgehensweise? Verstehe ich, detaillierter kann man auch nicht sprechen da die Konsensfähigkeit der Linken nicht vorhanden ist.</p>
+
+<p xmlns="" class="even">
+Think Tank gründen? Von Links? Hat bestimmt herausragenden programmatischen Erfolg, insbesondere wenn es um die Finanzierung geht.</p>
+
+<p xmlns="" class="even">
+Gewerkschaften waren früher stärker? Wenn die nur noch für saturierte VW und Bosch MItarbeiter Haustarifverträge aushandeln und rote Fahnen schwenken am 1.Mai. Dann sind die leider auch überflüssig.</p>
+
+<p xmlns="" class="even">
+usw.usf. </p>
+<p xmlns="" class="odd">
+Neoliberalismus... soll er doch gucken wie er ohne uns weiterkommt.</p>
+<p xmlns="" class="last even">
+Macht er! Da können Sie sich mal ganz sicher sein.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3482182"><a class="author person" href="/!ku6313/"><h4>wirklich?</h4></a><time datetime="2017-05-01T15:33:47+02:00"><meta value="1493645627"></meta>01. 05. 2017, 
+		15:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Tom Farmer </span>ja, aber Deutschland als losgekoppeltes singuläres System zu sehen ist nicht sinnvoll. Wir haben nur deswegen eine ziemlich hohe Beschäftigungsrate weil wir eine Überproduktion haben um zu exportieren, die Marktwirtschaft baut schon darauf auf sukzessive für die gleiche Arbeit immer weniger Leute zu brauchen, deswegen müssen wir dann mehr konsumieren, damit trotzdem noch alle Arbeit finden, das geht solange gut bis natürliche Grenzen des Wachstums erreicht sind, oder aber die Effizienzsteigerungen größer sind, als unserer Konsum mitwachsen kann, ein weiteres problem könnte auch sein, das der Konsum nicht wachsen kann , da der Wohlstand einfach nicht mehr genug in die Breite gestreut wird. Vlt sehen sie das Problem?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3482265"><a class="author person" href="/!ku12116/"><h4>Tom Farmer</h4></a><time datetime="2017-05-01T19:05:11+02:00"><meta value="1493658311"></meta>01. 05. 2017, 
+		19:05</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@wirklich? </span>Ich kann IHren Argumenten (auch wenn natürlich etwas eindimensional, da die von einem Produktions-Status ausgehen von dem einfach hochgerechnet wird, sozusagen egal welche Produke in der Zukunft nachgefagt  werden) folgen, sehe jedoch weder bei Ihnen noch beim Interviewten Problemlösungsansätze.</p>
+
+<p xmlns="" class="last odd">
+Weniger Arbeit? Nein andere Arbeit, das wäre ein Ansatz. Welche? Wäre so ein HInweis für eine konstruktive Frage.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3483051"><a class="author person" href="/!ku4346/"><h4>kami</h4></a><time datetime="2017-05-04T13:00:05+02:00"><meta value="1493895605"></meta>04. 05. 2017, 
+		13:00</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Tom Farmer </span>Da stimme ich mal mit Ihnen überein, auch wenn ich Ihre obige Einschätzung nicht teile, dass  immer mehr schlecht bezahlte Jobs in D gar kein Problem seien. (Die Statistiken zur wachsenden Schere zwischen Arm und Reich und dem explodierten  Niedriglohnsektor in D zeigen da ganz andere Fakten, siehe meine Antwort an "Werner W."  weiter oben.)</p>
+
+<p xmlns="" class="odd">
+Dennoch braucht es dafür in der Tat neue Ansätze - und zwar nicht nur für neue Arbeitsformen, sondern auch neue Absicherungsformen von Arbeitslosen, Kranken etc. und deren Finanzierungsquellen aka Besteuerung. </p>
+<p xmlns="" class="even">
+Unser gesamtes Sozialsystem beruht ja irrwitzigerweise fast ausschließlich auf der Besteuerung von Lohnarbeit - während Fantastilliarden z.B. im Finanzsektor gemacht werden, die komplett unter- bzw. unbesteuert bleiben. Dito für leistungslose Geldsegen wie hohe Erbschaften etc. </p>
+
+<p xmlns="" class="even">
+Allerdings sehe ich im Gegensatz zu Ihnen die Idee eines BGEs nicht einfach als altbackene Umverteilung unter Beibehaltung eines problematischen Status quo. Es gibt da ja sehr verschiedene BGE-Modelle, aber so ziemlich alle haben Implikationen bezüglich der Art und Rolle von Lohnarbeit, die weit über bloße Umverteilung hinausgehen. Ganz ehrlich: Haben Sie sich mal eingehender mit dem BGE beschäftigt? Ihre Kommentare dazu wirken nicht so. </p>
+
+<p xmlns="" class="last even">
+Bis umfassende Systemänderungen in Bezug auf neue Arbeitsformen etc. erdacht und erreicht sind, habe ich im Gegensatz zu Ihnen übrigens auch keine Probleme damit, auch erstmal umzuverteilen. Es ist ganz einfach mehr als genug für alle da, nur immer ungerechter verteilt. Diese ungerechte Entwicklung hat rein gar nichts mit "Leistung" zu tun, und ist das Ergebnis einer künstlichen Umverteilung von unten nach oben. Wieso also bitte nicht mal etwas RÜCKverteilung von oben nach unten? Wir hatten das schon mal in anderen Kommentarspalten: Ihre Kritik an Umverteilung sieht komischerweise immer nur die Rückverteilung von oben nach unten und nie die vorige bzw. aktuelle Umverteilung in die andere Richtung.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3482095"><a class="author person" href="/!ku422/"><h4>grim</h4></a><time datetime="2017-05-01T11:32:45+02:00"><meta value="1493631165"></meta>01. 05. 2017, 
+		11:32</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Die Gesellschaft die Aufhört zu arbeiten wird früher oder später von einer arbeitenden Gesellschaft überholt. Der Mensch muss sich für Essen, Gesundheit und ein Dach überm Kopf die Hände schmutzig machen. Seit Millionen von Jahren.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3482081"><a class="author person" href="/!ku22896/"><h4>Rudolf Fissner</h4><img src="/kommune/files/images/profile/70x70/22896.png" alt="" title=""></img></a><time datetime="2017-05-01T10:54:04+02:00"><meta value="1493628844"></meta>01. 05. 2017, 
+		10:54</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Die Lobbypolitik der Linken hat dahingehend versagt, dass die Einkommensschere innerhalb der Arbeitnehmerschaft größer geworden. Ihr Klientel sind die gewerkschaftlich Organisierten und deren Besserstellung. Vergessen wurde der Sektor der Geringstverdienenden, den man in jedem größeren Betrieb finden kann.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3482077"><a class="author person" href="/!ku34414/"><h4>Primitivismuskeule</h4></a><time datetime="2017-05-01T10:41:17+02:00"><meta value="1493628077"></meta>01. 05. 2017, 
+		10:41</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Heutzutage passt in der Arbeits- oder Entfremdungswelt  meiner Meinung nach so ziemlich gar nix, die schöne neue Automatenwelt ist da aber wirklich keine wünschenswerte Alternative - eher so im Gegenteil.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3482065"><a class="author person" href="/!ku36325/"><h4>Wahrheitundklarheit</h4></a><time datetime="2017-05-01T10:11:05+02:00"><meta value="1493626265"></meta>01. 05. 2017, 
+		10:11</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">“ Der Sozialismus stimmt mit der Bibel darin überein, wenn diese sagt:</p>
+<p xmlns="" class="even">
+Wer nicht arbeitet, soll auch nicht essen. "</p>
+
+<p xmlns="" class="last even">
+August Bebel " Die Frau und der Sozialismus "</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3482169"><a class="author person" href="/!ku4537/"><h4>Age Krüger</h4></a><time datetime="2017-05-01T15:06:32+02:00"><meta value="1493643992"></meta>01. 05. 2017, 
+		15:06</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Wahrheitundklarheit </span>Da sieht man dann doch, dass Arbeitervertreter wie Bebel nicht zu denen gehören sollten, die sich mit geistiger Arbeit beschäftigen sollten.</p>
+<p xmlns="" class="even">
+Zum griechisch lernen fehlte ihm da was. Evtl. auch zum Lesen in Deutsch. (Ich weiß nicht, welche Übersetzungen damals in Deutschland vorlagen.)</p>
+
+<p xmlns="" class="even">
+Im Original und auch in den meisten mir bekannten Übersetzungen ist die Rede von:</p>
+<p xmlns="" class="odd">
+"Wer nicht arbeiten WILL, soll auch nicht essen."</p>
+
+<p xmlns="" class="last odd">
+Als Paulus lebte, also vor 2000 Jahren, kann da auch noch was dran gewesen sein.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3482130"><a class="author person" href="/!ku4319/"><h4>Berrybell</h4></a><time datetime="2017-05-01T13:15:00+02:00"><meta value="1493637300"></meta>01. 05. 2017, 
+		13:15</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Wahrheitundklarheit </span>Äh, wo hier gerade gebibelt wird: </p>
+
+<p xmlns="" class="odd">
+Matthaeus 6</p>
+<p xmlns="" class="last even">
+Darum sage ich euch: Sorget nicht für euer Leben, was ihr essen und trinken werdet, auch nicht für euren Leib, was ihr anziehen werdet. Ist nicht das Leben mehr denn Speise? und der Leib mehr denn die Kleidung? 26Sehet die Vögel unter dem Himmel an: sie säen nicht, sie ernten nicht, sie sammeln nicht in die Scheunen; und euer himmlischer Vater nährt sie doch. Seid ihr denn nicht viel mehr denn sie? Wer ist aber unter euch, der seiner Länge eine Elle zusetzen möge, ob er gleich darum sorget?…</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3482106"><a class="author person" href="/!ku35423/"><h4>PJS</h4></a><time datetime="2017-05-01T11:52:43+02:00"><meta value="1493632363"></meta>01. 05. 2017, 
+		11:52</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Wahrheitundklarheit </span>Und wenn wir bei der Bibel bleiben wollen, dann steht uns das Paradies intra vitam resp. ante morem eh nicht zu.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3482100"><a class="author person" href="/!ku423/"><h4>Georg Schmidt</h4></a><time datetime="2017-05-01T11:39:12+02:00"><meta value="1493631552"></meta>01. 05. 2017, 
+		11:39</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Wahrheitundklarheit </span>da würden in D aber viel verhungern vor allen in Berlin</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></div><span id="ad_bin_uebersicht_medrec_4" class="ad_bin sold contentad"><div id="ad_zone_uebersicht_medrec_4" name="uebersicht_medrec-4" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'uebersicht_medrec_4';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid476383">
+    
+
+<form name="form" method="post" enctype="application/x-www-form-urlencoded" id="send-comment" class="first last odd sect sect_send-comment_form style_commentform " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><h2><a name="jetzt mitreden"><span>jetzt mitreden</span></a></h2></div><div class="sectbody"><input class="constant" type="hidden" name="test" value="yes"></input><input class="constant" type="hidden" name="id" value="5399523"></input><input type="hidden" name="scope" class="constant" id="form_scope" value="cms-article"></input><input type="hidden" name="asid" class="constant" id="form_asid" value=""></input><span class="field"><p class="label">Ihren Kommentar hier eingeben</p><textarea name="post" class="text" id="form_post"></textarea></span><input type="submit" class="submit" name="ignore" value="abschicken"></input></div></form><script> filOtaz_de.Form( 'send-comment' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+	var formN = $('#send-comment');	// who i am
+
+	if( formN[0].filOtaz_de_handled ) return; formN[0].filOtaz_de_handled = true;	// run only once
+
+
+
+	// ajaxify myself
+	filOtaz_de.ajaxifyForm('send-comment', {
+		mirrorInput	: true ,
+		onSuccess	: function( data ){
+			filOtaz_de.kommune.updateLogin();
+//console.log('success handler send-comment '+ $(data).html() );
+//			var message = $(data).find('.message');
+//			alert( message.length ? message.text() : 'OK' );
+			} 
+		});   
+
+
+	if( formN.parents('.wing').length ) {    // we're in wing
+//console.log('send-comment in wing '+ formN.length +', '+ formN.parents('.wing').length +', '+ formN.parents('.float').length );
+
+	var multiUse = function() {
+
+		// === lend ourselfes to reply-function ===
+
+		// shared functions
+		var onScroll, reset;
+
+		// shared data
+		var form, anchor, prior, bros, dad, uncles, yMin;
+
+
+		$('.community.page >.body >.sect_commentlinks').find('>.sectbody >li, .thread >li').each( function(i,el){	// each comment
+
+			// per comment data
+			var refN	= $(el),
+			    toolbarN	= refN.find('>.toolbar'),
+			    id,
+			    onClick
+			    ;
+
+			toolbarN.find('>.reply >a').click( function(){
+				// reply specific
+				onClick({
+					idKey	: 'asid',
+					title	: {
+						prefix	: '',
+						suffix	: ' antworten'
+						},
+					hint	: 'Antwort bitte hier eingeben',
+					submit	: 'antworten'
+					});
+				} );
+			
+			toolbarN.find('>.report >a').click( function(){
+				// report specific
+				onClick({
+					a	: 'report',
+					idKey	: 'pid',
+					title	: {
+						prefix  : 'Kommentar von ',
+						suffix  : ' melden'
+						},
+					hint    : 'Problem bitte hier beschreiben',
+					submit	: 'melden'
+					});
+				} );
+
+			toolbarN.css({ visibility:'visible' });
+
+
+			onClick = function( par ) {
+
+					// determine shared data late
+				if( !form ) {
+					form = {
+						titleN	: formN.find('>.secthead >h2 >a >span'),
+						aN	: formN.find('>.sectbody >input[name="a"]'),
+						idN	: formN.find('>.sectbody >input[name="asid"]'),
+						pidN	: formN.find('>.sectbody >input[name="pid"]'),
+						textN	: formN.find('>.sectbody >span >textarea'),
+						submitN	: formN.find('>.sectbody >input:submit')
+						};
+					form.hintN 	= form.textN.prev('p');
+					form.org = {
+						title	: form.titleN.text(),
+						hint	: form.hintN.text(),
+						a	: form.aN.attr('value'),
+						submit	: form.submitN.attr('value')
+						};
+					}
+
+				// determine per comment data late
+				if( !id )  	id = refN.attr('id').replace(/^[^0-9]*/, '');
+
+
+				// change presented data to our needs
+
+				if( par.a ) {
+					if( !( form.aN  && form.aN.length  ) )  
+						form.aN  = $('<input class="constant" type="hidden" />').insertBefore( form.submitN );
+					form.aN.attr({	name	: 'a',
+							value	: par.a
+							});
+					}
+				else if( form.aN ) {
+					form.aN.remove();
+					form.aN = null;
+					}
+
+				if( par.idKey ) {
+					if( form.idN ) form.idN.remove();
+					form.idN = $('<input class="constant" type="hidden" />')
+						.attr({	name	: par.idKey,
+							value	: id
+							})
+						.insertBefore( form.submitN );
+					}
+				else if( form.idN ) {
+					form.idN.remove();
+					form.idN = null;
+					}
+
+				form.titleN.empty().append( 
+					par.title.prefix, 
+					$('<span>'+ refN.find('>.author >h4').text() +'</span>').addClass( refN.attr('class') ),
+					par.title.suffix
+					);
+
+				form.hintN.text(		par.hint	);
+
+				form.submitN.attr({	value :	par.submit	});
+
+
+				// add reset options
+				(new filOtaz_de.Form( formN )).cancel( function(){ reset();	afterLogin.fadeIn(); });
+				formN.on('filOtaz_de.Form.done',   reset );
+
+				// geometry
+				var	commBot	=   toolbarN.offset().top +   toolbarN.outerHeight(),
+					formBot = form.textN.offset().top + form.textN.outerHeight(),
+					d	= commBot - formBot
+					;
+				if( !yMin ) yMin = formBot - $(window).scrollTop();
+				if( commBot - $(window).scrollTop() < yMin )  window.scrollTo( 0, commBot - yMin );
+
+				// relocate form to stick w/ referenced comment
+				if( !anchor && d >0 ) {
+					prior = formN.prev(), bros = formN.nextAll(), dad = formN.parent(), uncles = dad.filter('.rack').nextAll(), afterLogin = $('form#bb-login').nextAll().not('script');
+					messageN = $('#successMessage');
+					anchor = $('<div class="community wing pin" />')
+						.css({  position: 'absolute',
+							top     : formN.offset().top +'px',
+							left    : dad.offset().left +'px',
+							width   : formN.width() +'px'
+							})
+						.appendTo( document.body )
+						;
+					if( uncles.length ) {   // we're in rack
+						dad.css({  borderBottomStyle: 'none'  });
+						anchor.append( $('<div />').addClass( dad.attr('class') ).append( formN, bros ), uncles );
+						}
+					else	anchor.append( formN, bros );
+					}
+
+				if( anchor ) {
+
+					// fading out "meistkommentiert" when answering
+
+					afterLogin.fadeOut();
+				// refresh for second ... n time "antworten"
+				// commtented out to prevent "neues kommtar" instead of "antworten"
+				//	if (formN.hasClass('worked')){
+				//		  if( form.aN ) form.aN.remove();
+				//		  if( form.idN ) form.idN.remove();
+				//	}
+
+					anchor.animate(
+						{ 
+							top : formN.offset().top + d
+						},
+					function(){
+							$(window).scroll( onScroll );
+							} );
+						}
+
+				}; //onClick
+
+			} ); //each comment
+
+			onScroll = function() {
+				var ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top;
+				// reset clears the whole form, we don't want that onScroll, so we only call relocateForm instead
+				// if( formN.offset().top <= ref )  reset();
+
+				// Do not scroll when already commented and there is success message
+				if (( formN.offset().top <= ref ) && ! (formN.hasClass('worked')))  relocateForm();
+				};
+			reset = function() {
+				if( reset ) 	formN.off('filOtaz_de.Form.done');
+				resetForm();
+				relocateForm();
+				};
+			relocateForm = function() {
+				// clean up
+				if( onScroll )  $(window).off('scroll.taz_onscroll');
+
+				// relocate form back
+				if( anchor ) {
+					var 	ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top,
+						d = anchor.offset().top - ref
+						;
+					anchor.animate({ top: ref }, d, function(){
+						dad.append( formN, bros );
+						if( uncles.length ) {	// we were in rack
+							dad.css({  borderBottomStyle: null  });
+							dad.after( uncles );
+							}
+						if( anchor ) anchor.remove(); anchor = null;
+						} );
+					}
+				};
+			resetForm = function() {
+				// reset shown data
+				if( form.aN      ) form.aN.remove();
+				if( form.idN     ) form.idN.remove();
+//				if( form.cancelN ) form.cancelN.remove();
+				form.titleN.text(		form.org.title	);
+				form.hintN.text(		form.org.hint	);
+				form.textN.attr({	value : ''		}).trigger('blur');
+				form.submitN.attr({	value : form.org.submit	});
+
+				};
+
+		}; // multiUse
+
+
+		if( formN.parents('.float').length ) { 	// already relocated into float
+			multiUse();
+			}
+		else {					// wait for relocation
+
+			formN.parents('.wing').on('filOtaz_de_float_mounted', function(){  multiUse();  });
+			}
+		} //we're in wing
+
+	})(); </script>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><form name="form" method="post" enctype="application/x-www-form-urlencoded" id="bb-login" class="even sect sect_bb-login_form style_kommune " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><ul role="toolbar" class="toolbar"><li class="login"><a href="" target="_blank">Login</a></li><li class="settings"><a href="https://taz.de/kommune/post.php?a=registration" target="_blank">Registrieren</a></li><li class="newpass"><a shape="rect" target="_blank" href="https://portal.taz.de/?a=nopw">Passwort vergessen?</a></li></ul></div><div class="sectbody"><input type="hidden" name="a" class="constant" id="form_a" value="login"></input><span class="field"><p class="label">E-Mail</p><input type="text" name="email" class="line" id="form_email"></input></span><span class="field"><p class="label">Passwort</p><input type="password" name="password" class="secret" id="form_password"></input></span><input type="submit" class="submit" name="ignore" value="einloggen"></input></div></form><script> filOtaz_de.Form( 'bb-login' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+		var formID = 'bb-login';
+		var form = $('#bb-login');
+
+		if( !form.length ) return;
+		if( form[0].filOtaz_de_form_handled ) return; form[0].filOtaz_de_form_handled = true;
+
+		var nodes, org, firstrun = true;
+		if( !filOtaz_de.kommune ) filOtaz_de.kommune = {};
+		if( !filOtaz_de.kommune.updateLogin ) filOtaz_de.kommune.updateLogin = function(){
+			if( !nodes ) nodes = {	// parse DOM lazily
+				head	: form.find('>.secthead'),
+				body	: form.find('>.sectbody').hide(),
+				a	: form.find('input[name="a"]'),
+				inputs	: form.find('span').has('input[name="email"],input[name="password"]'),
+				submit	: form.find('input.submit'),
+				links	: {
+					all		: form.find('ul.toolbar'),
+					login		: form.find('ul>li.login').click(function(){
+								var me = $(this);
+//								nodes.body
+								me.closest('.secthead').nextAll('.sectbody')	// we might be dynamically inserted, so parse DOM here
+								.slideToggle(function(){
+									me.toggleClass('active');
+									});
+								return false;
+								}),
+					settings	: form.find('ul>li.settings'),
+					newpass		: form.find('ul>li.newpass')
+					}
+				};
+			var duration = firstrun ? 0 : $.fx.speeds._default;
+			var tazsid = $.cookie('tazsid');
+			if(! tazsid ){  // not logged in
+					$('#send-comment .submit').val('Einloggen und Senden');
+					};
+
+			if( tazsid ) {	// already logged in
+					$('#send-comment .submit').val('Abschicken');
+
+				// mar: refresh after login error and then successful login
+				if ( $('#bb-login >.sectbody >p.error').length ){
+
+
+					$('.sect_bb-login').fadeOut().remove();
+					$('.sect_bb-login_form').fadeIn();
+					};
+
+
+				var tazid = $.cookie('tazid');
+//console.log('	now logged in as '+ tazid );
+				if( !org ) org = {	// store original values lazily
+					action	: form.attr('action'),
+					a	: nodes.a.attr('value'),
+					submit	: nodes.submit.attr('value'),
+					links	: {
+						login		: nodes.links.login,
+						settings	: {
+							text	: nodes.links.settings.children('a').text()
+							},
+						newpass		: nodes.links.newpass
+						}
+					};
+				form.attr({ action: 'https://taz.de/kommune/post.php?a=logout' });
+//console.log( tazsid );
+
+				nodes.body.slideUp( duration, function(){
+					form.addClass('session');
+					nodes.a.attr({ value: 'logout' });
+					nodes.inputs.hide();
+					nodes.submit.attr({ value: 'ausloggen' });
+					nodes.body.fadeIn( duration/3 );
+					});
+				if( tazid ) var profileURL = '/!ku'+ tazid +'/';
+				nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.login    )  nodes.links.login.detach();
+					if( profileURL ) {
+						if( !nodes.links.profile ) {
+							nodes.links.profile = $('<li><a href="'+ profileURL +'">mein Profil</a></li>');
+							nodes.links.settings.before( nodes.links.profile );
+							}
+						}
+					if( nodes.links.settings )  nodes.links.settings.children('a').text('Einstellungen');
+					if( nodes.links.newpass  )  nodes.links.newpass.detach();
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+				if( profileURL ) {	// tell user their name
+					if( !nodes.salute ) {
+						nodes.salute = $();
+//console.log('go, get profile '+ profileURL );
+						$.ajax({
+							type		: 'GET',
+							url		: profileURL +'c.xml', 
+							dataType	: 'xml',
+							success		: function( data, status, xhr ){
+								if( !nodes.salute ) return;	// we're too late
+								var name = $('content >item[type="person"] >name', data ).text();
+//console.log('	found '+ name );
+								nodes.salute = $('<h2><a>'+ name +'</a></h2>').hide().prependTo( nodes.head );
+								nodes.salute.slideDown( duration );
+								},
+							error		: function( req, status, message ){
+//console.log( req.status +' '+ status +' :: '+ message );
+								},
+							complete	: function( req, status ){
+								}
+							});
+						}
+					}
+				} //tazsid
+			else if( org )	(function(){	// reset logged out state
+				var orgwas = org; org = null;
+				nodes.body.fadeOut( duration/2, function(){
+					nodes.a.attr({		value	: orgwas.a		});
+					nodes.inputs.show();
+					nodes.submit.attr({	value	: orgwas.submit	});
+					form.removeClass('session');
+					}); 
+				if( nodes.salute )  nodes.salute.slideUp( duration, function(){
+					nodes.salute.remove(); nodes.salute = null;
+					});
+				if( nodes.links.all ) nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.profile ) nodes.links.profile.remove(); nodes.links.profile = null;
+					nodes.links.settings.before( orgwas.links.login.removeClass('active') );
+					nodes.links.settings.children('a').text( orgwas.links.settings.text );
+					nodes.links.settings.after(  orgwas.links.newpass );
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+
+				form.attr({		action	: orgwas.action	});
+				})();
+			firstrun = false;
+			};
+		filOtaz_de.kommune.updateLogin();
+
+		var message = filOtaz_de.ajaxifyForm('bb-login', { handle200 : filOtaz_de.kommune.updateLogin } );
+
+		if( message && message.length )	// secure ajax not supported
+			form.after( message );
+
+		})();
+	</script><div class="rack" id="xid524032">
+    
+
+<div role="region" id="" class="first last odd sect sect_shop style_shop "><div class="secthead" role="heading"><h2><a name="meistkommentiert"><span>meistkommentiert</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class=" first odd trodd   "><a href="/Streitgespraech-Prostitution/!5735935/" class="objlink noavatar" role="link"><h4>Streitgespräch Prostitution</h4><h3>„Nicht mal genügend Bettwäsche“</h3></a></li><li class=" even trodd   "><a href="/Die-Wahrheit/!5736126/" class="objlink noavatar" role="link"><h4>Die Wahrheit</h4><h3>Gedisst, geschmäht, geschnitten</h3></a></li><li class=" odd treven   "><a href="/Beginn-der-Corona-Impfungen/!5736119/" class="objlink noavatar" role="link"><h4>Beginn der Corona-Impfungen</h4><h3>Keine Privilegien für Geimpfte!</h3></a></li><li class=" even trodd   "><a href="/Aktivist-ueber-Klimagerechtigkeit/!5736215/" class="objlink noavatar" role="link"><h4>Aktivist über Klimagerechtigkeit</h4><h3>„Ich werde BDSM-Hure“</h3></a></li><li class=" last odd trodd   "><a href="/Baerbock-will-ins-Kanzleramt/!5740046/" class="objlink noavatar" role="link"><h4>Baerbock will ins Kanzleramt</h4><h3>Sie bestimmt</h3></a></li></ul></div>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Nick-Srnicek-zur-Post-Arbeitsgesellschaft/!5399523"></a></div><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a><ul><li class="first odd trodd"><a href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span>Deutschland</span></a></li><li class="even trodd"><a href="/Politik/Europa/!p4617/" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="/Politik/Amerika/!p4618/" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="/Politik/Afrika/!p4621/" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="/Politik/Asien/!p4619/" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="/Politik/Nahost/!p4620/" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="/Politik/Netzpolitik/!p4622/" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a><ul><li class="first odd trodd"><a href="/Oeko/Oekonomie/!p4623/" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="/Oeko/Oekologie/!p4624/" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="/Oeko/Arbeit/!p4629/" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="/Oeko/Konsum/!p4625/" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="/Oeko/Verkehr/!p4628/" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven"><a href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span>Wissenschaft</span></a></li><li class="last odd trodd"><a href="/Oeko/Netzoekonomie/!p4627/" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Gesellschaft/!p4611/" id="menu_p4611"><span itemprop="title">Gesellschaft</span></a><ul><li class="first odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span itemprop="title">Alltag</span></a></li><li class="even trodd"><a href="/Gesellschaft/Reportage-und-Recherche/!p5265/" id="menu_p5265"><span>Reportage und Recherche</span></a></li><li class="odd treven"><a href="/Gesellschaft/Debatte/!p4633/" id="menu_p4633"><span>Debatte</span></a></li><li class="even trodd"><a href="/Gesellschaft/Kolumnen/!p4634/" id="menu_p4634"><span>Kolumnen</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Medien/!p4630/" id="menu_p4630"><span>Medien</span></a></li><li class="even treven"><a href="/Gesellschaft/Bildung/!p4635/" id="menu_p4635"><span>Bildung</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span>Gesundheit</span></a></li><li class="last even trodd"><a href="/Gesellschaft/Reise/!p4638/" id="menu_p4638"><span>Reise</span></a></li></ul></li><li class="even trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="/Kultur/Musik/!p4640/" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="/Kultur/Film/!p4641/" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="/Kultur/Kuenste/!p4642/" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="/Kultur/Buch/!p4643/" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="/Kultur/Netzkultur/!p4631/" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="/Sport/Fussball/!p4647/" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="/Sport/Kolumnen/!p4648/" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="/Nord/Hamburg/!p4651/" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="/Nord/Bremen/!p4652/" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="/Nord/Kultur/!p4653/" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="/bei-Tom/!t5180734/" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="/ueber-die-Wahrheit/!115080/" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="odd trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="even treven"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="odd trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="even trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="odd treven"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="even trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="odd trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="even treven"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="https://taz.de/!112354/" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="https://taz.de/!p5097/" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="https://taz.de/!114802/" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="https://taz.de/!114191/" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="https://taz.de/!166598/" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4283/" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="https://taz.de/!p4858/" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="https://taz.de/!112355/" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div></body><!-- DEBUG end 00:31:56+01:00--></html>

@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 04:31:14+01:00 page_id=4616 :: Schwerpunkt Coronavirus--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 4616--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>Geld statt Applaus in der Corona-Krise: Boni für Systemrelevanz - taz.de</title><meta name="author" content="Mareike Andert"></meta><meta name="description" content="Die Leistung von Pflegekräften und Verkäufer*innen soll auch finanziell anerkannt werden – wenn auch erstmal nur einmalig."></meta><meta name="keywords" content="Pflegepersonal, Gehalt, Boni, Coronavirus, Deutschland, Politik, Schwerpunkt, taz, tageszeitung "></meta><meta name="taz:title" data-id="5676924" content="Geld statt Applaus in der Corona-Krise: Boni für Systemrelevanz"></meta><meta name="taz:tag" content="Schwerpunkt Coronavirus" data-tag-id="5660746" data-tag-category="Schwerpunkt"></meta><meta name="taz:tag" content="Pflegepersonal" data-tag-id="5017815"></meta><meta name="taz:tag" content="Gehalt" data-tag-id="5011051"></meta><meta name="taz:tag" content="Boni" data-tag-id="5031977"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta><meta property="og:url" content="https://taz.de/!5676924/"></meta><meta property="og:locale" content="de_DE"></meta><meta property="og:type" content="article"></meta><meta name="twitter:card" content="summary_large_image"></meta><meta name="twitter:site" content="@tazgezwitscher"></meta><meta property="og:title" content="Geld statt Applaus in der Corona-Krise: Boni für Systemrelevanz"></meta><meta property="fb:app_id" content="966242223397117"></meta><meta name="twitter:title" content="Geld statt Applaus in der Corona-Krise: Boni für Systemrelevanz"></meta><meta property="og:description" content="Die Leistung von Pflegekräften und Verkäufer*innen soll auch finanziell anerkannt werden – wenn auch erstmal nur einmalig."></meta><meta name="twitter:description" content=" Die Leistung von Pflegekräften und Verkäufer*innen soll auch finanziell anerkannt werden – wenn auch erstmal nur einmalig."></meta><meta property="og:image" content="https://taz.de/picture/4077614/948/25088435-1.jpeg"></meta><meta name="twitter:image" content="https://taz.de/picture/4077614/948/25088435-1.jpeg"></meta><meta property="article:published_time" content="2020-04-07T12:40:00+01:00"></meta><meta property="article:modified_time" content="2020-04-07T12:45:51+01:00"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"5676924" // String
+            , page_title_enc      :"5676924: Geld statt Applaus in der Corona-Krise: Boni für Systemrelevanz" // String
+            , custom_url_enc      :"/!5676924" // String
+            , channel             :"web" // String
+            , area                :"Redaktion" // String
+            , department          :"p4616" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : false  // Boolean
+            , is_article          : true  // Boolean
+            , has_tags            : true  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "https://taz.de/lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<script type="text/javascript"> 
+	       
+(function(){
+
+
+	if ( ((location.href.match(/goMobile/g) || []).length) > 1 ) {
+		console.log( 'prevent loop' );
+		return
+	}
+	
+	// console.log('ratioURL_channel ' + readCookie('ratioURL_channel') );
+
+	if ( readCookie('ratioURL_channel') == 'web' ){ 
+ 		return;
+		// web view was selected explicitly
+	}
+	var getWidth;
+	if (screen.width > screen.height){
+		   getWidth = screen.height;
+		} else {
+		   getWidth = screen.width;
+	}
+	
+
+
+	if (getWidth < 551) {
+		//mobile
+
+		var goto = location.pathname;
+		// to do: look if this is running
+		if ( (/goMobile/).test( location.search ) && (/count/).test( location.href ) || ( location.search.indexOf('goMobile') > 1 ) ){	// back here despite cache-killer: give up.
+				
+				if ((/;web/).test( location.pathname )) {
+					location.href = goto
+					
+				};
+//				document.createElement("img").src='/count/debug/go-mobile/quit/cachekiller+'+ (new Date()).getTime();
+				return false;
+			}
+		
+			if( (/moby/).test( readCookie('ratioURL_channel') ) ) { // back here despite cookie: reload w/ cache-killer to prevent loop
+			// Google-Bot needs this to see mobile (https://search.google.com/search-console/inspect fil 2018-12-03)
+			location.href = '/count/redirect/go-mobile-nocache'+ goto 
+				+( location.search ? location.search +'&' : '?' ) +'goMobile2='+ (new Date()).getTime()
+				+location.hash;
+//			document.createElement("img").src='/count/debug/go-mobile/quit/cookie+'+ (new Date()).getTime();
+			return;
+			}
+
+	//	$.cookie('ratioURL_channel', 'moby', {domain:'taz.de', path:'/'} );	// try to set channel cookie …
+		document.cookie = 'ratioURL_channel=moby; domain=taz.de; path=/';
+
+
+		if( (/moby/).test( readCookie('ratioURL_channel') ) ) {	// … cookie was successfully set: reload …
+			if (location.search.indexOf('nocache') != -1) return;	// old cache killer for transition period
+			location.reload( true );
+			return;
+			}
+		else {						// … setting cookie failed: load explicit channel url …
+			if (location.search.indexOf('nocache') != -1) return;	// old cache killer for transition period
+			if( goto =='/' )
+				goto = '/!p4608;moby/';
+			else	goto = goto.replace(/[/]$/,';moby/');
+			location.href = '/count/redirect/go-mobile-nocookie'+ goto 
+				+location.search
+				+location.hash;
+			return;
+			}
+
+		} else {
+		//desktop
+	}
+
+		// vanilla js cookie reader
+		function readCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0;i < ca.length;i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			}
+			return null;
+		}
+
+
+	})();	
+	
+		</script><link rel="preload" href="/lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff" as="font" type="font/woff" crossorigin="anonymous"></link><link rel="preload" href="/lib/ch/web/pix/tazze46.png" as="image" media="(min-width: 49px)"></link><link rel="canonical" href="https://taz.de/Geld-statt-Applaus-in-der-Corona-Krise/!5676924/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Deutschland" href="/!p4616/rss.xml"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="/rss.xml"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="/"></link><link rel="copyright" type="text/html" title="Impressum" href="/6/impressum/"></link><link rel="stylesheet" type="text/css" media="screen, print" href="/lib/ch/web/css/news2020-12-08_24.css"></link><link href="/lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 6]> <link rel="stylesheet" type="text/css" href="/lib/style/ie6.css"> <![endif]--><!--[if lte IE 7]><style type="text/css">
+			ul.topbar                      >li      >a>span,
+			.secthead>ul[role='navigation']>li      >a>span	{  border-left: 1px solid; padding: 0px 4px;  }
+			ul.topbar                      >li.first>a>span,
+			.secthead>ul[role='navigation']>li.first>a>span	{  border:none; padding-left:0px;  }
+			ul.topbar                      >li      >a>span  {  border-color:white;    }
+			.secthead>ul[role='navigation']>li      >a>span  {  border-color:#888888;  }
+			.box h2 {  line-height:20px;  }
+			.author  {	display:inline;	float:none;	}
+			.sect_spb .sectbody {	padding-top:8px;	}
+			/* fil 2011-04-08 */
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward >ul.toolbar  {  height:28px;  }
+			.sect_article >.sectfoot ul.toolbar >li,
+			#reward ul.toolbar >li  {  float: left !important;  }
+			#reward >div  {  clear:both;  }
+			.sect_article >.sectfoot ul.toolbar  {  position:relative !important; top:0px; left:0px; height:24px;  }
+			#micropay ul.toolbar  {  height:52px;  }
+			.sect_article >.sectfoot {  padding-bottom:30px  }
+		</style><![endif]--><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="/uploads/cmp/yieldlove_cmp.js"></script><script type="text/javascript" src="/uploads/cmp/yieldlove.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="/lib/ch/web/js/2020-12-08_24.js"></script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"5676924" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/Politik/Deutschland" // String
+            , is_article      : true  // Boolean
+            , is_corp         : false  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            // 2. check for not closing overlay
+            if ( $("#tzi-paywahl-fg").length && "MutationObserver" in window ){
+                p.trackEvent( 'TZI', 'displayed', 'LAYER_SHOWN_OBSERVE_TEST');    
+                var paywahl = document.getElementById('tzi-paywahl-fg');
+                var observer = new MutationObserver(function(mutations) {
+                  p.trackEvent( 'TZI', 'displayed', 'LAYER_CLOSED_OBSERVE_TEST');    
+                  observer.disconnect();
+                });
+                observer.observe(paywahl, { 
+                    attributes: true, 
+                    attributeFilter: ['style'] 
+                });
+            }
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        // mar: reactivated for tracking of special menu
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+*/
+
+            $(document).on("click", ".longread.article .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL-LONGREAD' ) });
+	        $(document).on("click", ".longread.article .sect_mostread a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'MEISTGELESEN-LONGREAD' ) });
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page:not(.longread) .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page:not(.longread) ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page:not(.longread) .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" src="https://script.ioam.de/iam.js?m=1"></script><script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript">
+		// Google Publisher Tag - https://developers.google.com/doubleclick-gpt/reference
+		var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; 
+	(function(){
+		var adArea = 'Politik';	//
+		googletag.cmd.push( function() {
+			var pa = googletag.pubads();
+			pa.setForceSafeFrame(true);
+			pa.collapseEmptyDivs();
+			pa.setTargeting('position', [ adArea ]);
+      //pa.setTargeting('test', ['fireplace']); //       * * * test only ! * * *
+      //pa.setTargeting('test', ['wallpaper']);   //       * * * test only ! * * *
+      pa.setTargeting('page_id', ['5676924']);
+			if( location.protocol =='https' )
+				pa.setTargeting('ssl', ['ja']);
+			googletag.enableServices();
+			});
+		})();
+	</script><script>
+		// expect jQuery already to be loaded
+	(function() {
+		if( !window.filOtaz_de )		window.filOtaz_de		= Object;
+		if( !window.filOtaz_de.ads )		window.filOtaz_de.ads		= Object;
+		if( !window.filOtaz_de.ads.gpt )	window.filOtaz_de.ads.gpt	= Object;
+
+        var sizes = {
+             'artikel_medrec-1'    :[300,250]
+            ,'artikel_medrec-2'    :[300,250]
+            ,'artikel_medrec_mitte' :[300,250]
+            ,'ros_sidebar-1'       :[300,250]
+            ,'ros_sidebar-2'       :[300,100]
+            ,'uebersicht_medrec-1' :[300,250]
+            ,'uebersicht_medrec-2' :[300,250]
+            ,'uebersicht_medrec-3' :[300,250]
+            ,'uebersicht_medrec-4' :[300,250]
+            ,'uebersicht_medrec-5' :[300,250]
+            ,'uebersicht_board-1'  :[624,150]
+            ,'ros_billboard-1'     :[870,250]
+            ,'mobile_banner-1'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-2'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-3'     :[[300,250],[320,50],[320,100]]
+            ,'mobile_banner-4'     :[[300,250],[320,50],[320,100]]
+            ,'ros_top-links'       :[[120,600],[160,600],[300,600]]
+            ,'ros_top-mitte'       :[[728,90],[800,250],[870,250],[970,90],[970,250]]
+            ,'ros_top-rechts'      :[[120,600],[160,600],[300,600]]
+            ,'ros_leaderboard-1'   :[728,90]
+            ,'fireplace-mitte'     :[[970,90],[728,90]]
+            ,'fireplace-links'     :[160,601]
+            ,'fireplace-rechts'    :[160,600]
+            ,'fireplace_bg'        :[1,1]
+            };
+        var roadblocks = {};
+  
+  
+      roadblocks = {
+         'ros_top-mitte'   :['fireplace_mitte']
+        ,'ros_top-rechts'  :['fireplace_mitte'] 
+      };
+    
+    
+		// general ad handling
+
+		// --> to be triggered for ad_zone if ad is (to be) delivered
+		filOtaz_de.ads.fitIn = function( container ) {	// make space for ad in layout
+			var container = $( container );
+//console.log('fit '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.addClass('shown');
+			container.addClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').addClass('aded_'+( container.height() >120 ?'big' :'small' ) );
+				var badge = container.hasClass('ad_zone_sold') ? 'Anzeige' : 'taz-Angebot';
+				container.before('<div class="ad_badge">'+ badge +'</div>');
+				}
+			container.trigger('TAZadInserted').trigger('TAZboxChange');
+			};
+
+		// --> to be triggered for ad_zone if no ad is (to be) delivered
+		// redundant?
+		filOtaz_de.ads.reclaim = function( container ) {	// remove whitespace from non-delivered ad
+			var container = $( container );
+//console.log('reclaim '+ container.attr('id') );
+			if( !container.is('.ad_zone') ) return;
+			var packing = container.parent('.ad_bin');
+			packing.removeClass('shown');
+			container.removeClass('ad_zone_shown');
+			if( container.hasClass('ad_zone_contentad') ) {
+				packing.prev('.sect_leads').removeClass('aded_big aded_small');
+				}
+			container.trigger('TAZadRemoved').trigger('TAZboxChange');
+			};
+    
+    
+
+		var fuzeAdFrame = function( frame ) {	// register frame for messages, fire if one is from our content
+console.log('legacy fuzeAdFrame', frame  );
+			};
+    
+    
+    // Hintergrund per Message
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+    window[eventMethod](messageEvent, function(e) {
+      if (e.data.toString().indexOf("color") != -1) {
+        $("#background").css("background-color", e.data.split(" ")[1]);
+        }
+      }, false);
+    
+    
+		// activate ad frame
+		var adZoneHandled = {};
+    
+    var get_id = function( name ) {
+      return $('div[name=' + name + ']').attr('id');
+      };
+    
+    var get_name = function( id ) {
+      return $('#'+ id ).attr('name');
+      };
+    
+    unblock = function( id, rb_id ) {
+      var name = get_name(id);
+      var index = roadblocks[name].indexOf(rb_id);
+      if ( index > -1 ) {
+        roadblocks[name].splice(index, 1);
+        }
+      if ( !roadblocks[name].length ) {
+        googletag.defineSlot( '/118803185/' + name, sizes[name], id ).addService( googletag.pubads() );
+        googletag.display( id );
+        }
+      };
+    
+    filOtaz_de.ads.gpt.activateAdFrame = function( id ) {  
+			if( !id ) return;
+			if( adZoneHandled[id] ) return; adZoneHandled[id] = true; // only one active zone per id
+ 
+			var packing   = $('#ad_bin_'+ id );
+			id = 'ad_zone_'+ id;
+			var container = packing.find('>#'+ id );
+  
+			var name = container.attr('name');
+			if( !name || !sizes[name] ) return;
+   
+			// handle custom ad load events
+			container.on('filOtaz_de.ads.gpt.noBanner',   function(){  return false;  });
+			container.on('filOtaz_de.ads.gpt.preBanner',  function(){
+				filOtaz_de.ads.fitIn( container );
+				return false;
+				});
+			container.on('filOtaz_de.ads.gpt.postBanner', function(){  return false;  });
+
+
+			// define content
+			googletag.cmd.push( function() {
+				var pa = googletag.pubads();
+        if ( roadblocks[name] ) {
+          pa.addEventListener('slotRenderEnded', function (e) {
+            for (var i=0; i<roadblocks[name].length; i++) {
+              if ( e.slot.getSlotElementId() == 'ad_zone_' + roadblocks[name][i] ) {
+
+		    if ( e.isEmpty ) {
+                  unblock(id, roadblocks[name][i]);
+                  }
+                else {
+                  document.getElementById(id).style.display = 'none';
+                  for (var key in roadblocks) {
+                    if ( !roadblocks.hasOwnProperty(key) ) continue;
+                    for ( var j=0; j<roadblocks[key].length; j++ )
+                    if ( id == 'ad_zone_' + roadblocks[key][j] ) {
+                      unblock(get_id(key), roadblocks[key][j]);
+                      break;
+                      }
+                    }
+                  }
+                }
+              }
+			    }); // pa.addEventListener
+			    //	    console.log('roadblocks' + id);
+          googletag.display(id);
+          }
+        else {
+          pa.display( '/118803185/'+ name, sizes[name], id );
+	// console.log( 'asked for', '/118803185/'+ name, sizes[name], id );
+          }
+				pa.addEventListener('slotRenderEnded', function(e) {
+			    if( e.slot.getSlotElementId() != id )  return;	// not our slot
+			    container.trigger( e.isEmpty ? 'filOtaz_de.ads.gpt.noBanner' : 'filOtaz_de.ads.gpt.preBanner' );
+console.log( name +( e.isEmpty ? ' isEmpty' : '' ) );
+					});
+        });
+      }; //filOtaz_de.ads.gpt.activateAdFrame
+
+		// activate wallpaper combo add frame
+/*
+		filOtaz_de.ads.gpt.wallpaper = function() {
+			console.log('filOtaz_de.ads.gpt.wallpaper not yet supported');
+			};
+*/
+
+		})();
+	</script><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link><link rel="manifest" href="/manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body class=""><noscript><img src="https://taz.de/stats/piwik.php?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Redaktion/Politik/Deutschland,Artikel",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><span id="ad_bin_fireplace_bg" class="ad_bin"><div id="ad_zone_fireplace_bg" name="fireplace_bg" class="ad_zone"></div></span><span id="ad_bin_fireplace_mitte" class="ad_bin"><div id="ad_zone_fireplace_mitte" name="fireplace-mitte" class="ad_zone"></div></span><span id="ad_bin_fireplace_links" class="ad_bin"><div id="ad_zone_fireplace_links" name="fireplace-links" class="ad_zone"></div></span><span id="ad_bin_fireplace_rechts" class="ad_bin"><div id="ad_zone_fireplace_rechts" name="fireplace-rechts" class="ad_zone"></div></span><span id="ad_bin_fireplace_script" class="ad_bin"><div id="ad_zone_fireplace_script" name="fireplace-script" class="ad_zone"></div></span><script type="text/javascript">
+(function(){
+  var parent = $('#ad_bin_fireplace_rechts').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_rechts');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_bg').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_bg');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_mitte').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_mitte');
+  })(); 
+(function(){
+  var parent = $('#ad_bin_fireplace_links').parent();
+  if( !parent.is('.wing') || parent.is('.floating.wing') )  // for wings only run when already floating
+    filOtaz_de.ads.gpt.activateAdFrame('fireplace_links');
+  })(); 
+              </script><div id="adzone_wall" class=""><span id="ad_bin_ros_top_rechts" class="ad_bin"><div id="ad_zone_ros_top_rechts" name="ros_top-rechts" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_rechts';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><span id="ad_bin_ros_top_mitte" class="ad_bin"><div id="ad_zone_ros_top_mitte" name="ros_top-mitte" class="ad_zone"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_top_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></div><div id="pages" class="news"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="odd trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="even treven"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="odd trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="even trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="odd treven"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="even trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="odd trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="even treven"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul><div class="full news report article page first odd first_page n1" itemscope="" itemtype="http://schema.org/NewsArticle"><div class="head" role="head"><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="even trodd selected"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="odd treven"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a></li><li class="even trodd"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="odd trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a></li><li class="even treven"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a></li><li class="odd trodd"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a></li><li class="even trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a></li><li class="last odd treven"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><span class="body" role="main"><div class="main rack first_rack" id="xid819017">
+    
+	<div xmlns="" class="metadata" itemscope="">
+<a id="articleURL" href="/!5676924"></a><a id="speakingURL" href="/Geld-statt-Applaus-in-der-Corona-Krise/!5676924"></a><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-article-ID" content="5676924"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="url-ID" content="5676924"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-obj-ID" content="4077614"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="vgwort-counter-ID" content="bf4def593f3446a381d628762628a057"></meta><span id="articleID"></span><span id="cmsArticleID">5676924</span><img src="//taz.met.vgwort.de/na/bf4def593f3446a381d628762628a057" width="1" height="1" alt=""><img src="/count/vgwort/bf4def593f3446a381d628762628a057.gif" width="1" height="1" alt="">
+</div>
+<div role="region" id="" class="odd sect sect_article news report"><article class="sectbody" itemprop="articleBody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Geld statt Applaus in der Corona-Krise</span><span class="hide">: </span><span>Boni für Systemrelevanz</span>
+</h1>
+<p xmlns="" itemprop="description" class="intro ">Die Leistung von Pflegekräften und Verkäufer*innen soll auch finanziell anerkannt werden – wenn auch erstmal nur einmalig.</p>
+      
+      <a xmlns="" class="full picture" href="/picture/4077614/948/25088435-1.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	" itemprop="image"><img src="/picture/4077614/624/25088435-1.jpeg" alt="Baden-Württemberg, Böblingen: Eine Pflegerin schiebt eine Bewohnerin eines Pflegeheims in einem Rollstuhl über den Flur." title="Baden-Württemberg, Böblingen: Eine Pflegerin schiebt eine Bewohnerin eines Pflegeheims in einem Rollstuhl über den Flur."></a><p xmlns="" class="caption">Sie sollen nicht nur beklatscht werden: Boni für Pflegekräfte <span class="credit"> Foto: dpa</span></p>
+    
+      <p xmlns="" class="article first odd"><span>BERLIN</span> <em>taz</em> | Dankbare Menschen applaudieren Pflegekräften vom Balkon für ihre Arbeit in <a target="_blank" href="https://taz.de/Wut-auf-Deutschland/!5676076&amp;amp;s=pflegepersonal/">Corona-Zeiten</a>. Jetzt soll diese Dankbarkeit auch in Geld umgemünzt werden. Der Bund macht Bonuszahlungen bis 1.500 Euro steuerfrei. Bayern will 500 Euro locker machen. Und auch die Debatte um ein – einmaliges – Grundeinkommen für alle ist da.</p>
+      <p xmlns="" class="article even">Bundesregierung und Opposition sind sich einig: Medizinisches Pflegepersonal und andere systemrelevante Dienstleister*innen sollten in der Corona-Krise eine Dankesprämie erhalten. Um das zu erleichtern, stellt die Regierung branchenunabhängig Sonderzahlungen bis zu 1.500 Euro steuer- und sozialversicherungsfrei. Das gilt für Boni, die zwischen dem 1. März und dem 31. Dezember 2020 zusätzlich zum geschuldeten Arbeitslohn gezahlt werden.</p>
+      
+      <span id="ad_bin_artikel_medrec_1" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_1" name="artikel_medrec-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">Finanzminister Olaf Scholz verkündete: „100-prozentigen Einsatz in dieser Zeit wollen wir 100-prozentig entlohnen“. Eine Reihe von Unternehmen hätte angekündigt, das Engagement ihrer Beschäftigten mit Sonderzahlungen zu belohnen. Neben Aldi, Real und Lidl kündigten auch Rewe und die Konzerntochter Penny an, ihren Beschäftigten einen Bonus zu zahlen. Allerdings wollten sie dies aus steuerlichen Gründen in Form von Warengutscheinen oder Gutschriften auf Mitarbeiterkarten tun.</p>
+      <p xmlns="" class="article even">Der Handelsverband Deutschland wollte sich zu den Vorgehensweisen einzelner Unternehmen nicht äußern. Ein Sprecher betonte am Telefon aber, „viele Unternehmen aus dem Lebensmittelhandel wollen ihre Wertschätzung für die Arbeitnehmer in der Coronakrise deutlich machen“, weshalb sich der Verband „bei der Politik für die Steuerfreiheit der Boni und Prämien für die Mitarbeiterinnen und Mitarbeiter eingesetzt“ habe.</p>
+      <h6 xmlns="">Keine Tarifverträge für Pflegepersonal</h6>
+      <p xmlns="" class="article odd">Auch Friedhelm Fiedler, Vizepräsident des Arbeitgeberverband Pflege, sagte der taz: „Wir begrüßen den Vorschlag, der auf dem Tisch liegt.“ Aus seinem Verband kenne er niemanden, der meine „das komm nicht in Frage“. Jedoch solle jedes Unternehmen selbst entscheiden, was es zahle. Die Refinanzierung müsse sichergestellt sein, damit die Pflegeunternehmen sauber und lebend aus der Krise herauskommen. Einen flächendeckenden Tarifvertrag für Pflegepersonal findet er eine „Diskussion zur Unzeit“.</p>
+      <p xmlns="" class="article even">Die Gewerkschaft Verdi will dauerhaft bessere tarifliche Entgelte und Regelungen im Pflegebereich,wenn die Pandemie überwunden ist. Ihre Kritik: Kommerzielle Unternehmen in der Altenhilfe würden ihren Beschäftigten vielfach eine tarifvertragliche Bezahlung verweigern. <a target="_blank" href="https://taz.de/Coronavirus-in-Frankreich/!5675703&amp;amp;s=pflegepersonal/">Pflegekräfte</a> „wollen nicht nur beklatscht und gelobt werden, sagte Sylvia Bühler von Verdi. „Sie brauchen bessere Arbeitsbedingungen und eine angemessene Bezahlung – jetzt, nicht irgendwann“. So fordert Verdi für „Beschäftigte in versorgungsrelevanten Bereichen“ in jedem Monat, den die Krise noch andauert, 500 Euro mehr Gehalt – steuerfrei.</p>
+      
+      <span id="ad_bin_artikel_medrec_mitte" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_mitte" name="artikel_medrec_mitte" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_mitte';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">Verena Bentele, Präsidentin des Sozialverbandes Deutschlands, sieht in den Sonderzahlungen ein „wichtiges Zeichen der Anerkennung für alle Menschen, die in der Pflege gerade den Laden am Laufen halten“. Sie appelliert jedoch an die Politik: „Die Bonuszahlungen heute dürfen auch nicht vergessen machen, dass die Probleme in der Pflege langfristig gelöst werden müssen.“</p>
+      <h6 xmlns="">Anstoß für eine dauerhafte Verbesserung der Gehälter</h6>
+      <p xmlns="" class="article even">Die aktuelle <a target="_blank" href="https://taz.de/Krisenkoordination-in-Corona-Zeiten/!5676435&amp;amp;s=pflegepersonal/">Krise zeige sehr deutlich die Defizite</a> auf. Das sollte Anstoß für eine dauerhafte Verbesserung der Gehälter und Arbeitsbedingungen in der Pflege sein. „Wir dürfen nach Corona nicht einfach so weitermachen wie vor Corona“, sagte sie der taz. Außerdem sollten die Sonderzahlungen verpflichtend für alle systemrelevanten Berufsgruppen gelten.</p>
+      
+      <span id="ad_bin_artikel_medrec_2" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_2" name="artikel_medrec-2" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'artikel_medrec_2';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script>
+    
+      <p xmlns="" class="article odd">Grünen-Fraktionschefin Katrin Göring-Eckardt schlägt vor, der Bund solle die steuerfreien Bonuszahlungen mit Mitteln aus dem Gesundheitsfonds finanzieren, damit Krankenhäuser, Rettungsdienste und Pflegeeinrichtungen zusätzliche Gelder erhalten, die sie rasch an ihre Mitarbeiter*innen auszahlen können. Das Pflegepersonal leiste in der Krise „jeden Tag Unglaubliches“, sagte Göring-Eckardt den Zeitungen der <em>Funke</em> <em>Mediengruppe</em> vom Sonntag. Sie warnte die Regierung davor, die Frage der Sonderzahlungen für medizinisches und Pflegepersonal nun so lange vor sich herzuschieben, bis sie zwischen Bund, Ländern und den Arbeitgebern versande.</p>
+      <h6 xmlns="">Söder prescht vor</h6>
+      <p xmlns="" class="article even">Die Pflegeexpertin der Linken, Pia Zimmermann, plädiert dafür, dass Besserverdienende diese Zahlungen finanzieren: „Nicht die kleinen und mittleren Einkommen sollen die Epidemiekosten tragen. Wann, wenn nicht jetzt, müssen Schritte zur Einführung der Solidarischen Pflegevollversicherung gegangen werden.“ So sei eine Anhebung der Beitragsbemessungsgrenze in der Kranken- und der Pflegeversicherung überfällig. Auch im Pflegevorsorgefonds lägen Milliarden, sofort nutzbar für eine befristete Zulage, erklärte sie.</p>
+      <p xmlns="" class="article odd">Auf Twitter kündigte <a target="_blank" href="https://taz.de/Bayern-und-das-Coronavirus/!5676406&amp;amp;s=s%C3%B6der/">Bayerns Ministerpräsident Söder</a> am Sonntag an, 500 Euro als Bonus an alle Pflegekräfte zu zahlen. Zunächst einmalig und steuerfrei. Kostenpunkt für Bayern: etwa 126 Millionen Euro. Die Zahlung soll am Dienstag im Kabinett beschlossen werden. Laut eines Regierungssprechers sollen alle 252.000 Pflegekräfte in Krankenhäusern, Reha-Kliniken, Alten-, Pflege- und Behindertenheimen den Bonus bekommen.</p>
+      <p xmlns="" class="article even">Auch Berlin regt sich. So schlägt der CDU-Landesvorsitzende Kai Wegner vor, dass Mitarbeiter*innen in systemrelevanten Berufen einen 500 Euro Wertgutschein erhalten. Auch Berlins Bürgermeister Michael Müller will sich für Bonuszahlungen an das Pflegepersonal einsetzen.</p>
+      <h6 xmlns="">Grundeinkommen?</h6>
+      <p xmlns="" class="article odd">Auch das umstrittene Thema Grundeinkommen wurde in der Debatte um Zusatzzahlungen wieder aufgegriffen. Der Verein „Mein Grundeinkommen“ verloste am vergangenen Mittwoch 40 bedingungslose Grundeinkommen in Höhe von monatlich 1.000 Euro und einer Laufzeit von einem halben Jahr. Politisch spielt das Thema kaum eine Rolle, selbst die auf mehr Sozialstaat pochende Linke ist sich innerparteilich uneins. Die Co-Vorsitzende Katja Kipping ist eine offene Befürworterin des bedingungslosen Grundeinkommens.</p>
+      <p xmlns="" class="article last even">Der Bundestagspräsident Wolfgang Schäuble hatte sich noch Anfang des Jahres äußerst kritisch geäußert: „Wenn wir überfördern, zerstören wir die Motivation der Menschen“. Auch der Paritätische Gesamtverband ist grundsätzlich sehr skeptisch und hält eine Debatte über das Thema mitten in der Corona-Krise für falsch. „Wenn es brennt, löscht man erst mal, aber setzt sich nicht hin und macht Pläne für ein neues Haus“, sagte Hauptgeschäftsführer Ulrich Schneider. <em>(mit dpa)</em></p>
+    </article></div>
+
+    
+  
+
+    
+  <div role="region" id="" class="odd sect "><div class="sectbody"><a xmlns="" id="reward" shape="rect">Einmal zahlen</a><script> filOtaz_de.flattr();</script></div></div>
+
+    
+	<div class="shariff">.</div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171498/" ratioURL-ressource="171498" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Wieviel ist freie Presse wert?</span>
+</h1>
+  		<p xmlns="" class="article first odd">taz.de ist frei zugänglich – ohne Paywall. Wir sind der Überzeugung, dass es kritische Informationen im Netz geben muss, die nicht kostenpflichtig sind. Aber das geht nur, wenn sich unsere Leser*innen an dieser Idee beteiligen und den taz-Journalismus mittragen.   
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt die taz.</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171452/" ratioURL-ressource="171452" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Wir leben nicht von Likes allein.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Als unabhängiges und frei zugängliches Medium sind wir auf die Unterstützung unserer Leser:innen angewiesen, um uns in digitalen Zeiten zu finanzieren. Nur so können wir die Arbeit der taz Redaktion auch in Zukunft erhalten.       
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie die taz jetzt mit Ihrem Beitrag </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/tazde-ist-Konzern-unabhaengig/!163180/" ratioURL-ressource="163180" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">taz.de ist (Konzern-)unabhängig</span><span class="hide">: </span><span>Hinter vielen Zeitungen steht ein Konzern. Hinter uns stehen Sie.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Die taz ist als überregionale Tageszeitung ohne großen Medienkonzern  im Rücken eine Ausnahme. Dies ermöglicht uns, frei und unabhängig zu  berichten. Unsere Inhalte sind frei zugänglich, aber natürlich brauchen auch wir Geld. Deshalb sind wir auf Sie, unsere Leser*innen, angewiesen.    
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt die taz</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script type="text/javascript" xml:space="preserve">
+          (function () {
+            patOtaz_de.layer_tzi_paywahl({'campaign': '2019-5-27' });
+          })();
+        </script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Normal/!155790/" ratioURL-ressource="155790" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Normal</span><span class="hide">: </span><span>Freier Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Das Bedürfnis nach vertrauenswürdiger Information ist derzeit sehr hoch, viele blicken und klicken in diesen unsicheren Zeiten auf die Berichterstattung der taz. Während der vergangenen Wochen ist klar geworden, wie wichtig freier Journalismus ist. In Krisenzeiten ist es „systemrelevant”, dass Menschen sich unabhängig informieren können. Ohne Paywall. Wir finden es wichtig, dass uns möglichst viele Menschen lesen – auch jene, die sich kein Abo leisten können. Doch dazu brauchen wir Ihre Hilfe.      
+</p>
+  		<p xmlns="" class="article even">Guter, kritischer Journalismus ist nicht kostenlos zu haben und braucht Finanzierung. Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Im Gegenzug wird sie freiwillig und solidarisch unterstützt. Von unseren Leser*innen, von Ihnen. Mit Ihrer Wertschätzung und Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit, ein Forum für Meinungsvielfalt, eine engagierte Stimme für Minderheiten. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Seien Sie mit uns taz. Zusammen mit den 25.500, die schon dabei sind.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Klima/!155427/" ratioURL-ressource="155427" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Klima</span><span class="hide">: </span><span>Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wir berichten seit 1978 über die Zerstörung unseres Planeten – weil wir daran glauben, dass eine bessere Welt möglich ist. Klima- und Umweltberichterstattung haben in der taz schon immer einen großen Raum eingenommen, aber zurzeit gehen wir noch einmal in die Offensive. Die taz berichtet noch intensiver über die drohende Klimakatastrophe – auf allen Kanälen. Um dies leisten zu können, sind wir auf die Unterstützung unserer Leser*innen angewiesen. Denn guter Journalismus ist aufwändig und nicht kostenlos zu haben.      
+</p>
+  		<p xmlns="" class="article even">Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Unsere Artikel sollen so viel wie möglich gelesen, geliked und geteilt werden. Nur so können sie die ökologisch notwendigen Veränderungen unserer Gesellschaft vorantreiben. Im Gegenzug wird die taz von unseren Leser*innen unterstützt. Freiwillig und solidarisch. Mit Ihrer Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit und eine engagierte Stimme für mehr Klimaschutz. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. 25.500 machen schon mit.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><div role="region" id="" class="even sect sect_text "><div class="sectbody"><p>
+
+	Fehler auf taz.de entdeckt?
+	    </p><p>
+        Wir freuen uns über eine 
+	<a href="mailto:fehlerhinweis@taz.de?subject=Fehlerhinweis%20zu%20https://taz.de/Geld-statt-Applaus-in-der-Corona-Krise/!5676924/&amp;body=Zu%20%22Geld statt Applaus in der Corona-Krise: Boni für Systemrelevanz%22%0D%0Ahttps://taz.de/Geld-statt-Applaus-in-der-Corona-Krise/!5676924/%0D%0A%0D%0ABitte%20beschreiben%20Sie%20uns%20den%20Fehler.%20Sie%20können%20gern%20einen%20Screenshot%20anhängen.%20Wir%20danken%20für%20Ihre%20Hilfe%21%20
+					%0D%0A%0D%0A
+					Inhaltliches%20Feedback%20geben%20Sie%20uns%20gerne%20in%20der%20Kommentarspalte%20oder%20richten%20es%20an%20briefe@taz.de.%20Dort%20leiten%20wir%20ihr%20Feedback%20auch%20an%20die%20Redaktion%20weiter.%20Über%20diese%20Mailadresse%20nehmen%20wir%20nur%20Rechtschreib-%20und%20Faktenkorrekturen%20vor.				">Mail an fehlerhinweis@taz.de</a>!</p><p>
+	Inhaltliches Feedback? 
+	</p><p>
+
+	Gerne als Leser*innenkommentar unter dem Text auf taz.de oder über das
+	<a href="/!112355/"> Kontaktformular</a>.
+		</p></div></div><!-- DEBUG belly: 0 extras here, 0 from directory Schwerpunkt Coronavirus, thats 0 merged--></span><span class="wing" role="contentinfo"><div class="rack first_rack" id="xid459821">
+    
+	<!--template mode="layout" match="display[ @obj='descr' ]":start--><div role="region" id="" class="odd sect sect_description decorated focus directory no_body"><div class="secthead" role="heading"><a class="pictured" name="Schwerpunkt Coronavirus" href="/Schwerpunkt-Coronavirus/!t5660746/"><img src="/picture/3940809/300/Covid-19-Virus.jpg"></img></a><h2><a name="Schwerpunkt Coronavirus" href="/Schwerpunkt-Coronavirus/!t5660746/"><span>Schwerpunkt Coronavirus</span></a></h2></div><div class="sectbody"></div></div>
+
+    
+	<div role="region" id="" class="odd sect sect_meta "><div class="sectbody"><ul role="navigation" class="left rootline toolbar"><li class="first odd trodd selected"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="last even trodd selected"><a href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span>Deutschland</span></a></li></ul><ul role="navigation" class="right toolbar"><li class="date" itemprop="datePublished" content="2020-04-07T12:40:00+01:00">7. 4. 2020</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2020-04-07T12:45:51+01:00"></meta></ul></div></div>
+
+    
+	<div role="region" id="" class="odd sect sect_profile "><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="
+        
+	
+        
+
+		
+			
+	
+			author 
+		community 
+		
+        
+                
+		        
+		
+	        
+                
+
+		
+
+        person objlink" itemprop="url" href="/Mareike-Andert/!a55654/"><h4 itemprop="name">Mareike Andert</h4><h5 itemprop="jobTitle">
+		Autor*in
+	</h5></a></div></div><div role="region" id="" class="odd sect sect_profile "><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="author person objlink" itemprop="url" href="/Frederik-Schmidt/!a55729/"><h4 itemprop="name">Frederik Schmidt</h4></a></div></div>
+
+    
+	<div role="region" id="" class="even sect sect_tags "><div class="secthead" role="heading"><h2><a name="Themen"><span>Themen</span></a></h2></div><ul role="directory" class="news directory sectbody"><li class="even trodd tag"><a role="link" href="/!t5017815/" class="tag dirlink"><span>Pflegepersonal</span></a></li><li class="odd treven tag"><a role="link" href="/!t5011051/" class="tag dirlink"><span>Gehalt</span></a></li><li class="last even trodd tag"><a role="link" href="/!t5031977/" class="tag dirlink"><span>Boni</span></a></li></ul></div>
+
+    
+	
+
+    
+	<!-- DEBUG label: 0 extras here, 0 from directory Schwerpunkt Coronavirus, thats 0 merged-->
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><span id="ad_bin_ros_sidebar_1" class="ad_bin sold contentad"><div id="ad_zone_ros_sidebar_1" name="ros_sidebar-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'ros_sidebar_1';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script><!-- DEBUG wing: 2 extras here, 0 from directory Schwerpunkt Coronavirus, thats 2 merged-->
+      
+      <div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="Corona in Grafiken"><span>Corona in Grafiken</span></a></h2></div><div class="sectbody"><a class="picture"><img src="/picture/4521034/70/corona-weltweit-1.png" alt="" title=""></img></a><p>Die zweite Welle der Corona-Pandemie geht um Welt. Welche Regionen sind besonders betroffen? Wie ist die Lage in den Kliniken? Den <a href="/Wieviele-Coronainfizierte-gibt-es-aktuell/!5728077/" target="_blank">Überblick mit Zahlen und Grafiken finden Sie hier</a>.</p><p>
+              <b xmlns="">
+                <a href="/Wieviele-Coronainfizierte-gibt-es-aktuell/!5728077">▶ Alle Grafiken</a>
+              </b>
+            </p></div></div>
+    
+      
+      <div class="webelement-content-container" webelementid="html-5729780"><div class="webelement-content-container-content sectbody"><h6>Wir würden Ihnen hier gerne einen externen Inhalt zeigen. Sie entscheiden, ob sie dieses Element auch sehen wollen.</h6><p>Ich bin damit einverstanden, dass mir externe Inhalte angezeigt werden. Damit können personenbezogene Daten an Drittplattformen übermittelt werden. <a href="https://taz.de/!166598" target="_blank">Mehr dazu in unserer Datenschutzerklärung.</a></p></div><div class="webelement-content-container-inner"><label class="checkbox-switch"><input type="checkbox"></input><span class="checkbox-switch-slider-round"></span><span class="webelement-checkbox-switch-text">Externen Inhalt erlauben<span id="consentPreview"></span></span></label><p class="webelemnt-checkbox-switch-disclaimer"></p></div><div class="webelement-html-content" data-initial-state="true" webelementid="html-5729780"><noscript class="html-content" type="text/plain"><iframe title="Neuinfektionen mit dem Coronavirus in Deutschland seit dem Sommer" aria-label="Interactive line chart" id="datawrapper-chart-N7y22" src="https://datawrapper.dwcdn.net/N7y22/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 94.66%; border: none;" height="545"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+</script></noscript></div><div class="webelement-js-content"><script type="text/javascript">steffiOtaz_de.WebelementSwitch().setWebelementSwitch('html-5729780');</script></div></div>
+    </span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><span class="tail" role="complementary"><!-- DEBUG tail: 0 extras here, 0 from directory Schwerpunkt Coronavirus, thats 0 merged--><div role="region" id="xid709553" class="last even sect sect_adr style_adr "><ul role="directory" class="sectbody corp  directory"><li class=" first last odd trodd online   leaded pictured leaded remote story"><a class="dept" href="/FUTURZWEI/!p5099/">FUTURZWEI</a><a href="https://taz.de/Ex-Ministerin-Wara-Wende-im-Interview/!5740472/" target="_blank" class="objlink leaded pictured leaded remote story noavatar" role="link"><h4>Ex-Ministerin Wara Wende im Interview</h4><h3>Fehler und Sexismus in der Politik</h3><p class="brief">  Quereinsteigerin Wara Wende wurde als Ministerin zum Rücktritt gezwungen. Was war der Fehler?  </p><img src="/uploads/images/300/taz-FUTURZWEI-Wara-Wende-Fehler-Sexismus-Spitzenpolitik-Ex-Ministerin-Interview-Anja-Weber-1.jpg" alt="" title=""></img></a></li></ul></div></span><a itemprop="mainEntityOfPage" href="/Geld-statt-Applaus-in-der-Corona-Krise/!5676924"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div class="full no_rightbar below news page even n2"><div class="head" role="head"><div class="nose" role="heading" id="pg_hd"><h2><a name="Volle Spalte unterm Artikel" href="/Volle-Spalte-unterm-Artikel/!p5315/"><span>Volle Spalte unterm Artikel</span></a></h2></div><ul role="navigation" class="news navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid841997">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="Mehr zum Thema"><span>Mehr zum Thema</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd    report article leaded pictured"><a href="/Pflegekraefte-in-der-Coronakrise/!5713118/" ratioURL-ressource="5713118" class="objlink report article leaded pictured noavatar" role="link"><h4>Pflegekräfte in der Coronakrise</h4><h3>Ich habe diesen Job geliebt</h3><p>Die Pandemie offenbart die Schwierigkeiten des Pflegesystems mehr denn je. Unser Autor schreibt, warum er nicht mehr als Pfleger arbeiten kann.  <span class="author">Frédéric Valin</span></p><img src="/picture/4406265/300/Corona_Virus_Pflege_Einweghandschuhe-1.jpeg" alt="Einweghandschuhe liegen auf dem Boden" title="Einweghandschuhe liegen auf dem Boden"></img></a></li><li class=" even trodd    report article leaded pictured"><a href="/Altenheime-nach-Corona/!5681235/" ratioURL-ressource="5681235" class="objlink report article leaded pictured noavatar" role="link"><h4>Altenheime nach Corona</h4><h3>Bessere Pflege für 17 Euro</h3><p>Die Solidarität für die Pfleger in der Pandemie ist eine Chance. Mit etwas Verzicht könnten wir die Care-Branche grundlegend verbessern.  <span class="author">Barbara Dribbusch</span></p><img src="/picture/4117720/300/corona_zukunft_altenpflege_utopie-1.jpeg" alt="Auf der Illustration ist eine alte Frau abgebildet, die zusammen mit zwei jungen Menschen in einem Pool schwimmt. Sie haben alle Schwimmreifen in Form von Flamingos bei sich. Die Frau trinkt einen Cocktail aus einem Strohhalm." title="Auf der Illustration ist eine alte Frau abgebildet, die zusammen mit zwei jungen Menschen in einem Pool schwimmt. Sie haben alle Schwimmreifen in Form von Flamingos bei sich. Die Frau trinkt einen Cocktail aus einem Strohhalm."></img></a></li><li class=" last odd treven    interview article leaded pictured"><a href="/Hospize-und-Corona/!5676353/" ratioURL-ressource="5676353" class="objlink interview article leaded pictured noavatar" role="link"><h4>Hospize und Corona</h4><h3>„Wir wollen uns nicht abschotten“</h3><p>Im Ricam-Hospiz stellt sich die Frage: Wie geht Sterbebegleitung in Coronazeiten? Von der Politik fühlt sich Hospizleiterin Toska Holtz übersehen.  </p><img src="/picture/4092274/300/25127605-1.jpeg" alt="" title=""></img></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><span class="headed wing" role="complementary"></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Geld-statt-Applaus-in-der-Corona-Krise/!5676924"></a></div>
+      
+      <div class="full thema clip_small no_rightbar news page odd n3"><div class="head" role="head"><h2><a name="Coronavirus" href="/Schwerpunkt-Coronavirus/!t5660746"><span>Coronavirus</span></a></h2><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="topic"><a href="/Coronainfo-multilingual/!t5671953/" id="menu_t5671953"><span>Coronainfo multilingual</span></a></li><li class="topic"><a href="/Corona-Live-Ticker/!t5679126/" id="menu_t5679126"><span>Corona Live-Ticker</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div role="region" id="xid721894" class="first odd sect sect_leads style_leads  first_sect_leads oddpicts sect_thema clip_small"><ul role="directory" debug="x1" class="news directory"><li class="sectbody first odd trodd first_sectbody online   interview article leaded pictured"><a href="/Beraterin-ueber-Situation-in-Pflegeheimen/!5740438/" ratioURL-ressource="5740438" class="objlink interview article leaded pictured noavatar" role="link"><h4>Beraterin über Situation in Pflegeheimen</h4><h3>„Das Personal ist an der Grenze“</h3><p>Die Hilfe der Angehörigen in den Heimen fällt coronabedingt vielfach weg. Das habe fatale Folgen, sagt Ulrike Kempchen vom Biva-Pflegeschutzbund.  </p><img src="/picture/4594512/300/Pflegeheime-schnelltest-1.jpeg" alt="Eine Altenpflegerin nimmt in einem Altenwohnzentrum einen Abstrich für einen Schnelltest" title="Eine Altenpflegerin nimmt in einem Altenwohnzentrum einen Abstrich für einen Schnelltest"></img></a></li><li class="sectbody even trodd online   report article leaded pictured"><a href="/Homeoffice-in-der-Pandemie/!5736333/" ratioURL-ressource="5736333" class="objlink report article leaded pictured noavatar" role="link"><h4>Homeoffice in der Pandemie</h4><h3>Zu Hause sein ist jetzt Arbeit</h3><p>Die Coronapandemie hat unser Leben durchgeschüttelt. Im Homeoffice leben wir das Leben von Frührentnern. Die Hauptsache: obenrum gut aussehen.  <span class="author">Martin Reichert</span></p><img src="/picture/4591956/300/Home-office-1.jpeg" alt="Blick unter den Schreibtisch im Home Office: Ein Mann trägt grüne Socken und Hausschuh-Sandalen" title="Blick unter den Schreibtisch im Home Office: Ein Mann trägt grüne Socken und Hausschuh-Sandalen"></img></a></li><li class="sectbody last odd treven online   report article leaded pictured"><a href="/Aktuelle-Entwicklungen-in-der-Coronakrise/!5741059/" ratioURL-ressource="5741059" class="objlink report article leaded pictured noavatar" role="link"><h4>Aktuelle Entwicklungen in der Coronakrise</h4><h3>China lässt Impfstoff zu</h3><p>Die Zahl der zugelassenen Impfstoffe wächst. Das Präparat von Astrazeneca wird in der EU weiter geprüft. China setzt zunächst auf eine eigene Entwicklung.  </p><img src="/picture/4596117/300/26544895-1.jpeg" alt="Ein Mitarbeiter prüft die Verpackungsqualität von inaktivierten Corona-Impfstoffprodukten" title="Ein Mitarbeiter prüft die Verpackungsqualität von inaktivierten Corona-Impfstoffprodukten"></img></a></li></ul></div><!-- DEBUG belly: 0 extras here, 0 from directory Schwerpunkt Coronavirus, thats 0 merged--></span><a class="button cta" href="/Schwerpunkt-Coronavirus/!t5660746">Alle Artikel zum Thema</a><a itemprop="mainEntityOfPage" href="/Geld-statt-Applaus-in-der-Corona-Krise/!5676924"></a></div>
+    <div class="full community page last odd n3"><div class="head" role="head"><ul role="navigation" class=" navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid495498">
+    
+
+	<div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="Liebe Kommune,"><span>Liebe Kommune,</span></a></h2></div><div class="sectbody"><p>
+wir danken Euch für Euer Engagement, Eure Wut, Humor und Liebe in den
+Kommentaren in diesem oft heftigen Jahr. Jetzt ist die Zeit für ein paar
+Tage Ruhe, um gemütlich ins neue Jahr zu rutschen - solange ist die
+Kommentarfunktion geschlossen. Anfang nächster Woche schalten wir sie
+wieder an.
+</p><p></p><p>
+Habt einen guten Start ins neue Jahr und bleibt lieb miteinander
+<br xmlns="">
+Eure taz
+</p></div></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="" class="even sect sect_commentlinks style_commentlinks "><div class="secthead" role="heading"><h2><a name="Leserkommentare"><span>Leserkommentare</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class="member " id="bb_message_3940366"><a class="author person" href="/!ku14187/"><h4>mowgli</h4></a><time datetime="2020-04-07T13:47:23+02:00"><meta value="1586260043"></meta>07. 04. 2020, 
+		13:47</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Finanzminister Olaf Scholz hat keine Ahnung, wie es sich anfühlt, Tag für Tag „100-prozentigen Einsatz“ zu bringen und dafür nicht einmal 10% des Lohns zu bekommen, den ein Bundesminister einstreicht. Vom Applaus gar nicht zu reden.</p>
+<p xmlns="" class="even">Pfleger und Ärzte tragen nicht nur in Corona-Zeiten ganz konkrete Verantwortung für Leben und Gesundheit ganz konkreter Patienten. Da sind keine sechs bis acht „Zwischenetagen“, die den Entscheider von der Konsequenz seiner Entscheidung trennen. Wenn die Entscheidung falsch ist, merken Ärzte und Pfleger das sofort und ganz direkt. Mit allen Folgen für ihren Gefühlshaushalt.</p>
+<p xmlns="" class="last odd">Aber was weiß ein Minister schon von konkreter Verantwortung? Und was weiß er von 100%igem Einsatz für andere? Hätte er 100% Leistung für 100% Lohn bringen wollen, hätte er Krankenpfleger werden müssen, Verkäufer oder auch ein moderner, alleinerziehender Vater, nicht Minister.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3940355"><a class="author person" href="/!ku18516/"><h4>fly</h4></a><time datetime="2020-04-07T13:11:04+02:00"><meta value="1586257864"></meta>07. 04. 2020, 
+		13:11</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Geht mit dem Begriff "Systemrelevanz" vorsichtiger um!</p>
+<p xmlns="" class="even">Verkaufskräfte machen die gleiche Arbeit, wie sonst. Der Hauptfaktor der anders ist, ist die Gefährungslage. Zahlt einen Gefahrenzuschlag! Natürlich auch für Pflegekräfte.</p>
+<p xmlns="" class="last odd">Systemrelevant sind auch die Tüftler und Konstrukteure die jetzt Beatmungsgeräte bauen. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Systemrelevant sind sogar alle, die jetzt noch arbeiten (dürfen).</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3940385"><a class="author person" href="/!ku49385/"><h4>Edward</h4></a><time datetime="2020-04-07T14:38:42+02:00"><meta value="1586263122"></meta>07. 04. 2020, 
+		14:38</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@fly </span>Volle Unterstützung! Jede/r kann plötzlich systemrelevant sein - bei der nächsten Flutkatastrophe sind es die Sandgrubenbesitzer, Sandsacklieferanten, Gummistiefelproduzenten und Hersteller von Entfeuchtungsgeräten. <br xmlns="http://www.w3.org/1999/xhtml"></br>
+Ich würde es sehr begrüßen, wenn im Ergebnis dieser Krise die Notfallvorsorge dahingehend angepasst wird, dass wir/Europa in der Lage ist, plötzlich massenhaft benötigte Utensilien schnell selbst herzustellen. Man kann nicht unbegrenzt einlagern, aber eine zügige Skalierung sollte machbar sein. Und egal wer dann über sich hinauswächst - keiner sollte aus dem Dienst an der Gesellschaft hinterher in Not geraten!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></div><span id="ad_bin_uebersicht_medrec_4" class="ad_bin sold contentad"><div id="ad_zone_uebersicht_medrec_4" name="uebersicht_medrec-4" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"></div></span><script type="text/javascript"> (function(){
+		var domId = 'uebersicht_medrec_4';
+		var parent = $( '#ad_bin_'+ domId ).parent();
+		if ( parent.is('.wing') ) {
+			filOtaz_de_float.promise.promise().done(function(){		
+				filOtaz_de.ads.gpt.activateAdFrame( domId );
+			});
+		} else {
+			filOtaz_de.ads.gpt.activateAdFrame( domId );				
+		}
+	})(); 
+	</script></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid476383">
+    
+
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div class="rack" id="xid524032">
+    
+
+
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Geld-statt-Applaus-in-der-Corona-Krise/!5676924"></a></div><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Politik/!p4615/" id="menu_p4615"><span itemprop="title">Politik</span></a><ul><li class="first odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span itemprop="title">Deutschland</span></a></li><li class="even trodd"><a href="/Politik/Europa/!p4617/" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="/Politik/Amerika/!p4618/" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="/Politik/Afrika/!p4621/" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="/Politik/Asien/!p4619/" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="/Politik/Nahost/!p4620/" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="/Politik/Netzpolitik/!p4622/" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a><ul><li class="first odd trodd"><a href="/Oeko/Oekonomie/!p4623/" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="/Oeko/Oekologie/!p4624/" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="/Oeko/Arbeit/!p4629/" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="/Oeko/Konsum/!p4625/" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="/Oeko/Verkehr/!p4628/" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven"><a href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span>Wissenschaft</span></a></li><li class="last odd trodd"><a href="/Oeko/Netzoekonomie/!p4627/" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a><ul><li class="first odd trodd"><a href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span>Alltag</span></a></li><li class="even trodd"><a href="/Gesellschaft/Reportage-und-Recherche/!p5265/" id="menu_p5265"><span>Reportage und Recherche</span></a></li><li class="odd treven"><a href="/Gesellschaft/Debatte/!p4633/" id="menu_p4633"><span>Debatte</span></a></li><li class="even trodd"><a href="/Gesellschaft/Kolumnen/!p4634/" id="menu_p4634"><span>Kolumnen</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Medien/!p4630/" id="menu_p4630"><span>Medien</span></a></li><li class="even treven"><a href="/Gesellschaft/Bildung/!p4635/" id="menu_p4635"><span>Bildung</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span>Gesundheit</span></a></li><li class="last even trodd"><a href="/Gesellschaft/Reise/!p4638/" id="menu_p4638"><span>Reise</span></a></li></ul></li><li class="even trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="/Kultur/Musik/!p4640/" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="/Kultur/Film/!p4641/" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="/Kultur/Kuenste/!p4642/" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="/Kultur/Buch/!p4643/" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="/Kultur/Netzkultur/!p4631/" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="/Sport/Fussball/!p4647/" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="/Sport/Kolumnen/!p4648/" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="/Nord/Hamburg/!p4651/" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="/Nord/Bremen/!p4652/" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="/Nord/Kultur/!p4653/" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="/bei-Tom/!t5180734/" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="/ueber-die-Wahrheit/!115080/" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Podcast/!p5171/" id="menu_p5171"><span>Podcast</span></a></li><li class="odd trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="even treven"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="odd trodd"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="even trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="odd treven"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="even trodd"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="odd trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="even treven"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="odd trodd"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="even trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="odd treven"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="even trodd"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="odd trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="even treven"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="odd trodd"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last even trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="https://taz.de/!112354/" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="https://taz.de/!p5097/" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="https://taz.de/!114802/" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="https://taz.de/!114191/" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="https://taz.de/!166598/" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4283/" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="https://taz.de/!p4858/" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="https://taz.de/!112355/" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div></body><!-- DEBUG end 04:31:14+01:00--></html>
