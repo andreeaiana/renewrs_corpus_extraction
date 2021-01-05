@@ -76,7 +76,7 @@ class Tichyseinblick(BaseSpider):
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
-        authors = response.xpath("//div[@class='rty-article-page-author ']//a/text()").get()
+        authors = response.xpath("//div[@class='rty-article-page-author ']//a/text()").getall()
         item['author_person'] = authors if authors else list()
         item['author_organization'] = list()
 
