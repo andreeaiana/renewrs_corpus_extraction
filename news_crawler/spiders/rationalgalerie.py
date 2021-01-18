@@ -70,7 +70,7 @@ class Rationalgalerie(BaseSpider):
         # Get creation, modification, and crawling dates
         item['creation_date'] = creation_date.strftime('%d.%m.%Y')
         last_modified = response.xpath('//meta[@property="article:modified_time"]/@content').get()
-        item['last_modified'] = datetime.strptime(last_modified,'%d.%m.%Y')
+        item['last_modified'] = datetime.strptime(last_modified,'%d.%m.%Y').strftime('%d.%m.%Y')
         item['crawl_date'] = datetime.now().strftime('%d.%m.%Y')
 
         # Get authors
@@ -109,7 +109,7 @@ class Rationalgalerie(BaseSpider):
             # The article has no headlines, just paragraphs
             body[''] = paragraphs
 
-        item['content'] = {'title': title, 'description': description, 'body':body}
+        item['content'] = {'title': title, 'description': description, 'body': body}
 
         # Extract first 5 recommendations towards articles from the same news outlet, if available
         item['recommendations'] = list()
