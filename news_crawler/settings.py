@@ -16,19 +16,28 @@ NEWSPIDER_MODULE = 'news_crawler.spiders'
 
 # Run spider until item count or timeout
 CLOSESPIDER_ITEMCOUNT = 200 
-CLOSESPIDER_TIMEOUT = 3600*24*3 # For topic 'refugees and migration'
-#CLOSESPIDER_TIMEOUT = 3600*24*9 # For topic 'Grundeinkommen'
+CLOSESPIDER_TIMEOUT = 3600*24*3 # For topics 'refugees and migration', 'green deal'
+#CLOSESPIDER_TIMEOUT = 3600*24*9 # For topic 'Grundeinkommen', 'wind power', 'homeopathy'
 
 
 # Project-specific variables
 TOPIC = 'refugees_migration'
 #TOPIC = 'grundeinkommen'
+#TOPIC = 'green_deal'
+#TOPIC = 'wind_power'
+#TOPIC = 'homeopathy'
 
 START_DATE = "01.01.2019" # For topic 'refugees and migration'
 #START_DATE = "01.01.2015" # For topic 'Grundeinkommen'
+#START_DATE = "01.12.2019" # For topic 'green deal'
+#START_DATE = "01.01.2015" # For topic 'wind power'
+#START_DATE = "01.01.2015" # For topic 'homeopathy'
 
 END_DATE = "20.10.2020" # For topic 'refugees and migration'
 #END_DATE = "16.12.2020" # For topic 'Grundeinkommen'
+#END_DATE = "31.01.2021" # For topic 'green deal'
+#END_DATE = "31.01.2021" # For topic 'wind power'
+#END_DATE = "31.01.2021" # For topic 'homeopathy'
 
 ARTICLE_LENGTH = 150
 KEYWORDS_MIN_FREQUENCY = 2
@@ -36,6 +45,9 @@ KEYWORDS_MIN_DISTANCE = 50
 
 KEYWORDS = ['flüchtl', 'geflücht', 'asyl', 'zuwander', 'immigrant', 'immigration', 'migration', 'migrant',  'ausländer', 'einwander', 'refug', 'rapefug', 'invasor'] # For topic 'refugees and migration'
 #KEYWORDS = ['grundeinkommen', 'bedingungslos einkommen'] # For topic 'Grundeinkommen'
+#KEYWORDS = ['green deal', 'europäisch grüne deal' , 'eu green deal', 'eu grüne deal'] # For topic 'green deal'
+#KEYWORDS = ['windkraft', 'windenergie', 'windrad', 'windräder'] # For topic 'wind power'
+#KEYWORDS = ['homöopathie', 'globuli', 'alternativmedizin', 'alternativ medizin']
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'news_crawler (+http://www.yourdomain.com)'
