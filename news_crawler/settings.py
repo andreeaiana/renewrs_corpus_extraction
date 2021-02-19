@@ -28,16 +28,12 @@ TOPIC = 'refugees_migration'
 #TOPIC = 'homeopathy'
 
 START_DATE = "01.01.2019" # For topic 'refugees and migration'
-#START_DATE = "01.01.2015" # For topic 'Grundeinkommen'
+#START_DATE = "01.01.2015" # For topics 'Grundeinkommen', 'wind power', 'homeopathy'
 #START_DATE = "01.12.2019" # For topic 'green deal'
-#START_DATE = "01.01.2015" # For topic 'wind power'
-#START_DATE = "01.01.2015" # For topic 'homeopathy'
 
 END_DATE = "20.10.2020" # For topic 'refugees and migration'
 #END_DATE = "16.12.2020" # For topic 'Grundeinkommen'
-#END_DATE = "31.01.2021" # For topic 'green deal'
-#END_DATE = "31.01.2021" # For topic 'wind power'
-#END_DATE = "31.01.2021" # For topic 'homeopathy'
+#END_DATE = "31.01.2021" # For topics 'green deal', 'wind power', 'homeopathy'
 
 ARTICLE_LENGTH = 150
 KEYWORDS_MIN_FREQUENCY = 2
