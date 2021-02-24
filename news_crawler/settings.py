@@ -41,7 +41,7 @@ KEYWORDS_MIN_DISTANCE = 50
 
 KEYWORDS = ['flüchtl', 'geflücht', 'asyl', 'zuwander', 'immigrant', 'immigration', 'migration', 'migrant',  'ausländer', 'einwander', 'refug', 'rapefug', 'invasor'] # For topic 'refugees and migration'
 #KEYWORDS = ['grundeinkommen', 'bedingungslos einkommen'] # For topic 'Grundeinkommen'
-#KEYWORDS = ['green deal', 'europäisch grüne deal' , 'eu green deal', 'eu grüne deal'] # For topic 'green deal'
+#KEYWORDS = ['green deal', 'eu green deal', 'eu grüne deal'] # For topic 'green deal'
 #KEYWORDS = ['windkraft', 'windenergie', 'windrad', 'windräder'] # For topic 'wind power'
 #KEYWORDS = ['homöopathie', 'globuli', 'alternativmedizin', 'alternativ medizin']
 

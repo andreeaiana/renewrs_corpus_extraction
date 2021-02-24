@@ -45,6 +45,8 @@ class BaseSpider(CrawlSpider):
         if self.compound_keywords:
             self.keywords = [keyword for keyword in self.keywords if not keyword in self.compound_keywords]
 
+        self.keywords_combinations = list()
+
         if not settings.get('KEYWORDS_MIN_FREQUENCY'):
             raise NotConfigured
         self.keywords_min_frequency = settings.get('KEYWORDS_MIN_FREQUENCY')
@@ -86,25 +88,58 @@ class BaseSpider(CrawlSpider):
         return: bool: True if keyword requirements met, False otherwise
         """
         tokens = text.lower().split()
+        if not self.keywords_combinations:
+            return self._has_valid_keywords(tokens)
+        else:
+            return self._has_valid_combinations_keywords(tokens)
+        
 
+    def _has_valid_keywords(self, tokens):
+        """
+        Check if single or compound keywords appear in the given list of tokens and meet the validity requirements.
+
+        param: tokens: list, article's body of text as list of tokens
+        return: bool: True if keyword requirements met, False otherwise
+        """
         # Extract matching positions and tokens
         matching_pos_tokens = [(tokens.index(token), token) for token in tokens if any(keyword in token for keyword in self.keywords)]
 
         # Extract matching positions and tokens for compound keyword stems (e.g. bedingungslos* einkommen*)
         compound_query_keywords = list()
+
         if self.compound_keywords:
-            matching_compound_pos_tokens = [(tokens.index(token), token) for token in tokens for keyword in self.compound_keywords if ((keyword.split()[0] in token) and (keyword.split()[-1] in tokens[tokens.index(token)+1]))]
-            if matching_compound_pos_tokens:
-                matching_compound_pos = [pos for (pos, _) in matching_compound_pos_tokens]
+            double_keywords = [keyword for keyword in self.compound_keywords if len(keyword.split())==2]
+            triple_keywords = [keyword for keyword in self.compound_keywords if len(keyword.split())==3]
+
+            if double_keywords:
+                matching_double_pos_tokens = [(tokens.index(token), token, keyword) for token in tokens for keyword in double_keywords if ((keyword.split()[0] in token) and (keyword.split()[1] in tokens[tokens.index(token)+1]))]
+                if matching_double_pos_tokens:
+                    matching_double_pos = [pos for (pos, _, _) in matching_double_pos_tokens]
                 
-                # Remove matches that might result from querying using both 'keywords' and 'compound keywords'
-                matching_pos_tokens = [(pos, token) for (pos, token) in matching_pos_tokens if (pos-1) not in matching_compound_pos]
+                    # Remove matches that might result from querying using both 'keywords' and 'double keywords'
+                    matching_pos_tokens = [(pos, token) for (pos, token) in matching_pos_tokens if (pos-1) not in matching_double_pos]
 
-                # Add matches from compound keywords to all matches
-                matching_pos_tokens.extend(matching_compound_pos_tokens)
+                    # Add matches from compound keywords to all matches
+                    matching_pos_tokens.extend(list(set([(pos, token) for (pos, token, _) in matching_double_pos_tokens])))
 
-                # Update used query compound keywords
-                compound_query_keywords.extend(self.compound_keywords)
+                    # Update used query compound keywords
+                    compound_query_keywords.extend(list(set([keyword for (_, _, keyword) in matching_double_pos_tokens])))
+
+            
+            if triple_keywords:
+                matching_triple_pos_tokens = [(tokens.index(token), token, keyword) for token in tokens for keyword in triple_keywords if ((keyword.split()[0] in token) and (keyword.split()[1] in tokens[tokens.index(token)+1]) and (keyword.split()[-1] in tokens[tokens.index(token)+2]))]
+            
+                if matching_triple_pos_tokens:
+                    matching_triple_pos = [pos for (pos, _, _) in matching_triple_pos_tokens]
+                
+                    # Remove matches that might result from querying using both 'double keywords' and 'triple keywords'
+                    matching_pos_tokens = [(pos, token) for (pos, token) in matching_pos_tokens if ((pos not in matching_triple_pos) and ((pos+1) not in matching_triple_pos))]
+
+                    # Add matches from compound keywords to all matches
+                    matching_pos_tokens.extend(list(set([(pos, token) for (pos, token, _) in matching_triple_pos_tokens])))
+
+                    # Update used query compound keywords
+                    compound_query_keywords.extend([keyword for (_, _, keyword) in matching_triple_pos_tokens])
 
         # Check if there are any query keyword stems in the text
         if matching_pos_tokens:
@@ -122,6 +157,10 @@ class BaseSpider(CrawlSpider):
                         self.query_keywords.extend(list(set(compound_query_keywords)))
                     return True
         return False
+
+    def _has_valid_combinations_keywords(self, tokens):
+        pass
+
 
     def get_query_keywords(self):
         """ 
