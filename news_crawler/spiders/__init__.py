@@ -40,13 +40,14 @@ class BaseSpider(CrawlSpider):
             raise NotConfigured
         self.keywords = settings.get('KEYWORDS')
 
-        # Check if there are compound keywords (e.g. bedingungslos* einkommen*), and if so, separate single-token and multiple-token keywords
-        self.compound_keywords = [keyword for keyword in self.keywords if len(keyword.split())>1]
-        if self.compound_keywords:
-            self.keywords = [keyword for keyword in self.keywords if not keyword in self.compound_keywords]
-
-        self.keywords_combinations = list()
-
+        self.keywords_combinations = self.keywords if type(self.keywords[0])==list else list()
+        
+        if not self.keywords_combinations:
+            # Check if there are compound keywords (e.g. bedingungslos* einkommen*), and if so, separate single-token and multiple-token keywords
+            self.compound_keywords = [keyword for keyword in self.keywords if len(keyword.split())>1]
+            if self.compound_keywords:
+                self.keywords = [keyword for keyword in self.keywords if not keyword in self.compound_keywords]
+        
         if not settings.get('KEYWORDS_MIN_FREQUENCY'):
             raise NotConfigured
         self.keywords_min_frequency = settings.get('KEYWORDS_MIN_FREQUENCY')
@@ -159,8 +160,81 @@ class BaseSpider(CrawlSpider):
         return False
 
     def _has_valid_combinations_keywords(self, tokens):
-        pass
+        """
+        Check if any combination of keywords appears in the list of tokens and whether it meets the requirements.
 
+        param: tokens: list, article's body of text as list of tokens
+        return: bool: True if keyword requirements met, False otherwise
+        """
+        compound_keywords = [keyword for keyword in self.keywords_combinations[0] if len(keyword.split())>1]
+        single_keywords = [keyword for keyword in self.keywords_combinations[0] if not keyword in compound_keywords]
+        combined_first_compound_keywords = [keyword for keyword in self.keywords_combinations[1] if len(keyword.split())>1]
+        combined_first_single_keywords = [keyword for keyword in self.keywords_combinations[1] if not keyword in combined_first_compound_keywords]
+        combined_second_keywords = self.keywords_combinations[2]
+
+        # Extract matching positions and tokens for single keywords
+        matching_pos_tokens = [(tokens.index(token), token) for token in tokens if any(keyword in token for keyword in single_keywords)]
+
+        # Extract matching positions and tokens for compound keyword stems (e.g. soft droge)
+        compound_query_keywords = list()
+        
+        if compound_keywords:
+            matching_compound_pos_tokens = [(tokens.index(token), token, keyword) for token in tokens for keyword in compound_keywords if ((keyword.split()[0] in token) and (keyword.split()[1] in tokens[tokens.index(token)+1]))]
+
+            if matching_compound_pos_tokens:
+                # Add matches from compound keywords to all matches
+                matching_pos_tokens.extend(list(set([(pos, token) for (pos, token, _) in matching_compound_pos_tokens])))
+
+                # Update used query compound keywords
+                compound_query_keywords.extend(list(set([keyword for (_, _, keyword) in matching_compound_pos_tokens])))
+
+        # Check if any combination of keywords if contained in the text
+        flag = True
+        comb_compound_query_keywords = list()
+
+        matching_comb_pos_tokens = [(tokens.index(token), token) for token in tokens if any(keyword in token for keyword in combined_first_single_keywords)]                
+        if combined_first_compound_keywords:
+            matching_comb_compound_pos_tokens = [(tokens.index(token), token, keyword) for token in tokens for keyword in combined_first_compound_keywords if ((keyword.split()[0] in token) and (keyword.split()[1] in tokens[tokens.index(token)+1]))]
+            
+            if matching_comb_compound_pos_tokens:
+                matching_comb_pos_tokens.extend(list(set([(pos, token) for (pos, token, _) in matching_comb_compound_pos_tokens])))
+                comb_compound_query_keywords.extend(list(set([keyword for (_, _, keyword) in matching_comb_compound_pos_tokens])))
+
+        # Check if second keyword from the combination also occurs in the text
+        if matching_comb_pos_tokens:
+            matching_second_comb_pos_tokens = [(tokens.index(token), token) for token in tokens if any(keyword in token for keyword in combined_second_keywords)]
+            if matching_second_comb_pos_tokens:
+                matching_comb_pos_tokens.extend(matching_second_comb_pos_tokens)
+            else:
+                flag = False
+
+        if flag:
+            matching_pos_tokens.extend(matching_comb_pos_tokens)
+
+        # Check if there are any query keyword stems in the text
+        if matching_pos_tokens:
+            matching_pos_tokens = list(set(matching_pos_tokens))
+            matching_positions, matching_tokens = map(list, zip(*matching_pos_tokens))
+
+            # Check the frequency of query keyword stems in the text
+            if len(matching_positions) >= self.keywords_min_frequency:
+                
+                # Check the token difference between query keyword stems 
+                if any(abs(pos_1-pos_2) >= self.keywords_min_distance for (pos_1, pos_2) in list(combinations(matching_positions, 2))):
+                    
+                    # Update the list of query keyword stems used
+                    self.query_keywords = list(set(filter(lambda x: any(x in token for token in matching_tokens), single_keywords)))
+                    if compound_query_keywords:
+                        self.query_keywords.extend(list(set(compound_query_keywords)))
+                    if matching_comb_pos_tokens:
+                       self.query_keywords.extend(list(set(filter(lambda x: any(x in token for token in matching_tokens), combined_first_single_keywords))))
+                       self.query_keywords.extend(list(set(filter(lambda x: any(x in token for token in matching_tokens), combined_second_keywords))))
+                       if combined_first_compound_keywords:
+                           self.query_keywords.extend(comb_compound_query_keywords)
+                    self.query_keywords = list(set(self.query_keywords))
+
+                    return True
+        return False
 
     def get_query_keywords(self):
         """ 
