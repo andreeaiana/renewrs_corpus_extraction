@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 18:48:19+01:00 page_id=4636 :: Wissenschaft--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 4636--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>Jahrestreffen der „Skeptiker“: Zweifeln hält gesund - taz.de</title><meta name="author" content="Manfred Ronzheimer"></meta><meta name="description" content="„Skeptiker“ ziehen gegen Geistheilung, Homöopathie und andere Pseudowissenschaften zu Felde. Bekämpft wird alles, was nicht in ihr Weltbild passt."></meta><meta name="keywords" content="Fake News, AKW, Wissenschaft, Öko, taz, tageszeitung "></meta><meta name="taz:title" data-id="5403632" content="Jahrestreffen der „Skeptiker“: Zweifeln hält gesund"></meta><meta name="taz:tag" content="Fake News" data-tag-id="5325634"></meta><meta name="taz:tag" content="AKW" data-tag-id="5010344"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta><meta property="og:url" content="https://taz.de/!5403632/"></meta><meta property="og:locale" content="de_DE"></meta><meta property="og:type" content="article"></meta><meta name="twitter:card" content="summary_large_image"></meta><meta name="twitter:site" content="@tazgezwitscher"></meta><meta property="og:title" content="Jahrestreffen der „Skeptiker“: Zweifeln hält gesund"></meta><meta property="fb:app_id" content="966242223397117"></meta><meta name="twitter:title" content="Jahrestreffen der „Skeptiker“: Zweifeln hält gesund"></meta><meta property="og:description" content="„Skeptiker“ ziehen gegen Geistheilung, Homöopathie und andere Pseudowissenschaften zu Felde. Bekämpft wird alles, was nicht in ihr Weltbild passt."></meta><meta name="twitter:description" content=" „Skeptiker“ ziehen gegen Geistheilung, Homöopathie und andere Pseudowissenschaften zu Felde. Bekämpft wird alles, was nicht in ihr Weltbild passt."></meta><meta property="og:image" content="https://taz.de/picture/1966844/948/Chemtrails_Kondensstreifen_dpa_13jan2016.jpeg"></meta><meta name="twitter:image" content="https://taz.de/picture/1966844/948/Chemtrails_Kondensstreifen_dpa_13jan2016.jpeg"></meta><meta property="article:published_time" content="2017-05-05T16:38:00+01:00"></meta><meta property="article:modified_time" content="2019-03-20T01:52:37+01:00"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"5403632" // String
+            , page_title_enc      :"5403632: Jahrestreffen der „Skeptiker“: Zweifeln hält gesund" // String
+            , custom_url_enc      :"/!5403632" // String
+            , channel             :"web" // String
+            , area                :"Redaktion" // String
+            , department          :"p4636" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : false  // Boolean
+            , is_article          : true  // Boolean
+            , has_tags            : true  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "https://taz.de/lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<script type="text/javascript"> 
+	       
+(function(){
+
+
+	if ( ((location.href.match(/goMobile/g) || []).length) > 1 ) {
+		console.log( 'prevent loop' );
+		return
+	}
+	
+	// console.log('ratioURL_channel ' + readCookie('ratioURL_channel') );
+
+	if ( readCookie('ratioURL_channel') == 'web' ){ 
+ 		return;
+		// web view was selected explicitly
+	}
+	var getWidth;
+	if (screen.width > screen.height){
+		   getWidth = screen.height;
+		} else {
+		   getWidth = screen.width;
+	}
+	
+
+
+	if (getWidth < 551) {
+		//mobile
+
+		var goto = location.pathname;
+		// to do: look if this is running
+		if ( (/goMobile/).test( location.search ) && (/count/).test( location.href ) || ( location.search.indexOf('goMobile') > 1 ) ){	// back here despite cache-killer: give up.
+				
+				if ((/;web/).test( location.pathname )) {
+					location.href = goto
+					
+				};
+//				document.createElement("img").src='/count/debug/go-mobile/quit/cachekiller+'+ (new Date()).getTime();
+				return false;
+			}
+		
+			if( (/moby/).test( readCookie('ratioURL_channel') ) ) { // back here despite cookie: reload w/ cache-killer to prevent loop
+			// Google-Bot needs this to see mobile (https://search.google.com/search-console/inspect fil 2018-12-03)
+			location.href = '/count/redirect/go-mobile-nocache'+ goto 
+				+( location.search ? location.search +'&' : '?' ) +'goMobile2='+ (new Date()).getTime()
+				+location.hash;
+//			document.createElement("img").src='/count/debug/go-mobile/quit/cookie+'+ (new Date()).getTime();
+			return;
+			}
+
+	//	$.cookie('ratioURL_channel', 'moby', {domain:'taz.de', path:'/'} );	// try to set channel cookie …
+		document.cookie = 'ratioURL_channel=moby; domain=taz.de; path=/';
+
+
+		if( (/moby/).test( readCookie('ratioURL_channel') ) ) {	// … cookie was successfully set: reload …
+			if (location.search.indexOf('nocache') != -1) return;	// old cache killer for transition period
+			location.reload( true );
+			return;
+			}
+		else {						// … setting cookie failed: load explicit channel url …
+			if (location.search.indexOf('nocache') != -1) return;	// old cache killer for transition period
+			if( goto =='/' )
+				goto = '/!p4608;moby/';
+			else	goto = goto.replace(/[/]$/,';moby/');
+			location.href = '/count/redirect/go-mobile-nocookie'+ goto 
+				+location.search
+				+location.hash;
+			return;
+			}
+
+		} else {
+		//desktop
+	}
+
+		// vanilla js cookie reader
+		function readCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0;i < ca.length;i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			}
+			return null;
+		}
+
+
+	})();	
+	
+		</script><link rel="preload" href="/lib/share/fonts/DroidSerif-Regular-webfont.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/fontawesome-reduced.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_5_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_6_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_7_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_8_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_4_italic.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_4_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz-Bold_tazze_private_only.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Quodana.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/ch/moby/pix/tazze46.png" as="image" media="(min-width: 81px)"></link><link rel="preload" href="/lib/ch/moby/pix/hamburger_100.gif" as="image" media="(min-width: 47px)"></link><link rel="preload" href="/lib/ch/web/pix/tzi_logo_120px.png" as="image" media="(min-width: 120px)"></link><link rel="preload" href="/lib/ch/web/pix/tazze_30_d50d2e.png" as="image" media="(min-width: 20px)"></link><link rel="canonical" href="https://taz.de/Jahrestreffen-der-Skeptiker/!5403632/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Wissenschaft" href="/!p4636/rss.xml"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="/rss.xml"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="/"></link><link rel="copyright" type="text/html" title="Impressum" href="/6/impressum/"></link><link rel="stylesheet" type="text/css" media="screen, print" href="/lib/ch/web/css/news2020-12-08_51.css"></link><link href="/lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="/lib/ch/moby/js/local/cmp.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="/lib/ch/web/js/2020-12-08_51.js"></script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"5403632" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/Oeko/Wissenschaft" // String
+            , is_article      : true  // Boolean
+            , is_corp         : false  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+
+
+            if ( $("body.homepage .sect_number-teaser2").length ) {  p.trackEvent( 'TZI', 'displayed', 'COUNTER-HOMEPAGE') };
+            if ( $("body.isdir:not(.homepage) #pages.news .sect_number-teaser2").length ) { p.trackEvent( 'TZI', 'displayed', 'COUNTER-RESSORTSEITE') };
+            if ( $("#pages.corp .sect_number-teaser2").length ) {  p.trackEvent( 'TZI', 'displayed', 'COUNTER-VERLAGSSEITE') };
+
+            $(document).on("click", "body.homepage .sect_number-teaser2",function(event){ p.trackEvent( 'TZI', 'clicked', 'COUNTER-HOMEPAGE'  ) });
+            $(document).on("click", "body.isdir:not(.homepage) #pages.news .sect_number-teaser2",function(event){ p.trackEvent( 'TZI', 'clicked', 'COUNTER-RESSORTSEITE'  ) });
+            $(document).on("click", "#pages.corp .sect_number-teaser2",function(event){ p.trackEvent( 'TZI', 'clicked', 'COUNTER-VERLAGSSEITE'  ) });
+
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+	    */
+	    // mar teilreaktivierung Startseitenteaser - nur Newskamin
+            $(document).on("click", "#pages.news.home >.news.page.first_page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+
+
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" src="https://script.ioam.de/iam.js?m=1"></script><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link><link rel="manifest" href="/manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body class=""><noscript><img src="https://taz.de/stats/piwik.php?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		
+
+
+			</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Redaktion/Oeko/Wissenschaft,Artikel",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><span id="ad_bin_fireplace_bg" class="ad_bin"></span><span id="ad_bin_fireplace_mitte" class="ad_bin"></span><span id="ad_bin_fireplace_links" class="ad_bin"></span><span id="ad_bin_fireplace_rechts" class="ad_bin"></span><div id="adzone_wall" class=""><span id="ad_bin_ros_top_rechts" class="ad_bin"><div id="ad_zone_ros_top_rechts" name="ros_top-rechts" class="ad_zone"><iframe class="adIframe" id="ros_top-rechts" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Oeko' }));
+			var adId = 'ros_top-rechts';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span><span id="ad_bin_ros_top_mitte" class="ad_bin"><div id="ad_zone_ros_top_mitte" name="ros_top-mitte" class="ad_zone"><iframe class="adIframe" id="ros_top-mitte" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Oeko' }));
+			var adId = 'ros_top-mitte';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span></div><div id="pages" class="news"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even treven"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd treven"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even treven"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="odd trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="even trodd"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="odd treven"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="even trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="even treven"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul><div class="full news report article page first odd first_page n1" itemscope="" itemtype="http://schema.org/NewsArticle"><div class="head" role="head"><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="even trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="odd treven selected"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a></li><li class="even trodd"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="odd trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a></li><li class="even treven"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a></li><li class="odd trodd"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a></li><li class="even trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a></li><li class="last odd treven"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><span class="body" role="main"><div class="main rack first_rack" id="xid819017">
+    
+	<div xmlns="" class="metadata" itemscope="">
+<a id="articleURL" href="/!5403632"></a><a id="speakingURL" href="/Jahrestreffen-der-Skeptiker/!5403632"></a><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-article-ID" content="5403632"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="url-ID" content="5403632"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-obj-ID" content="1966844"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="vgwort-counter-ID" content="e66281a8decb434d87a5069d494c8056"></meta><span id="articleID"></span><span id="cmsArticleID">5403632</span><img src="//taz.met.vgwort.de/na/e66281a8decb434d87a5069d494c8056" width="1" height="1" alt=""><img src="/count/vgwort/e66281a8decb434d87a5069d494c8056.gif" width="1" height="1" alt="">
+</div>
+<div role="region" id="" class="odd sect sect_article news report"><article class="sectbody" itemprop="articleBody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Jahrestreffen der „Skeptiker“</span><span class="hide">: </span><span>Zweifeln hält gesund</span>
+</h1>
+<p xmlns="" itemprop="description" class="intro ">„Skeptiker“ ziehen gegen Geistheilung, Homöopathie und andere Pseudowissenschaften zu Felde. Bekämpft wird alles, was nicht in ihr Weltbild passt.</p>
+      
+      <a xmlns="" class="full picture" href="/picture/1966844/948/Chemtrails_Kondensstreifen_dpa_13jan2016.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	" itemprop="image"><img src="/picture/1966844/624/Chemtrails_Kondensstreifen_dpa_13jan2016.jpeg" alt="Kondenstreifen am Himmel" title="Kondenstreifen am Himmel"></a><p xmlns="" class="caption">Für Verschwörungstheoretiker ganz klar: Chemtrails – böse Regierungen lassen bewusstseinsverändernde Substanzen versprühen, um so das Volk besser manipulieren zu können <span class="credit"> Foto: dpa</span></p>
+    
+      <p xmlns="" class="article first odd"><span>BERLIN</span> <em>taz</em> | Es begann mit gebogenen Löffeln. Als der Zauberkünstler Uri Geller in den 70er Jahren in Fernsehshows vorführte, wie sich metallenes Essbesteck scheinbar mit Geisteskraft verformen ließ, da wuchs bei dem Industrieforscher Amardeo Sarma die Skepsis. „Das war für uns die Initialzündung“, blickt der Vorsitzende der <a target="_blank" href="https://www.gwup.org/">Gesellschaft zur wissenschaftlichen Untersuchung von Parawissenschaften (GWUP)</a> auf die Gründung seines Vereins vor 30 Jahren zurück. Aus den zehn Zweiflern von damals ist heute eine Organisation mit 1.500 Mitgliedern geworden, die sich kurz „Skeptiker“ nennen.</p>
+      <p xmlns="" class="article even">Ihr Ziel: Gegen irrige Glaubenssätze, die gleichwohl reale Handlungsmuster von Menschen bestimmen, mit wissenschaftlichem Faktencheck anzutreten, sie zu entzaubern. Das Feld ist weit: Es reicht von der Parapsychologie und der Beobachtung unbekannter Flugobjekte (Ufos), zu Verschwörungstheorien in Gestalt der „Chemtrails“–Wolkenmustern am Himmel, bis hin zur Leugnung des Klimawandels und den Versprechen einer Alternativmedizin mit zuweilen tödlichen Folgen. Am vergangenen Wochenende kamen die GWUP-Skeptiker zu ihrer <a target="_blank" href="https://www.skepkon.org/">Jahreskonferenz</a> in der Berliner Urania zusammen.</p>
+      
+      <span id="ad_bin_artikel_medrec_1" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_1" name="artikel_medrec-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"><iframe class="adIframe" id="artikel_medrec-1" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Oeko' }));
+			var adId = 'artikel_medrec-1';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span>
+    
+      <p xmlns="" class="article odd">„Skepsis ist Teil des gesunden Menschenverstandes, ohne den wahre Wissenschaft nicht gedeihen kann“, zitiert Sarma den amerikanischen Ahnherrn der Bewegung, Kendrick Frazier. Man betrachtet sich nicht als Teil der Wissenschaftssystems, obwohl nicht wenige Mitglieder im Brotberuf Forscher und Lehrer sind.</p>
+      <p xmlns="" class="article even">Weil es für Skeptiker von zentraler Bedeutung ist, zu einer Urteilsbildung aufgrund von Fakten zu gelangen, waren sie vor wenigen Wochen beim <a target="_blank" href="/March-for-Science/!5403194/">March for Science</a> dabei, der gegen die „postfaktische“ Diskreditierung von Wissenschaft protestierte.</p>
+      <p xmlns="" class="article odd">Dort sprach auch Sarma und hob vor dem Helmholtz-Denkmal an der Berliner Humboldt-Uni die Segnungen der modernen Medizin hervor: „Ein Kind, das heute in New Delhi geboren wird, hat eine höhere Lebenserwartung als der reichste Mann, die reichste Frau von vor zweihundert Jahren.“</p>
+      <h6 xmlns="">Impfungen retten Leben</h6>
+      <p xmlns="" class="article even">Dies sei nur möglich durch Entdeckung und Verbreitung der Impfung gegen Krankheitserreger geworden. Trotzdem mache derzeit „eine perfide Antikampag­ne Stimmung gegen diese unschätzbare Errungenschaft“, etwa durch den Impfgegner-Film mit dem Titel „Vaxxed“, der in deutschen Kinos läuft. „Die Folge solcher Propaganda“ liegen für den Skeptiker-Chef auf der Hand: „Die Masern kehren zurück nach Deutschland und bringen Kindern den Tod.“</p>
+      <div xmlns="" class="article rack no7">
+      <div xmlns="http://www.w3.org/1999/xhtml" role="region" id="" class="first last odd sect sect_quote "><div class="sectbody quote obj"><p>In seinem Vortrag über eine „effektive Klimapolitik“ ­brachte Florian Aigner allerdings auch die Laufzeit­verlängerung für Atomkraftwerke ins Spiel, ebenso wie unterirdische ­Lagerung von ­Kohlendioxid (CCS)</p></div></div>
+    </div>
+      <p xmlns="" class="article odd">Aktuell engagiert sich die GWUP für die Aufklärung über die „Pseudomedizin“, wie die Homöopathie, Bachblüten-Therapie, traditionelle chinesische Medizin (TCM) oder Osteopathie. Diese Ausprägungen einer „sanften“, alternativen Medizin haben eine große Anhängerschaft. Zwischen 60 bis 80 Prozent alle Patienten, so Schätzungen, lassen sich irgendwann einmal alternativ-medizinisch behandeln. Nicht in allen Fällen aus Überzeugung, sondern auch aus Unzufriedenheit über die klassische Schulmedizin. Die Skeptiker sind alarmiert, dass sogar schon an 30 medizinischen Fakultäten in Deutschland, die Homöopathie als Behandlungsmethode angeboten wird – obwohl die Wirkung der Verdünnungskügelchen bisher durch keine wissenschaftliche Studie belegt ist.</p>
+      <p xmlns="" class="article even">Natalie Grams ist eine „Aussteigerin“. Früher war die Ärztin selbst überzeugte Anhängerin der Homöopathie, wandte sich dann aber ab und verarbeitete <a target="_blank" href="/Ex-Homoeopathin-ueber-Globuli/!5289991/">ihren Distanzierungsprozess in dem Buch „Homöpathie neu gedacht</a>“, das seitdem heftig diskutiert wird. Bei den Skeptikern hat sie das „Informationsnetzwerk Homöopathie“ gegründet, das vor allem in den sozialen Medien die aktive Auseinandersetzung sucht. In dieser Medienarena durchaus mit Erfolg: Auf <a target="_blank" href="https://www.facebook.com/profile.php?id=100009377550715">ihrer Facebook-Seite</a> hat sie bereits mehr Follower als die Seite der Homöopathie-Befürworter.</p>
+      <p xmlns="" class="article odd">„Ich habe aber auch mit vielen Politikern gesprochen“, berichtete Grams in Berlin. „Aber sie wollen an das Thema Homöopathie nicht ran, weil sie um Wählerstimmen fürchten“. Bei den traditionellen Medien kann Grams inzwischen einen Stimmungsumschwung erkennen. Jüngst erschien der Stern mit einer <a target="_blank" href="http://www.stern.de/gesundheit/heilpraktiker-in-deutschland--so-gefaehrlich-sind-sie---der-grosse-stern-report-7434370.html">Titelgeschichte über „gefährliche Heilpraktiker“.</a></p>
+      <h6 xmlns="">Carl Sagan-Preis</h6>
+      <p xmlns="" class="article even">Auf die Spur der pseudomedizinischen Krebsbehandler haben sich auch die beiden Wissenschaftsjournalisten Hristio Boytchev und Claudia Ruby begeben. In einer Undercover-Reportage des Südwestrundfunks (SWR) ließen sie sich als vermeintliche Krebspatienten behandeln, bekamen von Heilpraktikern Natron-Bäder zur Entgiftung oder Koffein-Einläufe als Therapie angeboten. Anlass für die Recherche waren Fälle, bei denen diese Behandlungsmethoden durch Verzicht auf wirksame Chemotherapien indirekt zum Tode führten. Auf dem „SkepKon“ in der Urania wurden die Journalisten dafür mit dem Carl Sagan-Preis 2017 ausgezeichnet, benannt nach einem populären US-Wissenschaftsautor.</p>
+      <p xmlns="" class="article odd">Ein breites Feld und inzwischen hochpolitisches Feld der Leugnung wissenschaftlicher Fakten ist der globale Klimawandel. Prominentester Verfechter ist US-Präsident Donald Trump, der die These vom menschengemachten Treibhauseffekt als Fake News der Chinesen bezeichnet. Der Wiener Physiker und Wissenschaftsreporter Florian Aigner verwies darauf, dass sich die deutsche Regierungspolitik dieser Deutung bisher nicht anschließe. Mit einem voraussichtlichen Einzug der AfD in den Bundestag werde sich diese Position dann aber auch im höchsten deutschen Parlament zu Wort melden.</p>
+      <p xmlns="" class="article even">Einer neuen wissenschaftlichen Untersuchung zufolge ziehen auch 16 Prozent der Deutschen einen Klimawandel durch CO<sub>2</sub>-Emissionen in Zweifel – das ist einer der höchsten Werte im europäischen Vergleich. „Es fehlt derzeit“, wagte Aigner eine Interpretation, „an einer ideologisch übergreifenden Bewegung, die sich für die Klimapolitik einsetzt.“</p>
+      <h6 xmlns="">Mehr Atomstrom</h6>
+      <p xmlns="" class="article odd">In seinem Vortrag über eine „effektive Klimapolitik“ brachte Florian Aigner allerdings auch die Laufzeitverlängerung für Atomkraftwerke ins Spiel, ebenso wie unterirdische Lagerung von Kohlendioxid (CCS). Carbon-Capture and Storage sei „eine unverzichtbare Technologie“ zur Bewältigung des Klimaproblems, zitierte Aigner den Weltklimarat IPCC. Gleichwohl sind beide Technologien – Atom wie CCS – in Deutschland ein politisches „No-Go“. Interessant war Aigners Publikumsfrage, wer CCS kenne: nur wenige Hände gingen hoch. Die Technik sei doch viel zu teuer, habe er gelesen, meinte ein Teilnehmer. „Das wurde aber“, entgegnete Aigner, „vor zehn Jahren auch von der Solarenergie gesagt.“</p>
+      <p xmlns="" class="article even">Auch bei der Grünen Gentechnik nehmen die Skeptiker eine Position ein, die sich nicht mit der großen Ablehnung dieser Technik in der Bevölkerung deckt. „Unser heutiger Wohlstand basiert zu einem guten Teil auf der enormen Steigerung der landwirtschaftlichen Produktion durch die grüne Revolution und auf den Leistungen des Agrarwissenschaftlers und Friedensnobelpreisträgers Norman Borlaug“, betont GWUP-Vorsitzender Sarma. „Die Grüne Gentechnik eröffnet uns die Möglichkeit, auch die Ernährungssituation in Entwicklungsländern entscheidend zu verbessern.“ Was jedoch blockiert werde: „Einflussreiche Lobbygruppen in Europa und den USA“, so Sarma, „stellen sich quer.“ Sie verhinderten, dass in Asien und Afrika die gentechnische veränderte Sorte „Golden Rice“ mit höheren Erträgen angebaut werde.</p>
+      <p xmlns="" class="article last odd">Soviel berechtigte Zweifel die Skeptiker gegen bestimmte Weltsichten und Weltinterpretationen vorbringen – vielleicht haben sie auch selbst etwas Skepsis verdient.</p>
+    </article></div>
+
+    
+  
+
+    
+  <div role="region" id="" class="odd sect "><div class="sectbody"><a xmlns="" id="reward" shape="rect">Einmal zahlen</a><script> filOtaz_de.flattr();</script></div></div>
+
+    
+	<div class="shariff">.</div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><script class="tziArticle" type="text/html"><article href="/Headlines-2021/!172321/" ratioURL-ressource="172321" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2021</span><span class="hide">: </span><span>Wer finanziert denn Online-Angebote freiwillig für andere mit?</span>
+</h1>
+  		<p xmlns="" class="article first odd"><strong>Schon über 27.000.</strong>          
+</p>
+  		<p xmlns="" class="article even"><strong> Und mit Ihnen noch eine*r mehr. </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2021/!172283/" ratioURL-ressource="172283" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2021</span><span class="hide">: </span><span>Wer sagt denn, dass Journalismus online Geld wert ist?</span>
+</h1>
+  		<p xmlns="" class="article first odd"><strong>Schon über 27.000.</strong>       
+</p>
+  		<p xmlns="" class="article even"><strong> Und mit Ihnen noch eine*r mehr. </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2021/!171291/" ratioURL-ressource="171291" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2021</span><span class="hide">: </span><span>Über 27.000 mal Danke. Und eine große Bitte.</span>
+</h1>
+  		<p xmlns="" class="article first odd">taz.de ist frei zugänglich – ohne Paywall. Aber das geht nur, weil sich unsere Leser*innen an dieser Idee beteiligen.       
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen auch Sie jetzt die taz mit einem kleinen Beitrag </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/tazde-als-alternative-Nachrichtenquelle-im-Internet/!163696/" ratioURL-ressource="163696" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">taz.de als alternative Nachrichtenquelle im Internet.</span><span class="hide">: </span><span>Wir schreiben für Leser*innen. Nicht für Klicks.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Unsere Inhalte auf taz.de sind frei zugänglich. Aber unser Journalismus kostet Geld und braucht Ihre Unterstützung: Mit einem monatlichen Beitrag sichern Sie die Arbeit der Redaktion und eine kritische, unabhängige Stimme im Netz.   
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt die taz</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script type="text/javascript" xml:space="preserve">
+          (function () {
+            patOtaz_de.layer_tzi_paywahl({'campaign': '2019-5-27' });
+          })();
+        </script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Normal/!155790/" ratioURL-ressource="155790" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Normal</span><span class="hide">: </span><span>Freier Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Das Bedürfnis nach vertrauenswürdiger Information ist derzeit sehr hoch, viele blicken und klicken in diesen unsicheren Zeiten auf die Berichterstattung der taz. Während der vergangenen Wochen ist klar geworden, wie wichtig freier Journalismus ist. In Krisenzeiten ist es „systemrelevant”, dass Menschen sich unabhängig informieren können. Ohne Paywall. Wir finden es wichtig, dass uns möglichst viele Menschen lesen – auch jene, die sich kein Abo leisten können. Doch dazu brauchen wir Ihre Hilfe.        
+</p>
+  		<p xmlns="" class="article even">Guter, kritischer Journalismus ist nicht kostenlos zu haben und braucht Finanzierung. Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Im Gegenzug wird sie freiwillig und solidarisch unterstützt. Von unseren Leser*innen, von Ihnen. Mit Ihrer Wertschätzung und Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit, ein Forum für Meinungsvielfalt, eine engagierte Stimme für Minderheiten. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Seien Sie mit uns taz. Zusammen mit den über 27.000, die schon dabei sind.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Klima/!155427/" ratioURL-ressource="155427" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Klima</span><span class="hide">: </span><span>Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wir berichten seit 1978 über die Zerstörung unseres Planeten – weil wir daran glauben, dass eine bessere Welt möglich ist. Klima- und Umweltberichterstattung haben in der taz schon immer einen großen Raum eingenommen, aber zurzeit gehen wir noch einmal in die Offensive. Die taz berichtet noch intensiver über die drohende Klimakatastrophe – auf allen Kanälen. Um dies leisten zu können, sind wir auf die Unterstützung unserer Leser*innen angewiesen. Denn guter Journalismus ist aufwändig und nicht kostenlos zu haben.       
+</p>
+  		<p xmlns="" class="article even">Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Unsere Artikel sollen so viel wie möglich gelesen, geliked und geteilt werden. Nur so können sie die ökologisch notwendigen Veränderungen unserer Gesellschaft vorantreiben. Im Gegenzug wird die taz von unseren Leser*innen unterstützt. Freiwillig und solidarisch. Mit Ihrer Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit und eine engagierte Stimme für mehr Klimaschutz. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Über 27.000 machen schon mit.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><div role="region" id="" class="odd sect sect_text "><div class="sectbody"><p>
+
+	Fehler auf taz.de entdeckt?
+	    </p><p>
+        Wir freuen uns über eine 
+	<a href="mailto:fehlerhinweis@taz.de?subject=Fehlerhinweis%20zu%20https://taz.de/Jahrestreffen-der-Skeptiker/!5403632/&amp;body=Zu%20%22Jahrestreffen der „Skeptiker“: Zweifeln hält gesund%22%0D%0Ahttps://taz.de/Jahrestreffen-der-Skeptiker/!5403632/%0D%0A%0D%0ABitte%20beschreiben%20Sie%20uns%20den%20Fehler.%20Sie%20können%20gern%20einen%20Screenshot%20anhängen.%20Wir%20danken%20für%20Ihre%20Hilfe%21%20
+					%0D%0A%0D%0A
+					Inhaltliches%20Feedback%20geben%20Sie%20uns%20gerne%20in%20der%20Kommentarspalte%20oder%20richten%20es%20an%20briefe@taz.de.%20Dort%20leiten%20wir%20ihr%20Feedback%20auch%20an%20die%20Redaktion%20weiter.%20Über%20diese%20Mailadresse%20nehmen%20wir%20nur%20Rechtschreib-%20und%20Faktenkorrekturen%20vor.				">Mail an fehlerhinweis@taz.de</a>!</p><p>
+	Inhaltliches Feedback? 
+	</p><p>
+
+	Gerne als Leser*innenkommentar unter dem Text auf taz.de oder über das
+	<a href="/!112355/"> Kontaktformular</a>.
+		</p></div></div><!-- DEBUG belly: 0 extras here, 0 from directory Wissenschaft, thats 0 merged--></span><span class="wing" role="contentinfo"><div class="rack first_rack" id="xid459821">
+    
+	<!--template mode="layout" match="display[ @obj='descr' ]":start-->
+
+    
+	<div role="region" id="" class="even sect sect_meta "><div class="sectbody"><ul role="navigation" class="left rootline toolbar"><li class="first odd trodd selected"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a></li><li class="last even trodd selected"><a href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span>Wissenschaft</span></a></li></ul><ul role="navigation" class="right toolbar"><li class="date" itemprop="datePublished" content="2017-05-05T16:38:00+01:00">5. 5. 2017</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2019-03-20T01:52:37+01:00"></meta></ul></div></div>
+
+    
+	<div role="region" id="" class="odd sect sect_profile "><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="
+        
+	
+        
+
+		
+			
+	
+			author 
+		community 
+		
+        
+                
+		        
+		
+	        
+                
+
+		
+
+        person objlink" itemprop="url" href="/Manfred-Ronzheimer/!a2496/"><h4 itemprop="name">Manfred Ronzheimer</h4><h5 itemprop="jobTitle">
+		Autor*in
+	</h5></a></div></div>
+
+    
+	<div role="region" id="" class="even sect sect_tags "><div class="secthead" role="heading"><h2><a name="Themen"><span>Themen</span></a></h2></div><ul role="directory" class="news directory sectbody"><li class="first odd trodd tag"><a role="link" href="/!t5325634/" class="tag dirlink"><span>Fake News</span></a></li><li class="last even trodd tag"><a role="link" href="/!t5010344/" class="tag dirlink"><span>AKW</span></a></li></ul></div>
+
+    
+	
+
+    
+	<!-- DEBUG label: 0 extras here, 0 from directory Wissenschaft, thats 0 merged-->
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><span id="ad_bin_ros_sidebar_1" class="ad_bin sold contentad"><div id="ad_zone_ros_sidebar_1" name="ros_sidebar-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"><iframe class="adIframe" id="ros_sidebar-1" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Oeko' }));
+			var adId = 'ros_sidebar-1';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span><!-- DEBUG wing: 0 extras here, 0 from directory Wissenschaft, thats 0 merged--></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><span class="tail" role="complementary"><!-- DEBUG tail: 0 extras here, 0 from directory Wissenschaft, thats 0 merged--><div class="rack first_rack" id="xid479112">
+    
+	<div role="region" id="" class="first last odd sect sect_profile brief "><div class="secthead" role="heading"><h2><a name="mehr von"><span>mehr von</span></a></h2></div><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="brief 
+        
+	
+        
+
+		
+			
+	
+			author 
+		community 
+		
+        
+                
+		        
+		
+	        
+                
+
+		
+
+        person objlink" itemprop="url" href="/Manfred-Ronzheimer/!a2496/"><h4 itemprop="name">Manfred Ronzheimer</h4></a></div></div>
+
+    
+		</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="xid705738" class="even sect sect_adr style_adr "><ul role="directory" class="sectbody corp  directory"><li class=" first last odd trodd online   leaded pictured leaded remote product"><a class="dept" href="https://shop.taz.de/#pk_campaign" target="_blank">Shop</a><a href="https://shop.taz.de/product_info.php?products_id=243928/#pk_campaign=Prachtwinde&amp;pk_source=online&amp;pk_medium=taz.de&amp;pk_kwd=Kachel" target="_blank" class="objlink leaded pictured leaded remote product noavatar" role="link"><p class="brief">  Die einjährige Prachtwinde kann man jetzt schon vorziehen. Sie klettert und blüht den ganzen Sommer. Prachtvoll selbstverständlich.  </p><img class="lozad" src="/uploads/images/14/prachtwinde_2-1.jpg" data-src="/uploads/images/300/prachtwinde_2-1.jpg" alt="" title=""></img><noscript><img src="/uploads/images/300/prachtwinde_2-1.jpg" alt="" title=""></img></noscript><div class="hint">anschauen</div></a></li></ul></div></span><a itemprop="mainEntityOfPage" href="/Jahrestreffen-der-Skeptiker/!5403632"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div class="full no_rightbar below news page even n2"><div class="head" role="head"><div class="nose" role="heading" id="pg_hd"><h2><a name="Volle Spalte unterm Artikel" href="/Volle-Spalte-unterm-Artikel/!p5315/"><span>Volle Spalte unterm Artikel</span></a></h2></div><ul role="navigation" class="news navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid841997">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="Mehr zum Thema"><span>Mehr zum Thema</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd    report article leaded pictured"><a href="/Urania-wird-130-Jahre-alt/!5486071/" ratioURL-ressource="5486071" class="objlink report article leaded pictured noavatar" role="link"><h4>Urania wird 130 Jahre alt</h4><h3>Wissenschaft, leicht gemacht</h3><p>Die Urania, das erste Science Center der Welt, feiert heute 130. Geburtstag. Das Programm ist breit gefächert, das Haus gut besucht. Nur junges Publikum fehlt.  <span class="author">Manfred Ronzheimer</span></p><img class="lozad" src="/picture/2591935/14/20203669.jpeg" data-src="/picture/2591935/300/20203669.jpeg" alt="" title=""></img><noscript><img src="/picture/2591935/300/20203669.jpeg" alt="" title=""></img></noscript></a></li><li class=" even trodd    report article leaded pictured"><a href="/Masernfall-in-Guatemala/!5478961/" ratioURL-ressource="5478961" class="objlink report article leaded pictured noavatar" role="link"><h4>Masernfall in Guatemala</h4><h3>Aus Deutschland importiert</h3><p>Guatemala ist seit 20 Jahren masernfrei. Jetzt hat eine Schülerin die Krankheit bekommen – nachdem sie zum Schüleraustausch in Deutschland war.  </p><img class="lozad" src="/picture/2516832/14/19917246.jpeg" data-src="/picture/2516832/300/19917246.jpeg" alt="Eine Frau hat einen Mundschutz auf und impft eine andere Frau, die nur von hinten zu sehen ist" title="Eine Frau hat einen Mundschutz auf und impft eine andere Frau, die nur von hinten zu sehen ist"></img><noscript><img src="/picture/2516832/300/19917246.jpeg" alt="Eine Frau hat einen Mundschutz auf und impft eine andere Frau, die nur von hinten zu sehen ist" title="Eine Frau hat einen Mundschutz auf und impft eine andere Frau, die nur von hinten zu sehen ist"></img></noscript></a></li><li class=" last odd treven    report article leaded pictured"><a href="/Hochschulranking-zu-globaler-Gesundheit/!5417773/" ratioURL-ressource="5417773" class="objlink report article leaded pictured noavatar" role="link"><h4>Hochschulranking zu globaler Gesundheit</h4><h3>Unrentabel, vernachlässigt, tödlich</h3><p>Im deutschen Medizinstudium fehlen Pflichtkurse zu Krankheiten, die die ärmsten Länder betreffen. Das soll sich ändern.  <span class="author">Christina Hucklenbroich</span></p><img class="lozad" src="/picture/2040710/14/globalhealth06062017_dpa.jpeg" data-src="/picture/2040710/300/globalhealth06062017_dpa.jpeg" alt="Mitglieder des Roten Kreuzes von Guinea tragen einen mit Ebola infizierten Leichnam über den Friedhof von Gueckedou, Guinea" title="Mitglieder des Roten Kreuzes von Guinea tragen einen mit Ebola infizierten Leichnam über den Friedhof von Gueckedou, Guinea"></img><noscript><img src="/picture/2040710/300/globalhealth06062017_dpa.jpeg" alt="Mitglieder des Roten Kreuzes von Guinea tragen einen mit Ebola infizierten Leichnam über den Friedhof von Gueckedou, Guinea" title="Mitglieder des Roten Kreuzes von Guinea tragen einen mit Ebola infizierten Leichnam über den Friedhof von Gueckedou, Guinea"></img></noscript></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><span class="headed wing" role="complementary"></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Jahrestreffen-der-Skeptiker/!5403632"></a></div><div class="full community page last odd n3"><div class="head" role="head"><ul role="navigation" class=" navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid495498">
+    
+
+	<div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="So können Sie kommentieren:"><span>So können Sie kommentieren:</span></a></h2></div><div class="sectbody"><p>       Bitte <a href="https://www.taz.de/kommune/post.php?a=registration" target="_blank">registrieren Sie sich</a> und halten Sie sich an unsere <a href="http://taz.de/netiquette" target="_blank">Netiquette</a>.     
+</p><p>      Haben Sie Probleme beim Kommentieren oder Registrieren?   
+</p><p>  Dann mailen Sie uns bitte an <a href="mailto:kommune@taz.de" target="_blank">kommune@taz.de</a>   </p></div></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="" class="even sect sect_commentlinks style_commentlinks "><div class="secthead" role="heading"><h2><a name="Leser*innenkommentare"><span>Leser*innenkommentare</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class="member " id="bb_message_3814022"><a class="author person" href="/!ku493/"><h4>Tobias Claren</h4></a><time datetime="2019-07-08T20:07:02+02:00"><meta value="1562609222"></meta>08. 07. 2019, 
+		20:07</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Feind der GWUP ist JEDER der nicht 100% ablehnend eingestellt ist. Also skeptisch (offen) ist. Die GWUP ist NUR ablehnend.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Googlet GWUP!<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Rechts steht "Gründer: Dr. Edgar Wunder".<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Dieser Soziologe "wurde gegangen", weil er es gewagt hat als Soziologe (also sein Fachgebiet) nicht nur einen Aufsatz über die Strukturen, das Denken etc. der GWUP als Vortrag vorzulesen, sondern später auch zu veröffentlichen.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Das war dieser Aufsatz:<br xmlns="http://www.w3.org/1999/xhtml"></br><a target="_blank" href="https://swprs.org/das-skeptiker-syndrom/">swprs.org/das-skeptiker-syndrom/</a></p>
+<p xmlns="" class="even">Wer nach den 15min (lesen) bis 30min (vorlesen) noch pro GWUP eingestellt ist, dem ist nicht mehr zu helfen.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Die GWUP ist im Grunde ohne zu übertreiben mit Scientology vergleichbar. Der Text ist da eindeutig.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Die GWUP hat kein Interesse an "WU", also "Wissenschaftlichen Untersuchungen. Daran ändern auch die erst seit 2004 stattfindenden Freakshows, äh "PSI Tests" nichts.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Diese haben nicht den Zweck mögliche Phänomene zu finden, sondern ein paar Eso-Trottel vorzuführen und in Videos zusammen geschnitten vorzuführen. Das wurde schon bemängelt.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+In der GWUP gibt es den Begriff "Schafe" für den dummen Pöbel, äh die unwissenden Mitbürger. Die Mitglieder sind die "Hüter" die sie beschützen müssen. Lässt sich in dem Text einfach suchen.</p>
+<p xmlns="" class="odd">Die Gefahr die von so einem Verein ausgeht ist, bei Scientology weiß im Grunde jeder dass es eine schlechte Sekte ist, die GWUP pflegt ein Image als die Guten, die Hüter der Wahrheit.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Wie im Aufsatz beschrieben, ist das "Primat" des GWUP seine Außenwirkung, dahinter hat sich auch finanziell alles andere einzureihen.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Die "Wissenschaftliche Arbeit" ist eh nur Show, und findet nicht statt.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Die GWUP führt keine Experimente zu den Themen durch, über die sie schreibt. Der Ton ist klar ablehnend und man verschweigt Fakten.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Gutes Beispiel, Toinbandstimmen.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+GWUP:<br xmlns="http://www.w3.org/1999/xhtml"></br><a target="_blank" href="https://www.gwup.org/infos/themen/88-okkultismus/76-tonbandstimmen">www.gwup.org/infos.../76-tonbandstimmen</a><br xmlns="http://www.w3.org/1999/xhtml"></br>
+Verschwiegene geschichtliche Fakten über ein reproduzierbares (!) Experiment:<br xmlns="http://www.w3.org/1999/xhtml"></br><a target="_blank" href="https://www.vtf.de/p73_1.shtml">www.vtf.de/p73_1.shtml</a></p>
+<p xmlns="" class="last even">Aktivismus-Tipp:<br xmlns="http://www.w3.org/1999/xhtml"></br><a target="_blank" href="https://discord.gg/kMBRARv">discord.gg/kMBRARv</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3492549"><a class="author person" href="/!ku28976/"><h4>Michael Heinen-Anders</h4></a><time datetime="2017-06-04T09:31:41+02:00"><meta value="1496561501"></meta>04. 06. 2017, 
+		09:31</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Die Homöopathie zählt zur Erfahrungsheilkunde, mit dem Motto "Wer heilt hat Recht!" - Im Jahre 1980 wurde bei mir eine Schilddrüsendysfunktion mit Kropfbildung festgestellt. Der behandelnde Internist meinte damals, ich müsse mein gesamtes Leben Thyreoxin (ein Schilddrüsenhormon) einnehmen. Daraufhin erfuhr ich von einem sehr erfolgreichen Homöopathen in Köln-Lindenthal, Dr. Müller. Dieser führte eine ausführliche, einstündige Anamnese mit mir durch und verordnete mir das homöopathische Mittel Spongia D 6 (Tabletten). Nach ca. 6 Wochen waren sämtliche einschlägigen Schilddrüsensymptome verschwunden und nach 3 Monaten weiterer Behandlung mußte ich das Mittel nicht mehr einnehmen. So etwas gilt als "Wunderheilung"!</p>
+<p xmlns="" class="even">
+Ein anderes Beispiel: Ebenfalls anfangs der 80er Jahre litt ich an häufigen, regelmäßig auftauchenden akuten Nasennebenhöhlenerkrankungen. Die Therapie des behandelnden HNO-Arztes bestand in der damals (und auch heute noch) üblichen Antibiotika-Therapie. Nach einiger Zeit schlug ich dem Arzt als Behandlung, die ich aus dem homöopathischen Repertorium dafür entnommen hatte, Mercurius bijodatus D 3 in Tablettenform vor. Der Arzt ließ sich auf das Experiment ein und ich war so weit in meiner Befindlichkeit gebessert, als dass ich fortan auf die regelmäßigen Krankschreibungen verzichten konnte und des weiteren auch ohne Antibiotika-Einnahme auskam!</p>
+<p xmlns="" class="last odd">
+Ich könnte noch weitere "Wunderheilungen" in diesem Falle mit Mitteln der anthroposophischen Medizin an meiner älteren Tochter, z.B. im Falle einer vorliegenden Neurodermitis, durch einen anthroposophischen Kinderarzt, Dr. Krahne in Köln, berichten. (Die Neurodermitis konnte vollständig abheilen und ist heute nicht mehr vorhanden). --- Doch ich will die Liste der Beispiele mit diesem vorerst beenden. --- "Wer heilt hat Recht!", daran sollten sich Schulmediziner ein Beispiel nehmen!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3814046"><a class="author person" href="/!ku493/"><h4>Tobias Claren</h4></a><time datetime="2019-07-08T21:56:20+02:00"><meta value="1562615780"></meta>08. 07. 2019, 
+		21:56</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Michael Heinen-Anders </span>So eine Schilddrüsendysfunktion kann auch einfach verschwinden.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Z.B. Morbus Basedow.</p>
+<p xmlns="" class="last even">Zu behaupten es lag an der Homöopathie ist wie zu behaupten dass Beten geholfen hat.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+"Post hoc ergo propter hoc".<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Beides "wirkt" auf die gleiche Weise.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3484343"><a class="author person" href="/!ku3661/"><h4>hessebub</h4></a><time datetime="2017-05-08T11:55:03+02:00"><meta value="1494237303"></meta>08. 05. 2017, 
+		11:55</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Es wäre schön, wenn sich bei solchen Gruppen mehr Geisteswissenchaftler (Historiker, Soziologen, Kulturwissenschaftler) organisierten,  denn oftmals scheint mir der durchaus begrüßenswerte Skeptizismus von eher plattem Positivismus begleitet. Es wird gerne übersehen, dass es nach voillziehbare Gründe für durchaus intelligente Menschen gibt, sich einer Ideologie zuzuwenden, ob die nun Homöopathie oder neue Rechte heisst und dagegten kann man mit "Fakten" und "Aufklärung" wenig ausrichten - man muss die Ursachen  begreifen (z.B. die oft dehumanisierende Praxis der Schulmedizin oder den Kahlschlag des Neoliberalimsus) und dort ansetzen. Wissenschaft ist zudem gerne die Magd der Macht und von ökonomischen Interessen, politischen Lenkungen und schlichten Machtkämpfen deformiert. Ist ja seit Thomas Kuhn nichts neues, dass Erkenntnisse die vorherrschenden Paradigmen nicht in den Kram passen unterdrückt werden. Und dass Plagiarismus und Fälschung im Karrierebrutalismus der aktuellen Wissenschaftslandschaft drastische Ausmaße angenommen haben (weil die Selbstkontrollmechanismen vieler Disziplinen nicht mehr greifen) ist auch nicht gerade vertrauenserweckend. Letztlich, Antworten auf ethische, moralische und politische Fragen wie Abtreibungsrecht oder Atomkraft kann Wissenschaft nicht geben. so wichtig sie also ist und bleibt, sollte man sich ihrer Grenzen doch gerade als Wissenschaftler sehr bewusst sein. Der wahre Forscher ist bescheiden (eine gefährliche Tugend in unserer Zeit).</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3484823"><a class="author person" href="/!ku33888/"><h4>Der sich traut noch selber zu denken</h4></a><time datetime="2017-05-09T16:38:00+02:00"><meta value="1494340680"></meta>09. 05. 2017, 
+		16:38</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@hessebub </span>Grundsätzlich kann ich da nur zustimmen.</p>
+<p xmlns="" class="even">
+Was allerdings konkret die Homöopathie betrifft, gehen leider viele der immer aggressiveren Anti-Propaganda, angeführt von einer listigen PR-ztin auf den Leim.</p>
+<p xmlns="" class="odd">
+Natürlich ist Homöopathie eine hilfreiche Heilmethode, sonst hätte sie es wohl kaum schaffen können, sich über 200 Jahre lang über die ganze Welt auszubreiten, in Indien z.B. sogar gleichwertig im öffentlichen Gesundheitswesen etabliert zu sein. Oder eine (lt. Umfragen) Patientenzufriedenheit von über 70% zu erlangen.</p>
+<p xmlns="" class="even">
+Sie ist in bestimmten Bereichen, v.a. bei manchen chronischen Erkrankungen, sogar so erfolgreich, dass sich ganz offenbar einflussreiche Lobbygruppen, denen so die Gewinne geschmälert werden, endlich ihrer entledigen wollen und daran auf sehr geschickte Weise arbeiten.</p>
+
+<p xmlns="" class="even">
+Ein Teil diese Planes ist dummerweise gerade aufgeflogen: Die 2015 in Australien veröffentlichte angebliche Groß-Studie zum Thema Homöopathie, die seitdem weltweit als Beleg für die Unwirksamkeit der Homöopathie rezitiert wird, war gezielt manipuliert.</p>
+
+<p xmlns="" class="even">
+Der Leiter dieser Studie rein zufällig ein australischer "Skeptiker" (Aussteiger aus der streng dogmatischen Skeptiker-Szene sprechen ja lieber von Pseudo-Skeptikern).</p>
+<p xmlns="" class="odd">
+ <a target="_blank" href="http://www.gesundheit-aktiv.de/index.php?option=com_content&amp;view=article&amp;id=882:die-krux-mit-der-evidenz&amp;catid=78:nachrichten&amp;Itemid=256">http://www.gesundheit-aktiv.de/index.php?option=com_content&amp;view=article&amp;id=882:die-krux-mit-der-evidenz&amp;catid=78:nachrichten&amp;Itemid=256</a></p>
+
+<p xmlns="" class="odd">
+Originalquelle:  https://www.hri-research.org/resources/homeopathy-the-debate/the-australian-report-on-homeopathy/</p>
+
+<p xmlns="" class="odd">
+Auch der deutsche homöopathische Ärzteverein hat dazu Stellung bezogen:</p>
+<p xmlns="" class="last even">
+ <a target="_blank" href="https://www.dzvhae.de/homoeopathie-presse/pressemitteilungen/australische-homoeopathie-studie-e2809eeine-taeuschung-der-oeffentlichkeite2809c.html">https://www.dzvhae.de/homoeopathie-presse/pressemitteilungen/australische-homoeopathie-studie-e2809eeine-taeuschung-der-oeffentlichkeite2809c.html</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="guest " id="bb_message_3484400"><a class="author person"><h4>61321 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-08T14:03:47+02:00"><meta value="1494245027"></meta>08. 05. 2017, 
+		14:03</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@hessebub </span>Ein Leó Szilárd und ein Bertrand Russel wären wohl kaum bei einem 'March for Science' mitgelaufen. Aus Gründen, die in Ihrem Kommentar stecken.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3484403"><a class="author person"><h4>61321 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-08T14:06:07+02:00"><meta value="1494245167"></meta>08. 05. 2017, 
+		14:06</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@61321 (Profil gelöscht) </span>*Russell</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3484356"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4><img class="lozad" src="" data-src="/kommune/files/images/profile/70x70/3495.png" alt="" title=""></img><noscript><img src="/kommune/files/images/profile/70x70/3495.png" alt="" title=""></img></noscript></a><time datetime="2017-05-08T12:36:31+02:00"><meta value="1494239791"></meta>08. 05. 2017, 
+		12:36</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@hessebub </span>ok - aber bitte nicht selber auf nem Platten laufen. Daß Geistis - das! - Regulativ wären? - Över de Brüch joh ik nich - Deren gern altdeutsch   oldbräunlich geheideggertenSchlappen - </p>
+<p xmlns="" class="even">
+Müffeln doch noch sehr sehr streng - wa! </p>
+<p xmlns="" class="last odd">
+(Pierre Bourdieu - Franzose - kerr!)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3484312"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4><img class="lozad" src="" data-src="/kommune/files/images/profile/70x70/3495.png" alt="" title=""></img><noscript><img src="/kommune/files/images/profile/70x70/3495.png" alt="" title=""></img></noscript></a><time datetime="2017-05-08T10:56:47+02:00"><meta value="1494233807"></meta>08. 05. 2017, 
+		10:56</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">@ "…Dieses Land leidet unter einem entsetzlichen Mangel an naturwissenschaftlicher Bildung.…"</p>
+<p xmlns="" class="even">
+Ja. Leider &amp; das traditionell qua Schulorg. - poly.techn Schulen - ?!</p>
+<p xmlns="" class="odd">
+Was für Suchen mit Lupe etc.</p>
+<p xmlns="" class="even">
+(Einstein hat sich'n Bein ausgerissen</p>
+<p xmlns="" class="odd">
+Um aufs Polytech.Zürich zu kommen!)</p>
+
+<p xmlns="" class="odd">
+Stimme auch im übrigen vorbehaltlos zu - &amp; Seit meiner Penne isses scheint's  im mat.nat.-Bereich -  eher noch dünnflottiger geworden. </p>
+<p xmlns="" class="even">
+Als ich für ein paar Jährchen mit "Umweltschutzrecht" von Deponie über Planung bis Atom beschäftigt war - </p>
+<p xmlns="" class="odd">
+Staunte ich bereits über die "Lücken" &amp; den "Denkquark" - &amp; das nicht nur bei Kollegen. &amp; Das war später bei Beihilfe + Arzneimittelrecht - im med.Bereich also - wenig anders.</p>
+
+<p xmlns="" class="odd">
+Zu Wissen/Glauben aber einen gegen die gefährliche Hybris aus "Zen &amp; die Kunst ein Motorrad zu warten" by </p>
+<p xmlns="" class="even">
+R. M. Pirsig (Kultbuch 70er zu hipp vs square;) <a target="_blank" href="https://de.m.wikipedia.org/wiki/Zen_und_die_Kunst_ein_Motorrad_zu_warten">https://de.m.wikipedia.org/wiki/Zen_und_die_Kunst_ein_Motorrad_zu_warten</a></p>
+<p xmlns="" class="odd">
+Sohn"Ist es nicht Quatsch - daß die Indianerkinder in der Chatauqua* </p>
+<p xmlns="" class="even">
+(~ ind. Volksschule) alles das über heilige Quellen Berge etc lernen?!"</p>
+<p xmlns="" class="odd">
+P. : " Naja - aber bedenke - es gibt auf der Welt vllt 20 - 30 Menschen, die wirklich wissen - Was es mit Quarks auf sich hat - Na &amp; der Rest?!";)</p>
+<p xmlns="" class="even">
+*https://de.m.wikipedia.org/wiki/Chautauqua</p>
+
+<p xmlns="" class="last even">
+(&amp; P. ist übrigens hinterher doch wieder in - klar - Silicon Valley - gelandet!) <a target="_blank" href="https://de.m.wikipedia.org/wiki/Robert_M._Pirsig">https://de.m.wikipedia.org/wiki/Robert_M._Pirsig</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3484280"><a class="author person" href="/!ku35296/"><h4>KnorkeM</h4></a><time datetime="2017-05-08T09:45:11+02:00"><meta value="1494229511"></meta>08. 05. 2017, 
+		09:45</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Eine amerikanische NGO gegen Alternativmedizin und für Gentech-Landwirtschaft? Das riecht aber sehr nach Dow und Monsanto^^ Wer zahlt denn die Party?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3484237"><a class="author person" href="/!ku18446/"><h4>Peter Womm</h4></a><time datetime="2017-05-08T07:06:41+02:00"><meta value="1494220001"></meta>08. 05. 2017, 
+		07:06</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">was ich oft sehr witzig finde, ist der standpunkt dieser skeptiker was das thema ufologie betrifft.</p>
+<p xmlns="" class="even">
+durch ihre standartmodelle "venus, wetterballons, mond, sumpfgas oder flugzeuge" machen sie sich seit jahrzenten schon lächerlich. </p>
+<p xmlns="" class="last odd">
+diese leute negieren den soziokulturellen impact dieser erscheinungen völlig, stichwort fortianische ufologie^^</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3814025"><a class="author person" href="/!ku493/"><h4>Tobias Claren</h4></a><time datetime="2019-07-08T20:24:41+02:00"><meta value="1562610281"></meta>08. 07. 2019, 
+		20:24</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Peter Womm </span>Das "P" im Titel steht für "Paranormal".<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Sie machen sich schon lächerlich, wenn sie sich negativ/ablehnend zu UFOs äußern, weil das kein "paranormales" (abgesehen von möglichen Fähigkeiten der theoretischen Besucher, quasi Geller-hoch-X) Phänomen ist.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Auf einem Foto auf deren Webseite dass auf einen "Stammtisch" hinweist ist ein Bierdeckel zu sehen darauf Globuli, ein Pendel, und ein Roswell-Alien-Gesicht O_o.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Lassen die wirklich eigene Bierdeckel herstellen. Abgesehen davon dass laut dem Gründer Dr. Edgar Wunder das primäre Ziel des Vereins die Öffentlichkeitsarbeit ist (nicht die nichtexistente Forschung), ist es interessant dass man Geld für so etwas ausgibt...<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Hier der Aufsatz für den Wunder "gegangen wurde".<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Er hat es sogar drauf angelegt, als "Wesenstest", ob man ihn wirklich raus wirft.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Hier der Aufsatz:<br xmlns="http://www.w3.org/1999/xhtml"></br><a target="_blank" href="https://swprs.org/das-skeptiker-syndrom/">swprs.org/das-skeptiker-syndrom/</a></p>
+<p xmlns="" class="even">Nach dem Lesen dieses Aufsatz können nur noch die härtesten Sektenmitglieder und Dumpf-Sympathisanten sowie "Science-Groupies" in Kadavergehorsam zur GWUP stehen.</p>
+<p xmlns="" class="odd">Es braucht eine aktive Gegenbewegung, eine Art "Legion" deren Ziel es ist den Ruf der GWUP zu "korrigieren". Mit Fakten wie aus dem Aufsatz. Welcher unwissende oder aufgrund Unwissen positiv eingestellte Bürger bleibt z.B. kalt wenn er/sie liest dass man ihn/sie als "Schaf" bezeichnet, und sich selbst als "Hüter"?</p>
+<p xmlns="" class="even">Evtl. wäre das hier ein Anfang um Aktivismus zu organisieren:<br xmlns="http://www.w3.org/1999/xhtml"></br><a target="_blank" href="https://discord.gg/kMBRARv">discord.gg/kMBRARv</a></p>
+<p xmlns="" class="odd">Online, aber auch offline.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Mal auf die Straße gehen und Negativ-PR gegen die GWUP machen.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Z.B. mit einem Videoprojektor auf Gebäude an gut besuchten Orten.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Ich hätte sogar den Kölner Dom in der Nähe.</p>
+<p xmlns="" class="last even">An Nichts arbeitet die GWUP so sehr wie an ihrem Image und bekannt zu werden. Aber wie viele Menschen kennen die GWUP? 3%, 5%...?<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Schon ein wenig solcher Aktionen, und dann am besten einen Link zu einer Webseite, und die Aufforderung es weiter zu sagen.<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Da kochen die GWUP-Oberen sicher, und sind evtl. so dumm dagegen "vorzugehen".<br xmlns="http://www.w3.org/1999/xhtml"></br>
+Mehr Aufmerksamtkeit...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3484192"><a class="author person" href="/!ku389/"><h4>Hanne</h4></a><time datetime="2017-05-07T23:03:00+02:00"><meta value="1494190980"></meta>07. 05. 2017, 
+		23:03</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Trotzdem mache derzeit „eine perfide Antikampagne Stimmung gegen diese unschätzbare Errungenschaft“, etwa durch den Impfgegner-Film mit dem Titel „Vaxxed“, der in deutschen Kinos läuft. „Die Folge solcher Propaganda“ liegen für den Skeptiker-Chef auf der Hand: „Die Masern kehren zurück nach Deutschland und bringen Kindern den Tod.“"</p>
+
+<p xmlns="" class="odd">
+Nachdem ich nun den so umstrittenen Film gesehen habe, kann ich zumindest sagen, dass in der Doku keine "Propaganda" von "esoterischen Impfgegnern" dargestellt wird. Im Gegenteil, alle sprachen oder sprechen sich FÜR Impfungen aus, kritisieren lediglich den Umgang mit der Sicherheit und der Zulassung von Impfstoffen. Die Zweifel beziehen sich in der Doku auch lediglich auf die MMR-Impfung und es wird u.a. gefordert, dass bis zur weiteren Klärung und auch darüber hinaus auch weiter bzw. wieder Einzelimpfstoffe zur Verfügung stehen.</p>
+
+<p xmlns="" class="odd">
+Außerdem geht es darum, dass Impfstoffe weit weniger umfangreich getestet werden, bevor sie auf den Markt kommen, als Arzneimittel. Impfstoffe werden nicht als Arznei eingestuft und somit gibt es auch keine Doppelblindstudien und keine Langzeitstudien, die nötig wären.</p>
+
+<p xmlns="" class="odd">
+Ich bitte die "Skeptiker" diese Thematik dann mal wissenschaftlich und sachlich anzugehen und nicht nur das zu sagen, was der Pharmahersteller an Informationen anbietet.</p>
+
+<p xmlns="" class="odd">
+Hier die Filmvorführungen, die ständig aktualisiert werden: <a target="_blank" href="http://www.vaxxed-derfilm.de/kinotour">http://www.vaxxed-derfilm.de/kinotour</a></p>
+
+<p xmlns="" class="last odd">
+Vaxxed ist definitiv kein "Impfgegner-Film". Es wird im Film sogar ausdrücklich erwähnt, dass Kinder gegen Masern geimpft werden sollten, nach Meinung des Regisseurs und Arztes Wakefield, aber eben mit einem Einzelimpfstoff und eventuell zu einem anderen Zeitpunkt, als aktuell im Empfehlungsplan vorgesehen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3484208"><a class="author person" href="/!ku36350/"><h4>andi brandi</h4></a><time datetime="2017-05-08T00:14:30+02:00"><meta value="1494195270"></meta>08. 05. 2017, 
+		00:14</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hanne </span>Danke.Informativ+zum Thema</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3484223"><a class="author person" href="/!ku34752/"><h4>yeay</h4></a><time datetime="2017-05-08T03:56:47+02:00"><meta value="1494208607"></meta>08. 05. 2017, 
+		03:56</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@andi brandi </span>Impfgegner haben in den USA dazu beigetragen, das es wieder zu einem Masern Ausbruch kommt. Das ein überführter Fälscher wie Wakefield solch einen Einfluss hat, sagt alles über die Gesellschaft aus.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3484027"><a class="author person" href="/!ku1853/"><h4>Pink</h4></a><time datetime="2017-05-07T13:57:08+02:00"><meta value="1494158228"></meta>07. 05. 2017, 
+		13:57</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">@ANTON WAGNER</p>
+<p xmlns="" class="even">
+Glyphosat ! 1950 erstmals von einem Schweizer Chemiker synthetisiert. Seit den 70er Jahren wird der Stoff in der Landwirtschaft eingesetzt. Zunächst wurde er vor allem vor der Aussaat verwendet, um Äcker von lästigem Unkraut zu befreien.</p>
+<p xmlns="" class="odd">
+Seitdem es gentechnisch veränderte Pflanzen gibt, die gegen Glyphosat resistent sind, kann das Mittel auch nach der Saat eingesetzt werden. Glyphosat wird vor allem von MONSANTO an Bauern rund um die Welt verkauft. Monsanto produziert auch das zugehörige genmanipulierte Getreide. Quelle: ZEIT EU-Parlament stimmt für Einsatz von Glyphost.</p>
+<p xmlns="" class="last even">
+Unterstützt werden sollte unbedingt die CAMPACT Unterschriften-Aktion.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3484500"><a class="author person"><h4>38397 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-08T18:00:17+02:00"><meta value="1494259217"></meta>08. 05. 2017, 
+		18:00</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Pink </span>Ich bin regelmäßiger arte-Zuschauer und kenne das Thema Monsanto. Das ist weniger eine Verschwörung, als lapidare Konzern-Macht.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3485071"><a class="author person" href="/!ku1853/"><h4>Pink</h4></a><time datetime="2017-05-10T12:27:56+02:00"><meta value="1494412076"></meta>10. 05. 2017, 
+		12:27</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@38397 (Profil gelöscht) </span>Bin da nicht ganz einverstanden.</p>
+<p xmlns="" class="even">
+Am 18.06. wird in den Abendnachrichten des SWR3 Fernsehens eine "Kochsendung" (Sie dürfen lachen) ausgestrahlt. Bei den Vorarbeiten zu diesem "Event" verteilte ich eine Menge Glyphosat-Infos an Zuschauer. Mit großem Erfolg und bestem Interesse.</p>
+<p xmlns="" class="last odd">
+Aber: die Bayer-Aktionäre lassen sich gerne verschwören. Geld stinkt nicht.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3483983"><a class="author person" href="/!ku33888/"><h4>Der sich traut noch selber zu denken</h4></a><time datetime="2017-05-07T11:55:21+02:00"><meta value="1494150921"></meta>07. 05. 2017, 
+		11:55</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Skeptisch zu sein ist gut und wichtig! Wenn sich Skeptiker-Organisationen aber korrumpieren lassen und als</p>
+<p xmlns="" class="even">
+Meinungs-Macher bzw. Gehirnwäscher für gewisse Wirtschaftszweige betätigen, in denen es die Industrie traditionell schwer hatte, die Bevölkerung zu überzeugen und Widerstände zu brechen, dann sollten wir solchen Pseudo-Skeptikern gegenüber sehr skeptisch sein.</p>
+<p xmlns="" class="odd">
+Mit allen modernen psychologischen Tricks und über viele Jahre angelegten Kampagnen, wird versucht uns weis zu machen:</p>
+
+<p xmlns="" class="odd">
+Alternativen zur konventionellen (Pharma-) Medizin sind grundsätzlich Blödsinn, Atomkraft ist gar nicht böse, Gentechnik in der Nahrungsmittelerzeugung ist super (als gäbe es statt einem Verteilungsproblem tatsächlich ein Erzeugungsproblem), Glyphosat ist ein völlig unbedenklicher Segen (wen interessieren schon Bienen oder Schmetterlinge) etc...</p>
+
+<p xmlns="" class="odd">
+Studien werden manipuliert oder eben ignoriert, um ein entsprechendes Ergebnis präsentieren zu können.</p>
+<p xmlns="" class="last even">
+Sympathische Gesichter werden als Identifikationsfiguren aufgebaut, perfekt gecoacht und dann die geschickt via PR-Agenturen durch diverse Medien geschickt um der Welt zu erklären was jeweils die Fakten sind und was die Fake-News. Orwell war ein Waisenkind gegen die Perfektion heutiger Meinungsmanipulation. Unliebsame Leute werden auf perfide Weise von einem Heer von Online-Redakteuren und anonymen Bloggern in Internetforen mit aggressiven Beschimpfungen und Lügen überzogen und notfalls sogar an Online-Prangern diskreditiert. So läuft das heute, aufwachen Leute!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="guest " id="bb_message_3483955"><a class="author person"><h4>38397 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-07T10:26:22+02:00"><meta value="1494145582"></meta>07. 05. 2017, 
+		10:26</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"... böse Regierungen lassen bewusstseinsverändernde Substanzen versprühen, um so das Volk besser manipulieren zu können."</p>
+
+<p xmlns="" class="last odd">
+Versprühen vielleicht weniger, vielmehr ausstrahlen, über Rundfunk und Presse, wie eh und je.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3484238"><a class="author person" href="/!ku18446/"><h4>Peter Womm</h4></a><time datetime="2017-05-08T07:09:34+02:00"><meta value="1494220174"></meta>08. 05. 2017, 
+		07:09</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@38397 (Profil gelöscht) </span>stichwort mk ultra, aber sowas macht natürlich niemand mehr.</p>
+<p xmlns="" class="last even">
+wäre ja unethisch im geheimen an mind-control zu arbeiten ;)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3484170"><a class="author person" href="/!ku502/"><h4>Arne Babenhauserheide</h4></a><time datetime="2017-05-07T21:33:15+02:00"><meta value="1494185595"></meta>07. 05. 2017, 
+		21:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@38397 (Profil gelöscht) </span>Soweit ich mich erinnere ist die Bild keine Staatliche Einrichtung.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3484053"><a class="author person" href="/!ku37495/"><h4>Kurzer Prozess</h4><img class="lozad" src="" data-src="/kommune/files/images/profile/70x70/37495.png" alt="" title=""></img><noscript><img src="/kommune/files/images/profile/70x70/37495.png" alt="" title=""></img></noscript></a><time datetime="2017-05-07T15:36:20+02:00"><meta value="1494164180"></meta>07. 05. 2017, 
+		15:36</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@38397 (Profil gelöscht) </span>+1</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3483970"><a class="author person" href="/!ku19237/"><h4>TazTiz</h4></a><time datetime="2017-05-07T11:10:26+02:00"><meta value="1494148226"></meta>07. 05. 2017, 
+		11:10</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@38397 (Profil gelöscht) </span>Wenn Sie den großen bösen Plan und seine Erschaffer_innen etwas genauer beschreiben könnten? </p>
+
+<p xmlns="" class="last odd">
+Wer bitte sollen diese Ungeheuer_innen sein und wo sollen sie hausen? Unter der Erde in einer Feuerhöhle? Oder in einem Feuerwagen im Himmel? Oder als graue Männer unter uns?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3484502"><a class="author person"><h4>38397 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-08T18:03:04+02:00"><meta value="1494259384"></meta>08. 05. 2017, 
+		18:03</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@TazTiz </span>Wissen Sie, ein wenig vom Mißtrauen der Verschwörungstheoretiker könnte nicht schaden!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="guest " id="bb_message_3484092"><a class="author person"><h4>74450 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-07T18:18:04+02:00"><meta value="1494173884"></meta>07. 05. 2017, 
+		18:18</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@TazTiz </span>Im Palast von George Soros! :D</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3483924"><a class="author person" href="/!ku5890/"><h4>achterhoeker</h4></a><time datetime="2017-05-07T08:16:49+02:00"><meta value="1494137809"></meta>07. 05. 2017, 
+		08:16</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Als Naturwissenschaftler, der stets fachübergreifend tätig ist, gibt es eine unangenehme Forderung:"Man überprüfe immer wieder seine eigenen Erkenntnisse." Oft stellt sich heraus, dass ein kleiner Denkfehler auf eine falsche Spur führte. Das mag vielleicht am Selbstwert kratzen, ist aber immer noch besser als eine weitreichende Entscheidung zu treffen, die falsch ist und bereits zuvor abzusehen war.</p>
+
+<p xmlns="" class="odd">
+Das ist eine der wesentlichen Grundlagen, die den Jugendlichen im Unterricht beigebracht werden muss. Doch genau das geschieht in Deutschland nicht. Dieses Land leidet unter einem entsetzlichen Mangel an naturwissenschaftlicher Bildung.</p>
+
+<p xmlns="" class="odd">
+Aus diesem Grunde ist es möglich das Volk in beliebiger Hinsicht zu manipulieren. Im Schulunterricht ist logisches Denken unerwünscht. Zu leicht könnten die Jugendlichen auf die Idee kommen über die herrschaftlichen Verhältnisse nachzudenken. Stattdessen werden reine Sekundärtugenden gefördert. Es kommt wieder nur auf das Faktenlernen an, das Nachbeten  und die ansprechende Verpackung dieser Übungen an. Das nennt sich dann Präsentation. Die Curricula geben aufgrund ihres Häppchenwissens in pompöser Verkleidung auch kaum etwas anderes her.</p>
+
+<p xmlns="" class="odd">
+Es wächst ein Volk heran, was glaubt und nicht weiß. Dieses Verhalten hatte sich schon sogar ein Adolf Hitler gewünscht:"Weniger Wissen - mehr Glaube". Die AfD hält sich daran, aber auch die anderen neoliberalen Parteien inclusive Grüne faseln nur von Bildung statt sie tatsächlich systematisch und logisch umzusetzen.</p>
+
+<p xmlns="" class="odd">
+Deshalb ist es notwendig immer wieder Aufklärung zu betreiben, damit die Esoterik nicht weiter um sich greift. Auch die Informatik ist davon nicht unberührt. Zu viele Nerds glauben, dass sie mit dem PC naturwissenschaftliche Gesetze und mathematische Beweise durchführen können, wenn sie nur genug Rechengänge eingelegt haben. Bereits die Eulersche Primzahlformel straft sie lügen. </p>
+
+<p xmlns="" class="last odd">
+Selbstkritik und Verzicht auf Eitelkeit sollten einen Skeptiker auszeichnen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3483903"><a class="author person" href="/!ku38432/"><h4>disenchanted</h4></a><time datetime="2017-05-07T01:46:34+02:00"><meta value="1494114394"></meta>07. 05. 2017, 
+		01:46</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Skeptiker sollten sich mit Thesen auseinandersetzen die Gesellschaftlich mehr oder minder widerstandslos akzeptiert werden. Dazu gehört in Deutschland sicher auch die Ablehnung von Atomstrom. Ich kann die Argumente dagegen nachvollziehen und bin generell auch für einen Ausstieg. Allerdins sind viele Menschen einfach dagegen, weil die Resonanz auf diese Haltung positiv ist. Das ist keine Gesunde Haltung.</p>
+
+<p xmlns="" class="last odd">
+Wissenschaftsfeindlichkeit findet sich in vielen Bereichen, selbst im akademischen Umfeld. Die Verleugnung der Biologie ist in vielen geisteswissenschaftlichen Disziplinen keine Seltenheit. Da geht es dann um Glauben, nicht um Fakten.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="guest " id="bb_message_3483892"><a class="author person"><h4>571 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-06T22:22:24+02:00"><meta value="1494102144"></meta>06. 05. 2017, 
+		22:22</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Mehr über Frau Dr. Grams' Veröffentlichung: <a target="_blank" href="http://www.homoeopathie-online.info/medizin-falsch-gedacht-rezension-ueber-natalie-grams-neu-gedachte-homoeopathie/">http://www.homoeopathie-online.info/medizin-falsch-gedacht-rezension-ueber-natalie-grams-neu-gedachte-homoeopathie/</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="guest " id="bb_message_3483886"><a class="author person"><h4>9076 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-06T21:16:45+02:00"><meta value="1494098205"></meta>06. 05. 2017, 
+		21:16</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Es gibt schon verrückte Menschen.....</p>
+
+<p xmlns="" class="odd">
+Was ist das denn? Soeben gefunden:</p>
+<p xmlns="" class="even">
+Anscheinend sind Verschwörungstheoretiker auch in den Reihen der Bundeswehr zu finden.</p>
+<p xmlns="" class="last odd">
+Siehe hier: <a target="_blank" href="http://www.planungsamt.bundeswehr.de/portal/a/plgabw/start/service/studien/!ut/p/z1/hY_RC4IwEMb_I29OlvrosEwQiZTKvcRwwxa2yVjSQ398E6G36Dv44O67-8EBgwswzWc1cKeM5qPvO7a50qRqK5xi3JYUoayocRTH-6igCE5w_rfCfIx-KEPQCAmdZ8S_GQQaYMCEDHqjpVvcSe2U98FyZ2wwGevGJXla65NACehQmFMU-loVvtM83jYkJCQv6XEB3vnMX99b3i9PQ3fjWozyYPpsHUyPXVLXZPgAaBQaHg!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/#Z7_B8LTL2922TIB00AGN2377H3GB5">http://www.planungsamt.bundeswehr.de/portal/a/plgabw/start/service/studien/!ut/p/z1/hY_RC4IwEMb_I29OlvrosEwQiZTKvcRwwxa2yVjSQ398E6G36Dv44O67-8EBgwswzWc1cKeM5qPvO7a50qRqK5xi3JYUoayocRTH-6igCE5w_rfCfIx-KEPQCAmdZ8S_GQQaYMCEDHqjpVvcSe2U98FyZ2wwGevGJXla65NACehQmFMU-loVvtM83jYkJCQv6XEB3vnMX99b3i9PQ3fjWozyYPpsHUyPXVLXZPgAaBQaHg!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/#Z7_B8LTL2922TIB00AGN2377H3GB5</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3483856"><a class="author person" href="/!ku22896/"><h4>Rudolf Fissner</h4><img class="lozad" src="" data-src="/kommune/files/images/profile/70x70/22896.png" alt="" title=""></img><noscript><img src="/kommune/files/images/profile/70x70/22896.png" alt="" title=""></img></noscript></a><time datetime="2017-05-06T18:20:12+02:00"><meta value="1494087612"></meta>06. 05. 2017, 
+		18:20</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Leuten, denen Angesichts der Katastrophen von Fukushima und Tschernobil die Skepsis an der Atomkraft abhanden gekommen ist, bin ich sehr skeptisch gegenüber.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3483843"><a class="author person" href="/!ku389/"><h4>Hanne</h4></a><time datetime="2017-05-06T17:18:32+02:00"><meta value="1494083912"></meta>06. 05. 2017, 
+		17:18</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Skepsis und Zweifel an sich sind gesunde Maßnahmen zur persönlichen Einordnung von Sachverhalten.</p>
+
+<p xmlns="" class="odd">
+Aber die "Skeptiker" bestehen sicher zum Großteil aus Menschen, die Angst haben, dass ihnen der Boden unter den Füßen wegrutscht, also greifen sie fast nur an und das auch sehr emotional.</p>
+
+<p xmlns="" class="last odd">
+So war es z.B. auch, als aus der Erde eine fast runde Kugel werden sollte.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3483874"><a class="author person" href="/!ku8948/"><h4>LittleRedRooster</h4></a><time datetime="2017-05-06T20:00:55+02:00"><meta value="1494093655"></meta>06. 05. 2017, 
+		20:00</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hanne </span>Falsch, liebe Hanne!</p>
+<p xmlns="" class="even">
+In den Zeiten, auf die Sie anspielen, war der Glaube an die Erdenscheibe im 'christlichen Abendland' usus. Und die Gläubigen bezogen sich dabei auf die Bibel. Sie zweifelten nicht an deren Wahrheitsgehalt, waren also mitnichten Skeptiker. </p>
+<p xmlns="" class="odd">
+Die Skeptiker waren vielmehr Menschen wie Galileo Galilei und Nikolaus Kopernikus (at all). Sie waren es die diesen alten Aberglauben zu Fall brachten. </p>
+<p xmlns="" class="last even">
+Bitte hier keinen Ettikettenschwindel!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3483933"><a class="author person"><h4>571 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-07T09:18:36+02:00"><meta value="1494141516"></meta>07. 05. 2017, 
+		09:18</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@LittleRedRooster </span>Der "Glaube an die Erdenscheibe" war weniger Glaube, als das, was der abendländische Mensch aus eigener Anschauung kannte.</p>
+<p xmlns="" class="last even">
+Die Erdscheibe und darüber das Himmelszelt, das war alles. Dass die (bekannte) Erde das Zentrum darstellte, versteht sich von selbst. Eine Kugel war allein schon wegen des Oben/Unten unvorstellbar.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3483979"><a class="author person" href="/!ku21336/"><h4>sart</h4></a><time datetime="2017-05-07T11:47:31+02:00"><meta value="1494150451"></meta>07. 05. 2017, 
+		11:47</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@571 (Profil gelöscht) </span>Der Glaube an die Erdenscheibe war etwas, dass vielleicht bei der einfachen Bevölkerung verbreitet war, bei den Gelehrten war bereits seit der Antike die Kugelgestalt der Erde vorherrschend. </p>
+
+<p xmlns="" class="odd">
+Unter anderem Aristoteles, der das oben/unten-problem damit erklärte, dass schwere Körper dem Mittelpunkt des Alls zustreben, wo seiner Meinung nach die Erde war. Und Aristoteles war schließlich auch mit der wichtigste Autor der Scholastik. Neben etwa Tomas von Aquin, der einen weiteren in der Antike schon angebrachten Beweis, nämlich der Kreisförmigkeit von Mond- und Sonnenfinsternis, aufgriff. Die Kugelgestalt der Erde wurde auch von der Kirche nicht wirklich angezweifelt. Die Abkehr vom Geozentrischen Weltbild war für sie das Problem.</p>
+
+<p xmlns="" class="odd">
+Dazu kommen diverse kugelförmige Darstellung der Erde, etwa beim Reichsapfel oder Darstellung des St. Christophorus mit Jesus und Weltkugel.</p>
+
+<p xmlns="" class="last odd">
+Die Geschichte mit dem Glauben an die Flache Erde im Mittelalter ist eine Propaganda-Erfindung der Aufklärer. Das eigene Licht strahlt halt nochmal heller, wenn es vorher dunkler war.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3483717"><a class="author person" href="/!ku38976/"><h4>Thomas Nattermann</h4></a><time datetime="2017-05-06T10:05:14+02:00"><meta value="1494057914"></meta>06. 05. 2017, 
+		10:05</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">90% aller Naturwissenschaftler wuerden den Skeptiker in allen  Punkten  recht geben, wenn sie denn gefragt wuerden. Eine wissenschaftliche Darstellung zu Kernenergie und Gentechnik gibt es in D. nicht, weil Journalisten ja ohnehin wissen, was richtig ist. Das, was die  Bevoelkerung zu diesen Punkten denkt, ist nicht das Resultat eigener Recherchen sondern ein Produkt der Medien. Um es mal in ein internationales Bild zu setzen:</p>
+<p xmlns="" class="even">
+82% aller Berichte ueber Fukushima, die in europaeischen Zeitungen erschienen sind, stammen aus Deutschland (Quelle: Karlsruhe Institute of Technology), ueber den Tenor dieser ''Aufklaerung'' muss man nicht raetseln. Eine Achener Professor fuer Reaktortechnologie sagte mir auf die Frage, warum er sich nicht oeffentlich zu Fukushima aeussere, es wuerde ihm ja ohnehin das Wort im Munde umgedreht (dass letzte Wort kommt immer aus dem off)</p>
+<p xmlns="" class="last odd">
+Die Aufklaerung ist doch laengst von Greenpeace,   Gruenen und den Medien kassiert wurden.  Und: die meisten Hexen wurden in Deutschland verbrannt.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3483922"><a class="author person"><h4>61321 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-07T08:13:06+02:00"><meta value="1494137586"></meta>07. 05. 2017, 
+		08:13</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Thomas Nattermann </span>Schön blöd, dass die Leut so blöd sind, gell?  Und den Journalismus sollte man endlich mal an die Kette legen. Möglichst kurz.</p>
+
+<p xmlns="" class="odd">
+Mein lieber Herr, da Sie offensichtlich vorwiegend (ausschließlich?) mit Professoren reden, wenn Sie etwas von der Wahrheit wissen wollen, ein kleiner, ganz persönlicher Hinweis an Sie:</p>
+<p xmlns="" class="last even">
+Lassen Sie sich das Denken nicht von anderen besorgen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3483935"><a class="author person" href="/!ku38976/"><h4>Thomas Nattermann</h4></a><time datetime="2017-05-07T09:24:57+02:00"><meta value="1494141897"></meta>07. 05. 2017, 
+		09:24</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@61321 (Profil gelöscht) </span>Ich bin selber einer.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3483989"><a class="author person" href="/!ku7562/"><h4>Neinjetztnicht</h4><img class="lozad" src="" data-src="/kommune/files/images/profile/70x70/7562.png" alt="" title=""></img><noscript><img src="/kommune/files/images/profile/70x70/7562.png" alt="" title=""></img></noscript></a><time datetime="2017-05-07T12:25:50+02:00"><meta value="1494152750"></meta>07. 05. 2017, 
+		12:25</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Thomas Nattermann </span>Das ist ja wundervoll für Sie. Da wird doch glatt der Beweis erbracht: nicht alle Professoren sind auch gleichzeitig intelligente Menschen.</p>
+<p xmlns="" class="last even">
+Ganz ehrlich, wer Atomkraft aus diesen Gründen nicht ablehnt, der hat irgendwie einen Schuss nicht gehört. Ich kenne Menschen, die in der Region Fukushima gearbeitet haben, denen können Sie ja gerne mal erzählen, dass die Radioaktivität dort nicht gefährlich ist und nur ein Hirngespinst unserer Medien. Ich selbst kann mich, trotz meiner im Vergleich zu Ihnen vermutlich jungen Jahre, noch gut an Tschernobyl erinnern.  Wollen Sie die Gefahren da wirklich komplett ausblenden? Was sind Sie für ein Mensch...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3483993"><a class="author person" href="/!ku7562/"><h4>Neinjetztnicht</h4><img class="lozad" src="" data-src="/kommune/files/images/profile/70x70/7562.png" alt="" title=""></img><noscript><img src="/kommune/files/images/profile/70x70/7562.png" alt="" title=""></img></noscript></a><time datetime="2017-05-07T12:32:49+02:00"><meta value="1494153169"></meta>07. 05. 2017, 
+		12:32</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Neinjetztnicht </span><a target="_blank" href="http://journals.lww.com/epidem/Citation/2016/05000/Thyroid_Cancer_Detection_by_Ultrasound_Among.3.aspx">http://journals.lww.com/epidem/Citation/2016/05000/Thyroid_Cancer_Detection_by_Ultrasound_Among.3.aspx</a></p>
+<p xmlns="" class="even">
+ <a target="_blank" href="http://www.ippnw.de/commonFiles/pdfs/Atomenergie/090904-Metanalyse-Greiser.pdf">http://www.ippnw.de/commonFiles/pdfs/Atomenergie/090904-Metanalyse-Greiser.pdf</a></p>
+
+<p xmlns="" class="last even">
+Und ja, keine Studie ist perfekt, aber es lässt sich eine Tendenz erahnen. Und die zu ignorieren bedeutet Tote in Kauf zu nehemen. Glückwunsch!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="guest " id="bb_message_3483958"><a class="author person"><h4>61321 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-07T10:36:09+02:00"><meta value="1494146169"></meta>07. 05. 2017, 
+		10:36</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Thomas Nattermann </span>In dem Falle möchte ich Sie bitten es auszuhalten, dass sich bei uns Menschen aus der nicht-akademischen Welt zu Fragen der Wissenschaft und Technik äußern und Sie desweiteren bitten den Aachener Professor aufzufordern, er möge mit seinem Fachwissen einerseits und seiner persönlichen Meinung andererseits durchaus nicht hinter dem Berg halten, auch wenn es sich zuweilen nicht ganz so gemütlich diskutiert.</p>
+
+<p xmlns="" class="last odd">
+Was die Aufklärung angeht, ich sehe sie heute als teilweise gescheitert an. Das ist angesichts unserer sich rasend weiter technisierenden und digitalisierenden Welt und angesichts der ökologischen Bedrohung frappierend. Diese selbstgewählte und damit sekundäre Unaufgeklärtheit des Menschen gehört von Grund auf untersucht und in aller Tiefe darüber nachgedacht. Sie ist offenbar auch das Produkt Jahrhunderte langer naturwissenschaftlicher Erfolgsgeschichte, bei der der Mensch in Vielem schlicht auf der Strecke blieb.  Die Philosophie hat (noch?) keine erhellenden Antworten darauf und beschäftigt sich wohl derweil mit Anderem.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3484088"><a class="author person" href="/!ku11255/"><h4>Ruhig Blut</h4></a><time datetime="2017-05-07T18:11:44+02:00"><meta value="1494173504"></meta>07. 05. 2017, 
+		18:11</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@61321 (Profil gelöscht) </span>Sie betreibt derzeit viel Nabelschau…</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3483696"><a class="author person" href="/!ku17071/"><h4>wxyz</h4></a><time datetime="2017-05-06T08:27:24+02:00"><meta value="1494052044"></meta>06. 05. 2017, 
+		08:27</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Einen Club der Skeptiker gab es bereits im Mittelalter, und auch da war alles ziemlich gemischt:</p>
+
+<p xmlns="" class="odd">
+Es gab diejenigen, die gegen Aberglauben der Astrologie zu Felde zogen, aber es gab auch diejenigen, die gegen die "Fake-Behauptung" ankämpften, daß es Hexen nicht gäbe.</p>
+
+<p xmlns="" class="last odd">
+Aber ob es zur "Wissenschaft" erhobener Aberglaube ist oder umgekehrt ein durch Fakten widerlegter Aberglaube, wird bedeutungslos, sobald der Kommerz Interesse zeigt, denn dann zählt nur noch das Geld.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3483690"><a class="author person" href="/!ku981/"><h4>Frank H.</h4></a><time datetime="2017-05-06T07:48:51+02:00"><meta value="1494049731"></meta>06. 05. 2017, 
+		07:48</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Leider benutzen viele Gwup-Mitglieder den Geist der Aufklärung "Sapere aude" eher im Sinne von Dogmatismus und umkrempeln von Andersdenkenden...eine nicht gerade demokratiefreundliche Organisation.....</p>
+<p xmlns="" class="last even">
+Informationen dazu z.B. hier:  <a target="_blank" href="https://www.amazon.de/dp/3743159341/ref=sr_1_4?s=books&amp;ie=UTF8&amp;qid=148905171">https://www.amazon.de/dp/3743159341/ref=sr_1_4?s=books&amp;ie=UTF8&amp;qid=148905171</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3483878"><a class="author person" href="/!ku8948/"><h4>LittleRedRooster</h4></a><time datetime="2017-05-06T20:21:58+02:00"><meta value="1494094918"></meta>06. 05. 2017, 
+		20:21</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Frank H. </span>Ihr Link, lieber Frank H., führt einen natürlich mittenmang zu Amazon. Und Amazon ist nun mal dafür bekannt dass es schlicht und ergreifend alles verhökert, was sich verhökern lässt. Deshalb würde ich mich auf der Suche nach brauchbarer medizinischer Information lieber nicht an diesen Flohmarkt wenden. </p>
+<p xmlns="" class="even">
+Denn exakt darum scheint es zu gehen: Um ein Buch des Heilpraktikers und Homöopathen HaJo Fritschi über die vermeintliche "Angst vor Globuli", so der Titel. Nur: Bereits der Untertitel "Lesen Sie dieses Buch, bevor Homöopathie Sie umbringt" müsste aber bereits ein Hinweis darauf sein, dass es sich hier um ein Satire handelt. </p>
+<p xmlns="" class="last odd">
+Weitere Nachforschungen über Autor und Werk bestätigen dies dann auch.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3483853"><a class="author person" href="/!ku22896/"><h4>Rudolf Fissner</h4><img class="lozad" src="" data-src="/kommune/files/images/profile/70x70/22896.png" alt="" title=""></img><noscript><img src="/kommune/files/images/profile/70x70/22896.png" alt="" title=""></img></noscript></a><time datetime="2017-05-06T18:13:50+02:00"><meta value="1494087230"></meta>06. 05. 2017, 
+		18:13</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Frank H. </span>... und sie nehmen politische Positionen ein, die mit Wissenschaft erst einmal nichts zu tun haben. Den GWUPlern fehlt bei ihrem Dogmatismus jegliche Skepsis an den eigenen Positionen. Interne Streitigkeiten und konträre Positionen sind bei denen nicht bekannt.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3483689"><a class="author person" href="/!ku19169/"><h4>Berliner Berlin</h4></a><time datetime="2017-05-06T07:43:34+02:00"><meta value="1494049414"></meta>06. 05. 2017, 
+		07:43</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Auf die Spur der pseudomedizinischen Krebsbehandler haben sich auch.."</p>
+<p xmlns="" class="even">
+Auf welche Spur? Und "auch", wer noch? Was für ein Artikel, erinnert mich irgendwie an die "Junge Welt".</p>
+<p xmlns="" class="last odd">
+Cui bono?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3483662"><a class="author person" href="/!ku15387/"><h4>Co-Bold</h4></a><time datetime="2017-05-05T23:34:12+02:00"><meta value="1494020052"></meta>05. 05. 2017, 
+		23:34</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Der Untertitel ist reißerisch und hat auch keine wirkliche Entsprechung im restlichen Artikel.</p>
+<p xmlns="" class="even">
+Sehr schlechter Stil!</p>
+
+<p xmlns="" class="even">
+Ansonsten denke ich, dass die "Skeptiker" vielleicht den wichtigsten Job überhaupt wahrnehmen: Die Verteidigung der Aufklärung.</p>
+
+<p xmlns="" class="last even">
+Und ich glaube und hoffe, dass wir diesbezüglich das Schlimmste hinter uns haben. Die Debatte über Fake News und gezielte Stimmungsmache über soziale Medien hat doch vielen die Augen geöffnet.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3483846"><a class="author person" href="/!ku389/"><h4>Hanne</h4></a><time datetime="2017-05-06T17:23:50+02:00"><meta value="1494084230"></meta>06. 05. 2017, 
+		17:23</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Co-Bold </span>"Ansonsten denke ich, dass die "Skeptiker" vielleicht den wichtigsten Job überhaupt wahrnehmen: Die Verteidigung der Aufklärung."</p>
+
+<p xmlns="" class="odd">
+Verteidigung ja, aber sicher nicht nur der Aufklärung.</p>
+
+<p xmlns="" class="odd">
+Aufklärung behaupten auch die, gegen die sich die "Skeptiker" verteidigen.</p>
+
+<p xmlns="" class="odd">
+Jeder Mensch sollte einfach selbst entscheiden könne, was er "glauben" möchte oder als plausibel ansieht. Das kann sich im Laufe des Lebens ja auch mal ändern - in die eine oder auch die andere Richtung.</p>
+
+<p xmlns="" class="odd">
+Dafür leben wir in einer freiheitlichen Demokratie, niemanden wird etwas vorenthalten, aber auch kaum einer muss was machen oder denken oder darf es nicht.</p>
+
+<p xmlns="" class="last odd">
+Die "Skeptiker" sollen einfach ihren Weg gehen und die anderen den ihren. Skeptiker sind übrigens auch alle, daher ist der Begriff etwas seltsam gewählt.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3483724"><a class="author person" href="/!ku502/"><h4>Arne Babenhauserheide</h4></a><time datetime="2017-05-06T10:35:34+02:00"><meta value="1494059734"></meta>06. 05. 2017, 
+		10:35</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Co-Bold </span>Insofern passt der Artikel leider gut: Skeptiker sind wichtig, müssen aber immer auch sich selbst gegenüber skeptisch bleiben.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3483723"><a class="author person" href="/!ku502/"><h4>Arne Babenhauserheide</h4></a><time datetime="2017-05-06T10:34:26+02:00"><meta value="1494059666"></meta>06. 05. 2017, 
+		10:34</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Co-Bold </span>Ich bin schon lange Abonnent des GWUP Newsletters, habe aber vor Jahren aufgehört, ihn zu lesen, weil mir die Argumentation zu ideologisch und zu aggressiv war.</p>
+
+<p xmlns="" class="last odd">
+Eben keine entspannte, freundliche Diskussion, in der die Argumente der anderen Seite sauber widerlegt werden, sondern Kampfschriften.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3483658"><a class="author person" href="/!ku892/"><h4>Reinhardt Gutsche</h4></a><time datetime="2017-05-05T23:05:39+02:00"><meta value="1494018339"></meta>05. 05. 2017, 
+		23:05</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Lob des Zweifels</p>
+
+<p xmlns="" class="odd">
+Zitat: „„Skeptiker“ ziehen gegen Geistheilung, Homöopathie und andere Pseudowissenschaften zu Felde. Bekämpft wird alles, was nicht in ihr Weltbild passt.“</p>
+
+<p xmlns="" class="last odd">
+Dieser Satz klingt nach Skepsis gegenüber den Skeptikern und ist etwas unklar: Wenn die Skeptiker „Geistheilung, Homöopathie und andere Pseudowissenschaften“ im Visier haben, Leugner des Klimawandels durch exzessiven Industrialismus, Impfgegner usw und alle Anhänger von sonstigem Hokuspokus, na dann umso besser. Gegen solche Weltbilder anzukämpfen, ist die raison d‘être des aufklärerischen Denkens. Unklar ist dabei die Verortung der „Verschwörungstheoretiker“ wie die Chemtrails-Skeptiker, deren Skepsis sich gegen „böse Regierungen“ richtet. Sind sie nun ebenfalls im Visier der Skeptiker-Bewegung wie die Geistheiler oder ihrerseits deren Teil? Auffälligerweise wird um solche exotische Grüppchen wie die Chaimtrailer viel Tamtam gemacht und die immer noch großen Masse von Gott- und Legendengläubigen ungeschoren gelassen. Was sind die Handvoll Chemtrail-Verschwörungsgläubige gegen die Milliarden Adepten allein der monotheistischen Weltreligionen? Noch vor 10 Jahren glaubte jeder zweite Deutsche an einen Schöpfergott (SPON  20.12 2005), und jeder zweite US-Amerikaner gar nimmt die biblische Schöpfungslegende für bare Münze. Im Verhältnis zu dieser klassischen Erscheinungsform des universellen Obskurantismus ist das Häuflein der „Verschwörungstheoretiker“ aller Couleur in ihrer Wirkmacht eine quantité négligeable.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3483807"><a class="author person" href="/!ku38978/"><h4>Sabi Ne</h4></a><time datetime="2017-05-06T14:58:33+02:00"><meta value="1494075513"></meta>06. 05. 2017, 
+		14:58</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Reinhardt Gutsche </span>Hallo, die GWUP (Skeptiker) haben neben den Para- bzw. Pseudowissenschaften ebenso die Chemtrailverschwörung, die Erde ist eine Scheibe-Anhänger, Reichsbürger, als auch 9/11 Verschwörungstheoretikern im Visier. Alles, was sich nicht durch Fakten belegen lässt.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3484253"><a class="author person" href="/!ku892/"><h4>Reinhardt Gutsche</h4></a><time datetime="2017-05-08T08:46:53+02:00"><meta value="1494226013"></meta>08. 05. 2017, 
+		08:46</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Sabi Ne </span>Zitat von @Sabi Ne: „die GWUP (Skeptiker) haben...ebenso die Chemtrailverschwörung... im Visier.“</p>
+
+<p xmlns="" class="last odd">
+Also was denn nun, die Chemtrailverschwörung oder die Leute, die glauben, es gäbe eine Chemtrailverschwörung?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3483691"><a class="author person" href="/!ku19169/"><h4>Berliner Berlin</h4></a><time datetime="2017-05-06T07:50:44+02:00"><meta value="1494049844"></meta>06. 05. 2017, 
+		07:50</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Reinhardt Gutsche </span>Worüber beschweren Sie sich? Wieso sollte man über jemanden öffentlich berichten, dessen denken und handeln keine Auswirkungen auf die Allgemeinheit haben?</p>
+
+<p xmlns="" class="odd">
+Die meisten Christen, Muslims, Buddhisten und Hindus bleiben mit ihrem Glauben im privaten, das geht uns nichts an. Im Gegensatz dazu geht gewöhnlich die öffentlich geäußerte Meinung der Chemtrail-Verschwörungsgläubigen mit einer Hetze gegen Politiker und Industrielle einher, die zuweilen gefähhrlich wirkt. </p>
+
+<p xmlns="" class="last odd">
+Darauf muss man aufmerksam machen und das tun die Medien zuweilen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3483712"><a class="author person" href="/!ku892/"><h4>Reinhardt Gutsche</h4></a><time datetime="2017-05-06T09:45:23+02:00"><meta value="1494056723"></meta>06. 05. 2017, 
+		09:45</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Berliner Berlin </span>Zitat von@Berliner Berlin: „Wieso sollte man über jemanden öffentlich berichten, dessen denken und handeln keine Auswirkungen auf die Allgemeinheit haben?“</p>
+
+<p xmlns="" class="odd">
+Daß der monotheistische Gottesglaube ohne Auswirkungen auf die „Allgemeinheit“ bliebe, wäre ja wunderbar, aber wohl ein frommer Wunsch, wenn man so sagen darf. Nicht nur alle deutschen Kriege wurden mit dem Schlachtruf „Gott mit uns“ geführt und begannen mit dem Befehl „Helm ab zum Gebet!“. Es soll in jüngster Zeit auch gelegentlich zu Massenmorden auf Weihnachtsmärkten, Uferpromenaden, Boulevards, Konzerthallen, Flughäfen, U-Bahnen usw. an „Ungläubigen“ mit dem Ruf „Allahu Akba“ gekommen sein. So viel zu möglichen Auswirkungen auf die Allgemeinheit. Im übrigen werden Legenden wie die Schöpfungsgeschichte allsonntäglich in aller Öffentlichkeit und landesweit vom ÖRR verbreitet und verbleiben keineswegs im „Privaten“. Fast alle Bundesminister bekräftigen die Eidesformel unmißverständlich in größter nur vorstellbaren Öffentlichkeit mit einem Gottesbezug.</p>
+
+<p xmlns="" class="last odd">
+Was die bizarre Chaimtrail-Nummer angeht, so sind „öffentliche“ Äußerungen sowenig zu finden wie Hetze gegen Industrielle und Politiker. Was sich in obskuren Plattformen und Netz-Foren abspielt, kann man ja nun „bei Gott“ nicht als große Öffentlichkeit bezeichnen. Die dazu verfügbaren Informationen stammen alle aus der Metaebene, also kritischen Berichten seriöser Publikationen oder dementierenden amtlichen Verlautbarungen. Ohne dieses Tamtam würde kein Hahn danach krähen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3483833"><a class="author person" href="/!ku37495/"><h4>Kurzer Prozess</h4><img class="lozad" src="" data-src="/kommune/files/images/profile/70x70/37495.png" alt="" title=""></img><noscript><img src="/kommune/files/images/profile/70x70/37495.png" alt="" title=""></img></noscript></a><time datetime="2017-05-06T16:31:27+02:00"><meta value="1494081087"></meta>06. 05. 2017, 
+		16:31</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Reinhardt Gutsche </span>+1</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3483806"><a class="author person" href="/!ku11255/"><h4>Ruhig Blut</h4></a><time datetime="2017-05-06T14:54:58+02:00"><meta value="1494075298"></meta>06. 05. 2017, 
+		14:54</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Reinhardt Gutsche </span>Plus Blasphemieverbot und gesetzlicher Schutz „religiöser Gefühle“, Einschränkungen von allerlei Freiheitsrechten an christlichen Feiertagen, die massive staatliche Alimentierung der Kirchen und sonstiger religiöser Vereinigungen, die arbeitsrechtlichen Sonderregelungen für die diskriminierenden Praktiken christlicher Wohlfahrtsorganisationen.</p>
+
+<p xmlns="" class="last odd">
+Ja, Sie haben sowas von Recht!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li></ul></div><span id="ad_bin_uebersicht_medrec_4" class="ad_bin sold contentad"><div id="ad_zone_uebersicht_medrec_4" name="uebersicht_medrec-4" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"><iframe class="adIframe" id="uebersicht_medrec-4" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Oeko' }));
+			var adId = 'uebersicht_medrec-4';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid476383">
+    
+
+<form name="form" method="post" enctype="application/x-www-form-urlencoded" id="send-comment" class="first last odd sect sect_send-comment_form style_commentform " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><h2><a name="jetzt mitreden"><span>jetzt mitreden</span></a></h2></div><div class="sectbody"><input class="constant" type="hidden" name="test" value="yes"></input><input class="constant" type="hidden" name="id" value="5403632"></input><input type="hidden" name="scope" class="constant" id="form_scope" value="cms-article"></input><input type="hidden" name="asid" class="constant" id="form_asid" value=""></input><span class="field"><p class="label">Ihren Kommentar hier eingeben</p><textarea name="post" class="text" id="form_post"></textarea></span><input type="submit" class="submit" name="ignore" value="abschicken"></input></div></form><script> filOtaz_de.Form( 'send-comment' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+	var formN = $('#send-comment');	// who i am
+
+	if( formN[0].filOtaz_de_handled ) return; formN[0].filOtaz_de_handled = true;	// run only once
+
+
+
+	// ajaxify myself
+	filOtaz_de.ajaxifyForm('send-comment', {
+		mirrorInput	: true ,
+		onSuccess	: function( data ){
+			filOtaz_de.kommune.updateLogin();
+//console.log('success handler send-comment '+ $(data).html() );
+//			var message = $(data).find('.message');
+//			alert( message.length ? message.text() : 'OK' );
+			} 
+		});   
+
+
+	if( formN.parents('.wing').length ) {    // we're in wing
+//console.log('send-comment in wing '+ formN.length +', '+ formN.parents('.wing').length +', '+ formN.parents('.float').length );
+
+	var multiUse = function() {
+
+		// === lend ourselfes to reply-function ===
+
+		// shared functions
+		var onScroll, reset;
+
+		// shared data
+		var form, anchor, prior, bros, dad, uncles, yMin;
+
+
+		$('.community.page >.body >.sect_commentlinks').find('>.sectbody >li, .thread >li').each( function(i,el){	// each comment
+
+			// per comment data
+			var refN	= $(el),
+			    toolbarN	= refN.find('>.toolbar'),
+			    id,
+			    onClick
+			    ;
+
+			toolbarN.find('>.reply >a').click( function(){
+				// reply specific
+				onClick({
+					idKey	: 'asid',
+					title	: {
+						prefix	: '',
+						suffix	: ' antworten'
+						},
+					hint	: 'Antwort bitte hier eingeben',
+					submit	: 'antworten'
+					});
+				} );
+			
+			toolbarN.find('>.report >a').click( function(){
+				// report specific
+				onClick({
+					a	: 'report',
+					idKey	: 'pid',
+					title	: {
+						prefix  : 'Kommentar von ',
+						suffix  : ' melden'
+						},
+					hint    : 'Problem bitte hier beschreiben',
+					submit	: 'melden'
+					});
+				} );
+
+			toolbarN.css({ visibility:'visible' });
+
+
+			onClick = function( par ) {
+
+					// determine shared data late
+				if( !form ) {
+					form = {
+						titleN	: formN.find('>.secthead >h2 >a >span'),
+						aN	: formN.find('>.sectbody >input[name="a"]'),
+						idN	: formN.find('>.sectbody >input[name="asid"]'),
+						pidN	: formN.find('>.sectbody >input[name="pid"]'),
+						textN	: formN.find('>.sectbody >span >textarea'),
+						submitN	: formN.find('>.sectbody >input:submit')
+						};
+					form.hintN 	= form.textN.prev('p');
+					form.org = {
+						title	: form.titleN.text(),
+						hint	: form.hintN.text(),
+						a	: form.aN.attr('value'),
+						submit	: form.submitN.attr('value')
+						};
+					}
+
+				// determine per comment data late
+				if( !id )  	id = refN.attr('id').replace(/^[^0-9]*/, '');
+
+
+				// change presented data to our needs
+
+				if( par.a ) {
+					if( !( form.aN  && form.aN.length  ) )  
+						form.aN  = $('<input class="constant" type="hidden" />').insertBefore( form.submitN );
+					form.aN.attr({	name	: 'a',
+							value	: par.a
+							});
+					}
+				else if( form.aN ) {
+					form.aN.remove();
+					form.aN = null;
+					}
+
+				if( par.idKey ) {
+					if( form.idN ) form.idN.remove();
+					form.idN = $('<input class="constant" type="hidden" />')
+						.attr({	name	: par.idKey,
+							value	: id
+							})
+						.insertBefore( form.submitN );
+					}
+				else if( form.idN ) {
+					form.idN.remove();
+					form.idN = null;
+					}
+
+				form.titleN.empty().append( 
+					par.title.prefix, 
+					$('<span>'+ refN.find('>.author >h4').text() +'</span>').addClass( refN.attr('class') ),
+					par.title.suffix
+					);
+
+				form.hintN.text(		par.hint	);
+
+				form.submitN.attr({	value :	par.submit	});
+
+
+				// add reset options
+				(new filOtaz_de.Form( formN )).cancel( function(){ reset();	afterLogin.fadeIn(); });
+				formN.on('filOtaz_de.Form.done',   reset );
+
+				// geometry
+				var	commBot	=   toolbarN.offset().top +   toolbarN.outerHeight(),
+					formBot = form.textN.offset().top + form.textN.outerHeight(),
+					d	= commBot - formBot
+					;
+				if( !yMin ) yMin = formBot - $(window).scrollTop();
+				if( commBot - $(window).scrollTop() < yMin )  window.scrollTo( 0, commBot - yMin );
+
+				// relocate form to stick w/ referenced comment
+				if( !anchor && d >0 ) {
+					prior = formN.prev(), bros = formN.nextAll(), dad = formN.parent(), uncles = dad.filter('.rack').nextAll(), afterLogin = $('form#bb-login').nextAll().not('script');
+					messageN = $('#successMessage');
+					anchor = $('<div class="community wing pin" />')
+						.css({  position: 'absolute',
+							top     : formN.offset().top +'px',
+							left    : dad.offset().left +'px',
+							width   : formN.width() +'px'
+							})
+						.appendTo( document.body )
+						;
+					if( uncles.length ) {   // we're in rack
+						dad.css({  borderBottomStyle: 'none'  });
+						anchor.append( $('<div />').addClass( dad.attr('class') ).append( formN, bros ), uncles );
+						}
+					else	anchor.append( formN, bros );
+					}
+
+				if( anchor ) {
+
+					// fading out "meistkommentiert" when answering
+
+					afterLogin.fadeOut();
+				// refresh for second ... n time "antworten"
+				// commtented out to prevent "neues kommtar" instead of "antworten"
+				//	if (formN.hasClass('worked')){
+				//		  if( form.aN ) form.aN.remove();
+				//		  if( form.idN ) form.idN.remove();
+				//	}
+
+					anchor.animate(
+						{ 
+							top : formN.offset().top + d
+						},
+					function(){
+							$(window).scroll( onScroll );
+							} );
+						}
+
+				}; //onClick
+
+			} ); //each comment
+
+			onScroll = function() {
+				var ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top;
+				// reset clears the whole form, we don't want that onScroll, so we only call relocateForm instead
+				// if( formN.offset().top <= ref )  reset();
+
+				// Do not scroll when already commented and there is success message
+				if (( formN.offset().top <= ref ) && ! (formN.hasClass('worked')))  relocateForm();
+				};
+			reset = function() {
+				if( reset ) 	formN.off('filOtaz_de.Form.done');
+				resetForm();
+				relocateForm();
+				};
+			relocateForm = function() {
+				// clean up
+				if( onScroll )  $(window).off('scroll.taz_onscroll');
+
+				// relocate form back
+				if( anchor ) {
+					var 	ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top,
+						d = anchor.offset().top - ref
+						;
+					anchor.animate({ top: ref }, d, function(){
+						dad.append( formN, bros );
+						if( uncles.length ) {	// we were in rack
+							dad.css({  borderBottomStyle: null  });
+							dad.after( uncles );
+							}
+						if( anchor ) anchor.remove(); anchor = null;
+						} );
+					}
+				};
+			resetForm = function() {
+				// reset shown data
+				if( form.aN      ) form.aN.remove();
+				if( form.idN     ) form.idN.remove();
+//				if( form.cancelN ) form.cancelN.remove();
+				form.titleN.text(		form.org.title	);
+				form.hintN.text(		form.org.hint	);
+				form.textN.attr({	value : ''		}).trigger('blur');
+				form.submitN.attr({	value : form.org.submit	});
+
+				};
+
+		}; // multiUse
+
+
+		if( formN.parents('.float').length ) { 	// already relocated into float
+			multiUse();
+			}
+		else {					// wait for relocation
+
+			formN.parents('.wing').on('filOtaz_de_float_mounted', function(){  multiUse();  });
+			}
+		} //we're in wing
+
+	})(); </script>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><form name="form" method="post" enctype="application/x-www-form-urlencoded" id="bb-login" class="even sect sect_bb-login_form style_kommune " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><ul role="toolbar" class="toolbar"><li class="login"><a href="" target="_blank">Login</a></li><li class="settings"><a href="https://taz.de/kommune/post.php?a=registration" target="_blank">Registrieren</a></li><li class="newpass"><a shape="rect" target="_blank" href="https://portal.taz.de/?a=nopw">Passwort vergessen?</a></li></ul></div><div class="sectbody"><input type="hidden" name="a" class="constant" id="form_a" value="login"></input><span class="field"><p class="label">E-Mail</p><input type="text" name="email" class="line" id="form_email"></input></span><span class="field"><p class="label">Passwort</p><input type="password" name="password" class="secret" id="form_password"></input></span><input type="submit" class="submit" name="ignore" value="einloggen"></input></div></form><script> filOtaz_de.Form( 'bb-login' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+		var formID = 'bb-login';
+		var form = $('#bb-login');
+
+		if( !form.length ) return;
+		if( form[0].filOtaz_de_form_handled ) return; form[0].filOtaz_de_form_handled = true;
+
+		var nodes, org, firstrun = true;
+		if( !filOtaz_de.kommune ) filOtaz_de.kommune = {};
+		if( !filOtaz_de.kommune.updateLogin ) filOtaz_de.kommune.updateLogin = function(){
+			if( !nodes ) nodes = {	// parse DOM lazily
+				head	: form.find('>.secthead'),
+				body	: form.find('>.sectbody').hide(),
+				a	: form.find('input[name="a"]'),
+				inputs	: form.find('span').has('input[name="email"],input[name="password"]'),
+				submit	: form.find('input.submit'),
+				links	: {
+					all		: form.find('ul.toolbar'),
+					login		: form.find('ul>li.login').click(function(){
+								var me = $(this);
+//								nodes.body
+								me.closest('.secthead').nextAll('.sectbody')	// we might be dynamically inserted, so parse DOM here
+								.slideToggle(function(){
+									me.toggleClass('active');
+									});
+								return false;
+								}),
+					settings	: form.find('ul>li.settings'),
+					newpass		: form.find('ul>li.newpass')
+					}
+				};
+			var duration = firstrun ? 0 : $.fx.speeds._default;
+			var tazsid = $.cookie('tazsid');
+			if(! tazsid ){  // not logged in
+					$('#send-comment .submit').val('Einloggen und Senden');
+					};
+
+			if( tazsid ) {	// already logged in
+					$('#send-comment .submit').val('Abschicken');
+
+				// mar: refresh after login error and then successful login
+				if ( $('#bb-login >.sectbody >p.error').length ){
+
+
+					$('.sect_bb-login').fadeOut().remove();
+					$('.sect_bb-login_form').fadeIn();
+					};
+
+
+				var tazid = $.cookie('tazid');
+//console.log('	now logged in as '+ tazid );
+				if( !org ) org = {	// store original values lazily
+					action	: form.attr('action'),
+					a	: nodes.a.attr('value'),
+					submit	: nodes.submit.attr('value'),
+					links	: {
+						login		: nodes.links.login,
+						settings	: {
+							text	: nodes.links.settings.children('a').text()
+							},
+						newpass		: nodes.links.newpass
+						}
+					};
+				form.attr({ action: 'https://taz.de/kommune/post.php?a=logout' });
+//console.log( tazsid );
+
+				nodes.body.slideUp( duration, function(){
+					form.addClass('session');
+					nodes.a.attr({ value: 'logout' });
+					nodes.inputs.hide();
+					nodes.submit.attr({ value: 'ausloggen' });
+					nodes.body.fadeIn( duration/3 );
+					});
+				if( tazid ) var profileURL = '/!ku'+ tazid +'/';
+				nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.login    )  nodes.links.login.detach();
+					if( profileURL ) {
+						if( !nodes.links.profile ) {
+							nodes.links.profile = $('<li><a href="'+ profileURL +'">mein Profil</a></li>');
+							nodes.links.settings.before( nodes.links.profile );
+							}
+						}
+					if( nodes.links.settings )  nodes.links.settings.children('a').text('Einstellungen');
+					if( nodes.links.newpass  )  nodes.links.newpass.detach();
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+				if( profileURL ) {	// tell user their name
+					if( !nodes.salute ) {
+						nodes.salute = $();
+//console.log('go, get profile '+ profileURL );
+						$.ajax({
+							type		: 'GET',
+							url		: profileURL +'c.xml', 
+							dataType	: 'xml',
+							success		: function( data, status, xhr ){
+								if( !nodes.salute ) return;	// we're too late
+								var name = $('content >item[type="person"] >name', data ).text();
+//console.log('	found '+ name );
+								nodes.salute = $('<h2><a>'+ name +'</a></h2>').hide().prependTo( nodes.head );
+								nodes.salute.slideDown( duration );
+								},
+							error		: function( req, status, message ){
+//console.log( req.status +' '+ status +' :: '+ message );
+								},
+							complete	: function( req, status ){
+								}
+							});
+						}
+					}
+				} //tazsid
+			else if( org )	(function(){	// reset logged out state
+				var orgwas = org; org = null;
+				nodes.body.fadeOut( duration/2, function(){
+					nodes.a.attr({		value	: orgwas.a		});
+					nodes.inputs.show();
+					nodes.submit.attr({	value	: orgwas.submit	});
+					form.removeClass('session');
+					}); 
+				if( nodes.salute )  nodes.salute.slideUp( duration, function(){
+					nodes.salute.remove(); nodes.salute = null;
+					});
+				if( nodes.links.all ) nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.profile ) nodes.links.profile.remove(); nodes.links.profile = null;
+					nodes.links.settings.before( orgwas.links.login.removeClass('active') );
+					nodes.links.settings.children('a').text( orgwas.links.settings.text );
+					nodes.links.settings.after(  orgwas.links.newpass );
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+
+				form.attr({		action	: orgwas.action	});
+				})();
+			firstrun = false;
+			};
+		filOtaz_de.kommune.updateLogin();
+
+		var message = filOtaz_de.ajaxifyForm('bb-login', { handle200 : filOtaz_de.kommune.updateLogin } );
+
+		if( message && message.length )	// secure ajax not supported
+			form.after( message );
+
+		})();
+	</script><div class="rack" id="xid524032">
+    
+
+<div role="region" id="" class="first last odd sect sect_shop style_shop "><div class="secthead" role="heading"><h2><a name="meistkommentiert"><span>meistkommentiert</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class=" first odd trodd   "><a href="/Uni-Frankfurt-gegen-Asta/!5753242/" class="objlink noavatar" role="link"><h4>Uni Frankfurt gegen Asta</h4><h3>Zu politisch</h3></a></li><li class=" even trodd   "><a href="/Ausbeutung-auf-Gemuesehoefen/!5750133/" class="objlink noavatar" role="link"><h4>Ausbeutung auf Gemüsehöfen</h4><h3>Erntehelfer sollen selber zahlen</h3></a></li><li class=" odd treven   "><a href="/Impfprivilegien-in-Israel/!5750105/" class="objlink noavatar" role="link"><h4>Impfprivilegien in Israel</h4><h3>Einlass nur mit „Grünem Pass“</h3></a></li><li class=" even trodd   "><a href="/Coronazahlen-steigen-wieder-an/!5750139/" class="objlink noavatar" role="link"><h4>Coronazahlen steigen wieder an</h4><h3>Trendwende bei Infektionen</h3></a></li><li class=" last odd trodd   "><a href="/Buergerraete-in-Deutschland/!5749932/" class="objlink noavatar" role="link"><h4>Bürgerräte in Deutschland</h4><h3>Retten sie die Demokratie?</h3></a></li></ul></div>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Jahrestreffen-der-Skeptiker/!5403632"></a></div><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a><ul><li class="first odd trodd"><a href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span>Deutschland</span></a></li><li class="even trodd"><a href="/Politik/Europa/!p4617/" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="/Politik/Amerika/!p4618/" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="/Politik/Afrika/!p4621/" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="/Politik/Asien/!p4619/" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="/Politik/Nahost/!p4620/" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="/Politik/Netzpolitik/!p4622/" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Oeko/!p4610/" id="menu_p4610"><span itemprop="title">Öko</span></a><ul><li class="first odd trodd"><a href="/Oeko/Oekonomie/!p4623/" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="/Oeko/Oekologie/!p4624/" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="/Oeko/Arbeit/!p4629/" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="/Oeko/Konsum/!p4625/" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="/Oeko/Verkehr/!p4628/" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span itemprop="title">Wissenschaft</span></a></li><li class="last odd trodd"><a href="/Oeko/Netzoekonomie/!p4627/" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a><ul><li class="first odd trodd"><a href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span>Alltag</span></a></li><li class="even trodd"><a href="/Gesellschaft/Reportage-und-Recherche/!p5265/" id="menu_p5265"><span>Reportage und Recherche</span></a></li><li class="odd treven"><a href="/Gesellschaft/Debatte/!p4633/" id="menu_p4633"><span>Debatte</span></a></li><li class="even trodd"><a href="/Gesellschaft/Kolumnen/!p4634/" id="menu_p4634"><span>Kolumnen</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Medien/!p4630/" id="menu_p4630"><span>Medien</span></a></li><li class="even treven"><a href="/Gesellschaft/Bildung/!p4635/" id="menu_p4635"><span>Bildung</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span>Gesundheit</span></a></li><li class="even trodd"><a href="/Gesellschaft/Reise/!p4638/" id="menu_p4638"><span>Reise</span></a></li><li class="last odd treven"><a href="/Gesellschaft/Podcasts/!p5318/" id="menu_p5318"><span>Podcasts</span></a></li></ul></li><li class="even trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="/Kultur/Musik/!p4640/" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="/Kultur/Film/!p4641/" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="/Kultur/Kuenste/!p4642/" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="/Kultur/Buch/!p4643/" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="/Kultur/Netzkultur/!p4631/" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="/Sport/Fussball/!p4647/" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="/Sport/Kolumnen/!p4648/" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="/Nord/Hamburg/!p4651/" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="/Nord/Bremen/!p4652/" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="/Nord/Kultur/!p4653/" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="/bei-Tom/!t5180734/" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="/ueber-die-Wahrheit/!115080/" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even treven"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd treven"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even treven"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="odd trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="even trodd"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="odd treven"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="even trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="even treven"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="https://taz.de/!112354/" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="https://taz.de/!p5097/" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="https://taz.de/!114802/" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="https://taz.de/!114191/" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="https://taz.de/!166598/" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4283/" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="https://taz.de/!p4858/" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="https://taz.de/!112355/" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div><script type="text/javascript">
+			const lazyObserver = lozad('.lozad', {
+				rootMargin: '1050px', // syntax similar to that of CSS Margin
+				threshold: 0.1, // ratio of element convergence
+				enableAutoReload: true // it will reload the new image when validating attributes changes
+			});
+			lazyObserver.observe();
+
+		</script></body><!-- DEBUG end 18:48:19+01:00--></html>

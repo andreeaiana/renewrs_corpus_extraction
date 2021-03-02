@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 03:57:58+01:00 page_id=4637 :: Gesundheit--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 4637--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>Krankenkassen und Homöopathie: Das Geschäft mit dem „Öko-Trend“ - taz.de</title><meta name="author" content="Klara Weidemann"></meta><meta name="description" content="Viele gesetzliche Krankenkassen zahlen für Homöopathie-Leistungen – aufgrund der großen Kundennachfrage. Das stößt auch auf Kritik."></meta><meta name="keywords" content="Krankenkassen, Homöopathie, Gesundheitswesen, Gesundheit, Gesellschaft, taz, tageszeitung "></meta><meta name="taz:title" data-id="5404162" content="Krankenkassen und Homöopathie: Das Geschäft mit dem „Öko-Trend“"></meta><meta name="taz:tag" content="Krankenkassen" data-tag-id="5012225"></meta><meta name="taz:tag" content="Homöopathie" data-tag-id="5293768"></meta><meta name="taz:tag" content="Gesundheitswesen" data-tag-id="5009616"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta><meta property="og:url" content="https://taz.de/!5404162/"></meta><meta property="og:locale" content="de_DE"></meta><meta property="og:type" content="article"></meta><meta name="twitter:card" content="summary_large_image"></meta><meta name="twitter:site" content="@tazgezwitscher"></meta><meta property="og:title" content="Krankenkassen und Homöopathie: Das Geschäft mit dem „Öko-Trend“"></meta><meta property="fb:app_id" content="966242223397117"></meta><meta name="twitter:title" content="Krankenkassen und Homöopathie: Das Geschäft mit dem „Öko-Trend“"></meta><meta property="og:description" content="Viele gesetzliche Krankenkassen zahlen für Homöopathie-Leistungen – aufgrund der großen Kundennachfrage. Das stößt auch auf Kritik."></meta><meta name="twitter:description" content=" Viele gesetzliche Krankenkassen zahlen für Homöopathie-Leistungen – aufgrund der großen Kundennachfrage. Das stößt auch auf Kritik."></meta><meta property="og:image" content="https://taz.de/picture/1986361/948/pillen.jpeg"></meta><meta name="twitter:image" content="https://taz.de/picture/1986361/948/pillen.jpeg"></meta><meta property="article:published_time" content="2017-05-15T14:10:00+01:00"></meta><meta property="article:modified_time" content="2019-03-20T00:20:35+01:00"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"5404162" // String
+            , page_title_enc      :"5404162: Krankenkassen und Homöopathie: Das Geschäft mit dem „Öko-Trend“" // String
+            , custom_url_enc      :"/!5404162" // String
+            , channel             :"web" // String
+            , area                :"Redaktion" // String
+            , department          :"p4637" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : false  // Boolean
+            , is_article          : true  // Boolean
+            , has_tags            : true  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "https://taz.de/lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<script type="text/javascript"> 
+	       
+(function(){
+
+
+	if ( ((location.href.match(/goMobile/g) || []).length) > 1 ) {
+		console.log( 'prevent loop' );
+		return
+	}
+	
+	// console.log('ratioURL_channel ' + readCookie('ratioURL_channel') );
+
+	if ( readCookie('ratioURL_channel') == 'web' ){ 
+ 		return;
+		// web view was selected explicitly
+	}
+	var getWidth;
+	if (screen.width > screen.height){
+		   getWidth = screen.height;
+		} else {
+		   getWidth = screen.width;
+	}
+	
+
+
+	if (getWidth < 551) {
+		//mobile
+
+		var goto = location.pathname;
+		// to do: look if this is running
+		if ( (/goMobile/).test( location.search ) && (/count/).test( location.href ) || ( location.search.indexOf('goMobile') > 1 ) ){	// back here despite cache-killer: give up.
+				
+				if ((/;web/).test( location.pathname )) {
+					location.href = goto
+					
+				};
+//				document.createElement("img").src='/count/debug/go-mobile/quit/cachekiller+'+ (new Date()).getTime();
+				return false;
+			}
+		
+			if( (/moby/).test( readCookie('ratioURL_channel') ) ) { // back here despite cookie: reload w/ cache-killer to prevent loop
+			// Google-Bot needs this to see mobile (https://search.google.com/search-console/inspect fil 2018-12-03)
+			location.href = '/count/redirect/go-mobile-nocache'+ goto 
+				+( location.search ? location.search +'&' : '?' ) +'goMobile2='+ (new Date()).getTime()
+				+location.hash;
+//			document.createElement("img").src='/count/debug/go-mobile/quit/cookie+'+ (new Date()).getTime();
+			return;
+			}
+
+	//	$.cookie('ratioURL_channel', 'moby', {domain:'taz.de', path:'/'} );	// try to set channel cookie …
+		document.cookie = 'ratioURL_channel=moby; domain=taz.de; path=/';
+
+
+		if( (/moby/).test( readCookie('ratioURL_channel') ) ) {	// … cookie was successfully set: reload …
+			if (location.search.indexOf('nocache') != -1) return;	// old cache killer for transition period
+			location.reload( true );
+			return;
+			}
+		else {						// … setting cookie failed: load explicit channel url …
+			if (location.search.indexOf('nocache') != -1) return;	// old cache killer for transition period
+			if( goto =='/' )
+				goto = '/!p4608;moby/';
+			else	goto = goto.replace(/[/]$/,';moby/');
+			location.href = '/count/redirect/go-mobile-nocookie'+ goto 
+				+location.search
+				+location.hash;
+			return;
+			}
+
+		} else {
+		//desktop
+	}
+
+		// vanilla js cookie reader
+		function readCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0;i < ca.length;i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			}
+			return null;
+		}
+
+
+	})();	
+	
+		</script><link rel="preload" href="/lib/share/fonts/DroidSerif-Regular-webfont.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/fontawesome-reduced.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_5_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_6_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_7_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_8_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_4_italic.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_4_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz-Bold_tazze_private_only.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Quodana.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/ch/moby/pix/tazze46.png" as="image" media="(min-width: 81px)"></link><link rel="preload" href="/lib/ch/moby/pix/hamburger_100.gif" as="image" media="(min-width: 47px)"></link><link rel="preload" href="/lib/ch/web/pix/tzi_logo_120px.png" as="image" media="(min-width: 120px)"></link><link rel="preload" href="/lib/ch/web/pix/tazze_30_d50d2e.png" as="image" media="(min-width: 20px)"></link><link rel="canonical" href="https://taz.de/Krankenkassen-und-Homoeopathie/!5404162/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Gesundheit" href="/!p4637/rss.xml"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="/rss.xml"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="/"></link><link rel="copyright" type="text/html" title="Impressum" href="/6/impressum/"></link><link rel="stylesheet" type="text/css" media="screen, print" href="/lib/ch/web/css/news2020-12-08_52.css"></link><link href="/lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="/lib/ch/moby/js/local/cmp.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="/lib/ch/web/js/2020-12-08_52.js"></script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"5404162" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/Gesellschaft/Gesundheit" // String
+            , is_article      : true  // Boolean
+            , is_corp         : false  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+
+
+            if ( $("body.homepage .sect_number-teaser2").length ) {  p.trackEvent( 'TZI', 'displayed', 'COUNTER-HOMEPAGE') };
+            if ( $("body.isdir:not(.homepage) #pages.news .sect_number-teaser2").length ) { p.trackEvent( 'TZI', 'displayed', 'COUNTER-RESSORTSEITE') };
+            if ( $("#pages.corp .sect_number-teaser2").length ) {  p.trackEvent( 'TZI', 'displayed', 'COUNTER-VERLAGSSEITE') };
+
+            $(document).on("click", "body.homepage .sect_number-teaser2",function(event){ p.trackEvent( 'TZI', 'clicked', 'COUNTER-HOMEPAGE'  ) });
+            $(document).on("click", "body.isdir:not(.homepage) #pages.news .sect_number-teaser2",function(event){ p.trackEvent( 'TZI', 'clicked', 'COUNTER-RESSORTSEITE'  ) });
+            $(document).on("click", "#pages.corp .sect_number-teaser2",function(event){ p.trackEvent( 'TZI', 'clicked', 'COUNTER-VERLAGSSEITE'  ) });
+
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+	    */
+	    // mar teilreaktivierung Startseitenteaser - nur Newskamin
+            $(document).on("click", "#pages.news.home >.news.page.first_page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+
+
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" src="https://script.ioam.de/iam.js?m=1"></script><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link><link rel="manifest" href="/manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body class=""><noscript><img src="https://taz.de/stats/piwik.php?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		
+
+
+			</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Redaktion/Gesellschaft/Gesundheit,Artikel",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><span id="ad_bin_fireplace_bg" class="ad_bin"></span><span id="ad_bin_fireplace_mitte" class="ad_bin"></span><span id="ad_bin_fireplace_links" class="ad_bin"></span><span id="ad_bin_fireplace_rechts" class="ad_bin"></span><div id="adzone_wall" class=""><span id="ad_bin_ros_top_rechts" class="ad_bin"><div id="ad_zone_ros_top_rechts" name="ros_top-rechts" class="ad_zone"><iframe class="adIframe" id="ros_top-rechts" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Gesellschaft' }));
+			var adId = 'ros_top-rechts';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span><span id="ad_bin_ros_top_mitte" class="ad_bin"><div id="ad_zone_ros_top_mitte" name="ros_top-mitte" class="ad_zone"><iframe class="adIframe" id="ros_top-mitte" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Gesellschaft' }));
+			var adId = 'ros_top-mitte';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span></div><div id="pages" class="news"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even treven"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd treven"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even treven"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="odd trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="even trodd"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="odd treven"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="even trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="even treven"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul><div class="full news report article page first odd first_page n1" itemscope="" itemtype="http://schema.org/NewsArticle"><div class="head" role="head"><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="even trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="odd treven"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a></li><li class="even trodd selected"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="odd trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a></li><li class="even treven"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a></li><li class="odd trodd"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a></li><li class="even trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a></li><li class="last odd treven"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><span class="body" role="main"><div class="main rack first_rack" id="xid819017">
+    
+	<div xmlns="" class="metadata" itemscope="">
+<a id="articleURL" href="/!5404162"></a><a id="speakingURL" href="/Krankenkassen-und-Homoeopathie/!5404162"></a><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-article-ID" content="5404162"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="url-ID" content="5404162"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-obj-ID" content="1986361"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="vgwort-counter-ID" content="5a8274da14ae40f391bf53377cfef77c"></meta><span id="articleID"></span><span id="cmsArticleID">5404162</span><img src="//taz.met.vgwort.de/na/5a8274da14ae40f391bf53377cfef77c" width="1" height="1" alt=""><img src="/count/vgwort/5a8274da14ae40f391bf53377cfef77c.gif" width="1" height="1" alt="">
+</div>
+<div role="region" id="" class="odd sect sect_article news report"><article class="sectbody" itemprop="articleBody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Krankenkassen und Homöopathie</span><span class="hide">: </span><span>Das Geschäft mit dem „Öko-Trend“</span>
+</h1>
+<p xmlns="" itemprop="description" class="intro ">Viele gesetzliche Krankenkassen zahlen für Homöopathie-Leistungen – aufgrund der großen Kundennachfrage. Das stößt auch auf Kritik.</p>
+      
+      <a xmlns="" class="full picture" href="/picture/1986361/948/pillen.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	" itemprop="image"><img src="/picture/1986361/624/pillen.jpeg" alt="auf einem Finger liegen drei kleine weiße Kügelchen" title="auf einem Finger liegen drei kleine weiße Kügelchen"></a><p xmlns="" class="caption">Wer heilt, hat Recht <span class="credit"> Foto: dpa</span></p>
+    
+      <p xmlns="" class="article first odd"><span>BERLIN</span> <em>taz</em> | 2005 war ein wichtiges Jahr für die Homöopathie. Seit damals übernehmen gesetzliche Krankenkassen auch die Kosten für homöopathische Behandlungen. Über 200 Jahre sind die Methoden des deutschen Arztes Samuel Hahnemann alt. Nun können mehr Menschen denn je die ärztliche Betreuung in Anspruch nehmen: Nach Aussagen des Deutschen Zentralvereins homöopathischer Ärzte lassen sich jährlich 12 Millionen Patienten in Deutschland homöopathisch behandeln. Aus einer Allensbach-Studie geht hervor, dass der Kreis der Homöopathika-Nutzer in den letzten fünf Jahren signifikant gewachsen ist: von 53 Prozent auf 60 Prozent der Bevölkerung. Dabei ist die Homöopathie höchst umstritten.</p>
+      <p xmlns="" class="article even">Kritiker werfen ihr Wirkungslosigkeit vor. Bis heute liegen keine verlässlichen Beweise für die Wirkung von Globuli vor, die fast nur aus Zucker bestehen. Auch die ehemalige Homöopathin Natalie Grams, heute Vorsitzende des Informationsnetzwerks Homöopathie, spricht sich gegen homöopathische Behandlungen aus: „Das größte Missverständnis von Homöopathen und ihren Patienten ist, dass sie die Globuli für Arzneimittel halten. Man schreibt den Kügelchen eine Wirksamkeit zu, die sie nicht haben. Wenn sie funktionieren, dann nur als Träger einer Suggestion“, sagte sie letztes Jahr der taz. „Geistartige Kräfte“ bei der Behandlung könne sie nicht feststellen.</p>
+      
+      <span id="ad_bin_artikel_medrec_1" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_1" name="artikel_medrec-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"><iframe class="adIframe" id="artikel_medrec-1" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Gesellschaft' }));
+			var adId = 'artikel_medrec-1';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span>
+    
+      <p xmlns="" class="article odd">Vor einigen Wochen löste der Mediziner Christian Lübbers, der für seine häufige Kritik an der Homöopathie in sozialen Netzwerken bekannt ist, einen gewaltigen Shitstorm aus. Vorausgegangen war eine Studie der Techniker Krankenkasse (TK), die im Fachmagazin <em>PLoS One</em> erschienen war. Darin stellten Forscher der Berliner Charité, der Universität Zürich und der Maryland School of Medicine fest, dass homöopathische Behandlungen teurer sind als klassische.</p>
+      <p xmlns="" class="article even">Die Kosten bei Homöopathie-Patienten würden sich demnach nach 18 Monaten auf 7.200 Euro pro Person belaufen, bei den anderen nur auf 5.900 Euro. Erklären lässt sich die Differenz durch die teureren Medikamente und häufigeren Krankheitstage der Homöopathie-Patienten.</p>
+      <h6 xmlns="">Lieber Brillen oder Zahnersatz</h6>
+      <p xmlns="" class="article odd">Als Lübbers die Ergebnisse über Twitter verbreitete, entbrannte eine Diskussion über den Nutzen der Homöopathie. Viele Twitter-Nutzer forderten, von dem Geld lieber Brillen oder Zahnersatz zu bezahlen. Lübbers äußert die Vermutung, Krankenkassen würden durch die Erstattungen „junge, gesunde, gut verdienende“ Versicherte binden. Der Blick in einen Werbeflyer der TK bestätigt diesen Eindruck. Dort heißt es: „Die sanfte Medizin liegt im Trend. Viele TK-Versicherte schätzen Naturheilverfahren. Die TK bietet deshalb bei der Homöopathie eine besondere Leistung.“ Es scheint der Kasse also gar nicht um die Wirksamkeit der Behandlung zu gehen – sondern um die Nachfrage.</p>
+      <p xmlns="" class="article even">76 Krankenkassen in ganz Deutschland übernehmen nach Informationen der <a target="_blank" href="http://www.krankenkassennetz.de/">Krankenkassennetz.de GmbH</a> die Kosten für homöopathische Behandlungen. Darunter die Barmer. Auf deren Webseite wird nicht versucht, die Wirksamkeit homöopathischer Behandlungen zu beweisen: „Die Homöopathie ist eine wissenschaftlich nicht anerkannte, aber beliebte und verbreitete alternativmedizinische Behandlungsmethode“, steht dort.</p>
+      <div xmlns="" class="article rack no7">
+      <div xmlns="http://www.w3.org/1999/xhtml" role="region" id="" class="first last odd sect sect_quote "><div class="sectbody quote obj"><p>„Geistartige Kräfte“ können</p><p>bei der ­Behandlung nicht</p><p>festgestellt werden</p></div></div>
+    </div>
+      <p xmlns="" class="article odd">Natalie Grams, die ehemalige Homöopathin, bestätigt: „Als ich mit Vertretern der AOK und der TK gesprochen habe, wurde ganz offen zugegeben, dass Homöopathie eben ein wirtschaftlicher Pluspunkt ist.“ Vor allem eine junge, gesundheitsbewusste Klientel würde die Leistungen nutzen. „Mit dem Öko-Trend ist die Nachfrage gestiegen“, sagt Grams. Für viele ihrer ehemaligen Patienten sei die Homöopathie ein „Add-on“ zur klassischen Behandlung gewesen. Das erkläre die Mehrkosten. „Die TK hat bis jetzt keine Konsequenzen aus ihrer Studie gezogen“, resümiert sie.</p>
+      <h6 xmlns="">Komplementärmedizinische Angebote</h6>
+      <p xmlns="" class="article even">Das bejaht Michael Ihly von der Techniker Krankenkasse: „Aus Kundenbefragungen wissen wir, dass Versicherte sich sogenannte komplementärmedizinische Angebote in Ergänzung zur Schulmedizin wünschen. Wir nehmen diese Wünsche ernst.“ Er verweist auf § 2 des Sozialgesetzbuches, das besagt, dass „besondere Therapierichtungen“ nicht ausgeschlossen sind</p>
+      <p xmlns="" class="article odd">Außerdem würde die TK nur mit Vertragsärzten zusammenarbeiten. „Die von Ihnen erwähnte Studie kommt in der Tat zu dem Ergebnis, dass zusätzliche homöopathische Behandlungen keine Kosten sparen“, sagt Ihly. „Was die Kosten angeht, so sprechen wir allerdings von deutlich weniger als einem Promille unserer Ausgaben.“ Mit dem Angebot würde man Mitglieder im Solidarsystem halten.</p>
+      <p xmlns="" class="article even">Ähnliche Angaben macht der Bundesverband der Pharmazeutischen Industrie. Lediglich 0,04 Prozent der Gesamtausgaben der gesetzlichen Krankenversicherungen für Arzneimittel werden aktuellen Marktzahlen nach für Homöopathika ausgegeben.</p>
+      <h6 xmlns="">Was ist fachlich gebotene Qualität</h6>
+      <p xmlns="" class="article odd">Das macht 14 Millionen Euro für Homöopathie, denen 36,4 Milliarden Euro Gesamtumsatz zu Lasten der Kassen gegenüber stehen. Lübbers entgegnet: „Es ist unverantwortlich, wie schnell Kosten im Gesundheitswesen bagatellisiert werden, sobald sie von den Krankenkassen als Marketing verbucht werden, während an anderen Ecken gespart und gestrichen wird. Wer Zuckerkügelchen als ‚Peanuts‘ abtut, missbraucht das Solidarsystem der gesetzlichen Krankenversicherungen.“</p>
+      <p xmlns="" class="article last even">Um ihre berufliche Zukunft müssen sich deutsche Homöopathen indes kaum Sorgen machen. Vom 14. bis 17. Juni findet in Leipzig der bislang größte homöopathische Weltärztekongress statt. Bis zu 1.500 Teilnehmer werden erwartet. Die Schirmherrin des Kongresses, Annette Widmann-Mauz (CDU), warnt, dass es stets erforderlich sei, „Leistungen in der fachlich gebotenen Qualität“ zu erbringen, damit Krankenkassen die Kosten für Homöopathie übernehmen. Wie genau diese „fachlich gebotene Qualität“ jedoch aussieht, sagt sie nicht.</p>
+    </article></div>
+
+    
+  
+
+    
+  <div role="region" id="" class="odd sect "><div class="sectbody"><a xmlns="" id="reward" shape="rect">Einmal zahlen</a><script> filOtaz_de.flattr();</script></div></div>
+
+    
+	<div class="shariff">.</div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><script class="tziArticle" type="text/html"><article href="/Headlines-2021/!172321/" ratioURL-ressource="172321" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2021</span><span class="hide">: </span><span>Wer finanziert denn Online-Angebote freiwillig für andere mit?</span>
+</h1>
+  		<p xmlns="" class="article first odd"><strong>Schon knapp 27.500.</strong>           
+</p>
+  		<p xmlns="" class="article even"><strong> Und mit Ihnen noch eine*r mehr. </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2021/!172283/" ratioURL-ressource="172283" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2021</span><span class="hide">: </span><span>Wer sagt denn, dass Journalismus online Geld wert ist?</span>
+</h1>
+  		<p xmlns="" class="article first odd"><strong>Schon knapp 27.500.</strong>        
+</p>
+  		<p xmlns="" class="article even"><strong> Und mit Ihnen noch eine*r mehr. </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171255/" ratioURL-ressource="171255" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Wer, wenn nicht ihr?</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wir machen Journalismus aus Überzeugung: unabhängig und kostenfrei zugänglich für alle. Aber natürlich brauchen auch wir Geld, um die Arbeit der Redaktion zu finanzieren – und appellieren deshalb an Sie, unsere Leser*innen.        
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie die taz mit Ihrem Beitrag</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/tazde-als-alternative-Nachrichtenquelle-im-Internet/!163696/" ratioURL-ressource="163696" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">taz.de als alternative Nachrichtenquelle im Internet.</span><span class="hide">: </span><span>Wir schreiben für Leser*innen. Nicht für Klicks.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Unsere Inhalte auf taz.de sind frei zugänglich. Aber unser Journalismus kostet Geld und braucht Ihre Unterstützung: Mit einem monatlichen Beitrag sichern Sie die Arbeit der Redaktion und eine kritische, unabhängige Stimme im Netz.   
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt die taz</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script type="text/javascript" xml:space="preserve">
+          (function () {
+            patOtaz_de.layer_tzi_paywahl({'campaign': '2019-5-27' });
+          })();
+        </script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Normal/!155790/" ratioURL-ressource="155790" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Normal</span><span class="hide">: </span><span>Freier Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Das Bedürfnis nach vertrauenswürdiger Information ist derzeit sehr hoch, viele blicken und klicken in diesen unsicheren Zeiten auf die Berichterstattung der taz. Während der vergangenen Wochen ist klar geworden, wie wichtig freier Journalismus ist. In Krisenzeiten ist es „systemrelevant”, dass Menschen sich unabhängig informieren können. Ohne Paywall. Wir finden es wichtig, dass uns möglichst viele Menschen lesen – auch jene, die sich kein Abo leisten können. Doch dazu brauchen wir Ihre Hilfe.         
+</p>
+  		<p xmlns="" class="article even">Guter, kritischer Journalismus ist nicht kostenlos zu haben und braucht Finanzierung. Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Im Gegenzug wird sie freiwillig und solidarisch unterstützt. Von unseren Leser*innen, von Ihnen. Mit Ihrer Wertschätzung und Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit, ein Forum für Meinungsvielfalt, eine engagierte Stimme für Minderheiten. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Seien Sie mit uns taz. Zusammen mit den knapp 27.500, die schon dabei sind.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Klima/!155427/" ratioURL-ressource="155427" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news report"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Klima</span><span class="hide">: </span><span>Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wir berichten seit 1978 über die Zerstörung unseres Planeten – weil wir daran glauben, dass eine bessere Welt möglich ist. Klima- und Umweltberichterstattung haben in der taz schon immer einen großen Raum eingenommen, aber zurzeit gehen wir noch einmal in die Offensive. Die taz berichtet noch intensiver über die drohende Klimakatastrophe – auf allen Kanälen. Um dies leisten zu können, sind wir auf die Unterstützung unserer Leser*innen angewiesen. Denn guter Journalismus ist aufwändig und nicht kostenlos zu haben.        
+</p>
+  		<p xmlns="" class="article even">Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Unsere Artikel sollen so viel wie möglich gelesen, geliked und geteilt werden. Nur so können sie die ökologisch notwendigen Veränderungen unserer Gesellschaft vorantreiben. Im Gegenzug wird die taz von unseren Leser*innen unterstützt. Freiwillig und solidarisch. Mit Ihrer Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit und eine engagierte Stimme für mehr Klimaschutz. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Knapp 27.500 machen schon mit.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><div role="region" id="" class="odd sect sect_text "><div class="sectbody"><p>
+
+	Fehler auf taz.de entdeckt?
+	    </p><p>
+        Wir freuen uns über eine 
+	<a href="mailto:fehlerhinweis@taz.de?subject=Fehlerhinweis%20zu%20https://taz.de/Krankenkassen-und-Homoeopathie/!5404162/&amp;body=Zu%20%22Krankenkassen und Homöopathie: Das Geschäft mit dem „Öko-Trend“%22%0D%0Ahttps://taz.de/Krankenkassen-und-Homoeopathie/!5404162/%0D%0A%0D%0ABitte%20beschreiben%20Sie%20uns%20den%20Fehler.%20Sie%20können%20gern%20einen%20Screenshot%20anhängen.%20Wir%20danken%20für%20Ihre%20Hilfe%21%20
+					%0D%0A%0D%0A
+					Inhaltliches%20Feedback%20geben%20Sie%20uns%20gerne%20in%20der%20Kommentarspalte%20oder%20richten%20es%20an%20briefe@taz.de.%20Dort%20leiten%20wir%20ihr%20Feedback%20auch%20an%20die%20Redaktion%20weiter.%20Über%20diese%20Mailadresse%20nehmen%20wir%20nur%20Rechtschreib-%20und%20Faktenkorrekturen%20vor.				">Mail an fehlerhinweis@taz.de</a>!</p><p>
+	Inhaltliches Feedback? 
+	</p><p>
+
+	Gerne als Leser*innenkommentar unter dem Text auf taz.de oder über das
+	<a href="/!112355/"> Kontaktformular</a>.
+		</p></div></div><!-- DEBUG belly: 0 extras here, 0 from directory Gesundheit, thats 0 merged--></span><span class="wing" role="contentinfo"><div class="rack first_rack" id="xid459821">
+    
+	<!--template mode="layout" match="display[ @obj='descr' ]":start-->
+
+    
+	<div role="region" id="" class="even sect sect_meta "><div class="sectbody"><ul role="navigation" class="left rootline toolbar"><li class="first odd trodd selected"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="last even trodd selected"><a href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span>Gesundheit</span></a></li></ul><ul role="navigation" class="right toolbar"><li class="date" itemprop="datePublished" content="2017-05-15T14:10:00+01:00">15. 5. 2017</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2019-03-20T00:20:35+01:00"></meta></ul></div></div>
+
+    
+	<div role="region" id="" class="odd sect sect_profile "><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="
+        
+	
+        
+
+		
+			
+	
+			author 
+		community 
+		
+        
+                
+		        
+		
+	        
+                
+
+		
+
+        person objlink" itemprop="url" href="/Klara-Weidemann/!a38641/"><h4 itemprop="name">Klara Weidemann</h4><h5 itemprop="jobTitle">
+		AutorIn
+	</h5></a></div></div>
+
+    
+	<div role="region" id="" class="even sect sect_tags "><div class="secthead" role="heading"><h2><a name="Themen"><span>Themen</span></a></h2></div><ul role="directory" class="news directory sectbody"><li class="first odd trodd tag"><a role="link" href="/!t5012225/" class="tag dirlink"><span>Krankenkassen</span></a></li><li class="even trodd tag"><a role="link" href="/!t5293768/" class="tag dirlink"><span>Homöopathie</span></a></li><li class="last odd treven tag"><a role="link" href="/!t5009616/" class="tag dirlink"><span>Gesundheitswesen</span></a></li></ul></div>
+
+    
+	
+
+    
+	<!-- DEBUG label: 0 extras here, 0 from directory Gesundheit, thats 0 merged-->
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><span id="ad_bin_ros_sidebar_1" class="ad_bin sold contentad"><div id="ad_zone_ros_sidebar_1" name="ros_sidebar-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"><iframe class="adIframe" id="ros_sidebar-1" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Gesellschaft' }));
+			var adId = 'ros_sidebar-1';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span><!-- DEBUG wing: 0 extras here, 0 from directory Gesundheit, thats 0 merged--></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><span class="tail" role="complementary"><!-- DEBUG tail: 0 extras here, 0 from directory Gesundheit, thats 0 merged--><div class="rack first_rack" id="xid479112">
+    
+	<div role="region" id="" class="first last odd sect sect_profile brief "><div class="secthead" role="heading"><h2><a name="mehr von"><span>mehr von</span></a></h2></div><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="brief 
+        
+	
+        
+
+		
+			
+	
+			author 
+		community 
+		
+        
+                
+		        
+		
+	        
+                
+
+		
+
+        person objlink" itemprop="url" href="/Klara-Weidemann/!a38641/"><h4 itemprop="name">Klara Weidemann</h4></a></div></div>
+
+    
+		</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="xid709888" class="even sect sect_adr style_adr "><ul role="directory" class="sectbody corp  directory"><li class=" first last odd trodd online   leaded pictured leaded remote story"><a class="dept" href="/blogs/!p4774/">blogs</a><a href="https://blogs.taz.de/hausmeisterblog/2021/02/25/erholung-von-lockdown-und-homeoffice/" target="_blank" class="objlink leaded pictured leaded remote story noavatar" role="link"><h4>Hausmeisterblog: Homeoffice</h4><h3>Erholung vom Lockdown</h3><p class="brief">          „Erst mit der Vervollkommnung der Logarithmen kehren die Götter wieder.“ (F. Kittler) Also Warten!            </p><img class="lozad" src="/uploads/images/14/Aushilfshausmeister-Anglizismen.jpg" data-src="/uploads/images/300/Aushilfshausmeister-Anglizismen.jpg" alt="" title=""></img><noscript><img src="/uploads/images/300/Aushilfshausmeister-Anglizismen.jpg" alt="" title=""></img></noscript></a></li></ul></div></span><a itemprop="mainEntityOfPage" href="/Krankenkassen-und-Homoeopathie/!5404162"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div class="full no_rightbar below news page even n2"><div class="head" role="head"><div class="nose" role="heading" id="pg_hd"><h2><a name="Volle Spalte unterm Artikel" href="/Volle-Spalte-unterm-Artikel/!p5315/"><span>Volle Spalte unterm Artikel</span></a></h2></div><ul role="navigation" class="news navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid841997">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="Mehr zum Thema"><span>Mehr zum Thema</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd    report article leaded pictured"><a href="/Homoeopathie-und-die-Oeko-Partei/!5579053/" ratioURL-ressource="5579053" class="objlink report article leaded pictured noavatar" role="link"><h4>Homöopathie und die Öko-Partei</h4><h3>Grüne streiten über Globuli</h3><p>Ein homöopathiekritischer Artikel in der taz provoziert eine Debatte bei den Grünen. Die einen wittern eine Kampagne, andere gefährliche Esoterik.  <span class="author">Jolinde Hüchtker</span></p><img class="lozad" src="/picture/3291967/14/22566467.jpeg" data-src="/picture/3291967/300/22566467.jpeg" alt="Ein Glas umgestürzt mit Kügelchen" title="Ein Glas umgestürzt mit Kügelchen"></img><noscript><img src="/picture/3291967/300/22566467.jpeg" alt="Ein Glas umgestürzt mit Kügelchen" title="Ein Glas umgestürzt mit Kügelchen"></img></noscript></a></li><li class=" even trodd    report article leaded pictured"><a href="/Kontroverse-ueber-Homoeopathie/!5574123/" ratioURL-ressource="5574123" class="objlink report article leaded pictured noavatar" role="link"><h4>Kontroverse über Homöopathie</h4><h3>Das weiße Nichts</h3><p>Für die Wirksamkeit von Globuli gibt es keine ernsthaften Belege. Warum kommt das bei den Anhänger*innen der Homöopathie nicht an?  <span class="author">Bernd Kramer</span></p><img class="lozad" src="/picture/3280102/14/globuli_homoeopatie.jpeg" data-src="/picture/3280102/300/globuli_homoeopatie.jpeg" alt="Globulikügelchen strömen aus einer Medizinflasche auf ein grünes Pflanzenblatt." title="Globulikügelchen strömen aus einer Medizinflasche auf ein grünes Pflanzenblatt."></img><noscript><img src="/picture/3280102/300/globuli_homoeopatie.jpeg" alt="Globulikügelchen strömen aus einer Medizinflasche auf ein grünes Pflanzenblatt." title="Globulikügelchen strömen aus einer Medizinflasche auf ein grünes Pflanzenblatt."></img></noscript></a></li><li class=" last odd treven    report article leaded pictured"><a href="/Unter-HeilpraktikerInnen/!5406301/" ratioURL-ressource="5406301" class="objlink report article leaded pictured noavatar" role="link"><h4>Unter HeilpraktikerInnen</h4><h3>Verantwortung im Quantenfeld</h3><p>Auf dem Heilpraktiker-Kongress kann man das Neueste der Branche testen: Timewaver, die Quanten-Auren messen, Honig, den man auf Wunden schmiert und Vorträge über Erzengel.  <span class="author">Katharina Schipkowski</span></p><img class="lozad" src="/picture/1990312/14/01dd60529acf0fce4567f11bb53a21f7_edited_70741542_e42d05730c.jpeg" data-src="/picture/1990312/300/01dd60529acf0fce4567f11bb53a21f7_edited_70741542_e42d05730c.jpeg" alt="" title=""></img><noscript><img src="/picture/1990312/300/01dd60529acf0fce4567f11bb53a21f7_edited_70741542_e42d05730c.jpeg" alt="" title=""></img></noscript></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><span class="headed wing" role="complementary"></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Krankenkassen-und-Homoeopathie/!5404162"></a></div><div class="full community page last odd n3"><div class="head" role="head"><ul role="navigation" class=" navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid495498">
+    
+
+	<div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="So können Sie kommentieren:"><span>So können Sie kommentieren:</span></a></h2></div><div class="sectbody"><p>       Bitte <a href="https://www.taz.de/kommune/post.php?a=registration" target="_blank">registrieren Sie sich</a> und halten Sie sich an unsere <a href="http://taz.de/netiquette" target="_blank">Netiquette</a>.     
+</p><p>      Haben Sie Probleme beim Kommentieren oder Registrieren?   
+</p><p>  Dann mailen Sie uns bitte an <a href="mailto:kommune@taz.de" target="_blank">kommune@taz.de</a>   </p></div></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="" class="even sect sect_commentlinks style_commentlinks "><div class="secthead" role="heading"><h2><a name="Leser*innenkommentare"><span>Leser*innenkommentare</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class="member " id="bb_message_3488240"><a class="author person" href="/!ku36725/"><h4>Rainer Jacobi</h4></a><time datetime="2017-05-19T18:17:41+02:00"><meta value="1495210661"></meta>19. 05. 2017, 
+		18:17</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">In fast voraussagbarer Regelmäßigkeit wird über die Homöopathie hergezogen. Sind da wieder mal Lobbyisten zu Gange? Der Glaube an die Wissenschaft wird doch bei Einigen der Kommentatoren noch fanatischer vertreten als der Glaube an die Wirksamkeit der Homöopathie.</p>
+<p xmlns="" class="even">
+Warum ist es der sogenannten Wissenschaft nicht möglich die Wirkungsweise von Placebos wissenschaftlich zu begründen bzw. warum wird nicht investiert in eine entsprechende Forschung? Die allopathischen Pillen mit Seiten voller "Nebenwirkungen", viel zu oft mit der Nebenwirkung Tod auf längere Sicht. Das ist der eigentliche Betrug. Überteuerte Medikamente, wenn das eine nicht wirkt bzw. die "Nebenwirkungen" zu extrem sind, wird schnell ein Anderes verordnet, rumgedoktert, vielleicht noch ein nettes Sümmchen vom Pharmavertreter eingesackt.</p>
+<p xmlns="" class="last odd">
+Entwicklung in der Medizin? Früher mit dem Aderlass die Menschen ausbluten lassen, heute mit Chemotherapie meist den letzten Widerstand brechen. Wo ist die Heilkunst abgeblieben, wenn bei jedem Wehwehchen das Antibiotikageschütz rausgeholt wird? Systemimmanente Massenabfertigung wie am Fließband, einfach erbärmlich und zu verachten.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3487472"><a class="author person" href="/!ku8948/"><h4>LittleRedRooster</h4></a><time datetime="2017-05-17T16:50:08+02:00"><meta value="1495032608"></meta>17. 05. 2017, 
+		16:50</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Also ich bin nun völlig auf Homöopathie umgestiegen. Sogar beim Saufen: Ich beam mich nur noch mit irischem Whiskey, den ich bis auf D24 potenziere, in den Orbit. Und das völlig ohne die bekannten Nebenwirkungen. </p>
+<p xmlns="" class="even">
+Mir gehts jetzt viel besser, mein Hausarzt ist mit mir sehr zufrieden - aber meine Frau erkennt mich seither nicht mehr. </p>
+<p xmlns="" class="last odd">
+Kann ich nur weiter empfehlen!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487511"><a class="author person" href="/!ku4537/"><h4>Age Krüger</h4></a><time datetime="2017-05-17T17:58:24+02:00"><meta value="1495036704"></meta>17. 05. 2017, 
+		17:58</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@LittleRedRooster </span>Dass die Frau einen nicht mehr erkennt, kann man wirklich manchmal weiterempfehlen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3487352"><a class="author person" href="/!ku39103/"><h4>Carola</h4></a><time datetime="2017-05-17T13:11:37+02:00"><meta value="1495019497"></meta>17. 05. 2017, 
+		13:11</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Also ich bin in der Techniker Krankenkasse und sehr zufrieden mit denen. Auch mit der Homöopathie bin ich sehr zufrieden. </p>
+<p xmlns="" class="even">
+In unserer Familie behandeln wir alle Beschwerden zuerst mit Hausmitteln und Homöopathie. Wenn das nicht wirkt, was durchaus vorkommt, dann gehen wir zum Arzt und lassen uns auch, wenn erforderlich, Medikamente verschreiben. Ich denke, dass wir dem Solidarsystem damit schon einige Kosten gespart haben. Zum einen kaufen wir die Globuli selbst und bezahlen unsere Homöopathin auch selbst, zusätzlich zu den Kassenbeiträgen. </p>
+<p xmlns="" class="odd">
+Zum anderen ist es für die Auswahl des richtigen homöopathischen Mittels erforderlich, dass man sich selbst und das Symptom, das man hat, beobachtet: Sind die Beschwerden zu bestimmten Tageszeiten stärker? Hilft eher Wärme oder Kälte? etc. Man lernt das Geschehen besser kennen und das ermöglicht es, dass man sich selbst besser helfen kann.</p>
+<p xmlns="" class="last even">
+Generell krankt unser Gesundheitssystem meines Erachtens stark daran, dass wir die Verantwortung für unsere Gesundheit zu stark Ärzten und Medikamenten übertragen. Es ist Gold wert, dass wir sie in Anspruch nehmen können, wenn es erforderlich ist, aber bei Lapidarerkrankungen sollte man lernen, sich selbst zu helfen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487418"><a class="author person" href="/!ku21336/"><h4>sart</h4></a><time datetime="2017-05-17T15:00:22+02:00"><meta value="1495026022"></meta>17. 05. 2017, 
+		15:00</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Carola </span>" Wenn das nicht wirkt, was durchaus vorkommt, dann gehen wir zum Arzt und lassen uns auch, wenn erforderlich, Medikamente verschreiben."</p>
+<p xmlns="" class="even">
+Hausmittel meinetwegen, aber Homöopathie? Und immer wirken tut es auch nicht, sprich: Manchmal wird man halt doch nicht von selbst gesund. </p>
+
+<p xmlns="" class="even">
+"aber bei Lapidarerkrankungen sollte man lernen, sich selbst zu helfen."</p>
+<p xmlns="" class="last odd">
+Da stimme ich Ihnen sogar absolut zu. Nur braucht es dazu keine Homöopathie.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3487403"><a class="author person" href="/!ku32258/"><h4>Krähenauge</h4></a><time datetime="2017-05-17T14:35:05+02:00"><meta value="1495024505"></meta>17. 05. 2017, 
+		14:35</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Carola </span>Und wofür brauchen Sie für diese Erkenntnis und Selbstheilung, dann Zuckerkügelchen mit reinem Wasser getränkt die das zigfache ihres Wertes kosten, da sie eine "Erinnerung" eines Moleküls beinhalten sollen?.</p>
+
+<p xmlns="" class="last odd">
+Niemand stellt in Frage, dass Hausmittel, Ruhe, sauberes Auskurieren und ein paar Tage im Bett, bei vielen Erkältungen und ähnlichen völlig ausreichen. Nur wozu wollen sie oben drauf Zucker für 2 Stellige Eurobeträge futtern? oO</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3487572"><a class="author person"><h4>61321 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-17T21:18:20+02:00"><meta value="1495048700"></meta>17. 05. 2017, 
+		21:18</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Krähenauge </span>Der Witz ist folgender, nimmt CAROLA keine Globuli und legt sich krankheitshalber ein paar Tage ins Bett, wird sie das drückende Gefühl nicht los werden, dass sie nicht das Mögliche getan hat, um rasch gesund zu werden.</p>
+<p xmlns="" class="even">
+Denn es ist sehr schwer, sich mit dem Gedanken anzufreunden, dass Generationen von Anhängern der Homöopathie sich irren (können).</p>
+<p xmlns="" class="odd">
+Also geht CAROLA auf Nummer sicher - die homöopathischen Mittel werden in die Therapie einbezogen, die sonst evt. auch nur aus bewährten Hausrezepten bestehen mag.</p>
+<p xmlns="" class="even">
+CAROLA wird gesund und ist sich gleichzeitig absolut sicher - ohne Globuli hätte die Malaise mind. fünf Tage länger gedauert.</p>
+<p xmlns="" class="odd">
+Natürlich hat das mit Empirie nichts zu tun, auch wenn sie beteuert, durch die Eigenbeobachtung befähigt zu sein, einen kritischen Überblick zu haben.</p>
+<p xmlns="" class="even">
+Trotzdem ist es gar nicht so unwahrscheinlich, dass sie nicht Unrecht hat, aber aus einem völlig anderen Grund als den, den sie annimmt.</p>
+
+<p xmlns="" class="even">
+Frappierend: heute sagte mir eine Kollegin (Biologin), sie würde homöopathische Mittel nehmen, keinesfalls aber zu Zeiten wo eine Impfung ansteht, denn das könne schlimme Konsequenzen für Ihre Gesundheit haben.</p>
+<p xmlns="" class="last odd">
+Hier wird unmittelbar ihre tiefe Überzeugung der Wirksamkeit homöopathischer Substanzen sichtbar und man nimmt es staunend zur Kenntnis.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487688"><a class="author person" href="/!ku39103/"><h4>Carola</h4></a><time datetime="2017-05-18T09:51:49+02:00"><meta value="1495093909"></meta>18. 05. 2017, 
+		09:51</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@61321 (Profil gelöscht) </span>Lieber Herr Haberer, es ist sehr schön, wie intensiv Sie sich die Abläufe in unserem Haushalt beim Umgang mit gesundheitlichen Störungen ausmalen. Schade finde ich, dass Sie mir offensichtlich nicht zutrauen, aus eigener Erfahrung belastbare Erkenntnisse zu gewinnen.</p>
+
+<p xmlns="" class="odd">
+Nichtsdestotrotz kann ich durch meine eigene „Empirie“ schon eine Reihe von Beschwerdebildern mit Zuckerkügelchen schnell und problemlos beheben. Das ist gut für mich, zeitsparend, da kein Arztbesuch nötig, und auch preiswert, denn die Zuckerkügelchen kann man, einmal gekauft, jahrelang verwenden. </p>
+
+<p xmlns="" class="last odd">
+Dass die Wirkweise nicht erforscht ist, tut mir leid, wird mich aber nicht davon abbringen, von funktionierenden Lösungen Abstand zu nehmen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3487815"><a class="author person"><h4>61321 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-18T14:44:35+02:00"><meta value="1495111475"></meta>18. 05. 2017, 
+		14:44</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Carola </span>Etwas das wirkt, sollte man nicht von vorn herein aus ideologischen Gründen ablehnen.</p>
+<p xmlns="" class="even">
+Daher: machen Sie bitte weiter womit es Ihnen am besten geht und ich würde es Ihnen keinesfalls ausreden wollen.</p>
+
+<p xmlns="" class="even">
+Das mit der Empirie ist ein bissel komplizierter. </p>
+<p xmlns="" class="odd">
+Ihre persönlichen Erfahrungen haben ihren Wert - eine naturwissenschaftliche Studie ersetzen sie dennoch nicht.</p>
+
+<p xmlns="" class="last odd">
+Schöne Grüße</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3488076"><a class="author person" href="/!ku39103/"><h4>Carola</h4></a><time datetime="2017-05-19T07:29:00+02:00"><meta value="1495171740"></meta>19. 05. 2017, 
+		07:29</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@61321 (Profil gelöscht) </span>Ja, eine naturwissenschaftliche Studie. Sie haben recht, es wäre gut, wenn daran ergebnisoffen geforscht wird. Doch das Thema ist in extremer Weise ideologisch aufgeladen.</p>
+
+<p xmlns="" class="odd">
+Sie scheinen mir einen naturwissenschaftlichen Hintergrund zu haben. Wenn ich Sie bitten würde, eine solche ergebnisoffene Studie für mich anzulegen und durchzuführen – wären Sie in der Lage, das unvoreingenommen in Angriff zu nehmen? Das müssten Sie nämlich, denn um diesem Thema gerecht zu werden, brauchen Sie alle Forscherkreativität, die Sie aufbringen können. Sie müssen mit Sicherheit neue Wege gehen, denn wir haben hier ja nicht nur die Besonderheit, dass unterschiedliche Zuckerkügelchen da verordnet werden, wo in der Allopathie ein und derselbe Wirkstoff verabreicht wird, sondern auch das Phänomen fehlender Stofflichkeit. </p>
+
+<p xmlns="" class="last odd">
+Wenn Sie diese Herausforderung annehmen und die Studie machen möchten (ohne Rücksicht auf das, was das für Ihre Karriereplanung eventuell bedeuten könnte), dann brauchen wir natürlich noch jemanden, der die Studie finanziert. Da bleibt meiner Vermuten nach allerdings nur Crowdfunding oder ein Spendenaufruf unter den Mitgliedern der gesetzlichen Krankenkassen, die in den Genuss der Erstattung homöopathischer Behandlungen kommen ;-)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3488268"><a class="author person"><h4>61321 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-19T19:39:23+02:00"><meta value="1495215563"></meta>19. 05. 2017, 
+		19:39</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Carola </span>Habe überlegt, wo man die Diskussion weiter führen könnte.</p>
+<p xmlns="" class="last even">
+Würde gerne kurz auf Ihren letzten Beitrag antworten, aber die Kommentarspalte ist nicht ganz der rechte Ort dafür und E-mail Adresse zu veröffentlichen ist zu heikel</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3488465"><a class="author person" href="/!ku39103/"><h4>Carola</h4></a><time datetime="2017-05-20T18:30:37+02:00"><meta value="1495297837"></meta>20. 05. 2017, 
+		18:30</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@61321 (Profil gelöscht) </span>gruendeln@posteo.de</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3487311"><a class="author person" href="/!ku39104/"><h4>GPBIANRSWO 9813205</h4></a><time datetime="2017-05-17T11:25:32+02:00"><meta value="1495013132"></meta>17. 05. 2017, 
+		11:25</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">90% der Patienten,die täglich eine Hausarztpraxis aufsuchen,profitieren nicht vom Besuch in der Praxis im Sinne einer Heilung.Dazu gibt es gute Untersuchgen.Die Erkrankung heilt sowieso von alleine in den nächsten Tagen oder es handelt sich um ein chronisches Leiden. </p>
+<p xmlns="" class="even">
+9% profitieren vom schulmedizinischen Eingreifen und 1% sind potentiell gefährlich krank und am Leben bedroht. </p>
+<p xmlns="" class="odd">
+Die Kunst in der Allgemeinmedizin besteht also darin,diese 9 bzw. 1% zu erkennen und die anderen 90% zu "versorgen" und oftmals auch zu "trösten".</p>
+<p xmlns="" class="even">
+Genau diese 90% profitieren von der Homöopathie,die nur über "Zuwendung" hilft und ansonsten der Natur ihren Weg lässt.Wir Menschen brauchen einfach ein bisschen "Schamanen-Tun",das ist menschlich und nicht abwertend gemeint.Weil die naturwissenschaftlich orientierten Schulmediziner sich zum Schamanen oft nicht eignen,braucht es andere Menschen–z.B.Heilpraktiker-die das einfach besser können.</p>
+<p xmlns="" class="odd">
+Die Arzneimittellehre der Homöopathie geht davon aus,dass einzelne Moleküle oder auch nur die "Information" dazu zu komplexen Heilungsvorgängen führen.Dabei werden ALLE möglichen Stoffe verwendet,Pflanzen,Tierbestandteile,auch Schwermetalle,Ruß und Gifte-eben in homöopathischen Dosen.</p>
+<p xmlns="" class="last even">
+In meinem täglichen Leben bin ich-unabhängig von einer homöopathischen Behandlung!-ständig homöopathischen Dosen aller möglicher Stoffe ausgesetzt.Jeder Schluck Wasser–selbst wenn es noch so sauber ist–enthält einzelne Moleküle unzähliger Stoffe,mit denen er im Berührung kam–zumindest aber die "Information" darüber.Ich kann keinen Atemzug tun,nicht das Geringste essen,ohne ständig homöopathische Dosen von allen möglichen Stoffen in meinen Körper einzuführen.Mein Körper ist jeden Tag–ganz normal–tausendfachen „homöopathischen Angriffen" ausgesetzt.Es ist nicht vermittelbar, warum hier keine Wirkungen stattfinden,aber wenn das gleiche Molekül aus einem Fläschchen mit der Aufschrift „homöopathisches Arzneimittel" kommt, dann erwarte ich eine heilende Wirkung?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="guest " id="bb_message_3487577"><a class="author person"><h4>61321 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-17T21:34:43+02:00"><meta value="1495049683"></meta>17. 05. 2017, 
+		21:34</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@GPBIANRSWO 9813205 </span>Sie beschreiben es schon ganz richtig.</p>
+
+<p xmlns="" class="odd">
+Wir müssen es einfach zur Kenntnis nehmen und unsere Schlüsse daraus ziehen: Es handelt sich um ein psychologisches Phänomen.</p>
+<p xmlns="" class="even">
+Die positive Wirkung auf körperliche (physische) Vorgänge, wie es der Gesundungsprozess einer ist, halte ich bei überzeugten Anhängern für wahrscheinlich.</p>
+
+<p xmlns="" class="even">
+Es sollte sich dann aber auch in randomisierten Studien, durchgeführt allein mit Anhängern (auch in der Kontrollgruppe), nachweisen lassen.</p>
+
+<p xmlns="" class="last even">
+Sollte sich zeigen lassen, dass eine signifikante Anzahl von Menschen (zu vertretbaren Kosten) tatsächlich profitieren können, bin ich gerne bereit, denen 'ihre' Mittel mit meinem Krankenkassenbeitrag mitzufinanzieren.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3487172"><a class="author person" href="/!ku29509/"><h4>Justin Teim</h4></a><time datetime="2017-05-16T21:36:45+02:00"><meta value="1494963405"></meta>16. 05. 2017, 
+		21:36</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Es  ist evtl. besser nicht wirkende Homöopathie zu nehmen, als krank- und süchtig machende Pharme Produkte ;-)</p>
+
+<p xmlns="" class="last odd">
+Verschriebene Tablettensucht ist das größere Übel.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487712"><a class="author person" href="/!ku34016/"><h4>Peterbausv</h4></a><time datetime="2017-05-18T10:51:09+02:00"><meta value="1495097469"></meta>18. 05. 2017, 
+		10:51</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Justin Teim </span>Das Ding ist doch, dass etwas von Krankenkassen bezahlt wird, was, wie sich richtig festgestellt haben, eben nicht wirkt.</p>
+<p xmlns="" class="last even">
+Genau das ist doch dass Problem.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3487381"><a class="author person" href="/!ku21336/"><h4>sart</h4></a><time datetime="2017-05-17T13:56:25+02:00"><meta value="1495022185"></meta>17. 05. 2017, 
+		13:56</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Justin Teim </span>Genau. Viel größer als Krankheiten unbehandelt zu lassen (am besten noch bei den eigenen Kindern), weil ja Zuckerkügelchen helfen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3487146"><a class="author person" href="/!ku22896/"><h4>Rudolf Fissner</h4><img class="lozad" src="" data-src="/kommune/files/images/profile/70x70/22896.png" alt="" title=""></img><noscript><img src="/kommune/files/images/profile/70x70/22896.png" alt="" title=""></img></noscript></a><time datetime="2017-05-16T20:41:50+02:00"><meta value="1494960110"></meta>16. 05. 2017, 
+		20:41</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Können Gespräche physische Leiden heilen? Nö; da besteht null Verbindung. </p>
+
+<p xmlns="" class="odd">
+Trotzdem werden sie von den Krankenkassen mit abgerechnet, weil jeder weiß, dass ein gutes Artzgespräch extremst wichtig ist.</p>
+
+<p xmlns="" class="last odd">
+So what, wenn da noch ein paar Euro für Kügelchen bei den Kosten oben drauf kommen und alles zu gesundheitsbewußten gesünderen Versicherten führt. Das ist allemal besser, als die teuere Version, wo Patienten mit wirksamen Medikamenten ihr Leben lang durchgefüttert werden.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487388"><a class="author person" href="/!ku3656/"><h4>Rooni</h4></a><time datetime="2017-05-17T14:12:11+02:00"><meta value="1495023131"></meta>17. 05. 2017, 
+		14:12</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Rudolf Fissner </span>Ich frage mich gerade wie der Arzt das physische Leiden des Patienten behandeln soll wenn er nicht mit ihm redet.</p>
+<p xmlns="" class="last even">
+Aber vielleicht können Sie mir da auf die Sprünge helfen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3487132"><a class="author person" href="/!ku981/"><h4>Frank H.</h4></a><time datetime="2017-05-16T20:07:59+02:00"><meta value="1494958079"></meta>16. 05. 2017, 
+		20:07</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Wer Angst vor den Globuli bzw. Peanuts hat oder Hintergründe zur Skeptikerbewegung lesen mag, empfehle ich das Buch von Hajo Fritschi: </p>
+
+<p xmlns="" class="odd">
+"Angst vor Globuli?: Dann lesen Sie dieses Buch, bevor Homöopathie Sie umbringt!"</p>
+<p xmlns="" class="even">
+  <a target="_blank" href="https://www.amazon.de/dp/3743159341/ref=sr_1_4?s=books&amp;ie=UTF8&amp;qid=148905171">https://www.amazon.de/dp/3743159341/ref=sr_1_4?s=books&amp;ie=UTF8&amp;qid=148905171</a></p>
+
+<p xmlns="" class="last even">
+Warum fischt die TAZ eigentlich so wenig im von Skandalen wimmelnden Pharmaindustrie-Teich?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487290"><a class="author person" href="/!ku8948/"><h4>LittleRedRooster</h4></a><time datetime="2017-05-17T10:27:49+02:00"><meta value="1495009669"></meta>17. 05. 2017, 
+		10:27</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Frank H. </span>Sagen Sie mal, lieber Frank H., haben Sie beim Lesen dieses Buches wirklich nicht gemerkt, dass es sich hier um Satire handelt?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3487229"><a class="author person" href="/!ku39100/"><h4>Georg Friedrich</h4></a><time datetime="2017-05-17T01:39:28+02:00"><meta value="1494977968"></meta>17. 05. 2017, 
+		01:39</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Frank H. </span>Bevor man 15 €  für das Büchlein ausgibt, empfiehlt es sich die Rezensionen von  Norbert Aust zu lesen,  die man bei Amazon dazu finden kann. </p>
+<p xmlns="" class="even">
+ Weil mich das Thema Medizin interessiert: </p>
+<p xmlns="" class="last odd">
+Über Pharmaindustrieskandale könnte die TAZ  deutlich mehr  berichten. Nach meiner persönlichen Übersicht der letzten Jahre sind entsprechende Artikel allerdings deutlich häufiger gewesen als Homöopathie Kritik.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3486987"><a class="author person" href="/!ku1619/"><h4>Christian</h4></a><time datetime="2017-05-16T14:31:20+02:00"><meta value="1494937880"></meta>16. 05. 2017, 
+		14:31</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Kritiker werfen ihr Wirkungslosigkeit vor."</p>
+
+<p xmlns="" class="last odd">
+Nein, Homöopathie *ist* wirkungslos. Die einzige Debatte hier ist zwischen Fakten und Ignoranz, genau wie beim Klimawandel, dem Impfen und der Evolutionstheorie.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3486871"><a class="author person" href="/!ku38518/"><h4>Zwieblinger</h4></a><time datetime="2017-05-16T09:58:30+02:00"><meta value="1494921510"></meta>16. 05. 2017, 
+		09:58</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Ich habe eine Kasse gefunden, die den Mist nicht zahlt und zu der wechsle ich gerade.</p>
+<p xmlns="" class="last even">
+Schöner Nebeneffekt: Die monatliche Zuzahlung ist deutlich niedriger.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487013"><a class="author person" href="/!ku34377/"><h4>nonidit</h4></a><time datetime="2017-05-16T14:59:21+02:00"><meta value="1494939561"></meta>16. 05. 2017, 
+		14:59</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Zwieblinger </span>Welche Kasse ist das? Ich habe festgestellt, dass es fast unmöglich ist eine Kasse zu finden, die keine Pseudomedizin anbietet.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487281"><a class="author person" href="/!ku38518/"><h4>Zwieblinger</h4></a><time datetime="2017-05-17T09:48:59+02:00"><meta value="1495007339"></meta>17. 05. 2017, 
+		09:48</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@nonidit </span>BKK Metzingen</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3486784"><a class="author person" href="/!ku389/"><h4>Hanne</h4></a><time datetime="2017-05-16T00:25:16+02:00"><meta value="1494887116"></meta>16. 05. 2017, 
+		00:25</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Frau Grams wieder... gähn!</p>
+
+<p xmlns="" class="odd">
+Kommt dann morgen wieder ein unsachlicher(!) Beitrag zum Thema Impfen?</p>
+
+<p xmlns="" class="odd">
+Und ehrlich gesagt, verstehe ich nicht, wie Homöopathika UND Naturheilmittel die Krankenkassen etwas kosten, denn die werden in der Regel nicht auf Rezept über die gesetzliche Krankenkasse verschrieben, sondern sind auch beim Arzt nur auf Privatrezept zu erhalten. Bei Kindern können solche Mittel noch per "rosa" Rezept verschrieben werden, bei Erwachsenen schon lange nicht mehr.</p>
+
+<p xmlns="" class="odd">
+Es gibt einiges an der Homöopathie, was zu überdenken oder kritisieren wäre, aber sicher nicht so. Wie beim Thema Impfen bitte auch auf sachlicher Ebene und nicht via GWUP etc.</p>
+
+<p xmlns="" class="last odd">
+Mussten nicht alle Erörterungen in der Schule schreiben?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3486872"><a class="author person" href="/!ku38518/"><h4>Zwieblinger</h4></a><time datetime="2017-05-16T10:01:21+02:00"><meta value="1494921681"></meta>16. 05. 2017, 
+		10:01</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hanne </span>Vor dem Schreiben von Erörterungen kam das Lesen.</p>
+<p xmlns="" class="last even">
+Im Artikel steht es: Die meisten Kassen übernehmen Kosten für Homöopathika (meine bis zu 360 Euro im Jahr). Dazu kommen die Kosten für mehr Krankheitstage und die aufwändigere Behandlung, wenn die Krankheit schlimmer wird und die Globuligläubigen dann doch zu einem richtigen Arzt gehen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3486852"><a class="author person" href="/!ku37637/"><h4>Energiefuchs</h4></a><time datetime="2017-05-16T09:11:33+02:00"><meta value="1494918693"></meta>16. 05. 2017, 
+		09:11</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hanne </span>Viele Krankenkassen (also inzwischen fast alle gesetzlichen) bezahlen das. Also z.B. Gespräch beim Heilpraktiker, oder Osteophatie oder eben homöopathische Medikamente.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487212"><a class="author person" href="/!ku389/"><h4>Hanne</h4></a><time datetime="2017-05-17T00:27:01+02:00"><meta value="1494973621"></meta>17. 05. 2017, 
+		00:27</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Energiefuchs </span>Ganz sicher keine Gespräche beim Heilpraktiker, denn das dürfen sie definitiv nicht!</p>
+
+<p xmlns="" class="last odd">
+Viele verwechseln naturheilkundlich und/oder homöopatahisch orientierte Ärzte mit "Heilpraktikern". Aber ein Arzt darf kein Heilpraktiker sein bzw. umgekehrt. Globuli verschreiben und Gespräche führen dürfen aber beide, nur die Tätigkeiten von Ärzten kann aber je nach Satzung übernommen werden.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3486810"><a class="author person" href="/!ku4537/"><h4>Age Krüger</h4></a><time datetime="2017-05-16T05:37:53+02:00"><meta value="1494905873"></meta>16. 05. 2017, 
+		05:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Hanne </span>"Und ehrlich gesagt, verstehe ich nicht, wie Homöopathika UND Naturheilmittel die Krankenkassen etwas kosten, denn die werden in der Regel nicht auf Rezept über die gesetzliche Krankenkasse verschrieben, ..."</p>
+
+<p xmlns="" class="odd">
+Steht da im Text. Die Techniker-Krankenkasse bezahlt diese Medikamente. Wir leben schon lange nicht mehr in der Zeit, in der jede gesetzliche Krankenkasse das gleiche Angebot hat.</p>
+
+<p xmlns="" class="last odd">
+Für die anderen Krankenkassen hat das wohl nur Auswirkungen über die längere Behandlungsdauer und längere Krankschreibungen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487213"><a class="author person" href="/!ku389/"><h4>Hanne</h4></a><time datetime="2017-05-17T00:32:02+02:00"><meta value="1494973922"></meta>17. 05. 2017, 
+		00:32</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Age Krüger </span>Ja, aber als Übernahme privater Zusatzleistungen und nicht auf allgemeinem Kassenrezept. Und da unterscheiden sich die Kassen sehr.</p>
+
+<p xmlns="" class="odd">
+Bei meiner Kasse kann/könnte ich Bonuspunkte für diverse Arztläufe etc. bekommen und mir so Einkaufsgutscheine "ersparen". Auch eine fragwürdige Aktion.</p>
+
+<p xmlns="" class="last odd">
+Ich war übrigens früher mit regelmäßig AB und Cortison etc. öfter, länger und nachhaltiger krank.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3486821"><a class="author person" href="/!ku2778/"><h4>Struppi</h4><img class="lozad" src="" data-src="/kommune/files/images/profile/70x70/2778.png" alt="" title=""></img><noscript><img src="/kommune/files/images/profile/70x70/2778.png" alt="" title=""></img></noscript></a><time datetime="2017-05-16T07:31:43+02:00"><meta value="1494912703"></meta>16. 05. 2017, 
+		07:31</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Age Krüger </span>Wobei man erhlicherweise sagen muss, die meisten KK zahlen nur bis zu einem gewissen Betrag im Jahr und oft dann auch nur einen Anteil pro nicht medizinischer Leistung.</p>
+
+<p xmlns="" class="last odd">
+Bei meiner sind es 50 Euro im Jahr.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3486716"><a class="author person" href="/!ku39089/"><h4>helena_hoppala</h4></a><time datetime="2017-05-15T20:50:21+02:00"><meta value="1494874221"></meta>15. 05. 2017, 
+		20:50</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Ich dachte, dass Homöopathie eine natürliche Heilmehtode ist, die ohne Chemie auskommt und dass es eigentlich egal ist, ob es wirkt, oder nicht, oder ob es der Placebo-Effekt ist, der wirkt. Inzwischen sehe ich das anders, denn ich habe mich mit Homöopathie auseinadergesetzt und komme zu dem Schluss, dass Homöopathie genial, aber Quatsch ist: <a target="_blank" href="https://elfenbeinhochhaus.wordpress.com/2017/05/04/mercurius-solubilis-unsinnibus/">https://elfenbeinhochhaus.wordpress.com/2017/05/04/mercurius-solubilis-unsinnibus/</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3486685"><a class="author person" href="/!ku39087/"><h4>XYZ15</h4></a><time datetime="2017-05-15T19:30:00+02:00"><meta value="1494869400"></meta>15. 05. 2017, 
+		19:30</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Jeder, der schon einmal beim Homöopathen war, weiß, dass manchmal nicht das erste Mittel gleich wirkt, sondern es eine Kennlernzeit benötigt, das richtige (für diesen Fall wirksame) Globuli zu finden, und dieser Unterschied dann sehr wohl wahrgenommen wird. Genau wie bei der Behandlung der Kinder, wenn diese das Richtige bekommen. Ich würde jedem, der es anzweifelt einfach einmal empfehlen, in diese "Welt" einzutauchen und zu einem Homöopathen zu gehen, der sich auskennt und danach urteilen.</p>
+<p xmlns="" class="even">
+Ich weiss nur, dass ich irgendwann in Richtung Homöopathie "abgebogen" bin und gesund geworden bin. Andere haben die 3. oder 4. Rückenoperation hinter sich mit erheblichen Beeinträchtigungen.</p>
+<p xmlns="" class="last odd">
+Es hat natürlich nicht dieselbe Wirkung wie ein Schmerzmittel - aber langsam und dauerhaft !</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487383"><a class="author person" href="/!ku21336/"><h4>sart</h4></a><time datetime="2017-05-17T13:58:40+02:00"><meta value="1495022320"></meta>17. 05. 2017, 
+		13:58</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@XYZ15 </span>"Jeder, der schon einmal beim Homöopathen war, weiß, dass manchmal nicht das erste Mittel gleich wirkt, sondern es eine Kennlernzeit benötigt, das richtige (für diesen Fall wirksame) Globuli zu finden, "</p>
+
+<p xmlns="" class="last odd">
+Ja. Wenn ich zu Beginn eines Schnupfens etwa beginne, verschiedene Globuli auszuprobieren, wird es etwa ab dem 6. Tag besser.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3488827"><a class="author person" href="/!ku39087/"><h4>XYZ15</h4></a><time datetime="2017-05-22T12:43:39+02:00"><meta value="1495449819"></meta>22. 05. 2017, 
+		12:43</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@sart </span>den Schnupfen meinte ich hier natürlich nicht, sondern ein chronisches Leiden, in meinem Fall Rückenschmerzen die seit 6 Jahren bestanden.</p>
+<p xmlns="" class="last even">
+schnupfen, da gebe ich jedem recht, Abwarten und Tee trinken</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3486591"><a class="author person" href="/!ku39081/"><h4>Fee</h4></a><time datetime="2017-05-15T16:13:36+02:00"><meta value="1494857616"></meta>15. 05. 2017, 
+		16:13</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">primär finde ich es interessant, dass als Expertin Frau Grams zitiert wird, eine Dame, die sich nach einem erfolglosem Anlauf in eigener homöopathischer Praxis der GWUP zugewendet hat und dort auf Gleichgesinnte, u.a. einen Ingeneur im Vorruhestand trifft. </p>
+<p xmlns="" class="last even">
+Wäre es nicht sinnvoll, erfolgreiche Meschen um Ihre Meinung und Expertise zu bitten? Die wissen schließlich, von was sie sprechen. Aber doch nicht immer wieder jemanden, der nichts zu Stande gebracht hat und laut eigenen Aussagen auch noch erst nach etlichen Jahren gemerkt hat, dass in den Kügelchen nichts drin ist was sie nachweisen könnte. Eine Hummel dürfte nach diesen Anschauungen nicht fliegen, eine Katze nicht schnurren. Dieser Mechanismus ist ebenfalls noch nicht nachgewiesen. Oh Erde, bist Du immer noch eine Scheibe für diese Menschen?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487033"><a class="author person" href="/!ku34377/"><h4>nonidit</h4></a><time datetime="2017-05-16T15:39:48+02:00"><meta value="1494941988"></meta>16. 05. 2017, 
+		15:39</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Fee </span>Falls Sie nicht nur trollen wollen:</p>
+
+<p xmlns="" class="odd">
+Frau Grams hatte eine überaus profitable Praxis und war nie in finanziellen Schwierigkeiten.</p>
+
+<p xmlns="" class="odd">
+Stattdessen hat sie begonnen ein Buch zu schreiben, um die Wirksamkeit der Homöopathie wissenschaftlich zu begründen und hat dabei festgestellt, dass dies nicht möglich war.</p>
+
+<p xmlns="" class="odd">
+Daraufhin hat sie versucht ihre Kollegen darauf hinzuweisen, wurde jedoch überall nur mit Ablehnung konfrontiert. Finanziell gesehen war dies der schlechteste Schritt den sie machen konnte.</p>
+
+<p xmlns="" class="last odd">
+Bitte verbreiten Sie keine Verschwörungstheorien. Danke.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3486820"><a class="author person" href="/!ku2778/"><h4>Struppi</h4><img class="lozad" src="" data-src="/kommune/files/images/profile/70x70/2778.png" alt="" title=""></img><noscript><img src="/kommune/files/images/profile/70x70/2778.png" alt="" title=""></img></noscript></a><time datetime="2017-05-16T07:28:42+02:00"><meta value="1494912522"></meta>16. 05. 2017, 
+		07:28</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Fee </span>In den Küglechen ist kein Wirkstoff also kein auch nichts nachgewiesen werden. Die postulierte Wirkung beruht ja darauf, dass ein spezielles Mischverfahren eine Art übersinnliche Kraft auf den Zucker (oder andere "Informationsträger")  überträgt.</p>
+
+<p xmlns="" class="odd">
+Diese These hat jemand aufgestellt, als die Kenntnisse über die Natur nur sehr rudimentär waren. Das es heute 200 Jahre später noch Menschen gibt, die diese Hirngespinste Ernst nehmen ist im Grunde genau wie dieser Glaube an die These der Erdscheibe. Und "erfolgreiche" Menschen die mit diesem Humbug kranken Menschen erfolgreich Geld nehmen, sollen "Experisen" (was ist das?) darüber machen?</p>
+
+<p xmlns="" class="last odd">
+Da vertraue ich lieber einer erfahrenen Kritikerin, die immerhin die Praktiken kennt und daher weiss worüber sie spricht.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3486750"><a class="author person" href="/!ku4537/"><h4>Age Krüger</h4></a><time datetime="2017-05-15T22:16:28+02:00"><meta value="1494879388"></meta>15. 05. 2017, 
+		22:16</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Fee </span>Ein Mitglied meiner schnöseligen Familie hat Medizin studiert und später als Arzt eine Beteiligung an irgendeiner Schule für Heilpraktiker und sowas ein Schweinegeld mit verdient.</p>
+
+<p xmlns="" class="last odd">
+Der selber würde sich nie homöopathisch behandeln lassen. Der hält das alles für unbewiesenes Geschwafel. Okay, der nimmt aber selbst nicht mal eine Kopfschmerztablette freiwillig ein, weil er die meisten Medikamente der Schulmedizin auch nur für überteuerten Quark hält.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3486659"><a class="author person" href="/!ku39086/"><h4>flow flow</h4></a><time datetime="2017-05-15T18:31:47+02:00"><meta value="1494865907"></meta>15. 05. 2017, 
+		18:31</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Fee </span>Liebe Fee,</p>
+<p xmlns="" class="even">
+ich muss schon sagen, Argumente wie ihre zu entkräften ist einfacher als einem Kleinkind den Schnuller wegzunehmen.</p>
+<p xmlns="" class="last odd">
+Sie argumentierem ad hominem - das Hummel-Paradoxon ist eine lächerliche Legende - für das Schnurren der Katzen gibt es bereits einige Hypothesen. Genügt hätte übrigens bereits Wikipedia. Wie wäre es, wenn Sie sich einfach den Argumenten im Artikel widmen würden? Das wäre durchaus interessanter...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3486574"><a class="author person" href="/!ku28994/"><h4>A. Müllermilch</h4></a><time datetime="2017-05-15T15:33:30+02:00"><meta value="1494855210"></meta>15. 05. 2017, 
+		15:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">mir ist es egal, ob das Zeugs wirkt oder nicht. Bei meinem AOK-Beitrag von 750€ jeden Monat habe ich für derartige Ausgaben überhaupt kein Verständnis.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3486861"><a class="author person" href="/!ku31764/"><h4>Artur Möff</h4></a><time datetime="2017-05-16T09:44:06+02:00"><meta value="1494920646"></meta>16. 05. 2017, 
+		09:44</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@A. Müllermilch </span>Komisch nur, dass der AOK- Beitragsrechner für Selbständige auch bei einem Brutto-Einkommen von 10.000 € nicht über 656,85 kommt. Bei Arbeitnehmern liegt der Höchsbetrag bei 365,40 €. Heißt also, entweder Sie sind privat versichert, oder Sie schummeln.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3486906"><a class="author person" href="/!ku28994/"><h4>A. Müllermilch</h4></a><time datetime="2017-05-16T11:11:14+02:00"><meta value="1494925874"></meta>16. 05. 2017, 
+		11:11</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Artur Möff </span>759,08€ jeden Monat per Dauerauftrag an die AOK. Allerdings ist die Pflegeversicherung dabei.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3486954"><a class="author person" href="/!ku11694/"><h4>Thomas_Ba_Wü</h4></a><time datetime="2017-05-16T13:15:45+02:00"><meta value="1494933345"></meta>16. 05. 2017, 
+		13:15</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@A. Müllermilch </span>Starke Schultern tragen mehr als Schwache - sowas nennt man "Solidarität".</p>
+
+<p xmlns="" class="last odd">
+Ich möchte ihnen aber meinen tiefen Respekt aussprechen, dass sie - obwohl ich vermute die Möglichkeit ist da - nicht zu den Privaten abhauen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487334"><a class="author person" href="/!ku28994/"><h4>A. Müllermilch</h4></a><time datetime="2017-05-17T12:13:30+02:00"><meta value="1495016010"></meta>17. 05. 2017, 
+		12:13</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Thomas_Ba_Wü </span>Danke für den Respekt. War schwierig genug aus der Privaten raus zu kommen. Der Wechsel war durchaus egoistisch. </p>
+
+<p xmlns="" class="odd">
+Ich finde es aber grundsätzlich ok, in die gkv nach dem Solidarprinzip zu zahlen. Nicht ok finde ich die Überversorgung mit Arzneimitteln, Arztbesuchen, KK-Selbstverwaltung. </p>
+
+<p xmlns="" class="last odd">
+Man sollte sich Länder zum Beispiel nehmen, in denen die Krankenversorgung besser funktioniert (Schweiz) und die Verantwortlichen für unser Gesundheitssystem feuern - Arbeitsauftrag für Herrn Schulz.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3486568"><a class="author person" href="/!ku981/"><h4>Frank H.</h4></a><time datetime="2017-05-15T15:19:44+02:00"><meta value="1494854384"></meta>15. 05. 2017, 
+		15:19</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Zitat: "Bis heute liegen keine verlässlichen Beweise für die Wirkung von Globuli vor, die fast nur aus Zucker bestehen."</p>
+
+<p xmlns="" class="odd">
+Diese Aussage ist schlichtweg falsch - eine der bislang umfassensten Untersuchungen, der Healt-Tech-Assesment-Bericht im Auftrag des Schweizer Gesundheitsministeriums kommt zu dem Schluss: </p>
+<p xmlns="" class="even">
+"Homöopathie wirkt, Homöopathie ist sicher in der Anwendung, Homöopathie ist kostengünstig." <a target="_blank" href="https://www.amazon.de/Hom%C3%B6opathie-Krankenversorgung-Wirksamkeit-Wirtschaftlichkeit-Perspektiven/dp/3888644194">https://www.amazon.de/Hom%C3%B6opathie-Krankenversorgung-Wirksamkeit-Wirtschaftlichkeit-Perspektiven/dp/3888644194</a></p>
+
+<p xmlns="" class="last even">
+Weitere Infos: <a target="_blank" href="http://www.wisshom.de/">http://www.wisshom.de/</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3486614"><a class="author person" href="/!ku39085/"><h4>ghrovmol</h4></a><time datetime="2017-05-15T16:56:36+02:00"><meta value="1494860196"></meta>15. 05. 2017, 
+		16:56</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Frank H. </span>Und jeder Studie die sich für Homöopathie ausspricht stehen ca. 100 Studien die das Gegenteil behaupten gegenüber. Btw.: Wenn ich mich über Kreationismus (Evolutionsleugnung von Fundichristen) dann gehe ich auch nicht auf die Website des Creation Science Institute.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3486691"><a class="author person" href="/!ku39088/"><h4>elrik</h4></a><time datetime="2017-05-15T19:45:37+02:00"><meta value="1494870337"></meta>15. 05. 2017, 
+		19:45</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@ghrovmol </span>"Homöopathie wirkt, Homöopathie ist sicher in der Anwendung, Homöopathie ist kostengünstig." DIESE Aussage ist schlicht falsch. Wenn Studien auch eine solche sind (doppelblind, randomisiert etc.), gibt es keine Studie die eine Wirkung über den Placebo-Effekt nachweist.</p>
+<p xmlns="" class="last even">
+Wie auch, "Geistenergie" ist ähnlich magisch wie Harry Potter, und wenn die der Homöopathie zugrunde liegende Theorie wahr wäre würde unsere gesamtes wissenschaftliches Modell ad Adsurbum geführt. Nicht falsch verstehen, das Argument ist nicht "kann nicht sein weil nicht sein darf" sondern "kann nicht sein, weil dann alles so anders wäre, dass vieles andere das funktioniert nicht funktieren könnte". Ich verstehe den Wunsch, dass Magie funktionieren möge, ebenso wie den Wunsch, dass eine Märchengestalt Gott irgendwie die Dinge legt - beides ist halt eben das, ein Wunsch basierend auf kindlichem Denken und hat mit der erwachsenen, manchmal unangenehmen Welt nix zu tun...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487285"><a class="author person" href="/!ku39103/"><h4>Carola</h4></a><time datetime="2017-05-17T10:00:17+02:00"><meta value="1495008017"></meta>17. 05. 2017, 
+		10:00</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@elrik </span>Zunächst einmal: Es gibt viele wissenschaftlichen Studien, die die Wirksamkeit der Homöopathie belegen. Warum wird hier immer wieder behauptet, das sei nicht so?</p>
+
+<p xmlns="" class="odd">
+Ja, es gibt Phänomene auf dem Erdball, die wir als Zumutung für unseren Geist betrachten. Dass z.B. Bäume miteinander kommunizieren und sich gemeinsam organisieren, hätten wir vor Kurzem doch auch noch als Naturesotherik abgetan. Aber was hilft es? Es wurde erforscht. Und es warten sicher noch einige andere Erkenntnisse auf uns, die nicht in unser Weltbild passen. </p>
+
+<p xmlns="" class="odd">
+Machen wir uns mal klar: Unser Geist arbeitet nur auf Basis der begrenzten Eindrücke, die unsere Sinnesorgane ihm liefern. Und er wird zusätzlich durch kulturelle Prägungen, persönliche Erfahrungen und Denkmuster weiter in seiner Objektivität eingeschränkt. Definitiv hindert uns das daran, all zu viel von der Welt zu begreifen.</p>
+<p xmlns="" class="even">
+Die Welt hingegen richtet sich nicht nach unserem beschränkten Denken. Das was wir nicht wissen, wird immer größer sein als das was wir wissen und belegen können. Versuchen wir also, offen zu bleiben. Die kleinen Batzen, die wir erforschen und einsortieren können, sollten nicht als weitere Möglichkeit der Selbstbeschränkung dienen, sondern uns neugieriger und offener machen auf das, was wir noch nicht begreifen!</p>
+
+<p xmlns="" class="last even">
+Und zum Thema „Stofflichkeit“: Diese ganze Kommentarspalte existiert stofflich rein garnicht. Trotzdem beschleunigt sich mein Atem, wenn ich manches lese, mein Herzschlag verändert sich und mein Blutdruck steigt. Kann ich mir nicht erklären, warum ;-)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487436"><a class="author person" href="/!ku34016/"><h4>Peterbausv</h4></a><time datetime="2017-05-17T15:34:32+02:00"><meta value="1495028072"></meta>17. 05. 2017, 
+		15:34</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Carola </span>Das stimmt einfach nicht, es gibt keine Studien, die eine Wirksamkeit der Zuckerkugeln belegen.</p>
+<p xmlns="" class="even">
+Nur weil jemand vor 200 Jahren ein 'Gedächtnis' des Wassers postuliert hat, nein das gibt es nicht, und das hat auch keine Studie je belegt. So eine Studie wurde noch nicht mal aufgelegt, noch nie, weil sie kompletter Unsinn wäre.</p>
+
+<p xmlns="" class="even">
+Aber wenn sie sowas glauben wollen, nur zu.</p>
+<p xmlns="" class="last odd">
+Die Kommunikation von Pflanzen kann und hat man im übrigen gemessen, sonst wüßte man das nämlich nicht.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3486690"><a class="author person" href="/!ku981/"><h4>Frank H.</h4></a><time datetime="2017-05-15T19:43:04+02:00"><meta value="1494870184"></meta>15. 05. 2017, 
+		19:43</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@ghrovmol </span>Diese Behauptung ist schlichtweg falsch - wenn Sie mit Studien argumentieren, dann bitte mit Quellenangaben. </p>
+
+<p xmlns="" class="last odd">
+Wer an unvoreingenommener Wissenschaft und nicht an Fanatismus interessiert ist, sollte sich auch nicht mit der GWUP einlassen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3486787"><a class="author person" href="/!ku39085/"><h4>ghrovmol</h4></a><time datetime="2017-05-16T00:49:39+02:00"><meta value="1494888579"></meta>16. 05. 2017, 
+		00:49</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Frank H. </span>Was genau gefällt dir nicht an den Skeptikern? Etwa das Beharren auf naturwissenschaftlichen Methoden?</p>
+<p xmlns="" class="last even">
+ <a target="_blank" href="http://scilogs.spektrum.de/detritus/gesamtschau-der-studien-zur-hom-opathie/">http://scilogs.spektrum.de/detritus/gesamtschau-der-studien-zur-hom-opathie/</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="guest " id="bb_message_3486557"><a class="author person"><h4>88181 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2017-05-15T15:06:43+02:00"><meta value="1494853603"></meta>15. 05. 2017, 
+		15:06</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Eine "Heilmethode", die seit 200 Jahren völlig unverändert angewandt wird. </p>
+
+<p xmlns="" class="odd">
+Sich also keinen Millimeter weiterentwickelt hat. Reaktionärer Stuss für die einkommensstarken Bildungsbürger. </p>
+
+<p xmlns="" class="odd">
+Die Apotheken machten mit dem Schwachsinn im Jahr 2014 über 500 Millionen Euro Umsatz. </p>
+
+<p xmlns="" class="last odd">
+Und die Krankenkasse locken mit der Kostenübernahme gutverdienende potentielle Mitglieder. Zahlen darf die Solidargemeinschaft.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3486869"><a class="author person" href="/!ku38518/"><h4>Zwieblinger</h4></a><time datetime="2017-05-16T09:54:51+02:00"><meta value="1494921291"></meta>16. 05. 2017, 
+		09:54</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@88181 (Profil gelöscht) </span>Zu Hahnemanns Zeit wusste man ja noch nicht einmal etwas über die Existenz von Bakterien.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3486556"><a class="author person" href="/!ku14187/"><h4>mowgli</h4></a><time datetime="2017-05-15T15:06:18+02:00"><meta value="1494853578"></meta>15. 05. 2017, 
+		15:06</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Den Verve, mit der ausgerechnet die taz auf die Homöopathie einhasst, finde ich immer wieder erstaunlich. Vor allem angesichts der Klientel, für die die tageszeitung schreibt.</p>
+
+<p xmlns="" class="odd">
+Offenbar verhält es sich mit der Homöopathie-Hatz für die taz wie mit der Homöopathie-Erstattung für die Krankenkassen: Sie schadet nicht genug, als dass man sie sich untersagen müsste, auch wenn sie kaum was nutzt. :-)</p>
+
+<p xmlns="" class="last odd">
+Merke: Homöopathie ist (wie viele andere taz-Themen auch) tatsächlich „höchst umstritten“. Deswegen bietet sie sich sich ja als Tummelplatz für Wrestling-Kämpfer aller Gewichtsklassen an.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3487072"><a class="author person" href="/!ku1418/"><h4>Gesunder Menschenverstand</h4></a><time datetime="2017-05-16T17:25:39+02:00"><meta value="1494948339"></meta>16. 05. 2017, 
+		17:25</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@mowgli </span>Mich überrascht ihre Verwunderung. Die Taz schreibt für ein eher linkes Publikum. Nur weil man links ist muss man deswegen nicht vollkommen unterbelichtet sein, wenn es um Medizin und Naturwissenschaften geht. </p>
+
+<p xmlns="" class="odd">
+Vor 200 Jahren waren Homöopathie und die sogenannte Schulmedizin auf einer vergleichbaren Ebene.</p>
+
+<p xmlns="" class="odd">
+Seitdem hat sich die Medizin spektakulär weiterentwickelt, ebenso wie die Naturwissenschaften.</p>
+
+<p xmlns="" class="last odd">
+Welche Fortschritte gab es in der Homöopathie?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3486615"><a class="author person" href="/!ku39085/"><h4>ghrovmol</h4></a><time datetime="2017-05-15T16:59:40+02:00"><meta value="1494860380"></meta>15. 05. 2017, 
+		16:59</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@mowgli </span>Ja, Homöopathie ist nicht umstritten Zumindest in wissenschaftlichen Kreisen. Dort herrscht der Konsens, dass  Homöopathie absoluter Bullshit ist.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3486554"><a class="author person" href="/!ku8902/"><h4>Amie</h4></a><time datetime="2017-05-15T15:02:05+02:00"><meta value="1494853325"></meta>15. 05. 2017, 
+		15:02</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Hat die TK hier wieder mal Naturheilverfahren mit Homöopathie in einen Topf geworfen? Unfassbar. </p>
+<p xmlns="" class="even">
+Das es medizinisch wirksame Naturstoffe (Pflanzen, Mineralien, auch tierische)  gibt ist und bleibt unbestritten. </p>
+<p xmlns="" class="last odd">
+Homöopathie ist in Keinster Weise mit dem dem gleichzusetzen. Homöopathie ist Betrug. Und den mit Mitteln der Allgemeinheit zu unterstützen ein Skandal!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3486548"><a class="author person" href="/!ku20346/"><h4>TV</h4></a><time datetime="2017-05-15T14:54:56+02:00"><meta value="1494852896"></meta>15. 05. 2017, 
+		14:54</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Es wirkt recht einseitig wenn jeder taz-Artikel zur Homöpathie sich auf die Grams beruft(hier noch begleitet von Lübbers). Nicht daß sie in jeder Beziehung unrecht hätte, aber man bekommt schon den Eindruck, daß sich hinter ihren Aktionen mächtige Interessen der Pharmaindustrie verstecken (könnten).</p>
+<p xmlns="" class="even">
+Ich vermute es liegen mittlerweile genügend Studien vor um festzustellen, daß die klassisch westliche Medizin auch an vielen Ecken Mängel hat, deren Lücken ganzheitlichere Ansätze wie die chinesische Medizin oder eben die Homöopathie ausfüllen können, selbst wenn es "nur" suggestive Wirkungen sind. Wenn sich die klassische Medizin und die Krankenkassen wieder zu einem Machtkomplex vereinen, der absolut und nur einer Medizinart Glauben schenkt, dann verlieren wir viele Jahre an wichtiger Distanzierung von der Naturwissenschaftsreligion.</p>
+<p xmlns="" class="odd">
+Das finde ich sollte umso mehr betont und angesprochen werden, je mehr eine Veränderung nur aufgrund wirtschaftlicher Interessen geschieht.</p>
+<p xmlns="" class="last even">
+"Zuckerkügelchen" sind jedenfalls nicht in dem Maße gesundheitsgefährdend (Risiken und Nebenwirkungen) oder gar süchtigmachend, wie einige von krankenkassenhörigen Ärzten verschriebene Tabletten.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3486889"><a class="author person" href="/!ku38518/"><h4>Zwieblinger</h4></a><time datetime="2017-05-16T10:37:59+02:00"><meta value="1494923879"></meta>16. 05. 2017, 
+		10:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@TV </span>Ich kann Sie auch gern gesundbrummen. Das ist höchstens genauso gesundheitsgefährdend wie Zuckerkügelchen und macht auch bestimmt nicht süchtig.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3486888"><a class="author person" href="/!ku34016/"><h4>Peterbausv</h4></a><time datetime="2017-05-16T10:35:14+02:00"><meta value="1494923714"></meta>16. 05. 2017, 
+		10:35</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@TV </span>Es sind halt Zuckerkügelchen, und nichts anderes.</p>
+<p xmlns="" class="even">
+Sehr teure Zuckerkügelchen.</p>
+<p xmlns="" class="last odd">
+Wenn es eine Verschwörung geben sollte, dann ja wohl die, reinem Zucker eine Heilwirkung zuzuschreiben, die er nicht hat.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3486887"><a class="author person" href="/!ku38518/"><h4>Zwieblinger</h4></a><time datetime="2017-05-16T10:34:05+02:00"><meta value="1494923645"></meta>16. 05. 2017, 
+		10:34</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@TV </span>Die Pharmaindustrie verdient hervorragend an der Homöopathie. Was meinen Sie denn, wer die Globuli herstellt? Doch nicht das Kräuterweiblein vom Wochenmarkt!</p>
+
+<p xmlns="" class="odd">
+Keine Forschungskosten, fast keine Materialkosten, einfachste Herstellung, vereinfachte Zulassung, keine aufwändigen Studien, und wegen erwiesener Wirkungslosigkeit auch keine teuren Prozesse wegen unerwünschter Nebenwirkungen.</p>
+
+<p xmlns="" class="last odd">
+Homöopathie ist eine Goldgrube für die Pharmaindustrie!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3486618"><a class="author person" href="/!ku39085/"><h4>ghrovmol</h4></a><time datetime="2017-05-15T17:02:15+02:00"><meta value="1494860535"></meta>15. 05. 2017, 
+		17:02</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@TV </span>Aha, was möchten sie denn an Stelle der Naturwissenschaft setzen?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></div><span id="ad_bin_uebersicht_medrec_4" class="ad_bin sold contentad"><div id="ad_zone_uebersicht_medrec_4" name="uebersicht_medrec-4" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"><iframe class="adIframe" id="uebersicht_medrec-4" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Gesellschaft' }));
+			var adId = 'uebersicht_medrec-4';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid476383">
+    
+
+<form name="form" method="post" enctype="application/x-www-form-urlencoded" id="send-comment" class="first last odd sect sect_send-comment_form style_commentform " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><h2><a name="jetzt mitreden"><span>jetzt mitreden</span></a></h2></div><div class="sectbody"><input class="constant" type="hidden" name="test" value="yes"></input><input class="constant" type="hidden" name="id" value="5404162"></input><input type="hidden" name="scope" class="constant" id="form_scope" value="cms-article"></input><input type="hidden" name="asid" class="constant" id="form_asid" value=""></input><span class="field"><p class="label">Ihren Kommentar hier eingeben</p><textarea name="post" class="text" id="form_post"></textarea></span><input type="submit" class="submit" name="ignore" value="abschicken"></input></div></form><script> filOtaz_de.Form( 'send-comment' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+	var formN = $('#send-comment');	// who i am
+
+	if( formN[0].filOtaz_de_handled ) return; formN[0].filOtaz_de_handled = true;	// run only once
+
+
+
+	// ajaxify myself
+	filOtaz_de.ajaxifyForm('send-comment', {
+		mirrorInput	: true ,
+		onSuccess	: function( data ){
+			filOtaz_de.kommune.updateLogin();
+//console.log('success handler send-comment '+ $(data).html() );
+//			var message = $(data).find('.message');
+//			alert( message.length ? message.text() : 'OK' );
+			} 
+		});   
+
+
+	if( formN.parents('.wing').length ) {    // we're in wing
+//console.log('send-comment in wing '+ formN.length +', '+ formN.parents('.wing').length +', '+ formN.parents('.float').length );
+
+	var multiUse = function() {
+
+		// === lend ourselfes to reply-function ===
+
+		// shared functions
+		var onScroll, reset;
+
+		// shared data
+		var form, anchor, prior, bros, dad, uncles, yMin;
+
+
+		$('.community.page >.body >.sect_commentlinks').find('>.sectbody >li, .thread >li').each( function(i,el){	// each comment
+
+			// per comment data
+			var refN	= $(el),
+			    toolbarN	= refN.find('>.toolbar'),
+			    id,
+			    onClick
+			    ;
+
+			toolbarN.find('>.reply >a').click( function(){
+				// reply specific
+				onClick({
+					idKey	: 'asid',
+					title	: {
+						prefix	: '',
+						suffix	: ' antworten'
+						},
+					hint	: 'Antwort bitte hier eingeben',
+					submit	: 'antworten'
+					});
+				} );
+			
+			toolbarN.find('>.report >a').click( function(){
+				// report specific
+				onClick({
+					a	: 'report',
+					idKey	: 'pid',
+					title	: {
+						prefix  : 'Kommentar von ',
+						suffix  : ' melden'
+						},
+					hint    : 'Problem bitte hier beschreiben',
+					submit	: 'melden'
+					});
+				} );
+
+			toolbarN.css({ visibility:'visible' });
+
+
+			onClick = function( par ) {
+
+					// determine shared data late
+				if( !form ) {
+					form = {
+						titleN	: formN.find('>.secthead >h2 >a >span'),
+						aN	: formN.find('>.sectbody >input[name="a"]'),
+						idN	: formN.find('>.sectbody >input[name="asid"]'),
+						pidN	: formN.find('>.sectbody >input[name="pid"]'),
+						textN	: formN.find('>.sectbody >span >textarea'),
+						submitN	: formN.find('>.sectbody >input:submit')
+						};
+					form.hintN 	= form.textN.prev('p');
+					form.org = {
+						title	: form.titleN.text(),
+						hint	: form.hintN.text(),
+						a	: form.aN.attr('value'),
+						submit	: form.submitN.attr('value')
+						};
+					}
+
+				// determine per comment data late
+				if( !id )  	id = refN.attr('id').replace(/^[^0-9]*/, '');
+
+
+				// change presented data to our needs
+
+				if( par.a ) {
+					if( !( form.aN  && form.aN.length  ) )  
+						form.aN  = $('<input class="constant" type="hidden" />').insertBefore( form.submitN );
+					form.aN.attr({	name	: 'a',
+							value	: par.a
+							});
+					}
+				else if( form.aN ) {
+					form.aN.remove();
+					form.aN = null;
+					}
+
+				if( par.idKey ) {
+					if( form.idN ) form.idN.remove();
+					form.idN = $('<input class="constant" type="hidden" />')
+						.attr({	name	: par.idKey,
+							value	: id
+							})
+						.insertBefore( form.submitN );
+					}
+				else if( form.idN ) {
+					form.idN.remove();
+					form.idN = null;
+					}
+
+				form.titleN.empty().append( 
+					par.title.prefix, 
+					$('<span>'+ refN.find('>.author >h4').text() +'</span>').addClass( refN.attr('class') ),
+					par.title.suffix
+					);
+
+				form.hintN.text(		par.hint	);
+
+				form.submitN.attr({	value :	par.submit	});
+
+
+				// add reset options
+				(new filOtaz_de.Form( formN )).cancel( function(){ reset();	afterLogin.fadeIn(); });
+				formN.on('filOtaz_de.Form.done',   reset );
+
+				// geometry
+				var	commBot	=   toolbarN.offset().top +   toolbarN.outerHeight(),
+					formBot = form.textN.offset().top + form.textN.outerHeight(),
+					d	= commBot - formBot
+					;
+				if( !yMin ) yMin = formBot - $(window).scrollTop();
+				if( commBot - $(window).scrollTop() < yMin )  window.scrollTo( 0, commBot - yMin );
+
+				// relocate form to stick w/ referenced comment
+				if( !anchor && d >0 ) {
+					prior = formN.prev(), bros = formN.nextAll(), dad = formN.parent(), uncles = dad.filter('.rack').nextAll(), afterLogin = $('form#bb-login').nextAll().not('script');
+					messageN = $('#successMessage');
+					anchor = $('<div class="community wing pin" />')
+						.css({  position: 'absolute',
+							top     : formN.offset().top +'px',
+							left    : dad.offset().left +'px',
+							width   : formN.width() +'px'
+							})
+						.appendTo( document.body )
+						;
+					if( uncles.length ) {   // we're in rack
+						dad.css({  borderBottomStyle: 'none'  });
+						anchor.append( $('<div />').addClass( dad.attr('class') ).append( formN, bros ), uncles );
+						}
+					else	anchor.append( formN, bros );
+					}
+
+				if( anchor ) {
+
+					// fading out "meistkommentiert" when answering
+
+					afterLogin.fadeOut();
+				// refresh for second ... n time "antworten"
+				// commtented out to prevent "neues kommtar" instead of "antworten"
+				//	if (formN.hasClass('worked')){
+				//		  if( form.aN ) form.aN.remove();
+				//		  if( form.idN ) form.idN.remove();
+				//	}
+
+					anchor.animate(
+						{ 
+							top : formN.offset().top + d
+						},
+					function(){
+							$(window).scroll( onScroll );
+							} );
+						}
+
+				}; //onClick
+
+			} ); //each comment
+
+			onScroll = function() {
+				var ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top;
+				// reset clears the whole form, we don't want that onScroll, so we only call relocateForm instead
+				// if( formN.offset().top <= ref )  reset();
+
+				// Do not scroll when already commented and there is success message
+				if (( formN.offset().top <= ref ) && ! (formN.hasClass('worked')))  relocateForm();
+				};
+			reset = function() {
+				if( reset ) 	formN.off('filOtaz_de.Form.done');
+				resetForm();
+				relocateForm();
+				};
+			relocateForm = function() {
+				// clean up
+				if( onScroll )  $(window).off('scroll.taz_onscroll');
+
+				// relocate form back
+				if( anchor ) {
+					var 	ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top,
+						d = anchor.offset().top - ref
+						;
+					anchor.animate({ top: ref }, d, function(){
+						dad.append( formN, bros );
+						if( uncles.length ) {	// we were in rack
+							dad.css({  borderBottomStyle: null  });
+							dad.after( uncles );
+							}
+						if( anchor ) anchor.remove(); anchor = null;
+						} );
+					}
+				};
+			resetForm = function() {
+				// reset shown data
+				if( form.aN      ) form.aN.remove();
+				if( form.idN     ) form.idN.remove();
+//				if( form.cancelN ) form.cancelN.remove();
+				form.titleN.text(		form.org.title	);
+				form.hintN.text(		form.org.hint	);
+				form.textN.attr({	value : ''		}).trigger('blur');
+				form.submitN.attr({	value : form.org.submit	});
+
+				};
+
+		}; // multiUse
+
+
+		if( formN.parents('.float').length ) { 	// already relocated into float
+			multiUse();
+			}
+		else {					// wait for relocation
+
+			formN.parents('.wing').on('filOtaz_de_float_mounted', function(){  multiUse();  });
+			}
+		} //we're in wing
+
+	})(); </script>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><form name="form" method="post" enctype="application/x-www-form-urlencoded" id="bb-login" class="even sect sect_bb-login_form style_kommune " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><ul role="toolbar" class="toolbar"><li class="login"><a href="" target="_blank">Login</a></li><li class="settings"><a href="https://taz.de/kommune/post.php?a=registration" target="_blank">Registrieren</a></li><li class="newpass"><a shape="rect" target="_blank" href="https://portal.taz.de/?a=nopw">Passwort vergessen?</a></li></ul></div><div class="sectbody"><input type="hidden" name="a" class="constant" id="form_a" value="login"></input><span class="field"><p class="label">E-Mail</p><input type="text" name="email" class="line" id="form_email"></input></span><span class="field"><p class="label">Passwort</p><input type="password" name="password" class="secret" id="form_password"></input></span><input type="submit" class="submit" name="ignore" value="einloggen"></input></div></form><script> filOtaz_de.Form( 'bb-login' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+		var formID = 'bb-login';
+		var form = $('#bb-login');
+
+		if( !form.length ) return;
+		if( form[0].filOtaz_de_form_handled ) return; form[0].filOtaz_de_form_handled = true;
+
+		var nodes, org, firstrun = true;
+		if( !filOtaz_de.kommune ) filOtaz_de.kommune = {};
+		if( !filOtaz_de.kommune.updateLogin ) filOtaz_de.kommune.updateLogin = function(){
+			if( !nodes ) nodes = {	// parse DOM lazily
+				head	: form.find('>.secthead'),
+				body	: form.find('>.sectbody').hide(),
+				a	: form.find('input[name="a"]'),
+				inputs	: form.find('span').has('input[name="email"],input[name="password"]'),
+				submit	: form.find('input.submit'),
+				links	: {
+					all		: form.find('ul.toolbar'),
+					login		: form.find('ul>li.login').click(function(){
+								var me = $(this);
+//								nodes.body
+								me.closest('.secthead').nextAll('.sectbody')	// we might be dynamically inserted, so parse DOM here
+								.slideToggle(function(){
+									me.toggleClass('active');
+									});
+								return false;
+								}),
+					settings	: form.find('ul>li.settings'),
+					newpass		: form.find('ul>li.newpass')
+					}
+				};
+			var duration = firstrun ? 0 : $.fx.speeds._default;
+			var tazsid = $.cookie('tazsid');
+			if(! tazsid ){  // not logged in
+					$('#send-comment .submit').val('Einloggen und Senden');
+					};
+
+			if( tazsid ) {	// already logged in
+					$('#send-comment .submit').val('Abschicken');
+
+				// mar: refresh after login error and then successful login
+				if ( $('#bb-login >.sectbody >p.error').length ){
+
+
+					$('.sect_bb-login').fadeOut().remove();
+					$('.sect_bb-login_form').fadeIn();
+					};
+
+
+				var tazid = $.cookie('tazid');
+//console.log('	now logged in as '+ tazid );
+				if( !org ) org = {	// store original values lazily
+					action	: form.attr('action'),
+					a	: nodes.a.attr('value'),
+					submit	: nodes.submit.attr('value'),
+					links	: {
+						login		: nodes.links.login,
+						settings	: {
+							text	: nodes.links.settings.children('a').text()
+							},
+						newpass		: nodes.links.newpass
+						}
+					};
+				form.attr({ action: 'https://taz.de/kommune/post.php?a=logout' });
+//console.log( tazsid );
+
+				nodes.body.slideUp( duration, function(){
+					form.addClass('session');
+					nodes.a.attr({ value: 'logout' });
+					nodes.inputs.hide();
+					nodes.submit.attr({ value: 'ausloggen' });
+					nodes.body.fadeIn( duration/3 );
+					});
+				if( tazid ) var profileURL = '/!ku'+ tazid +'/';
+				nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.login    )  nodes.links.login.detach();
+					if( profileURL ) {
+						if( !nodes.links.profile ) {
+							nodes.links.profile = $('<li><a href="'+ profileURL +'">mein Profil</a></li>');
+							nodes.links.settings.before( nodes.links.profile );
+							}
+						}
+					if( nodes.links.settings )  nodes.links.settings.children('a').text('Einstellungen');
+					if( nodes.links.newpass  )  nodes.links.newpass.detach();
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+				if( profileURL ) {	// tell user their name
+					if( !nodes.salute ) {
+						nodes.salute = $();
+//console.log('go, get profile '+ profileURL );
+						$.ajax({
+							type		: 'GET',
+							url		: profileURL +'c.xml', 
+							dataType	: 'xml',
+							success		: function( data, status, xhr ){
+								if( !nodes.salute ) return;	// we're too late
+								var name = $('content >item[type="person"] >name', data ).text();
+//console.log('	found '+ name );
+								nodes.salute = $('<h2><a>'+ name +'</a></h2>').hide().prependTo( nodes.head );
+								nodes.salute.slideDown( duration );
+								},
+							error		: function( req, status, message ){
+//console.log( req.status +' '+ status +' :: '+ message );
+								},
+							complete	: function( req, status ){
+								}
+							});
+						}
+					}
+				} //tazsid
+			else if( org )	(function(){	// reset logged out state
+				var orgwas = org; org = null;
+				nodes.body.fadeOut( duration/2, function(){
+					nodes.a.attr({		value	: orgwas.a		});
+					nodes.inputs.show();
+					nodes.submit.attr({	value	: orgwas.submit	});
+					form.removeClass('session');
+					}); 
+				if( nodes.salute )  nodes.salute.slideUp( duration, function(){
+					nodes.salute.remove(); nodes.salute = null;
+					});
+				if( nodes.links.all ) nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.profile ) nodes.links.profile.remove(); nodes.links.profile = null;
+					nodes.links.settings.before( orgwas.links.login.removeClass('active') );
+					nodes.links.settings.children('a').text( orgwas.links.settings.text );
+					nodes.links.settings.after(  orgwas.links.newpass );
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+
+				form.attr({		action	: orgwas.action	});
+				})();
+			firstrun = false;
+			};
+		filOtaz_de.kommune.updateLogin();
+
+		var message = filOtaz_de.ajaxifyForm('bb-login', { handle200 : filOtaz_de.kommune.updateLogin } );
+
+		if( message && message.length )	// secure ajax not supported
+			form.after( message );
+
+		})();
+	</script><div class="rack" id="xid524032">
+    
+
+<div role="region" id="" class="first last odd sect sect_shop style_shop "><div class="secthead" role="heading"><h2><a name="meistkommentiert"><span>meistkommentiert</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class=" first odd trodd   "><a href="/Volksbegehren-fuer-Vergesellschaftung/!5750674/" class="objlink noavatar" role="link"><h4>Volksbegehren für Vergesellschaftung</h4><h3>Populismus enteignen!</h3></a></li><li class=" even trodd   "><a href="/Amnesty-Internationals-Herabstufung/!5750618/" class="objlink noavatar" role="link"><h4>Amnesty Internationals Herabstufung</h4><h3>Nawalny bleibt trotzdem ein Opfer</h3></a></li><li class=" odd treven   "><a href="/Laufzeitverlaengerung-auf-50-Jahre/!5750693/" class="objlink noavatar" role="link"><h4>Laufzeitverlängerung auf 50 Jahre</h4><h3>Frankreich hält an alten AKW fest</h3></a></li><li class=" even trodd   "><a href="/Ehemaliger-Fallmanager-ueber-Hartz-IV/!5751788/" class="objlink noavatar" role="link"><h4>Ehemaliger Fallmanager über Hartz IV</h4><h3>„Sanktionen sind destruktiv“</h3></a></li><li class=" last odd trodd   "><a href="/Jens-Spahn-und-Journalisten/!5753947/" class="objlink noavatar" role="link"><h4>Jens Spahn und Journalisten</h4><h3>Das Private ist politisch</h3></a></li></ul></div>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Krankenkassen-und-Homoeopathie/!5404162"></a></div><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a><ul><li class="first odd trodd"><a href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span>Deutschland</span></a></li><li class="even trodd"><a href="/Politik/Europa/!p4617/" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="/Politik/Amerika/!p4618/" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="/Politik/Afrika/!p4621/" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="/Politik/Asien/!p4619/" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="/Politik/Nahost/!p4620/" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="/Politik/Netzpolitik/!p4622/" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a><ul><li class="first odd trodd"><a href="/Oeko/Oekonomie/!p4623/" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="/Oeko/Oekologie/!p4624/" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="/Oeko/Arbeit/!p4629/" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="/Oeko/Konsum/!p4625/" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="/Oeko/Verkehr/!p4628/" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven"><a href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span>Wissenschaft</span></a></li><li class="last odd trodd"><a href="/Oeko/Netzoekonomie/!p4627/" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Gesellschaft/!p4611/" id="menu_p4611"><span itemprop="title">Gesellschaft</span></a><ul><li class="first odd trodd"><a href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span>Alltag</span></a></li><li class="even trodd"><a href="/Gesellschaft/Reportage-und-Recherche/!p5265/" id="menu_p5265"><span>Reportage und Recherche</span></a></li><li class="odd treven"><a href="/Gesellschaft/Debatte/!p4633/" id="menu_p4633"><span>Debatte</span></a></li><li class="even trodd"><a href="/Gesellschaft/Kolumnen/!p4634/" id="menu_p4634"><span>Kolumnen</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Medien/!p4630/" id="menu_p4630"><span>Medien</span></a></li><li class="even treven"><a href="/Gesellschaft/Bildung/!p4635/" id="menu_p4635"><span>Bildung</span></a></li><li class="odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span itemprop="title">Gesundheit</span></a></li><li class="even trodd"><a href="/Gesellschaft/Reise/!p4638/" id="menu_p4638"><span>Reise</span></a></li><li class="last odd treven"><a href="/Gesellschaft/Podcasts/!p5318/" id="menu_p5318"><span>Podcasts</span></a></li></ul></li><li class="even trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="/Kultur/Musik/!p4640/" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="/Kultur/Film/!p4641/" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="/Kultur/Kuenste/!p4642/" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="/Kultur/Buch/!p4643/" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="/Kultur/Netzkultur/!p4631/" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="/Sport/Fussball/!p4647/" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="/Sport/Kolumnen/!p4648/" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="/Nord/Hamburg/!p4651/" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="/Nord/Bremen/!p4652/" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="/Nord/Kultur/!p4653/" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="/bei-Tom/!t5180734/" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="/ueber-die-Wahrheit/!115080/" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even treven"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd treven"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even treven"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="odd trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="even trodd"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="odd treven"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="even trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="even treven"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="https://taz.de/!112354/" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="https://taz.de/!p5097/" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="https://taz.de/!114802/" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="https://taz.de/!114191/" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="https://taz.de/!166598/" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4283/" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="https://taz.de/!p4858/" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="https://taz.de/!112355/" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div><script type="text/javascript">
+			const lazyObserver = lozad('.lozad', {
+				rootMargin: '1050px', // syntax similar to that of CSS Margin
+				threshold: 0.1, // ratio of element convergence
+				enableAutoReload: true // it will reload the new image when validating attributes changes
+			});
+			lazyObserver.observe();
+
+		</script></body><!-- DEBUG end 03:57:58+01:00--></html>
