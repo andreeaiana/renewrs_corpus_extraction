@@ -1,0 +1,2267 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:my="mynames" lang="de"><!-- DEBUG start 19:43:13+01:00 page_id=4637 :: Gesundheit--><!--
+		Content Management: openNewspaper www.opennewspaper.org based on TYPO3 www.typo3.org
+		Community Platform: Invsision Power Board www.invisionpower.com via ipbwi.com + manufactured PHP
+		Presentation Layer: XML, XSL, HTML, CSS, JS (+ toil, tears and sweat) webmaster@taz.de
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+			page_id :: 4637--><meta http-equiv="Content-Script-Type" content="text/javascript"></meta><meta name="robots" content="index,follow,noarchive"></meta><meta name="language" content="de"></meta><meta name="copyright" content="TAZ Verlags- und Vertriebs GmbH"></meta><title>Diskussion über Cannabislegalisierung: „Eine recht ungefährliche Substanz“ - taz.de</title><meta name="author" content="Heike Haarhoff"></meta><meta name="description" content="Die Debatte über Hanfkonsum ist zu ideologisch, kritisiert der Leiter der Bundesopiumstelle, Peter Cremer-Schaeffer. Für eine Legalisierung ist er aber nicht."></meta><meta name="keywords" content="Cannabis, Hanf, Drogen, Drogenbesitz, Legalisierung Marihuana, Gesundheit, Gesellschaft, taz, tageszeitung "></meta><meta name="taz:title" data-id="5267779" content="Diskussion über Cannabislegalisierung: „Eine recht ungefährliche Substanz“"></meta><meta name="taz:tag" content="Cannabis" data-tag-id="5007686"></meta><meta name="taz:tag" content="Hanf" data-tag-id="5031660"></meta><meta name="taz:tag" content="Drogen" data-tag-id="5014458"></meta><meta name="taz:tag" content="Drogenbesitz" data-tag-id="5012441"></meta><meta name="taz:tag" content="Legalisierung Marihuana" data-tag-id="5015462"></meta><meta name="generator" content="tazxslt, 0.55; "></meta><meta property="fb:pages" content="171844246207985,162775943776229,136860635948,337939896245563,185657208283671,1141409319297464,255160261177600,1252816681448318,240508363106685,669240916596907"></meta><meta property="og:url" content="https://taz.de/!5267779/"></meta><meta property="og:locale" content="de_DE"></meta><meta property="og:type" content="article"></meta><meta name="twitter:card" content="summary_large_image"></meta><meta name="twitter:site" content="@tazgezwitscher"></meta><meta property="og:title" content="Diskussion über Cannabislegalisierung: „Eine recht ungefährliche Substanz“"></meta><meta property="fb:app_id" content="966242223397117"></meta><meta name="twitter:title" content="Diskussion über Cannabislegalisierung: „Eine recht ungefährliche Substanz“"></meta><meta property="og:description" content="Die Debatte über Hanfkonsum ist zu ideologisch, kritisiert der Leiter der Bundesopiumstelle, Peter Cremer-Schaeffer. Für eine Legalisierung ist er aber nicht."></meta><meta name="twitter:description" content=" Die Debatte über Hanfkonsum ist zu ideologisch, kritisiert der Leiter der Bundesopiumstelle, Peter Cremer-Schaeffer. Für eine Legalisierung ist er aber nicht."></meta><meta property="og:image" content="https://taz.de/picture/949480/948/15138382.jpeg"></meta><meta name="twitter:image" content="https://taz.de/picture/949480/948/15138382.jpeg"></meta><meta property="article:published_time" content="2016-01-25T13:04:00+01:00"></meta><meta property="article:modified_time" content="2016-01-25T14:23:27+01:00"></meta>
+<!-- piwik/matomo (0.6) --><script id="piwik-init" type="text/javascript">
+
+// ====================================================== taz piwik library === //
+window.patOtaz_de = window.patOtaz_de || new Object;
+window.patOtaz_de.piwik = window.patOtaz_de.piwik || new (function (debug) {
+    
+    // for a better readability
+    Array.prototype.clone = Array.prototype.slice;
+
+    // ES6 features
+    var hasHistoryApi = function() {
+        if ( history && history.replaceState instanceof Function )  return true;
+        return false;
+    };
+    
+    // === private static members
+    var version = "patOtaz_de.piwik-0.6",
+        debug   =  debug || false;
+    
+    // === logging in debug mode or from outside
+    var log = function(args) {
+        if ( debug && arguments.length ) {
+            var items = [];
+            Array.prototype.push.apply( items, arguments );
+            console.log( "PIWIK-LOG:", items );
+        }
+        return true;
+    };
+    
+    // === clean up strings with a whitelist
+    var removeCharsWithWhitelist = function(validChars, inputString) {
+        var regex = new RegExp( '[^'+ validChars +']', 'g' );
+        return inputString.replace( regex, '' );
+    };
+
+    // === clean up #matomo url fragment and return matomo part
+    var removeHashParam = function(fragment_key) {
+        if ( fragment_key === undefined )  return '';
+        var href          = location.href;
+        var href_base     = href.split('#')[0];
+        var fragment_pos  = href.indexOf('#');
+        var fragment_full = href.substring( fragment_pos +1 );
+        if ( fragment_pos >0  &&  fragment_key.length >0 ) {
+            var fragment_regex = new RegExp( '(.*?)#?'+ fragment_key +':([^#]+)#?(.*)' );
+            var fragment_match = fragment_full.match( fragment_regex );
+            if ( fragment_match ) {  
+                var fragment_this    = fragment_match[2];
+                var fragment_lhs     = fragment_match[1];
+                var fragment_rhs     = fragment_match[3];
+                var fragment_cleaned = ( fragment_lhs ? fragment_lhs : '' )+( fragment_lhs && fragment_rhs ? '#' : '' )+( fragment_rhs ? fragment_rhs : '' );
+                if ( fragment_this.length >0 ) {
+                    var new_href = href_base +( !fragment_lhs && !fragment_rhs ? '' : '#' )+ fragment_cleaned;
+                    if ( hasHistoryApi )  history.replaceState( {}, document.title, new_href );
+                    return fragment_this;
+                }
+            }
+        }
+        return '';
+    };
+    
+    // === track search results list page
+    var trackSiteSearch = function(keyword, category, count) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackSiteSearch");
+        _paq.push( tmp );
+        log( "search result", { keyword:keyword, category:category, count:count } );
+        return true;
+    };
+    
+    // === track funnels
+    var trackFunnel = function(funnel, category) {
+        if ( funnel.length ) {
+            _paq.push([ 'trackEvent', category, 'Funnel', funnel ]);
+            log( "goal event", { funnel:funnel, category:category } );
+        }
+        return true;
+    };
+    
+    // === track events
+    var trackEvent = function(category, action, name, value) {
+        var tmp = Array.prototype.clone.call( arguments );
+        tmp.unshift("trackEvent");
+        _paq.push( tmp );
+        log( "event", { category:category, action:action, name:name, value:value } );
+        return true;
+    }
+
+    // === debugging
+    log( version );
+    
+    // === public interface
+    this.log              =log;
+    this.removeHashParam  =removeHashParam;
+    this.trackSiteSearch  =trackSiteSearch;
+    this.trackFunnel      =trackFunnel;
+    this.trackEvent       =trackEvent;
+    // this.trackPageType    =trackPageType;
+
+})(false); // patOtaz_de.piwik
+
+
+// ====================================================== piwik bucket === //
+window._paq = window._paq || [];
+
+
+// ====================================================== piwik setup === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version               :"0.6" // String
+            , piwik_script        :"https://taz.de/stats/piwik.php" // String
+            , page_id_enc         :"5267779" // String
+            , page_title_enc      :"5267779: Diskussion über Cannabislegalisierung: „Eine recht ungefährliche Substanz“" // String
+            , custom_url_enc      :"/!5267779" // String
+            , channel             :"web" // String
+            , area                :"Redaktion" // String
+            , department          :"p4637" // String
+            , piwik_site_id       : 1  // Number
+            , is_tag              : false  // Boolean
+            , is_article          : true  // Boolean
+            , has_tags            : true  // Boolean
+    };
+    
+    // === url decode strings
+    o.page_id         =decodeURIComponent( o.page_id_enc    );
+    o.page_title      =decodeURIComponent( o.page_title_enc );
+    o.custom_url      =decodeURIComponent( o.custom_url_enc );
+    
+    // === page title
+    !function( node ) {
+        try {
+            var id    = node.getAttribute('data-id').toString()
+                , title = node.getAttribute('content').toString()
+                ;
+            o.title = ( id.length >0 && title.length >0 ) ? id +": "+ title : "ZOMBIE";
+        } catch (err) {
+            o.title = "ZOMBIE";
+            console.log("ERROR-piwik: page title");
+        }
+    } ( document.head.querySelector( 'meta[ name="taz:title" ]' ) );
+
+    // === page url
+    o.url = location.href;
+    
+    // === process and clean #matomo fragment, if present
+    o.url_fragment = decodeURIComponent( p.removeHashParam('matomo') );
+    if ( o.url_fragment.length >0 )  o.custom_url += '#'+ o.url_fragment;
+    
+    // === track tags
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list=[];
+        o.tag_list.toString = function() {
+            var string="";
+            // Get tag title and concat. So that no permutations are stored for the same set of tags, pull tag titles sorted by their id.
+            this.sort( function(a,b){ return ( parseInt(a.id) - parseInt(b.id) ) } ).forEach( function(tag){ string += tag.title +";" });
+            return string;
+        };
+        !function( tag_list ) {
+            var count=0;
+            try {
+				tag_list.forEach( function(tag) {
+					o.tag_list.push({
+						title     :tag.getAttribute('content')
+						,id       :tag.getAttribute('data-tag-id')
+						,category :tag.getAttribute('data-tag-category')? tag.getAttribute('data-tag-category'): "PLAIN-VANILLA"
+					});
+					count++;
+				});
+                if (count===0)  o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                o.tag_list.string = o.tag_list.toString();
+            } catch(err) {
+                o.tag_list.push({ title:'ZOMBIE', id:0, category:'ZOMBIE' });
+                console.log("ERROR-piwik: tag_list");
+            }
+        }( document.head.querySelectorAll("meta[name='taz:tag']") );
+    }
+    
+    // === setup piwik bucket
+    _paq.push([ "setCustomUrl"       ,o.custom_url ]);
+    _paq.push([ "setDocumentTitle"   ,o.page_title ]);
+    _paq.push([ "setCustomVariable"  ,1 ,"channel"    ,o.channel    ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,2 ,"area"       ,o.area       ,"page" ]);
+    _paq.push([ "setCustomVariable"  ,3 ,"department" ,o.department ,"page" ]);
+    if ( o.is_article && o.has_tags )  _paq.push([ "setCustomVariable", 4, "tag", o.tag_list.toString(), "page" ]);
+    _paq.push([ "trackPageView"      ]);
+    _paq.push([ "enableLinkTracking" ]);
+    
+    // === load and setup piwik tracking
+    (function() {
+        var d=document
+          , g=d.createElement("script")
+          , s=d.getElementById("piwik-init")
+          ;
+        _paq.push([ "setTrackerUrl" ,o.piwik_script  ]);
+        _paq.push([ "setSiteId"     ,o.piwik_site_id ]);
+        g.type   = "text/javascript";
+        g.id     = "piwik-loaded";
+        g.async  = true;
+        g.defer  = true;
+        g.src    = "https://taz.de/lib/share/js/piwik.js";
+        g.onload = function() { p.log( 'setup', o ) }
+        s.parentNode.insertBefore( g, s );
+    })();
+    
+    // === tag tracking
+    if ( o.is_article && o.has_tags ) {
+        o.tag_list.forEach( function(tag) {    p.trackEvent( "TAG", "TAG-ARTICLE-"+ tag.category, "TAG - t"+ tag.id +": "+ tag.title ) });
+    }
+    if ( o.is_tag ) {
+        p.trackEvent( "TAG", "TAG-LANDINGPAGE", "TAG - "+ o.title );
+    }
+    
+    // === debugging
+    //p.log( _paq );
+
+})(); // piwik setup
+
+    </script><!-- end: piwik/matomo (0.6) -->
+<script type="text/javascript"> 
+	       
+(function(){
+
+
+	if ( ((location.href.match(/goMobile/g) || []).length) > 1 ) {
+		console.log( 'prevent loop' );
+		return
+	}
+	
+	// console.log('ratioURL_channel ' + readCookie('ratioURL_channel') );
+
+	if ( readCookie('ratioURL_channel') == 'web' ){ 
+ 		return;
+		// web view was selected explicitly
+	}
+	var getWidth;
+	if (screen.width > screen.height){
+		   getWidth = screen.height;
+		} else {
+		   getWidth = screen.width;
+	}
+	
+
+
+	if (getWidth < 551) {
+		//mobile
+
+		var goto = location.pathname;
+		// to do: look if this is running
+		if ( (/goMobile/).test( location.search ) && (/count/).test( location.href ) || ( location.search.indexOf('goMobile') > 1 ) ){	// back here despite cache-killer: give up.
+				
+				if ((/;web/).test( location.pathname )) {
+					location.href = goto
+					
+				};
+//				document.createElement("img").src='/count/debug/go-mobile/quit/cachekiller+'+ (new Date()).getTime();
+				return false;
+			}
+		
+			if( (/moby/).test( readCookie('ratioURL_channel') ) ) { // back here despite cookie: reload w/ cache-killer to prevent loop
+			// Google-Bot needs this to see mobile (https://search.google.com/search-console/inspect fil 2018-12-03)
+			location.href = '/count/redirect/go-mobile-nocache'+ goto 
+				+( location.search ? location.search +'&' : '?' ) +'goMobile2='+ (new Date()).getTime()
+				+location.hash;
+//			document.createElement("img").src='/count/debug/go-mobile/quit/cookie+'+ (new Date()).getTime();
+			return;
+			}
+
+	//	$.cookie('ratioURL_channel', 'moby', {domain:'taz.de', path:'/'} );	// try to set channel cookie …
+		document.cookie = 'ratioURL_channel=moby; domain=taz.de; path=/';
+
+
+		if( (/moby/).test( readCookie('ratioURL_channel') ) ) {	// … cookie was successfully set: reload …
+			if (location.search.indexOf('nocache') != -1) return;	// old cache killer for transition period
+			location.reload( true );
+			return;
+			}
+		else {						// … setting cookie failed: load explicit channel url …
+			if (location.search.indexOf('nocache') != -1) return;	// old cache killer for transition period
+			if( goto =='/' )
+				goto = '/!p4608;moby/';
+			else	goto = goto.replace(/[/]$/,';moby/');
+			location.href = '/count/redirect/go-mobile-nocookie'+ goto 
+				+location.search
+				+location.hash;
+			return;
+			}
+
+		} else {
+		//desktop
+	}
+
+		// vanilla js cookie reader
+		function readCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0;i < ca.length;i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			}
+			return null;
+		}
+
+
+	})();	
+	
+		</script><link rel="preload" href="/lib/share/fonts/DroidSerif-Regular-webfont.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/AktivGroteskBold/AktivGrotesk_W_Bd.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/fontawesome-reduced.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_5_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_6_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_7_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_8_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_4_italic.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz_4_.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Taz-Bold_tazze_private_only.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/share/fonts/Quodana.woff2" type="font/woff2" crossorigin="anonymous" as="font"></link><link rel="preload" href="/lib/ch/moby/pix/tazze46.png" as="image" media="(min-width: 81px)"></link><link rel="preload" href="/lib/ch/moby/pix/hamburger_100.gif" as="image" media="(min-width: 47px)"></link><link rel="preload" href="/lib/ch/web/pix/tzi_logo_120px.png" as="image" media="(min-width: 120px)"></link><link rel="preload" href="/lib/ch/web/pix/tazze_30_d50d2e.png" as="image" media="(min-width: 20px)"></link><link rel="canonical" href="https://taz.de/Diskussion-ueber-Cannabislegalisierung/!5267779/"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Gesundheit" href="/!p4637/rss.xml"></link><link rel="alternate" type="application/rss+xml" title="taz.de - Schlagzeilen" href="/rss.xml"></link><link rel="home" type="text/html" title="taz.de - Schlagzeilen" href="/"></link><link rel="copyright" type="text/html" title="Impressum" href="/6/impressum/"></link><link rel="stylesheet" type="text/css" media="screen, print" href="/lib/ch/web/css/news2020-12-08_52.css"></link><link href="/lib/ch/web/css/local/print.css" type="text/css" rel="stylesheet" media="print"></link><!--[if lte IE 8]><style type="text/css">
+			p.article,
+			.sect_article >.sectbody >h6,
+			p.caption,
+			.price-tag >.info,
+			.ad_badge,
+			li.tag >a,
+			.secthead > ul.toolbar,
+			.sect_meta,
+			.sect_service >.sectbody,
+			.head >.search >.frame >input,
+			.person >h5 {
+  			font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Helvetica, sans-serif;
+  		}
+		</style><![endif]--><script type="text/javascript" src="/lib/ch/moby/js/local/cmp.js"></script><script>
+
+			if(! HTMLCollection.prototype.last ) HTMLCollection.prototype.last = function(){ return this[ this.length -1 ]; }; 
+			if(! document.getLatestElement ) document.getLatestElement = function(){ 
+				var scripts = document.getElementsByTagName("script"); var thisScript = scripts[scripts.length - 1];
+				return ( this.currentScript || thisScript ).previousSibling;
+				};
+    
+		</script><script type="text/javascript" src="/lib/ch/web/js/2020-12-08_52.js"></script><!-- piwik/matomo (custom-0.2) --><script class="piwik-custom" type="text/javascript">
+
+// ====================================================== piwik customizing === //
+(function(){
+
+    // === private members
+    var p = patOtaz_de.piwik,
+        o = {
+            version           :"custom-0.2" // String
+            , page_id_enc     :"5267779" // String
+            , form_funnel     :"" // String
+            , search_term     :"" // String
+            , rootline        :"/Gesellschaft/Gesundheit" // String
+            , is_article      : true  // Boolean
+            , is_corp         : false  // Boolean
+            , is_searchresult : false  // Boolean
+            , is_form         : false  // Boolean
+            , search_count    : NaN  // Number
+    };
+    
+    // === url decode strings
+    o.page_id = decodeURIComponent( o.page_id_enc );
+    
+    // === track search results
+    if ( o.is_searchresult )  p.trackSiteSearch( o.search_term, false, o.search_count );
+
+    // === track events
+    if ( window.jQuery ) {
+        $(document).ready(function(){
+
+            if ( $("#pages.news >.article").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF') };
+            if ( $("#pages.news >.article.longread").length ) { p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF-LONGREAD') };
+
+
+            if ( $("body.homepage .sect_number-teaser2").length ) {  p.trackEvent( 'TZI', 'displayed', 'COUNTER-HOMEPAGE') };
+            if ( $("body.isdir:not(.homepage) #pages.news .sect_number-teaser2").length ) { p.trackEvent( 'TZI', 'displayed', 'COUNTER-RESSORTSEITE') };
+            if ( $("#pages.corp .sect_number-teaser2").length ) {  p.trackEvent( 'TZI', 'displayed', 'COUNTER-VERLAGSSEITE') };
+
+            $(document).on("click", "body.homepage .sect_number-teaser2",function(event){ p.trackEvent( 'TZI', 'clicked', 'COUNTER-HOMEPAGE'  ) });
+            $(document).on("click", "body.isdir:not(.homepage) #pages.news .sect_number-teaser2",function(event){ p.trackEvent( 'TZI', 'clicked', 'COUNTER-RESSORTSEITE'  ) });
+            $(document).on("click", "#pages.corp .sect_number-teaser2",function(event){ p.trackEvent( 'TZI', 'clicked', 'COUNTER-VERLAGSSEITE'  ) });
+
+            if ( $("#pages.news >.article").length && $("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_mit_Layer') };
+            if ( $("#pages.news >.article").length && !$("#tzi-paywahl-fg").length ) { 
+            p.trackEvent( 'TZI', 'displayed', 'ARTIKELAUFRUF_ohne_Layer') };
+
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-JA'            ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__close"      ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-GERADE-NICHT'  ) });
+            $(document).on("click", "#tzi-paywahl-fg .tzi-paywahl__subscriber" ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LAYER-SCHON-DABEI'   ) });
+            $(document).on("click", "#tzi-shackle    .tzi-shackle__yes"        ,function(event){ p.trackEvent( 'TZI', 'clicked', 'LASCHE-JA'           ) });
+
+            $(document).on("click", ".sect_end a"                         ,function(event){ p.trackEvent( 'Element', 'clicked', 'ABBINDER'             ) });
+            $(document).on("click", "#mainFlyout a"                       ,function(event){ p.trackEvent( 'Element', 'clicked', 'FLYOUT'               ) });
+            $(document).on("click", "ul.navbar >li >a"                    ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBAR'               ) });
+
+        /*  navi-tracking paused          
+            $(document).on("click", "ul.navbar.news.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_MenuImHeader', $(this).find("span").text() ) });
+            $(document).on("click", "#mainFlyout .navigation.news a"      ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Flyout', $(this).find("span").text() )       });
+            $(document).on("click", "ul.navbar.corp.newsnavigation a "    ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_MenuImHeader', $(".head >h1 a").text() + ' > ' + $(this).find("span").text() ) });
+            $(document).on("click", "#globalnavigation a"                 ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Schwarze_Navi', $(this).find("span").text() )});
+            $(document).on("click", "#mainFlyout .navigation.corp a"      ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Flyout_tazze', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .news a"          ,function(event){ p.trackEvent( 'Navi', 'R_Desktop_Footer', $(this).find("span").text() ) });
+            $(document).on("click", "#footer .sitemap > .corp a"          ,function(event){ p.trackEvent( 'Navi', 'V_Desktop_Footer', $(this).find("span").text() ) });
+        */ 
+            $(document).on("click", "ul.navbar >li.more ul.flyout >li >a" ,function(event){ p.trackEvent( 'Element', 'clicked', 'NAVBARMORE'           ) });
+            $(document).on("click", ".insert.dep4534"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB1'            ) });
+            $(document).on("click", ".insert.dep4536"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'TRENNER'              ) });
+            $(document).on("click", ".insert.dep4777"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB2'            ) });
+            $(document).on("click", ".insert.dep4219"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUB3'            ) });
+            $(document).on("click", ".insert.dep5178"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB1'         ) });
+            $(document).on("click", ".insert.dep5179"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB2'         ) });
+            $(document).on("click", ".insert.dep5180"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB3'         ) });
+            $(document).on("click", ".insert.dep5181"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'MOBEINSCHUB4'         ) });
+            $(document).on("click", ".insert.dep4755"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBNORD'         ) });
+            $(document).on("click", ".insert.dep4828"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBOEKE'         ) });
+            $(document).on("click", ".insert.dep4832"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPOLITIK'      ) });
+            $(document).on("click", ".insert.dep5013"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBSPORT'        ) });
+            $(document).on("click", ".insert.dep5020"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBGESELLSCHAFT' ) });
+            $(document).on("click", ".insert.dep4956"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBKULTUR'       ) });
+            $(document).on("click", ".insert.dep4939"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBPAYWAHL'      ) });
+            $(document).on("click", ".insert.dep4704"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'EINSCHUBBERLIN'       ) });
+            $(document).on("click", ".sect_seealso a"                     ,function(event){ p.trackEvent( 'Element', 'clicked', 'COMBOLINKBOX'         ) });
+
+
+// home page all news teaser
+
+// mar: tracking aller Startseiten-Teaser am 04.12. deaktiviert
+
+/* 
+
+            $(document).on("click", ".sect_tdt >ul >li > a" ,function(event){ 
+                p.trackEvent( 'Element', 'clicked', 'THEMEN DES TAGES ' + parseInt( $(this).parent().index() + 1 )  ); 
+            });
+
+            $(document).on("click", "#pages.news.home >.news.page a.nolead.objlink" ,function(event){ 
+                var teaserNr = parseInt(   $(this).parents( 'li.brief' ).index(  'li.brief'  ) + 1  );
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: Newskamin Miniteaser Nr: ' + teaserNr  ); 
+            });
+	    */
+	    // mar teilreaktivierung Startseitenteaser - nur Newskamin
+            $(document).on("click", "#pages.news.home >.news.page.first_page a.article.objlink" ,function(event){ 
+                // newskamin or not
+                var ressortName = $(this).parents('.news.page').find(' .nose > h2 > a > span ').text() == '' ? 'Newskamin' : $(this).parents('.news.page').find(' .nose > h2 > a > span ').text();
+                var teaserNr = ressortName == 'Newskamin' ?  parseInt(   $(this).parents( 'li.article:not(.brief)' ).index(  'li.article:not(.brief)'  ) + 1 ) : parseInt(   $(this).parents( 'li.article' ).index() + 1 );
+                var schwerpName = $(this).parents('.sect_spb').find('.secthead > h2 > a > span ').text();
+                p.trackEvent( 'Element', 'clicked', 'Home > Ressort: ' +  ressortName + ' ' + schwerpName +  ', Nr: ' + teaserNr  ); 
+            });
+
+
+            $(document).on("click", ".article .tail .sect_related a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'WEITERE-ARTIKEL' );  });
+            $(document).on("click", ".news.article.page .tail .sect_adr a"  ,function(event){p.trackEvent( 'Element', 'clicked', 'Verlagsplatz im Artikel' ) });
+            $(document).on("click", ".news.article.page ~ div[class*='thema_clip'] a"  ,function(event){ p.trackEvent( 'Element', 'clicked', 'Schwerpunkt-Clip Artikelebene ' )  });
+            $(document).on("click", ".news.page .abtest.testshow a"  ,function(event){ p.trackEvent( 'Element', 'clicked', $( this ).closest(".abtest.testshow" ).attr("class").replace("testshow","").replace("rack","").replace("first_rack","") ) });
+
+            $(document).on("click", ".sect_service a", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SERVICEBOX: ' + $(this).attr('href') ) });
+            $(document).on("click", ".sectfoot li.shariff-button", function(event){
+                p.trackEvent( 'Element', 'clicked', 'SOCIAL-MEDIA-BUTTON: ' + $(this).attr('class').split(" ")[1]  ) 
+                });  
+
+            // mar: scroll detection: Add elem to "detectElement" and text to "trackingActionText" arrays
+            var detectElement = [ $('.shariff'), $('.article:not(.longread) .sect_related:visible'), $('.news.article.page:not(.longread) .tail .sect_adr:visible'), $('.news.article.page:not(.longread) ~ div[class*="thema_clip"]')  ];
+            var scrollToDetected = []; // detect each only once
+            var trackingActionText = [ 'zu Social Media Buttons gescrollt', 'zu weitere Artikel gescrollt', 'zum Verlagsplatz (Artikel) gescrollt', 'zum Schwerpunkt-Clip gescrollt' ];
+
+            $(window).on('scroll', function() {
+               for (var i = 0; i < detectElement.length; i++) {
+                var scrElem = detectElement[i];
+                if ( scrollToDetected[i] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', trackingActionText[i] ]);       
+                    scrollToDetected[i] = true;
+                }
+              }
+
+            $( ".abtest.testshow" ).each(function( i ) {
+                var scrElem = $( this );
+
+                if ( scrollToDetected[i + 1000] === undefined && scrElem.length && (elemReached(scrElem)) ) {
+                    _paq.push([ 'trackEvent', 'Element', 'scrolled', $( this ).attr('class').replace('testshow','').replace('rack','').replace('first_rack','') ]);       
+                    scrollToDetected[i + 1000] = true;
+                }
+
+                });
+            });
+    
+            function elemReached(scrElem) {
+                    var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(scrElem).offset().top + 40; return ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
+                }
+
+        }); // $(document).ready()
+    } // track events
+
+    // === debugging
+    p.log( 'custom', o );
+    //console.log( "output _paq: ", _paq );
+
+})(); // piwik customizing
+
+    </script><!--IVW--><script type="text/javascript" src="https://script.ioam.de/iam.js?m=1"></script><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link><link rel="manifest" href="/manifest.json"></link><meta name="msapplication-TileColor" content="#ffffff"></meta><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d50d2e"></link><meta name="theme-color" content="#ffffff"></meta></head><body class=""><noscript><img src="https://taz.de/stats/piwik.php?idsite=1&amp;rec=1&amp;action_name=NOSCRIPT" style="border:0" alt=""></img></noscript><script type="text/javascript">(function(){
+	var body = $(document.body);
+	body.addClass('js');
+	if( screen.width >=640 )	body.addClass('vga');	else body.addClass('novga');
+	if( screen.width >=800 )	body.addClass('svga');	else body.addClass('nosvga');
+	if( screen.width >=1024 )	body.addClass('xga');	else body.addClass('noxga');
+	if( screen.width >=1280 )	body.addClass('sxga');	else body.addClass('nosxga');
+	})();		
+
+
+			</script><div class="topo_wit" id="counter"><!-- ================ begin: ivw (szm 2.0) ================ --><script xmlns="" type="text/javascript">
+            var iam_data = {
+                "st": "taz",
+                "cp": "Redaktion/Gesellschaft/Gesundheit,Artikel",
+                "sv": "i2"
+            };
+            if ( typeof( iom ) !=='undefined' && iom.c ) iom.c(iam_data,1);
+        </script><!-- ================ end: ivw (szm 2.0) ================ --></div><div id="adOverlay" class="topo_lay"></div><div id="fake" class="topo_wit"></div><div id="background" class="topo_bin"><div id="skirt"></div><div id="centered"><script type="text/javascript">	// to be called inline early in #centered
+//console.log( $('#background') );
+//console.log( $('#centered') );
+//console.log( $('#pages') );
+		var checkHash = function() {
+			var hashURL = window.location.hash.slice(1);
+			if( hashURL.indexOf('!tom=')         ==0 ) new filOtaz_de.TomOL( hashURL.substr(5) );
+			if( hashURL.indexOf('!g')            ==0 ) new filOtaz_de.Gallery('/'+ hashURL );
+			if( hashURL.indexOf('!vimeo=')       ==0 ) new filOtaz_de.VimeoVideo('/'+ hashURL );
+			if( hashURL.indexOf('berlinfolgen')  ==0 ) new patOtaz_de.Berlinfolgen( hashURL );
+			if( hashURL.indexOf('!bbi')          ==0 ) new patOtaz_de.BbiFluglaermkarte();
+			if( hashURL.indexOf('!pwatch')       ==0 ) new patOtaz_de.ParteispendenWatch();
+			if( hashURL.indexOf('!ackerkartell') ==0 ) new patOtaz_de.Ackerkartell();
+			if( hashURL.indexOf('!wm2014')       ==0 ) new patOtaz_de.Wm2014();
+			if( hashURL.indexOf('!track=')        ==0 ) {
+				var tracking_key = hashURL.substr(7);
+				console.log( "DEBUG TRACKURL tracking_key="+ tracking_key );
+				window.location.hash = '';
+				
+				if ( tracking_key =="TZISOCIALMEDIA" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZISOCIALMEDIA' ]);
+					console.log("DEBUG-piwik TZISOCIALMEDIA");
+				}
+				if ( tracking_key =="TZIANZEIGE1" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE1' ]);
+					console.log("DEBUG-piwik TZIANZEIGE1");
+				}
+				if ( tracking_key =="TZIANZEIGE2" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIANZEIGE2' ]);
+					console.log("DEBUG-piwik TZIANZEIGE2");
+				}
+				if ( tracking_key =="TZIEPAPER" ) {
+					_paq.push([ 'trackEvent', 'Verlag', 'Funnel', 'TZIEPAPER' ]);
+					console.log("DEBUG-piwik TZIEPAPER");
+				}
+			}
+			//if( hashURL.search(/^![0-9]/) ==0 )	new filOtaz_de.Wtf('/'+ hashURL );
+			};
+		checkHash();
+		$(window).hashchange( checkHash );
+	</script><span id="ad_bin_fireplace_bg" class="ad_bin"></span><span id="ad_bin_fireplace_mitte" class="ad_bin"></span><span id="ad_bin_fireplace_links" class="ad_bin"></span><span id="ad_bin_fireplace_rechts" class="ad_bin"></span><div id="adzone_wall" class=""><span id="ad_bin_ros_top_rechts" class="ad_bin"><div id="ad_zone_ros_top_rechts" name="ros_top-rechts" class="ad_zone"><iframe class="adIframe" id="ros_top-rechts" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Gesellschaft' }));
+			var adId = 'ros_top-rechts';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span><span id="ad_bin_ros_top_mitte" class="ad_bin"><div id="ad_zone_ros_top_mitte" name="ros_top-mitte" class="ad_zone"><iframe class="adIframe" id="ros_top-mitte" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Gesellschaft' }));
+			var adId = 'ros_top-mitte';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span></div><div id="pages" class="news"><ul role="navigation" id="globalnavigation" class="navbar"><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even treven"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd treven"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even treven"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="odd trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="even trodd"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="odd treven"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="even trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="even treven"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul><div class="full news interview article page first odd first_page n1" itemscope="" itemtype="http://schema.org/NewsArticle"><div class="head" role="head"><ul role="navigation" class="news navbar newsnavigation"><li class="first odd trodd home selected"><a href="/" id="menu_p4608"><span>taz</span><div class="tazze logo"></div></a></li><li class="even trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a></li><li class="odd treven"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a></li><li class="even trodd selected"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="odd trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a></li><li class="even treven"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a></li><li class="odd trodd"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a></li><li class="even trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a></li><li class="last odd treven"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a></li></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></div><span class="body" role="main"><div class="main rack first_rack" id="xid819017">
+    
+	<div xmlns="" class="metadata" itemscope="">
+<a id="articleURL" href="/!5267779"></a><a id="speakingURL" href="/Diskussion-ueber-Cannabislegalisierung/!5267779"></a><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-article-ID" content="5267779"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="url-ID" content="5267779"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="cms-obj-ID" content="949480"></meta><meta xmlns="http://www.w3.org/1999/xhtml" itemprop="vgwort-counter-ID" content="61f9182bbb6e4e6f8216c86469e9f731"></meta><span id="articleID"></span><span id="cmsArticleID">5267779</span><img src="//taz.met.vgwort.de/na/61f9182bbb6e4e6f8216c86469e9f731" width="1" height="1" alt=""><img src="/count/vgwort/61f9182bbb6e4e6f8216c86469e9f731.gif" width="1" height="1" alt="">
+</div>
+<div role="region" id="" class="odd sect sect_article news interview"><article class="sectbody" itemprop="articleBody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Diskussion über Cannabislegalisierung</span><span class="hide">: </span><span>„Eine recht ungefährliche Substanz“</span>
+</h1>
+<p xmlns="" itemprop="description" class="intro ">Die Debatte über Hanfkonsum ist zu ideologisch, kritisiert der Leiter der Bundesopiumstelle, Peter Cremer-Schaeffer. Für eine Legalisierung ist er aber nicht.</p>
+      
+      <a xmlns="" class="full picture" href="/picture/949480/948/15138382.jpeg" target="fullImage" onclick="
+		var href = this.href;
+		vHWin=window.open( href , 'fullImage' , 'width=948,height=474' );
+		vHWin.focus();
+		return false;
+	" itemprop="image"><img src="/picture/949480/624/15138382.jpeg" alt="Ein Mann raucht einen Joint." title="Ein Mann raucht einen Joint."></a><p xmlns="" class="caption">Cannabis – wie Alkohol ein Teil unserer Kultur? <span class="credit"> Foto: dpa</span></p>
+    
+      <p xmlns="" class="article first odd">
+        <strong>taz: „Cannabis ist keine Horrordroge.“ Herr Cremer-Schaeffer, der Mann, der das schreibt, ist kein bekennender Kiffer und auch kein altlinker Grünen-Politiker. Er ist Arzt. Er leitet die Bundesopiumstelle, die für das Bundesgesundheitsministerium den Betäubungsmittelverkehr überwacht und neulich den Antrag aus Berlin-Kreuzberg zur kontrollierten Abgabe von Haschisch und Marihuana abgelehnt hat. Der Mann sind Sie. Ein Sinneswandel?</strong>
+      </p>
+      <p xmlns="" class="article even"><strong>Peter Cremer-Schaeffer</strong>: Keineswegs. Dass Cannabis keine Horrordroge ist und übrigens auch keine Einstiegsdroge, das sage ich als Wissenschaftler, der sich seit Langem mit dem Wirkstoff beschäftigt. Ich bin persönlich deswegen übrigens nicht für die Legalisierung, falls Sie das jetzt denken sollten. Das ist das eine. Das andere ist: Die Bundesopiumstelle ist Teil einer Behörde. Sie entscheidet nach geltendem Recht. Die legale Abgabe eines illegalen Stoffs zu Genusszwecken ist mit dem Betäubungsmittelgesetz nicht vereinbar. Wer daran etwas ändern möchte, wer also den Wunsch hat, Gesetze zu ändern, der muss dies an anderer Stelle diskutieren.</p>
+      
+      <span id="ad_bin_artikel_medrec_1" class="ad_bin sold contentad"><div id="ad_zone_artikel_medrec_1" name="artikel_medrec-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"><iframe class="adIframe" id="artikel_medrec-1" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Gesellschaft' }));
+			var adId = 'artikel_medrec-1';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span>
+    
+      <p xmlns="" class="article odd">
+        <strong>Zum Beispiel in Ihrem neuen Buch, „Cannabis. Was man weiß, was man wissen sollte“, das Sie, wie Sie betonen, als Privatmann verfasst haben?</strong>
+      </p>
+      <p xmlns="" class="article even">Es geht mir darum, als Wissenschaftler über die Gefahren von Cannabis aufzuklären – und so eine breite, von Sachargumenten getragene gesellschaftspolitische Debatte anzustoßen. Derzeit wird über Cannabis fast ausschließlich ideologisch und von Vertretern sehr extremer Positionen diskutiert. Da sind die Aktivisten, die mit fragwürdigen Argumenten ein Grundrecht auf Kiffen fordern, und dann ist da eine kleine Gruppe von politischen Hardlinern, die den Untergang des Abendlands fürchtet, sollte es eine Liberalisierung geben. Beides hat mit dem Stand der Wissenschaft nichts zu tun.</p>
+      <div xmlns="" class="article rack no4">
+      
+      <div xmlns="http://www.w3.org/1999/xhtml" role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="Legal – illegal? Global"><span>Legal – illegal? Global</span></a></h2></div><div class="sectbody"><a class="picture"></a><p><b xmlns="">Deutschland:</b> Nach § 29 des Betäubungsmittelgesetzes sind Anbau, Herstellung, Handel, Einfuhr, Ausfuhr, Abgabe, Veräußerung, sonstige Inverkehrbringung, Erwerb und Besitz von allen Pflanzenteilen des Cannabis untersagt. Nicht aber der Konsum. (Cannabis-Beschluss des BVerfG, 1994) Eine Toleranzregelung für eine „geringe Menge“ (je nach Bundesland bis zu 15 Gramm), für die man strafrechtlich nicht verfolgt wird, gilt aber als unsicher.</p><p>Der Besitz von fünf Gramm ist in den <b xmlns="">Niederlanden</b> nicht strafbar. Die bekommt man in Coffeeshops. Kommunen können allerdings den Verkauf an Ausländer untersagen, um den Drogentourismus zu unterbinden.</p><p>In <b xmlns="">Tschechien</b> wird der Besitz von bis zu 15 Gramm Marihuana seit 2010 nicht mehr strafrechtlich verfolgt.</p><p>Die <b xmlns="">US-Staaten Washington</b> und <b xmlns="">Colorado</b> erlauben es Bürgern über 21 Jahren, Marihuana zu kaufen und zu konsumieren. Auf Bundesebene bleibt Cannabis illegal. 23 Bundesstaaten sowie die US-Hauptstadt Washington erlauben jedoch den Konsum zu medizinischen Zwecken.</p><p>Als erster Staat der Welt gestattete <b xmlns="">Uruguay</b> im Mai 2014 den Anbau und Verkauf von Marihuana unter staatlicher Kontrolle.Ab 18 Jahren darf man monatlich bis zu 40 Gramm Cannabis kaufen. Damit will die Regierung in Montevideo gegen die Drogenkartelle vorgehen.</p><p>In <b xmlns="">Kanada</b> kündigte der 2015 neu gewählte Premierminister Justin Trudeau an, Cannabis in naher Zukunft komplett legalisieren zu wollen.</p><p>
+              <i xmlns="">Quelle: anwaltsauskunft.de</i>
+            </p></div></div>
+    
+      
+      <div xmlns="http://www.w3.org/1999/xhtml" role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="Peter Cremer-Schaeffer"><span>Peter Cremer-Schaeffer</span></a></h2></div><div class="sectbody"><a class="picture"><img src="/picture/949532/70/15166381.jpeg" alt="Ein Portrait von Peter Cremer-Schaeffer" title="Ein Portrait von Peter Cremer-Schaeffer"></img></a><p>48, Mediziner, leitet seit 2009 die Bundesopiumstelle in Bonn, die unter anderem den Betäubungsmittelverkehr kontrolliert. Zuvor war er Anästhesist, spezialisiert auf Schmerztherapie und Palliativmedizin. Sein Buch „Cannabis. Was man weiß, was man wissen sollte“ hat er als Privatperson geschrieben. Es erscheint am 1. Februar im Hirzel Verlag.</p></div></div>
+    </div>
+      <p xmlns="" class="article odd">
+        <strong>Woher rührt dieses hochemotionale, ideologische Spaltungspotenzial von Cannabis?</strong>
+      </p>
+      <p xmlns="" class="article even">Ab den 1930er Jahren gab es in den USA Kampagnen, mit denen Cannabis als Droge gebrandmarkt wurde. Plötzlich stand Cannabis auf einer Stufe mit Heroin und Kokain. In Deutschland glaubte man das auch. Hier hat sich bis 1961 niemand die Mühe gemacht, sich wissenschaftlich mit den Folgen des missbräuchlichen Gebrauchs von Cannabis zu befassen. In den 1970er Jahren dann, als bei uns heftig über die Drogenproblematik diskutiert wurde, stand Cannabis bereits auf der Seite der gefährlichen Drogen. Sichtbar konsumiert wurde es vor allem von Hippies. Cannabis war so etwas wie das Markenzeichen dieser Bewegung, die die eher konservativ geprägte Gesellschaft als Bedrohung empfand. Das hat sich festgesetzt. Argumente werden seither nicht mehr gewechselt, auch wenn es neue wissenschaftliche Erkenntnisse gibt.</p>
+      <p xmlns="" class="article odd">
+        <strong>Wie gefährlich ist Cannabis – aus wissenschaftlicher Sicht?</strong>
+      </p>
+      <p xmlns="" class="article even">Für Erwachsene ab etwa 20 Jahren ist Cannabis bei gelegentlicher Anwendung eine recht ungefährliche Substanz. Klar, Cannabis kann zur Veränderung der Wahrnehmung führen, man hat Koordinationsprobleme. Bei manchen Konsumenten hat Cannabis daneben Auswirkungen auf die Psyche. Das sind aber keine dauerhaften gesundheitlichen Schäden. Es entsteht auch keine schwerwiegende Abhängigkeit, wenn man nicht täglich Cannabis gebraucht. Für Jugendliche und junge Erwachsene birgt Cannabis dagegen ernste Gefahren.</p>
+      <p xmlns="" class="article odd">
+        <strong>Welche?</strong>
+      </p>
+      <p xmlns="" class="article even">Im Kinder- und Jugendalter entwickeln sich die Organe, also auch das Gehirn. Wir wissen, dass Cannabis in dieser Phase in den Hirnstoffwechsel eingreift und auch die Hirnstruktur verändern kann. Mit bildgebenden Verfahren kann man diese Veränderungen belegen. Sie äußern sich in Denk- oder Gedächtnisstörungen oder in Unkonzentriertheit.</p>
+      <p xmlns="" class="article odd">
+        <strong>Bilden sich die Störungen zurück, wenn man aufhört zu kiffen?</strong>
+      </p>
+      <p xmlns="" class="article even">Da sind sich die Wissenschaftler noch nicht einig. Aber es besteht die Gefahr, dass sie dauerhaft bleiben.</p>
+      <p xmlns="" class="article odd">
+        <strong>Wenn Jugendliche Alkohol trinken, ist dies für das Gehirn auch schädlich. Dennoch erlaubt das Jugendschutzgesetz 16-Jährigen, Bier, Wein und Sekt kaufen. Wenn die Eltern dabei sind, dürfen sie sogar ab 14 Jahren Alkohol trinken.</strong>
+      </p>
+      <p xmlns="" class="article even">Keine Frage, Alkohol ist eine sehr gefährliche und wegen seiner starken Verbreitung die am meisten schädigende Droge überhaupt. Das gilt übrigens nicht nur für Kinder und Jugendliche, sondern auch für Erwachsene. Es ist ein Irrglaube, legale Stoffe seien weniger gefährlich als illegale. Wir haben fast zwei Millionen Alkoholabhängige in Deutschland. Alkohol hat sehr starke Auswirkungen auf alle Organsysteme, bei dauerhafter Anwendung verkürzt es die Lebenszeit erheblich.</p>
+      <p xmlns="" class="article odd">
+        <strong>Dennoch ist Alkohol ein legales Genussmittel, ebenso wie Nikotin, das weitaus ungefährlichere Cannabis dagegen nicht. Warum messen wir mit zweierlei Maß?</strong>
+      </p>
+      <p xmlns="" class="article even">Wir haben uns als Gesellschaft entschieden, Alkohol und Nikotin als Teil unserer Kultur zu sehen. Wir akzeptieren, dass Schäden entstehen – und bezahlen diese Schäden auch mit unserem Gesundheitssystem. Jetzt müssen wir überlegen, ob wir Cannabis ebenfalls als Teil unserer Kultur sehen wollen. Das Bundesverfassungsgericht hat bereits 1994 gesagt, dass es Aufgabe des Gesetzgebers ist, wie man eine Substanz einstufen will oder nicht. Das müssen wir diskutieren, weil am Ende alle die Konsequenzen dieser Entscheidung tragen können müssen.</p>
+      <p xmlns="" class="article odd">
+        <strong>Nachdem Sie die Risiken von Alkohol mit denen von Cannabis verglichen haben, fällt es schwer, weiterhin gegen die Legalisierung zu sein, richtig?</strong>
+      </p>
+      <p xmlns="" class="article even">Falsch. Die Argumentation, Cannabis zuzulassen, weil Alkohol gesundheitsschädlicher ist, halte ich für gefährlich. Denn bei einer Legalisierung kämen ja noch die Risiken von Cannabis, zumindest für die Jugendlichen, oben drauf.</p>
+      <p xmlns="" class="article odd">
+        <strong>Na ja …</strong>
+      </p>
+      <p xmlns="" class="article even">Unser Land würde nicht untergehen deswegen, natürlich nicht. Der Staat würde weiter funktionieren. Aber wir würden riskieren, dass mehr Jugendliche konsumieren.</p>
+      <p xmlns="" class="article odd">
+        <strong>Wieso?</strong>
+      </p>
+      <p xmlns="" class="article even">Wenn wir Cannabis für Erwachsene freigeben würden, würden viele Jugendliche erst recht nicht mehr einsehen, weshalb sie darauf verzichten sollten. Und ich bin eben der Auffassung, dass der Jugendschutz leichter zu realisieren ist, wenn Cannabis verboten bleibt.</p>
+      <p xmlns="" class="article odd">
+        <strong>Wie hat sich in Ländern wie beispielsweise den Niederlanden der Cannabis-Konsum von Jugendlichen nach der Legalisierung verändert?</strong>
+      </p>
+      <p xmlns="" class="article even">Sobald Cannabis legal ist, steigt auch der Konsum bei Jugendlichen. Diesen Trend konnten wir in den Niederlanden beobachten, aber auch im US-Bundesstaat Colorado. Dort ist der Konsum übrigens bereits vor rund zehn Jahren gestiegen, als Cannabis für medizinische Zwecke legalisiert wurde. Viele Menschen dachten offenbar, wenn eine Substanz für den medizinischen Gebrauch als hilfreich und wirksam eingestuft wird, dann ist ihre Gefährlichkeit beim illegalen Gebrauch ebenfalls als geringer einzuschätzen.</p>
+      <p xmlns="" class="article odd">
+        <strong>Das erleben wir aktuell in Deutschland. Seit selbst die Drogenbeauftragte der Bundesregierung, eine CSU-Politikerin, sich für Cannabis auf Kassenrezept ausgesprochen hat, erfährt die Debatte über die Legalisierung auch als Genussmittel neuen Aufwind.</strong>
+      </p>
+      <p xmlns="" class="article even">Wir müssen die Diskussion über Cannabis als Arzneimittel vollständig trennen von der Frage: Cannabis als Genussmittel oder Droge? Wir würden ja auch nicht auf die Idee kommen, Morphium als Genussmittel zu legalisieren, nur weil Morphium in der Schmerztherapie sehr erfolgreich ist.</p>
+      <p xmlns="" class="article odd">
+        <strong>Die Legalisierung in der Medizin befürworten Sie?</strong>
+      </p>
+      <p xmlns="" class="article even">Der Entwurf für ein entsprechendes Gesetz, der kürzlich vorgelegt wurde, ist richtig. Wir haben ausreichende wissenschaftliche Hinweise, dass Cannabis bei Patienten, bei denen ansonsten keine Behandlungsmöglichkeit mehr besteht, einen Therapieversuch wert ist. Cannabis kann helfen bei Übelkeit und Erbrechen unter Chemotherapie, bei schmerzhafter Spastik bei Multipler Sklerose, bei Appetitlosigkeit bei einer bestehenden Aidserkrankung und gelegentlich auch bei chronischen Schmerzen. Es wird aber auch viele Patienten geben, denen es nicht hilft. Wir dürfen Cannabis nicht zu einer Substanz erklären, die Probleme in der Medizin lösen hilft, die wir bisher nicht lösen konnten. Cannabis ist eine zusätzliche Option für einige Patienten, um ihre Symptome zu lindern.</p>
+      <p xmlns="" class="article odd">
+        <strong>Herr Cremer-Schaeffer, haben Sie selbst mal gekifft?</strong>
+      </p>
+      <p xmlns="" class="article last even">Nein. Aber ich habe als Arzt auch Hunderte Menschen mit Morphium behandelt, ohne dass es an mir bisher angewendet wurde. Man kann über Cannabis eine Meinung entwickeln, ohne es selbst konsumiert zu haben.</p>
+    </article></div>
+
+    
+  
+
+    
+  <div role="region" id="" class="odd sect "><div class="sectbody"><a xmlns="" id="reward" shape="rect">Einmal zahlen</a><script> filOtaz_de.flattr();</script></div></div>
+
+    
+	<div class="shariff">.</div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><script class="tziArticle" type="text/html"><article href="/Headlines-2021/!172321/" ratioURL-ressource="172321" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2021</span><span class="hide">: </span><span>Wer finanziert denn Online-Angebote freiwillig für andere mit?</span>
+</h1>
+  		<p xmlns="" class="article first odd"><strong>Schon knapp 27.500.</strong>           
+</p>
+  		<p xmlns="" class="article even"><strong> Und mit Ihnen noch eine*r mehr. </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2021/!172283/" ratioURL-ressource="172283" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2021</span><span class="hide">: </span><span>Wer sagt denn, dass Journalismus online Geld wert ist?</span>
+</h1>
+  		<p xmlns="" class="article first odd"><strong>Schon knapp 27.500.</strong>        
+</p>
+  		<p xmlns="" class="article even"><strong> Und mit Ihnen noch eine*r mehr. </strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/Headlines-2020/!171255/" ratioURL-ressource="171255" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Headlines 2020</span><span class="hide">: </span><span>Wer, wenn nicht ihr?</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wir machen Journalismus aus Überzeugung: unabhängig und kostenfrei zugänglich für alle. Aber natürlich brauchen auch wir Geld, um die Arbeit der Redaktion zu finanzieren – und appellieren deshalb an Sie, unsere Leser*innen.        
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie die taz mit Ihrem Beitrag</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziArticle" type="text/html"><article href="/tazde-als-alternative-Nachrichtenquelle-im-Internet/!163696/" ratioURL-ressource="163696" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">taz.de als alternative Nachrichtenquelle im Internet.</span><span class="hide">: </span><span>Wir schreiben für Leser*innen. Nicht für Klicks.</span>
+</h1>
+  		<p xmlns="" class="article first odd">Unsere Inhalte auf taz.de sind frei zugänglich. Aber unser Journalismus kostet Geld und braucht Ihre Unterstützung: Mit einem monatlichen Beitrag sichern Sie die Arbeit der Redaktion und eine kritische, unabhängige Stimme im Netz.   
+</p>
+  		<p xmlns="" class="article even"><strong>Unterstützen Sie jetzt die taz</strong></p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script type="text/javascript" xml:space="preserve">
+          (function () {
+            patOtaz_de.layer_tzi_paywahl({'campaign': '2019-5-27' });
+          })();
+        </script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Normal/!155790/" ratioURL-ressource="155790" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Normal</span><span class="hide">: </span><span>Freier Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Das Bedürfnis nach vertrauenswürdiger Information ist derzeit sehr hoch, viele blicken und klicken in diesen unsicheren Zeiten auf die Berichterstattung der taz. Während der vergangenen Wochen ist klar geworden, wie wichtig freier Journalismus ist. In Krisenzeiten ist es „systemrelevant”, dass Menschen sich unabhängig informieren können. Ohne Paywall. Wir finden es wichtig, dass uns möglichst viele Menschen lesen – auch jene, die sich kein Abo leisten können. Doch dazu brauchen wir Ihre Hilfe.         
+</p>
+  		<p xmlns="" class="article even">Guter, kritischer Journalismus ist nicht kostenlos zu haben und braucht Finanzierung. Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Im Gegenzug wird sie freiwillig und solidarisch unterstützt. Von unseren Leser*innen, von Ihnen. Mit Ihrer Wertschätzung und Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit, ein Forum für Meinungsvielfalt, eine engagierte Stimme für Minderheiten. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Seien Sie mit uns taz. Zusammen mit den knapp 27.500, die schon dabei sind.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><script class="tziBottomArticle" type="text/html"><article href="/BottomabTest6Klima/!155427/" ratioURL-ressource="155427" class="objlink nolead" role="link"><div role="region" id="" class="odd sect sect_article news interview"><div class="sectbody"><h1 xmlns="" itemprop="headline">
+<span class="kicker">Bottom,abTest6,Klima</span><span class="hide">: </span><span>Journalismus ist wichtiger denn je</span>
+</h1>
+  		<p xmlns="" class="article first odd">Wir berichten seit 1978 über die Zerstörung unseres Planeten – weil wir daran glauben, dass eine bessere Welt möglich ist. Klima- und Umweltberichterstattung haben in der taz schon immer einen großen Raum eingenommen, aber zurzeit gehen wir noch einmal in die Offensive. Die taz berichtet noch intensiver über die drohende Klimakatastrophe – auf allen Kanälen. Um dies leisten zu können, sind wir auf die Unterstützung unserer Leser*innen angewiesen. Denn guter Journalismus ist aufwändig und nicht kostenlos zu haben.        
+</p>
+  		<p xmlns="" class="article even">Unsere Idee: Die Arbeit der Redaktion ist – anders als bei vielen anderen Medien – frei zugänglich. Unsere Artikel sollen so viel wie möglich gelesen, geliked und geteilt werden. Nur so können sie die ökologisch notwendigen Veränderungen unserer Gesellschaft vorantreiben. Im Gegenzug wird die taz von unseren Leser*innen unterstützt. Freiwillig und solidarisch. Mit Ihrer Beteiligung kann die taz auch in Zukunft das sein, was sie ist: eine kritische Öffentlichkeit und eine engagierte Stimme für mehr Klimaschutz. Unterstützen Sie jetzt die taz und helfen Sie uns dabei. Knapp 27.500 machen schon mit.</p>
+  
+  		<p xmlns="" class="article last odd"></p>
+      	</div></div></article></script><div role="region" id="" class="odd sect sect_text "><div class="sectbody"><p>
+
+	Fehler auf taz.de entdeckt?
+	    </p><p>
+        Wir freuen uns über eine 
+	<a href="mailto:fehlerhinweis@taz.de?subject=Fehlerhinweis%20zu%20https://taz.de/Diskussion-ueber-Cannabislegalisierung/!5267779/&amp;body=Zu%20%22Diskussion über Cannabislegalisierung: „Eine recht ungefährliche Substanz“%22%0D%0Ahttps://taz.de/Diskussion-ueber-Cannabislegalisierung/!5267779/%0D%0A%0D%0ABitte%20beschreiben%20Sie%20uns%20den%20Fehler.%20Sie%20können%20gern%20einen%20Screenshot%20anhängen.%20Wir%20danken%20für%20Ihre%20Hilfe%21%20
+					%0D%0A%0D%0A
+					Inhaltliches%20Feedback%20geben%20Sie%20uns%20gerne%20in%20der%20Kommentarspalte%20oder%20richten%20es%20an%20briefe@taz.de.%20Dort%20leiten%20wir%20ihr%20Feedback%20auch%20an%20die%20Redaktion%20weiter.%20Über%20diese%20Mailadresse%20nehmen%20wir%20nur%20Rechtschreib-%20und%20Faktenkorrekturen%20vor.				">Mail an fehlerhinweis@taz.de</a>!</p><p>
+	Inhaltliches Feedback? 
+	</p><p>
+
+	Gerne als Leser*innenkommentar unter dem Text auf taz.de oder über das
+	<a href="/!112355/"> Kontaktformular</a>.
+		</p></div></div><!-- DEBUG belly: 0 extras here, 0 from directory Gesundheit, thats 0 merged--></span><span class="wing" role="contentinfo"><div class="rack first_rack" id="xid459821">
+    
+	<!--template mode="layout" match="display[ @obj='descr' ]":start-->
+
+    
+	<div role="region" id="" class="even sect sect_meta "><div class="sectbody"><ul role="navigation" class="left rootline toolbar"><li class="first odd trodd selected"><a href="/Gesellschaft/!p4611/" id="menu_p4611"><span>Gesellschaft</span></a></li><li class="last even trodd selected"><a href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span>Gesundheit</span></a></li></ul><ul role="navigation" class="right toolbar"><li class="date" itemprop="datePublished" content="2016-01-25T13:04:00+01:00">25. 1. 2016</li><li itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization " style=" display:none; "><span itemprop="url" content="http://www.taz.de"></span><span itemprop="name" content="TAZ Verlags- und Vertriebs GmbH"></span><span itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url" alt="taz logo" src="/lib/ch/web/pix/taz_logo_web.jpg"></img></span><span content="https://www.facebook.com/taz.kommune/" itemprop="sameAs"></span><span content="https://twitter.com/tazgezwitscher" itemprop="sameAs"></span><span content="https://www.instagram.com/taz.die_tageszeitung" itemprop="sameAs"></span><span content="https://flipboard.com/@taz_de" itemprop="sameAs"></span><span content="https://www.reddit.com/user/dietageszeitung" itemprop="sameAs"></span><span content="https://pod.geraspora.de/u/taz" itemprop="sameAs"></span></li><meta itemprop="dateModified" content="2016-01-25T14:23:27+01:00"></meta></ul></div></div>
+
+    
+	<div role="region" id="" class="odd sect sect_profile pictured "><div class="secthead" role="heading"><h2><a name="das Interview führte"><span>das Interview führte</span></a></h2></div><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="pictured 
+        
+	
+        
+
+		
+			
+	        
+	
+			author 
+		community 
+		
+        
+                
+		        
+		
+	        
+                
+
+				
+		
+
+        person objlink" itemprop="url" href="/Heike-Haarhoff/!a34/"><h4 itemprop="name">Heike Haarhoff</h4><h5 itemprop="jobTitle">Redakteurin im Inlands- und im Rechercheressort</h5><img itemprop="image" src="/kommune/files/images/profile/70x70/34.png" alt="Heike Haarhoff" title="Heike Haarhoff"></img></a></div></div>
+
+    
+	<div role="region" id="" class="even sect sect_tags "><div class="secthead" role="heading"><h2><a name="Themen"><span>Themen</span></a></h2></div><ul role="directory" class="news directory sectbody"><li class="first odd trodd tag"><a role="link" href="/!t5007686/" class="tag dirlink"><span>Cannabis</span></a></li><li class="even trodd tag"><a role="link" href="/!t5031660/" class="tag dirlink"><span>Hanf</span></a></li><li class="odd treven tag"><a role="link" href="/!t5014458/" class="tag dirlink"><span>Drogen</span></a></li><li class="even trodd tag"><a role="link" href="/!t5012441/" class="tag dirlink"><span>Drogenbesitz</span></a></li><li class="last odd trodd tag"><a role="link" href="/!t5015462/" class="tag dirlink"><span>Legalisierung Marihuana</span></a></li></ul></div>
+
+    
+	
+
+    
+	<!-- DEBUG label: 0 extras here, 0 from directory Gesundheit, thats 0 merged-->
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><span id="ad_bin_ros_sidebar_1" class="ad_bin sold contentad"><div id="ad_zone_ros_sidebar_1" name="ros_sidebar-1" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"><iframe class="adIframe" id="ros_sidebar-1" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Gesellschaft' }));
+			var adId = 'ros_sidebar-1';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span><!-- DEBUG wing: 0 extras here, 0 from directory Gesundheit, thats 0 merged--></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><span class="tail" role="complementary"><!-- DEBUG tail: 0 extras here, 0 from directory Gesundheit, thats 0 merged--><div class="rack first_rack" id="xid479112">
+    
+	<div role="region" id="" class="first last odd sect sect_profile brief pictured "><div class="secthead" role="heading"><h2><a name="mehr von"><span>mehr von</span></a></h2></div><div class="sectbody" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a rel="author" class="brief pictured 
+        
+	
+        
+
+		
+			
+	        
+	
+			author 
+		community 
+		
+        
+                
+		        
+		
+	        
+                
+
+				
+		
+
+        person objlink" itemprop="url" href="/Heike-Haarhoff/!a34/"><h4 itemprop="name">Heike Haarhoff</h4><img itemprop="image" src="/kommune/files/images/profile/30x30/34.png" alt="Heike Haarhoff" title="Heike Haarhoff"></img></a></div></div>
+
+    
+		</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="xid709888" class="even sect sect_adr style_adr "><ul role="directory" class="sectbody corp  directory"><li class=" first last odd trodd online   pictured leaded remote story"><a class="dept" href="//www.kontextwochenzeitung.de/">KONTEXT: Wochenzeitung</a><a href="https://www.kontextwochenzeitung.de/debatte/517/erfolgreich-betrachtet-ernuechternd-7330.html" target="_blank" class="objlink pictured leaded remote story noavatar" role="link"><h4>Kontext über Schwarz-Grün in BaWü</h4><h3>Erfolgreich betrachtet ernüchternd</h3><p class="brief">Gemessen an den Ansprüchen von Schwarz-Grün in Baden-Württemberg ist das Erreichte eher so lala. </p><img class="lozad" src="/uploads/images/14/24_02_21_Bild_5.jpg" data-src="/uploads/images/300/24_02_21_Bild_5.jpg" alt="" title=""></img><noscript><img src="/uploads/images/300/24_02_21_Bild_5.jpg" alt="" title=""></img></noscript></a></li></ul></div></span><a itemprop="mainEntityOfPage" href="/Diskussion-ueber-Cannabislegalisierung/!5267779"></a></div><script type="text/javascript">(function () {	// align skirt top with first page's bottom asap
+$( document ).ready(function() {
+  var skirt_top = $('.sect_tdt >.sectbody').length ? $('.sect_tdt >.sectbody').first().offset().top -4 : 1500;
+  $('#skirt').css({'top': ''+ skirt_top +'px'});
+});
+	})();	</script><div class="full no_rightbar below news page even n2"><div class="head" role="head"><div class="nose" role="heading" id="pg_hd"><h2><a name="Volle Spalte unterm Artikel" href="/Volle-Spalte-unterm-Artikel/!p5315/"><span>Volle Spalte unterm Artikel</span></a></h2></div><ul role="navigation" class="news navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid841997">
+    
+	<div role="region" id="" class="first last odd sect sect_thema clip_small plain style_clip_small plain "><div class="secthead" role="heading"><h2><a name="Mehr zum Thema"><span>Mehr zum Thema</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody news  directory"><li class=" first odd trodd    report article leaded pictured"><a href="/Marihuana-Legalisierung-in-den-USA/!5350775/" ratioURL-ressource="5350775" class="objlink report article leaded pictured noavatar" role="link"><h4>Marihuana-Legalisierung in den USA</h4><h3>Yes We Cannabis</h3><p>In den USA ist eine Mehrheit für die Legalisierung von Marihuana. Sind die Referenden erfolgreich, steigt der Druck, Bundesgesetze zu ändern.  <span class="author">Bernd Pickert</span></p><img class="lozad" src="/picture/1577055/14/64686318.jpeg" data-src="/picture/1577055/300/64686318.jpeg" alt="Ein Mann steht vor Tischen voller Marihuana-Pflanzen" title="Ein Mann steht vor Tischen voller Marihuana-Pflanzen"></img><noscript><img src="/picture/1577055/300/64686318.jpeg" alt="Ein Mann steht vor Tischen voller Marihuana-Pflanzen" title="Ein Mann steht vor Tischen voller Marihuana-Pflanzen"></img></noscript></a></li><li class=" even trodd    interview article leaded pictured"><a href="/Konferenz-zur-Drogenpolitik-in-Hamburg/!5347487/" ratioURL-ressource="5347487" class="objlink interview article leaded pictured noavatar" role="link"><h4>Konferenz zur Drogenpolitik in Hamburg</h4><h3>„Drogen sind sowieso da“</h3><p>Suchttherapeut Urs Köthner fordert die Legalisierung aller Drogen. Polizeieinsätze gegen Kleindealer seien reine Steuerverschwendung.  </p><img class="lozad" src="/picture/1544521/14/N4_HH_Drogen_Bernd_von_Jutrczenka_dpa.jpeg" data-src="/picture/1544521/300/N4_HH_Drogen_Bernd_von_Jutrczenka_dpa.jpeg" alt="Polizisten nehmen mutmaßliche Dealer fest" title="Polizisten nehmen mutmaßliche Dealer fest"></img><noscript><img src="/picture/1544521/300/N4_HH_Drogen_Bernd_von_Jutrczenka_dpa.jpeg" alt="Polizisten nehmen mutmaßliche Dealer fest" title="Polizisten nehmen mutmaßliche Dealer fest"></img></noscript></a></li><li class=" last odd treven    report article leaded pictured"><a href="/Colorado-streitet-um-Cannabis-Clubs/!5316266/" ratioURL-ressource="5316266" class="objlink report article leaded pictured noavatar" role="link"><h4>Colorado streitet um Cannabis-Clubs</h4><h3>Legalisierung ja, aber</h3><p>Der US-Staat Colorado hat den Verkauf von Marihuana erlaubt. Nun gibt es Streit: Die Droge darf gekauft, aber nicht offen konsumiert werden.  <span class="author">Kristen Wyatt</span></p><img class="lozad" src="/picture/1288297/14/15742659.jpeg" data-src="/picture/1288297/300/15742659.jpeg" alt="Marihuana ist in Gläser verpackt" title="Marihuana ist in Gläser verpackt"></img><noscript><img src="/picture/1288297/300/15742659.jpeg" alt="Marihuana ist in Gläser verpackt" title="Marihuana ist in Gläser verpackt"></img></noscript></a></li><a class="button cta">Alle Artikel zum Thema</a></ul></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><span class="headed wing" role="complementary"></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Diskussion-ueber-Cannabislegalisierung/!5267779"></a></div><div class="full community page last odd n3"><div class="head" role="head"><ul role="navigation" class=" navbar newsnavigation"></ul><script>
+		var liSelected = $(document.getLatestElement()).find('li.selected');
+		if ( liSelected.length > 1 ){ liSelected.first().removeClass('selected')};
+	</script></div><span class="body" role="main"><div class="rack first_rack" id="xid495498">
+    
+
+	<div role="region" id="" class="first last odd sect sect_text "><div class="secthead" role="heading"><h2><a name="So können Sie kommentieren:"><span>So können Sie kommentieren:</span></a></h2></div><div class="sectbody"><p>       Bitte <a href="https://www.taz.de/kommune/post.php?a=registration" target="_blank">registrieren Sie sich</a> und halten Sie sich an unsere <a href="http://taz.de/netiquette" target="_blank">Netiquette</a>.     
+</p><p>      Haben Sie Probleme beim Kommentieren oder Registrieren?   
+</p><p>  Dann mailen Sie uns bitte an <a href="mailto:kommune@taz.de" target="_blank">kommune@taz.de</a>   </p></div></div>
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><div role="region" id="" class="even sect sect_commentlinks style_commentlinks "><div class="secthead" role="heading"><h2><a name="Leser*innenkommentare"><span>Leser*innenkommentare</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class="member " id="bb_message_3334931"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4></a><time datetime="2016-01-27T22:28:58+01:00"><meta value="1453930138"></meta>27. 01. 2016, 
+		22:28</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">ok - mal was anfetten -</p>
+
+<p xmlns="" class="odd">
+Um den Verlogenheitskritikern etwas beizuspringen &amp; Futter an die hand zu geben;)~&gt; have look at historie! </p>
+<p xmlns="" class="even">
+Das wärs gewesen - tazis.</p>
+<p xmlns="" class="odd">
+Auch für historische staatliche Verlogenheit &amp; gezieltes Weggucken</p>
+<p xmlns="" class="even">
+(wg Steuern/Staatseinnahmen)!</p>
+
+<p xmlns="" class="even">
+Der Opiums-Stellen-Chef  hätte  nämlich  mal - befragt werden - bzw/&amp; dann erzählen können – z.B. </p>
+<p xmlns="" class="odd">
+Luzides  zum Zusammenhang - Industrielle Entwicklung ab ~ 1870  &amp;Rauschgifte!! Ja ja !  &amp; </p>
+<p xmlns="" class="even">
+Zum durchsicht-affirmativen Verharmlosen &amp; </p>
+<p xmlns="" class="odd">
+Nichtverfolgen staatlicherseits!</p>
+<p xmlns="" class="even">
+Zu deren alltäglichen Einnahme speziell durch die Arbeiter in der Schwerindustrie</p>
+<p xmlns="" class="odd">
+(eben nicht nur Militär;!). Und zwar - Speziell  - Laudanum  - einem - </p>
+<p xmlns="" class="even">
+Genau – Opiumderivat! </p>
+<p xmlns="" class="odd">
+Ja das wär´s gewesen! </p>
+<p xmlns="" class="even">
+Dann wäre nämlich seine - hier schon als dreist-apologetisch charakterisierte Formel:  "Wie haben uns entschieden .." -  eben -</p>
+<p xmlns="" class="odd">
+Noch mehr in Mißkredit geraten.</p>
+
+<p xmlns="" class="odd">
+Denn Fazit für Industrie/Staat! -&gt;Speziell die Schwerindustrie - &amp;</p>
+<p xmlns="" class="even">
+Deren (industrieller) Fortschritt - basierte  - auf der regelmäßigen Einnahme von  Laudanum - genau - </p>
+<p xmlns="" class="odd">
+Zur Schmerzbewältigung während der industriellen Arbeitsprozesse! </p>
+<p xmlns="" class="even">
+kurz - Das Zeug stand in jedem Arbeiterhaushalt - &amp; klar - affirmativ-passend verharmlost - dieses allgegenwärtige -</p>
+<p xmlns="" class="odd">
+"Rauschgift-Schmiermittel" der Industriellen Gelddruckmaschine! Denn  - eben darauf beruht - der Reichtum - der Krupp Stinnes Thyssen Quandt &amp; Co. - &amp; zwar - Bis heute!!</p>
+
+<p xmlns="" class="last odd">
+ff</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334934"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4></a><time datetime="2016-01-27T22:36:01+01:00"><meta value="1453930561"></meta>27. 01. 2016, 
+		22:36</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lowandorder </span>ff </p>
+
+<p xmlns="" class="odd">
+"Niemand kann 11 Stunden vorm Hochofen stehen! "</p>
+<p xmlns="" class="even">
+Ming Ohl03 -  zu seinen angeblichen Notstandsarbeiten als Schüler vorm Hochofen Possehl/Lübeck bei der Technischen Nothilfe - TN - </p>
+<p xmlns="" class="odd">
+(heute THW); </p>
+<p xmlns="" class="even">
+Dies so lange - bis er kapiert hatte, </p>
+<p xmlns="" class="odd">
+Daß das eine Streikbrecherorganisation war. (Der Grünschnabel wußte nix von Laudanum - klar! &amp; mein Banknachbar&amp;Sohn des letzten Direktors dieses Hochofens? -&gt; auch nix Wie Tulpe! klar.)</p>
+
+<p xmlns="" class="odd">
+Aber - im ernst ~ &gt;</p>
+<p xmlns="" class="even">
+Wie?  bis zu -  "ne 36-machen" - &amp; Aushalten!!!??? z.B. </p>
+<p xmlns="" class="odd">
+Lothringen  (3 x 12 Stunden Schicht - noch Fragen?). </p>
+<p xmlns="" class="even">
+Aber " Woanders wars auch Scheiße" by Bernhard Bussmann - the same -</p>
+<p xmlns="" class="odd">
+(~&gt; Ruhrgebiet)!! </p>
+<p xmlns="" class="even">
+kurz -</p>
+<p xmlns="" class="odd">
+Wie bei der Kinderarbeit "verschwand solcher industriell organisierter körperlicher Mißbrauch - </p>
+<p xmlns="" class="even">
+vulgo  ~&gt; Ausbeutung erst - </p>
+<p xmlns="" class="odd">
+Als sich das wg der </p>
+<p xmlns="" class="even">
+Krankheitsfolgen nicht mehr rechnete - Für die Industriebarone &amp; Staat! &amp; </p>
+<p xmlns="" class="odd">
+Damit der Weg frei gemacht war - (zeitlich fast parallel mit dem ex für Kriegsdrogen) - </p>
+<p xmlns="" class="even">
+Für die Kriminalisierung wg</p>
+<p xmlns="" class="odd">
+ "der Drogen - auf die wir uns – nun nicht (mehr) geeinigt haben!" - </p>
+<p xmlns="" class="even">
+Nicht wahr Herr Cremer-Scheffer! Odr? Genau ("... dann ist man nur noch die Stimme seines Herrn" - Wolfgang Neuss;) Hätt ich mal gern gehört!</p>
+
+<p xmlns="" class="even">
+Formel: "Jung - hör auf zu kiffen -</p>
+<p xmlns="" class="odd">
+Da liegt kein-Segen auf -</p>
+<p xmlns="" class="last even">
+Trink dichn Kurzen&amp;´nBier!"</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3334734"><a class="author person" href="/!ku12892/"><h4>Frei_Denken</h4></a><time datetime="2016-01-27T12:33:45+01:00"><meta value="1453894425"></meta>27. 01. 2016, 
+		12:33</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Ich selber kenne 1 Jungen Mann der sehr früh mit dem kiffen angefangen hatte - an Schulen wird sehr viel konsumiert! - und dann davon DEPRESSIV wurde!!</p>
+
+<p xmlns="" class="odd">
+Der Mann war der Freund meiner Tochter. Erst als meine Tochter, wegen der Depressionen und der zunehmenden Gleichgültigkeit dieses Mannes sich von ihm trennte, hatte der junge Mann damals mit dem kiffen aufgehört und angefangen regelmässig Sport zu treiben! </p>
+
+<p xmlns="" class="odd">
+Heute lebt der Mann in Neuseeland und es geht ihm sehr gut!</p>
+
+<p xmlns="" class="odd">
+Wer Cannabis befürwortet sieht nicht die realen Gefahren, sondern mehr den Markt und die Einnahmequelle für den Staat!</p>
+
+<p xmlns="" class="odd">
+Ich kenne auch einen Mann, der früh mit dem kiffen angefangen hatte und Heute sein Leben nicht mehr geregelt bekommt. Er ist depressiv und chaotisch!</p>
+
+<p xmlns="" class="odd">
+Das sind bestimmt keine Einzelfälle! </p>
+
+<p xmlns="" class="odd">
+Die Gefahr einer depressiven Erkrankung bei frühzeitigem Kiffen ist sicherlich auch genetisch, hormonell bedingt. Trotzdem löst keiner damit seine Probleme, sondern verdrängt diese nur!!</p>
+
+<p xmlns="" class="last odd">
+Die wahren Ursachen fürs kiffen liegen im System, der zungenommenen menschenfeindlichen Umwelt!!! Dem allseist vorhandenen Egoismus, wo mittlerweile Menschen sich gegenseitig das Leben schwer machen!! Deswegen haben ja auch die psychischen Erkrankungen zugenommen!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334705"><a class="author person" href="/!ku397/"><h4>lions</h4></a><time datetime="2016-01-27T11:30:59+01:00"><meta value="1453890659"></meta>27. 01. 2016, 
+		11:30</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Sobald Cannabis legal ist, steigt auch der Konsum bei Jugendlichen."</p>
+<p xmlns="" class="even">
+So ist das mit Statistiken. Bei Legalisierung geben´s mehr zu, ist auch eine Leseart. Zudem ist das Zeug wohl sauberer, als vorher.</p>
+<p xmlns="" class="last odd">
+Ja, macht auf´n ersten Blick was vernünftiges, was der Herr Dr. schreibt... Wes Brot ich ess, des...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334613"><a class="author person" href="/!ku5948/"><h4>ThinkDifferently</h4></a><time datetime="2016-01-27T00:52:18+01:00"><meta value="1453852338"></meta>27. 01. 2016, 
+		00:52</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Diese ständige Diskussion um die Legalisierung von Cannbis geht mir echt langsam auf den Keks.</p>
+
+<p xmlns="" class="odd">
+Alles bereits bekannt - schon 1000fach diskutiert und berichtet.</p>
+
+<p xmlns="" class="odd">
+Der Staat macht sich lächerlich - die Realität hat die irreale Vorstellung eines Verbots bereits überholt.</p>
+
+<p xmlns="" class="last odd">
+Wir werden hier niemals eine Legalisierung erreichen!!!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334600"><a class="author person" href="/!ku32461/"><h4>Peter Schmidt</h4></a><time datetime="2016-01-26T23:29:41+01:00"><meta value="1453847381"></meta>26. 01. 2016, 
+		23:29</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Sehr geehrte Taz-Redaktion,</p>
+<p xmlns="" class="even">
+sehr geehrte Leser,</p>
+
+<p xmlns="" class="even">
+ein sehr gutes Interview welches einige interessante Aspekte NEU auf den Tisch bringt. Einerseits wird aus wissenschaftlicher Sicht nochmal bestätigt, das Cannabis keine Einstiegsdroge ist, was ja ein elementares Argument von Thomasisus und Mortler bisher immer war und auch sehr theatralisch herangezogen wurde und das Publikum negativ beeinflusst hat! Wer will schon Heroin-Abhängige Kinder! Dafür schonmal 5 Punkte. </p>
+
+<p xmlns="" class="last even">
+Aber, die Aussage das mit der Legalisierung kein besserer Jugendschutz möglich wäre, sondern das das Gegenteil eintreffen würde und sich plötzlich die Jugendlichen ermutigt fühlen würden Gras zu konsumieren. Ganz ehrlich, das ist ein völlig mir NEUES Argument gegen die Legalisierung welches untermauert das die allerwenigsten wirklich wissen worum es der Legalisierungswelle wirklich geht. Wir kiffen egal ob Ihr es erlaubt oder nicht, was wir nicht länger akzeptieren wollen, ist das Jugendliche oder Erwachsene Ihre Zukunft oder Existenz wegen ein paar Gramm Gras verlieren. das muss sofort aufhören und dieses Grundrecht auf Kiffen!? Hallo, geht es noch, das ist Humbug und wird von Alt-Hippies gefordert und hat nix damit zu tun wie die Jugend und die Menschen die heute Cannabis rauchen wirklich ticken. Cannabis muss straffrei werden und last but not least, für 29 Euro Busticket  und 20 Euro Übernachtung ist jeder Jugendliche der Kiffen will in Holland und bekommt was er will. Gras kostet auch Geld und Jugendliche wollen vor allen Dingen eins, cool aussehen und immer das NEUSTE! Diese ganzen verkorksten Männer und Frauen +60 die heute politisch Verantwortlich sind tun ja ja so, als ob Cannabis alles wäre worum es Jugendlichen heute und künftig geht!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334473"><a class="author person" href="/!ku534/"><h4>noevil</h4></a><time datetime="2016-01-26T18:02:31+01:00"><meta value="1453827751"></meta>26. 01. 2016, 
+		18:02</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Über die Legalisierung von Cannabis denke ich schon ziemlich lange nach. Dauerhaft davon Geschädigte sind mir bislang nicht bekannt, im Gegensatz zu Akoholikern und Nikotinsüchtigen. Ich weiss auch nicht, ob es nicht Cannabis-Sortenunterschiede gibt, die bei Fachkenntnis und Unterscheidung der Wirkstärke eine Klassifizierung in härtere und weichere Cannabissorten ermöglichen könnt, ähnlich wie unterschieden wird zwischen z.B. Sherry und Weinbrand. Das hätte auch Auswirkungen auf einen höheren Preis, könnte mit Steuern belegt werden, würde die Vermischung mit weitaus gefährlicheren Stoffen oder Süchtigmachern verhindern und würde zumindest diesen Schwarzmarkt austrocknen. </p>
+
+<p xmlns="" class="odd">
+Ich denke, dass die Vorteile einer Legalisierung überwiegen würden.</p>
+
+<p xmlns="" class="odd">
+Noch etwas - Jugendliche sind natürlich neugierig, aber nicht dumm. Verständlich erklärt in Elternhaus und Schule denke ich, dass sie schon geduldig genug wären, sicher nicht weniger als bei Alkohol. Und bei geprüfter Ware denke ich, wäre die Gefahr einer Sucht geringer.</p>
+
+<p xmlns="" class="last odd">
+PS ich bin weder mit Alkohol noch mit Cannabis "befreundet"</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334660"><a class="author person" href="/!ku4537/"><h4>Age Krüger</h4></a><time datetime="2016-01-27T09:50:19+01:00"><meta value="1453884619"></meta>27. 01. 2016, 
+		09:50</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@noevil </span>Auch Gras kann sich in seinem thc-Gehalt unterscheiden. Dieser hängt zum einen mit der Sorte und zum anderen mit der Lichtaufnahme zusammen.</p>
+
+<p xmlns="" class="odd">
+In den NL-Coffeeshops wird Gras mit hohem thc-Anteil meist mit den Vorsatz "Super" verkauft (also "Super-Skunk", "Super-Haze" etc).</p>
+<p xmlns="" class="last even">
+Bei shit weiß man eigentlich durch die Bezeichnungen nach dem Ursprungsorten, wie stark die sind. Nepalese ist stärker als Marokkaner.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334491"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4></a><time datetime="2016-01-26T18:32:08+01:00"><meta value="1453829528"></meta>26. 01. 2016, 
+		18:32</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@noevil </span>"…PS ich bin weder mit Alkohol noch mit Cannabis "befreundet" -</p>
+
+<p xmlns="" class="odd">
+Schade eigentlich.</p>
+<p xmlns="" class="even">
+Denken - hm ~&gt;</p>
+<p xmlns="" class="odd">
+Der Stein bestimmt bekanntlich</p>
+<p xmlns="" class="even">
+Das Bewußtsein. &amp;</p>
+<p xmlns="" class="odd">
+Schärft nüchtern die Wahrnehmung - </p>
+<p xmlns="" class="even">
+Bei Aristotelischem Gebrauch - klar!</p>
+<p xmlns="" class="last odd">
+Gern auch von beidem:)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3334465"><a class="author person" href="/!ku673/"><h4>Waage69</h4></a><time datetime="2016-01-26T17:44:54+01:00"><meta value="1453826694"></meta>26. 01. 2016, 
+		17:44</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Ich denke nicht das bei einer Legalisierung von Cannabis dieses automatisch einfach bei den Jugendkichen zum Alkohol- und Zigarettenkonsum oben drauf kommt. Bei vielen könnte das Kiffen das Saufen vermindern/ersetzen.</p>
+<p xmlns="" class="even">
+Es könnte sogar ein ganz neues ausdifferenziertes Konsumverhalten die Folge sein.</p>
+
+<p xmlns="" class="last even">
+Ich fände eine Legalisierung daher gut da sie den Leuten die Alkohol ablehnen oder nur so wenig davon trinken können das sie keinen anständigen Rausch bekommen weil sie ihn nicht vertragen, übelste Kater bekommen, keinen Bock auf Bierbäuche und Weinnasen haben, auch mal eine Chance gibt sich über den Alltag zu erheben.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334408"><a class="author person" href="/!ku31090/"><h4>Ralf Med</h4></a><time datetime="2016-01-26T15:14:51+01:00"><meta value="1453817691"></meta>26. 01. 2016, 
+		15:14</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Schwierig wird es weiterhin für Jugendliche und Erwachsene, wenn Politiker und Mediziner gegen Legalisierung/Regulierung sind, und gleichzeitig laufen in den Nachrichten Schlagzeilen mit „jugendliche und erwachsene Cannabis Konsumenten, wegen mit Bleipulver gestrecktem Cannabis in einem Leipziger Krankenhaus eingeliefert“- 2015! Oder heute wurden 16 Menschen, wegen „Legal High“, als Cannabis-Ersatz, in einem Krankenhaus in Hannover eingeliefert !!!</p>
+
+<p xmlns="" class="odd">
+_______________</p>
+<p xmlns="" class="even">
+Bessere Prävention ist wichtig und gut, nur Ausreichend leider nicht !!!</p>
+
+<p xmlns="" class="even">
+_______________</p>
+<p xmlns="" class="last odd">
+Legalisierung / Regulierung und vernünftige Prävention muss sein, um Hilfe und Schutz, und den Schwarzmarkt ein zu dämmen !!!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334388"><a class="author person" href="/!ku32444/"><h4>Denkentutnichtweh!</h4></a><time datetime="2016-01-26T14:30:04+01:00"><meta value="1453815004"></meta>26. 01. 2016, 
+		14:30</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Sehr geehrte Frau Haarhoff,</p>
+
+<p xmlns="" class="odd">
+wenn ich folgendes Argument von Herrn Cremer-Schaeffer lese, dann dreht sich mir der Magen um. (Es wird übrigens auch bei jeder Gelegenheit von Frau Mortler ins Feld geführt):</p>
+
+<p xmlns="" class="odd">
+"Wenn wir Cannabis für Erwachsene freigeben würden, würden viele Jugendliche erst recht nicht mehr einsehen, weshalb sie darauf verzichten sollten. "</p>
+
+<p xmlns="" class="odd">
+Allerdings geht es mir gleich noch viel schlechter wenn ich Ihre Reaktion auf diese Unwahrheit lesen muss. Kann man eigentlich noch schlechter vorbereitet in ein Interview gehen?</p>
+
+<p xmlns="" class="odd">
+Vielleicht hätte es geholfen nochmal etwas Recherche im hauseigenen Archiv zu betreiben. </p>
+
+<p xmlns="" class="odd">
+Siehe dazu auch:http://blogs.taz.de/drogerie/2014/12/23/trotz-cannabislegalisierung-kiffen-weniger-schueler-in-den-usa/</p>
+
+<p xmlns="" class="last odd">
+Gleiches lässt sich übrigens auch in einigen anderen Ländern mit liberaler Drogenpolitik beobachten. Und das nicht erst seit gestern!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334379"><a class="author person" href="/!ku19237/"><h4>TazTiz</h4></a><time datetime="2016-01-26T14:21:59+01:00"><meta value="1453814519"></meta>26. 01. 2016, 
+		14:21</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Naja, ein Arzt. Aber einer, der Drogen eher aufgeschlossen gegenüber stehen muss - weil es als Anästhesist sein einziges Handwerkszeug ist.</p>
+
+<p xmlns="" class="odd">
+Ähnlich harmlos sehen Schmerztherapeuten übrigens den Einsatz von Opiaten.</p>
+
+<p xmlns="" class="odd">
+Frage mal einen Psychiater (muss nicht mal ein Suchtspezialist sein), was der zu THC &amp; Co. zu sagen hat.</p>
+
+<p xmlns="" class="odd">
+Das (gesellschaftlich) Schöne am Kiffen ist doch, dass alles irgendwann egal ist und man/frau so schön "labern" kann. Die Psychose gibt es für einige noch kostenlos dazu ... Gebt dem Volk mehr Kiff und es wird friedlich und zufrieden regierbar sein.</p>
+
+<p xmlns="" class="last odd">
+Alkohol verstärkt dagegen Opositionelles ...</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334726"><a class="author person" href="/!ku12892/"><h4>Frei_Denken</h4></a><time datetime="2016-01-27T12:17:33+01:00"><meta value="1453893453"></meta>27. 01. 2016, 
+		12:17</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@TazTiz </span>Gebt dem Volk mehr Kiff und es wird friedlich und zufrieden regierbar sein.</p>
+
+<p xmlns="" class="last odd">
+Genau so sehe ich das auch!!! Es geht nur darum die Massen ruhig zu stellen, damit die Oberschicht, die Herrschende Klasse weiter auf Kosten der Mitte leben kann!!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334638"><a class="author person" href="/!ku31556/"><h4>Johan Schreuder</h4></a><time datetime="2016-01-27T08:48:15+01:00"><meta value="1453880895"></meta>27. 01. 2016, 
+		08:48</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@TazTiz </span>Abgesehen von der Tatsache das ich so gar nicht ihre Meinung bin muss ich schon sagen das Psychiater schon mal gar nichts wissen weil dies keine Ärzte sind.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334642"><a class="author person" href="/!ku397/"><h4>lions</h4></a><time datetime="2016-01-27T09:25:27+01:00"><meta value="1453883127"></meta>27. 01. 2016, 
+		09:25</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Johan Schreuder </span>Psychiater sind Fachärzte. Sie meinen sich Psychologen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334799"><a class="author person" href="/!ku31556/"><h4>Johan Schreuder</h4></a><time datetime="2016-01-27T15:00:17+01:00"><meta value="1453903217"></meta>27. 01. 2016, 
+		15:00</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@lions </span>Ach nö, ich meine die, die angefangen haben mit Lobotomie  und dann über Elektroschocks jetzt das Handbuch DSM 1-5 dazu benützen um für die Pharmaindustrie Kunden zu finden.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3334376"><a class="author person" href="/!ku31556/"><h4>Johan Schreuder</h4></a><time datetime="2016-01-26T14:14:58+01:00"><meta value="1453814098"></meta>26. 01. 2016, 
+		14:14</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">'Ab den 1930er Jahren gab es in den USA Kampagnen, mit denen Cannabis als Droge gebrandmarkt wurde'</p>
+<p xmlns="" class="last even">
+Das ist ein wirklich interessante Geschichte Stichwörter Anslinger, Dupont, Hearst und Rockefeller.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334297"><a class="author person" href="/!ku32437/"><h4>Peter Unbekannt</h4></a><time datetime="2016-01-26T10:51:37+01:00"><meta value="1453801897"></meta>26. 01. 2016, 
+		10:51</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Mein 14Jähriger Bruder kommt leichter an Cannabis, als Alkohol. Eine Freundin hat mit Glas gestrecktes Gras geraucht. Folge: Hustet blut, fällt ins Koma, muss Abschluss wiederholen. Danke Prohibiton für gar nichts.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334260"><a class="author person" href="/!ku2782/"><h4>APOKALYPTIKER</h4></a><time datetime="2016-01-26T09:28:45+01:00"><meta value="1453796925"></meta>26. 01. 2016, 
+		09:28</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Wir(!)haben uns als Gesellschaft entschieden, Alkohol und Nikotin als Teil unserer Kultur(!)zu sehen."</p>
+
+<p xmlns="" class="odd">
+Dieses "Wir" erinnert mich an die Zeiten eines Adenauer und Kohl , in denen die Christdemokraten noch im selbstverständlichen Bewußtsein auftraten , dass i h n e n das Land gehöre und die "Sozen" nur eine ihnen von Gott auferlegte ständige Prüfung seien . Nun hat sich in der Zwischenzeit auch das Christliche der Unionschristen unübersehbar ausgedünnt in Richtung individueller Folklore . Das hält sie aber nicht davon ab , weiterhin von einer "christlichen" Kultur zu sprechen , von "unserer" , also "christlichen Kultur" in Deutschland und im ganzen Abendland . Und weil Jesus und seine Jünger Wein getrunken haben und nicht Dope geraucht , bleibt es dabei : Alkoholismus und Komasaufen sind "Teil unserer Kultur" , Cannabis ist des Teufels .</p>
+<p xmlns="" class="even">
+Oh Herr , vergib ihnen , denn sie können nichts dafür !</p>
+<p xmlns="" class="last odd">
+:-(((</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334248"><a class="author person" href="/!ku994/"><h4>tomas</h4></a><time datetime="2016-01-26T08:52:37+01:00"><meta value="1453794757"></meta>26. 01. 2016, 
+		08:52</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">"Wenn wir Cannabis für Erwachsene freigeben würden, würden viele Jugendliche erst recht nicht mehr einsehen, weshalb sie darauf verzichten sollten"</p>
+<p xmlns="" class="even">
+Bei Alkohol verstehen die Jugentlichen es aber,dass man erst mit 18 trinken darf. warum sollte dies bei Cannabis anders sein.</p>
+<p xmlns="" class="last odd">
+ Mit der Uneinsichtigkeit der Jugentlichen zu argumentieren. dass Erwachsene nicht legal Kiffen können ist nicht professinell.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334319"><a class="author person" href="/!ku32258/"><h4>Krähenauge</h4></a><time datetime="2016-01-26T11:52:09+01:00"><meta value="1453805529"></meta>26. 01. 2016, 
+		11:52</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@tomas </span>Ähm Jugendliche tun was? Schon mal Statistiken zu jugendlichem Alkoholkonsum gelesen?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334251"><a class="author person" href="/!ku502/"><h4>Arne Babenhauserheide</h4></a><time datetime="2016-01-26T09:18:49+01:00"><meta value="1453796329"></meta>26. 01. 2016, 
+		09:18</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@tomas </span>&gt; Bei Alkohol verstehen die Jugentlichen es aber,dass man erst mit 18 trinken darf</p>
+
+<p xmlns="" class="last odd">
+Zwischen Verstehen und Daran Halten klaffen aber auch beim Alkohol Schluchten :)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334330"><a class="author person" href="/!ku994/"><h4>tomas</h4></a><time datetime="2016-01-26T12:34:49+01:00"><meta value="1453808089"></meta>26. 01. 2016, 
+		12:34</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Arne Babenhauserheide </span>genau dies ist was ich damit ausdrücken möchte, entweder man verbietet beides oder erlaubt beides, alkohol und cannabis...,</p>
+<p xmlns="" class="last even">
+dieses argument nur auf cannabis zu beziehen und nicht auf alkohol ist scheinheilig....,</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3334234"><a class="author person" href="/!ku32426/"><h4>Medusa DeLaRocha</h4></a><time datetime="2016-01-26T07:59:02+01:00"><meta value="1453791542"></meta>26. 01. 2016, 
+		07:59</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Ganz Ehrlich! Ständig redet man über USA oder Niderlande... Aber warum schaut keiner mal nach Portugal? Die Entkriminalisierung von allen Drogen zeigt mehr als Erfolg! Und trotzdem wird es nicht als Kiffer land oder sonst was gesehen.</p>
+
+<p xmlns="" class="odd">
+Es gibt weder Todesfälle noch irgendwelche Beweise das Hanf irreparable Schäden im Körper hinterlässt. Und meiner Meinung nach, ist in Deutschland mitlerweile nicht das Problem ob Jugendliche kiffen, sondern was sie kiffen! Dank Vater Staat wird hier zu Spice und gestrecktes Gras gegriffen. Und wenn das nicht beschaffbar ist dann langt man halt zu sonstigen TÖDLICHEN LEGALEN Kräutermischungen.</p>
+
+<p xmlns="" class="odd">
+Spaniens Süd-Küste wäre vielleicht auch mal zu erwähnen wenn es um erfolgreiche Drogenpolitik geht! </p>
+
+<p xmlns="" class="last odd">
+Wir werden die letzten sein die es entkriminalisieren. Bis dahin hat unsere Polizei einiges noch zu tun mit den bösen Kiffern!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334226"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4></a><time datetime="2016-01-26T07:12:01+01:00"><meta value="1453788721"></meta>26. 01. 2016, 
+		07:12</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Feine Ansage.</p>
+<p xmlns="" class="even">
+Als via AMG mit Cannabis wg med. Einsatz/Anwendung befaßt - entspricht das hier gesagte meinem damaligen Wissensstand. </p>
+<p xmlns="" class="odd">
+Dabei habe ich en passant auch die Problematik Cannabis/pubertäre Hirnentwicklung zur Kenntnis genommen und meine - im Nachhinein bedauerliche - "lax-saloppe"  - Einstellung bis dahin - klar - korrigiert.</p>
+<p xmlns="" class="even">
+Daß dazu über die Dauerhaftigkeit derartiger Auswirken wissenschaftlich  noch Klärungsbedarf besteht - hatte ich so bisher nicht auf dem Schirm;</p>
+<p xmlns="" class="odd">
+dürfte angesichts der Erkenntnisse über die Plastizität/Regenerationsfähigkeit des Hirns - Eric Kandel/Oliver Sacks et al. - auch schwierig ein&amp;abzuschätzen sein.</p>
+<p xmlns="" class="even">
+Da dabei komplexe - auch sozial relevante - Parameter im Spiel sind -</p>
+<p xmlns="" class="odd">
+führt diese Erkenntnislücke nicht weiter; d.h. ändert an der Konsequenz via Cannabis/pubertäres Hirn nichts.</p>
+<p xmlns="" class="even">
+Opas Knaster is eben ne andere Party;)</p>
+
+<p xmlns="" class="even">
+Der gesellschaftlich zu entscheidende Umgang mit Drogen - ist mit Karlsruhe - eben gesellschaftlich zu entscheiden. </p>
+<p xmlns="" class="odd">
+Prohibition vs Selbstbestimmung hat dabei keine gute Geschichte - ja. Aber -&gt;</p>
+<p xmlns="" class="even">
+Die geschilderten teils heftigen, Auswirkungen des (dauerhaften) Konsums entsprechen meinen Beobachtungen - leider! </p>
+<p xmlns="" class="odd">
+Daß Alkohol gefährlicher ist -&gt; </p>
+<p xmlns="" class="even">
+Kein Argument.</p>
+<p xmlns="" class="odd">
+(persönlich: mal -&gt; ein Zug&amp;Neje tak/Passivrauchen=mgl. vermeiden; Alloohl in eher " homöopathischen Dosen" H.R.;)). </p>
+<p xmlns="" class="even">
+Der LabertaschenRest pro domo - </p>
+<p xmlns="" class="odd">
+Gern auch inne taz! ~&gt;</p>
+<p xmlns="" class="even">
+Ist für die Galerie. </p>
+<p xmlns="" class="odd">
+kurz - "Recht auf Rausch" (W.N.;) -&gt;</p>
+<p xmlns="" class="even">
+Der typisch "breite Stift". ~&gt;</p>
+<p xmlns="" class="odd">
+Erst "dahinter" wird's -Relevant&amp;Spannend ~&gt;</p>
+<p xmlns="" class="last even">
+Kulturell&amp;Gesellschaftlich!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334233"><a class="author person" href="/!ku19634/"><h4>Motzkopf</h4></a><time datetime="2016-01-26T07:58:47+01:00"><meta value="1453791527"></meta>26. 01. 2016, 
+		07:58</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lowandorder </span>Was will der Autor der geneigten Leserschaft eigentlich sagen? Hab ich mir vielleicht schon zu viel Verstand weggekifft um Ihnen intellektuell folgen zu können, oder drücken Sie sich nur etwas kryptisch aus?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334312"><a class="author person" href="/!ku32437/"><h4>Peter Unbekannt</h4></a><time datetime="2016-01-26T11:40:50+01:00"><meta value="1453804850"></meta>26. 01. 2016, 
+		11:40</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Motzkopf </span>Er will dir sagen, das Cannabis bei vernünftigen Konsummuster ungefährlich ist, aber man den erwachsenen Menschen die selber über ihre Freizeit und Konsum entscheiden sollten, diese überaus schwierige Entscheidung nicht überlassen kann und kriminalisieren sollte</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334372"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4></a><time datetime="2016-01-26T14:01:41+01:00"><meta value="1453813301"></meta>26. 01. 2016, 
+		14:01</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Peter Unbekannt </span>agähn -&gt;</p>
+<p xmlns="" class="even">
+Opas Knaster is ne andere Party - kerr?</p>
+<p xmlns="" class="odd">
+Sind halt nur  nicht nur derartige </p>
+<p xmlns="" class="even">
+Kaliber - unterwegs.</p>
+
+<p xmlns="" class="even">
+kurz - </p>
+<p xmlns="" class="odd">
+Jeden nichtkriminalisierenden</p>
+<p xmlns="" class="even">
+Weg - gerne - &amp; </p>
+<p xmlns="" class="odd">
+"Sollte" schonn mal garnicht.</p>
+
+<p xmlns="" class="odd">
+Aber damit sind halt nicht alle Fragen/Probleme - legal/illegal etc Gelöst.</p>
+<p xmlns="" class="even">
+Die Gemengelage ist im Beitrag schon ganz übersichtlich skizziert.</p>
+<p xmlns="" class="odd">
+Daß das usern nicht gefällt schonn klar.</p>
+<p xmlns="" class="even">
+Aber da - beginnen die Mühen der Ebene des Rechtsstaates.</p>
+
+<p xmlns="" class="even">
+Was z.B. den med.Bereich angeht -</p>
+<p xmlns="" class="odd">
+War die Schriftgelehrtenkommssion</p>
+<p xmlns="" class="even">
+vulgo BVerwG - </p>
+<p xmlns="" class="odd">
+Schlauer als die Vorinstanzen;))</p>
+<p xmlns="" class="even">
+Zu recht!</p>
+<p xmlns="" class="odd">
+Die Folgerungen - hier beschrieben.</p>
+
+<p xmlns="" class="odd">
+&amp; nochmals zu empfehlen: <a target="_blank" href="http://www.zeit.de/gesellschaft/zeitgeschehen/2015-12/recht-karl-marx-fetisch-politik-gesellschaft-fischer-im-recht">http://www.zeit.de/gesellschaft/zeitgeschehen/2015-12/recht-karl-marx-fetisch-politik-gesellschaft-fischer-im-recht</a></p>
+<p xmlns="" class="even">
+Sein kl. feines Recht/Politkseminar.</p>
+<p xmlns="" class="odd">
+Quasi Die Langsatzversion von meinem</p>
+<p xmlns="" class="even">
+Lieblingsbonmot du jus unfrisiert;)) ~&gt;</p>
+<p xmlns="" class="odd">
+"Es ist das Privileg der h.M. (herrschenden Meinung) regelmäßig Mindermeinung gewesen zu sein - &amp;! </p>
+<p xmlns="" class="even">
+Es häufig - auch wieder zu werden;)</p>
+<p xmlns="" class="last odd">
+Also - nur Mut &amp; (zum Mitsingen ~&gt; <a target="_blank" href="https://www.youtube.com/watch?v=69q_vfXyk3I&amp;list=RD69q_vfXyk3I#t=15">https://www.youtube.com/watch?v=69q_vfXyk3I&amp;list=RD69q_vfXyk3I#t=15</a> ;))</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334517"><a class="author person" href="/!ku19634/"><h4>Motzkopf</h4></a><time datetime="2016-01-26T19:07:11+01:00"><meta value="1453831631"></meta>26. 01. 2016, 
+		19:07</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lowandorder </span>Opas Knaster können Sie gern alleine rauchen, ich mag lieber den modernen Hochleistungsrasen mit mindestens 15% THC. Aber eigentlich ist die Diskussion, ob Cannabis aufgrund seiner relativen Harmlosigkeit legalisiert werden darf, schon ein echter Holzweg. </p>
+<p xmlns="" class="last even">
+Ich bin ja auch dagegen Heroin zu nehmen. Aber nicht, weil es möglicherweise verboten ist, sondern weil ich glaube, das es mir auf Dauer nicht gut tut. Eigentlich muss eine Gesellschaft mündiger Bürger auch ohne Repressionen , sondern durch vernünftige  Aufklärung in der Lage sein, ihre Kinder vom massenhaften Drogensuizid abzuhalten. Ich kann einfach nicht begreifen, wozu es notwendig ist, eine mächtige und skrupellose Drogenmafia künstlich zu erschaffen und über inzwischen 80 Jahre weiter zu mästen, nur um die Gesellschaft vom massenhaften Drogenrausch abzuhalten, welcher aber trotzdem und fast völlig unkontrolliert stattfindet.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334527"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4></a><time datetime="2016-01-26T19:21:35+01:00"><meta value="1453832495"></meta>26. 01. 2016, 
+		19:21</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Motzkopf </span>duck - duck - but -</p>
+<p xmlns="" class="even">
+Deshalb ist das - andere aber gerade -</p>
+<p xmlns="" class="odd">
+Eben nicht falsch - oder </p>
+<p xmlns="" class="even">
+Gar von der Hand zu weisen.</p>
+<p xmlns="" class="odd">
+&amp; klar -</p>
+<p xmlns="" class="last even">
+"Dürfen darf man alles !" K.T.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3334243"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4></a><time datetime="2016-01-26T08:41:16+01:00"><meta value="1453794076"></meta>26. 01. 2016, 
+		08:41</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Motzkopf </span>Erst Ah dann Au dann Tor.</p>
+<p xmlns="" class="even">
+Die einen sagen so -</p>
+<p xmlns="" class="odd">
+Die andern sagen so;!¡)</p>
+
+<p xmlns="" class="odd">
+kurz - es reicht mir schonn -</p>
+<p xmlns="" class="even">
+Wenn ich mich in meinem</p>
+<p xmlns="" class="odd">
+Eigenen Hirnwindungen</p>
+<p xmlns="" class="even">
+Nicht zurechtfinde.</p>
+<p xmlns="" class="odd">
+Alles das - Ohne Gras.</p>
+<p xmlns="" class="even">
+Sollt ich erst zu Ihren¿ &amp;</p>
+<p xmlns="" class="odd">
+Wenn - Was?</p>
+<p xmlns="" class="last even">
+Nö.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334270"><a class="author person" href="/!ku2782/"><h4>APOKALYPTIKER</h4></a><time datetime="2016-01-26T09:55:34+01:00"><meta value="1453798534"></meta>26. 01. 2016, 
+		09:55</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lowandorder </span>Bedenken Sie doch , LOWANDERDICHTER , ... Haschisch als </p>
+<p xmlns="" class="last even">
+diiie neue Inspirationsquelle für Sie !! Keine öden Langsatzversuche mehr , nur entspannen und genießen !</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334326"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4></a><time datetime="2016-01-26T12:19:30+01:00"><meta value="1453807170"></meta>26. 01. 2016, 
+		12:19</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@APOKALYPTIKER </span>&amp; nochens -</p>
+
+<p xmlns="" class="odd">
+"Lauf dich - High - Das ist SDI !"</p>
+<p xmlns="" class="even">
+Eines der schönsten Spruchbänder</p>
+<p xmlns="" class="odd">
+Der Friedensbewegung;!¡)</p>
+<p xmlns="" class="even">
+Friedenslauf -  Dortmund -</p>
+
+<p xmlns="" class="even">
+Nur noch rau getoppt - aber Hallo!</p>
+<p xmlns="" class="odd">
+Durch MP Bruder Johannes -&gt;</p>
+<p xmlns="" class="even">
+(Als Schirmherr - Westfalenstadion a.F.;)</p>
+<p xmlns="" class="odd">
+"Es ist in Deutschland schon für Schlechteres demonstriert worden..."</p>
+<p xmlns="" class="even">
+Wo er recht - hat er &amp; -</p>
+<p xmlns="" class="odd">
+Grad heute - Gell - La Tuffa v.d. Lei-en!</p>
+<p xmlns="" class="even">
+Geradezu seherisch recht.</p>
+<p xmlns="" class="odd">
+Darauf - generell&amp;drugspassend - </p>
+<p xmlns="" class="even">
+Einen Haig trocken.</p>
+
+<p xmlns="" class="even">
+(ps : Für Spätgeborene:</p>
+<p xmlns="" class="last odd">
+US-General Alexander Haig in seiner Amtszeit als Außenminister (1981/82): »Es gibt wichtigere Dinge, als im Frieden zu leben«.;((</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334305"><a class="author person" href="/!ku3495/"><h4>Lowandorder</h4></a><time datetime="2016-01-26T11:24:05+01:00"><meta value="1453803845"></meta>26. 01. 2016, 
+		11:24</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@APOKALYPTIKER </span>Onkels wieder donkels, kell;)</p>
+
+<p xmlns="" class="odd">
+Ok - ich sach mal so ess -&gt;</p>
+<p xmlns="" class="even">
+(all verjährt;))</p>
+<p xmlns="" class="odd">
+Mal - LSD &amp; Muzig ~&gt;</p>
+<p xmlns="" class="even">
+14 Tage alles </p>
+<p xmlns="" class="odd">
+Farbgerändert &amp; so - lustig;))</p>
+
+<p xmlns="" class="odd">
+Aber - als ich (nur) </p>
+<p xmlns="" class="even">
+Die Muzik* hörte pur ~&gt;</p>
+<p xmlns="" class="odd">
+Da locker ich befand -</p>
+<p xmlns="" class="even">
+Derselbe entspanntZustand;)!!</p>
+<p xmlns="" class="odd">
+Als unregularmusician professionell - </p>
+<p xmlns="" class="even">
+Locker laut besinnlich schnell -</p>
+<p xmlns="" class="odd">
+kurz - Hi wizz -;)y -  or - here - frugs</p>
+<p xmlns="" class="even">
+Das wußte schon - Ol Dizzy</p>
+<p xmlns="" class="odd">
+Was brauch ich - drugs?!</p>
+
+<p xmlns="" class="odd">
+&amp; nochens - &amp; da capo &amp;</p>
+<p xmlns="" class="even">
+Alles hier für Apo;)</p>
+
+<p xmlns="" class="even">
+Langsatzversuche -</p>
+<p xmlns="" class="odd">
+Nach 40 Jahr solch täglich Brot -</p>
+<p xmlns="" class="even">
+Lassichs Ehna - dies&amp;da -</p>
+<p xmlns="" class="odd">
+Diese verruchte Suche -;)</p>
+<p xmlns="" class="even">
+Gern &amp; ohne ödeschnöde Not;!))</p>
+
+<p xmlns="" class="last even">
+(ps * leider mal a cassetta verkokelt;((</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3334246"><a class="author person" href="/!ku19634/"><h4>Motzkopf</h4></a><time datetime="2016-01-26T08:49:50+01:00"><meta value="1453794590"></meta>26. 01. 2016, 
+		08:49</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Lowandorder </span>Ach so!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3334064"><a class="author person" href="/!ku17071/"><h4>wxyz</h4></a><time datetime="2016-01-25T16:37:11+01:00"><meta value="1453736231"></meta>25. 01. 2016, 
+		16:37</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Wenn irgend ein Vollpfosten lautstark die Freigabe von Schnaps für Kleinkinder fordern würde, dann gäbe es mit Sicherheit bald darauf auch eine Lobby, die die gesundheitlichen Vorteile solchen Schwachsinns in den Vordergrund stellt.</p>
+<p xmlns="" class="last even">
+Für Cannabis bedeutet das, daß dieses Thema vor allem von den falschen Leuten zum Thema gemacht wird.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334051"><a class="author person" href="/!ku2050/"><h4>Sid</h4></a><time datetime="2016-01-25T16:21:20+01:00"><meta value="1453735280"></meta>25. 01. 2016, 
+		16:21</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">"Sobald Cannabis legal ist, steigt auch der Konsum bei Jugendlichen. Diesen Trend konnten wir in den Niederlanden beobachten, aber auch im US-Bundesstaat Colorado. " <a target="_blank" href="http://blogs.taz.de/drogerie/2010/04/14/hollaendische_jugendliche_kiffen_weniger/">http://blogs.taz.de/drogerie/2010/04/14/hollaendische_jugendliche_kiffen_weniger/</a></p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334253"><a class="author person" href="/!ku502/"><h4>Arne Babenhauserheide</h4></a><time datetime="2016-01-26T09:22:39+01:00"><meta value="1453796559"></meta>26. 01. 2016, 
+		09:22</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Sid </span>Er sagte, dass es mehr wurden, nicht dass es mehr sind. Feinheiten sind wichtig.</p>
+
+<p xmlns="" class="odd">
+Allerdings ist dieser Faktor offensichtlich viel schwächer als andere Faktoren (danke für den Link!), so dass Kosten durch zusätzlichen Konsum die verringerten gesellschaftlichen Kosten Dank der Legalisierung entgegengestellt werden sollten. </p>
+
+<p xmlns="" class="last odd">
+Durch ein Ende der Kriminalisierung weiter Teile der Bevölkerung dürfte der Vorteil deutlich überwiegen.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334068"><a class="author person" href="/!ku26743/"><h4>tobias</h4></a><time datetime="2016-01-25T16:47:04+01:00"><meta value="1453736824"></meta>25. 01. 2016, 
+		16:47</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@Sid </span>Nach dem Satz konnte ich den Herrn auch nicht mehr so recht ernstnehmen. Effektiver Jugendschutz ist nur möglich, wenn es legale, lizensierte Abgabestellen gibt.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334112"><a class="author person" href="/!ku8948/"><h4>LittleRedRooster</h4></a><time datetime="2016-01-25T17:44:18+01:00"><meta value="1453740258"></meta>25. 01. 2016, 
+		17:44</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@tobias </span>Ahja! Und wovor sollten Jugendliche in solchen "lizensierten Abgabestellen" geschützt werden?</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334432"><a class="author person" href="/!ku26743/"><h4>tobias</h4></a><time datetime="2016-01-26T16:19:49+01:00"><meta value="1453821589"></meta>26. 01. 2016, 
+		16:19</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@LittleRedRooster </span>Ist das nicht offensichtlich? Es geht um das Problem das skrupellose Händler Cannabis an Kinder und Jugendliche verkaufen. Dieses Problem wird mit einer Legalisierung sicherlich nicht aus der Welt geschafft sein, aber zumindest hätten wir dann einen Ansatzpunkt wo man Jugendschutzmaßnahmen implentieren kann, etwa eine Abgabe erst ab 18 Jahren. Hätten wir lizensierte Abgabestellen könnte es regelmäßige Kontrollen geben und nur wenige Verkäufer würden es riskieren ihre Lizenz zu verlieren, ebenso wie wir es im Moment mit Alkohol und Zigaretten handhaben.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></li></ul></li><li class="member " id="bb_message_3334039"><a class="author person" href="/!ku13997/"><h4>tillupp</h4></a><time datetime="2016-01-25T15:23:19+01:00"><meta value="1453731799"></meta>25. 01. 2016, 
+		15:23</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Mir geht es um die vielen Steuerausfälle und die Qualität des Haschisch bzw. Marihuana. Nur wenn es Steuerbanderolen gibt ist es ein sicheres Rauschmittel. Illegalität ist Mist und konsumiert wird ja trotzdem, nur keiner kontrolliert was drin steckt.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334311"><a class="author person" href="/!ku32437/"><h4>Peter Unbekannt</h4></a><time datetime="2016-01-26T11:38:15+01:00"><meta value="1453804695"></meta>26. 01. 2016, 
+		11:38</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@tillupp </span>Worum es dir geht, ist dem Staat leider egal :) ( bis zu den nächsten Wahlen aufjdenfall)</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="guest " id="bb_message_3334037"><a class="author person"><h4>3667 (Profil gelöscht)</h4><h5>Gast</h5></a><time datetime="2016-01-25T15:11:39+01:00"><meta value="1453731099"></meta>25. 01. 2016, 
+		15:11</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Wer richtet bitte seinen Drogenkonsum nach den Traditionen aus?hört sich gut an aber mal Ehrlich...Und warum glauben Erwachsene eigentlich immer jugendliche sind so dumm und lassen sich so leicht manipulieren die meisten jugendlichen  und auch alle anderen wissen sehr genau wie die dinge sich entwickeln und zwar Welt weit die Tendenz ist klar alle Länder die nur ein wenig was auf Bürgerrechte und Freiheitsrechte geben entkriminalisieren den Besitz kleiner mengen für Erwachsene oder senken zumindest die strafen.Es gibt zich Studien die versuchen immer wieder die Schädlichkeit für den Konsumenten zu beweisen aber keine Einzige die sich mit der Schädlichkeit der Gesetze beschäftigt und der Schädlichkeit der Illegalität und es gibt viele die leiden.Wer mit seinen Kindern ehrlich ist erreicht viel mehr als irgendwelche konservativen die meinen einen ihre veraltete Weltsicht aufzwingen zu müssen.Bitte nicht falsch verstehen Kinder und Jugendliche sollten nicht rauchen was auch immer.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334254"><a class="author person" href="/!ku502/"><h4>Arne Babenhauserheide</h4></a><time datetime="2016-01-26T09:23:43+01:00"><meta value="1453796623"></meta>26. 01. 2016, 
+		09:23</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person guest">@3667 (Profil gelöscht) </span>&gt; aber keine Einzige die sich mit der Schädlichkeit der Gesetze beschäftigt und der Schädlichkeit der Illegalität</p>
+
+<p xmlns="" class="last odd">
+So eine Studie wäre klasse. Nicht nur bei Drogen, sondern z.B. auch beim Urheberrecht. Was wohl auch der Grund ist, warum sie nicht gemacht wird (oder zumindest, warum falls es sie gibt nicht darüber berichtet wird).</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li><li class="member " id="bb_message_3334029"><a class="author person" href="/!ku32109/"><h4>Annett Nehmann</h4></a><time datetime="2016-01-25T14:12:36+01:00"><meta value="1453727556"></meta>25. 01. 2016, 
+		14:12</time><div class="objlink nolead" role="link"><p xmlns="" class="first last odd">Eine Legalisierung von Hanf in Deutschland ist längst überfällig.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li><li class="member " id="bb_message_3334019"><a class="author person" href="/!ku14187/"><h4>mowgli</h4></a><time datetime="2016-01-25T13:55:29+01:00"><meta value="1453726529"></meta>25. 01. 2016, 
+		13:55</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd">Ich rechne es diesem Mann hoch an, dass er versucht, die Diskussion zu versachlichen. Es gibt gewiss nicht wenig Leute, die ihm erklären, dass er damit seinen Arbeitsplatz gefährdet. Ich persönlich glaube das zwar nicht, aber das will nichts heißen. Schließlich konnte ich mir eine ganze Menge Dinge nicht vorstellen - bis ich sie erlebt habe. </p>
+
+<p xmlns="" class="last odd">
+"In den Hirnstoffwechsel eingreif[en] und auch die Hirnstruktur verändern" können übrigens nicht nur erlaubte oder unerlaubte Drogen. Bestimmte "Debatten" schaffen das ganz offensichtlich auch. Zumindest kumulativ haben sie erkannbar negative Auswirkungen auf die Psyche der Bevölkerung. Denk- oder Gedächtnisstörungen und Unkonzentriertheit verursachen sie ebenfalls. Schreit deswegen gleich ein halbes Volk nach dem Diskurs-Verbot? Nicht, dass ich wüsste. Der allgemeine Wahn ist ja ein Teil unsrer Kultur.</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul><ul class="thread"><li class="member " id="bb_message_3334259"><a class="author person" href="/!ku502/"><h4>Arne Babenhauserheide</h4></a><time datetime="2016-01-26T09:26:02+01:00"><meta value="1453796762"></meta>26. 01. 2016, 
+		09:26</time><div class="objlink nolead" role="link"><p xmlns="" class="first odd"><span xmlns="http://www.w3.org/1999/xhtml" class="reference person member">@mowgli </span>&gt; Ich rechne es diesem Mann hoch an, dass er versucht, die Diskussion zu versachlichen.</p>
+
+<p xmlns="" class="odd">
+Das finde ich auch toll! (auch wenn es zusätzlich mit dem Erscheinen des Buches zu tun haben könnte — das eine schließt das andere nicht aus)</p>
+
+<p xmlns="" class="last odd">
+Danke, Peter Cremer-Schaeffer!</p></div><ul class="toolbar"><li class="reply"><a title="auf diesen Beitrag antworten …">antworten</a></li><li class="report"><a title="diesen Beitrag als unangemessen melden …">melden</a></li></ul></li></ul></li></ul></div><span id="ad_bin_uebersicht_medrec_4" class="ad_bin sold contentad"><div id="ad_zone_uebersicht_medrec_4" name="uebersicht_medrec-4" class="ad_zone ad_zone_contentad ad_zone_badged ad_zone_sold"><iframe class="adIframe" id="uebersicht_medrec-4" style="width: inherit; height: inherit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin allow-popups"></iframe><script>
+			 
+			// activation with consent only in marOtaz_de.adtalk.js
+			// position (adArea) is needed!
+			var adAreaPosition = encodeURIComponent(JSON.stringify({ position: 'Gesellschaft' }));
+			var adId = 'uebersicht_medrec-4';
+			var iframe = $(document.getLatestElement()).filter('iframe.adIframe');
+			iframe.attr('data-src', 'https://cdn-a.yieldlove.com/taz/passback.html?ad_zone=' + adId + '&kv=' + adAreaPosition );
+				initThisAdIframe( iframe.attr('id'), iframe.attr('data-src'))
+			</script></div></span></span><span class="wing" role="complementary"><div class="rack first_rack" id="xid476383">
+    
+
+<form name="form" method="post" enctype="application/x-www-form-urlencoded" id="send-comment" class="first last odd sect sect_send-comment_form style_commentform " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><h2><a name="jetzt mitreden"><span>jetzt mitreden</span></a></h2></div><div class="sectbody"><input class="constant" type="hidden" name="test" value="yes"></input><input class="constant" type="hidden" name="id" value="5267779"></input><input type="hidden" name="scope" class="constant" id="form_scope" value="cms-article"></input><input type="hidden" name="asid" class="constant" id="form_asid" value=""></input><span class="field"><p class="label">Ihren Kommentar hier eingeben</p><textarea name="post" class="text" id="form_post"></textarea></span><input type="submit" class="submit" name="ignore" value="abschicken"></input></div></form><script> filOtaz_de.Form( 'send-comment' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+	var formN = $('#send-comment');	// who i am
+
+	if( formN[0].filOtaz_de_handled ) return; formN[0].filOtaz_de_handled = true;	// run only once
+
+
+
+	// ajaxify myself
+	filOtaz_de.ajaxifyForm('send-comment', {
+		mirrorInput	: true ,
+		onSuccess	: function( data ){
+			filOtaz_de.kommune.updateLogin();
+//console.log('success handler send-comment '+ $(data).html() );
+//			var message = $(data).find('.message');
+//			alert( message.length ? message.text() : 'OK' );
+			} 
+		});   
+
+
+	if( formN.parents('.wing').length ) {    // we're in wing
+//console.log('send-comment in wing '+ formN.length +', '+ formN.parents('.wing').length +', '+ formN.parents('.float').length );
+
+	var multiUse = function() {
+
+		// === lend ourselfes to reply-function ===
+
+		// shared functions
+		var onScroll, reset;
+
+		// shared data
+		var form, anchor, prior, bros, dad, uncles, yMin;
+
+
+		$('.community.page >.body >.sect_commentlinks').find('>.sectbody >li, .thread >li').each( function(i,el){	// each comment
+
+			// per comment data
+			var refN	= $(el),
+			    toolbarN	= refN.find('>.toolbar'),
+			    id,
+			    onClick
+			    ;
+
+			toolbarN.find('>.reply >a').click( function(){
+				// reply specific
+				onClick({
+					idKey	: 'asid',
+					title	: {
+						prefix	: '',
+						suffix	: ' antworten'
+						},
+					hint	: 'Antwort bitte hier eingeben',
+					submit	: 'antworten'
+					});
+				} );
+			
+			toolbarN.find('>.report >a').click( function(){
+				// report specific
+				onClick({
+					a	: 'report',
+					idKey	: 'pid',
+					title	: {
+						prefix  : 'Kommentar von ',
+						suffix  : ' melden'
+						},
+					hint    : 'Problem bitte hier beschreiben',
+					submit	: 'melden'
+					});
+				} );
+
+			toolbarN.css({ visibility:'visible' });
+
+
+			onClick = function( par ) {
+
+					// determine shared data late
+				if( !form ) {
+					form = {
+						titleN	: formN.find('>.secthead >h2 >a >span'),
+						aN	: formN.find('>.sectbody >input[name="a"]'),
+						idN	: formN.find('>.sectbody >input[name="asid"]'),
+						pidN	: formN.find('>.sectbody >input[name="pid"]'),
+						textN	: formN.find('>.sectbody >span >textarea'),
+						submitN	: formN.find('>.sectbody >input:submit')
+						};
+					form.hintN 	= form.textN.prev('p');
+					form.org = {
+						title	: form.titleN.text(),
+						hint	: form.hintN.text(),
+						a	: form.aN.attr('value'),
+						submit	: form.submitN.attr('value')
+						};
+					}
+
+				// determine per comment data late
+				if( !id )  	id = refN.attr('id').replace(/^[^0-9]*/, '');
+
+
+				// change presented data to our needs
+
+				if( par.a ) {
+					if( !( form.aN  && form.aN.length  ) )  
+						form.aN  = $('<input class="constant" type="hidden" />').insertBefore( form.submitN );
+					form.aN.attr({	name	: 'a',
+							value	: par.a
+							});
+					}
+				else if( form.aN ) {
+					form.aN.remove();
+					form.aN = null;
+					}
+
+				if( par.idKey ) {
+					if( form.idN ) form.idN.remove();
+					form.idN = $('<input class="constant" type="hidden" />')
+						.attr({	name	: par.idKey,
+							value	: id
+							})
+						.insertBefore( form.submitN );
+					}
+				else if( form.idN ) {
+					form.idN.remove();
+					form.idN = null;
+					}
+
+				form.titleN.empty().append( 
+					par.title.prefix, 
+					$('<span>'+ refN.find('>.author >h4').text() +'</span>').addClass( refN.attr('class') ),
+					par.title.suffix
+					);
+
+				form.hintN.text(		par.hint	);
+
+				form.submitN.attr({	value :	par.submit	});
+
+
+				// add reset options
+				(new filOtaz_de.Form( formN )).cancel( function(){ reset();	afterLogin.fadeIn(); });
+				formN.on('filOtaz_de.Form.done',   reset );
+
+				// geometry
+				var	commBot	=   toolbarN.offset().top +   toolbarN.outerHeight(),
+					formBot = form.textN.offset().top + form.textN.outerHeight(),
+					d	= commBot - formBot
+					;
+				if( !yMin ) yMin = formBot - $(window).scrollTop();
+				if( commBot - $(window).scrollTop() < yMin )  window.scrollTo( 0, commBot - yMin );
+
+				// relocate form to stick w/ referenced comment
+				if( !anchor && d >0 ) {
+					prior = formN.prev(), bros = formN.nextAll(), dad = formN.parent(), uncles = dad.filter('.rack').nextAll(), afterLogin = $('form#bb-login').nextAll().not('script');
+					messageN = $('#successMessage');
+					anchor = $('<div class="community wing pin" />')
+						.css({  position: 'absolute',
+							top     : formN.offset().top +'px',
+							left    : dad.offset().left +'px',
+							width   : formN.width() +'px'
+							})
+						.appendTo( document.body )
+						;
+					if( uncles.length ) {   // we're in rack
+						dad.css({  borderBottomStyle: 'none'  });
+						anchor.append( $('<div />').addClass( dad.attr('class') ).append( formN, bros ), uncles );
+						}
+					else	anchor.append( formN, bros );
+					}
+
+				if( anchor ) {
+
+					// fading out "meistkommentiert" when answering
+
+					afterLogin.fadeOut();
+				// refresh for second ... n time "antworten"
+				// commtented out to prevent "neues kommtar" instead of "antworten"
+				//	if (formN.hasClass('worked')){
+				//		  if( form.aN ) form.aN.remove();
+				//		  if( form.idN ) form.idN.remove();
+				//	}
+
+					anchor.animate(
+						{ 
+							top : formN.offset().top + d
+						},
+					function(){
+							$(window).scroll( onScroll );
+							} );
+						}
+
+				}; //onClick
+
+			} ); //each comment
+
+			onScroll = function() {
+				var ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top;
+				// reset clears the whole form, we don't want that onScroll, so we only call relocateForm instead
+				// if( formN.offset().top <= ref )  reset();
+
+				// Do not scroll when already commented and there is success message
+				if (( formN.offset().top <= ref ) && ! (formN.hasClass('worked')))  relocateForm();
+				};
+			reset = function() {
+				if( reset ) 	formN.off('filOtaz_de.Form.done');
+				resetForm();
+				relocateForm();
+				};
+			relocateForm = function() {
+				// clean up
+				if( onScroll )  $(window).off('scroll.taz_onscroll');
+
+				// relocate form back
+				if( anchor ) {
+					var 	ref = prior.length ?( prior.offset().top + prior.outerHeight() ) :dad.offset().top,
+						d = anchor.offset().top - ref
+						;
+					anchor.animate({ top: ref }, d, function(){
+						dad.append( formN, bros );
+						if( uncles.length ) {	// we were in rack
+							dad.css({  borderBottomStyle: null  });
+							dad.after( uncles );
+							}
+						if( anchor ) anchor.remove(); anchor = null;
+						} );
+					}
+				};
+			resetForm = function() {
+				// reset shown data
+				if( form.aN      ) form.aN.remove();
+				if( form.idN     ) form.idN.remove();
+//				if( form.cancelN ) form.cancelN.remove();
+				form.titleN.text(		form.org.title	);
+				form.hintN.text(		form.org.hint	);
+				form.textN.attr({	value : ''		}).trigger('blur');
+				form.submitN.attr({	value : form.org.submit	});
+
+				};
+
+		}; // multiUse
+
+
+		if( formN.parents('.float').length ) { 	// already relocated into float
+			multiUse();
+			}
+		else {					// wait for relocation
+
+			formN.parents('.wing').on('filOtaz_de_float_mounted', function(){  multiUse();  });
+			}
+		} //we're in wing
+
+	})(); </script>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script><form name="form" method="post" enctype="application/x-www-form-urlencoded" id="bb-login" class="even sect sect_bb-login_form style_kommune " action="https://taz.de/kommune/post.php" target="_blank"><div role="heading" class="secthead"><ul role="toolbar" class="toolbar"><li class="login"><a href="" target="_blank">Login</a></li><li class="settings"><a href="https://taz.de/kommune/post.php?a=registration" target="_blank">Registrieren</a></li><li class="newpass"><a shape="rect" target="_blank" href="https://portal.taz.de/?a=nopw">Passwort vergessen?</a></li></ul></div><div class="sectbody"><input type="hidden" name="a" class="constant" id="form_a" value="login"></input><span class="field"><p class="label">E-Mail</p><input type="text" name="email" class="line" id="form_email"></input></span><span class="field"><p class="label">Passwort</p><input type="password" name="password" class="secret" id="form_password"></input></span><input type="submit" class="submit" name="ignore" value="einloggen"></input></div></form><script> filOtaz_de.Form( 'bb-login' ); </script><script type="text/javascript"> (function(){
+	if( filOtaz_de.ajaxifyForm ) return;
+
+	if ('withCredentials' in new XMLHttpRequest() )
+		var haveCORS = true;
+	if( typeof XDomainRequest !== "undefined" )
+		var haveXDR = true;
+//console.log('haveCORS: '+ haveCORS );
+
+	filOtaz_de.ajaxifyForm = function( id, options ){
+		/*	options : {
+				option : choice, …,
+				handlername : function(){…}, …
+				}
+			options:
+				mirrorInput	true/false, default false
+			implemented handlers:
+				handle200	handle OK Server response instead of default
+				on Success	done first in default 200 handler
+			to implement:
+				handle4xx	handle specific 4xx response from Server
+				onReset		done before resetting form to start
+				onError		done first in 4xx handlers
+		*/
+		var formID = id;
+		var form1N = $('#'+ id );
+		if( !form1N.length ) return;
+		if( form1N[0].submit_via_ajax ) return; form1N[0].submit_via_ajax = true;
+
+		var mirror = {  node : options.mirrorInput ? form1N : $()  };
+		mirror.toShow = mirror.node.find('input, textarea');
+		mirror.toHide = mirror.node.find('input:submit');
+
+		if( !( location.protocol=='https:' || haveCORS ) ) 
+			return $('<div class="warning">Um sichere und dennoch bequeme Kommunikation mit unseren Servern zu erlauben, '
+					+'sollten sie zu einem aktuelleren Browser wechseln '
+					+'oder diese Seite <a href="https:.#'+ formID +'">per HTTPS aufrufen</a></div>'
+				);
+
+//		var callback = callback;
+
+		var altFormNs = $();	// keep track of form nodes we may insert from server responses
+		var clear4reset = function(){
+			altFormNs.slideUp( function(){
+				altFormNs.remove(); altFormNs = $();
+				});
+			};
+		var back2start = function( val ){
+			if( typeof val == 'string' ) {
+				form1N.find('>.sectbody >span >textarea')
+					.val( val )
+					.trigger('blur')
+					;
+				}
+			// ToDo: show hint -> change filOtaz_de.Form first
+			mirror.toShow.prop('disabled', false);
+			mirror.toHide.slideDown();
+			form1N.slideDown();
+			};
+		var reset = function( val ){
+			clear4reset();
+			back2start( val );
+			};
+		var handle200 = ( options.handle200 instanceof Function )? options.handle200 : function( data, status, req ){
+//console.log( data.documentElement.outerHTML );
+			if( options.onSuccess instanceof Function ) options.onSuccess();
+			clear4reset();	// hide follow-up forms
+
+			var message = $(data).filter('.message');
+			if( message.length && message.text() >'' ) {	// show success message
+				var messageN = $('<form id="successMessage" class="sect" />').append( message.addClass('sectbody') );
+				$('<input class="submit" type="submit" value="OK" />').appendTo( message ).click( function(){
+					messageN.slideUp( function(){  messageN.remove();  });
+					back2start('');	// reset to original form
+					return false;
+					});
+				messageN.hide().prependTo( form1N.parent() ).slideDown();
+				form1N.slideUp();
+				}
+			}
+
+
+		var asySubmit = function( formN ){
+			var formN = formN;
+			var action;
+			var clickLock = false;
+			formN.find('>.sectbody >input:submit').click( function(){
+				if( clickLock ) return false; clickLock = true;
+				action = formN.attr('action'); if( !action ) return;	// ToDo: handle missing action
+				action = action.replace(/^http:/,'https:');		// ToDo: handle relative action URL
+
+				var handle422 = function( data ) { // we sent incomplete Data. Show forms from response body!
+//console.log( data[0].documentElement.outerHTML );
+								var formNs = data.find('form');
+								if( !formNs.length ) {
+									alert('error: server response fails expectations: no form found.');
+									return false;
+									}
+
+								var anchor = $('<a />').hide()[ mirror.node.length ?'insertAfter' :'insertBefore' ]( formN );
+
+								formN.not( mirror.node ).slideUp( function(){
+									formN.not( form1N ).remove();
+									});
+								mirror.toShow.attr({ disabled : true });
+								mirror.toHide.slideUp();
+
+								var last = anchor;
+								formNs.each( function(i,e){ var n = $(e);
+
+									var have = $('#'+ n.attr('id') );
+									if(! n.children('.secthead').length )
+										have.children('.secthead').first().clone(true).prependTo( n );
+									var have = have.not( form1N );
+									have.slideUp( function(){
+										altFormNs = altFormNs.not( have );
+										have.remove();					// remove old incarnation
+										});
+
+									n.find('script').remove();	// don't import scripts
+
+									n.hide().insertAfter( last );
+									anchor.remove();
+									last = n;
+									altFormNs = altFormNs.add( n );
+
+									/*
+									*/
+									var ccN = n.find('#captcha-code');
+									var captchaCode = ccN.attr('name');
+									if( ccN.length && captchaCode )	// this form needs a captcha, make one!
+										Recaptcha.create( captchaCode, 'captcha-code', {
+											theme: 'red'
+											} );
+									(new filOtaz_de.Form( n )).cancel( function(){
+										 reset();
+										});
+									asySubmit( n );
+									n.slideDown();									
+									});
+//console.log( altFormNs.length +' forms found' );
+
+					} //handle422
+
+
+				var post = {};
+				formN.find('input,textarea').each( function(i,n){ var N = $(n);
+					post[N.attr('name')] = N.val();
+					});
+
+				$.ajax({
+					type		: 'POST',
+					url		: action,
+					cache		: false,
+					data		: post,
+					dataType 	: 'html', // 'xml',
+					xhrFields: {
+					    withCredentials: true
+					},
+
+// chrisso: Disabled beforeSend manipulation because first parameter ("req") is now jqXHR and not original XMLHttpRequest object. (see above "xhrFields")
+// 
+//					beforeSend	: function( req, settings ){
+//						req.responseType = 'document';
+//						req.withCredentials = true;
+//						//req.overrideMimeType('text/xml');
+//						},
+
+					success		: function( data, status, req ){	// our post was accepted, show response message!
+						handle200( data, status, req );
+						},
+
+					error		: function( req, status, message ){
+
+//console.log('status: '+ status +' :: '+ message ); 
+						var data = $( req.response );
+						if( !data.length ) {	// data is not document
+							var text;
+							try{	text = req.responseText;
+								if( text ) text = text.replace(/http:/g, "");	// have src'es protocol relative
+								data = $('<div />').html( text );
+//console.log('response text: '+ text );
+								} catch(e) {
+//console.log('error reading responseText: '+ e );
+								}
+							}
+						if( !data.length ) {
+							try{
+//console.log( req.response.head.parentElement.outerHTML );
+								} catch(e) {
+//console.log('error reading response.head: '+ e );
+								}
+							}
+
+
+
+						({	0   : function() {
+								alert('Error: Can not see server answer. CORS missing?');	// seems a Cross-Origin problem
+//console.log( data );
+								},
+							200 : function() {	// 200 but error, IE9 ends up here
+								handle200( data, status, req );
+								},
+							422 : function() {  handle422( data );  }
+							})[ req.status ]();
+						}, //error
+
+					/* not available befor jQ 1.5 
+					statusCode : {
+						422	: function( req, status, message ){}
+						},
+					*/
+
+					complete	: function( req, status ){
+//try{ console.log('response headers:\n'+ req.getAllResponseHeaders() ); } catch(e){ console.log('getAllResponseHeaders() failed'); }
+//console.log('responseXML: '+ req.responseXML );
+//if( req.response ) console.log( req.response.head.parentElement.outerHTML )
+//else console.log('no data');
+						clickLock = false;
+						}
+
+					}); //ajax
+
+				return false;
+				}); //click
+			}; //asySubmit
+		asySubmit( form1N );
+		}; //filOtaz_de.ajaxifyForm
+	})(); </script><script type="text/javascript"> (function(){
+
+		var formID = 'bb-login';
+		var form = $('#bb-login');
+
+		if( !form.length ) return;
+		if( form[0].filOtaz_de_form_handled ) return; form[0].filOtaz_de_form_handled = true;
+
+		var nodes, org, firstrun = true;
+		if( !filOtaz_de.kommune ) filOtaz_de.kommune = {};
+		if( !filOtaz_de.kommune.updateLogin ) filOtaz_de.kommune.updateLogin = function(){
+			if( !nodes ) nodes = {	// parse DOM lazily
+				head	: form.find('>.secthead'),
+				body	: form.find('>.sectbody').hide(),
+				a	: form.find('input[name="a"]'),
+				inputs	: form.find('span').has('input[name="email"],input[name="password"]'),
+				submit	: form.find('input.submit'),
+				links	: {
+					all		: form.find('ul.toolbar'),
+					login		: form.find('ul>li.login').click(function(){
+								var me = $(this);
+//								nodes.body
+								me.closest('.secthead').nextAll('.sectbody')	// we might be dynamically inserted, so parse DOM here
+								.slideToggle(function(){
+									me.toggleClass('active');
+									});
+								return false;
+								}),
+					settings	: form.find('ul>li.settings'),
+					newpass		: form.find('ul>li.newpass')
+					}
+				};
+			var duration = firstrun ? 0 : $.fx.speeds._default;
+			var tazsid = $.cookie('tazsid');
+			if(! tazsid ){  // not logged in
+					$('#send-comment .submit').val('Einloggen und Senden');
+					};
+
+			if( tazsid ) {	// already logged in
+					$('#send-comment .submit').val('Abschicken');
+
+				// mar: refresh after login error and then successful login
+				if ( $('#bb-login >.sectbody >p.error').length ){
+
+
+					$('.sect_bb-login').fadeOut().remove();
+					$('.sect_bb-login_form').fadeIn();
+					};
+
+
+				var tazid = $.cookie('tazid');
+//console.log('	now logged in as '+ tazid );
+				if( !org ) org = {	// store original values lazily
+					action	: form.attr('action'),
+					a	: nodes.a.attr('value'),
+					submit	: nodes.submit.attr('value'),
+					links	: {
+						login		: nodes.links.login,
+						settings	: {
+							text	: nodes.links.settings.children('a').text()
+							},
+						newpass		: nodes.links.newpass
+						}
+					};
+				form.attr({ action: 'https://taz.de/kommune/post.php?a=logout' });
+//console.log( tazsid );
+
+				nodes.body.slideUp( duration, function(){
+					form.addClass('session');
+					nodes.a.attr({ value: 'logout' });
+					nodes.inputs.hide();
+					nodes.submit.attr({ value: 'ausloggen' });
+					nodes.body.fadeIn( duration/3 );
+					});
+				if( tazid ) var profileURL = '/!ku'+ tazid +'/';
+				nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.login    )  nodes.links.login.detach();
+					if( profileURL ) {
+						if( !nodes.links.profile ) {
+							nodes.links.profile = $('<li><a href="'+ profileURL +'">mein Profil</a></li>');
+							nodes.links.settings.before( nodes.links.profile );
+							}
+						}
+					if( nodes.links.settings )  nodes.links.settings.children('a').text('Einstellungen');
+					if( nodes.links.newpass  )  nodes.links.newpass.detach();
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+				if( profileURL ) {	// tell user their name
+					if( !nodes.salute ) {
+						nodes.salute = $();
+//console.log('go, get profile '+ profileURL );
+						$.ajax({
+							type		: 'GET',
+							url		: profileURL +'c.xml', 
+							dataType	: 'xml',
+							success		: function( data, status, xhr ){
+								if( !nodes.salute ) return;	// we're too late
+								var name = $('content >item[type="person"] >name', data ).text();
+//console.log('	found '+ name );
+								nodes.salute = $('<h2><a>'+ name +'</a></h2>').hide().prependTo( nodes.head );
+								nodes.salute.slideDown( duration );
+								},
+							error		: function( req, status, message ){
+//console.log( req.status +' '+ status +' :: '+ message );
+								},
+							complete	: function( req, status ){
+								}
+							});
+						}
+					}
+				} //tazsid
+			else if( org )	(function(){	// reset logged out state
+				var orgwas = org; org = null;
+				nodes.body.fadeOut( duration/2, function(){
+					nodes.a.attr({		value	: orgwas.a		});
+					nodes.inputs.show();
+					nodes.submit.attr({	value	: orgwas.submit	});
+					form.removeClass('session');
+					}); 
+				if( nodes.salute )  nodes.salute.slideUp( duration, function(){
+					nodes.salute.remove(); nodes.salute = null;
+					});
+				if( nodes.links.all ) nodes.links.all.fadeTo( duration/2, 0, function(){
+					if( nodes.links.profile ) nodes.links.profile.remove(); nodes.links.profile = null;
+					nodes.links.settings.before( orgwas.links.login.removeClass('active') );
+					nodes.links.settings.children('a').text( orgwas.links.settings.text );
+					nodes.links.settings.after(  orgwas.links.newpass );
+					nodes.links.all.fadeTo( duration/2, 1 );
+					});
+
+				form.attr({		action	: orgwas.action	});
+				})();
+			firstrun = false;
+			};
+		filOtaz_de.kommune.updateLogin();
+
+		var message = filOtaz_de.ajaxifyForm('bb-login', { handle200 : filOtaz_de.kommune.updateLogin } );
+
+		if( message && message.length )	// secure ajax not supported
+			form.after( message );
+
+		})();
+	</script><div class="rack" id="xid524032">
+    
+
+<div role="region" id="" class="first last odd sect sect_shop style_shop "><div class="secthead" role="heading"><h2><a name="meistkommentiert"><span>meistkommentiert</span></a></h2><ul class="toolbar" role="toolbar"></ul></div><ul role="directory" class="sectbody   directory"><li class=" first odd trodd   "><a href="/Die-Gruenen-im-Wahlkampf/!5753820/" class="objlink noavatar" role="link"><h4>Die Grünen im Wahlkampf</h4><h3>Aufregen über Habeck</h3></a></li><li class=" even trodd   "><a href="/Kuerzung-von-Landwirtschaftssubventionen/!5753585/" class="objlink noavatar" role="link"><h4>Kürzung von Landwirtschaftssubventionen</h4><h3>Grüne kämpfen für Großagrarier</h3></a></li><li class=" odd treven   "><a href="/Jella-Haase-und-die-RAF/!5750429/" class="objlink noavatar" role="link"><h4>Jella Haase und die RAF</h4><h3>Fack ju Kapitalismus</h3></a></li><li class=" even trodd   "><a href="/Linken-Politiker-ueber-Bundeswehreinsaetze/!5750580/" class="objlink noavatar" role="link"><h4>Linken-Politiker über Bundeswehreinsätze</h4><h3>„Das Papier sprengt den Korridor“</h3></a></li><li class=" last odd trodd   "><a href="/Nicht-verimpftes-AstraZeneca-Vakzin/!5750526/" class="objlink noavatar" role="link"><h4>Nicht verimpftes AstraZeneca-Vakzin</h4><h3>Ein politisches Versagen</h3></a></li></ul></div>
+
+
+	</div><script> $(document.getLatestElement()).filter('.rack').trigger('TAZdomChange'); //
+			</script></span><script> $(document.getLatestElement()).filter('.wing').on( 'TAZdomChange', function(){
+					$(this).find('.rack').removeClass('first first_rack').first().addClass('first first_rack');
+					}); //</script><a itemprop="mainEntityOfPage" href="/Diskussion-ueber-Cannabislegalisierung/!5267779"></a></div><div id="footer"><ul role="navigation" class="sitemap"><li class="news"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/"><span itemprop="title">taz</span></a></span><ul><li class="first odd trodd"><a href="/Politik/!p4615/" id="menu_p4615"><span>Politik</span></a><ul><li class="first odd trodd"><a href="/Politik/Deutschland/!p4616/" id="menu_p4616"><span>Deutschland</span></a></li><li class="even trodd"><a href="/Politik/Europa/!p4617/" id="menu_p4617"><span>Europa</span></a></li><li class="odd treven"><a href="/Politik/Amerika/!p4618/" id="menu_p4618"><span>Amerika</span></a></li><li class="even trodd"><a href="/Politik/Afrika/!p4621/" id="menu_p4621"><span>Afrika</span></a></li><li class="odd trodd"><a href="/Politik/Asien/!p4619/" id="menu_p4619"><span>Asien</span></a></li><li class="even treven"><a href="/Politik/Nahost/!p4620/" id="menu_p4620"><span>Nahost</span></a></li><li class="last odd trodd"><a href="/Politik/Netzpolitik/!p4622/" id="menu_p4622"><span>Netzpolitik</span></a></li></ul></li><li class="even trodd"><a href="/Oeko/!p4610/" id="menu_p4610"><span>Öko</span></a><ul><li class="first odd trodd"><a href="/Oeko/Oekonomie/!p4623/" id="menu_p4623"><span>Ökonomie</span></a></li><li class="even trodd"><a href="/Oeko/Oekologie/!p4624/" id="menu_p4624"><span>Ökologie</span></a></li><li class="odd treven"><a href="/Oeko/Arbeit/!p4629/" id="menu_p4629"><span>Arbeit</span></a></li><li class="even trodd"><a href="/Oeko/Konsum/!p4625/" id="menu_p4625"><span>Konsum</span></a></li><li class="odd trodd"><a href="/Oeko/Verkehr/!p4628/" id="menu_p4628"><span>Verkehr</span></a></li><li class="even treven"><a href="/Oeko/Wissenschaft/!p4636/" id="menu_p4636"><span>Wissenschaft</span></a></li><li class="last odd trodd"><a href="/Oeko/Netzoekonomie/!p4627/" id="menu_p4627"><span>Netzökonomie</span></a></li></ul></li><li class="odd treven selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Gesellschaft/!p4611/" id="menu_p4611"><span itemprop="title">Gesellschaft</span></a><ul><li class="first odd trodd"><a href="/Gesellschaft/Alltag/!p4632/" id="menu_p4632"><span>Alltag</span></a></li><li class="even trodd"><a href="/Gesellschaft/Reportage-und-Recherche/!p5265/" id="menu_p5265"><span>Reportage und Recherche</span></a></li><li class="odd treven"><a href="/Gesellschaft/Debatte/!p4633/" id="menu_p4633"><span>Debatte</span></a></li><li class="even trodd"><a href="/Gesellschaft/Kolumnen/!p4634/" id="menu_p4634"><span>Kolumnen</span></a></li><li class="odd trodd"><a href="/Gesellschaft/Medien/!p4630/" id="menu_p4630"><span>Medien</span></a></li><li class="even treven"><a href="/Gesellschaft/Bildung/!p4635/" id="menu_p4635"><span>Bildung</span></a></li><li class="odd trodd selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/Gesellschaft/Gesundheit/!p4637/" id="menu_p4637"><span itemprop="title">Gesundheit</span></a></li><li class="even trodd"><a href="/Gesellschaft/Reise/!p4638/" id="menu_p4638"><span>Reise</span></a></li><li class="last odd treven"><a href="/Gesellschaft/Podcasts/!p5318/" id="menu_p5318"><span>Podcasts</span></a></li></ul></li><li class="even trodd"><a href="/Kultur/!p4639/" id="menu_p4639"><span>Kultur</span></a><ul><li class="first odd trodd"><a href="/Kultur/Musik/!p4640/" id="menu_p4640"><span>Musik</span></a></li><li class="even trodd"><a href="/Kultur/Film/!p4641/" id="menu_p4641"><span>Film</span></a></li><li class="odd treven"><a href="/Kultur/Kuenste/!p4642/" id="menu_p4642"><span>Künste</span></a></li><li class="even trodd"><a href="/Kultur/Buch/!p4643/" id="menu_p4643"><span>Buch</span></a></li><li class="last odd trodd"><a href="/Kultur/Netzkultur/!p4631/" id="menu_p4631"><span>Netzkultur</span></a></li></ul></li><li class="odd trodd"><a href="/Sport/!p4646/" id="menu_p4646"><span>Sport</span></a><ul><li class="first odd trodd"><a href="/Sport/Fussball/!p4647/" id="menu_p4647"><span>Fußball</span></a></li><li class="last even trodd"><a href="/Sport/Kolumnen/!p4648/" id="menu_p4648"><span>Kolumnen</span></a></li></ul></li><li class="even treven"><a href="/Berlin/!p4649/" id="menu_p4649"><span>Berlin</span></a><ul></ul></li><li class="odd trodd"><a href="/Nord/!p4650/" id="menu_p4650"><span>Nord</span></a><ul><li class="first odd trodd"><a href="/Nord/Hamburg/!p4651/" id="menu_p4651"><span>Hamburg</span></a></li><li class="even trodd"><a href="/Nord/Bremen/!p4652/" id="menu_p4652"><span>Bremen</span></a></li><li class="last odd treven"><a href="/Nord/Kultur/!p4653/" id="menu_p4653"><span>Kultur</span></a></li></ul></li><li class="last even trodd"><a href="/Wahrheit/!p4644/" id="menu_p4644"><span>Wahrheit</span></a><ul><li class="first odd trodd"><a href="/bei-Tom/!t5180734/" id="menu_p4685"><span>bei Tom</span></a></li><li class="last even trodd"><a href="/ueber-die-Wahrheit/!115080/" id="menu_p4684"><span>über die Wahrheit</span></a></li></ul></li></ul></li><li class="corp"><ul><li class="first odd trodd"><a href="/Abo/!p4209/" id="menu_p4209"><span>Abo</span></a></li><li class="even trodd"><a href="/Genossenschaft/!p4271/" id="menu_p4271"><span>Genossenschaft</span></a></li><li class="odd treven"><a href="https://taz.de/!p4697/#matomo:pk_campaign" id="menu_p5149"><span>taz zahl ich</span></a></li><li class="even trodd"><a href="/Info/!p4206/" id="menu_p4206"><span>Info</span></a></li><li class="odd trodd"><a href="/!p4233/" id="menu_p5311"><span>Veranstaltungen</span></a></li><li class="even treven"><a href="https://shop.taz.de/#pk_campaign" target="_blank" id="menu_p4378"><span>Shop</span></a></li><li class="odd trodd"><a href="/Anzeigen/!p4288/" id="menu_p4288"><span>Anzeigen</span></a></li><li class="even trodd"><a href="/!p5099/" id="menu_p5106"><span>taz FUTURZWEI</span></a></li><li class="odd treven"><a href="https://taz.de/!p4791/#matomo:pk_campaign" id="menu_p5133"><span>Neue App</span></a></li><li class="even trodd"><a href="/Bewegung/!p4715/" id="menu_p4715"><span>Bewegung</span></a></li><li class="odd trodd"><a href="/Kantine/!p4237/" id="menu_p4237"><span>Kantine</span></a></li><li class="even treven"><a href="//blogs.taz.de/" id="menu_p4366"><span>Blogs &amp; Hausblog</span></a></li><li class="odd trodd"><a href="/!p5298/" id="menu_p5319"><span>taz Talk</span></a></li><li class="even trodd"><a href="/!p5297/" id="menu_p4955"><span>taz in der Kritik</span></a></li><li class="odd treven"><a href="/!p4662/" id="menu_p5148"><span>taz am Wochenende</span></a></li><li class="even trodd"><a href="/Nord/!p4962/" id="menu_p4962"><span>Nord</span></a></li><li class="odd trodd"><a href="/Panter-Preis/!p4207/" id="menu_p4207"><span>Panter Preis</span></a></li><li class="even treven"><a href="/Panter-Stiftung/!p4258/" id="menu_p4258"><span>Panter Stiftung</span></a></li><li class="odd trodd"><a href="/Reisen-in-die-Zivilgesellschaft/!p4310/" id="menu_p4310"><span>Reisen in die Zivilgesellschaft</span></a></li><li class="even trodd"><a href="//monde-diplomatique.de/" id="menu_p4387"><span>LE MONDE diplomatique</span></a></li><li class="odd treven"><a href="/Recherchefonds-Ausland/!p5062/" id="menu_p5062"><span>Recherchefonds Ausland</span></a></li><li class="even trodd"><a href="/Archiv/!p4311/" id="menu_p4311"><span>Archiv</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4905/" id="menu_p5284"><span>taz lab 2021</span></a></li><li class="even treven"><a href="/!p5044/" id="menu_p5123"><span>Christian Specht</span></a></li><li class="last odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li></ul></li><li class="help"><ul id="legal"><li class="first odd trodd"><a href="/Hilfe/!p4591/" id="menu_p4591"><span>Hilfe</span></a></li><li class="even trodd"><a href="https://taz.de/!112354/" id="menu_p4679"><span>Impressum</span></a></li><li class="odd treven"><a href="https://taz.de/!p5097/" id="menu_p5136"><span>Leichte Sprache</span></a></li><li class="even trodd"><a href="https://taz.de/!114802/" id="menu_p4965"><span>Redaktionsstatut</span></a></li><li class="odd trodd"><a href="https://taz.de/!114191/" id="menu_p4680"><span>RSS</span></a></li><li class="even treven"><a href="https://taz.de/!166598/" id="menu_p4681"><span>Datenschutz</span></a></li><li class="odd trodd"><a href="https://taz.de/!p4283/" id="menu_p4827"><span>Newsletter</span></a></li><li class="even trodd"><a href="https://taz.de/!p4858/" id="menu_p4859"><span>Informant</span></a></li><li class="last odd treven"><a href="https://taz.de/!112355/" id="menu_p4682"><span>Kontakt</span></a></li></ul></li><li class="search"><form class="search" role="search" action="/!s=/" method="POST"><div class="frame"><input type="text" class="text" name="s" value="suchen ..."></input><script type="text/javascript" language="javascript">filOtaz_de.searchslot();</script><input type="image" class="send" title="suche senden" alt="suche senden" name="ignore" src="/lib/ch/web/pix/redArrowsRight_d50d2e.png"></input></div></form></li></ul><div class="copyright">Alle Rechte vorbehalten. Für Fragen zu Rechten oder Genehmigungen wenden Sie sich bitte an lizenzen@taz.de<a id="mobileswitcher" href="#" onclick="
+					event.preventDefault();
+					var currentDate = new Date();
+					var expDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()+1, 3, 59, 59);
+					$.cookie.raw = true;
+					$.cookie('ratioURL_channel', 'moby/force', { expires: expDate, domain:'taz.de', path:'/', secure: false } ); 
+
+					if( (/moby/).test($.cookie('ratioURL_channel') ) ) {
+
+						location.search = ( location.search ? location.search +'&amp;' : '?' ) +'nocache='+ (new Date()).getTime();
+						}
+					else alert('Cookie konnte nicht gesetzt werden');
+					
+				"><span>zur mobilen Ansicht wechseln</span></a></div></div></div></div></div><script type="text/javascript">
+			const lazyObserver = lozad('.lozad', {
+				rootMargin: '1050px', // syntax similar to that of CSS Margin
+				threshold: 0.1, // ratio of element convergence
+				enableAutoReload: true // it will reload the new image when validating attributes changes
+			});
+			lazyObserver.observe();
+
+		</script></body><!-- DEBUG end 19:43:14+01:00--></html>
