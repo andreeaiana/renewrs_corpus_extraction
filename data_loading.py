@@ -5,6 +5,7 @@ import os
 import pickle
 import argparse
 import pandas as pd
+import pycld2 as cld2
 
 class Loader:
 
@@ -68,6 +69,9 @@ class Loader:
         print('\tRemoving older versions of articles with multiple updates.')
         self._drop_outdated_articles()
 
+        # Keep only articles in German
+        self.dataset = self.dataset[self.dataset['body'].map(lambda x: self._detect_language(x))=='de']
+
         print(f'The preprocessed dataset has {len(self.dataset)} news articles.\n')
         
 
@@ -94,6 +98,11 @@ class Loader:
                 # Drop article version with shotest body (i.e. assumed least recent)
                 shortest_article = sample.loc[sample['body'].str.len().idxmin()].name
                 self.dataset.drop(shortest_article, inplace=True)
+
+    def _detect_language(self, text: str) -> str:
+        """ Detects the languag of a given string. """
+        _, _, details = cld2.detect(text)
+        return details[0][1]
 
     def _cache_data(self) -> None:
         """ Caches the data to disk as a pickle file. """
