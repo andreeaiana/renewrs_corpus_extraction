@@ -57,6 +57,7 @@ class Loader:
         self.dataset['description'].fillna('', inplace=True)
         self.dataset['author_person'] = self.dataset['author_person'].apply(lambda l: [x for x in l if x is not None])
         self.dataset['author_person'] = self.dataset['author_person'].apply(lambda x: x[0] if len(x) > 0 and type(x[0])==list else x)
+        self.dataset['author_organization'] = self.dataset['author_organization'].apply(lambda x: [x] if type(x)==str else x)
 
         # Fix values in recommendations column
         self.dataset['recommendations']  =self.dataset['recommendations'].apply(lambda val: list() if type(val)==float else val)
